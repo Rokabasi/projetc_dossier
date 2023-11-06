@@ -1,0 +1,47 @@
+body
+{
+    padding-top: 70px;
+}
+.navigation .breadcrumb
+{
+    margin: 7px 10px;
+}
+.header blockquote
+{
+    margin-top: 10px;
+}
+.collection, .fabric, .box
+{
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+.collection
+{
+    background: url(images/collection.ico) center;
+    background-size: cover;
+}
+.fabric
+{
+    background: url(images/fabric.ico) center;
+    background-size: cover;
+}
+.box
+{
+    background: url(images/box.ico) center;
+    background-size: cover;
+}
+.mini
+{
+    height: 100px;
+    width: 100px;
+}
+.avatar
+{
+    background: url(images/avatar.ico) center;
+    background-size: cover;
+}
+tr.label
+{
+    line-height: 1.7
+}

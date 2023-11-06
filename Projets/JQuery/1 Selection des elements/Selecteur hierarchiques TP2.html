@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet"/>
+        <title>Selecteur</title>
+    </head>
+    <body>
+        <ul>
+            <li>Element de liste1</li>
+            <ul>
+                <li>Enfant1</li>
+                <li>Enfant1</li>
+            </ul>
+            <li>Elementde liste2</li>
+            <li>Elementde liste3</li>
+            <li>Elementde liste4</li>
+        </ul>        
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function()
+            {   
+                 $('li+li').css('color','red');
+            }
+         )    
+        
+    </script>
+    
+    </body>
+</html>

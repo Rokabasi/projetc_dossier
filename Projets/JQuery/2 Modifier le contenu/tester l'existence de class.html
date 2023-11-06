@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ajouter class</title>
+        <meta charset="UTF-8">    
+    </head>
+    <body>
+        <span id="jean" class="rouge grand">Jean</span>   <span id="pierre">Pierre</span> 
+        <span id="paul" class="vert grand">Paul</span>   <span id="julia">Julia</span>  
+        <span id="eric" class="vert">Eric</span>  
+        <span id="kevin" >Kévin</span> 
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function()
+              {
+                if ($('#jean').hasClass('rouge'))  
+                alert('class rouge');
+            else 
+                alert('class différent de rouge');
+
+            }
+            )
+            
+        </script>
+    </body>
+</html>

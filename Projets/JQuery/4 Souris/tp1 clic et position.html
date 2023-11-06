@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>  
+    <head>   
+        <meta charset="UTF-8">    
+        <title>clic et position</title>
+    </head> 
+    <body>
+        <img id="target" src="images/question.png"> 
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function() 
+              {
+                var largeur = ($(window).width()) - 50;  
+                var hauteur = ($(window).height()) - 50; 
+                // Affichage de la première image en (100, 100)   
+                var p = $('#target').offset();   p.top=100; 
+                p.left=100; 
+                $('#target').offset(p); 
+                 // Gestion du clic et déplacement de l'image  
+                $("#target").click(function() {   
+                    x = Math.floor(Math.random()*largeur);  
+                    y = Math.floor(Math.random()*hauteur);    
+                    var p = $('#target').offset();     
+                    p.top = y;  
+                    p.left = x;  
+                    $('#target').offset(p); 
+                                                }); 
+                }); 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ajouter class</title>
+        <meta charset="UTF-8">    
+       <style type="text/css">   
+           .rouge { color: red; }    
+           .vert { color: green; }   
+           .petit { font-size: 100%; }  
+           .grand {font-size: 250%; }  
+        </style> 
+    </head>
+    <body>
+        <span id="jean" class="rouge grand">Jean</span>   <span id="pierre">Pierre</span> 
+        <span id="paul" class="vert grand">Paul</span>   <span id="julia">Julia</span>  
+        <span id="eric" class="vert">Eric</span>  
+        <span id="kevin" >Kévin</span> 
+        <p>mon paragraphe</p>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function()
+             {
+                $('#julia').addClass('vert grand');
+                $('#eric').removeClass('vert').addClass('grand rouge');
+
+            })
+        </script>
+    
+    </body>    
+    
+</html>

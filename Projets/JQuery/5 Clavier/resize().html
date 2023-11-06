@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>  
+    <head>   
+        <meta charset="UTF-8">    
+        <title>clavier</title>
+    </head>
+    <body>
+        <span id="resultat"></span> 
+        <script src="jquery-3.5.1.min.js"></script> 
+        <script> 
+            $(function() { 
+                $(window).resize(function() { 
+                    var taille = 'Taille de la fenêtre : ' + $(window).width() + 'px x ' + $(window).height() + 'px';      $('#resultat').text(taille);  
+                        });
+            });  
+        </script>
+    </body>
+</html>

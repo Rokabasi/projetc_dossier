@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        Cliquez sur l'image<br /> 
+        <img src="heart.png"><br />
+        <span id='message'></span> 
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+             $(function() { 
+                 $('img').one('click', function() {    
+                     $('#message').text('Vous avez cliqué sur l\'image. Désormais, je resterai insensible aux clics.').fadeIn(1000).fadeOut(5000); 
+                 });
+             });
+        </script>
+    </body>
+</html>

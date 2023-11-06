@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet"/>
+        <title>Pseudo Selecteur</title>
+    </head>
+    <body>
+        <h1>Titre de niveau 1</h1>
+        <h2>Titre de niveau 2</h2>
+        <h3>Titre de niveau 3</h3> 
+        <p>Un paragraphe de texte</p> 
+        <div>Texte dans une balise div</div> 
+   
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function()
+            {   
+                $('div').hide(); 
+                $('div:hidden').show();
+            }
+         )    
+        
+    </script>
+    
+    </body>
+</html>

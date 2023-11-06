@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet"/>
+        <title>Cselecteur</title>
+    </head>
+    <body>
+        <p><img src="images/C2.jpg" title="animal canard" border="11"/></p>
+        <p><img src="images/P1.jpg" title="animal chat" border="4"/></p>
+        <p><img src="images/P2.jpg" title="cheval" border="2"/></p>
+        <p><img src="images/G3.jpg" title="animal chien" border="8"/></p>
+        <p><img src="images/F3.jpg" title="girafe" border="7"/></p>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function()
+            {   
+                $('[title~="animal"]').css('border-color','red');
+            }
+         )    
+        
+    </script>
+    
+    </body>
+</html>

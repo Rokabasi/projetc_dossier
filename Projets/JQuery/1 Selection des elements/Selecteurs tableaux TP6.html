@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet"/>
+        <title>Pseudo Selecteur</title>
+    </head>
+    <body> 
+        <form>    
+            <table border=1>    
+                <tr>
+                    <td></td>
+                    <td>Salle 1</td>
+                    <td>Salle 2</td>
+                </tr>  
+                
+                <tr>
+                    <td>Lundi</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr> 
+                
+                <tr>
+                    <td>Mardi</td>
+                    <td></td>
+                    <td></td>
+                </tr>   
+                
+                <tr>
+                    <td>Mercredi</td>
+                    <td>X</td>
+                    <td></td>
+                </tr>    
+                
+                <tr>
+                    <td>Jeudi</td>
+                    <td></td>
+                    <td>X</td>
+                </tr>    
+                
+                <tr>
+                    <td>Vendredi</td>
+                    <td>X</td>
+                    <td>X</td>
+                </tr>    
+            </table>   
+        </form>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function() 
+            {   
+              $('td').css('text-align','center'); 
+            }
+          ); 
+        </script>
+    </body>
+</html>

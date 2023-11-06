@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>  
+    <head>   
+        <meta charset="UTF-8">    
+        <title>Insertion, copie et suppression de données</title>
+    </head> 
+     <body>  
+         <h2 id="trois">Liste à puces</h2> 
+         <ul>    
+             <li>Premier élément</li>   
+             <li>Deuxième élément</li>   
+             <li>Troisième élément</li>  
+             <li>Quatrième élément</li>  
+         </ul>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function()
+                {
+                    $('li').wrap('<i></i>');
+
+            })
+        </script>
+    </body>
+</html>

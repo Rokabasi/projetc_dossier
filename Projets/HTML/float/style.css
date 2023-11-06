@@ -1,0 +1,25 @@
+.left
+	{ 
+		width : 500 px;
+		height: 4500 px;
+		background-color: blue;
+		float : left ;
+	}
+.right
+	{ 
+		height: 500 px;
+		width : 150 px;
+		background-color: red;
+		float : right ;
+	}
+header
+	{ 
+		height: 100 px;
+		background-color: yellow;
+	}
+footer
+	{ 
+		height: 1000 px;
+		background-color: grey;
+		clear : both;
+	}
