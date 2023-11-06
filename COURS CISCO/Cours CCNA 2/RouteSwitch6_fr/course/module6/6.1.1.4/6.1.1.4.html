@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.4 VLAN voix</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>VLAN voix</h1>
+        <div>
+          <p>Un VLAN distinct est nécessaire pour prendre en charge la voix sur IP (VoIP). Le trafic de voix sur IP requiert les éléments suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>bande passante consolidée pour garantir la qualité de la voix ; </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>priorité de transmission par rapport aux autres types de trafic réseau ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>possibilité de routage autour des zones encombrées du réseau ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>délai inférieur à 150 ms sur tout le réseau.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour remplir ces conditions, le réseau entier doit être conçu pour prendre en charge la voix sur IP. Ce cours ne prétend pas expliquer en détail comment configurer un réseau pour prendre en charge la voix sur IP, mais il est utile de récapituler de quelle manière un VLAN voix fonctionne entre un commutateur, un téléphone IP Cisco et un ordinateur.</p>
+          <p></p>
+          <p>Dans la figure, le VLAN 150 est conçu pour acheminer le trafic vocal. L’ordinateur étudiant PC5 est connecté au téléphone IP Cisco et ce dernier est connecté au commutateur S3. L’ordinateur PC5 se trouve dans le VLAN 20 qui est utilisé pour les données des étudiants. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un routeur connecté à un réseau commuté.  Un commutateur a un téléphone V.O.I.P. connecté.  Il existe des légendes sur chaque commutateur indiquant que le commutateur prend en charge le réseau VLAN 150.  Il s’agit du réseau VLAN voix par défaut sur les commutateurs Cisco.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

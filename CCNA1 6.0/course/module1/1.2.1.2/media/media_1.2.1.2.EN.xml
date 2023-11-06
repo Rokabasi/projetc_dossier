@@ -1,0 +1,96 @@
+﻿<textcomponents>
+<!--Slide 2-->
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Web Client]]></text>
+	</component>
+	<component id="ID_s2_txt02">
+		<text><![CDATA[Email Client]]></text> 
+	</component>
+	<component id="ID_s2_txt03">
+		<text><![CDATA[Email Server]]></text> 
+	</component>
+	<component id="ID_s2_txt04">
+		<text><![CDATA[Web Server]]></text>
+	</component>
+	<component id="ID_s2_txt05">
+	   <text><![CDATA[File Server]]></text>
+	   </component>
+	<component id="ID_s2_txt06">
+	   <text><![CDATA[File Client]]></text>
+	</component>
+	<component id="ID_s2_txt07">
+		<text><![CDATA[Switch]]></text>
+	</component>
+
+	<component id="ID_s1_titleTxt01">
+	   <text><![CDATA[Email Client and Server]]></text>
+	</component>
+	<component id="ID_s1_bodyTxt01">
+	   <text><![CDATA[The Email Server runs server software. Clients use email software, such as Microsoft Outlook, to access email on the server.]]></text>
+	</component>
+	
+	<component id="ID_s1_titleTxt02">
+	   <text><![CDATA[Web Client and Server]]></text>
+	</component>
+	<component id="ID_s1_bodyTxt02">
+	   <text><![CDATA[The Web Server runs server software. Clients use browser software, such as Windows Internet Explorer, to access web pages on the server.]]></text>
+	</component>
+	
+	<component id="ID_s1_titleTxt03">
+	   <text><![CDATA[File Client and Server]]></text>
+	</component>
+	<component id="ID_s1_bodyTxt03">
+	   <text><![CDATA[The File Server stores the file. Clients access the file with client software, such as Windows Explorer.]]></text>
+	</component>
+
+<!--End Slide 2-->	
+
+<!--Slide 1-->
+	<component id="ID_txt01">
+<text><![CDATA[Media]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[<b>Internetwork<b>]]></text> 
+  </component>
+  <component id="ID_txt03-1">
+  <text><![CDATA[<b>LAN</b>]]></text> 
+  </component>
+  <component id="ID_txt03-2">
+  <text><![CDATA[<b>LAN</b>]]></text> 
+  </component>
+
+<component id="ID_txt04">
+  <text><![CDATA[Messages can take <br>alternate routes.]]></text> 
+  </component>
+  
+  <component id="ID_txt05">
+  <text><![CDATA[Data originates with an end device, flows through the network, and arrives at an end device.]]></text> 
+  </component> 
+   
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+	
+<!--End Slide 1-->
+</textcomponents>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.2 Configuration et vérification du protocole CDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration et vérification du protocole CDP</h1>
+        <div>
+          <p>Pour les périphériques Cisco, le protocole CDP est activé par défaut. Pour des raisons de sécurité, il peut être préférable de désactiver le protocole CDP sur l'ensemble d'un périphérique réseau, ou par interface. Le protocole CDP permet aux pirates de rassembler des données précieuses sur la couche réseau, telles que les adresses IP, les versions IOS, ainsi que les types de périphériques.</p>
+          <p></p>
+          <p>Pour vérifier l'état du protocole CDP et afficher des informations sur ce dernier, entrez la commande show cdp, comme illustré dans l'exemple 1.</p>
+          <p></p>
+          <p>Pour activer CDP globalement pour toutes les interfaces prises en charge sur le périphérique, saisissez <b>cdp run</b> comme mode de configuration globale. Le protocole CDP peut être désactivé pour toutes les interfaces du périphérique à l'aide de la commande no cdp run en mode de configuration globale.</p>
+          <p></p>
+          <p>Pour désactiver le protocole CDP sur une interface spécifique, comme l'interface d'un FAI, entrez no cdp enable en mode de configuration d'interface. Le protocole CDP est toujours activé sur le périphérique ; cependant, il n'envoie aucune annonce CDP via cette interface. Pour réactiver le protocole CDP sur l'interface spécifique, entrez la commande <b>cdp enable</b>, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>La Figure 3 illustre la désactivation globale du protocole CDP à l'aide de la commande <b>no cdp run</b> et sa réactivation via la commande <b>cdp run</b>.</p>
+          <p></p>
+          <p>Pour vérifier l'état du protocole CDP et afficher une liste des voisins, utilisez la commande show cdp neighbors en mode d'exécution privilégié. La commande show cdp neighbors affiche des informations importantes sur les voisins CDP. Actuellement, ce périphérique n'a aucun voisin, car il n'est physiquement connecté à aucun périphérique, comme l'illustrent les résultats de la commande <b>show cdp neighbors</b> dans la Figure 4.</p>
+          <p></p>
+          <p>Utilisez la commande <b>show cdp interface</b> pour afficher les interfaces compatibles CDP d'un périphérique. Le statut de chaque interface est également affiché. La Figure 5 montre que cinq interfaces sont compatibles CDP sur le routeur, avec une seule connexion active vers un autre périphérique.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 6 pour pratiquer la configuration et la vérification du protocole CDP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 utilise la commande « show cdp » pour afficher les paramètres par défaut du protocole CDP qui sont : envoyer un message CDP toutes les 60 secondes, délai de rétention de 180 secondes et CDPv2 activé. La Figure 2 affiche la commande « cdp enable » configurée sur l'interface GigabitEthernet 0/1 sur un commutateur. Dans la Figure 3, le protocole CDP est globalement désactivé avec la commande « no cdp run ». Ensuite la commande « show cdp » vérifie qu'il est désactivé. Enfin, le protocole CDP est réactivé globalement. Dans la Figure 4, la sortie de la commande « show cdp neighbors » indique que le routeur n'a pas de voisin CDP. Dans la Figure 5, la sortie de la commande « show cdp interface » indique que l'interface GigabitEthernet 0/1 est opérationnelle. Toutes les interfaces ont le protocole CDP activé.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<font size="17"><b>Exercice – Comparaison des protocoles CDP et LLDP</b></font>]]></text>
+</component>
+
+<component id="MCTable_title">
+	<text><![CDATA[Caractéristique du protocole]]></text>
+</component>
+
+<component id='ID_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_instr_body'>
+	<text><![CDATA[Cliquez sur le champ approprié en regard de chacune des caractéristiques pour indiquer votre réponse.]]></text>
+</component><!-- buttons --><component id="ID_s1_CHECK">
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id="ID_s1_RESET">
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[6]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[<b>CDP</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>LLDP</b>]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[Utilisé pour recueillir des informations sur les périphériques Cisco qui partagent la même liaison de données.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Les annonces partagent des informations sur le type de périphérique qui est détecté, les noms des périphériques, ainsi que le nombre et le type des interfaces.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[Compatible avec les périphériques réseau, tels que des routeurs, commutateurs et points d’accès LAN sans fil, de plusieurs fabricants.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Protocole de détection des voisins indépendant du fournisseur à exécuter sur des réseaux locaux (LAN).]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[Indépendant du support et du protocole ; s’exécute sur tous les périphériques Cisco.]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[Ce protocole annonce son identité et ses fonctionnalités aux autres périphériques, et reçoit les informations des périphériques de couche 2 de plusieurs fabricants qui sont connectés physiquement.]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[2]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<font size="17">Correct</font>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Vous avez correctement classé les protocoles de détection de périphériques.]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<font size="17">Incorrect</font>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[Vous n’avez pas classé correctement les protocoles de détection de périphériques. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+</textcomponents>

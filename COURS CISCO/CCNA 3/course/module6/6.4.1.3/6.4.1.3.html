@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.3 Adresses link-local IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Adresses link-local IPv6</h1>
+        <div>
+          <p>Les routeurs exécutant un protocole de routage dynamique, tel que le protocole EIGRP, échangent des messages entre voisins sur le même sous-réseau ou lien. Les routeurs doivent uniquement envoyer et recevoir des messages de protocole de routage avec leurs voisins connectés directement. Ces messages sont toujours envoyés depuis l'adresse IP source du routeur effectuant le réacheminement.  </p>
+          <p></p>
+          <p>Les adresses link-local IPv6 conviennent parfaitement à cet usage. Une adresse link-local IPv6 permet à un appareil de communiquer avec d'autres appareils IPv6 sur la même liaison et uniquement sur cette liaison (sous-réseau). Les paquets associés à une adresse source ou de destination link-local ne peuvent pas être acheminés au-delà de leur liaison d'origine.</p>
+          <p></p>
+          <p>Les messages EIGRP pour IPv6 sont envoyés à l'aide des éléments suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse IPv6 source</b> : l'adresse link-local IPv6 de l'interface de sortie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse IPv6 de destination </b>: lorsque le paquet doit être envoyé à une adresse de multidiffusion, il est envoyé à l'adresse de multidiffusion IPv6 FF02::A, l'adresse de multidiffusion link-local des routeurs utilisant uniquement le protocole EIGRP. Si le paquet peut être envoyé à une adresse de monodiffusion, il est envoyé à l'adresse link-local du routeur voisin.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les adresses link-local IPv6 se trouvent dans la plage FE80::/10. /10 indique que les 10 premiers bits sont 1111 1110 10xx xxxx, ce qui génère la plage 1111 1110 10<b>00 0000</b> (FE80) à 1111 1110 10<b>11 1111</b> (FEBF) dans le premier hextet.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs exécutant le protocole EIGRP ; elle montre également que les mises à jour de routage sont envoyées à l'adresse link-local.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

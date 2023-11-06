@@ -1,0 +1,112 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Exercice : Associer la distance administrative à sa source de route</b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Associez la distance administrative à sa source de route.]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[Correct]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque distance administrative à sa source de route.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[Incorrect]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque distance administrative à sa source de route. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Vérifier]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component><!--Drag Items--><component id='ID_s1_drag_header'>
+	<text><![CDATA[<font color="#FFFFFF"><b>Étapes</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[<font color="#393536"><b>0</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[<font color="#393536"><b>1</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[<font color="#393536"><b>5</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[<font color="#393536"><b>20</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[<font color="#393536"><b>90</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[<font color="#393536"><b>100</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag07'>
+	<text><![CDATA[<font color="#393536"><b>110</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag08'>
+	<text><![CDATA[<font color="#393536"><b>115</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag09'>
+	<text><![CDATA[<font color="#393536"><b>120</b></font>]]></text>
+</component>
+
+<component id='ID_s1_drag10'>
+	<text><![CDATA[<font color="#393536"><b>170</b></font>]]></text>
+</component><!--Questions--><component id='ID_s1_text_header01'>
+	<text><![CDATA[<b>Distance administrative</b>]]></text>
+</component>
+
+<component id='ID_s1_text_header02'>
+	<text><![CDATA[<b>Origine de la route</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+	<text><![CDATA[RIP]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+  <text><![CDATA[Statique]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+  <text><![CDATA[EIGRP interne]]></text> 
+</component>
+
+<component id="ID_s1_txt04">
+	<text><![CDATA[OSPF]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+  <text><![CDATA[Connecté]]></text> 
+</component>
+
+<component id="ID_s1_txt06">
+  <text><![CDATA[BGP externe]]></text> 
+</component>
+
+</textcomponents>

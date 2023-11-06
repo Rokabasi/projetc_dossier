@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.4 Sécurité des ports : configuration</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sécurité des ports : configuration</h1>
+        <div>
+          <p>La Figure 1 récapitule les paramètres par défaut de la sécurité des ports sur un commutateur Cisco Catalyst.</p>
+          <p></p>
+          <p>La Figure 2 illustre les commandes de l'interface de ligne de commande du logiciel Cisco IOS nécessaires pour configurer la sécurité des ports sur le port Fast Ethernet F0/18 du commutateur S1. Remarquez que l’exemple ne précise aucun mode de violation. Dans cet exemple, le mode de violation est Shutdown (mode par défaut).</p>
+          <p></p>
+          <p>La Figure 3 montre comment activer la sécurité des ports à l'aide des adresses MAC sécurisées rémanentes sur le port Fast Ethernet 0/19 du commutateur S1. Comme indiqué précédemment, le nombre d'adresses MAC sécurisées peut être configuré manuellement. Dans cet exemple, la syntaxe des commandes Cisco IOS est utilisée pour définir le nombre d'adresses MAC maximal sur 10 pour le port 0/19. Le mode de violation est défini sur Shutdown, le mode par défaut.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 résume la configuration par défaut de la sécurité des ports sur un commutateur Cisco Catalyst.  La sécurité des ports est désactivée lorsque le nombre maximal d’adresses MAC sécurisées défini sur la valeur 1, le mode de violation est arrêté et l’apprentissage d’adresse MAC rémanente est désactivé. La Figure 2 affiche les commandes de l’interface de ligne qui sont nécessaires pour configurer la sécurité des ports sur une interface de port de commutateur.  La première commande correspond à « interface fast Ethernet 0/18 ». Cette commande passe du mode de configuration globale à une interface spécifique.  La commande suivante est « switchport mode access » qui définit le port comme un port d’accès strict pour un périphérique final.  La dernière commande est « switchport port-security ».  La Figure 3 continue l’exemple précédent et ajoute la commande « switchport port-security maximum 50 ».  La dernière commande est « switchport port-security mac-address sticky ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

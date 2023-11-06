@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.2 Modes VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modes VTP</h1>
+        <div>
+          <p>Il est possible de configurer un commutateur dans l'un des trois modes VTP, comme décrit dans la figure 1.</p>
+          <p>Serveur VTP </p>
+          <p>
+            <ul>
+              <li>Annonce les informations sur le VLAN du domaine VTP aux autres commutateurs compatibles VTP du même domaine VTP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke les informations VLAN pour l'ensemble du domaine dans la mémoire vive non volatile</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Crée, supprime ou renomme des VLAN pour le domaine</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mode VTP par défaut</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Client VTP</p>
+          <p>
+            <ul>
+              <li>Impossible de créer, de modifier ou de supprimer des VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke les informations VLAN pour l'ensemble du domaine dans la mémoire vive</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Doit être configuré comme client VTP</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP transparent</p>
+          <p>
+            <ul>
+              <li>Ne participe pas à VTP, sauf pour transférer les annonces VTP aux clients VTP et au serveur VTP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les VLAN créés, renommés ou supprimés sur un commutateur transparent sont uniquement associés à ce commutateur</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Doit être configuré comme VTP transparent</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figure 2 récapitule le fonctionnement des trois modes VTP</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : un commutateur qui est en mode serveur ou client et qui possède un numéro de révision de configuration supérieur à celui du serveur VTP existant met à jour toutes les informations VLAN dans le domaine VTP. Les numéros de révision de configuration sont décrits plus loin dans ce chapitre. Cisco recommande de déployer VTP en mode transparent pour un meilleur contrôle, une plus grande sécurité et une gestion plus simple du VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente les modes VTP. La figure 2 récapitule le fonctionnement des trois modes</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

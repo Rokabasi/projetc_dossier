@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.1 Propager une route statique par défaut dans OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propager une route statique par défaut dans OSPFv2</h1>
+        <div>
+          <p>
+            <b>Propager une route statique par défaut</b>
+          </p>
+          <p></p>
+          <p>Avec OSPF, le routeur connecté à Internet est utilisé pour propager une route par défaut vers d'autres routeurs dans le domaine de routage OSPF. Ce routeur est parfois appelé routeur de périphérie, d'entrée ou de passerelle. Toutefois, en terminologie OSPF, le routeur situé entre un domaine de routage OSPF et un réseau non OSPF est également appelé le routeur ASBR (Autonomous System Boundary Router). </p>
+          <p></p>
+          <p>Dans la figure 1, R2 appartient à un seul réseau d'un fournisseur d'accès. Par conséquent, tout ce dont R2 a besoin pour accéder à Internet, c'est une route statique par défaut vers le fournisseur d'accès.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: dans cet exemple, une interface de bouclage portant l'adresse IPv4 209.165.200.225 est utilisée pour simuler la connexion à l'opérateur télécom. </p>
+          <p></p>
+          <p>Pour propager une route par défaut, le routeur par défaut (R2) doit être configuré avec :</p>
+          <p>
+            <ul>
+              <li>Une route statique par défaut au moyen de la commande<b> ip route 0.0.0.0 0.0.0.0 </b>{<i>ip-address</i><b> | </b><i>exit-intf</i>}.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La commande du mode de configuration du routeur<b> default-information originate</b>. R2 devient donc la source des informations de la route par défaut et la route statique par défaut est propagée dans les mises à jour OSPF.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 2 explique comment configurer une route statique IPv4 par défaut vers un opérateur télécom et la propager dans OSPFv2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exclusion du lien entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente la syntaxe qui permet de configurer une route statique par défaut et de la propager via le processus de routage OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

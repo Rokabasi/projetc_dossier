@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.3 Fonctionnement des listes de contrôle d’accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement des listes de contrôle d’accès</h1>
+        <div>
+          <p>Les listes de contrôle d'accès définissent des règles de contrôle pour les paquets arrivant par les interfaces d'entrée, passant par le routeur et atteignant leur destination par les interfaces de sortie. Elles ne gèrent pas les paquets provenant du routeur lui-même. </p>
+          <p></p>
+          <p>Les listes de contrôle d’accès peuvent être configurées pour les appliquer au trafic entrant et au trafic sortant comme illustré dans la figure.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Listes de contrôle d'accès entrantes</b> : les paquets entrants sont traités avant d'être routés vers l'interface de sortie. Une liste de contrôle d’accès entrante est efficace car elle réduit la charge des recherches de routage en cas d’abandon du paquet. Si le paquet est autorisé par la liste de contrôle d'accès, il est alors traité pour le routage. Les listes de contrôle d'accès entrantes sont idéales pour filtrer les paquets lorsque le réseau relié à une interface d'entrée est la seule source des paquets devant être inspectés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Listes de contrôle d'accès sortantes</b> : les paquets entrants sont acheminés vers l'interface de sortie, puis traités par le biais de la liste de contrôle d'accès sortante. Les listes de contrôle d'accès sortantes sont particulièrement efficaces lorsqu'un même filtre est appliqué aux paquets provenant de plusieurs interfaces d'entrée avant de quitter la même interface de sortie. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un routeur avec un paquet entrant sur un port. Le paquet est traité par une liste de contrôle d'accès en entrée. La figure présente également un paquet quittant le routeur. Ce paquet est traité par une liste de contrôle d'accès en sortie.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

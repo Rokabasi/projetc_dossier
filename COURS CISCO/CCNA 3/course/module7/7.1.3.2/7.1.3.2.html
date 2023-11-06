@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.3.2 Minuteurs Hello et de mise en attente</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Minuteurs Hello et de mise en attente</h1>
+        <div>
+          <p>
+            <b>Intervalles Hello et temps d'attente du protocole EIGRP pour IPv4</b>
+          </p>
+          <p></p>
+          <p>Le protocole EIGRP utilise un protocole Hello léger pour établir et surveiller l'état de connexion de son voisin. Le temps d'attente indique au routeur le temps maximal pendant lequel le routeur doit attendre le prochain paquet Hello avant de déclarer que ce voisin est inaccessible. </p>
+          <p></p>
+          <p>Les intervalles Hello et les temps d'attente peuvent être configurés pour chaque interface et ne doivent pas forcément correspondre à ceux des autres routeurs EIGRP pour établir ou conserver des contiguïtés. La commande suivante permet de configurer un intervalle Hello différent :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip hello-interval eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>as-number seconds</i>
+            </span>
+          </p>
+          <p></p>
+          <p>En cas de modification de l'intervalle Hello, assurez-vous que le temps d'attente est égal ou supérieur à l'intervalle Hello. Dans le cas contraire, la contiguïté de voisinage est désactivée à la fin du temps d'attente et avant le prochain intervalle Hello. Utilisez la commande suivante pour modifier le temps d'attente :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip hold-time eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>as-number seconds</i>
+            </span>
+          </p>
+          <p></p>
+          <p>La valeur,<i> en secondes,</i> des intervalles Hello et de temps d'attente doit être comprise entre 1 et 65 535. </p>
+          <p></p>
+          <p>La Figure 1 montre comment configurer R1 avec un intervalle Hello de 50 secondes et un temps d'attente de 150 secondes. La forme<b> no </b>peut être utilisée dans ces deux commandes pour restaurer les valeurs par défaut.</p>
+          <p></p>
+          <p>Il n'est pas nécessaire que deux routeurs aient les mêmes intervalle Hello et temps d'attente pour établir une contiguïté EIGRP entre ces deux routeurs.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer l'interface adjacente sur R2 avec les mêmes valeurs que R1. </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Intervalles Hello et temps d'attente du protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Le protocole EIGRP pour IPv6 utilise les mêmes intervalle Hello et temps d'attente que le protocole EIGRP pour IPv4. Les commandes de mode de configuration d'interface sont identiques à celles d'IPv4 :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 hello-interval eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>as-number seconds</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 hold-time eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>as-number seconds</i>
+            </span>
+          </p>
+          <p></p>
+          <p>La Figure 3 affiche les configurations des intervalles Hello et temps d'attente pour R1 et R2 avec EIGRP pour IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la syntaxe requise pour configurer les minuteurs Hello et de mise en attente pour EIGRP à l'aide d'IPv4. La Figure 2 est un exercice interactif dans lequel le stagiaire peut s'entraîner à configurer les minuteurs Hello et de mise en attente. La Figure 3 affiche la syntaxe requise pour configurer les minuteurs Hello et de mise en attente pour EIGRP à l'aide d'IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

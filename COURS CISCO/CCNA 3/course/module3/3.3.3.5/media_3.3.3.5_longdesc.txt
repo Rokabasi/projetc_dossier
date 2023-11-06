@@ -1,0 +1,1 @@
+La figure présente quatre commutateurs interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.  La boucle a été éliminée et Spanning Tree fonctionne de nouveau comme prévu.

@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande « show ip protocols » qui spécifie EIGRP comme protocole actuel.  L'ID de routeur, la distance administrative (AD), la récapitulation et les réseaux sont mis en surbrillance en orange. La Figure 2 présente un tableau des différents protocoles et de leur distance administrative.

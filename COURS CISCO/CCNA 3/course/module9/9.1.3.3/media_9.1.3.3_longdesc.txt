@@ -1,0 +1,1 @@
+Ce contenu interactif permet au stagiaire de s'entraîner à identifier les étapes de calcul du meilleur chemin OSPF.

@@ -1,0 +1,1 @@
+La figure représente l’animation de trois réseaux connectés dans une disposition triangulaire. Chaque routeur est connecté aux deux autres routeurs.  L’animation montre chacun des trois routeurs envoyant un paquet de mises à jour aux deux autres routeurs.

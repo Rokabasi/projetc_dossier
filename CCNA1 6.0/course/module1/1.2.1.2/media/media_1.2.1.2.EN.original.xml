@@ -1,0 +1,76 @@
+<textcomponents>
+
+    <component id='ID_s1_txt01'>
+        <text><![CDATA[<b>End Devices</b>]]></text>
+    </component>
+
+    <component id='ID_s1_txt02'>
+        <text><![CDATA[Desktop Computer]]></text>
+    </component>
+
+    <component id='ID_s1_txt03'>
+        <text><![CDATA[Laptop]]></text>
+    </component>
+
+    <component id='ID_s1_txt04'>
+        <text><![CDATA[Printer]]></text>
+    </component>
+
+    <component id='ID_s1_txt05'>
+        <text><![CDATA[IP Phone]]></text>
+    </component>
+
+    <component id='ID_s1_txt06'>
+        <text><![CDATA[Wireless Tablet]]></text>
+    </component>
+
+    <component id='ID_s1_txt07'>
+        <text><![CDATA[TelePresence Endpoint]]></text>
+    </component>
+    
+    <component id="ID_s2_txt01">
+        <text><![CDATA[Media]]></text>
+    </component>
+    <component id="ID_s2_txt02">
+        <text><![CDATA[<b>Internetwork<b>]]></text> 
+    </component>
+  <component id="ID_s2_txt03-1">
+  <text><![CDATA[LAN]]></text> 
+  </component>
+  <component id="ID_s2_txt03-2">
+  <text><![CDATA[LAN]]></text> 
+  </component>
+
+    <component id="ID_s2_txt04">
+      <text><![CDATA[Messages can take alternate routes.]]></text> 
+    </component>
+  
+  <component id="ID_s2_txt05">
+  <text><![CDATA[Data originates with an end device, flows through the network, and arrives at an end device.]]></text> 
+  </component> 
+   
+<component id="end">
+<text><![CDATA[End]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Fast Forward]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Play]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rewind]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Start]]></text>
+</component>
+
+</textcomponents>

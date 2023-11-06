@@ -1,0 +1,1 @@
+La figure présente deux routeurs connectés par une liaison WAN de série.  La figure indique que la distance rend compte de l'éloignement du réseau et le vecteur de la direction dans laquelle il se trouve.

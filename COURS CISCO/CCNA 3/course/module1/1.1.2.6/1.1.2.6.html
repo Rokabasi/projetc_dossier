@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.6 Précisions sur les protocoles de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Précisions sur les protocoles de routage</h1>
+        <div>
+          <p>
+            <b>Gestion d'un réseau routé</b>
+          </p>
+          <p>Les protocoles de routage avancés, tels que OSPF et EIGRP, sont utilisés dans les grands réseaux.</p>
+          <p></p>
+          <p>Les protocoles de routage à état de liens, tels que le protocole OSPF (Open Shortest Path First), comme illustré à la Figure 1, sont bien appropriés aux réseaux hiérarchiques plus étendus, où il est important de bénéficier d'une convergence rapide. Les routeurs OSPF établissent et maintiennent une ou des contiguïtés de voisinage avec d'autres routeurs OSPF connectés. Lorsque des routeurs mettent en place une contiguïté avec des voisins, un échange de mises à jour d’état de liens démarre. Les routeurs atteignent un état de contiguïté COMPLET lorsqu’ils ont synchronisé les vues de leur base de données d’état de liens.</p> Avec le protocole OSPF, les mises à jour d’état de liens sont envoyées lors de modifications sur le réseau. La configuration et les concepts OSPF à zone unique seront abordés au chapitre 8.</p>
+          <p></p>
+          <p>De plus, OSPF prend en charge une conception hiérarchique à deux couches, appelée OSPF à zones multiples, comme illustré sur la figure 2. Tous les réseaux OSPF à zones multiples doivent disposer d'une zone 0, également appelée zone fédératrice. Les zones non fédératrices doivent être directement connectées à la zone 0. Le chapitre 9, intitulé « OSPF à zones multiples », présente les bénéfices, le fonctionnement et la configuration du protocole OSPF à zones multiples. Le chapitre 10, « Réglage et dépannage d'OSPF », couvre les fonctionnalités plus avancées d'OSPF.</p>
+          <p></p>
+          <p>Un autre protocole de routage largement utilisé pour les réseaux plus étendus est le protocole EIGRP (Enhanced Interior Gateway Routing Protocol).  Cisco a développé son protocole propriétaire EIGRP sous forme de protocole de routage à vecteur de distance, avec des fonctionnalités améliorées. Bien que la configuration du protocole EIGRP soit relativement simple, les fonctions et options sous-jacentes sont étendues et robustes. Par exemple, le protocole EIGRP utilise des tables multiples pour gérer le processus de routage, comme illustré à la Figure 3. Le protocole EIGRP comporte de nombreuses fonctionnalités qui ne sont trouvées dans aucun autre protocole de routage. Il constitue un excellent choix pour les réseaux étendus, multiprotocoles, qui emploient principalement des périphériques Cisco.</p>
+          <p></p>
+          <p>Le chapitre 6, intitulé « EIGRP », présente le fonctionnement et la configuration du protocole de routage EIGRP, tandis que le chapitre 7, intitulé « Réglage et dépannage d'EIGRP », couvre certaines des options de configuration plus avancées d'EIGRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente plusieurs routeurs connectés entre eux.  Certains sont connectés par des liens WAN, d'autres par des liens LAN.   Ils font tous partie de la zone o.s.p.f. zéro. La figure 2 présente plusieurs routeurs connectés entre eux.  Certains sont connectés par des liens WAN, d'autres par des liens LAN. Les routeurs à gauche sont connectés à un réseau local et sont dans la zone o.s.p.f. un, les deux du milieu sont dans la zone o.s.p.f. zéro et les routeurs de droite sont connectés avec des liaisons WAN et se trouvent dans la zone o.s.p.f cinquante et un. La figure 3 montre comment e.i.g.r.p utilise des modules indépendants du protocole.  Il y a trois tableaux pour IPv4 et trois pour IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

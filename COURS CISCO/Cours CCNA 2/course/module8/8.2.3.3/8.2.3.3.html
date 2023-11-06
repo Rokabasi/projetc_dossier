@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.3 Vérification de DHCPv6 avec état </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de DHCPv6 avec état </h1>
+        <div>
+          <p>
+            <b>Vérification du serveur DHCPv6 avec état</b>
+          </p>
+          <p></p>
+          <p>Dans la Figure 1, la commande <b>show ipv6 dhcp pool</b> vérifie le nom du pool DHCP v6 et ses paramètres. Le nombre de clients actifs est 1, c'est-à-dire le client R3 qui reçoit son adresse de monodiffusion globale IPv6 de ce serveur.</p>
+          <p></p>
+          <p>La commande <b>show ipv6 dhcp binding</b> affiche la liaison automatique entre l'adresse link-local du client et l'adresse attribuée par le serveur (voir Figure 2). FE80::32F7:DFF:FE25:2DE1 est l'adresse link-local du client. Dans cet exemple, il s'agit de l'interface G0/1 de R3. Cette adresse est liée à l'adresse de monodiffusion globale IPv6, 2001:DB8:CAFE:1:5844:47B2:2603:C171, qui a été attribuée par R1, le serveur DHCPv6. Ces informations sont mises à jour par les serveurs DHCPv6 avec état, mais pas par les serveurs DHCPv6 sans état.</p>
+          <p></p>
+          <p>
+            <b>Vérification du client DHCPv6 avec état</b>
+          </p>
+          <p></p>
+          <p>Le résultat de la commande <b>show ipv6 interface</b> présenté à la Figure 3 permet de vérifier sur le client DHCPv6 (R3) l'adresse de monodiffusion globale IPv6 qui a été attribuée par le serveur DHCPv6. Les informations concernant le routeur par défaut ne proviennent pas du serveur DHCPv6, mais ont été déterminées par l'adresse IPv6 source contenue dans le message RA. Bien que le client n'utilise pas les informations contenues dans le message RA, il peut utiliser l'adresse IPv6 source pour ses informations de passerelle par défaut.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer et vérifier DHCPv6 sans état.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 montre deux routeurs connectés au même commutateur.  Le routeur 1 est configuré en tant que serveur DHCPv6 avec état, et le routeur 3 est un client DHCPv6.  La figure présente la CLI pour le routeur 1 et affiche le résultat de la commande « show ipv6 dhcp pool ».  Le préfixe d'attribution d'adresses et la ligne qui répertorie un client actif sont mis en surbrillance dans cette figure. La Figure 2 montre le résultat de la commande « show ipv6 dhcp binding ».  L'adresse link-local du routeur 3 et l'adresse DHCPv6 attribuée par le routeur 1 sont mises en surbrillance dans cette figure.  La Figure 3 montre le routeur 3 exécutant la commande « show ipv6 interface g 0/1 ». L'adresse IPv6 et l'adresse de routeur par défaut attribuées par le serveur DHCPv6 sont mises en surbrillance dans cette figure. La Figure 4 est une activité interactive qui permet à l’étudiant de configurer et de vérifier un DHCPv6 sans état sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

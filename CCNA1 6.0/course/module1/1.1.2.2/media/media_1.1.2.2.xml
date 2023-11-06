@@ -1,0 +1,57 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[Client web]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Client de messagerie]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Serveur de messagerie]]></text> 
+  </component>
+
+  <component id="ID_txt04">
+     <text><![CDATA[Serveur web]]></text>
+     </component>
+<component id="ID_txt05">
+   <text><![CDATA[Serveur de fichiers]]></text>
+   </component>
+<component id="ID_txt06">
+   <text><![CDATA[Client de fichiers]]></text>
+   </component>
+
+   <component id="ID_txt07">
+   <text><![CDATA[Commutateur]]></text>
+   </component>
+
+    <!-- <component id="ID_txt08">
+   <text><![CDATA[Cliquez sur les différents services client et serveur pour en afficher une brève description.]]></text>
+   </component> -->
+
+
+
+
+
+<component id="ID_set03_header">
+   <text><![CDATA[Serveur et client de messagerie]]></text>
+   </component>
+<component id="ID_set03_body">
+   <text><![CDATA[Le serveur de messagerie exécute le logiciel du serveur et les clients utilisent le logiciel du client de messagerie, tel que Microsoft Outlook, pour accéder à la messagerie sur le serveur.]]></text>
+   </component>
+<component id="ID_set02_header">
+   <text><![CDATA[Serveur et client web]]></text>
+   </component>
+<component id="ID_set02_body">
+   <text><![CDATA[Le serveur web exécute le logiciel du serveur et les clients utilisent le logiciel du navigateur, tel que Windows Internet Explorer, pour accéder aux pages web sur le serveur.]]></text>
+   </component>
+<component id="ID_set01_header">
+   <text><![CDATA[Serveur et client de fichiers]]></text>
+   </component>
+<component id="ID_set01_body">
+   <text><![CDATA[Le serveur de fichier stocke les fichiers d&apos;entreprise et des utilisateurs à un emplacement central. Les périphériques client accèdent à ces fichiers avec le logiciel client, par exemple l&apos;Explorateur Windows.]]></text>
+   </component>
+   
+    <component id="ID_instructions"><text><![CDATA[Cliquez sur les différents services client et serveur pour en afficher une brève description.]]></text>
+	</component>
+
+  
+</textcomponents>

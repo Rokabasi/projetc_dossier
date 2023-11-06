@@ -1,0 +1,1 @@
+La Figure 1 contient un tableau qui répertorie tous les types de LSA OSPF (1 à 11). La Figure 2 contient un tableau qui répertorie les types de LSA OSPF les plus courants (1 à 5).

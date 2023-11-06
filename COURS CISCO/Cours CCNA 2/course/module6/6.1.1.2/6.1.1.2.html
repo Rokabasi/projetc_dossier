@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.2 Avantages des VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Avantages des VLAN</h1>
+        <div>
+          <p>La productivité des utilisateurs et l'adaptabilité du réseau sont importants pour la croissance et la réussite de l'entreprise. Les VLAN permettent d’adapter un réseau selon les objectifs de l’entreprise. Les principaux avantages des VLAN sont les suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Sécurité</b> : les groupes contenant des données sensibles sont séparés du reste du réseau, ce qui diminue les risques de violation de confidentialité. Comme l’illustre la figure, les ordinateurs du personnel enseignant se trouvent sur le VLAN 10 et sont complètement séparés du trafic des données des étudiants et des invités.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réduction des coûts</b> : des économies sont réalisées grâce à une diminution des mises à niveau onéreuses du réseau et à l’utilisation plus efficace de la bande passante et des liaisons montantes existantes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Meilleures performances</b> : le fait de diviser des réseaux linéaires de couche 2 en plusieurs groupes de travail logiques (domaines de diffusion) réduit la quantité de trafic inutile sur le réseau et augmente les performances. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réduction de la taille des domaines de diffusion</b> : le fait de diviser un réseau en VLAN réduit le nombre de périphériques dans le domaine de diffusion. Comme l’illustre la figure, il y a six ordinateurs dans ce réseau, mais seulement trois domaines de diffusion : Personnel, Étudiant et Invité. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Efficacité accrue du personnel informatique</b> : les VLAN facilitent la gestion du réseau, car les utilisateurs ayant des besoins réseau similaires partagent le même VLAN. Lorsque vous configurez un nouveau commutateur, toutes les stratégies et procédures déjà configurées pour le VLAN correspondant sont implémentées lorsque les ports sont affectés. Le personnel informatique peut aussi identifier facilement la fonction d’un VLAN en lui donnant un nom approprié. Dans la figure, pour qu’ils puissent être facilement identifiables, le VLAN 10 a été nommé « Personnel », le VLAN 20, « Étudiant » et le VLAN 30, « Invité ». </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Gestion simplifiée de projets et d’applications</b> : les VLAN rassemblent des utilisateurs et des périphériques réseau pour prendre en charge des impératifs commerciaux ou géographiques. La séparation des fonctions facilite la gestion d’un projet ou l’utilisation d’une application spécialisée. Une plate-forme de développement d’e-learning pour le personnel enseignant est un exemple de ce type d’application.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Chaque VLAN d’un réseau commuté correspond à un réseau IP. Par conséquent, la conception d’un VLAN doit tenir compte de la mise en œuvre d’un modèle d’adressage réseau hiérarchique. L’adressage réseau hiérarchique signifie que les numéros de réseau IP sont appliqués aux segments réseau ou VLAN dans un ordre tenant compte de l’ensemble du réseau. Les blocs d’adresses réseau contiguës sont réservés et configurés sur les périphériques situés dans une zone spécifique du réseau, comme l’illustre la figure. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un routeur connecté au commutateur 1.  Le commutateur 1 est connecté au commutateur 2 et 3 avec une liaison.  Les commutateurs 2 et 3 possèdent trois VLAN.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

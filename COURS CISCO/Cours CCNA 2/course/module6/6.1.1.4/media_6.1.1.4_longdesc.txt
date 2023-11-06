@@ -1,0 +1,1 @@
+La figure présente un routeur connecté à un réseau commuté.  Un commutateur a un téléphone V.O.I.P. connecté.  Il existe des légendes sur chaque commutateur indiquant que le commutateur prend en charge le réseau VLAN 150.  Il s’agit du réseau VLAN voix par défaut sur les commutateurs Cisco.

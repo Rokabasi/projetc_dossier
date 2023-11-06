@@ -1,0 +1,1 @@
+La figure affiche le routeur 2 avec un réseau interne contenant un serveur Web sur le côté gauche et un réseau externe contenant un PC sur le côté droit.  Des paquets sont transférés entre le PC et le serveur Web.  Les numéros affichés en regard des éléments indiquent l’ordre de traduction d’adresses réseau (NAT) statique. Une table NAT statique figure sous l’image.  

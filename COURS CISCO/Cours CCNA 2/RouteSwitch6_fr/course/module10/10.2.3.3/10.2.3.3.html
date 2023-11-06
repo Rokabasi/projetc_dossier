@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.3.3 Commandes de routeur et de commutateur pour les clients Syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commandes de routeur et de commutateur pour les clients Syslog</h1>
+        <div>
+          <p>Un processus en trois étapes permet de configurer le routeur de telle sorte qu'il envoie les messages système à un serveur Syslog où ils pourront être stockés, filtrés et analysés :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. </b>En mode de configuration globale, utilisez la commande <b>logging</b> pour<b></b> configurer le nom d’hôte de destination ou l’adresse IPv4 du Syslog.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>Contrôlez les messages qui seront envoyés au serveur Syslog à l'aide de la commande <b>logging trap </b><i>level </i>en mode de configuration globale. Par exemple, afin de limiter les messages à ceux des niveaux 4 et inférieurs (0 à 4), exécutez l'une des deux commandes équivalentes.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. </b>Éventuellement, configurez l'interface source avec la commande <b>logging source-interface </b><i>interface-type interface-number </i>en mode de configuration globale. Cette opération permet de spécifier que les paquets Syslog contiennent les adresses IPv4 ou IPv6 d'une interface spécifique, quelle que soit l'interface utilisée par le paquet pour quitter le routeur.</p>
+          <p></p>
+          <p>Dans la Figure 1, le routeur R1 est configuré pour envoyer les messages de journal des niveaux 4 et inférieurs au serveur Syslog à l'adresse 192.168.1.3. L'interface source est définie à G0/0. Une interface de bouclage est créée, puis arrêtée, puis réactivée. Le résultat de la console reflète ces actions.</p>
+          <p></p>
+          <p>Comme le montre la Figure 2, le serveur Syslog Tftpd32 a été configuré sur un ordinateur exécutant Windows 7 avec l'adresse IPv4 192.168.1.3. Comme vous pouvez le constater, les seuls messages qui apparaissent sur le serveur Syslog sont ceux dont le niveau de gravité est égal à 4 ou moins (plus sévère). Les messages de niveau de gravité égal à 5 ou plus (moins grave) s'affichent dans les résultats de la console du routeur, mais n'apparaissent pas dans les résultats du serveur Syslog, car la commande logging trap<b></b> limite les messages Syslog envoyés au serveur Syslog sur la base de leur gravité.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche les commandes permettant de configurer un routeur pour envoyer des messages système vers un serveur Syslog. La Figure 2 montre la sortie du serveur Syslog en utilisant TFTP. 32.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

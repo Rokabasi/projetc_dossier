@@ -1,0 +1,1 @@
+Dans la Figure, les routeurs 1, 2, 3 et 4 sont connectés à un commutateur via un réseau de diffusion. Le routeur deux est connecté à Internet avec une liaison point à point.

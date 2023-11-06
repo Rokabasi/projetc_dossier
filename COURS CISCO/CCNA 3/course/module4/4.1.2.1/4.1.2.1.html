@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.1 Les restrictions d&#x0027;implémentation</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les restrictions d&#x0027;implémentation</h1>
+        <div>
+          <p>L'EtherChannel peut être mis en œuvre en regroupant plusieurs ports physiques sous la forme d'une ou de plusieurs liaisons EtherChannel logiques. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: les types d'interface ne peuvent pas être associés, par exemple, Fast Ethernet et Gigabit Ethernet ne peuvent pas être associés dans un même EtherChannel. </p>
+          <p></p>
+          <p>L'EtherChannel offre une bande passante bidirectionnelle simultanée jusqu'à 800 Mb/s (Fast EtherChannel) ou 8 Gb/s (Gigabit EtherChannel) entre deux commutateurs ou entre un commutateur et un hôte. Actuellement, chaque EtherChannel peut être composé de huit ports Ethernet maximum, configurés pour être compatibles. Le commutateur Cisco IOS peut actuellement prendre en charge six EtherChannel. Cependant, grâce au développement de nouveaux IOS et à l'évolution des plates-formes, certaines cartes et plates-formes peuvent peut-être prendre en charge un nombre accru de ports dans une liaison EtherChannel, ainsi qu'un nombre accru de Gigabit EtherChannels. Le concept est le même quels que soient les vitesses et le nombre de liaisons impliqués. Lorsque vous configurez EtherChannel sur des commutateurs, veillez aux limites et aux spécifications de la plate-forme matérielle.</p>
+          <p></p>
+          <p>Le but premier de la technologie EtherChannel était d'accroître le débit des liaisons agrégées entre les commutateurs. Cependant, ce concept fut étendu à mesure de la popularité de la technologie EtherChannel, et désormais, de nombreux serveurs peuvent également prendre en charge l'agrégation de liaisons avec EtherChannel. EtherChannel crée une relation « un à un », c'est-à-dire qu'une liaison EtherChannel relie deux périphériques uniquement. Une liaison EtherChannel peut être créé entre deux commutateurs ou entre un serveur EtherChannel-enabled et un commutateur. </p>
+          <p></p>
+          <p>La configuration de chaque port du groupe EtherChannel doit être cohérente sur les deux périphériques. Si les ports physiques sont configurés en tant que trunks d'un côté, les ports physiques de l'autre côté doivent également être configurés en tant que trunks avec le même VLAN natif. En outre, tous les ports de chaque liaison EtherChannel doivent être configurés en tant que ports de couche 2.</p>
+          <p></p>
+          <p>Chaque EtherChannel possède une interface de canal de port logique, représentée dans la figure. Une configuration appliquée à l'interface de canal de port affecte toutes les interfaces physiques attribuées à cette interface. </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: les EtherChannel de couche 3 peuvent être configurés sur des commutateurs multicouches Cisco Catalyst tels que le modèle Catalyst 3560. Néanmoins, ce type de commutateurs n'est pas étudié dans ce cours. Un EtherChannel de couche 3 possède une seule adresse IP associée à l'agrégation logique de ports de commutation dans l'EtherChannel.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un commutateur Cisco Catalyst 2960.  Les ports 1 à 6 du commutateur sont mis en évidence et désignés comme formant une interface de canal de port logique.  Il en est de même pour les ports 9 à 13.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

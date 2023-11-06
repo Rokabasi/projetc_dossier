@@ -1,0 +1,1 @@
+La figure montre le graphique standard d'activité en classe indiquant qu'il y a une activité en classe pour cette section du cursus.  La figure présente également 5 nœuds dans une disposition partielle de réseau maillé, ainsi que l'affirmation selon laquelle OSPF est un protocole qui utilise une métrique de coût.

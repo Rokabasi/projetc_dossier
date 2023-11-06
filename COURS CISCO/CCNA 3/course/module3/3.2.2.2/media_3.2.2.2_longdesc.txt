@@ -1,0 +1,1 @@
+La figure présente un tableau indiquant si un port reçoit les b.p.d.u., réachemine les données reçues sur l'interface, réachemine des données commutées à partir d'une autre interface ou apprend les adresses MAC pour les 5 différents modes de STP. Les cinq modes sont blocage, écoute, apprentissage, réacheminement et désactivé.

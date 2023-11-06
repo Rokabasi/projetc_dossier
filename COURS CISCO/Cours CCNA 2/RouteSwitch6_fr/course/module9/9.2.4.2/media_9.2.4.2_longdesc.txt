@@ -1,0 +1,1 @@
+La figure montre un routeur sans fil avec un réseau interne sur la gauche et un réseau externe sur la droite.  Une capture d’écran de I’interface graphique utilisateur de Packet Tracer montre la manière de configurer le transfert de port.  

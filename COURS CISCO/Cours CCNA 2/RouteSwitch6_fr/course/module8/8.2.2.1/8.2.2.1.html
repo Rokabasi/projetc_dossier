@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.1 Configuration d&#x0027;un routeur en tant que serveur DHCPv6 sans état</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;un routeur en tant que serveur DHCPv6 sans état</h1>
+        <div>
+          <p>Comme l'illustre la Figure 1, quatre étapes sont nécessaires à la configuration d'un routeur en tant que serveur DHCPv6 :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. Activation du routage IPv6 </b>
+          </p>
+          <p></p>
+          <p>La commande <b>ipv6 unicast-routing </b>doit être exécutée pour activer le routage IPv6. Cette commande n'est pas nécessaire pour que le routeur agisse comme un serveur DHCPv6 sans état, mais elle est requise pour qu'il récupère des messages RA ICMPv6. </p>
+          <p></p>
+          <p>
+            <b>Étape 2. Configuration d'un pool DHCPv6</b>
+          </p>
+          <p></p>
+          <p>La commande<b> ipv6 dhcp pool </b><i>pool-name </i>crée un pool et entre dans le routeur en mode de configuration DHCPv6, identifié par l’invite Router(config-dhcpv6)#.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. Configuration des paramètres du pool</b>
+          </p>
+          <p></p>
+          <p>Lors du processus SLAAC, le client a reçu les informations dont il avait besoin pour créer une adresse de monodiffusion globale IPv6. Le client a également obtenu les informations sur la passerelle par défaut à l'aide de l'adresse IPv6 source du message RA, qui est l'adresse link-local du routeur. Cependant, le serveur DHCPv6 sans état peut être configuré pour fournir d'autres informations qui n'ont pas forcément été incluses dans le message RA, notamment l'adresse du serveur DNS et le nom de domaine.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. Configuration de l'interface DHCPv6</b>
+          </p>
+          <p></p>
+          <p>La commande<b> ipv6 dhcp server </b><i>pool-name </i>en mode de configuration d'interface relie le pool DHCPv6 à l'interface. Le routeur répond aux requêtes DHCPv6 sans état sur cette interface avec les informations contenues dans le pool. L'indicateur O doit être modifié pour passer de 0 à 1 à l'aide de la commande d'interface <b>ipv6 nd other-config-flag</b>. Les messages RA envoyés sur cette interface indiquent que des informations supplémentaires sont disponibles auprès d'un serveur DHCPv6 sans état.</p>
+          <p></p>
+          <p>
+            <b>Exemple de serveur DHCPv6 sans état</b>
+          </p>
+          <p></p>
+          <p>La Figure 2 présente un exemple de configuration d'un routeur en tant que serveur DHCPv6 sans état. Notez que le routeur R3 est affiché en tant que client DHCPv6. R3 est configuré en tant que client pour permettre de vérifier le fonctionnement de DHCPv6 sans état.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les commandes utilisées pour configurer DHCPv6 sans état sur un routeur.  La figure débute en mode de configuration globale et la première commande est « IPv6 unicast-routing ».  Cette commande active le routage IPv6.  La commande suivante est « IPv6 DHCP pool » et le nom du pool suit.  Un serveur DNS est configuré avec la commande « dns-server ». Le nom de domaine est configuré avec la commande « domain-name ».  Une interface est configurée avec le pool DHCP avec la commande « IPv6 DHCP server » suivie du nom de pool.  La dernière commande est : i.p.v.6. n.d. other-config-flag. La Figure 2 illustre un exemple complet de configuration d'un routeur en tant que serveur DHCPv6 sans état.  La figure commence en mode de configuration globale et les commandes sont comme suit.  La première commande est : i.p.v.6. unicast-routing.  La commande suivante est : d.h.c.p. pool i.p.v.6.-stateless.  La commande suivante est : d.n.s.-server 2001:db8:cafe:aaaa::5.  La commande suivante est : domain-name example.com.  Le pool DHCPv6 a été configuré et le jeu suivant de commandes associe le pool à l’interface.  La CLI dans l’exemple passe d’abord à l’interface locale à l’aide de la commande : exit. La commande exit est suivie par la commande : interface g 0/1.  La commande suivante est : i.p.v.6. address 2001:db8:cafe:1::1/64.  La commande suivante est : d.h.c.p. pool i.p.v.6.  -stateless.  La dernière commande est : i.p.v.6. n.d. other-config-flag.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

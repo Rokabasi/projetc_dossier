@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.3 Composants du protocole OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Composants du protocole OSPF</h1>
+        <div>
+          <p>Tous les protocoles de routage partagent des composants similaires. Ils utilisent tous des messages de protocole de routage pour échanger les informations de routage. Les messages permettent de renforcer les structures de données, qui sont ensuite traitées au moyen d'un algorithme de routage. </p>
+          <p></p>
+          <p>Les trois composants principaux du protocole de routage OSPF incluent :</p>
+          <p></p>
+          <p>
+            <b>Structures des données </b>
+          </p>
+          <p>Le protocole OSPF crée et met à jour trois bases de données : (voir la Figure 1). </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de données de contiguïté </b>- Crée la table de voisinage.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de données d'états de lien (LSDB) </b>- Crée la table topologique. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de données de réacheminement </b>- Crée la table de routage.</li>
+            </ul>
+          </p>
+          <p>Ces tables contiennent une liste des routeurs voisins permettant d'échanger les informations de routage, et elles sont conservées et mises à jour dans la mémoire vive. </p>
+          <p></p>
+          <p>
+            <b>Messages des protocoles de routage</b>
+          </p>
+          <p>Les appareils de couche 3 (tels que des routeurs) qui exécutent OSPF échangent des messages pour transmettre les informations de routage via cinq types de paquets. Ces paquets, comme illustré dans la Figure 2, sont les suivants :</p>
+          <p>
+            <ul>
+              <li>Paquet Hello</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Paquet DBD de description de base de données</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Paquet LSR de demande d'état de liens</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Paquet LSU de mise à jour d'état de liens</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Paquet LSA d'accusé de réception d'état de liens</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Ces paquets servent à détecter les routeurs voisins et à échanger des informations de routage pour garantir l'exactitude des informations relatives au réseau.</p>
+          <p></p>
+          <p>
+            <b>Algorithme </b>
+          </p>
+          <p>Le routeur crée la table topologique à l'aide des résultats des calculs basés sur l'algorithme SPF de Dijkstra. L'algorithme SPF est basé sur le coût cumulé permettant d'atteindre une destination. </p>
+          <p></p>
+          <p>L'algorithme SPF crée une arborescence SPF en plaçant chaque routeur à la racine de l'arborescence et en calculant le plus court chemin vers chaque nœud. L'arborescence SPF est ensuite utilisée pour calculer les meilleures routes. Le protocole OSPF insère les meilleures routes dans la base de données de réacheminement, qui est utilisée pour créer la table de routage. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 représente un tableau répertoriant les structures de données OSPF.  OSPF crée une base de données de contiguïté, qui contient la table des voisins et affiche tous les routeurs voisins.  La commande show ip OSPF neighbor, permet d'afficher la table.  OSPF crée une base de données d'état de liens, qui contient la table topologique, ainsi que des informations sur tous les autres routeurs du réseau.  La commande show ip OSPF database, permet d'afficher cette table.  OSPF crée également une base de données de réacheminement qui contient la table de routage.  Elle répertorie les routes générées lors de l'exécution d'un algorithme sur la base de données d'états de liens.  La commande, show ip route, permet d'afficher cette table. La Figure 2 présente les paquets que les routeurs OSPF échangent.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

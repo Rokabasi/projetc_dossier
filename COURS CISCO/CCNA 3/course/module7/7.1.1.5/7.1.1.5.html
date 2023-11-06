@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.5 Vérification de la récapitulation automatique : table topologique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la récapitulation automatique : table topologique</h1>
+        <div>
+          <p>Les tables de routage de R1 et de R2 contiennent des sous-réseaux du réseau 172.16.0.0/16. Par conséquent, comme illustré dans la Figure 1, les deux routeurs annoncent la route récapitulative de 172.16.0.0/16 à R3.</p>
+          <p></p>
+          <p>Utilisez la commande <b>show ip eigrp topology all-links</b> pour afficher toutes les routes EIGRP entrantes, comme illustré dans la Figure 2. Le résultat confirme que R3 a reçu la route récapitulative de 172.16.0.0/16 de R1 (c.-à-d., 192.168.10.5) et de R2 (c.-à-d., 192.168.10.9). Notez qu'un seul successeur a été sélectionné. Il s'agit de la liaison vers R1 qui présente une bande passante d'interface plus élevée. </p>
+          <p></p>
+          <p>L'option <b>all-links</b> affiche toutes les mises à jour reçues, y compris les routes en provenance du successeur potentiel. Dans ce cas, R2 devient un successeur potentiel, car sa distance annoncée (2 816) est inférieure à la distance de faisabilité (2 170 112) via R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le schéma standard des travaux pratiques.  Les routeurs 1 et 2 récapitulent tous deux le réseau 172.16.0.0/16 et l'annoncent au routeur R3. La Figure 2 présente le résultat de la commande « show ip eigrp topology all-links » sur le routeur R3. Cela montre que deux sources ont indiqué la route vers le réseau 172.16.0.0 au routeur R3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

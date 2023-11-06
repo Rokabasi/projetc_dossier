@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+	<text><![CDATA[<b>Configuration automatique des adresses sans état ICMPv6</b>]]></text>
+</component>
+<component id="ID_txt01">
+	<text><![CDATA[Client]]></text> 
+</component>
+<component id="ID_txt02">
+	<text><![CDATA[Multidiffusion destinée à tous les routeurs IPv6]]></text> 
+</component>
+<component id="ID_txt03">
+	<text><![CDATA[<b>Sollicitation du routeur (RS)</b><br>« J&apos;ai besoin d&apos;une annonce de routeur depuis le routeur. »]]></text> 
+</component>
+<component id="ID_txt04">
+	<text><![CDATA[Multidiffusion destinée à tous les nœuds IPv6]]></text> 
+</component>
+<component id="ID_txt05">
+	<text><![CDATA[<b>Annonce du routeur (RA)</b><br>« Voici le préfixe, la longueur du préfixe et d&apos;autres informations. »]]></text> 
+</component>
+</textcomponents>

@@ -1,0 +1,93 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Exercice : identification des termes propres aux vecteurs de distance</b><br/><br/>Faites glisser le terme qui correspond le mieux à la description du protocole de routage à vecteur de distance vers le champ fourni à cet effet.]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Bellman-Ford</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Mises à jour de diffusion</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">Voisins</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">Mises à jour régulières</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">Algorithme</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">DUAL</font>]]></text>
+</component>
+
+
+
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque terme à la description du protocole de routage à vecteur de distance. ]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque terme à la description du protocole de routage à vecteur de distance. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+
+<component id='ID_target_header'>
+	<text><![CDATA[<b>Terme</b>]]></text>
+</component>
+<component id='ID_text_header'>
+	<text><![CDATA[<b>Description du protocole de routage à vecteur de distance</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[Processus selon lequel les mises à jour sont envoyées aux routeurs<br>voisins à des intervalles réguliers]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Processus selon lequel les routeurs voisins reçoivent les mises à jour réseau<br>à l&apos;adresse IPv4 255.255.255.255]]></text> 
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Processus qui calcule les meilleurs chemins vers les réseaux]]></text> 
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[EIGRP et IGRP utilisent ce processus d&apos;algorithmes tel que développé<br>par Cisco]]></text> 
+</component>
+
+<component id="ID_txt05">
+  <text><![CDATA[RIP utilise ce processus d&apos;algorithmes]]></text> 
+</component>
+
+<component id="ID_txt06">
+  <text><![CDATA[Décrit les routeurs qui partagent un lien et le même protocole de<br>routage]]></text> 
+</component>
+
+
+   
+</textcomponents>

@@ -1,0 +1,1 @@
+La figure présente la syntaxe pour configurer une route statique.  La syntaxe est la suivante : « i. p. route », suivie de l’adresse de destination du réseau, du masque réseau de destination, de l’interface de sortie ou de l’adresse IP du tronçon suivant.

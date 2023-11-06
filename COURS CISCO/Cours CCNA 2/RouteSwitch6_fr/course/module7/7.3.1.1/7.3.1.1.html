@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.1 L&#x0027;énoncé deny any implicite</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>L&#x0027;énoncé deny any implicite</h1>
+        <div>
+          <p>Si vous avez une liste de contrôle d’accès à entrée unique, et que celle-ci est une entrée de refus, tout le trafic sera refusé. Au moins une ACE d'autorisation doit être configurée dans toute liste de contrôle d'accès. Sinon, tout le trafic est bloqué.</p>
+          <p></p>
+          <p>Pour le réseau sur la figure, l'application de la liste de contrôle d'accès 1 ou 2 à l'interface S0/0/0 de R1 vers la sortie aura le même effet. Le réseau 192.168.10.0 sera autorisé à accéder aux réseaux accessibles via S0/0/0 alors que 192.168.11.0 ne sera pas autorisé à y accéder. Dans la liste ACL 1, le paquet qui ne correspond pas à l'instruction permit est rejeté.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un routeur avec deux interfaces Gigabit actives. La syntaxe pour deux listes de contrôle d'accès est répertoriée sous la topologie.  La syntaxe de la première liste de contrôle d'accès est « access-list 1 permit ip 192.168.10.0 0.0.0.255 ».  La commande de la deuxième liste de contrôle d'accès est « access-list 2 permit ip 192.168.10.0 0.0.0.255 » suivie par « access-list 2 deny any ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

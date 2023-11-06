@@ -1,0 +1,1 @@
+La figure présente une topologie de réseau organisée selon une structure hiérarchique avec des commutateurs de couche 2 présents dans la couche d'accès et des commutateurs de couche 3 dans les couches de distribution et de cœur. Tous les appareils connectés sont redondants.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.4.1.3 Synthèse</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Synthèse</h1>
+        <div>
+          <p>EtherChannel regroupe plusieurs liaisons commutées pour équilibrer la charge sur des chemins d'accès redondants entre deux appareils. Tous les ports d'un EtherChannel doivent fonctionner au même débit, utiliser les mêmes paramètres duplex et les mêmes informations VLAN sur l'ensemble des interfaces des appareils aux deux extrémités. Les paramètres configurés dans le mode de configuration de l'interface de canal de port seront également appliqués à chaque interface de cet EtherChannel. Les paramètres configurés sur chaque interface ne seront pas appliqués à EtherChannel ou aux autres interfaces d'EtherChannel.</p>
+          <p></p>
+          <p>Le protocole PAgP est un protocole propriétaire de Cisco qui facilite la création automatique de liaisons EtherChannel. Les modes PAgP sont On, PAgP desirable et PAgP auto. Le protocole LACP fait partie d'une spécification IEEE qui permet également de regrouper plusieurs ports physiques dans un seul canal logique. Les modes LACP sont On, LACP active et LACP passive. PAgP et LACP ne fonctionnent pas ensemble. Le mode On existe pour PAgP et LACP, car il crée un EtherChannel de manière inconditionnelle, sans utiliser PAgP ni LACP. Par défaut, aucun mode n'est configuré pour EtherChannel.</p>
+          <p></p>
+          <p>Les protocoles de redondance au premier saut, tels que HSRP, VRRP et GLBP, fournissent des passerelles par défaut alternatives pour les hôtes d'un routeur redondant ou d'un environnement commuté multicouche. Plusieurs routeurs partagent une adresse IP virtuelle et une adresse MAC utilisée comme passerelle par défaut sur un client. Ceci permet de garantir la connectivité des hôtes, même en cas de défaillance d'un appareil jouant le rôle de passerelle par défaut pour un VLAN ou un groupe de VLAN. Avec HSRP ou VRRP, un seul routeur est actif ou en réacheminement pour un groupe donné, tandis que les autres sont en mode secours. Le protocole GLBP permet d'utiliser simultanément plusieurs passerelles, en plus de la fonction de basculement automatique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre deux topologies. Chaque topologie comporte deux commutateurs avec une connexion établie entre les commutateurs sur deux ports.  Dans la première topologie, les ports connectés à chaque commutateur s'exécutent à un gigabit par seconde, se trouvent en mode full duplex et sont placés dans le VLAN 10.  Cette configuration permet de créer un canal EtherChannel.  Dans la deuxième topologie, les ports de chaque commutateur s'exécutent à un gigabit par seconde et sont placés dans le VLAN 10. Toutefois, un port fonctionne en mode semi-duplex et l'autre en mode duplex intégral.  Cette configuration ne permet pas de créer de canal EtherChannel.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

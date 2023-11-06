@@ -1,0 +1,1 @@
+Cette figure est un exercice interactif qui permet au stagiaire de s'entraîner à positionner chaque type de paquet au sein du processus de communication EIGRP.

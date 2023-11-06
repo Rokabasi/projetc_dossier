@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.3.2 Protocole EIGRP (Enhanced Interior-Gateway Routing Protocol)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole EIGRP (Enhanced Interior-Gateway Routing Protocol)</h1>
+        <div>
+          <p>Le protocole IGRP (Interior Gateway Routing Protocol) est le premier protocole de routage IPv4 propriétaire développé par Cisco en 1984. Il utilisait les caractéristiques conceptuelles suivantes :</p>
+          <p>
+            <ul>
+              <li>La bande passante, le délai, la charge et la fiabilité sont utilisés pour créer une métrique composite.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, les mises à jour de routage sont diffusées toutes les 90 secondes.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Limite maximale de 255 sauts.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En 1992, le protocole IGRP a été remplacé par le protocole EIGRP (Enhanced IGRP). Comme le protocole RIPv2, le protocole EIGRP a également introduit la prise en charge de VLSM et de CIDR. Le protocole EIGRP améliore l'efficacité, réduit les mises à jour de routage et prend en charge l'échange sécurisé des messages.  </p>
+          <p></p>
+          <p>La table dans la figure récapitule les différences entre les protocoles IGRP et EIGRP. </p>
+          <p></p>
+          <p>Le protocole EIGRP a également introduit les fonctionnalités suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Mises à jour déclenchées associées</b> - Il n'envoie pas de mises à jour périodiques. Seules les modifications de la table de routage sont propagées, chaque fois qu'une modification se produit. Cela réduit la charge que le protocole de routage place sur le réseau. Les mises à jour déclenchées associées ont pour conséquence que le protocole EIGRP envoie uniquement aux voisins qui en ont besoin. Moins de bande passante est utilisée, particulièrement sur les grands réseaux avec de nombreuses routes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mécanisme de maintien de connexion (Hello)</b> - Un petit message Hello est échangé régulièrement afin de maintenir les contiguïtés avec les routeurs voisins. L'utilisation des ressources réseau en fonctionnement normal est minime, par rapport aux mises à jour périodiques. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Gestion d'une table topologique</b> - Gère toutes les routes reçues des voisins (pas seulement les meilleurs chemins) dans une table topologique. L'algorithme DUAL permet d'insérer les routes de secours dans la table topologique EIGRP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Convergence rapide</b> - Dans la plupart des cas, c'est le protocole IGP qui converge le plus rapidement car il conserve des routes alternatives, permettant une convergence quasiment instantanée. En cas de défaillance d'une route principale, le routeur peut faire appel à la route alternative déjà identifiée. Le basculement vers l'autre route est immédiat et n'implique pas l'interaction avec d'autres routeurs.   </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Prise en charge du protocole de couche réseau</b> - Le protocole EIGRP utilise des modules dépendants du protocole (PDM), ce qui signifie qu'il s'agit du seul protocole à inclure une prise en charge d'autres protocoles que IPv4 et IPv6, tels que les protocoles anciens IPX et Appletalk. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est un tableau qui compare IGRP à EIGRP.  Ceci est un résumé de la lecture.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

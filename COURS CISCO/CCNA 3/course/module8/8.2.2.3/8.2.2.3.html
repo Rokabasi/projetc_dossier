@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.3 La commande network</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La commande network</h1>
+        <div>
+          <p>Il existe plusieurs façons d'identifier les interfaces qui participeront au processus de routage OSPFv2.</p>
+          <p>La Figure 1 indique les commandes obligatoires pour déterminer quelles interfaces sur R1 participent au processus de routage OSPFv2 pour une zone. Notez l'utilisation de masques génériques afin d'identifier les interfaces respectives en fonction de leur adresse réseau. Comme il s'agit d'un réseau OSPF zone unique, tous les ID de zone sont définis sur 0. </p>
+          <p>À la place, le protocole OSPFv2 peut être activé via la commande <b>network </b><i>intf-ip-address</i><b> 0.0.0.0</b><b><i> area </i></b><i>area-id </i>en mode de configuration de routeur.</p>
+          <p>La Figure 2 fournit un exemple de spécification de l'adresse IPv4 avec un masque générique à quatre zéros. La saisie de <b>network 172.16.3.1 0.0.0.0 area 0</b> sur R1 indique au routeur d'activer l'interface Serial0/0/0 pour le processus de routage. Par conséquent, le processus OSPFv2 annonce sur le réseau qu'il se trouve sur cette interface (172.16.3.0/30).</p>
+          <p>L'avantage de la spécification de l'interface est que le calcul du masque générique n'est pas nécessaire. OSPFv2 utilise l'adresse et le masque de sous-réseau de l'interface pour déterminer le réseau à annoncer.</p>
+          <p>Certaines versions d'IOS autorisent la saisie du masque de sous-réseau au lieu du masque générique. L'IOS convertit ensuite le masque de sous-réseau au format de masque générique. </p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour annoncer les réseaux connectés à R2 (172.16.2.0/24, 172.16.3.0/30 et 192.168.10.8/30).</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> pendant que vous complétez le contrôleur de syntaxe, observez les messages d'informations décrivant la contiguïté entre R1 (1.1.1.1) et R2 (2.2.2.2). Le modèle d'adressage IPv4 utilisé pour l'ID de routeur facilite l'identification du voisin.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre les commandes utilisées pour attribuer une interface à une zone OSPF. La figure commence en mode de configuration globale. La première commande est router OSPF 10, où cette valeur désigne un ID de processus arbitraire. Cette commande active le protocole de routage OSPF.  La commande suivante permet d'identifier les interfaces qui participeront au routage OSPF. Elle se base sur l'adresse IP et le masque de sous-réseau.  Dans la figure, la commande est network 172.16.1.0 0.0.0.255 area 0.  Cette commande active OSPF au niveau de l'interface qui se trouve sur le réseau spécifié.  La commande suivante est network 172.16.1.0 0.0.0.3 area 0.  La dernière commande est network 192.168.10.4 0.0.0.255 area 0.  La Figure 2 montre les commandes utilisées pour attribuer des interfaces à une zone OSPF avec quatre zéros.  La figure commence en mode de configuration globale et la première commande active OSPF comme protocole de routage. Cette commande est router OSPF 10, où cette valeur désigne un ID de processus arbitraire.  La commande suivante permet d'identifier les interfaces qui participeront au routage OSPF. Elle se base sur l'adresse IP et un masque générique à quatre zéros.  Dans la figure, la commande est network 172.16.1.1 0.0.0.0 area 0.  La commande suivante est network 172.16.3.1 0.0.0.0 area 0.  La dernière commande est network 192.168.10.5 0.0.0.0 area 0.  La Figure 3 illustre un élément multimédia interactif qui permet à l'étudiant d'annoncer les réseaux OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

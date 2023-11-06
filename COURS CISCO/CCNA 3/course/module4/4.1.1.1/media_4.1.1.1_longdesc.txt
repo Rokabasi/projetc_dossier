@@ -1,0 +1,1 @@
+La figure présente un commutateur de couche d'accès connecté à deux commutateurs de couche de distribution. Chaque connexion est constituée de deux liaisons entre les commutateurs.  La figure montre qu'une des quatre liaisons est actuellement en mode de blocage à cause du protocole STP.

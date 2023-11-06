@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.2 Chapitre 2 : routage statique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 2 : routage statique</h1>
+        <div>
+          <p>Dans ce chapitre, vous avez appris comment utiliser les routes statiques IPv4 et IPv6 pour atteindre des réseaux distants. Les réseaux distants sont des réseaux qui ne sont accessibles qu’en transférant le paquet vers un autre routeur. Les routes statiques peuvent être configurées facilement. Toutefois, sur les grands réseaux, cette opération manuelle peut s'avérer fastidieuse. Les routes statiques sont toujours utilisées, même lorsqu'un protocole de routage dynamique est mis en œuvre.</p>
+          <p></p>
+          <p>Les routes statiques peuvent être configurées avec une adresse IP de tronçon suivant, communément l’adresse IP du routeur de tronçon suivant. En cas d’utilisation d’une adresse IP de tronçon suivant, le processus de la table de routage doit résoudre cette adresse vers une interface de sortie. Pour les liens série point à point, il est généralement plus efficace de configurer une interface de sortie sur la route statique. Sur les réseaux à accès multiple comme Ethernet, une adresse IP de tronçon suivant et une interface de sortie peuvent être configurées sur la route statique.</p>
+          <p></p>
+          <p>Les routes statiques ont une distance administrative par défaut de 1. Cette distance administrative s'applique également aux routes statiques configurées avec une adresse de tronçon suivant ou avec une interface de sortie. </p>
+          <p></p>
+          <p>Une route statique n'est entrée dans la table de routage que si l'adresse IP de tronçon suivant peut être résolue par le biais d'une interface de sortie. Que la route statique soit configurée avec une adresse IP de tronçon suivant ou avec une interface de sortie, si cette dernière (utilisée pour transférer le paquet) n'est pas dans la table de routage, la route statique n'est pas incluse dans la table de routage.</p>
+          <p></p>
+          <p></p>
+          <p>Une route par défaut est configurée avec une adresse réseau 0.0.0.0, un masque de sous-réseau 0.0.0.0 pour IPv4 et le préfixe/la longueur de préfixe ::/0 pour IPv6. En l'absence de correspondance plus précise dans la table de routage, cette dernière utilise la route par défaut pour transférer le paquet vers un autre routeur. </p>
+          <p></p>
+          <p>Une route statique flottante peut être configurée comme route de secours pour un lien principal en manipulant sa valeur administrative.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure constitue un graphique sommaire du chapitre.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

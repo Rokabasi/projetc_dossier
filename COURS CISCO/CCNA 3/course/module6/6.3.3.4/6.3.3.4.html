@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.4 Successeurs potentiels, condition de faisabilité et distance annoncée</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Successeurs potentiels, condition de faisabilité et distance annoncée</h1>
+        <div>
+          <p>DUAL peut converger rapidement après une modification de la topologie, car il peut utiliser les chemins de secours vers d'autres réseaux sans nouveau calcul. Ces chemins de secours sont appelés « successeurs potentiels » (FS).</p>
+          <p></p>
+          <p>Un successeur potentiel est un voisin disposant d'un chemin de secours sans boucle vers le même réseau que le successeur, et qui remplit la condition de faisabilité (FC). Le successeur de R2 pour le réseau 192.168.1.0/24 est R3, qui fournit le meilleur chemin ou la métrique la plus basse vers le réseau de destination. Notez à la Figure 1 que R1 fournit un autre chemin, mais s'agit-il d'un successeur potentiel ? Pour que R1 soit un successeur potentiel de R2, il doit d'abord remplir la condition de faisabilité.</p>
+          <p></p>
+          <p>La condition de faisabilité est remplie lorsque la distance annoncée (RD) d'un voisin à un réseau est inférieure à la distance de faisabilité du routeur local par rapport à ce même réseau de destination. Si la distance annoncée est inférieure, elle représente un chemin sans boucle. La distance annoncée correspond simplement à la distance de faisabilité d'un voisin EIGRP vers le même réseau de destination. La distance annoncée est la métrique qu’un routeur annonce à un voisin à propos de son propre coût vers le réseau. </p>
+          <p></p>
+          <p>À la Figure 2, la distance de faisabilité de R1 vers 192.168.1.0/24 est 2 170 112. </p>
+          <p>
+            <ul>
+              <li>R1 indique à R2 que sa distance de faisabilité vers 192.168.1.0/24 est 2 170 112. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Du point de vue de R2, 2 170 112 est la distance annoncée de R1. </li>
+            </ul>
+          </p>
+          <p>R2 utilise cette information pour déterminer si R1 remplit la condition de faisabilité et donc, s'il peut constituer un successeur potentiel. </p>
+          <p></p>
+          <p>Comme indiqué à la Figure 3, la distance annoncée de R1 (2 170 112) étant inférieure à la distance de faisabilité de R2 (3 012 096), R1 remplit la condition de faisabilité. </p>
+          <p></p>
+          <p>R1 est désormais considéré comme un successeur potentiel de R2 vers le réseau 192.168.1.0/24.</p>
+          <p></p>
+          <p>En cas de problème sur le chemin de R2 vers 192.168.1.0/24 via R3 (successeur), R2 installe immédiatement le chemin via R1 (FS) dans sa table de routage. R1 devient le nouveau successeur du chemin de R2 vers ce réseau, comme indiqué à la Figure 4.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au FAI et le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le FAI. Une flèche pointe du routeur 2 au routeur LAN 3. Le routeur 1 est entouré et porte la mention « successeur potentiel ». La Figure 2 présente les trois routeurs connectés par des liaisons série.  Le routeur 1 envoie aux routeurs 2 et 3 sa distance de faisabilité vers le routeur LAN 3.  Le résultat de la commande « show ip route » sur le routeur 1 est présenté ci-dessous, la mesure ou la distance de faisabilité étant mise en surbrillance en orange. La Figure 3 présente le résultat de la commande « show ip route » sur les routeurs 1 et 2.  La distance de faisabilité est mise en surbrillance.  La légende pose la question « Remplit-il la condition de faisabilité ? ». La Figure 4 présente les trois routeurs connectés par des liaisons série.  Le routeur 2 envoie au routeur 1 sa distance de faisabilité vers le routeur LAN 3. Le routeur 1 est le nouveau successeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

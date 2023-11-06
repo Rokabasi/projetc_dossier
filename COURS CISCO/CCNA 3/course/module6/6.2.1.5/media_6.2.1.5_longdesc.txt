@@ -1,0 +1,1 @@
+La Figure 1 présente la syntaxe de configuration d'un ID de routeur EIGRP pour les routeurs 1 et 2. La Figure 2 présente le résultat de la commande « show ip protocols » sur le routeur 1.  L'ID de routeur est mis en surbrillance. La Figure 3 est un exercice interactif qui permet au stagiaire de s'entraîner à la configuration d'un ID de routeur EIGRP.

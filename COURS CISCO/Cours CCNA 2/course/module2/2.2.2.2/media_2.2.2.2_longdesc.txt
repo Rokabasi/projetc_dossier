@@ -1,0 +1,1 @@
+La figure illustre le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN.  Il y a une route statique par défaut configurée sur le routeur R1, qui utilise l’argument du tronçon suivant.

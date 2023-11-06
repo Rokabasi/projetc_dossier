@@ -1,0 +1,64 @@
+﻿<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Protocole EIGRP pour la topologie IPv4</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[EIGRP AS 1]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Commande network avec masque générique</b>]]></text>
+</component>  
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Active le protocole EIGRP pour une interface spécifique à l&apos;aide du sous-réseau 192.168.10.8/30.]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Configuration de la commande network alternative à l&apos;aide d&apos;un masque de sous-réseau</b>]]></text>
+</component> 
+
+<component id="ID_s4_title">
+<text><![CDATA[<b>Configuration de la commande network et masque générique</b>]]></text>
+</component> 
+
+<component id="ID_sc_reset">
+		<text><![CDATA[Réinitialiser]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Démonstration]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Afficher tout
+]]></text>
+	</component>
+
+
+<component id="ID_SC5" fontFace="_typewriter" fontSize="10" fontColor="#ffffff">
+<feedback id="fb"><![CDATA[<b>***</b><font face="_sans" color="#FFFFFF" >Vous devez saisir la commande exacte et complète.</font><b>***</b>]]></feedback>		
+<existingcommands><![CDATA[<pre><font face="_sans" ><b>Configurez R3 pour activer EIGRP sur toutes les interfaces dans l&apos;ordre suivant :<ul class="bubbleBullets"><li>Activez le mode de configuration du routeur avec AS 1.</li><li>Activez le protocole EIGRP pour le réseau 192.168.1.0/24 de R3 sans masque générique</li><li>Activez le protocole EIGRP pour le réseau 192.168.10.4/30 de R3 à l&apos;aide d&apos;un masque générique</li><li>Activez le protocole EIGRP pour le réseau 192.168.10.8/30 de R3 à l&apos;aide d&apos;un masque générique</li></ul></b></font><pre>]]></existingcommands>
+<command prompt="R3(config)#">
+<correctresponse><![CDATA[router eigrp 1]]></correctresponse>
+</command>
+<command prompt="R3(config-router)#">
+<correctresponse><![CDATA[network 192.168.1.0]]></correctresponse>
+</command>
+<command prompt="R3(config-router)#">
+<correctresponse><![CDATA[network 192.168.10.4 0.0.0.3]]></correctresponse>
+<deviceresponse><![CDATA[*Feb 28 20:47:22.695: %DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 192.168.10.5 (Serial0/0/0) is up: new adjacency]]></deviceresponse> 
+</command>
+<command prompt="R3(config-router)#">
+<correctresponse><![CDATA[network 192.168.10.8 0.0.0.3]]></correctresponse>
+<deviceresponse><![CDATA[*Feb 28 20:47:06.555: %DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 192.168.10.9 (Serial0/0/1) is up: new <br>R3(config-router)#]]></deviceresponse> 
+<instruction><![CDATA[<font face="_sans" class="syntaxBottomLine"><b>Vous avez correctement configuré la commande de réseau et le masque générique.</b>]]></instruction>
+</command>
+<command prompt=""/>
+</component>
+
+</textcomponents>

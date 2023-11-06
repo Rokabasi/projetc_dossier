@@ -1,0 +1,57 @@
+<textcomponents>
+<component id='ID_inst'>
+	<text><![CDATA[<b>Exercice : Rapid PVST+</b><br/><br/>Associez les noms de rôle de port Rapid PVST+ aux emplacements de port de commutation corrects comme il est indiqué dans la topologie. Les noms de rôle de port peuvent être utilisés plusieurs fois.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Port racine]]></text>
+</component>
+<component id='ID_txt02'>
+	<text><![CDATA[Port désigné]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Port alternatif]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Noms des rôles des ports Rapid PVST+]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">RP</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">DP</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">AP</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié le rôle de port Rapid PVST+ pour chaque port de commutation.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié le rôle de port Rapid PVST+ pour chaque port de commutation. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+</textcomponents>

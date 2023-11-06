@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.2 Les numéros de système autonome</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les numéros de système autonome</h1>
+        <div>
+          <p>EIGRP utilise la commande<b> router eigrp </b><i>autonomous-system </i>pour activer le processus EIGRP. Le numéro de système autonome désigné dans la configuration EIGRP n'est pas associé aux numéros de système autonome globaux attribués par l'IANA (Internet Assigned Numbers Authority) utilisés par les protocoles de routage externes. </p>
+          <p></p>
+          <p>Alors quelle est la différence entre le numéro de système autonome global attribué par l'IANA et le numéro de système autonome EIGRP ?</p>
+          <p></p>
+          <p>Un système autonome attribué globalement par l'IANA est un ensemble de réseaux sous le contrôle administratif d'une entité unique qui présente une stratégie de routage commune sur Internet. Dans la figure, les sociétés A, B, C et D sont sous le contrôle administratif de FAI1. FAI1 présente une stratégie de routage commune pour toutes ces sociétés lors de l'annonce des routes à FAI2. </p>
+          <p></p>
+          <p>Les directives concernant la création, la sélection et l'enregistrement d'un système autonome sont décrites dans le document RFC 1930. Les numéros de système autonome globaux sont attribués par l'IANA, l'autorité qui attribue l'espace d'adresse IP. L'organisme d'enregistrement Internet local (RIR) est responsable de l'attribution d'un numéro de système autonome à une entité à partir de son bloc de numéros de système autonome attribués. Jusqu'en 2007, les numéros de système autonome attribués étaient des numéros 16 bits compris entre 0 et 65 535. Les numéros de système autonome attribués aujourd'hui sont composés de 32 bits, ce qui augmente leur nombre à 4 milliards. </p>
+          <p></p>
+          <p>En règle générale, seuls les fournisseurs d'accès à Internet (FAI), les fournisseurs de réseaux fédérateurs Internet et les grandes institutions qui se connectent à d'autres entités requièrent un numéro de système autonome. Ces FAI et grandes institutions utilisent le protocole de routage à passerelle extérieure BGP (Border Gateway Protocol) pour propager les informations de routage. BGP est l’unique protocole de routage qui utilise un numéro de système autonome réel dans sa configuration. </p>
+          <p></p>
+          <p>La grande majorité des entreprises et des institutions disposant de réseaux IP n'ont pas besoin d'un numéro de système autonome, car elles sont contrôlées par une entité plus grande, par exemple un FAI. Ces sociétés utilisent des protocoles IGP tels que RIP, EIGRP, OSPF et IS-IS pour acheminer les paquets dans leurs propres réseaux. Chacune représente ainsi un des nombreux réseaux indépendants et autonomes dans le système autonome du FAI. Le FAI est responsable du routage des paquets à l’intérieur de son système autonome et vers les autres systèmes autonomes.</p>
+          <p></p>
+          <p>Le numéro de système autonome utilisé pour la configuration EIGRP n'a de sens que par rapport au domaine de routage EIGRP. Il fonctionne comme un ID de processus pour aider les routeurs à effectuer le suivi de plusieurs instances du protocole EIGRP en cours d'exécution. Ceci est indispensable car plusieurs instances EIGRP peuvent s'exécuter simultanément sur un réseau. Chaque instance EIGRP peut être configurée pour prendre en charge et échanger les mises à jour de routage de différents réseaux.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un FAI avec un numéro de système autonome qui fournit le protocole EIGRP entre deux entreprises et le protocole OSPF entre les deux autres entreprises.  Le FAI 1 est connecté au FAI 2 et le protocole BGP est utilisé entre eux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

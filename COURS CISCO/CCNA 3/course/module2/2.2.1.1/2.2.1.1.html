@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.1 Suppression de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Suppression de VLAN</h1>
+        <div>
+          <p>Il arrive parfois de devoir supprimer un VLAN de la base de données VLAN. Lorsque vous supprimez un VLAN d'un commutateur en mode VTP serveur, le VLAN est supprimé de la base de données VLAN de tous les commutateurs du domaine VTP. Lorsque vous supprimez un VLAN d’un commutateur en mode VTP transparent, il est uniquement supprimé de ce commutateur ou de cette pile de commutateurs spécifique.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : Vous ne pouvez pas supprimer les VLAN par défaut (par exemple, VLAN 1, 1002 - 1005).</p>
+          <p></p>
+          <p>Le scénario suivant montre comment supprimer un VLAN. Supposons que les VLAN 10, 20 et 99 soient configurés sur S1, comme illustré dans la figure 1. Comme vous pouvez le constater, le VLAN 99 est attribué aux ports Fa0/18 à Fa0/24.</p>
+          <p>Pour supprimer un VLAN, utilisez la commande <b>no vlan</b> <i>vlan-id</i> en mode de configuration globale. La figure 2 montre comment supprimer le VLAN 99 de S1 et vérifier qu'il a disparu.</p>
+          <p></p>
+          <p>Lorsque vous supprimez un VLAN, tous les ports attribués à ce VLAN deviennent inactifs. Ils restent associés au VLAN (et sont par conséquent inactifs) jusqu'à ce que vous les attribuiez à un autre VLAN.</p>
+          <p>Dans la figure 2, remarquez que les interfaces Fa0/18 à 0/24 ne sont plus répertoriées dans les attributions du VLAN.  Les ports qui ne sont pas réaffectés à un VLAN actif ne sont pas en mesure de communiquer avec d’autres stations une fois le VLAN supprimé. Dès lors, avant de supprimer un VLAN, réaffectez tous les ports membres à un autre VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 est le résultat des commandes « show vlan brief » et « show vlan », la figure 2 montre comment supprimer un VLAN et vérifier.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

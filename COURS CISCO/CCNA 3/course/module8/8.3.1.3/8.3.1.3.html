@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.1.3 Différences entre OSPFv2 et OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Différences entre OSPFv2 et OSPFv3</h1>
+        <div>
+          <p>La figure illustre les différences entre OSPFv2 et OSPFv3 :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Annonces</b> - OSPFv2 annonce les routes IPv4, tandis qu'OSPFv3 annonce les routes pour IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse source</b> - Les messages OSPFv2 proviennent de l'adresse IPv4 de l'interface de sortie. Dans le protocole OSPFv3, les messages OSPF sont fournis à l'aide de l'adresse link-local de l'interface de sortie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresses de multidiffusion tous les routeurs OSPF</b> - OSPFv2 utilise 224.0.0.5 ; tandis qu'OSPFv3 utilise FF02::5.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse de multidiffusion DR/BDR</b> - OSPFv2 utilise 224.0.0.6 ; tandis qu'OSPFv3 utilise FF02::6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Annonce des réseaux </b>- OSPFv2 annonce les réseaux via la commande <b>network</b> en mode de configuration de routeur, tandis qu'OSPFv3 utilise la commande <b>ipv6 ospf </b><i>process-id </i><b>area </b><i>area-id </i>en mode de configuration d'interface.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routage monodiffusion IP </b>- Activé par défaut dans IPv4 ; tandis que la commande de configuration globale <b>ipv6 unicast-routing </b>doit être configurée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Authentification </b>- OSPFv2 utilise l'authentification en texte clair, l'authentification MD5 ou l'authentification HMAC-SHA. OSPFv3 utilise IPsec pour ajouter l'authentification pour les paquets OSPFv3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie les différences entre les protocoles OSPF versions 2 et 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

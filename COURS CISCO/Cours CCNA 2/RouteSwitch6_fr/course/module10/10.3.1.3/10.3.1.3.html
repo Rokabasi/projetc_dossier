@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.3 Sauvegarde et restauration à l&#x0027;aide de fichiers texte</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sauvegarde et restauration à l&#x0027;aide de fichiers texte</h1>
+        <div>
+          <p>
+            <b>Sauvegarde des configurations par capture de texte (Tera Term)</b>
+          </p>
+          <p></p>
+          <p>Vous pouvez également utiliser Tera Term pour enregistrer/archiver les fichiers de configuration dans un document texte. </p>
+          <p></p>
+          <p>Comme le montre la figure, la procédure est la suivante :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Dans le menu File (Fichier), cliquez sur <b>Log</b> (Journal).</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Choisissez l'emplacement où vous souhaitez enregistrer le fichier. Tera Term commence à capturer le texte. </p>
+          <p></p>
+          <p>
+            <b>Étape 3</b>. Après avoir démarré la capture, exécutez la commande <b>show running-config</b> ou <b>show startup-config</b> à l'invite du mode d'exécution privilégié. Le texte affiché dans la fenêtre du terminal est alors placé dans le fichier choisi.</p>
+          <p></p>
+          <p>
+            <b>Étape 4</b>. Une fois la capture terminée, sélectionnez <b>Close</b> (Fermer) dans la fenêtre Tera Term: Log (Tera Term : Journal).</p>
+          <p></p>
+          <p>
+            <b>Étape 5</b>. Affichez le fichier afin de vérifier qu'il n'a pas été endommagé.</p>
+          <p></p>
+          <p>
+            <b>Restauration des configurations sauvegardées dans un document texte</b>
+          </p>
+          <p></p>
+          <p>Il est possible de copier une configuration à partir d'un fichier vers un périphérique. Lorsque vous avez copié la configuration depuis un fichier texte et que vous l'avez collée dans une fenêtre de terminal, IOS exécute chaque ligne de texte de la configuration comme une commande. Il est donc nécessaire de modifier le fichier pour s'assurer que les mots de passe chiffrés apparaissent en clair et supprimer le texte ne correspondant pas à des commandes, par exemple « --More-- » (--Plus--) et les messages IOS. Ce processus est expliqué dans les travaux pratiques. </p>
+          <p></p>
+          <p>En outre, dans la CLI, le périphérique doit être placé en mode de configuration globale pour recevoir les commandes du fichier texte copié dans la fenêtre de terminal.</p>
+          <p></p>
+          <p>Avec Tera Term, la procédure est la suivante :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Dans le menu File (Fichier), cliquez sur <b>Send</b> (Envoyer).</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Recherchez le fichier à copier sur le périphérique et cliquez sur <b>Open</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 3</b>. Tera Term colle alors le fichier dans le périphérique.</p>
+          <p></p>
+          <p>Le texte contenu dans le fichier est appliqué sous forme de commandes dans l'environnement CLI et devient la configuration en cours du périphérique. Cette méthode s'avère pratique pour configurer manuellement un routeur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">The figure shows the process that requires the user to go to the file menu and start logging.  When finished with output, stop logging.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

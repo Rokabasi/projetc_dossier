@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.6 Mise en garde concernant VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mise en garde concernant VTP</h1>
+        <div>
+          <p>Certains administrateurs réseau évitent d'utiliser VTP car il peut parfois introduire des informations VLAN incorrectes dans le domaine VTP existant. Le numéro de révision de la configuration permet de déterminer si le commutateur doit conserver sa base de données VLAN existante ou la remplacer par la mise à jour VTP envoyée par un autre commutateur du même domaine avec le même mot de passe.</p>
+          <p></p>
+          <p>L'ajout d'un commutateur compatible à un domaine VTP existant écrase les configurations VLAN existantes du domaine si le nouveau commutateur est configuré avec des réseaux locaux virtuels différents et qu'il possède un numéro de révision de la configuration supérieur à celui du serveur VTP existant. Le nouveau commutateur peut être un commutateur serveur ou client VTP. Cette propagation peut être difficile à corriger. Par conséquent, en cas d'ajout d'un commutateur à un réseau, vérifiez qu'il possède une configuration VTP par défaut.</p>
+          <p></p>
+          <p>Comme le montre la figure, le commutateur S1 est le serveur VTP tandis que les commutateurs S2 et S3 sont les clients VTP. Tous les commutateurs appartiennent au domaine cisco1 et le numéro de révision VTP actuel est 17. Le serveur VTP (S1) possède trois réseaux locaux virtuels configurés : VLAN 1 (par défaut), VLAN 10 et VLAN 20. Ces réseaux locaux virtuels ont été propagés par le protocole VTP aux deux autres commutateurs.</p>
+          <p></p>
+          <p>Un technicien réseau ajoute le commutateur S4 au réseau pour accroître la capacité. Malheureusement, le technicien a négligé de supprimer la configuration initiale du commutateur S4 ou son fichier VLAN.DAT. Si la configuration de S4 indique le même nom de domaine VTP que les deux autres commutateurs, son numéro de révision est 35, soit un numéro supérieur à celui des deux autres commutateurs.</p>
+          <p></p>
+          <p>La configuration de S4 inclut le VLAN 1 mais aussi les VLAN 30 et 40. En revanche, sa base de données ne comprend pas les VLAN 10 et 20. Malheureusement, comme S4 possède un numéro de révision plus élevé, les autres commutateurs du domaine vont se synchroniser sur la configuration de S4. De ce fait, les VLAN 10 et 20 n'existeront plus sur les commutateurs, laissant sans connectivité les clients connectés aux ports qui appartiennent à ces VLAN inexistants.</p>
+          <p></p>
+          <p>Comme le numéro de révision de la configuration VTP est stocké dans la mémoire vive non volatile (ou Flash sur certaines plates-formes), il n'est pas réinitialisé si vous supprimez la configuration du commutateur et que vous la rechargez. Pour le remettre à zéro, deux solutions sont possibles :</p>
+          <p>
+            <ul>
+              <li>Vous pouvez remplacer le nom du domaine VTP du commutateur par un nom inexistant puis lui réattribuer ensuite son nom initial.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vous pouvez basculer le commutateur en mode transparent puis revenir au mode VTP précédent.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les commandes destinées à réinitialiser le numéro de révision de la configuration VTP sont décrites dans la rubrique suivante.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">« La figure présente un scénario avec un numéro de révision de configuration VTP incorrect.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

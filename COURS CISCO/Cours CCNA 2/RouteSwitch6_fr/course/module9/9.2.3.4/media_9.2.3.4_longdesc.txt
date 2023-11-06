@@ -1,0 +1,1 @@
+La Figure 1 affiche le résultat de la commande « show i. p. nat translations ». La Figure 2 affiche le résultat des commandes « clear i. p. nat statistics » et « show i. p. nat statistics ».

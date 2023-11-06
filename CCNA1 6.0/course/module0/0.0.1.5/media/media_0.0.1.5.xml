@@ -1,0 +1,19 @@
+<textcomponents>
+<component id="ID_title">
+   <text><![CDATA[La pratique mène à la maîtrise]]></text>
+   </component>
+
+<component id="ID_txt01">
+   <text><![CDATA[<b>1. Illustrer :</b> exemples abordés (texte + support)]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[<b>2. Essayer :</b> entraînement (contrôleur de syntaxe)]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[<b>3. Mettre en œuvre :</b> exemple partiellement abordé (Packet Tracer ou équipement réel)]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[<b>4. Synthétiser :</b> résolution de problème (Packet Tracer ou équipement réel)]]></text>
+   </component>
+
+</textcomponents>

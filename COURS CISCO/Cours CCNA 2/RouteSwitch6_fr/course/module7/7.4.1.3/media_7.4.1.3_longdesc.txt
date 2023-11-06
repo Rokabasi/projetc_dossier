@@ -1,0 +1,1 @@
+La figure résume les trois P pour l’utilisation des listes ACL,  à savoir une liste ACL par protocole, par direction et par interface.

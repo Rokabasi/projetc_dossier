@@ -1,0 +1,119 @@
+<textcomponents><!-- Slide 1--><component id="ID_s1_inst">
+	<text><![CDATA[<b>Exercice - Scénario 1 : détermination des commandes de réglage précis du protocole EIGRP</b><br/><br/>Le protocole EIGRP prend trop de temps pour assurer la convergence entre le routeur 1 (R1) et le routeur 2 (R2) via la liaison série congestionnée. Augmentez précisément la bande passante maximale disponible du lien pour le protocole EIGRP jusqu&apos;à une utilisation de 80 %. Faites glisser la commande vers le champ approprié en regard de chaque routeur. Toutes les commandes ne seront pas utilisées. Cliquez sur le bouton 2 pour continuer.]]></text>
+	</component><!-- Drag and Drop --><component id='ID_s1_drag01'>
+		<text><![CDATA[<font color="#393536" face="_typewriter"><span>interface s0/0/0<br />ip bandwidth-percent eigrp 1 80</span</font&gt;]]></text>
+	</component>
+	<component id='ID_s1_drag02'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ip bandwidth-percent eigrp 80 1</font>]]></text>
+	</component>
+	<component id='ID_s1_drag03'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0<br />ip bandwidth-percent eigrp 80 1</font>]]></text>
+	</component>
+	<component id='ID_s1_drag04'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ip bandwidth-percent eigrp 1 80</font>]]></text>
+	</component>
+
+
+	<component id='ID_s1_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s1_CORRECT_BODY'>
+		<text><![CDATA[Vous avez correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario. Cliquez sur le bouton 2 pour continuer.]]></text>
+	</component>
+
+
+	<component id='ID_s1_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s1_INCORRECT_BODY'>
+		<text><![CDATA[Vous n&apos;avez pas correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario. Cliquez sur Réinitialiser pour réessayer.]]></text>
+	</component>
+
+	<component id='ID_s1_CHECK'>
+		<text><![CDATA[<b>Contrôler</b>]]></text>
+	</component>
+
+	<component id='ID_s1_RESET'>
+		<text><![CDATA[<b>Réinitialiser</b>]]></text>
+	</component><!-- Slide 2--><component id="ID_s2_inst">
+	<text><![CDATA[<b>Exercice - Scénario 2 : détermination des commandes de réglage précis du protocole EIGRP</b><br/><br/>La liaison série entre le routeur 1 (R1) et le routeur 2 (R2) enregistre un taux d&apos;erreur élevé et le protocole EIGRP est en train de perdre sa contiguïté de voisinage. Réglez précisément l&apos;intervalle Hello maximal sur 120 secondes maximum et le minuteur de mise en attente maximal sur 240 secondes maximum pour le protocole EIGRP. Faites glisser la commande vers le champ approprié en regard de chaque routeur. Toutes les commandes ne seront pas utilisées. Cliquez sur le bouton 3 pour continuer.]]></text>
+	</component><!-- Drag and Drop --><component id='ID_s2_drag01'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0<br />ip hello-interval eigrp 120 1<br />ip hold-time eigrp 240 1</font>]]></text>
+	</component>
+	<component id='ID_s2_drag02'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0<br />ip hello-interval eigrp 1 120<br />ip hold-time eigrp 1 240</font>]]></text>
+	</component>
+	<component id='ID_s2_drag03'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ip hello-interval eigrp 1 120<br />ip hold-time eigrp 1 240</font>]]></text>
+	</component>
+	<component id='ID_s2_drag04'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ip hello-interval eigrp 120 1<br />ip hold-time eigrp 240 1</font>]]></text>
+	</component>
+
+
+	<component id='ID_s2_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s2_CORRECT_BODY'>
+		<text><![CDATA[Vous avez correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario. Cliquez sur le bouton 3 pour continuer.]]></text>
+	</component>
+
+
+	<component id='ID_s2_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s2_INCORRECT_BODY'>
+		<text><![CDATA[Vous n&apos;avez pas correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario. Cliquez sur Réinitialiser pour réessayer.]]></text>
+	</component>
+
+	<component id='ID_s2_CHECK'>
+		<text><![CDATA[<b>Contrôler</b>]]></text>
+	</component>
+
+	<component id='ID_s2_RESET'>
+		<text><![CDATA[<b>Réinitialiser</b>]]></text>
+	</component><!-- Slide 3--><component id="ID_s3_inst">
+		<text><![CDATA[<b>Exercice - Scénario 3 : détermination des commandes de réglage précis du protocole EIGRP</b><br/><br/>La liaison série entre le routeur 1 (R1) et le routeur 2 (R2) a récemment été mise à niveau et utilise maintenant une liaison IPv6 de 2 Gigabits. Réduisez précisément la bande passante maximale disponible du lien pour le protocole EIGRP jusqu&apos;à une utilisation de 5 %. Faites glisser la commande vers le champ approprié en regard de chaque routeur. Toutes les commandes ne seront pas utilisées.]]></text>
+	</component><!-- Drag and Drop --><component id='ID_s3_drag01'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0<br />ipv6 bandwidth-percent eigrp 1 5</font>]]></text>
+	</component>
+	<component id='ID_s3_drag02'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ip bandwidth-percent eigrp 1 5</font>]]></text>
+	</component>
+	<component id='ID_s3_drag03'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/0<br />ip bandwidth-percent eigrp 1 5</font>]]></text>
+	</component>
+	<component id='ID_s3_drag04'>
+		<text><![CDATA[<font color="#393536" face="_typewriter">interface s0/0/1<br />ipv6 bandwidth-percent eigrp 1 5</font>]]></text>
+	</component>
+
+
+	<component id='ID_s3_CORRECT_TITLE'>
+		<text><![CDATA[<b>Correct</b>]]></text>
+	</component>
+
+	<component id='ID_s3_CORRECT_BODY'>
+		<text><![CDATA[Vous avez correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario.]]></text>
+	</component>
+
+
+	<component id='ID_s3_INCORRECT_TITLE'>
+		<text><![CDATA[<b>Incorrect</b>]]></text>
+	</component>
+
+	<component id='ID_s3_INCORRECT_BODY'>
+		<text><![CDATA[Vous n&apos;avez pas correctement identifié les commandes de réglage précis du protocole EIGRP pour ce scénario. Cliquez sur Réinitialiser pour réessayer.]]></text>
+	</component>
+
+	<component id='ID_s3_CHECK'>
+		<text><![CDATA[<b>Contrôler</b>]]></text>
+	</component>
+
+	<component id='ID_s3_RESET'>
+		<text><![CDATA[<b>Réinitialiser</b>]]></text>
+	</component>
+</textcomponents>

@@ -1,0 +1,1 @@
+La figure établit qu’il est possible de renforcer la sécurité des ports du commutateur en observant les meilleures pratiques.

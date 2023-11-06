@@ -1,0 +1,1 @@
+Ces figures sont basées sur le schéma standard de l’atelier. La Figure 1 affiche la sortie de la commande « show i. p. v. 6 route static » sur le routeur R1. La Figure 2 affiche le résultat de l’envoi d’une requête ping à partir du routeur R1 vers l’interface LAN sur le routeur R3.  Cette requête ping aboutit, car toutes les routes statiques ont été configurées.

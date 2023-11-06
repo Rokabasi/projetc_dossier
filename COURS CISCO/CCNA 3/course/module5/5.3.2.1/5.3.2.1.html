@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.1 Le processus de routage à état de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le processus de routage à état de liens</h1>
+        <div>
+          <p>Comment fonctionne exactement un protocole de routage à état de liens ? Avec les protocoles de routage à état de liens, un lien est une interface sur un routeur Les informations relatives à l'état de ces liens sont appelées état de liens.</p>
+          <p></p>
+          <p>Tous les routeurs d'une zone OSPF effectuent le processus de routage à état de liens générique qui suit afin d'atteindre un état de convergence :</p>
+          <p></p>
+          <p>1. Chaque routeur prend connaissance de ses propres liens et des réseaux qui lui sont connectés directement. Cette opération s'effectue en détectant qu'une interface se trouve dans l'état up.</p>
+          <p>2. Chaque routeur est responsable de la détection de ses voisins sur les réseaux connectés directement. Les routeurs à état de liens effectuent cette détection en échangeant des paquets Hello avec d'autres routeurs à état de liens situés sur des réseaux connectés directement.</p>
+          <p>3. Chaque routeur construit un paquet à état de liens (Link-State Packet - LSP) contenant l’état de chacun des liens connectés directement. Il procède en enregistrant toutes les informations pertinentes sur chaque voisin, notamment l’ID du voisin, le type de lien et la bande passante.</p>
+          <p>4. Chaque routeur inonde tous les voisins avec des paquets LSP. Les voisins stockent tous les paquets LSP reçus dans une base de données. Ensuite, ils diffusent les paquets LSP à leurs voisins jusqu'à ce que tous les routeurs de la zone aient reçu ceux-ci. Chaque routeur stocke une copie de chaque LSP reçu de ses voisins dans une base de données locale.</p>
+          <p>5. Chaque routeur utilise la base de données pour élaborer une carte complète de la topologie et calcule le meilleur chemin vers chaque réseau de destination. Le routeur possède ainsi une carte complète s’apparentant à une carte routière de l’ensemble des destinations de la topologie et des routes pour les atteindre. L’algorithme SPF sert à construire la carte de la topologie et à déterminer le meilleur chemin vers chaque réseau.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> ce processus est identique à la fois pour OSPF pour IPv4 et OSPF pour IPv6. Les exemples de cette section font référence au protocole OSPF pour IPv4.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie les étapes de la procédure de routage à état de liens et résume le texte.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

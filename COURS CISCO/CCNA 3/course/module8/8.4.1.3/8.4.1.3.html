@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.4.1.3 Chapitre 8 : OSPF à zone unique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 8 : OSPF à zone unique</h1>
+        <div>
+          <p>La version actuelle du protocole OSPF pour IPv4 est OSPFv2, présenté dans le document RFC 1247 et mis à jour dans le document RFC 2328 par John Moy. En 1999, OSPFv3 pour IPv6 a été publié dans le document RFC 2740.</p>
+          <p></p>
+          <p>OSPF est un protocole de routage à état de liens dont la distance administrative par défaut s'élève à 110. Dans la table de routage, le code <b>O</b> y fait référence. </p>
+          <p></p>
+          <p>Le protocole OSPFv2 est activé avec la commande <b>router ospf </b><i>process-id </i>en mode de configuration globale. La valeur<i> process-id </i>est une valeur locale. Autrement dit, elle n'a pas besoin d'être identique sur les autres routeurs OSPFv2 pour établir la contigüité avec les voisins.</p>
+          <p></p>
+          <p>La commande <b>network</b> utilisée avec OSPFv2 a la même fonction qu'avec les protocoles de routage IGP. Seule la syntaxe diffère légèrement. La valeur<i> wildcard-mask </i>est l'inverse du marque de sous-réseau, et la valeur<i> area-id </i>doit être définie sur <b>0</b>.</p>
+          <p></p>
+          <p>Par défaut, des paquets Hello OSPF sont envoyés toutes les 10 secondes sur les segments à accès multiple et point à point, et toutes les 30 secondes sur les segments NBMA (Frame Relay, X.25, ATM), et sont utilisés par OSPF pour établir des contiguïtés de voisinage. Par défaut, l'intervalle Dead est quatre fois plus long que l'intervalle Hello. </p>
+          <p></p>
+          <p>Pour que les routeurs deviennent contigus, leurs intervalles de paquets Hello et Dead, leurs types de réseau et leurs masques de sous-réseau doivent correspondre. Utilisez la commande <b>show ip ospf neighbor</b> sur R1 pour vérifier les contiguïtés OSPFv2.</p>
+          <p></p>
+          <p>OSPF sélectionne un routeur désigné (DR) pour servir de point de collecte et de distribution pour les paquets LSA envoyés et reçus dans le réseau à accès multiple. Un routeur désigné de secours est sélectionné pour remplacer le routeur désigné si ce dernier venait à défaillir. Tous les autres routeurs sont appelés DROTHER. Tous les routeurs envoient leur LSA au DR, qui les diffuse ensuite aux autres routeurs du réseau à accès multiple. </p>
+          <p></p>
+          <p>La commande <b>show ip protocols</b> permet de vérifier les informations de configuration OSPFv2 essentielles, notamment l'ID de processus OSPF, l'ID de routeur et les réseaux annoncés par le routeur.</p>
+          <p></p>
+          <p>OSPFv3 est activé sur une interface et n'est pas en mode de configuration du routeur. OSPFv3 requiert la configuration des adresses link-local. Le routage monodiffusion IPv6 doit être activé pour OSPFv3. Un ID de routeur de 32 bits est requis avant qu'une interface puisse être activée pour OSPFv3. Des commandes de vérifications analogues à celles d'OSPFv2 sont utilisées pour OSPFv3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le contenu du paquet Hello OSPF.  La figure met en évidence le type, l'ID de routeur, l'ID de zone, le masque de réseau, l'intervalle Hello, la priorité de routeur, l'ID du routeur désigné, l'ID de routeur désigné de secours et la liste des voisins.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.3.1 Routes statiques</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routes statiques</h1>
+        <div>
+          <p>Une fois les interfaces connectées directement configurées et ajoutées à la table de routage, le routage statique ou dynamique peut être mis en œuvre. </p>
+          <p></p>
+          <p>Les routes statiques sont configurées manuellement. Elles définissent un chemin explicite entre deux périphériques réseau. Contrairement à un protocole de routage dynamique, les routes statiques ne sont pas automatiquement mises à jour : elles doivent être manuellement reconfigurées si la topologie du réseau est modifiée. L'utilisation de routes statiques permet notamment d'améliorer la sécurité et l'efficacité des ressources. Les routes statiques utilisent moins de bande passante que les protocoles de routage dynamique. De plus, aucun cycle de processeur n'est utilisé pour calculer et communiquer des routes. Le principal inconvénient des routes statiques est l'absence de reconfiguration automatique en cas de modification de la topologie du réseau.</p>
+          <p></p>
+          <p>Il existe deux types courants de routes statiques dans la table de routage :</p>
+          <p>
+            <ul>
+              <li>Route statique vers un réseau donné</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Route statique par défaut</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Une route statique est configurée pour atteindre un réseau distant donné. Les routes statiques IPv4 sont configurées à l’aide de la commande suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> ip route </b>
+            </span>
+            <span class="cmd">
+              <i>network mask</i>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>next-hop-ip</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>exit-intf</i>
+            </span>
+            <span class="cmd">} </span>
+          </p>
+          <p></p>
+          <p>Dans la table de routage, une route statique est identifiée par le code « <b>S</b> ».</p>
+          <p></p>
+          <p>Une route statique par défaut est comparable à une passerelle par défaut sur un hôte. La route statique par défaut indique le point de sortie à utiliser lorsque la table de routage ne contient pas de chemin vers le réseau de destination. Une route statique par défaut est utile lorsqu'un routeur ne dispose que d'un seul point de sortie vers un autre routeur, par exemple lorsque le routeur se connecte à un routeur central ou à un fournisseur de services. </p>
+          <p></p>
+          <p>Pour configurer une route statique par défaut IPv4, utilisez la commande suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> ip route 0.0.0.0 0.0.0.0</b>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <i>exit-intf</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>next-hop-ip</i>
+            </span>
+            <span class="cmd">}</span>
+          </p>
+          <p></p>
+          <p>La figure présente un scénario simple d'application des routes statiques et par défaut. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un réseau composé de deux routeurs et de cinq adresses réseau entre eux.  Sur le premier routeur, une route par défaut vers le second routeur est configurée.  C’est parce que le prochain routeur représente le routeur de tronçon suivant pour tout le trafic réseau venant du premier routeur, notamment Internet.  Une route par défaut est la configuration la plus efficace pour le routeur.  Le second routeur doit uniquement atteindre deux réseaux connectés directement au premier routeur.  Pour atteindre ces deux réseaux de la manière la plus efficace, deux routes statiques sont configurées sur le second routeur pointant vers le premier routeur.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

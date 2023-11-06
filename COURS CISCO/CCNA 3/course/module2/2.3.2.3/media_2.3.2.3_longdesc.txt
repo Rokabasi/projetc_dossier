@@ -1,0 +1,1 @@
+Les figures 1 à 4 sont des activités interactives conçues pour tester le stagiaire sur sa capacité de dépanner les problèmes de commutation de la couche trois, compte tenu de la topologie et des résultats de différentes commandes show.

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.2 Entrées connectées directement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrées connectées directement</h1>
+        <div>
+          <p>La table de routage de R1 est illustrée dans la Figure 1 à l'aide de la commande <b>show ipv6 route</b>. Bien que les résultats de la commande s'affichent de façon légèrement différente par rapport à la version IPv4, ils contiennent toujours les informations de route appropriées. </p>
+          <p></p>
+          <p>La Figure 2 met en évidence les entrées du réseau connecté et de la table de routage locale des interfaces connectées directement. Les trois entrées ont été ajoutées lorsque les interfaces ont été configurées et activées. </p>
+          <p></p>
+          <p>Comme le montre la Figure 3, les entrées de route connectées directement affichent les informations suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origine de la route</b> : indique comment la route a été apprise. Les interfaces connectées directement ont deux codes sources de route (« C » identifie un réseau connecté directement tandis que « L » indique qu'il s'agit d'une route locale.) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réseau connecté directement :</b> adresse IPv6 du réseau connecté directement.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Distance administrative</b> : identifie la fiabilité de la source de la route. L'IPv6 utilise les mêmes distances que l'IPv4. La valeur 0 indique la meilleure source et la plus fiable.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrique</b> : indique la valeur attribuée pour atteindre le réseau distant. Les valeurs les plus faibles indiquent les routes préférées. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface de sortie</b> : identifie l'interface de sortie à utiliser lors du transfert de paquets au réseau de destination.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> les liens série ont des bandes passantes de référence configurées pour observer la façon dont les métriques EIGRP permettent de sélectionner la meilleure route. La bande passante de référence n'est pas une représentation réaliste des réseaux actuels. Elle permet uniquement de fournir une représentation visuelle de la vitesse des liens.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la table de routage IPv6 pour le routeur R1 produite par la commande : show i.p. route.  La table comporte trois routes connectées directement, trois adresses IP d’interface et trois réseaux acquis grâce au protocole EIGRP. La Figure 2 met en surbrillance les trois réseaux directement connectés et les trois adresses IP d’interface. La Figure 3 présente l’une des entrées et identifie chaque partie de l’entrée.  Dans la ligne, on peut voir la lettre C pour une route connectée directement, 2001:DB8:CAFE:A001::/64 pour l’adresse réseau, 0/0 pour la distance administrative et la mesure.  La ligne se termine par serial0/0/0 pour l’interface sortante.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

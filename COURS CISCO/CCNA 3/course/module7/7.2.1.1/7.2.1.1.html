@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.1 Commandes de dépannage de base EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commandes de dépannage de base EIGRP </h1>
+        <div>
+          <p>Le protocole EIGRP est couramment utilisé dans les réseaux de grandes entreprises. Les problèmes de dépannage liés à l'échange d'informations de routage constituent une compétence essentielle pour un administrateur réseau. C'est particulièrement vrai pour les administrateurs impliqués dans l'implémentation et la maintenance de grands réseaux d'entreprise routés utilisant le protocole EIGRP comme protocole IGP. Plusieurs commandes sont utiles lors du dépannage d'un réseau EIGRP. </p>
+          <p></p>
+          <p>La commande<b> show ip eigrp neighbors </b>vérifie que le routeur reconnaît ses voisins. Le résultat de la Figure 1 indique deux contiguïtés de voisinage EIGRP réussies sur R1.</p>
+          <p></p>
+          <p>À la Figure 2, la commande<b> show ip route </b>vérifie que le routeur a appris la route vers un réseau distant via le réseau EIGRP. Le résultat montre que R1 a appris quatre réseaux distants via le protocole EIGRP.</p>
+          <p></p>
+          <p>La Figure 3 montre le résultat de la commande<b> show ip protocols</b>. Cette commande affiche divers paramètres EIGRP.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>Voici les commandes équivalentes à utiliser avec le protocole EIGRP pour IPv6 :</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 eigrp neighbors</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 route</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show ip eigrp neighbors » sur le routeur R1. Deux voisins sont répertoriés. La figure 2 présente le résultat de la commande « show ip route eigrp ». La Figure 3 présente le résultat de la commande « show ip protocols ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

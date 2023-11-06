@@ -1,0 +1,1 @@
+La Figure présente les différents états par lesquels passera le protocole OSPF avant d'atteindre l'état Full.

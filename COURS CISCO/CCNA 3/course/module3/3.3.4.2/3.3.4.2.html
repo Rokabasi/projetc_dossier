@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.2 Le protocole STP (Spanning Tree Protocol) et les piles de commutateurs </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le protocole STP (Spanning Tree Protocol) et les piles de commutateurs </h1>
+        <div>
+          <p>Un autre bénéfice de l'empilage des commutateurs est qu'il permet d'ajouter des commutateurs supplémentaires à une seule instance STP sans augmenter le diamètre STP. Le diamètre correspond au nombre maximal de commutateurs que les données doivent traverser pour connecter deux commutateurs, quels qu'ils soient. L'IEEE recommande un diamètre maximum de sept commutateurs pour les minuteurs STP par défaut. Par exemple, dans la figure 1, le diamètre de S1-4 à S3-4 équivaut à neuf commutateurs. Cette conception est contraire à la recommandation de l'IEEE.</p>
+          <p></p>
+          <p>Le diamètre recommandé est basé sur les valeurs de minuteur STP par défaut indiquées ci-dessous :</p>
+          <p>
+            <ul>
+              <li>Minuteur Hello (2 secondes) - intervalle entre les mises à jour BPDU.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Minuteur « Max Age » (20 secondes) - durée maximale de conservation des informations BPDU par un commutateur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Minuteur « Forward Delay » (15 secondes) - Temps passé à l'état d'écoute et d'apprentissage.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les formules de calcul du diamètre sortent du cadre de ce cours. Pour plus d'informations, reportez-vous au document Cisco suivant : <a href="http://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/19120-122.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/19120-122.html</a></p>
+          <p></p>
+          <p>Les piles de commutateurs permettent de gérer ou de limiter l'impact du diamètre sur la reconvergence STP. Dans une pile, tous les commutateurs utilisent le même ID de pont pour une instance Spanning Tree. En d'autres termes, si les commutateurs de la figure 1 sont empilés, comme illustré à la figure 2, le diamètre maximum passe de 9 à 3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

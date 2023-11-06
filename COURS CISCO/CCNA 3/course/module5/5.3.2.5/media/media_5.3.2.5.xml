@@ -1,0 +1,52 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Inondation de LSP</b>]]></text>
+</component>
+
+  
+<component id="ID_Title_txt01">
+<text><![CDATA[<b>Contenu de l&apos;état de la liaison de R1</b>]]></text> 
+</component>
+
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent='-14'><li>R1 ; réseau Ethernet ; 10.1.0.0/16 ; coût 2</li><li>R2 ; réseau série point à point ; 10.2.0.0/16 ; coût 20</li><li>R3 ; réseau série point à point ; 10.3.0.0/16 ; coût 5</li><li>R4 ; réseau série point à point ; 10.4.0.0/16 ; coût 20</li></textformat>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>.<component id="ID_txt02">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+<component id="ID_txt03">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<b>LSP</b>]]></text> 
+</component>
+
+<component id="end">
+<text><![CDATA[Fin]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Avance rapide]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Lecture]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Arrière]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Début]]></text>
+</component>
+
+</textcomponents>

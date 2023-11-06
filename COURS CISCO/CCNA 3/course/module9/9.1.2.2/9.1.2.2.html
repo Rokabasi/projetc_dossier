@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.2 LSA OSPF de type 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA OSPF de type 1</h1>
+        <div>
+          <p>Comme l’illustre la figure, tous les routeurs annoncent leurs liens OSPF directement connectés dans une LSA de type 1 et transfèrent leurs informations réseau aux voisins OSPF. La LSA contient une liste des interfaces directement connectées, des types de liaison, des voisins et des états de liens. </p>
+          <p></p>
+          <p>Les LSA de type 1 sont également des entrées de liaisons du routeur. </p>
+          <p></p>
+          <p>Les LSA de type 1 sont diffusées uniquement dans la zone depuis laquelle elles ont été émises. Les routeurs ABR annoncent ensuite aux autres zones les réseaux appris grâce aux LSA de type 1 sous forme de LSA de type 3.</p>
+          <p></p>
+          <p>L’ID de lien d’une LSA de type 1 est identifié par l’ID de routeur du routeur d'origine.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche les messages LSA de type 1 qui se propagent dans leur propre zone.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

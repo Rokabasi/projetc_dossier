@@ -1,0 +1,30 @@
+﻿<textcomponents>
+	<component id='ID_title'>
+		<text><![CDATA[<b>Collection of Interconnected LANs and WANs</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[Branch LAN]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[Government LAN]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[Enterprise LAN]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[School LAN]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[Home LAN]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[LANs use WAN services to interconnect.]]></text>
+	</component>
+
+</textcomponents>

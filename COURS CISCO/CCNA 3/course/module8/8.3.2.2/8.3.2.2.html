@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.2 Adresses link-local</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Adresses link-local</h1>
+        <div>
+          <p>Dans la figure, le résultat de la commande <b>show ipv6 interface brief</b> confirme que les adresses globales IPv6 correctes ont été configurées et que les interfaces sont activées. En outre, notez que chaque interface a automatiquement généré une adresse link-local, comme indiqué dans la figure. </p>
+          <p></p>
+          <p>Les adresses link-local sont créées automatiquement lorsqu'une adresse de monodiffusion globale IPv6 est attribuée à l'interface. Les adresses de monodiffusion globales ne sont pas obligatoires sur une interface ; en revanche, les adresses link-local IPv6 le sont.</p>
+          <p></p>
+          <p>Lorsqu'ils n'ont pas été configurés manuellement, les routeurs Cisco créent l'adresse link-local au moyen du préfixe FE80::/10 et du processus EUI-64. EUI-64 consiste à utiliser l'adresse MAC Ethernet 48-bit, à insérer FFFE au milieu et à manipuler le septième bit. Pour les interfaces série, Cisco utilise l'adresse MAC d'une interface Ethernet. Notez que dans la figure les trois interfaces utilisent la même adresse link-local.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le résultat de la commande show ipv6 interface brief.  La figure affiche les adresses IPv6 pour les trois interfaces du routeur R1 et met en avant les adresses link-local.  Chaque interface utilise la même adresse link-local, qui est FE80::32F7:DEF:FEA3:DA0.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

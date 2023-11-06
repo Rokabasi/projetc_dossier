@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.2 Configuration des interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration des interfaces</h1>
+        <div>
+          <p>La configuration d'un canal EtherChannel avec le protocole LACP se déroule en deux étapes :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Indiquez les interfaces qui composent le groupe EtherChannel à l'aide de la commande<b> interface range </b><i>interface </i>en mode de configuration globale. Le mot-clé<b> range </b>vous permet de sélectionner plusieurs interfaces et de les configurer toutes ensemble. Il est recommandé de commencer par désactiver ces interfaces, de sorte qu'aucune configuration incomplète n'entraîne d'activité sur la liaison.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>Créez l'interface de canal de port à l'aide de la commande<b> channel-group </b><i>identifier</i><b> mode active</b> en mode de configuration de plage d'interface. L'identificateur spécifie un numéro de groupe de canaux.  Les mots-clés<b> mode active </b>l'identifient comme une configuration EtherChannel LACP.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: EtherChannel est désactivé par défaut.</p>
+          <p></p>
+          <p>Dans la Figure 1, FastEthernet0/1 et FastEthernet0/2 sont regroupés dans le canal de port de l'interface EtherChannel 1. </p>
+          <p></p>
+          <p>Pour modifier les paramètres de couche 2 sur l'interface de canal de port, activez le mode de configuration d'interface de canal de port en saisissant la commande <b>interface port-channel</b>, suivie de l'identifiant de l'interface. Dans l'exemple, l'EtherChannel est configuré en tant qu'interface trunk avec des VLAN autorisés spécifiés. Comme le montre la Figure 1, le canal de port est configuré en tant que trunk autorisant le trafic en provenance des VLAN 1, 2 et 20.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer EtherChannel sur le commutateur S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 répertorie les commandes nécessaires pour configurer un canal EtherChannel.  Les commandes commencent en mode de configuration globale. La première commande est interface range fast Ethernet 0/1-2.  Elle permet d'appliquer les autres commandes saisies aux ports 1 et 2.  La commande suivante, channel-group 1 mode active, crée l'interface de canal de port.  La commande suivante, interface port-channel 1, permet de passer au mode de configuration pour le canal de port. La commande switchport mode trunk configure l'interface en tant qu'interface trunk.  La dernière commande, switchport trunk allowed v lan 1,2,20, configure les VLAN autorisés sur la liaison.  La Figure 2 est un exercice interactif dans lequel le stagiaire peut configurer un canal EtherChannel sur deux ports d'un commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

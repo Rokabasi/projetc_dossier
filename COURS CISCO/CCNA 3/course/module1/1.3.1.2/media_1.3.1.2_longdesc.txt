@@ -1,0 +1,1 @@
+Cette activité interactive permet à l'utilisateur de mettre en pratique l'utilisation des commandes de configuration présentées dans ce chapitre.

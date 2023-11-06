@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.3 Vérifier les routes OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier les routes OSPFv2</h1>
+        <div>
+          <p>La commande la plus couramment utilisée pour vérifier une configuration OSPFv2 à zones multiples est la commande <b>show ip route</b>. Ajoutez le paramètre <b>ospf</b> pour afficher uniquement les informations relatives à OSPFv2.</p>
+          <p></p>
+          <p>La figure 1 affiche la table de routage de R1. Notez que les entrées <b>O IA</b> de la table de routage identifient les réseaux appris au niveau des autres zones. En particulier,<b> O </b>représente les routes OSPFv2 et <b>IA</b> les routes interzones, c'est-à-dire les routes provenant d'une autre zone. Souvenez-vous que le routeur R1 se situe dans la zone 0 et que les sous-réseaux 192.168.1.0 et 192.168.2.0 sont connectés à R3 dans la zone 2. L'entrée [110/1 295] dans la table de routage représente la distance administrative assignée à OSPF (110) et le coût total des routes (coût de 1 295).</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour vérifier la table de routage IPv4 de R2 et R3 à l'aide de la commande <b>show ip route ospf</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show ip route ospf » et met en évidence les routes interzones acquises dans la configuration OSPF à zones multiples. La Figure 2 est un exercice interactif qui permet au stagiaire d'utiliser la commande « show ip route ospf » sur deux routeurs OSPF à zones multiples connectés.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

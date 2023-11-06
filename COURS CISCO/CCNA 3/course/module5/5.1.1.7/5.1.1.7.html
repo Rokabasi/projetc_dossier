@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.7 Caractéristiques des protocoles de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Caractéristiques des protocoles de routage</h1>
+        <div>
+          <p>Plusieurs caractéristiques permettent de différencier les protocoles de routage :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Vitesse de convergence</b> - La vitesse de convergence définit la rapidité à laquelle les routeurs dans la topologie du réseau parviennent à partager les informations de routage et à disposer d'une base de connaissances cohérente. Plus la convergence est rapide, plus le protocole est recommandé. Des boucles de routage peuvent survenir lorsque des tables de routage incohérentes ne sont pas mises à jour en raison d’une convergence lente dans un réseau changeant. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Évolutivité</b> - L'évolutivité définit la taille maximale d'un réseau en fonction du protocole de routage qui est déployé. Plus le réseau est grand, plus le protocole de routage doit être évolutif. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Par classe ou sans classe (utilisation du VLSM)</b> - Les protocoles de routage par classe n'incluent pas le masque de sous-réseau et ne peuvent pas prendre en charge le VLSM.  Les protocoles de routage sans classe incluent le masque de sous-réseau dans les mises à jour. Les protocoles de routage sans classe prennent en charge la technique VLSM et la récapitulation des meilleures routes.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Utilisation des ressources</b> - Inclut les exigences d'un protocole de routage, telles que l'espace mémoire (RAM), l'utilisation du processeur et l'utilisation de la bande passante. Pour des besoins en ressources plus élevés, un matériel plus puissant est nécessaire pour prendre en charge le fonctionnement du protocole de routage en plus des processus de transfert de paquets. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Implémentation et maintenance</b> - L'implémentation et la maintenance font référence aux connaissances qu'un administrateur réseau doit posséder pour implémenter et gérer le réseau en fonction du protocole de routage déployé. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le tableau présenté dans la figure récapitule les caractéristiques de chaque protocole de routage. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est un tableau qui compare les protocoles de routage.  Par exemple le protocole RIP est considéré comme un protocole à convergence lente utilisé sur les petits réseaux, qui est facile à mettre en œuvre.  La version 1 du protocole RIP n'utilise pas VLSM, contrairement à la version 2.  EIGRP, OSPF et ISIS convergent vite, sont utilisés sur les plus grands réseaux, emploient VLSM et sont plus complexes en termes de mise en œuvre et de maintenance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

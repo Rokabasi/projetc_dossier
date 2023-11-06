@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.3.1 Pourquoi utiliser des protocoles à état de liens ?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pourquoi utiliser des protocoles à état de liens ?</h1>
+        <div>
+          <p>Comme le montre la figure, les protocoles de routage à état de liens offrent plusieurs avantages par rapport aux protocoles de routage à vecteur de distance. </p>
+          <p>
+            <ul>
+              <li>
+                <b>Crée une carte topologique </b>- Les protocoles de routage à état de liens créent une carte topologique, ou arborescence SFP, de la topologie du réseau. Les protocoles de routage à état de liens échangeant des états de liens, l’algorithme SPF peut construire une arborescence SPF du réseau. En utilisant l’arborescence SPF, chaque routeur peut déterminer le plus court chemin vers chaque réseau de façon indépendante.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Convergence rapide</b> - À la réception d'un paquet LSP, les protocoles de routage à état de liens diffusent immédiatement le paquet LSP sur toutes les interfaces, à l'exception de celle sur laquelle il a reçu le paquet LSP. En revanche, le protocole RIP doit traiter chaque mise à jour de routage et chaque mise à jour de sa table de routage avant de les envoyer vers d'autres interfaces. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mises à jour pilotées par événement</b> - Après la diffusion initiale des paquets LSP, les protocoles de routage à état de liens n'envoient un paquet LSP que lorsqu'un changement de topologie intervient. Ce dernier ne contient que les informations relatives au lien concerné. Contrairement à certains protocoles de routage à vecteur de distance, les protocoles de routage à état de liens n’envoient pas des mises à jour périodiques.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Conception hiérarchique</b> - Les protocoles de routage à état de liens utilisent le concept de zones. Plusieurs zones créent un schéma hiérarchique des réseaux, ce qui permet un meilleur groupement (résumé) des routes et l’isolement des problèmes de routage dans une zone. </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie les avantages des protocoles de routage à état de liens. La liste est un résumé du texte de la page.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

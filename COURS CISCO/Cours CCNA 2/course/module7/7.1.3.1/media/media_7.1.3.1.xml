@@ -1,0 +1,39 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Filtrage du trafic avec liste de contrôle d’accès sur un routeur</b>]]></text>
+	</component>
+
+	<component id="ID_txt01">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt02">
+		<text><![CDATA[<b>IPv4</b>]]></text>
+	</component>
+
+	<component id="ID_txt01_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt02_1">
+		<text><![CDATA[<b>IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_txt03">
+		<text><![CDATA[Une liste par interface, par direction et par protocole]]></text>
+	</component>
+
+	<component id="ID_txt04">
+		<text><![CDATA[Avec deux interfaces et deux protocoles, ce routeur peut avoir un total de 8 listes de contrôle d&apos;accès appliquées.]]></text>
+	</component>
+
+	<component id="ID_txt05">
+		<text><![CDATA[Les règles pour appliquer des listes de contrôle d&apos;accès]]></text>
+	</component>
+
+	<component id="ID_txt06">
+		<text><![CDATA[Vous ne pouvez avoir qu&apos;une liste de contrôle d&apos;accès par protocole, par interface et par direction :<textformat blockindent="-14"><ul><li>Une liste de contrôle d&apos;accès par protocole (p. ex., IPv4 ou IPv6)</li><li>Une liste de contrôle d&apos;accès par direction (c.-à-d., entrant ou sortant)</li><li>Une liste de contrôle d&apos;accès par interface (p. ex., GigabitEthernet0/0)</li></ul></textformat>]]></text>
+	</component>
+
+</textcomponents>

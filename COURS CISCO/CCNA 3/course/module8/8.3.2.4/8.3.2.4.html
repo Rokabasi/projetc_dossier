@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.4 Configuration de l&#x0027;ID de routeur OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de l&#x0027;ID de routeur OSPFv3</h1>
+        <div>
+          <p>Utilisez la commande <b>ipv6 router ospf </b><i>process-id </i>en mode de configuration globale pour activer le mode de configuration de routeur. L'invite du mode de configuration du routeur IPv6 est différente de l'invite du mode de configuration du routeur IPv4. Utilisez le mode de configuration de routeur IPv6 pour configurer les paramètres OSPFv3 généraux, tels que l'attribution d'un ID de routeur OSPFv3 32 bits et d'une bande passante de référence.  </p>
+          <p></p>
+          <p>Les protocoles de routage IPv6 sont activés sur une interface, et non en mode de configuration du routeur, à l'instar de leurs homologues IPv4. La commande de mode de configuration du routeur IPv4 <b>network</b> n'existe pas dans IPv6.</p>
+          <p></p>
+          <p>Comme pour OSPFv2, la valeur<i> process-id </i>représente un nombre compris entre 1 et 65 535. Elle est définie par l'administrateur réseau. La valeur<i> process-id </i>est une valeur locale. Autrement dit, elle n'a pas besoin d'être identique sur les autres routeurs OSPF pour établir la contigüité avec les voisins. </p>
+          <p></p>
+          <p>OSPFv3 nécessite l'affectation d'un ID de routeur 32 bits pour que le protocole OSPF puisse être activé sur une interface. Le schéma logique dans la Figure 1 illustre la façon dont un ID de routeur est choisi. À l'instar d'OSPFv2, OSPFv3 utilise :</p>
+          <p>
+            <ul>
+              <li>Un ID de routeur configuré de manière explicite via la commande <b>router-id</b><i> rid </i>. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si aucun n'est configuré, le routeur utilise l'adresse IPv4 configurée la plus élevée d'une interface de bouclage. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si aucun n'est configuré, le routeur utilise l'adresse IPv4 configurée la plus élevée d'une interface active. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>S'il n'existe aucune source d'adresse IPv4 sur un routeur, ce dernier affiche un message de console exigeant la configuration manuelle de l'ID de routeur.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> par souci de cohérence, l'ensemble des trois routeurs utilisent l'ID de processus 10.</p>
+          <p></p>
+          <p>Comme illustré dans la topologie de la Figure 2, les routeurs R1, R2 et R3 doivent se voir affecter les ID de routeur indiqués. La commande <b>router-id </b><i>rid </i>utilisée pour attribuer un ID de routeur dans OSPFv2 est la même que celle utilisée dans OSPFv3. </p>
+          <p></p>
+          <p>L'exemple de la Figure 3 :</p>
+          <p>
+            <ul>
+              <li>Passe en mode de configuration OSPFv3 du routeur. Remarquez que l'invite du routeur est différente de celle de l'invite de mode de protocole de routage IPv4 par défaut. Notez également l'affichage du message de console informatif lors de l'accès au mode de configuration du routeur OSPFv3. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Attribue l'ID de routeur 1.1.1.1. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Modifie la bande passante de référence sur 1 000 000 000 bits/s (1 Gbit/s), parce que le réseau comporte des liens Gigabit Ethernet. Notez le message de console informatif qui indique que cette commande doit être configurée sur tous les routeurs du domaine de routage.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La commande <b>show ipv6 protocols </b>permet de vérifier que l'ID de processus 10 du protocole OSPFv3 utilise l'ID de routeur 1.1.1.1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 4 pour configurer les paramètres globaux OSPFv3 sur R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 représente un organigramme qui détaille la priorité des ID de routeur.  La première question vise à déterminer si l'ID de routeur a été configuré de façon explicite.  Si la réponse est oui, il s'agit de l'ID de routeur.  Si la réponse est non, la question suivante est de savoir si une interface de bouclage est configurée.  Si la réponse est oui, l'adresse configurée la plus élevée deviendra l'ID de routeur.  Si la réponse est non, cet ID de routeur correspond à l'adresse IP configurée et active la plus élevée.  Si la réponse à ces trois questions est non, le routeur affiche un message d'erreur indiquant qu'OSPFv3 n'a pas réussi à définir un ID de routeur et que cet ID doit être configuré manuellement. La Figure 2 illustre la topologie de référence pour le protocole OSPF et indique l'ID de chaque routeur.  L'ID configuré pour le routeur R1 équivaut à 1.1.1.1.  L'ID configuré pour le routeur R2 équivaut à 2.2.2.2. L'ID configuré pour le routeur R3 équivaut à 3.3.3.3. La Figure 3 affiche les commandes nécessaires pour configurer le routeur R1.  La figure commence en mode de configuration globale. La première commande est : router ipv6 ospf 10, où cette valeur désigne un ID de processus arbitraire. Cette commande active le protocole de routage OSPFv3.  L'invite renvoyée par le routeur est R1(config-rtr).  La commande suivante est router-id 1.1.1.1.  Elle est suivie de la configuration de la bande passante de référence via la commande auto-cost reference-bandwidth 1000.  La figure présente ensuite le résultat de la commande show ipv6 protocols, qui vérifie l'ID de routeur. La Figure 4 illustre un élément multimédia interactif qui permet à l'étudiant d'attribuer l'ID de routeur à R2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

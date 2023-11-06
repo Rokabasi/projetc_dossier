@@ -1,0 +1,1 @@
+La figure présente un routeur connecté à deux commutateurs avec trois réseaux VLAN chacun.

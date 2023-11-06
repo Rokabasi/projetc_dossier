@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.1 Les types de protocoles STP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les types de protocoles STP</h1>
+        <div>
+          <p>Plusieurs protocoles Spanning Tree Protocol (STP) sont apparus depuis la création du protocole IEEE 802.1D d'origine. </p>
+          <p></p>
+          <p>Ceux-ci incluent :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>STP</b> - Il s'agit de la version IEEE 802.1D d'origine (802.1D-1998 et antérieures) qui fournit une topologie dépourvue de boucle dans un réseau comportant des liaisons redondantes. La conception CST (Common Spanning Tree, arbre recouvrant commun) suppose une seule instance Spanning Tree pour l'ensemble du réseau ponté, quel que soit le nombre de VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>PVST+</b> : version améliorée du protocole STP proposée par Cisco, qui offre une instance Spanning Tree 802.1D séparée pour chaque VLAN configuré dans le réseau. L'instance séparée prend en charge PortFast, UplinkFast, BackboneFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>802.1D-2004</b> : version mise à jour du protocole STP standard, intégrant IEEE 802.1w.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole RSTP (Rapid Spanning Tree Protocol) ou IEEE 802.1w</b> : version évoluée du protocole STP, qui offre une convergence plus rapide.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rapid PVST+</b> : version améliorée du protocole RSTP proposée par Cisco et utilisant PVST+. Rapid PVST+ offre une instance 802.1w séparée pour chaque VLAN. Chaque instance séparée prend en charge PortFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>MSTP (Multiple Spanning Tree Protocol)</b> - Il s'agit d'un standard IEEE inspiré de l'implémentation MISTP plus ancienne de Cisco (Multiple Instance STP). MSTP mappe plusieurs VLAN dans une même instance Spanning Tree. MST est l'implémentation Cisco de MSTP ; elle fournit jusqu'à 16 instances du protocole RSTP et allie plusieurs VLAN avec la même topologie physique et logique au sein d'une instance courante du protocole RSTP. Chaque instance prend en charge PortFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle.</li>
+            </ul>
+          </p>
+          <p>Un professionnel des réseaux, dont la mission inclut l'administration des commutateurs, peut être amené à décider quel type de protocole STP implémenter.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Les figures présentent les divers types de protocoles STP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.2 L&#x0027;ordre des entrées ACE dans une liste ACL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>L&#x0027;ordre des entrées ACE dans une liste ACL</h1>
+        <div>
+          <p>Cisco IOS applique une logique interne lorsqu'il accepte et traite les entrées de contrôle d'accès (ACE). Comme évoqué précédemment, les entrées ACE sont traitées de manière séquentielle ; par conséquent, l'ordre dans lequel elles sont saisies est important.</p>
+          <p></p>
+          <p>Par exemple, sur la Figure 1, la liste ACL 3 contient deux entrées ACE. La première ACE utilise un masque générique pour refuser une plage d'adresses comprenant tous les hôtes du réseau 192.168.10.0/24. La deuxième ACE est une instruction d'hôte qui examine un hôte spécifique, 192.168.10.10, qui appartient au réseau 192.168.10.0/24. La logique interne d'IOS appliquée aux listes de contrôle d'accès standard rejette la deuxième instruction et renvoie un message d'erreur, car il s'agit d'un sous-ensemble de l'instruction précédente. </p>
+          <p></p>
+          <p>La configuration de l'ACL 4 représentée à la Figure 2 contient les deux mêmes instructions, mais dans l'ordre inverse. Il s'agit d'une séquence valide d'instructions, car la première instruction se rapporte à un hôte spécifique et non à une plage d'hôtes.</p>
+          <p></p>
+          <p>Sur la Figure 3, l'ACL 5 montre qu'une instruction d'hôte peut être configurée après une instruction qui désigne une plage d'hôtes. L'hôte ne doit pas se trouver dans une plage couverte par une instruction précédente. L'adresse d'hôte 192.168.11.10 ne fait pas partie du réseau 192.168.10.0/24. Il s'agit donc d'une instruction valide.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre une entrée de liste d'accès en conflit sur une liste de contrôle d'accès en cours d'utilisation.  La première ligne est « access-list 3 deny 192.168.0.0 0.0.0.255 ».  Elle est suivie par la commande « access-list 3 permit host 192.168.10.10 », qui est en conflit avec l'instruction deny et déclenche l'envoi d'un message d'erreur à la console. La Figure 2 montre les deux mêmes commandes utilisées dans la figure précédente, mais dans l'ordre inverse. Cette séquence de commandes est acceptée par le routeur. La Figure 3 montre deux entrées qui ne sont pas en conflit.  La première commande est « access-list 5 deny 192.168.0.0 0.0.0.255 ».  Cette commande est suivie par « access-list 5 permit host 192.168.10.10 ».  L'hôte n'est pas touché par le réseau dans l'instruction deny, et il est donc accepté.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

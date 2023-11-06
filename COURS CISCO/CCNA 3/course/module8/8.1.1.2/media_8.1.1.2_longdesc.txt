@@ -1,0 +1,1 @@
+La Figure 1 répertorie les caractéristiques suivantes pour le protocole OSPF : il est efficace, il assure une convergence rapide, il est évolutif, il est sécurisé et il est sans classe. La Figure 2 représente un tableau qui indique les distances administratives des protocoles de routage. La valeur 110 pour OSPF est mise en évidence.

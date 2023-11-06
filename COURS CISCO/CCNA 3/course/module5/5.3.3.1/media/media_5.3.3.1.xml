@@ -1,0 +1,10 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Avantages des protocoles de routage à état de liens</b>]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>Chaque routeur crée sa propre carte topologique du réseau pour déterminer le chemin le plus court.</li><li>L&apos;inondation immédiate de paquets LSP permet d&apos;obtenir une convergence plus rapide.</li><li>Les LSP sont envoyés uniquement en cas de modification de la topologie et contiennent uniquement les informations concernant cette modification.</li><li>La conception hiérarchique est utilisée lors de la mise en œuvre de plusieurs zones.</li></ul></textformat>]]></text> 
+</component>
+
+</textcomponents>

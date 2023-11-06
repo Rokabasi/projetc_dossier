@@ -1,0 +1,1 @@
+La figure montre les commandes utilisées pour configurer un routeur en tant que client DHCPv6 avec état.  L'exemple démarre en mode de configuration globale et commence par le passage à l'interface souhaitée.  La première commande est « interface g 0/1 ».  La commande suivante est : i.p.v.6. enable.  La dernière commande est : i.p.v.6. address dhcp.

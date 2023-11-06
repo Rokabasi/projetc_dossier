@@ -1,0 +1,1 @@
+La figure affiche un routeur et un commutateur connectés directement. Chaque périphérique envoie à l'autre des annonces LLDP.

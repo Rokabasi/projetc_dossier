@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.1 Termes de la table de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Termes de la table de routage</h1>
+        <div>
+          <p>Une table de routage créée de façon dynamique fournit de nombreuses informations, comme le montre la figure. Par conséquent, il est essentiel de comprendre le résultat généré par la table de routage. Des conditions spéciales sont appliquées lors de la présentation du contenu d'une table de routage.</p>
+          <p></p>
+          <p>La table de routage IP Cisco n’est pas une base de données linéaire. La table de routage est en fait une structure hiérarchique utilisée pour accélérer le processus de recherche lors de la localisation de routes et du transfert de paquets. La hiérarchie de cette structure comprend plusieurs niveaux. </p>
+          <p></p>
+          <p>Les routes sont décrites selon les termes suivants :</p>
+          <p>
+            <ul>
+              <li>Meilleure route</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Route de niveau 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Route parent de niveau 1 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Routes enfant de niveau 2</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche la sortie de la commande « show ip route pipe begin Gateway ».  Cela affiche la table de routage pour le routeur R1 qui dispose de trois routes connectées directement avec trois adresses d’interfaces IP, cinq routes obtenues par RIP, une route candidate par défaut et une passerelle de dernier recours configurée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

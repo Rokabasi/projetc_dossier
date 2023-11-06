@@ -1,0 +1,1 @@
+Cette animation montre la façon dont un adressage est configuré lorsqu’un paquet circule sur un routeur périphérique NAT, depuis la source vers la destination.

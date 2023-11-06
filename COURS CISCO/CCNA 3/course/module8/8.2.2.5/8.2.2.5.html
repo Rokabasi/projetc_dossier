@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.5 Configuration des interfaces passives</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration des interfaces passives</h1>
+        <div>
+          <p>Utilisez la commande du mode de configuration du routeur <b>passive-interface </b>pour empêcher la transmission de messages de routage via une interface de routeur, mais permettre que le réseau soit annoncé aux autres routeurs, comme illustré dans la Figure 1. En particulier, la commande interrompt l'envoi de messages de routage à partir de l'interface spécifiée. Toutefois, le réseau auquel appartient l'interface spécifiée continuera d'être annoncé dans les messages de routage envoyés via d'autres interfaces. </p>
+          <p></p>
+          <p>Par exemple, il est inutile que R1, R2 et R3 transfèrent des messages OSPF à partir de leurs interfaces de réseau local (LAN). La configuration identifie l'interface G0/0 de R1 comme étant passive. </p>
+          <p></p>
+          <p>Il est important de savoir qu'une contiguïté de voisinage ne peut pas être établie via une interface passive. La raison en est que les paquets LSP ne peuvent pas être envoyés ou reçus.</p>
+          <p></p>
+          <p>La commande <b>show ip protocols</b> est ensuite utilisée pour vérifier que l'interface Gigabit Ethernet était passive, comme illustré dans la Figure 2. Notez que l'interface G0/0 figure désormais dans la section Passive Interface(s). Le réseau 172.16.1.0 apparaît toujours sous Routing for Networks, ce qui signifie qu'il est encore inclus dans les mises à jour de routage OSPFv2 qui sont envoyées à R2 et R3.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> OSPFv2 et OSPFv3 prennent tous deux en charge la commande <b>passive-interface</b>. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour configurer l'interface LAN G0/0 en tant qu'interface passive sur R2.</p>
+          <p></p>
+          <p>Toutes les interfaces peuvent également être rendues passives à l'aide de la commande <b>passive-interface default</b>. Les interfaces qui ne doivent pas être passives peuvent être réactivées à l'aide de la commande <b>no passive-interface</b>.</p>
+          <p></p>
+          <p>Continuez à utiliser le contrôleur de syntaxe de la Figure 3 pour configurer l'interface LAN G0/0 en tant qu'interface passive sur R3.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : lors de l'exécution du contrôleur de syntaxe, notez les messages d'état OSPFv2 lorsque les interfaces sont toutes converties en interfaces passives et lorsque les deux interfaces séries sont converties en interfaces non passives.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche les commandes utilisées pour configurer une interface passive sur un routeur qui exécute le protocole OSPF.  La figure commence en mode de configuration globale et la première commande est router OSPF 10, où cette valeur désigne un ID de processus arbitraire. Cette commande active le protocole de routage OSPF.  La commande suivante est passive-interface gigabit ethernet 0/0.  Cette commande empêche la transmission des messages de routage via l'interface du routeur. La Figure 2 présente le résultat de la commande show ip protocols. La ligne répertorie les interfaces passives, qui sont mises en surbrillance. Dans ce cas, l'interface gigabit ethernet 0/0 est répertoriée comme étant passive. La Figure 3 illustre un élément multimédia interactif qui permet à l'étudiant de configurer des interfaces passives OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La Figure 1 présente une topologie à trois routeurs (R1, R2 et R3) et trois zones OSPF (zone 1, zone 0 et zone 2). La Figure 2 montre comment configurer le routeur ABR R1 dans les zones OSPF 1 et 0. La Figure 3 affiche la syntaxe nécessaire pour configurer un protocole OSPF à zones multiples pour deux routeurs (R2 et R3).

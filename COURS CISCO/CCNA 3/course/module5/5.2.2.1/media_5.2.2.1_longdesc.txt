@@ -1,0 +1,1 @@
+La figure présente les protocoles de routage à vecteur de distance suivants : RIP version 1, RIP version 2, IGRP et EIGRP.

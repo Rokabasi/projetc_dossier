@@ -1,0 +1,1 @@
+La figure montre comment trois périphériques connectés à trois ports de commutateurs indépendants appartiennent à leur propre domaine de collision, mais font tout de même partie du même domaine de diffusion.

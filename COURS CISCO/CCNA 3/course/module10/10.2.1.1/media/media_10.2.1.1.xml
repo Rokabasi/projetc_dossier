@@ -1,0 +1,14 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Contiguïtés OSPF</b>]]></text>
+</component>
+
+	<component id="ID_Title_txt01">
+		<text><![CDATA[<b>Les contiguïtés OSPF ne s&apos;établissent pas si :</b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14' ><ul><li>Les interfaces ne sont pas sur le même réseau.</li><li>Les types de réseau OSPF ne correspondent pas.</li><li>Les compteurs OSPF Hello ou les compteurs d&apos;arrêt ne correspondent pas.</li><li>L&apos;interface vers le voisin est incorrectement configurée comme interface passive.</li><li>Une commande OSPF <font face="_typewriter"><b>network</b></font> est manquante ou incorrecte.</li><li>L&apos;authentification est mal configurée.</li><li>Chaque interface doit être correctement adressée et doit remplir la condition « up and up ».</li></ul></textformat>]]></text>
+	</component>
+
+</textcomponents>

@@ -1,0 +1,12 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_title">
+<text><![CDATA[<b>Tolérance aux pannes</b>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Les connexions redondantes créent des chemins d&apos;accès de substitution en cas de panne d&apos;un périphérique ou d&apos;une liaison, de sorte que l&apos;expérience vécue par l&apos;utilisateur n&apos;en est pas affectée.]]></text> 
+</component>
+</textcomponents>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.3 Protocole EIGRP pour IPv6 : route par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole EIGRP pour IPv6 : route par défaut</h1>
+        <div>
+          <p>Rappelez-vous que le protocole EIGRP gère des tables distinctes pour IPv4 et IPv6 ; une route par défaut IPv6 doit donc être propagée séparément, comme indiqué à la Figure 1. Comme pour le protocole EIGRP pour IPv4, une route statique par défaut est configurée sur le routeur de passerelle (R2), comme indiqué à la Figure 2 : </p>
+          <p></p>
+          <p>
+            <span class="cmd">R2(config)# </span>
+            <span class="cmd">
+              <b>ipv6 route ::/0 serial 0/1/0</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Le préfixe ::/0 et la longueur de préfixe équivalent à l'adresse 0.0.0.0 0.0.0.0 et au masque de sous-réseau utilisés dans IPv4. Les deux sont des adresses contenant uniquement des zéros avec la longueur de préfixe /0.</p>
+          <p></p>
+          <p>Il n'existe pas de commande IPv6 spécifique pour redistribuer la route statique par défaut IPv6. La route statique par défaut IPv6 est redistribuée dans le protocole EIGRP pour le domaine IPv6 à l'aide de la même commande <b>redistribute static</b> que celle utilisée dans le protocole EIGRP pour IPv4.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: dans certains IOS, il faut parfois inclure les paramètres de métrique EIGRP dans la commande <b>redistribute static</b> pour pouvoir redistribuer la route statique. </p>
+          <p></p>
+          <p>Vous pouvez vérifier la propagation de la route statique par défaut IPv6 en examinant la table de routage IPv6 de R1 à l'aide de la commande<b> show ipv6 route</b>, comme indiqué à la Figure 3. Notez que le successeur ou l'adresse de tronçon suivant n'est pas R2, mais R3, car R3 fournit un meilleur chemin vers R2, avec une métrique de coût inférieure à R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur R2 est connecté au fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exception de la liaison entre le routeur R2 et le fournisseur d'accès à Internet. Tous les routeurs utilisent l'adressage IPv6. La Figure 2 représente le routeur R2 dont la route statique par défaut IPv6 pointe vers le fournisseur d'accès à Internet et est propagée aux routeurs R1 et R3. La Figure 3 présente le résultat de la commande « show ip route » sur les routeurs R1 et R3 qui ont pris connaissance de la route statique par défaut via le protocole EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

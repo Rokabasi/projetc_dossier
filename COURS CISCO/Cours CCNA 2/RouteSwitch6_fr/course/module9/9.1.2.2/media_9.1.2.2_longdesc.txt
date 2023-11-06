@@ -1,0 +1,1 @@
+La figure montre un réseau composé de trois ordinateurs. Le réseau est connecté à un routeur NAT, qui est lui-même connecté à Internet.  Une table affiche une plage d’adresses publiques externes disponibles, qui peuvent être mappées aux adresses privées internes.  Ceci permet de mettre en évidence la NAT dynamique.

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.3 Découverte du réseau</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Découverte du réseau</h1>
+        <div>
+          <p>Après un démarrage et une détection initiaux, la table de routage est mise à jour avec tous les réseaux directement connectés et les interfaces sur lesquelles ces réseaux résident.</p>
+          <p></p>
+          <p>Si un protocole de routage est configuré, l'étape suivante pour le routeur est de commencer à échanger des mises à jour de routage pour découvrir toutes les routes distantes.</p>
+          <p></p>
+          <p>Le routeur envoie un paquet de mise à jour à toutes les interfaces activées sur le routeur. La mise à jour contient les informations de la table de routage, qui correspondent actuellement à tous les réseaux directement connectés.</p>
+          <p></p>
+          <p>Parallèlement, le routeur reçoit et traite également les mises à jour similaires provenant d'autres routeurs connectés. Dès qu'il reçoit une mise à jour, le routeur y recherche de nouvelles informations. Tous les réseaux qui ne sont actuellement pas répertoriés dans la table de routage sont ajoutés.  </p>
+          <p></p>
+          <p>Consultez la figure pour voir une configuration de topologie entre trois routeurs, R1, R2 et R3, sur lesquels RIPv2 est activé. En fonction de cette topologie, vous trouverez ci-dessous une liste des différentes mises à jour que R1, R2 et R3 envoient et reçoivent durant la convergence initiale.</p>
+          <p></p>
+          <p>R1 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.1.0.0 via l’interface Serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.2.0.0 via l’interface FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R2 sur le réseau 10.3.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.3.0.0 dans la table de routage avec une mesure de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R2 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.3.0.0 via l'interface série 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.2.0.0 via l'interface série 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R1 sur le réseau 10.1.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.1.0.0 dans la table de routage avec une mesure de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R3 sur le réseau 10.4.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.4.0.0 dans la table de routage avec une mesure de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R3 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.4.0.0 via l'interface série 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.3.0.0 via l’interface FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R2 sur le réseau 10.2.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.2.0.0 dans la table de routage avec une mesure de 1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cliquez sur <b>Lecture</b> dans la figure pour voir une animation qui présente R1, R2 et R3 en train de démarrer l'échange initial. </p>
+          <p></p>
+          <p>Après cette première série d’échange de mises à jour, chaque routeur connaît les réseaux connectés de ses voisins directement connectés. Toutefois, avez-vous noté que R1 ne connaît pas encore l’existence du réseau 10.4.0.0 et que R3 ne connaît pas encore l’existence du réseau 10.1.0.0 ? La connaissance du réseau n'est pas complète et sa convergence ne peut pas avoir lieu tant qu'un autre échange d'informations de routage n'a pas été effectué. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre une animation faisant suite à la page précédente.  Chaque routeur ajoute ses réseaux connectés dans un paquet de mise à jour qu'il envoie sur chacune des interfaces actives.  Au fur et à mesure que les routeurs reçoivent et lisent les paquets des autres routeurs directement connectés, ils ajoutent les nouveaux réseaux détectés dans leurs propres tables de routage. Ils ajoutent également le nombre de sauts comme métrique pour atteindre un réseau spécifique.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

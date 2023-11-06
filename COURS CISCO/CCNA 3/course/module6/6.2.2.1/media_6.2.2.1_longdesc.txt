@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande « show ip eigrp neighbors ».  L'adresse IP des voisins, l'interface locale et le nombre de secondes avant de déclarer le temps d'indisponibilité et de disponibilité des voisins sont mis en surbrillance en orange.

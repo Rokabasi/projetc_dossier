@@ -1,0 +1,1 @@
+Les Figures 1 à 5 sont des activités dans lesquelles l’apprenant est invité à faire correspondre les adresses sources et de destination et le numéro de port avec l’emplacement approprié dans la topologie pour différents segments du processus de communication.

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.3 Détection des périphériques à l&#x0027;aide du protocole CDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Détection des périphériques à l&#x0027;aide du protocole CDP</h1>
+        <div>
+          <p>Lorsque le protocole CDP est activé sur le réseau, la commande <b>show cdp neighbors</b> permet de déterminer la configuration du réseau.</p>
+          <p></p>
+          <p>Examinez par exemple le manque de documentation dans la topologie illustrée à la Figure 1. Aucune information n'est disponible concernant le reste du réseau. La commande <b>show cdp neighbors</b> affiche des informations importantes sur chaque périphérique CDP voisin, y compris :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Identificateurs de périphérique</b> : nom d'hôte du périphérique voisin (S1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Identificateur de port</b> : nom du port local et distant (Gig 0/1 et Fas 0/5, respectivement)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Liste de capacités</b> : indique si le périphérique est un routeur ou un commutateur (S pour commutateur ; I pour IGMP [non couvert par ce cours])</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plate-forme</b> : plate-forme matérielle du périphérique (WS-C2960 pour le commutateur Cisco 2960)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si des informations supplémentaires sont nécessaires, la commande <b>show cdp neighbors detail</b> permet également d'identifier la version IOS et l'adresse IPv4 des voisins, comme illustré dans la Figure 2. En accédant à S1 à distance via SSH ou physiquement via le port de la console, un administrateur réseau peut déterminer les autres périphériques connectés à S1, comme illustré dans le résultat de la commande <b>show cdp neighbors</b> dans la Figure 3.</p>
+          <p></p>
+          <p>Une autre commutateur, S2, apparaît dans le résultat. L'administrateur réseau peut alors accéder à S2 et afficher les voisins CDP, comme indiqué dans la Figure 4. Le seul périphérique connecté à S2 est S1. Par conséquent, il n'y a plus de périphériques à détecter dans la topologie. L'administrateur réseau peut désormais mettre à jour la documentation en fonction des périphériques détectés.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un routeur connecté à un cloud et la sortie de la commande « show cdp neighbors ». Le routeur R1 a un voisin CDP, le commutateur S1, connecté à l'interface GigabitEthernet 0/0 locale. La Figure 2 montre un routeur connecté à un commutateur, qui est connecté à un cloud et la sortie de la commande « show cdp neighbors detail ». L'adresse IP du commutateur S1 est 192.168.1.2 avec IOS version 15.0 exécutée. La Figure 3 affiche la même topologie avec la sortie de la commande « show cdp neighbors » sur le commutateur S1. Le commutateur S1 est connecté à deux périphériques. Le routeur R1 est connecté à l'interface FastEthernet 0/5 locale. Le commutateur S2 est connecté à l'interface FastEthernet 0/4 locale. La Figure 4 présente la topologie complète avec le routeur R1 connecté au commutateur S1, qui est connecté au commutateur S3 et la sortie de la commande « show cdp neighbors » sur le commutateur S2. Le commutateur S2 est connecté au commutateur S1 via l'interface locale FastEthernet 0/4 et n'est connecté à aucun autre périphérique qui utilise le protocole CDP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Activité – Identifier les étapes de l’opération DHCPv4</b><br><br>Triez les étapes pour décrire l’origine d’un bail DHCPv4.<br/>Faites glisser chaque étape de l’origine du bail DHCPv4 vers son champ pertinent selon les nombres cerclés dans le graphique.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Client DHCPv4]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Serveur DHCPv4]]></text>
+</component><!--Drag and Drop--><component id='ID_ip1_DS'>
+	<text><![CDATA[<font color="#393536">DHCPACK<br/>Accusé de réception DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[<font color="#393536">DHCPDISCOVER<br/>Détection DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[<font color="#393536">DHCPREQUEST<br/>Requête DHCP</font>]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[<font color="#393536">DHCPOFFER<br/>Offre DHCP</font>]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Vous avez placé les étapes de l&apos;émission d&apos;un bail DHCPv4 dans le bon ordre.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas placé les étapes de l&apos;émission d&apos;un bail DHCPv4 dans le bon ordre. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+</textcomponents>

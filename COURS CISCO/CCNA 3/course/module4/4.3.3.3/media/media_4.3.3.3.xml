@@ -1,0 +1,50 @@
+﻿<textcomponents><!-- SLIDE 1 --><component id="ID_s1_title">
+		<text><![CDATA[<b>Topologie HSRP</b>]]></text>
+	</component>
+
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Routeur virtuel]]></text>
+	</component>
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Adresse IPv4 virtuelle<br/>172.16.10.1<br/>Adresse MAC virtuelle<br/>0000.0C07.AC01]]></text>
+	</component><!-- END SLIDE 1 --><!-- SLIDE 2 --><component id='ID_s2_title'>
+		<text><![CDATA[Vérification HSRP sur R1]]></text>
+	</component><!-- END SLIDE 2 --><!-- SLIDE 3 --><component id='ID_s3_title'>
+		<text><![CDATA[Vérification HSRP sur R2]]></text>
+	</component><!-- END SLIDE 3 --><!-- SLIDE 4 --><component id='ID_s4_title'>
+		<text><![CDATA[Vérification HSRP sur R1]]></text>
+	</component><!-- END SLIDE 4 --><!-- SLIDE 5 --><component id='ID_s5_title'>
+		<text><![CDATA[Vérification HSRP sur R2]]></text>
+	</component><!-- END SLIDE 5 --><!-- SLIDE 6 --><component id='ID_s6_title'>
+		<text><![CDATA[Configuration et vérification du protocole HSRP]]></text>
+	</component>
+	<component id="ID_sc_reset">
+		<text><![CDATA[Réinitialiser]]></text>
+	</component>
+	<component id="ID_sc_showme">
+		<text><![CDATA[Démonstration]]></text>
+	</component>
+	<component id="ID_sc_showall">
+		<text><![CDATA[Afficher tout
+]]></text>
+	</component>
+        <component id="ID_SC6" fontSize="12" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><font face="_sans" >***Vous devez entrer la commande exacte et complète. Les commandes qui incluent un nom ou un mot de passe sont sensibles à la casse.***</font></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b>R2 a été configuré pour le groupe HSRP 10 avec la priorité par défaut, l&apos;adresse IP 172.16.10.3 et l&apos;adresse IP virtuelle 172.16.10.1. R1 est configuré comme suit :<br><br>R1(config)# interface GigabitEthernet0/1<br>R1(config)# ip address 172.16.10.2 255.255.255.0<br>R1(config)# no shutdown<br><br>Vous êtes actuellement en mode de configuration d&apos;interface GigabitEthernet 0/1. <br>Configurez R1 comme routeur HSRP actif avec la priorité 150.<br>Retournez en mode d&apos;exécution privilégié et exécutez la commande show brief standby.<br></b></font>]]></existingcommands>
+                <command prompt="R1(config-if)#">
+                       <correctresponse><![CDATA[standby 10 ip 172.16.10.1]]></correctresponse>
+              </command>
+                <command prompt="R1(config-if)#">
+                       <correctresponse><![CDATA[standby 10 priority 150]]></correctresponse>
+                                <deviceresponse><![CDATA[%HSRP-6-STATECHANGE: GigabitEthernet0/1 Grp 10 state Speak -&gt; Standby<br>%HSRP-6-STATECHANGE: GigabitEthernet0/1 Grp 10 state Standby -&gt; Active]]></deviceresponse>
+              </command>
+                <command prompt="R1(config)#">
+                       <correctresponse><![CDATA[end]]></correctresponse>
+              </command>
+                <command prompt="R1#">
+                       <correctresponse><![CDATA[show standby brief]]></correctresponse>
+                                <deviceresponse><![CDATA[                     P indicates configured to preempt.<br>                     |<br>Interface Grp Pri P State Active Standby Virtual IP<br>Gi0/1 10 150 Active local 172.16.10.3 172.16.10.1<br>]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Vous avez correctement configuré et vérifié le protocole HSRP.<br><br><br></font>]]></instruction>
+              </command>
+<command prompt=""/>
+ </component><!-- END SLIDE 6 --></textcomponents>

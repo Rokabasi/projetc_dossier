@@ -1,0 +1,1 @@
+La figure affiche la commande CLI « IPv6 router ? ».  Cette commande affiche tous les protocoles de routage IPv6 qui sont pris en charge par l’IOS actuel.  

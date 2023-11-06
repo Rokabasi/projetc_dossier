@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.4 Activation de l&#x0027;IP sur un hôte</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Activation de l&#x0027;IP sur un hôte</h1>
+        <div>
+          <p>Un hôte peut se voir attribuer des informations d'adresse IP soit :</p>
+          <p>
+            <ul>
+              <li>
+                <b>De manière statique</b> : l'hôte se voit attribuer manuellement l'adresse IP, le masque de sous-réseau et la passerelle par défaut corrects. L'adresse IP du serveur DNS peut également être configurée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>De manière dynamique</b> : des informations d'adresse IP sont fournies par un serveur via le protocole DHCP. Le serveur DHCP indique une adresse IP, un masque de sous-réseau et une passerelle par défaut valides pour les périphériques finaux. D'autres informations peuvent être fournies par le serveur.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les Figures 1 et 2 présentent des exemples de configuration statique et dynamique d'adresse IPv4. </p>
+          <p></p>
+          <p>Des adresses attribuées de manière statique sont souvent utilisées pour identifier des ressources réseau spécifiques, telles que les serveurs et imprimantes réseau. Elles peuvent également servir dans de plus petits réseaux avec peu d'hôtes. Cependant, la plupart des périphériques hôtes acquièrent les informations de leur adresse IPv4 en accédant à un serveur DHCPv4. Dans les grandes entreprises, ce sont des serveurs DHCPv4 dédiés offrant des services à de nombreux LAN qui sont implémentés. Dans une filiale plus petite ou un bureau de taille modeste, les services DHCPv4 peuvent être fournis par un commutateur Cisco Catalyst ou un routeur à services intégrés (ISR) Cisco. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre l'applet de Windows pour la connexion au réseau local. L'option Protocole Internet est sélectionnée.  Dans la figure, la configuration de l’adresse IP est statiquement attribuée avec le masque de sous-réseau et la passerelle par défaut. La Figure 2 illustre l’option d’adresse configurée pour obtenir automatiquement l’adresse IP et le serveur D.N.S.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

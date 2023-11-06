@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.2 Vérification des paramètres d&#x0027;interface IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification des paramètres d&#x0027;interface IPv6</h1>
+        <div>
+          <p>Les commandes permettant de vérifier la configuration de l'interface IPv6 sont semblables aux commandes utilisées pour IPv4. </p>
+          <p></p>
+          <p>La commande <b>show ipv6 interface brief</b> de la Figure 1 affiche un récapitulatif de chaque interface. Les termes « up/up » sur la même ligne que le nom de l'interface indiquent l'état de l'interface de couche 1/couche 2. Ces états correspondent aux colonnes Status et Protocol de la commande IPv4 équivalente. </p>
+          <p></p>
+          <p>Le résultat affiche deux adresses IPv6 configurées par interface. L'une des adresses est l'adresse de monodiffusion globale IPv6 qui a été saisie manuellement. L'autre adresse, qui commence par FE80, est l'adresse de monodiffusion link-local pour l'interface. Une adresse link-local est automatiquement ajoutée à une interface chaque fois qu'une adresse de monodiffusion globale est attribuée. Une interface réseau IPv6 est requise pour avoir une adresse link-local, mais elle n'est pas nécessaire pour une adresse de monodiffusion globale.</p>
+          <p></p>
+          <p>Le résultat de la commande <b>show ipv6 interface gigabitethernet 0/0</b> illustré en Figure 2 affiche l'état de l'interface et toutes les adresses IPv6 appartenant à l'interface. Avec l'adresse link-local et l'adresse de monodiffusion globale, le résultat comprend les adresses de multidiffusion attribuées à l'interface commençant par le préfixe FF02.</p>
+          <p></p>
+          <p>La commande <b>show ipv6 route</b> illustrée en Figure 3 peut être utilisée pour vérifier que les adresses des interfaces IPv6 spécifiques et des réseaux IPv6 figurent désormais dans la table de routage IPv6. La commande <b>show</b><b>ipv6</b><b>route</b> n'affiche que les réseaux IPv6 et non les réseaux IPv4.</p>
+          <p></p>
+          <p>Dans la table de routage, la lettre « <b>C</b> » placée en regard d'une route indique qu'il s'agit d'un réseau connecté directement. Lorsque l'interface de routeur est configurée avec une adresse de diffusion globale et que son état est « up/up », le préfixe IPv6 et la longueur de préfixe sont ajoutés à la table de routage IPv6 en tant que route connectée. </p>
+          <p></p>
+          <p>L'adresse de diffusion globale IPv6 configurée sur l'interface est également insérée dans la table de routage en tant que route locale. Le préfixe de la route locale est /128. Des routes locales sont utilisées par la table de routage pour traiter efficacement les paquets avec l'adresse d'interface du routeur en tant que destination.</p>
+          <p></p>
+          <p>La commande <b>ping</b> pour IPv6 est identique à la commande utilisée avec IPv4, excepté qu'une adresse IPv6 est utilisée. Comme l'illustre la Figure 4, la commande <b>ping</b> permet de vérifier la connectivité de couche 3 entre le routeur R1 et le PC1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « ipv6 interfaces brief ».  Elle répertorie l'adresse et les informations relatives uniquement à l'état des interfaces. La Figure 2 affiche la sortie de la commande « show ipv6 interface Gigabit Ethernet 0/0 ».  Elle indique plus d'informations détaillées, comme l'adresse de multidiffusion attribuée à l'interface. La Figure 3 illustre la sortie de la commande « ipv6 route », qui correspond à la table de routage ipv6 du routeur. La Figure 4 illustre l’utilisation et la sortie de la commande « ping » sur une interface ipv6.  Cette commande correspond à « ping 2001:db8:acad:1::10 ».  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.3 Filtrage des résultats de commande show</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrage des résultats de commande show</h1>
+        <div>
+          <p>Les commandes qui génèrent plusieurs écrans de sortie sont, par défaut, mises en pause après 24 lignes. À la fin de cette interruption, le texte « --More-- » s'affiche. Appuyez sur <b>Enter</b> pour afficher la ligne suivante et appuyez sur la touche Espace pour afficher la série de lignes suivante. Utilisez la commande <b>terminal length </b>pour indiquer le nombre de lignes à afficher. La valeur 0 (zéro) empêche le routeur de s'arrêter entre les écrans de résultat.</p>
+          <p></p>
+          <p>Une autre fonctionnalité très utile pour améliorer l'expérience utilisateur dans l'interface en ligne de commande est le filtrage obtenu par la commande <b>show</b>. Les commandes de filtrage permettent d'afficher des sections de résultat spécifiques. Pour activer la commande de filtrage, tapez le symbole <b>|</b> après la commande <b>show</b>, puis saisissez un paramètre de filtrage et une expression de filtrage.</p>
+          <p></p>
+          <p>Après ce symbole, les paramètres de filtrage suivants peuvent être configurés :</p>
+          <p>
+            <ul>
+              <li>
+                <b>section</b> : affiche l'intégralité de la section commençant par l'expression de filtrage</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>include</b> : inclut toutes les lignes de résultat correspondant à l'expression de filtrage</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>exclude</b> : exclut toutes les lignes de résultat correspondant à l'expression de filtrage</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>begin</b> : affiche toutes les lignes de résultat à partir d'un certain point, en commençant par la ligne qui correspond à l'expression de filtrage</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les filtres de résultat peuvent être utilisés en combinaison avec toute commande <b>show</b>.</p>
+          <p></p>
+          <p>Les Figures 1 à 4 présentent des exemples des différents filtres de résultat.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 5 pour filtrer les résultats.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un exemple d’utilisation des commandes de filtrage sur IOS Cisco.  Dans l'exemple, la commande « show running-config pipe section line vty » est saisie et le résultat correspond à la section de la configuration en cours pour les lignes vty. La Figure 2 illustre un exemple d’utilisation d’une commande de filtrage ; il s’agit de « show ip interface brief pipe include up ».  La sortie répertorie trois interfaces qui sont opérationnelles, c.-à-d. actives. La Figure 3 illustre un exemple d’utilisation d’une commande de filtrage ; il s’agit de « show ip interface brief pipe exclude unassigned ».  La sortie répertorie trois interfaces qui sont opérationnelles, c.-à-d. actives.  La quatrième interface du routeur n'est visiblement pas répertoriée dans la sortie étant donné qu'aucune adresse ip ne lui a été attribuée. La Figure 4 illustre un exemple d’utilisation d’une commande de filtrage ; il s’agit de « show ip interface route pipe begin Gateway ».  Le résultat répertorie les contenus de la commande « show ip route » qui commence par le mot clé « gateway », jusqu'à la fin de la sortie. La Figure 5 est un élément multimédia interactif qui permet à l’étudiant de s’entraîner à utiliser les commandes de filtrage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

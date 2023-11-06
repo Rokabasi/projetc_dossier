@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.3.3 Analyse de la PAT</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Analyse de la PAT</h1>
+        <div>
+          <p>Le processus de surcharge de la NAT est le même qu'un pool d'adresses ou une adresse unique soit utilisé. Reprenons l'exemple de PAT précédent. PC1 souhaite communiquer avec le serveur Web Svr1 à l'aide d'une adresse IPv4 publique unique. Un autre client, PC2, souhaite simultanément établir une session similaire avec le serveur Web Svr2. PC1 et PC2 sont configurés avec des adresses IPv4 privées et R2 est activé pour la PAT.</p>
+          <p></p>
+          <p>
+            <b>Processus de l'ordinateur au serveur</b>
+          </p>
+          <p></p>
+          <p>1. La Figure 1 représente l'envoi de paquets de PC1 et PC2 vers Svr1 et Svr2, respectivement. PC1 possède l'adresse IPv4 source 192.168.10.10 et utilise le port source TCP 1444. PC2 possède l'adresse IPv4 source 192.168.10.11 source et, par hasard, utilise également le même port source 1444.</p>
+          <p>2. Le paquet provenant de PC1 atteint R2 en premier. À l'aide de la PAT, R2 modifie l'adresse IPv4 source qui devient 209.165.200.225 (adresse globale interne). Il n'existe aucun autre périphérique utilisant le port 1444 dans la table NAT, donc la PAT conserve le même numéro de port. Le paquet est alors transféré vers Svr1 à l'adresse 209.165.201.1.</p>
+          <p>3. Ensuite, le paquet provenant de PC2 arrive sur R2. La PAT est configurée pour utiliser une adresse IPv4 globale interne unique pour toutes les traductions, 209.165.200.225. De la même manière que pour PC1, la PAT modifie l'adresse IPv4 source de PC2 qui devient l'adresse globale interne 209.165.200.225. Cependant, PC2 possède le même numéro de port source qu'une entrée actuelle de la PAT, la traduction de PC1. La PAT incrémente le numéro de port source jusqu'à ce qu'il corresponde à une valeur unique de sa table. Dans ce cas, le paquet destiné à PC2 reçoit le numéro de port source 1445 et celui-ci est ajouté dans la table NAT.</p>
+          <p></p>
+          <p>Bien que PC1 et PC2 utilisent la même adresse traduite, l'adresse globale interne 209.165.200.225 et le même numéro de port source 1444, le numéro de port modifié pour PC2 (1445) rend chaque entrée de la table NAT unique. Cela deviendra plus évident avec les paquets renvoyés par les serveurs aux clients.</p>
+          <p></p>
+          <p>
+            <b>Processus du serveur à l'ordinateur</b>
+          </p>
+          <p></p>
+          <p>4. Comme le montre la Figure 2, dans un échange client-serveur standard, Svr1 et Svr2 répondent généralement aux requêtes reçues de PC1 et PC2, respectivement. Les serveurs utilisent le port source du paquet reçu comme port de destination et l'adresse source comme adresse de destination pour le trafic de retour. Les serveurs semblent communiquer avec le même hôte à l'adresse 209.165.200.225, mais ce n'est pas le cas.</p>
+          <p>5. À l'arrivée des paquets, R2 localise la seule entrée de sa table NAT en utilisant l'adresse et le port de destination de chaque paquet. Dans le cas du paquet provenant de Svr1, l'adresse IPv4 de destination 209.165.200.225 figure dans plusieurs entrées, mais une seule d'entre elles est associée au port de destination 1444. À l'aide de l'entrée dans sa table, R2 modifie l'adresse IPv4 de destination du paquet qui devient 192.168.10.10. Aucune modification du port de destination n'est requise. Le paquet est alors transféré vers PC1.</p>
+          <p>6. Lorsque le paquet provenant de Svr2 arrive, R2 effectue une traduction similaire. L'adresse IPv4 de destination 209.165.200.225 est localisée et possède à nouveau plusieurs entrées. Toutefois, avec le port de destination 1445, R2 est en mesure d'identifier de manière unique l'entrée de traduction. L'adresse IPv4 de destination est remplacée par 192.168.10.11. Dans ce cas, le port de destination doit également retrouver sa valeur d'origine de 1444, laquelle est stockée dans la table NAT. Le paquet est alors transféré vers PC2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un schéma comportant les adresses sources et adresses de destination ainsi que les ports utilisés pour la communication entre les périphériques sur les réseaux interne et externe.  Les numéros de ports sources sont identiques sur le réseau interne, mais différents sur le réseau externe.  La table NAT est présentée sous l’image. La Figure 2 montre le même schéma. Cependant, ce dernier contient les informations de retour.  Les ports sources externes sont différents même si les ports de destination internes sont identiques.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

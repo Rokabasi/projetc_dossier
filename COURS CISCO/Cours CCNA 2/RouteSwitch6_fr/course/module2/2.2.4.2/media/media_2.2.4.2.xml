@@ -1,0 +1,5 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Configuration d&apos;une route IPV6 statique par défaut</b>]]></text>
+	</component>
+</textcomponents>

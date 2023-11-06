@@ -1,0 +1,47 @@
+<textcomponents>
+
+	<component id="ID_title">
+	<text><![CDATA[<b>Propagation des messages de LSA de type 5</b>]]></text>
+	</component>
+   <component id="ID_txt01">
+  <text><![CDATA[<b>Zone 1</b>]]></text> 
+  </component>
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Zone 0</b>]]></text> 
+  </component>
+  <component id="ID_txt03">
+  <text><![CDATA[<b>Zone 2</b>]]></text> 
+  </component>
+  <component id="ID_txt04">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+  <component id="ID_txt05">
+  <text><![CDATA[DR]]></text> 
+  </component>
+  <component id="ID_txt06">
+  <text><![CDATA[DR]]></text> 
+  </component>
+    <component id="ID_txt07">
+  <text><![CDATA[Type 5]]></text> 
+  </component>
+    <component id="ID_txt08">
+  <text><![CDATA[Type 5]]></text> 
+  </component>
+   <component id="ID_txt09">
+  <text><![CDATA[Type 5]]></text> 
+  </component>
+  
+   
+
+
+
+
+<component id="ID_Title_txt01">
+<text><![CDATA[<b></b>]]></text>
+</component>
+
+<component id="ID_Body_txt01">
+<text><![CDATA[<textformat blockindent='-14'><ul><li>Les LSA de type 5 sont utilisés pour annoncer les <br>adresses réseau externes (non OSPF).</li><li>Un ASBR émet des LSA de type 5.</li><li>Les LSA de type 5 sont diffusées dans toute la zone et générées à nouveau par les autres routeurs ABR.</li><li>L&apos;ID d&apos;état de liens d&apos;une LSA de type 5 est l&apos;adresse réseau externe.</li><li>Par défaut, les routes ne sont pas récapitulées.</li></ul></textformat>]]></text>
+</component>
+
+</textcomponents>

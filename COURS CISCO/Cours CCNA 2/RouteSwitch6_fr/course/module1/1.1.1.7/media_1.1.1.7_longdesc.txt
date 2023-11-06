@@ -1,0 +1,1 @@
+La Figure 1 est un élément multimédia interactif dans lequel l'étudiant doit faire correspondance la fonction et le type de la mémoire. La Figure 2 est un élément multimédia interactif qui présente à l’étudiant la vue arrière du routeur Cisco de série 1941 et une liste de ports.  L’étudiant doit faire correspondre le nom de port avec l’emplacement approprié du panneau arrière.

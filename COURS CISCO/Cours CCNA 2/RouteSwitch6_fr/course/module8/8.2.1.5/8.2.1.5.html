@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.5 Option DHCPv6 sans état</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Option DHCPv6 sans état</h1>
+        <div>
+          <p>Bien que DHCPv6 et DHCPv4 fournissent des services similaires, ces deux protocoles sont indépendants. Le protocole DHCPv6 est défini dans la norme RFC 3315. Cette spécification a fait l'objet d'un travail approfondi au fil des années comme l'indique le nombre de révisions du document RFC sur DHCPv6 puisqu'il s'agit du document Internet le plus révisé. </p>
+          <p></p>
+          <p>
+            <b>Option DHCPv6 sans état (annonce de routeur et DHCPv6)</b>
+          </p>
+          <p></p>
+          <p>L'option DHCPv6 sans état enjoint le client à utiliser les informations dans le message RA pour l'adressage, mais les paramètres de configuration supplémentaires sont fournis par un serveur DHCPv6. </p>
+          <p></p>
+          <p>Le client crée son adresse de monodiffusion globale IPv6 à l'aide du préfixe et de la longueur de préfixe indiqués dans le message RA, et de l'IID généré via le processus EUI-64 ou aléatoirement.</p>
+          <p></p>
+          <p>Le client communique alors avec un serveur DHCPv6 sans état pour obtenir des informations complémentaires non fournies dans le message RA. Il peut s'agir d'une liste d'adresses IPv6 de serveurs DNS, par exemple. Ce processus est appelé DHCPv6 sans état, car le serveur ne conserve aucune information sur l'état des clients (c'est-à-dire une liste des adresses IPv6 disponibles et attribuées). Le serveur DHCPv6 sans état fournit uniquement des paramètres de configuration pour les clients et non pour les adresses IPv6.</p>
+          <p></p>
+          <p>Dans le cas de DHCPv6 sans état, l'indicateur O est configuré sur 1 et l'indicateur M conserve sa valeur par défaut de 0. La valeur de 1 de l'indicateur O sert à informer le client que des informations de configuration supplémentaires sont disponibles auprès d'un serveur DHCPv6 sans état. </p>
+          <p></p>
+          <p>Pour modifier le message RA envoyé sur l'interface d'un routeur pour indiquer DHCPv6 sans état, utilisez la commande suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 nd other-config-flag</b>
+            </span>
+            <span class="cmd"></span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le processus DHCPv6 sans état pour un ordinateur.  Le routeur envoie un message d'annonce de routeur contenant certaines des informations d'adressage requises par l'ordinateur et une directive à l'ordinateur qui doit trouver un serveur DHCPv6 pour les informations restantes.  Ceci en réponse au message de sollicitation du routeur envoyé par l’ordinateur.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

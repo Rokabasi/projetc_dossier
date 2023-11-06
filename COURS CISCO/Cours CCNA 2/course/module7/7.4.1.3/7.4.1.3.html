@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.4.1.3 Chapitre 7 : listes de contrôle d&#x0027;accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 7 : listes de contrôle d&#x0027;accès</h1>
+        <div>
+          <p>Par défaut un routeur ne filtre pas le trafic. Le trafic qui entre dans le routeur est routé uniquement en fonction des informations de la table de routage.</p>
+          <p></p>
+          <p>Le filtrage des paquets contrôle l'accès à un réseau en analysant les paquets entrants et sortants et en les transmettant ou les rejetant selon des critères tels que l'adresse IP source, les adresses IP de destination et le protocole transporté dans le paquet. Un routeur de filtrage de paquets utilise des règles pour déterminer s'il doit autoriser ou refuser le trafic. Un routeur peut également effectuer le filtrage des paquets au niveau de la couche 4, la couche transport. </p>
+          <p></p>
+          <p>Une liste de contrôle d'accès est un ensemble séquentiel d'instructions d'autorisation ou de refus. La dernière instruction d'une liste de contrôle d'accès est toujours une instruction deny implicite bloquant tout le trafic. Pour empêcher l'instruction deny implicite à la fin de la liste de contrôle d'accès de bloquer tout le trafic, vous pouvez ajouter l'instruction <b>permit any</b>.</p>
+          <p></p>
+          <p>Lorsque le trafic réseau traverse une interface configurée avec une liste de contrôle d'accès, le routeur compare les informations du paquet à chaque entrée, dans l'ordre séquentiel, afin de déterminer si le paquet correspond à l'une des instructions. Si une correspondance est trouvée, le paquet est traité en conséquence.</p>
+          <p></p>
+          <p>Les listes de contrôle d'accès sont configurées pour s'appliquer au trafic entrant ou sortant. </p>
+          <p></p>
+          <p>Les listes de contrôle d'accès standard peuvent être utilisées pour autoriser ou refuser le trafic uniquement depuis des adresses IPv4 source. La destination du paquet et les ports concernés ne sont pas évalués.  La règle de base pour le placement des listes de contrôle d'accès standard consiste à les placer aussi près que possible de la destination.</p>
+          <p></p>
+          <p>Les listes de contrôle d'accès étendues filtrent les paquets en fonction de plusieurs attributs : type de protocole, adresse IPv4 source ou de destination et ports source ou de destination. La règle de base pour le placement des listes de contrôle d'accès étendues consiste à les placer aussi près que possible de la source. </p>
+          <p></p>
+          <p>La commande de configuration globale <b>access-list</b> définit une liste de contrôle d'accès standard associée à un numéro compris entre 1 et 99. La commande <b>ip access-list standard </b><i>name </i>est utilisée pour créer une liste de contrôle d'accès standard.</p>
+          <p></p>
+          <p>Une fois qu'une liste de contrôle d'accès est configurée, elle est associée à une interface à l'aide de la commande <b>ip access-group</b> en mode de configuration d'interface. N'oubliez pas les règles suivantes : une liste de contrôle d'accès par protocole, une liste de contrôle d'accès par direction, une liste de contrôle d'accès par interface. </p>
+          <p></p>
+          <p>Pour supprimer une liste de contrôle d'accès IP d'une interface, entrez d'abord la commande <b>no ip access-group</b> sur l'interface, puis la commande globale <b>no access-list</b> pour supprimer l'ensemble de la liste.</p>
+          <p></p>
+          <p>Les commandes<b> show running-config </b>et<b> show access-lists </b>permettent de vérifier la configuration des listes de contrôle d'accès. La commande <b>show ip interface</b> permet de vérifier la liste de contrôle d'accès sur l'interface et la direction dans laquelle elle a été appliquée.</p>
+          <p></p>
+          <p>La commande<b> access-class </b>configurée en mode de configuration de ligne limite les connexions entrantes et sortantes entre un VTY spécifique et les adresses renseignées dans une liste de contrôle d'accès. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure résume les trois P pour l’utilisation des listes ACL,  à savoir une liste ACL par protocole, par direction et par interface.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

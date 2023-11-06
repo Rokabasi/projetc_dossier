@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.1 Présentation de l&#x0027;DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation de l&#x0027;DHCPv4</h1>
+        <div>
+          <p>Le protocole DHCPv4 attribue les adresses IPv4 et d'autres informations de configuration réseau de façon dynamique. Comme les ordinateurs de bureau clients constituent la majorité des nœuds du réseau, le protocole DHCPv4 offre un gain de temps extrêmement précieux aux administrateurs réseau.</p>
+          <p></p>
+          <p>Un serveur DHCPv4 dédié est évolutif et relativement facile à gérer. Cependant, dans le cas d'une petite filiale, d'un petit bureau ou d'un bureau à domicile, un routeur Cisco peut être configuré pour fournir les services DHCPv4, évitant ainsi l'achat d'un serveur dédié. Le logiciel IOS Cisco prend en charge un serveur optionnel DHCPv4 riche en fonctionnalités.</p>
+          <p></p>
+          <p>Le serveur DHCPv4 attribue ou loue dynamiquement une adresse IPv4 à partir d'un pool d'adresses pendant une durée limitée définie par le serveur, ou jusqu'à ce que le client n'en ait plus besoin. </p>
+          <p></p>
+          <p>Les clients louent les informations auprès du serveur pour la période définie par l’administrateur. Les administrateurs configurent les serveurs DHCPv4 pour que les baux dépassent le délai d'attente à différents intervalles. Le bail dure généralement entre 24 heures et une semaine voire plus. À l'expiration du bail, le client doit demander une autre adresse, même s'il obtient généralement la même.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un commutateur auquel sont connectés un routeur et un ordinateur.  Le routeur est configuré pour servir de serveur DHCP et l’ordinateur est un client DHCP.  Le routeur peut fournir une adresse IP et d’autres données au client.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

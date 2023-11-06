@@ -1,0 +1,1 @@
+La figure 1 présente la topologie standard des travaux pratiques.  La liaison entre les routeurs R1 et R2 affiche 64 Kbit/s, la liaison entre les routeurs R1 et R3 affiche 1 544 Kbit/s, et la liaison entre les routeurs R2 et R3 affiche 1 024 Kbit/s. La Figure 2 présente le résultat de la commande « show ipv6 route eigrp » sur le routeur R3.

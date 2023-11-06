@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.2 Présentation de l&#x0027;algorithme DUAL</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation de l&#x0027;algorithme DUAL</h1>
+        <div>
+          <p>EIGRP utilise l'algorithme de convergence DUAL. La convergence est essentielle dans un réseau pour éviter les boucles de routage. </p>
+          <p></p>
+          <p>Les boucles de routage, même temporaires, peuvent nuire aux performances réseau. Les protocoles de routage à vecteur de distance, tels que le protocole RIP, empêchent les boucles de routage avec des minuteurs de mise hors service et un découpage d'horizon. Bien que le protocole EIGRP utilise ces deux techniques, il les utilise un peu différemment, le principal moyen d’éviter les boucles de routage étant l’algorithme DUAL. </p>
+          <p></p>
+          <p>Cliquez sur le bouton Lecture de la figure pour visualiser le fonctionnement de base de DUAL.</p>
+          <p></p>
+          <p>L'algorithme DUAL permet d'éliminer les boucles à chaque instance lors d'un calcul de route. Cela permet à tous les routeurs concernés par une modification de topologie de se synchroniser simultanément. Les routeurs qui ne sont pas affectés par le changement de topologie ne sont pas impliqués dans le nouveau calcul. Cette méthode fournit au protocole EIGRP des temps de convergence plus rapides que ceux des autres protocoles de routage à vecteur de distance.</p>
+          <p></p>
+          <p>Le processus décisionnel des calculs de route s'effectue à l'aide de Finite State Machine (FSM) DUAL. Tout comme un organigramme, FSM est un modèle de workflow constitué des éléments suivants :</p>
+          <p>
+            <ul>
+              <li>Un nombre limité d'étapes (états)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Des transitions entre ces étapes</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Des opérations </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le DUAL FSM effectue le suivi de toutes les routes et utilise les mesures EIGRP pour sélectionner des chemins sans boucle efficaces et pour identifier les routes à moindre coût à insérer dans la table de routage.</p>
+          <p></p>
+          <p>Le nouveau calcul de l'algorithme DUAL peut exiger un temps processeur important. Le protocole EIGRP évite autant que possible tout nouveau calcul en gérant une liste de routes de sauvegarde que DUAL a déjà évaluées comme sans boucle. Si la route principale de la table de routage est mise hors service, la meilleure route de secours est immédiatement ajoutée à la table de routage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation présente trois routeurs. Chaque routeur est connecté à chacun des deux autres routeurs via une liaison série.  Lorsque vous cliquez sur le bouton de lecture, le réseau LAN 2 tombe en panne et le routeur 2 envoie un paquet de mise à jour aux routeurs 1 et 3.  Une fois que les routeurs 1 et 3 ont reçu le paquet de mise à jour, ils renvoient un paquet d'accusé de réception.  Le routeur 2 envoie ensuite un paquet de demande aux routeurs 1 et 3, qui renvoient un paquet de réponse au routeur 2.  Le routeur 2 renvoie alors un paquet d'accusé de réception aux routeurs 1 et 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

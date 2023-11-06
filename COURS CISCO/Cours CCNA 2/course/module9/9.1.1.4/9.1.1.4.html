@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.4 Terminologie NAT (suite)</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Terminologie NAT (suite)</h1>
+        <div>
+          <p>Les termes « interne » et « externe » sont associés aux termes « local » et « global » pour désigner des adresses spécifiques. Sur la figure, le routeur R2 a été configuré pour assurer la NAT. Il dispose d'un pool d'adresses publiques à affecter aux hôtes internes. </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse locale interne</b> : l'adresse de la source vue du réseau interne. Sur la figure, l'adresse IPv4 192.168.10.10 est attribuée à PC1. Il s'agit de l'adresse locale interne de PC1. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse globale interne</b> : l'adresse de la source vue du réseau externe. Sur la figure, lorsque le trafic provenant de PC1 est envoyé au serveur Web sur 209.165.201.1, R2 traduit l'adresse locale interne en adresse globale interne. Dans ce cas, R2 modifie l'adresse IPv4 source, qui passe de 192.168.10.10 à 209.165.200.226. Dans la terminologie NAT, l'adresse locale interne 192.168.10.10 est traduite en adresse globale interne 209.165.200.226. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse globale externe</b> : l'adresse de destination vue du réseau externe. Il s'agit d'une adresse IPv4 routable unique au monde attribuée à un hôte sur Internet. Par exemple, le serveur Web est accessible à l'adresse IPv4 209.165.201.1. Le plus souvent, les adresses locale et globale externes sont identiques.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse locale externe</b> : l'adresse de la destination vue du réseau interne. Dans cet exemple, PC1 envoie le trafic au serveur Web à l'adresse IPv4 209.165.201.1. Bien que cela soit rarement le cas, cette adresse peut être différente de l'adresse de destination globalement routable.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figure montre comment le trafic est adressé, c'est-à-dire envoyé depuis un PC interne vers un serveur Web externe par l'intermédiaire du routeur configuré pour la NAT. Elle illustre également l'adressage initial et la traduction du trafic de retour.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : l'utilisation de l'adresse locale externe n'est pas abordée dans ce cours. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche le routeur 2 avec un réseau interne à gauche ainsi qu’un PC. Elle affiche également un réseau externe à droite avec un FAI. Les adresses globales externes, les adresses globales internes, les adresses locales externes et les adresses locales internes sont répertoriées pour le PC et le serveur  Web.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<textcomponents>
+   <component id="ID_title">
+      <text><![CDATA[<b>Un échantillon des routeurs Cisco</b>]]></text>
+   </component>
+   
+<component id="ID_txt01">
+   <text><![CDATA[<b>Série 800</b><br/>Routeurs pour succursales de petite taille]]></text>
+</component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<b>Série 2900</b><br/>Routeurs pour succursales de grande taille]]></text>
+</component>
+
+<component id="ID_txt03">
+   <text><![CDATA[<b>Série 2000</b><br/>Routeurs industriels conçus pour fonctionner dans des conditions difficiles]]></text>
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[<b>Série ASR 1000</b><br/>Routeurs à services d&apos;agrégation pour le réseau de l&apos;entreprise]]></text>
+</component>
+
+<component id="ID_txt05">
+   <text><![CDATA[<b>Cisco CRS</b><br/>Système de routage CRS (Carrier Routing System) Cisco conçu pour les data centers et les fournisseurs de services]]></text>
+</component>
+
+</textcomponents>

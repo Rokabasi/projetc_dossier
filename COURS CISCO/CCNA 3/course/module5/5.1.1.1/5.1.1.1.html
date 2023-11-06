@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.1 Classification des protocoles de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Classification des protocoles de routage</h1>
+        <div>
+          <p>Les protocoles de routage dynamique sont utilisés pour faciliter l'échange d'informations de routage entre des routeurs. Un protocole de routage est un ensemble de processus, d’algorithmes et de messages qui sont utilisés pour échanger des informations de routage et construire la table de routage en y indiquant les meilleurs chemins choisis par le protocole. La fonction des protocoles de routage dynamique inclut les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>découverte des réseaux distants ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>actualisation des informations de routage ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>choix du meilleur chemin vers des réseaux de destination ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>capacité à trouver un nouveau meilleur chemin si le chemin actuel n’est plus disponible.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les protocoles de routage peuvent être classés dans différents groupes selon leurs caractéristiques. Plus précisément, les protocoles de routage peuvent être classés en fonction de leur :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Objectif</b> - Protocole IGP (Interior Gateway Protocol) ou protocole EGP (Exterior Gateway Protocol)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Opération </b>- Protocole de vecteur de distance, protocole à état de liens ou protocole de vecteur de chemin</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Comportement</b>
+                <b></b>- Protocole par classe (ancien) ou sans classe</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Par exemple, les protocoles de routage IPv4 sont classés comme suit : </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv1 (ancien)</b> - IGP, vecteur de distance, protocole par classe</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IGRP (ancien)</b> - IGP, vecteur de distance, le protocole par classe développé par Cisco (abandonné depuis l'IOS 12.2 et versions ultérieures)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv2</b> - IGP, vecteur de distance, protocole sans classe</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EIGRP</b> - IGP, vecteur de distance, protocole sans classe développé par Cisco</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF</b> - IGP, état de liens, protocole sans classe</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS</b> - IGP, état de liens, protocole sans classe</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>BGP </b>- EGP, vecteur de distance, protocole sans classe</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les protocoles de routage par classe, RIPv1 et IGRP, sont des protocoles anciens et sont uniquement utilisés dans les réseaux plus anciens. Ces protocoles de routage ont évolué pour devenir respectivement les protocoles de routage sans classe RIPv2 et EIGRP. Les protocoles de routage à état de liens sont sans classe par nature. </p>
+          <p></p>
+          <p>La figure présente une vue hiérarchique de la classification des protocoles de routage dynamique.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 constitue un tableau à lecture verticale qui classifie les protocoles de routage dynamique.  Le tableau les catégorise en protocoles de passerelle interne et protocoles de passerelle externe.  Les protocoles IGP sont ensuite ventilés en protocoles de routage de vecteur à distance et protocoles de routage d’état des liaisons.  Les protocoles de vecteur à distance sont RIPv1, RIPv2 et EIGRP.  Les protocoles de routage d’état de liaisons sont OSPF et IS-IS.  Les protocoles de routage externes sont considérés comme des protocoles de routage de vecteur de chemin et le protocole BGP est le seul de ce genre. Les Figures 2 à 4 présentent la classification des protocoles de routage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

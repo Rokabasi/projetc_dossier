@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.1 Problèmes d’adressage IP avec VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes d’adressage IP avec VLAN</h1>
+        <div>
+          <p>Chaque VLAN doit correspondre à un sous-réseau IP unique. Si deux périphériques du même VLAN possèdent des adresses de sous-réseau différentes, ils ne peuvent pas communiquer. Il s’agit d’un problème courant qu’il est facile de résoudre en identifiant la configuration incorrecte et en remplaçant l’adresse de sous-réseau par l’adresse correcte.</p>
+          <p></p>
+          <p>Dans la Figure 1, le PC1 ne parvient pas à se connecter au serveur Web/TFTP affiché. </p>
+          <p></p>
+          <p>La vérification des paramètres de configuration IPv4 du PC1 présentée en Figure 2 indique l’erreur la plus courante lors de la configuration de VLAN : une adresse IP mal configurée. Le PC1 est configuré avec l’adresse IPv4 172.172.10.21 alors que son adresse IP devrait être 172.17.10.21.</p>
+          <p></p>
+          <p>Dans la Figure 3, la boîte de dialogue de configuration Fast Ethernet de PC1 contient l’adresse IPv4 172.17.10.21 qui a été mise à jour. La sortie dans la partie inférieure indique que le PC1 peut de nouveau se connecter au serveur Web/TFTP situé à l’adresse IPv4 172.17.10.30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un petit LAN avec un PC connecté au commutateur 2, un PC connecté au commutateur 3 et un serveur Web connecté au commutateur 1.  Les liens entre les commutateurs sont des liaisons et les VLAN nécessaires sont autorisés.  Le PC connecté au commutateur 2 présente une légende indiquant qu’il ne peut pas se connecter au serveur Web. La Figure 2 montre la sortie de la commande « ip config » sur le PC. La Figure 3 montre une capture d’écran de la configuration de l’adresse IP sur le PC pour la modifier et indiquer le sous-réseau correct.  Notez que la capture d’écran est celle d’un PC dans Packet Tracer.  Voici la sortie d’une commande ping sur le PC affichant une requête ping réussie vers le serveur Web.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

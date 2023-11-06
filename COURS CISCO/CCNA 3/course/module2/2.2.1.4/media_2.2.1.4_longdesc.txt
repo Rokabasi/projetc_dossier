@@ -1,0 +1,1 @@
+La figure présente un problème de configuration concernant un switchport mal configuré comme VLAN par défaut dans une topologie de routage inter-VLAN existante.

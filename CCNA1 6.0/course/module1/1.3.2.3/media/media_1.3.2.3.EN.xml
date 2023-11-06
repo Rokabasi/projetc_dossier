@@ -1,0 +1,16 @@
+﻿<textcomponents>
+
+<!-- slide 2 -->
+<component id="ID_title">
+<text><![CDATA[<b>Scalability</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Additional users and whole networks can be connected to the Internet without degrading performance for existing users.]]></text> 
+</component>
+
+</textcomponents>

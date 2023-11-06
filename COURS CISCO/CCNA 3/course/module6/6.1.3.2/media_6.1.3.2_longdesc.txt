@@ -1,0 +1,1 @@
+La Figure 1 présente une vue agrandie de l'en-tête EIGRP.  Le code OP et le numéro de système autonome sont indiqués en orange. La Figure 2 présente les types de TLV avec la valeur K indiquée, ainsi que le temps d'attente. La Figure 3 présente le champ d'un type de TLV pour les routes internes. La Figure 4 présente le champ d'un type de TLV pour les routes externes.

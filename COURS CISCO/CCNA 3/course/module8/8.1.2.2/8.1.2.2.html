@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.2 Types de paquets OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Types de paquets OSPF</h1>
+        <div>
+          <p>Le protocole OSPF utilise des paquets LSP (Link-State Packet) pour établir et maintenir des contiguïtés de voisinage, ainsi que pour échanger des mises à jour de routage. </p>
+          <p></p>
+          <p>La figure présente les cinq types de paquets LSP utilisés par OSPFv2. OSPFv3 utilise des types de paquets similaires. Chacun d'eux a un objectif spécifique dans le processus de routage OSPF :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Type 1 : paquet Hello</b> - Permet d'établir et de maintenir la contiguïté avec d'autres routeurs OSPF. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Type 2 : paquet DBD (Database Description)</b> - Contient une liste abrégée de la LSDB du routeur expéditeur et est utilisé par les routeurs destinataires à des fins de comparaison avec la LSDB locale. La LSDB doit être identique sur tous les routeurs à état de liens au sein d'un secteur pour créer une arborescence SPF précise.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Type 3 : paquet LSR (Link-State Request)</b> - Les routeurs destinataires peuvent alors demander plus d'informations sur une entrée quelconque dans la description de base de données en envoyant un paquet LSR. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Type 4 : paquet LSU (Link-State Update)</b> - Utilisé pour répondre aux paquets LSRs et pour annoncer de nouvelles informations. Les paquets LSU contiennent sept types de paquets LSA. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Type 5 : paquet LSAck (Link-State Acknowledgment)</b> - Lorsqu'un paquet LSU est reçu, le routeur envoie un paquet LSAck pour confirmer la réception du paquet LSU. Le champ de données du paquet LSAck est vide.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente un tableau répertoriant les cinq types de paquets OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La Figure présente le résultat de la commande « show ipv6 protocols » sur le routeur 1.  L'ID du processus EIGRP, les valeurs k, l'ID de routeur, la distance administrative et les interfaces sont mis en surbrillance en orange.

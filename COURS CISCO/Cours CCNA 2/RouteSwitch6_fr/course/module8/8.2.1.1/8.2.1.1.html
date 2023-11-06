@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.1 Configuration automatique des adresses sans état (SLAAC)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration automatique des adresses sans état (SLAAC)</h1>
+        <div>
+          <p>Comme pour IPv4, les adresses de monodiffusion globale IPv6 peuvent être configurées manuellement ou de façon dynamique. Cependant, il existe deux méthodes d'attribution dynamique des adresses de monodiffusion globale IPv6 :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Configuration automatique des adresses sans état (SLAAC), illustrée sur la figure</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocole DHCP (Dynamic Host Configuration Protocol) pour IPv6 (DHCPv6 avec état)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Présentation de l'SLAAC</b>
+          </p>
+          <p></p>
+          <p>SLAAC est une méthode grâce à laquelle un périphérique peut obtenir une adresse de monodiffusion globale IPv6 sans les services d'un serveur DHCPv6. Le protocole ICMPv6 se trouve au cœur du processus SLAAC. ICMPv6 est similaire à ICMPv4, mais inclut des fonctionnalités supplémentaires, ce qui en fait un protocole bien plus robuste. SLAAC utilise des messages d'annonce et de sollicitation de routeur ICMPv6 pour fournir les informations d'adressage et d'autres informations de configuration autres qui seraient normalement fournies par un serveur DHCP :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Message de sollicitation de routeur (RS) :</b> lorsqu'un client est configuré pour obtenir ses informations d'adressage automatiquement via le processus SLAAC, celui-ci envoie un message RS au routeur. Le message RS est envoyé à l'adresse de multidiffusion à tous les routeurs IPv6, FF02::2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Message d'annonce de routeur (RA)</b> : les messages RA sont envoyés par les routeurs pour fournir des informations d'adressage aux clients configurés pour obtenir leurs adresses IPv6 automatiquement. Le message RA inclut le préfixe et la longueur de préfixe du segment local. Les clients utilisent ces informations pour créer leur propre adresse de monodiffusion globale IPv6. Les routeurs envoient un message d'annonce de routeur à intervalles réguliers ou en réponse à un message de sollicitation. Par défaut, les routeurs Cisco envoient des messages d'annonce de routeur toutes les 200 secondes. Ces messages sont toujours envoyés à l'adresse de multidiffusion à tous les nœuds IPv6, FF02::1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Comme son nom l'indique, le processus SLAAC est sans état. Un service sans état ne fait appel à aucun serveur pour maintenir à jour les informations d'adresse réseau. Contrairement à DHCP, aucun serveur SLAAC ne sait quelles adresses IPv6 sont utilisées et lesquelles sont disponibles.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un commutateur auquel sont connectés un routeur et un ordinateur.  L’ordinateur envoie au routeur IPv6 un message de sollicitation qui se trouve être un message multidiffusion à tous les routeurs.  Le routeur reçoit ce message et répond par un message d’annonce du routeur, qui est en fait un message IPv6 multidiffusion à tous les nœuds.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

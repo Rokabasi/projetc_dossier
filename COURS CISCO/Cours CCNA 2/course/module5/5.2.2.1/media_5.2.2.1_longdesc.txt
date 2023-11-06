@@ -1,0 +1,1 @@
+La Figure affiche la sortie de la commande « show run ».  La section de l’interface présentant plusieurs des ports sur le commutateur à l’état d’arrêt pour une meilleure sécurité est mise en surbrillance.

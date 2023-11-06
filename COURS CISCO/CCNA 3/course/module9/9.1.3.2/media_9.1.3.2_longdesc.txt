@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande show ip route dans Cisco IOS et met en évidence l'ordre dans lequel les meilleurs chemins sont calculés par l'algorithme SPF.

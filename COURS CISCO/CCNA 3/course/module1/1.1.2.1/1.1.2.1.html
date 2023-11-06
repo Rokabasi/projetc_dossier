@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.1 Conception pour l&#x0027;évolutivité </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conception pour l&#x0027;évolutivité </h1>
+        <div>
+          <p>Que le réseau soit de grande, moyenne ou petite envergure, le concepteur réseau doit développer une stratégie pour faire en sorte que le réseau soit disponible et puisse évoluer avec efficacité et facilité. Voici les recommandations faisant partie d'une stratégie de base de conception de réseau :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Utilisez un équipement modulaire extensible ou des périphériques en cluster, qui peuvent être facilement mis à niveau pour augmenter les capacités. Des modules de périphériques peuvent être ajoutés à l'équipement existant pour prendre en charge de nouvelles fonctions et de nouveaux périphériques, sans nécessiter de mises à niveau majeures de l'équipement.  Certains périphériques peuvent être intégrés à un cluster afin de fonctionner comme un périphérique unique, pour simplifier la gestion et la configuration.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Concevez un réseau hiérarchique pour inclure des modules pouvant être ajoutés, mis à niveau et modifiés, comme nécessaire, sans influence sur la conception des autres zones fonctionnelles du réseau. Par exemple, pour un réseau de campus, créez une couche d'accès séparée pouvant être étendue sans affecter les couches de distribution et cœur de réseau. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Établissez une stratégie hiérarchique d'adresses IPv4 ou IPv6. Une planification attentive des adresses évite d'avoir à reconfigurer l'adressage du réseau pour prendre en charge des utilisateurs et des services supplémentaires. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Choisissez des routeurs ou des commutateurs multicouches pour limiter les diffusions et filtrer le trafic non souhaité sur le réseau. Utilisez des périphériques de couche 3 pour filtrer et réduire le trafic vers le cœur du réseau. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Comme illustré par la figure, il existe des conditions de conception de réseau plus avancées, notamment :</p>
+          <p>
+            <ul>
+              <li>Implémentation de liens redondants dans le réseau entre des périphériques critiques et entre des périphériques de couche d'accès et de couche cœur de réseau</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implémentation de liens multiples entre les équipements, avec agrégation de liens (EtherChannel) ou équilibrage de charge à coût égal, afin d'augmenter la bande passante. La combinaison de liens Ethernet multiples en une configuration EtherChannel unique avec équilibrage de la charge augmente la bande passante disponible. Des implémentations EtherChannel peuvent être utilisées lorsque des restrictions budgétaires empêchent l'achat d'interfaces haut débit et de fibre optique</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Utilisation d'un protocole de routage évolutif et implémentation de fonctions au sein de ce protocole pour isoler les mises à jour du routage et réduire les dimensions de la table de routage</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implémentation d'une connectivité sans fil pour permettre la mobilité et l'extension</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente les graphiques qui montrent différents exemples de redondance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

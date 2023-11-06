@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.3.3 Protocole EIGRP pour la table de routage IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole EIGRP pour la table de routage IPv6</h1>
+        <div>
+          <p>Comme avec tout protocole de routage, l'objectif est de renseigner la table de routage IP avec les routes vers les réseaux distants et les meilleurs chemins associés. Comme avec IPv4, il est important d'examiner la table de routage IPv6 et de déterminer si elle contient les routes correctes. </p>
+          <p></p>
+          <p>La table de routage IPv6 est examinée à l'aide de la commande<b> show ipv6 route</b>. Les routes EIGRP pour IPv6 sont signalées dans la table de routage par la lettre D, de même que les routes EIGRP pour IPv4 dans la table de routage IPv4.</p>
+          <p></p>
+          <p>La Figure 1 montre que R1 a installé trois routes EIGRP vers des réseaux IPv6 distants dans sa table de routage IPv6 :</p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:2::/64 via R3  (FE80::3) à l'aide de l'interface Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:3::/64 via R3 (FE80::3) à l'aide de l'interface Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2001:DB8:CAFE:A002::/64 via R3 (FE80::3) à l'aide de l'interface Serial 0/0/1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les trois routes utilisent le routeur R3 comme routeur de tronçon suivant (successeur). Notez que la table de routage utilise l'adresse link-local comme adresse de tronçon suivant. Chaque interface d'un routeur étant configurée à l'aide d'une adresse link-local unique et distinctive, il est facile d'identifier le routeur R3 comme routeur de tronçon suivant via FE80::3.</p>
+          <p></p>
+          <p>La Figure 2 affiche la table de routage IPv6 pour R2. </p>
+          <p></p>
+          <p>La Figure 3 illustre la table de routage pour R3. Notez que R3 dispose de deux chemins à coût égal vers 2001:DB8:CAFE:A001::/64. L'un via R1 sur FE80::1 et l'autre via R2 sur FE80::2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show i. p. v. 6 route » sur le routeur R1.  Les routes EIGRP sont signalées en orange et utilisent des adresses IPv6. La Figure 2 affiche la sortie de la commande « show i. p. v. 6 route » sur le routeur R2.  Les routes EIGRP sont signalées en orange et utilisent des adresses IPv6. La Figure 3 affiche la sortie de la commande « show i. p. v. 6 route » sur le routeur R3.  Les routes EIGRP sont signalées en orange et utilisent des adresses IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.5 Les décisions relatives aux rôles des ports pour RSTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les décisions relatives aux rôles des ports pour RSTP</h1>
+        <div>
+          <p>Dans l’exemple, le commutateur S1 est le pont racine. Les commutateurs S2 et S3 ont des ports racine configurés pour les ports qui retransmettent le trafic vers S1.</p>
+          <p></p>
+          <p>Une fois que le protocole STP a déterminé quel port de commutateur assure le rôle de port racine sur chaque commutateur, il doit déterminer quels ports ont les rôles désignés et alternatifs.</p>
+          <p></p>
+          <p>Le pont racine configure automatiquement tous ses ports de commutateur dans le rôle désigné. Les autres commutateurs de la topologie configurent leurs ports non-racines comme ports désignés ou alternatifs.</p>
+          <p></p>
+          <p>Les ports désignés sont configurés pour tous les segments LAN. Lorsque deux commutateurs sont connectés au même segment LAN et que les ports racines ont déjà été définis, ils doivent décider quel port configurer comme port désigné et quel port reste le port alternatif.</p>
+          <p></p>
+          <p>Les commutateurs du segment LAN échangent des trames BPDU qui contiennent l'ID de pont (BID) du commutateur. Généralement, le port du commutateur ayant le BID le plus faible est configuré comme port désigné tandis que celui ayant le BID le plus élevé est configuré comme port alternatif. Toutefois, n'oubliez pas que la priorité est le coût de chemin le plus faible vers le pont racine et que le BID de l'émetteur n'est utilisé que si les coûts de port sont égaux.</p>
+          <p></p>
+          <p>Chaque commutateur détermine quels rôles de port sont affectés à chacun de ses ports pour créer le Spanning Tree dépourvu de boucle.</p>
+          <p></p>
+          <p>Les Figures 1 à 7 montrent comment les rôles de port sont déterminés.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

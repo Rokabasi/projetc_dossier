@@ -1,0 +1,1 @@
+La figure montre l'interface graphique utilisateur du routeur sans fil Packet Tracer pour configurer le protocole DHCP.

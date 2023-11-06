@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.2 Récupération après une panne système</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Récupération après une panne système</h1>
+        <div>
+          <p>Le bootloader (chargeur de démarrage) permet d'accéder au commutateur si le système d'exploitation ne peut pas être chargé, notamment si des fichiers système sont manquants ou endommagés. Il dispose d'une ligne de commande qui permet l'accès aux fichiers stockés dans la mémoire Flash. </p>
+          <p></p>
+          <p>Pour accéder au bootloader, procédez comme suit :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Connectez un PC par le câble de console au port de console du commutateur. Configurez le logiciel d'émulation de terminal pour établir une connexion avec le commutateur.</p>
+          <p>
+            <b>Étape 2</b>. Débranchez le cordon d'alimentation du commutateur. </p>
+          <p>
+            <b>Étape 3</b>. Reconnectez le cordon d'alimentation au commutateur et, dans les 15 secondes suivantes, appuyez sur le bouton <b>Mode</b> et maintenez-le enfoncé tandis que la LED système clignote en vert. </p>
+          <p>
+            <b>Étape 4</b>. Continuez à appuyer sur le bouton <b>Mode</b> jusqu’à ce que la LED système devienne orange, puis vert fixe ; vous pouvez alors relâcher le bouton <b>Mode</b>.</p>
+          <p>
+            <b>Étape 5</b>. L'invite <b>switch:</b> du bootloader s'affiche dans le logiciel d'émulation de terminal sur le PC.</p>
+          <p></p>
+          <p>La ligne de commande <b></b>boot loader prend en charge des commandes permettant de formater le système de fichiers Flash, de réinstaller le système d'exploitation et de récupérer un mot de passe perdu ou oublié. Par exemple, la commande<b> dir </b> peut être utilisée pour afficher la liste des fichiers dans un dossier spécifique comme illustré dans la figure.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: notez que dans cet exemple, l'IOS se trouve à la racine du dossier Flash.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre le résultat de la commande « dir flash: ».  Cette commande affiche le contenu de la mémoire flash et la figure répertorie divers fichiers, notamment le fichier de l'IOS.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+﻿<textcomponents>
+    <!--Slide 1-->
+    <component id="ID_s1_title">
+        <text>
+            <![CDATA[Exercice : identification des concepts et des opérations du protocole VTP]]>
+        </text>
+    </component>
+    <component id="ID_s1_instr_title">
+        <text>
+            <![CDATA[Instructions]]>
+        </text>
+    </component>
+    <component id="ID_s1_instr_body">
+        <text>
+            <![CDATA[Choisissez le bon mode VTP pour chaque définition.]]>
+        </text>
+    </component>
+    <!--feedback-->
+    <component id='ID_s1_titleCorrect'>
+        <text>
+            <![CDATA[Correct]]>
+        </text>
+    </component>
+    <component id='ID_s1_correctText'>
+        <text>
+            <![CDATA[Vous avez identifié le mode VTP.]]>
+        </text>
+    </component>
+    <component id='ID_s1_titleIncorrect'>
+        <text>
+            <![CDATA[Incorrect]]>
+        </text>
+    </component>
+    <component id='ID_s1_incorrectText'>
+        <text>
+            <![CDATA[Vous n&apos;avez pas identifié le mode VTP. Cliquez sur Réinitialiser pour réessayer.]]>
+        </text>
+    </component>
+    <component id='ID_s1_CHECK'>
+        <text>
+            <![CDATA[Vérifier]]>
+        </text>
+    </component>
+    <component id='ID_s1_RESET'>
+        <text>
+            <![CDATA[Réinitialiser]]>
+        </text>
+    </component>
+    <!--ComboBox 1-->
+    <component id="ID_s1_txt01">
+        <text>
+            <![CDATA[1. <textformat blockindent='14'>Impossible de créer, de modifier ou de supprimer des VLAN</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt01'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB01_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+        <!--answer-->
+    </component>
+    <component id='ID_s1_CB01_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB01_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+    </component>
+    <!--End ComboBox 1-->
+    <!--ComboBox 2-->
+    <component id="ID_s1_txt02">
+        <text>
+            <![CDATA[2. <textformat blockindent='14'>Les VLAN créés, renommés ou supprimés dans ces domaines sont uniquement associés à ce commutateur</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt02'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB02_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB02_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB02_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+        <!--answer-->
+    </component>
+    <!--End ComboBox 2-->
+    <!--ComboBox 3-->
+    <component id="ID_s1_txt03">
+        <text>
+            <![CDATA[3. <textformat blockindent='14'>Où les VLAN peuvent être créés, supprimés ou renommés pour le domaine</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt03'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB03_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB03_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB03_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+        <!--answer-->
+    </component>
+    <!--End ComboBox 3-->
+    <!--ComboBox 4-->
+    <component id="ID_s1_txt04">
+        <text>
+            <![CDATA[4. <textformat blockindent='14'>Stocke uniquement les informations VLAN pour l&apos;ensemble du domaine pendant que le commutateur est sous tension</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt04'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB04_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+        <!--answer-->
+    </component>
+    <component id='ID_s1_CB04_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB04_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+    </component>
+    <!--End ComboBox 4-->
+    <!--ComboBox 5-->
+    <component id="ID_s1_txt05">
+        <text>
+            <![CDATA[5. <textformat blockindent='14'>Annonce les informations VLAN du domaine VTP aux autres commutateurs VTP dans <span class="alignment">le même domaine VTP</span></textformat>]]>
+        </text>
+    </component>-
+    <component id='ID_s1_CBprompt05'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB05_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB05_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+        <!--answer-->
+    </component>
+    <component id='ID_s1_CB05_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+    </component>
+    <!--End ComboBox 5-->
+    <!--ComboBox 6-->
+    <component id="ID_s1_txt06">
+        <text>
+            <![CDATA[6. <textformat blockindent='14'>Doit être configuré dans ce mode pour créer des VLAN étendus</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt06'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB06_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB06_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB06_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+        <!--answer-->
+    </component>
+    <!--End ComboBox 6-->
+    <!--ComboBox 7-->
+    <component id="ID_s1_txt07">
+        <text>
+            <![CDATA[7. <textformat blockindent='14'>Ne participe pas au domaine VTP</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt07'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB07_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB07_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB07_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+        <!--answer-->
+    </component>
+    <!--End ComboBox 7-->
+    <!--ComboBox 8-->
+    <component id="ID_s1_txt08">
+        <text>
+            <![CDATA[8. <textformat blockindent='14'>Stocke les informations VLAN pour l&apos;ensemble du domaine dans la mémoire vive non volatile</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt08'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB08_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB08_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+        <!--answer-->
+    </component>
+    <component id='ID_s1_CB08_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+    </component>
+    <!--End ComboBox 8-->
+    <!--ComboBox 9-->
+    <component id="ID_s1_txt09">
+        <text>
+            <![CDATA[9. <textformat blockindent='14'>La réinitialisation du commutateur entraîne la suppression des informations VLAN</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt09'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB09_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+        <!--answer-->
+    </component>
+    <component id='ID_s1_CB09_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB09_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+    </component>
+    <!--End ComboBox 9-->
+    <!--ComboBox 10-->
+    <component id="ID_s1_txt10">
+        <text>
+            <![CDATA[10. <textformat blockindent='14'>Transmet les annonces VTP sans apporter de modification à la base de données VLAN locale</textformat>]]>
+        </text>
+    </component>
+    <component id='ID_s1_CBprompt10'>
+        <text>
+            <![CDATA[Sélectionnez une réponse…]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB10_01'>
+        <text>
+            <![CDATA[Client VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB10_02'>
+        <text>
+            <![CDATA[Serveur VTP]]>
+        </text>
+    </component>
+    <component id='ID_s1_CB10_03'>
+        <text>
+            <![CDATA[VTP transparent]]>
+        </text>
+        <!--answer-->
+    </component>
+    <!--End ComboBox 10-->
+</textcomponents>

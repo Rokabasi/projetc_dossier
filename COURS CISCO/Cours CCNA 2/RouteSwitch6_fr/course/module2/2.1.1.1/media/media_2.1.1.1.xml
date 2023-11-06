@@ -1,0 +1,31 @@
+<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+<text><![CDATA[<b>Scénarios de routes statiques et par défaut</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Le routeur R2 est connecté à d&apos;autres réseaux et à Internet. Il s&apos;agit également de l&apos;unique point de sortie du réseau. J&apos;ai besoin d&apos;une route statique par défaut pour atteindre n&apos;importe quel réseau que je ne connais pas.]]></text> 
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Le routeur R1 n&apos;a que deux réseaux qui m&apos;intéressent, j&apos;ai donc besoin de deux routes statiques pour atteindre ces réseaux.]]></text> 
+</component><!-- slide 2 --><component id="ID_s2_title">
+<text><![CDATA[<b>Scénario de routage dynamique</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Salut, je suis R1 et j&apos;utilise le protocole EIGRP pour signaler à mes voisins que j&apos;ai accès aux réseaux suivants :<br/><textformat blockindent='-18'><ul><li>192.168.10.0/24</li><li>192.168.11.0/24</li><li>209.165.200.224/30</li></ul></textformat>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+<text><![CDATA[Salut R1, je suis R2 et j&apos;utilise le protocole EIGRP pour signaler à mes voisins que j&apos;ai accès aux réseaux suivants :<br/><textformat blockindent='-18'><ul><li>10.1.1.0/24</li><li>10.1.2.0/24</li><li>209.165.200.224/30</li></ul>Je suis également la passerelle Internet par défaut.</textformat>]]></text> 
+</component>
+
+</textcomponents>

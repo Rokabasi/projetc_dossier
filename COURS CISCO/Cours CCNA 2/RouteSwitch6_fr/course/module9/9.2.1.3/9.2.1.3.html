@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.3 Vérification de la NAT statique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la NAT statique</h1>
+        <div>
+          <p>La commande<b> show ip nat translations</b> permet de vérifier le fonctionnement de la NAT. Elle affiche les traductions NAT actives. Les traductions statiques, contrairement aux traductions dynamiques, se trouvent toujours dans la table NAT. La Figure 1 présente le résultat de cette commande dans l'exemple de configuration précédent. Comme l'exemple est une configuration NAT statique, la traduction est toujours présente dans la table NAT, qu'il y ait ou non des communications actives. Si la commande est émise pendant une session active, le résultat indique également l'adresse du périphérique externe comme à la Figure 1.</p>
+          <p></p>
+          <p>La commande<b> show</b><b> ip nat statistics</b> est également utile. Comme le montre la Figure 2, la commande <b>show ip nat statistics</b> affiche des informations sur le nombre total de traductions actives, les paramètres de configuration NAT, le nombre d’adresses dans le pool et le nombre d’adresses allouées. </p>
+          <p></p>
+          <p>Pour vérifier que la traduction NAT fonctionne, il est préférable d'effacer les statistiques des traductions passées à l'aide de la commande <b>clear ip nat statistics</b> avant d'effectuer le test.</p>
+          <p></p>
+          <p>Avant toute communication avec le serveur Web, la commande <b>show ip nat statistics</b> n'affiche aucune occurrence. Lorsque le client établit une session avec le serveur Web, la commande<b> show ip nat statistics </b>montre plus de résultats (cinq occurrences) sur l’interface interne (Serial0/0/0). Cela permet de vérifier que la traduction NAT statique a lieu sur R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche le résultat de la commande « show i. p. nat translations » sans session active.  Les adresses externes ne sont pas indiquées.  La figure présente également le résultat de la commande « show i. p. nat translations » avec une session active.  Les adresses externes sont présentes.  Cela montre que les traductions NAT sont toujours présentes lors d’une traduction d’adresses réseau statique. La Figure 2 affiche le résultat de la commande « clear i. p. nat statistics » suivie de la commande « show i. p. nat statistics » qui n’affiche aucune occurrence.  Lorsqu’un PC établit une session avec le serveur Web, le résultat de la commande « show i. p. nat statistics » contient cinq occurrences.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

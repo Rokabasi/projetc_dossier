@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.4 Syntaxe de listes de contrôle d&#x0027;accès IPv4 standard nommées</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Syntaxe de listes de contrôle d&#x0027;accès IPv4 standard nommées</h1>
+        <div>
+          <p>Si vous attribuez un nom à une liste de contrôle d'accès, il vous sera plus facile d'en comprendre la fonction. Lorsque vous identifiez une liste de contrôle d'accès par un nom plutôt qu'un numéro, le mode de configuration et la syntaxe de commande sont légèrement différents.</p>
+          <p></p>
+          <p>La Figure 1 décrit les étapes à suivre pour créer une liste de contrôle d'accès standard nommée.</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> À partir du mode de configuration globale, utilisez la commande <b>ip access-list</b> pour créer une liste de contrôle d'accès nommée. Les noms des listes de contrôle d'accès doivent contenir uniquement des caractères alphanumériques, sont sensibles à la casse et doivent être uniques. La commande <b>ip access-list standard</b><i> name </i>est utilisée pour créer une liste de contrôle d'accès standard. Après avoir sélectionné la commande, le routeur entre dans le mode de configuration de liste standard (std) nommée (nacl) comme indiqué par la deuxième invite dans la Figure 1.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les listes de contrôle d'accès numérotées utilisent la commande de configuration globale <b>access-list</b> alors que les listes de contrôle d'accès IPv4 nommées utilisent la commande <b>ip access-list</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 2.</b> En mode de configuration des listes de contrôle d'accès nommées, utilisez les instructions <b>permit</b> (autoriser) ou<b> deny</b> (refuser) pour spécifier une ou plusieurs conditions déterminant si un paquet est transféré ou abandonné. Vous pouvez utiliser <b>remark</b> pour ajouter un commentaire à la liste de contrôle d'accès.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b> Appliquez la liste de contrôle d'accès à une interface à l'aide de la commande <b>ip access-group</b><i> name </i>. Indiquez si la liste de contrôle d'accès doit être appliquée aux paquets lorsqu'ils entrent dans l'interface (<b>in</b>) ou lorsqu'ils quittent l'interface (<b>out</b>).</p>
+          <p></p>
+          <p>La Figure 2 illustre les commandes utilisées pour configurer une liste de contrôle d'accès standard nommée sur l'interface G0/0 du routeur R1 qui refuse l'accès de l'hôte 192.168.11.10 au réseau 192.168.10.0. La liste de contrôle d'accès est nommée NO_ACCESS.</p>
+          <p></p>
+          <p>Vous n’êtes pas obligés de mettre des majuscules aux noms des listes de contrôle d’accès. En revanche, si vous le faites, vous les verrez bien mieux en affichant la commande running-config. Il sera également moins probable que vous créiez accidentellement deux listes de contrôle d'accès différentes portant le même nom, mais avec des différences de majuscules.</p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La Figure 1 montre les commandes utilisées pour créer une liste de contrôle d'accès standard nommée. La première commande est « ip access-list » suivie par « standard » ou « extended », à son tour suivi par le nom de la liste de contrôle d'accès. Cela déplace le routeur dans le mode « config-std-nacl ». Les instructions « permit » ou « deny » sont ensuite entrées, avec l’instruction « remark » facultative. Elles sont suivies des adresses IP et de la commande « log » facultative. La dernière étape consiste à appliquer la liste de contrôle d'accès à une interface dans une direction spécifiée. La Figure 2 représente la configuration d'une liste de contrôle d'accès nommée. La première commande est « ip access-list standard no_access ». La commande suivante est « deny host 192.168.11.10 ». La commande suivante est « permit any ». Ensuite le routeur passe à l'interface spécifique via la commande « interface gigabit Ethernet 0/0 ». La dernière étape consiste à appliquer la liste de contrôle d'accès via la commande « ip access-group no_access out ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.4 Échange des informations de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Échange des informations de routage</h1>
+        <div>
+          <p>À ce stade, les routeurs connaissent leurs propres réseaux directement connectés et les réseaux connectés de leurs voisins immédiats. Pour se rapprocher de la convergence, les routeurs échangent la série suivante de mises à jour régulières. Chaque routeur vérifie à nouveau les mises à jour à la recherche de nouvelles informations. </p>
+          <p></p>
+          <p>Reportez-vous à la figure ci-contre pour obtenir une configuration de topologie entre trois routeurs, R1, R2 et R3. Une fois la détection initiale terminée, chaque routeur poursuit le processus de convergence en envoyant et recevant les mises à jour suivantes.</p>
+          <p></p>
+          <p>R1 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.1.0.0 via l'interface série 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur les réseaux 10.2.0.0 et 10.3.0.0 via l'interface FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R2 sur le réseau 10.4.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.4.0.0 dans la table de routage avec une mesure de 2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La même mise à jour de R2 contient des informations sur le réseau 10.3.0.0 avec une mesure de 1. Il n'y a eu aucune modification ; par conséquent, les informations de routage restent les mêmes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R2 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur les réseaux 10.3.0.0 et 10.4.0.0 via l'interface série 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur les réseaux 10.1.0.0 et 10.2.0.0 via l'interface série 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R1 sur le réseau 10.1.0.0. Il n'y a eu aucune modification ; par conséquent, les informations de routage restent les mêmes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R3 sur le réseau 10.4.0.0. Il n'y a eu aucune modification ; par conséquent, les informations de routage restent les mêmes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R3 : </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur le réseau 10.4.0.0 via l'interface série 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Envoie une mise à jour sur les réseaux 10.2.0.0 et 10.3.0.0 via l'interface FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Reçoit une mise à jour de R2 sur le réseau 10.1.0.0 et augmente le nombre de sauts de 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Stocke le réseau 10.1.0.0 dans la table de routage avec une mesure de 2.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La même mise à jour de R2 contient des informations sur le réseau 10.2.0.0 avec une mesure de 1. Il n'y a eu aucune modification ; par conséquent, les informations de routage restent les mêmes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cliquez sur <b>Lecture</b> dans la figure pour voir une animation qui présente R1, R2 et R3 en train d'envoyer la dernière table de routage à leurs voisins. </p>
+          <p></p>
+          <p>Les protocoles de routage à vecteur de distance mettent généralement en œuvre une technique de prévention des boucles de routage appelée « découpage d'horizon ». Le découpage d’horizon empêche l’envoi d’informations via l’interface qui les a envoyées. Par exemple, R2 n'envoie pas de mise à jour contenant le réseau 10.1.0.0 via l'interface Serial 0/0/0, car R2 a pris connaissance du réseau 10.1.0.0 via l'interface Serial 0/0/0. </p>
+          <p></p>
+          <p>Une fois que les routeurs d'un réseau ont convergé, ils peuvent utiliser les informations de la table de routage afin de déterminer le meilleur chemin pour atteindre une destination. Des protocoles de routage différents ont différentes façons de calculer le meilleur chemin.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre une animation faisant suite à la page précédente.  Chaque routeur continue à mettre à jour sa table de routage au fur et à mesure qu'il reçoit des paquets de mise à jour des autres routeurs et qu'il leur en envoie.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

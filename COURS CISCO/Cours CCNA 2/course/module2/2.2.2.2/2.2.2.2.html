@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.2 Configuration d&#x0027;une route statique par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;une route statique par défaut</h1>
+        <div>
+          <p>R1 peut être configuré avec trois routes statiques pour atteindre tous les réseaux distants dans cet exemple de topologie. Toutefois, R1 est un routeur d'extrémité car il est uniquement connecté à R2. Par conséquent, il serait plus efficace de configurer une route statique par défaut.</p>
+          <p></p>
+          <p>L'exemple de la figure configure une route statique par défaut sur R1. Avec la configuration illustrée dans cet exemple, tous les paquets ne correspondant pas à des entrées de route plus spécifiques sont transférés vers 172.16.2.2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN.  Il y a une route statique par défaut configurée sur le routeur R1, qui utilise l’argument du tronçon suivant.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure 1 montre le résultat de la commande « show vtp status ». La figure 2 décrit les paramètres de la commande « show vtp status ».

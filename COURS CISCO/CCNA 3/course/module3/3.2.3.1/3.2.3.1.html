@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.1 Présentation du protocole Rapid PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation du protocole Rapid PVST+</h1>
+        <div>
+          <p>Le protocole RSTP (IEEE 802.1w) est une évolution du protocole 802.1D standard d'origine et a été intégré au protocole IEEE 802.1D-2004. La terminologie du protocole STP 802.1w est essentiellement la même que celle du protocole STP IEEE 802.1D initial. La plupart des paramètres ont été conservés de façon à ce que les utilisateurs déjà familiarisés avec STP puissent rapidement configurer le nouveau protocole. Rapid PVST+ est l'implémentation Cisco du protocole RSTP par VLAN. Une instance indépendante de RSTP s'exécute sur chaque VLAN. </p>
+          <p></p>
+          <p>La figure ci-contre illustre un réseau fonctionnant sous RSTP. S1 est le pont racine, avec deux ports désignés en état de réacheminement. Le protocole RSTP gère un nouveau type de port. Le port F0/3 sur S2 est un port alternatif à l'état de suppression. Notez que le réseau ne comporte aucun port en état de blocage. En effet, le protocole RSTP n’autorise pas l’état de blocage d’un port. Il définit les états suivants pour les ports : mise à l’écart (discarding), apprentissage ou acheminement. </p>
+          <p></p>
+          <p>Le protocole RSTP optimise le recalcul de l’arbre recouvrant lorsque la topologie d’un réseau de couche 2 change. Le protocole RSTP assure un temps de convergence beaucoup plus rapide dans un réseau correctement configuré, parfois de l’ordre de quelques centaines de millisecondes. Il redéfinit le type des ports et leur état. Si un port est configuré comme port alternatif ou port de secours, il peut passer immédiatement à l'état de réacheminement sans attendre que le réseau converge. Les caractéristiques du protocole RSTP sont décrites brièvement ci-dessous :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Le protocole RSTP est le protocole le plus adapté pour garantir qu’il n’y a pas de boucles de couche 2 dans un environnement de réseau commuté. La majorité des différences découlent des améliorations effectuées par Cisco (version propriétaire) au protocole 802.1D d'origine. Ces améliorations (par exemple, le fait que les trames BPDU véhiculent et envoient les informations concernant les rôles des ports exclusivement aux commutateurs voisins) ne requièrent aucune configuration supplémentaire et sont généralement plus performantes que les versions Cisco antérieures. Elles sont désormais transparentes et intégrées au fonctionnement du protocole.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les améliorations propriétaires de Cisco apportées au protocole 802.1D, telles que les fonctions UplinkFast et BackboneFast, ne sont pas compatibles avec RSTP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RSTP (802.1w) remplace le protocole 802.1D d'origine, tout en conservant la rétrocompatibilité. La majeure partie de la terminologie du protocole 802.1D initial perdure et les principaux paramètres restent inchangés. En outre, le protocole 802.1w est capable de revenir à la version 802.1D héritée, aux fins d'interopérabilité avec les commutateurs existants, individuellement pour chaque port. Par exemple, l'algorithme RSTP Spanning Tree détermine un pont racine exactement de la même manière que le protocole 802.1D d'origine. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RSTP conserve le même format de BPDU que le standard IEEE 802.1D d'origine, à l'exception du fait que le champ de version est défini sur 2 pour indiquer qu'il s'agit de RSTP et que le champ d'indicateurs utilise les 8 bits. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RTSP est capable de vérifier activement qu'un port peut passer en toute sécurité à l'état de réacheminement sans avoir à s'appuyer sur la configuration d'un minuteur.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois commutateurs, tous interconnectés.  Le commutateur 1 est identifié comme pont racine et l'ensemble de ses ports sont des ports désignés et de réacheminement.  Les ports des commutateurs deux et trois sont identifiés en tant que racine, désigné et alternatif, selon le cas.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

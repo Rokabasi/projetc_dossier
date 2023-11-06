@@ -1,0 +1,1 @@
+La figure 1 montre que les VLAN ont été reçus et enregistrés dans la base de données de S2. La figure 2 montre que les VLAN configurés sur le serveur VTP ont été propagés sur S2. La figure 3 montre que des VLAN ne peuvent pas être configurés sur S2 parce qu'il est en mode client VTP. La figure 4 est un contrôleur de syntaxe pour configurer et vérifier VTP

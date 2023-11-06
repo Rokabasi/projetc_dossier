@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.3.4 Commandes show de routeur de base</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commandes show de routeur de base</h1>
+        <div>
+          <p>Voici quelques-unes des commandes IOS les plus couramment utilisées pour afficher et vérifier l'état opérationnel du routeur, ainsi que les fonctionnalités réseau IPv4 associées. Des commandes similaires sont disponibles pour IPv6 en remplaçant <b>ip</b> par <b>ipv6</b>. Ces commandes sont regroupées en plusieurs catégories. </p>
+          <p></p>
+          <p>Associées au routage :</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols</b>
+                <b></b>- Affiche des informations sur les protocoles de routage configurés. Si RIP est configuré, le résultat comprend la version de RIP, les réseaux annoncés par le routeur, l'éventuelle activation de la récapitulation automatique, les voisins dont le routeur reçoit les mises à jour et la distance administrative par défaut, à savoir 120 pour RIP. (Figure 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b>
+                <b></b>- Affiche les informations de table de routage, dont : les codes de routage, les réseaux connus, la distance administrative et les mesures, la façon dont les routes ont été acquises, le prochain saut, les routes statiques et les routes par défaut. (Figure 2)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Associées à l’interface :</p>
+          <p>
+            <ul>
+              <li>
+                <b>show interfaces </b>- Affiche les interfaces avec l'état de ligne (protocole), la bande passante, le retard, la fiabilité, l'encapsulation, le duplex et les statistiques d'E/S. Si aucune interface précise n'est désignée, toutes les interfaces seront affichées. Si une interface précise est désignée après la commande, seules les informations relatives à cette interface seront affichées. (Figure 3) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interfaces</b>
+                <b></b>- Affiche les informations sur l'interface, dont : l'état du protocole, l'adresse IPv4, l'éventuelle configuration d'une adresse d'assistance et l'éventuelle activation d'une ACL sur l'interface. Si aucune interface précise n'est désignée, toutes les interfaces seront affichées. Si une interface précise est désignée après la commande, seules les informations relatives à cette interface seront affichées. (Figure 4)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface brief</b>
+                <b></b>- Affiche toutes les interfaces avec les informations d'adressage IPv4 ainsi que l'état des protocoles de ligne et d'interface. (Figure 5)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show protocols </b>- Affiche des informations sur le protocole acheminé qui est activé ainsi que sur l'état du protocole des interfaces. (Figure 6)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La commande<b> show cdp neighbors </b>(Figure 7) fait également partie des commandes relatives à la connectivité. Cette commande affiche des informations sur les appareils Cisco connectés directement, dont l'ID d'appareil, l'interface locale à laquelle l'appareil est connecté, la fonctionnalité (R = routeur, S = commutateur), la plate-forme et l'ID de port de l'appareil distant. L'option <b>details</b> comprend les informations d'adressage IP et la version d'IOS.<b></b></p>
+          <p></p>
+          <p>Dans la Figure 8, utilisez le contrôleur de syntaxe pour vérifier les configurations de routeurs au moyen de ces commandes<b> show</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le résultat de la commande « show i. p. protocols » sur un routeur. La figure 2 présente le résultat de la commande « show i.p. route pipe begin gateway » sur un routeur. La figure 3 présente le résultat de la commande « show i.p. o.s.p.f. neighbor » sur un routeur. La figure 4 présente le résultat de la commande « show interfaces gigabit ethernet zero slash zero » sur un routeur. La figure 5 présente le résultat de la commande « show i.p. interface gigabit ethernet zero slash zero » sur un routeur. La figure 6 présente le résultat de la commande « show i.p. interface brief » sur un routeur. La figure 7 présente le résultat de la commande « show protocols » sur un routeur. La figure 8 présente le résultat de la commande « show c.d.p. neighbors » sur un routeur. La Figure 9 est une activité interactive qui permet aux stagiaires de s’entraîner à utiliser les commandes décrites dans cette section.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

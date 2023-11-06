@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.6 Liste de VLAN incorrecte</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Liste de VLAN incorrecte</h1>
+        <div>
+          <p>Pour que le trafic d’un VLAN soit transmis via un trunk, il doit être autorisé sur cette trunk. Pour ce faire, utilisez la commande <b>switchport trunk allowed vlan </b><b><i></i></b><i>vlan-id</i> . </p>
+          <p></p>
+          <p>Dans la figure 1, le VLAN 20 (Étudiant) et le PC5 ont été ajoutés au réseau. La documentation a été mise à jour pour indiquer que les VLAN autorisés sur l’agrégation sont les VLAN 10, 20 et 99. Dans ce scénario, le PC5 ne parvient pas à se connecter au serveur de messagerie des étudiants. </p>
+          <p></p>
+          <p>Vérifiez les ports trunk du commutateur S1 à l’aide de la commande <b>show interfaces trunk</b>, comme indiqué à la Figure 2. La commande <b>show interfaces trunk</b> est un excellent outil pour déceler les problèmes de trunking courants. Cette commande indique que l’interface F0/3 du commutateur S3 est correctement configurée pour autoriser les VLAN 10, 20 et 99. Un examen de l’interface F0/3 du commutateur S1 révèle que les interfaces F0/1 et F0/3 autorisent uniquement les VLAN 10 et 99. Quelqu’un a mis la documentation à jour, mais a oublié de reconfigurer les ports sur le commutateur S1.</p>
+          <p></p>
+          <p>Reconfigurez les ports F0/1 et F0/3 du commutateur S1 à l’aide de la commande <b>switchport trunk allowed vlan 10,20,99</b>, comme indiqué à la Figure 3. Le résultat indique que les VLAN 10, 20 et 99 sont maintenant associés aux ports F0/1 et F0/3 du commutateur S1. Le PC5 peut de nouveau se connecter au serveur de messagerie des étudiants situé à l’adresse IPv4 172.17.20.10.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un LAN avec deux ordinateurs connectés au commutateur 3, un serveur de messagerie connecté au commutateur 1 et un serveur Web connecté au commutateur 1.  L’un des ordinateurs sur le commutateur 3 présente une légende indiquant qu’il ne peut pas se connecter au serveur de messagerie.  Il est dans un LAN différent, mais a une adresse IP dans le même sous-réseau que le serveur de messagerie. La Figure 2 affiche la sortie de la commande « show interfaces trunk » sur les commutateurs 1 et 3.  Les LAN autorisés sur F0/3 sont mis en surbrillance et le commutateur 1 ne trouve pas LAN 20. La Figure 3 montre la syntaxe pour ajouter le LAN 20 au port F0/3 sur le commutateur 1 et la sortie de la commande « show interfaces trunk » sur le commutateur 1.  La figure montre également la sortie de la requête ping du PC5.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

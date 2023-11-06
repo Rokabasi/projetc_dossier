@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.3 ID de routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>ID de routeur</h1>
+        <div>
+          <p>Chaque routeur doit disposer d'un ID de routeur pour pouvoir participer à un domaine OSPF. L'ID de routeur peut être défini par un administrateur ou attribué automatiquement par le routeur. L'ID de routeur est utilisé par le routeur compatible OSPF pour : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Identifier uniquement le routeur</b> - L'ID de routeur est utilisé par d'autres routeurs pour identifier de façon unique chaque routeur au sein du domaine OSPF ainsi que tous les paquets provenant de ceux-ci. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Participer à la sélection du routeur désigné (DR)</b> - Dans un environnement de réseau local (LAN) à accès multiple, le choix du routeur désigné s'effectue lors de l'établissement initial du réseau OSPF. Lorsque les liens OSPF deviennent actifs, le périphérique de routage configuré avec la priorité la plus élevée devient le routeur désigné. En supposant qu'aucune priorité ne soit configurée, ou qu'il y ait un ex aequo, le routeur dont l'ID est le plus élevé devient le routeur désigné. Le périphérique de routage dont l'ID est le deuxième plus élevé devient le routeur désigné de secours (BDR). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Mais comment le routeur détermine-t-il l'ID du routeur ? Comme illustré dans la figure, les routeurs Cisco créent l'ID de routeur en fonction de l'un des trois critères ci-dessous, dans l'ordre préférentiel suivant :</p>
+          <p>
+            <ul>
+              <li>L'ID de routeur est explicitement configuré via la commande OSPF<b> router-id</b><i> rid </i>en mode de configuration de routeur. La valeur<i> rid </i>est une valeur 32 bits exprimée comme sous la forme d'une adresse IPv4. C'est la méthode recommandée pour attribuer un ID de routeur</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si l'ID de routeur n'est pas configuré de façon explicite, le routeur choisit l'adresse IPv4 la plus élevée parmi celles des interfaces de bouclage configurées. C'est la meilleure solution hormis l'attribution d'un ID de routeur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si aucune interface de bouclage n'est configurée, le routeur choisit l'adresse IPv4 active la plus élevée parmi ses interfaces physiques. C'est la méthode qui est la moins recommandée car il est alors plus difficile pour les administrateurs de distinguer des routeurs spécifiques.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si le routeur utilise l'adresse IPv4 la plus élevée pour l'ID de routeur, l'interface n'a pas besoin d'être compatible OSPF. Autrement dit, l'adresse de l'interface n'a pas besoin d'être incluse dans l'une des commandes<span class="cmd"><i></i></span><i>réseau </i>OSPF pour que le routeur utilise cette adresse IPv4 comme ID de routeur. La seule exigence est que l'interface soit active et qu'elle se trouve dans l'état up.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : l'ID de routeur ressemble à une adresse IPv4, mais son routage n'est pas possible. Par conséquent, il n'est pas inclus dans la table de routage à moins que le processus de routage OSPF ne choisisse une interface (physique ou de bouclage) définie de manière appropriée par une commande <b>network</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente un organigramme qui détaille la priorité des ID de routeur.  La première question vise à déterminer si l'ID de routeur a été configuré de façon explicite.  Si la réponse est oui, il s'agit de l'ID de routeur.  Si la réponse est non, la question suivante est de savoir si une interface de bouclage est configurée.  Si la réponse est oui, il s'agit de l'ID de routeur.  Si la réponse est non, cet ID de routeur correspond à l'adresse IP configurée et active la plus élevée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

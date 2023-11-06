@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.5.2 Activation d&#x0027;une licence de droit d&#x0027;utilisation d&#x0027;évaluation</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.5.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Activation d&#x0027;une licence de droit d&#x0027;utilisation d&#x0027;évaluation</h1>
+        <div>
+          <p>Les licences d'évaluation sont remplacées par des licences de droit d'utilisation d'évaluation (RTU) après 60 jours. Une licence d'évaluation est valable pendant 60 jours. Après 60 jours, la licence d'évaluation se transforme automatiquement en une licence de droit d'utilisation. Ces licences sont disponibles sur la base de la bonne foi et requièrent l'acceptation du contrat de licence utilisateur final (CLUF, ou EULA en anglais) par le client. Le CLUF s'applique automatiquement à toutes les licences du logiciel Cisco IOS. </p>
+          <p></p>
+          <p>La commande de mode de configuration globale<b> license accept end user agreement</b> permet d'accepter le CLUF en une seule fois, pour tous les packages et fonctionnalités du logiciel Cisco IOS. Une fois la commande exécutée et le CLUF accepté, le CLUF s'applique automatiquement à toutes les licences du logiciel Cisco IOS et l'utilisateur n'est pas invité à accepter le CLUF pendant l'installation de la licence.</p>
+          <p></p>
+          <p>La Figure 1 montre comment configurer l'acceptation du CLUF en une seule fois :</p>
+          <p></p>
+          <p>Router(config)# <b>license accept end user agreement</b></p>
+          <p></p>
+          <p>En outre, la Figure 1 présente la commande qui permet d'activer une licence de droit d'utilisation d'évaluation :</p>
+          <p></p>
+          <p>Router# <b>license boot module </b><i>module-name</i><b> technology-package </b><i>package-name</i></p>
+          <p></p>
+          <p>Utilisez <b>? </b>à la place des arguments pour déterminer les noms de modules et packages logiciels pris en charge disponibles sur le routeur. Les noms de packages technologiques pour les plates-formes Cisco ISR G2 sont :</p>
+          <p>
+            <ul>
+              <li>
+                <b>ipbasek9</b> : package technologique IP Base</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>securityk9</b> : package technologique Sécurité </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>datak9</b> : package technologique Données</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>uck9</b> : package technologique Communications unifiées (non disponible pour la gamme 1900)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : un redémarrage à l'aide de la commande <b>reload</b> est nécessaire pour activer le package logiciel.</p>
+          <p></p>
+          <p>Les licences d'évaluation sont temporaires et ne permettent pas d'évaluer un ensemble de fonctionnalités sur un nouveau matériel. Les licences temporaires sont limitées à une période d'utilisation spécifique (par exemple, 60 jours).</p>
+          <p></p>
+          <p>Redémarrez le routeur après l'installation d'une licence à l'aide de la commande<b> reload</b>. La commande<b> show license </b>à la Figure 2 vérifie l'installation de la licence.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour accepter le CLUF et activer une licence de droit d'utilisation d'évaluation pour le package Données sur le routeur 1900.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre la syntaxe pour l'acceptation d'un contrat d'utilisateur final et l'installation d'une licence d'évaluation. La Figure 2 affiche la sortie de la commande « show license » sur le routeur 1.  Le type de licence est Droit d'utilisation d'évaluation. La Figure 3 est une activité interactive qui permet aux étudiants de s’entraîner à installer une licence d'évaluation.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

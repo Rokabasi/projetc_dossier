@@ -1,0 +1,46 @@
+<textcomponents><!--Slide 1--><component id="ID_s1_title">
+<text><![CDATA[<b>Liens R1</b>]]></text>
+</component><!--Slide 2--><component id="ID_s2_title">
+<text><![CDATA[<b>État de liens de l&apos;interface Fa0/0</b>]]></text>
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[<b>Lien 1</b>]]></text>
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[<textformat blockindent="-14"><li>Réseau : <b>10.1.0.0/16</b></li><li>Adresse IP : <b>10.1.0.1</b></li><li>Type de réseau : <b>Ethernet</b></li><li>Coût du lien : <b>2</b></li><li>Voisins :<b> aucun</b></li></textformat>  ]]></text>
+</component><!--Slide 3--><component id="ID_s3_title">
+<text><![CDATA[<b>État de liens de l&apos;interface S0/0/0</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Lien 2</b>]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[<textformat blockindent="-14"><li>Réseau : <b>10.2.0.0/16</b></li><li>Adresse IP : <b>10.2.0.1</b></li><li>Type de réseau :<b> série</b></li><li>Coût du lien : <b>20</b></li><li>Voisins :<b> R2</b></li></textformat>  ]]></text>
+</component><!--Slide 4--><component id="ID_s4_title">
+<text><![CDATA[<b>État de liens de l&apos;interface S0/0/1</b>]]></text>
+</component>
+<component id="ID_s4_txt01">
+<text><![CDATA[<b>Lien 3</b>]]></text>
+</component>
+
+<component id="ID_s4_txt02">
+<text><![CDATA[<textformat blockindent="-14"><li>Réseau : <b>10.3.0.0/16</b></li><li>Adresse IP : <b>10.3.0.1</b></li><li>Type de réseau :<b> série</b></li><li>Coût du lien : <b>5</b></li><li>Voisins :<b> R3</b></li></textformat>  ]]></text>
+</component><!--Slide 5--><component id="ID_s5_title">
+<text><![CDATA[<b>État de liens de l&apos;interface S0/1/0</b>]]></text>
+</component>
+<component id="ID_s5_txt01">
+<text><![CDATA[<b>Lien 4</b>]]></text>
+</component>
+
+<component id="ID_s5_txt02">
+<text><![CDATA[<textformat blockindent="-14"><li>Réseau : <b>10.4.0.0/16</b></li><li>Adresse IP : <b>10.4.0.1</b></li><li>Type de réseau :<b> série</b></li><li>Coût du lien : <b>20</b></li><li>Voisins :<b> R4</b></li></textformat>  ]]></text>
+</component>
+
+
+
+
+
+</textcomponents>

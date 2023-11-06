@@ -1,0 +1,1 @@
+Les Figures 1 et 2 affichent une topologie OSPF à zones multiples avec des légendes mettant en avant ses avantages, notamment des tables de routage de taille réduite, des messages LSA organisés et une utilisation moins fréquente de l'algorithme SPF pour un routage plus efficace.

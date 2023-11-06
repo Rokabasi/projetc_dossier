@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.7 Propagation d&#x0027;une route par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propagation d&#x0027;une route par défaut</h1>
+        <div>
+          <p>Reportez-vous à la figure 1. Dans ce scénario, R1 est le routeur de périphérie et comporte une connexion unique à un fournisseur de services. Par conséquent, tout ce qu'il faut à R1 pour accéder à Internet, c'est une route statique par défaut sortant de l'interface Serial 0/0/1. </p>
+          <p></p>
+          <p>Des routes statiques par défaut similaires peuvent être configurées sur R2 et R3, mais il est beaucoup plus intéressant en matière d'évolutivité de l'entrer une fois sur le routeur de périphérie R1 et de demander ensuite à R1 de la propager à tous les autres routeurs au moyen du protocole RIP. Pour assurer la connectivité Internet de tous les autres réseaux dans le domaine de routage RIP, la route statique par défaut doit être annoncée à tous les autres routeurs qui utilisent le protocole de routage dynamique. </p>
+          <p></p>
+          <p>Pour propager une route par défaut dans RIP, le routeur de périphérie doit être configuré avec les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>Une route statique par défaut au moyen de la commande<b> ip route 0.0.0.0 0.0.0.0</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La commande de configuration de routeur <b>default-information originate</b>. Cette commande indique au routeur R1 de créer des informations par défaut en propageant la route par défaut statique dans les mises à jour RIP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L’exemple de la Figure 2 configure une route statique par défaut entièrement spécifiée vers le fournisseur de services et ensuite la route est diffusée par le protocole RIP. Remarquez que R1 dispose désormais d'une passerelle de dernier recours et que la route par défaut est installée dans sa table de routage.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 pour vérifier que la route par défaut a été propagée vers R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche trois routeurs connectés linéairement par des liens WAN.  Le R1 est connecté au R2 par le biais de liens WAN en série et dispose d’un LAN sur son interface Gigabit Ethernet.  R2 est connecté à la fois à R1 et à R3 par le biais de liaisons WAN de série et il possède un LAN sur son interface Gigabit Ethernet.  R3 est uniquement connecté à R2 par le biais de liaisons WAN et dispose d’un LAN sur son interface Gigabit Ethernet.  Le routeur R-1 dispose d’une liaison WAN vers le cloud Internet configuré.  La Figure 2 montre comment configurer une route statique sur un routeur avec la commande « ip route 0.0.0.0.0.0.0.0.serial0/1 209.165.200.226 ».  Le routeur est alors configuré pour utiliser RIP avec la commande « router ip »  Le routeur par défaut est configuré pour propager sa route par défaut avec la commande « default-information originate ».  Cela est vérifié avec la commande « show ip route pipe begin Gateway » et celle-ci permet d’afficher une passerelle de dernier recours répertoriée avec la route par défaut citée.  La route par défaut est étiquetée avec un S en majuscule accompagné d’un astérisque pour indiquer qu’il s’agit d’une route par défaut potentielle. La Figure 3 est un élément multimédia interactif qui permet à l’apprenant de vérifier que la route par défaut a été propagée aux routeurs R-2 et R-3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

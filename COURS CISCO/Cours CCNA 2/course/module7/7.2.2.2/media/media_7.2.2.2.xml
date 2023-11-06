@@ -1,0 +1,17 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Modification des listes de contrôle d&apos;accès numérotées à l&apos;aide des numéros d&apos;ordre</b>]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Configuration]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Étape 1]]></text> 
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Étape 2]]></text> 
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Étape 3]]></text> 
+	</component>
+</textcomponents>

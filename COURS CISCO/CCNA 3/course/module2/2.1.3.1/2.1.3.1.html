@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.3.1 Plages VLAN sur les commutateurs Catalyst</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Plages VLAN sur les commutateurs Catalyst</h1>
+        <div>
+          <p>Divers commutateurs Cisco Catalyst prennent en charge des nombres de VLAN différents. Le nombre de VLAN pris en charge est suffisamment élevé pour répondre aux besoins de la plupart des entreprises. Par exemple, les commutateurs de la gamme Catalyst 2960 et 3560 sont compatibles avec plus de 4 000 VLAN. Sur ces commutateurs, les VLAN à plage normale sont numérotés de 1 à 1 005 et les VLAN à plage étendue, de 1 006 à 4 094. La figure   présente les VLAN disponibles sur un commutateur Catalyst 2960 exécutant Cisco IOS version 15.x. La figure 2 présente les caractéristiques des VLAN à plage normale et étendue.</p>
+          <p></p>
+          <p>
+            <b>Réseaux locaux virtuels à plage normale</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Utilisés dans les réseaux de petites, moyennes et grandes entreprises.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Identifiés par un ID de VLAN compris entre 1 et 1005. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les ID de 1002 à 1005 sont réservés aux VLAN Token Ring et aux VLAN à interface de données distribuées sur fibre (FDDI).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les ID 1 et 1002 à 1005 sont automatiquement créés et ne peuvent pas être supprimés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les configurations sont stockées dans un fichier de base de données VLAN nommé vlan.dat. Le fichier vlan.dat se trouve dans la mémoire Flash du commutateur. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le protocole VTP (VLAN Trunking Protocol), qui permet de gérer les configurations VLAN entre les commutateurs, peut uniquement découvrir et stocker les VLAN à plage normale.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Réseaux locaux virtuels à plage étendue</b>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Permettent aux fournisseurs de services d’étendre leur infrastructure à un plus grand nombre de clients. Certaines multinationales peuvent être suffisamment grandes pour avoir besoin d’une plage étendue d’ID de VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sont identifiés par un ID de VLAN compris entre 1006 et 4094.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les configurations ne sont pas écrites dans le fichier vlan.dat.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Prennent en charge moins de fonctionnalités VLAN que les VLAN à plage normale.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Sont par défaut enregistrés dans le fichier de configuration en cours. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le protocole VTP ne prend pas en compte les VLAN à plage étendue.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: 4096 est le nombre maximum de VLAN disponibles sur les commutateurs Catalyst, car il y a 12 bits dans le champ d’ID de VLAN de l’en-tête IEEE 802.1Q.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente les VLAN disponibles sur un commutateur Catalyst 2960. La figure 2 présente les caractéristiques des VLAN à plage normale et étendue. .</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

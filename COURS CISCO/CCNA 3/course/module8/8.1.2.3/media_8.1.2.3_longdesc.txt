@@ -1,0 +1,1 @@
+La figure illustre le contenu du paquet Hello OSPF.  La figure met en évidence le type, l'ID de routeur, l'ID de zone, le masque de réseau, l'intervalle Hello, la priorité de routeur, l'ID du routeur désigné, l'ID de routeur désigné de secours et la liste des voisins.

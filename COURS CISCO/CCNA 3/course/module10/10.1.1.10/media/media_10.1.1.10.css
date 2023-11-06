@@ -1,0 +1,28 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+#txt_q1,#txt_q2,#txt_q3,#txt_q4,#txt_q5,#txt_q6{
+	margin-top: 9.5px !important;
+	line-height: 12px !important;
+	margin-left:5px !important;
+}
+.textLeft{
+	margin-left: 11px;
+}
+@media only screen and (device-width: 768px) {
+#txt_q1,#txt_q2,#txt_q3,#txt_q4,#txt_q5,#txt_q6{
+	margin-top: 9px !important;
+	line-height: 12px !important;
+	margin-left:5px !important;
+}
+}

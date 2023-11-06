@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.1 Configuration du routage inter-VLAN existant : préparation</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration du routage inter-VLAN existant : préparation</h1>
+        <div>
+          <p>Avec le routage inter-VLAN existant, les routeurs doivent posséder plusieurs interfaces physiques. Le routeur effectue le routage en ayant chacune de ses interfaces physiques connectées à un VLAN unique. Chaque interface est également configurée avec une adresse IPv4 pour le sous-réseau associé au VLAN particulier auquel elle est connectée. En configurant les adresses IPv4 sur les interfaces physiques, les périphériques réseau connectés à chacun des VLAN peuvent communiquer avec le routeur en utilisant l’interface physique connectée au même VLAN. Dans cette configuration, les périphériques réseau peuvent utiliser le routeur comme passerelle pour accéder aux périphériques connectés aux autres VLAN.</p>
+          <p></p>
+          <p>Le processus de routage a besoin du périphérique source pour déterminer si le périphérique de destination est local ou distant par rapport au sous-réseau local. Le périphérique source accomplit ceci en comparant les adresses IPv4 source et de destination par rapport au masque de sous-réseau. Quand on a déterminé que l’adresse IPv4 de destination se trouve sur un réseau distant, le périphérique source doit identifier où il doit transférer le paquet pour atteindre le périphérique de destination. Le périphérique source examine la table de routage locale pour déterminer où il doit envoyer les données. Les périphériques utilisent leur passerelle par défaut comme destination de couche 2 pour tout le trafic devant quitter le sous-réseau local. La passerelle par défaut est la route utilisée par le périphérique quand il ne dispose d’aucune autre route définie de manière explicite vers le réseau de destination. L’adresse IPv4 de l’interface de routeur sur le sous-réseau local agit comme passerelle par défaut pour le périphérique émetteur.</p>
+          <p></p>
+          <p>Une fois que le périphérique source a déterminé que le paquet doit passer par l’interface de routeur locale sur le VLAN connecté, il envoie une requête ARP pour déterminer l’adresse MAC de cette interface. Lorsque le routeur renvoie sa réponse ARP au périphérique source, ce dernier peut utiliser l’adresse MAC pour finir le tramage du paquet avant son envoi sur le réseau comme trafic de monodiffusion.</p>
+          <p></p>
+          <p>Comme la trame Ethernet comporte l’adresse MAC de destination de l’interface de routeur, le commutateur sait exactement par quel port de commutateur transférer le trafic de monodiffusion pour atteindre l’interface de routeur sur ce VLAN. Quand la trame arrive sur le routeur, ce dernier retire les informations d’adresse MAC source et de destination pour examiner l’adresse IPv4 de destination du paquet. Il compare l’adresse de destination aux entrées de sa table de routage pour déterminer où il doit transférer les données pour atteindre sa destination finale. Si le routeur détermine que le réseau de destination est un réseau connecté localement, comme c’est le cas dans le routage inter-VLAN, il envoie une requête ARP de l’interface qui est physiquement connectée au VLAN de destination. Le périphérique de destination répond au routeur avec son adresse MAC, que le routeur utilise alors pour tramer le paquet. Le routeur envoie ensuite le trafic de monodiffusion au commutateur, qui le transmet par le port sur lequel est connecté le périphérique de destination.</p>
+          <p></p>
+          <p>Cliquez sur Lecture dans la figure pour visualiser le routage inter-VLAN existant.</p>
+          <p></p>
+          <p>Bien que le processus de routage inter-VLAN dans lequel deux périphériques de VLAN différents communiquent via un routeur comporte de nombreuses étapes, il se produit intégralement en une fraction de seconde.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est une animation présentant les différentes étapes impliquées dans un routage inter-VLAN existant. Le processus inclut la découverte ARP pour découvrir les périphériques connectés, la livraison de paquet monodiffusion et l’étiquetage des trames sur les liaisons. La remarque fournie indique que les paquets destinés au routeur sont sans étiquette, car il ne s’agit pas d’une liaison.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

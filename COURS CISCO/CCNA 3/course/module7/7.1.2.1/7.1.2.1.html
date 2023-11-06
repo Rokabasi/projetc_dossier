@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.1 Propager une route statique par défaut </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Propager une route statique par défaut </h1>
+        <div>
+          <p>L'utilisation d'une route statique vers 0.0.0.0/0 comme route par défaut ne dépend pas du protocole de routage. La route statique par défaut « à quatre zéros » peut être utilisée avec n'importe quel protocole de routage actuellement pris en charge. La route statique par défaut est généralement configurée sur le routeur qui est connecté à un réseau situé en dehors du domaine de routage EIGRP, par exemple un fournisseur d'accès à Internet.</p>
+          <p></p>
+          <p>Dans la Figure 1, R2 est le routeur de passerelle qui connecte le domaine de routage EIGRP à Internet. Une fois que la route statique par défaut est configurée, vous devez la propager dans l'ensemble du domaine EIGRP, comme indiqué dans la Figure 2.</p>
+          <p></p>
+          <p>Une méthode de propagation d'une route statique par défaut dans le domaine de routage EIGRP consiste à utiliser la commande<b> redistribute static</b>. La commande<b> redistribute static </b>demande au protocole EIGRP d'inclure les routes statiques dans ses mises à jour EIGRP envoyées aux autres routeurs. La Figure 3 illustre la configuration de la route statique par défaut et la commande<b> redistribute static </b>sur le routeur R2. </p>
+          <p></p>
+          <p>La Figure 4 vérifie que la route par défaut a été reçue par le routeur R2 et installée dans sa table de routage IPv4.</p>
+          <p></p>
+          <p>À la Figure 5, la commande<b> show ip protocols </b>vérifie que R2 redistribue des routes statiques dans le domaine de routage EIGRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès Internet.  La Figure 2 représente le routeur R2 dont la route statique par défaut pointe vers le fournisseur d'accès à Internet et est propagée aux routeurs R1 et R3. La Figure 3 affiche la syntaxe requise pour configurer une route statique par défaut sur le routeur R2 et la propager via le processus de routage EIGRP. La Figure 4 présente le résultat de la commande « show ip route » sur le routeur R2 qui révèle la présence de la route statique par défaut. La Figure 5 présente le résultat de la commande « show ip protocols » sur le routeur R2 qui révèle que le protocole EIGRP redistribue des routes statiques.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

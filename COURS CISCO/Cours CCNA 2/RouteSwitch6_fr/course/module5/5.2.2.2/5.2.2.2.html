@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.2 Sécurité des ports : fonctionnement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sécurité des ports : fonctionnement</h1>
+        <div>
+          <p>
+            <b>Sécurité des ports</b>
+          </p>
+          <p></p>
+          <p>Tous les ports (interfaces) de commutateur doivent être sécurisés avant le déploiement du commutateur en production. L'une des méthodes de sécurisation des ports consiste à implémenter une fonctionnalité appelée sécurité des ports. La sécurité des ports restreint le nombre d’adresses MAC autorisées sur un port. Les adresses MAC des périphériques légitimes sont ainsi autorisées. Toutes les autres adresses MAC sont refusées.</p>
+          <p></p>
+          <p>La sécurité des ports peut être configurée pour autoriser une ou plusieurs adresses MAC. Si le nombre d'adresses MAC autorisées sur un port est limité à un, seul le périphérique disposant de cette adresse MAC spécifique peut se connecter au port.</p>
+          <p></p>
+          <p>Si un port est sécurisé et si le nombre maximum d'adresses MAC est atteint pour ce port, toute tentative de connexion supplémentaire réalisée depuis une adresse MAC inconnue générera une violation de sécurité. La Figure 1 résume ces points.</p>
+          <p></p>
+          <p>
+            <b>Types d’adresses MAC sécurisées</b>
+          </p>
+          <p></p>
+          <p>Il existe plusieurs façons de configurer la sécurité des ports. Le type d'adresse sécurisée est basé sur la configuration et peut être l'un des types suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresses MAC sécurisées statiques </b>: adresses MAC configurées manuellement sur un port à l’aide de la commande<b> switchport port-security mac-address </b><i>mac-address </i>en mode de configuration d'interface. Les adresses MAC configurées de cette manière sont stockées dans la table d’adresses et sont ajoutées à la configuration en cours sur le commutateur. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresses MAC sécurisées dynamiques</b> : adresses MAC apprises de manière dynamique et stockées uniquement dans la table d'adresses. Les adresses MAC configurées ainsi sont supprimées au redémarrage du commutateur. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresses MAC sécurisées rémanentes</b> : adresses MAC pouvant être apprises de manière dynamique ou configurées manuellement, puis stockées dans la table d'adresses et ajoutées à la configuration en cours.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Adresses MAC sécurisées rémanentes </b>
+          </p>
+          <p>Pour configurer une interface dans le but de convertir des adresses MAC apprises de manière dynamiques en adresses MAC sécurisées rémanentes et les ajouter à la configuration en cours, vous devez activer l'apprentissage rémanent. Pour activer l'apprentissage rémanent sur une interface, exécutez la commande de mode de configuration d'interface<b> switchport port-security mac-address sticky</b>. </p>
+          <p></p>
+          <p>Lorsque cette commande est exécutée, le commutateur convertit toutes les adresses MAC apprises de manière dynamique, y compris les adresses apprises avant l’activation de l’apprentissage rémanent, en adresses MAC sécurisées rémanentes. Toutes les adresses MAC sécurisées rémanentes sont ajoutées à la table d'adresses et à la configuration en cours. </p>
+          <p></p>
+          <p>Les adresses MAC sécurisées rémanentes peuvent également être définies manuellement. Lorsque les adresses MAC sécurisées rémanentes sont configurées à l’aide de la commande<b> switchport port-security mac-address sticky </b><i>mac-address </i>en mode de configuration d’interface, toutes les adresses spécifiées sont ajoutées à la table d’adresses et à la configuration en cours. </p>
+          <p></p>
+          <p>Si les adresses MAC sécurisées rémanentes sont enregistrées dans le fichier de configuration initiale, alors, lorsque le commutateur est redémarré ou lorsque l'interface est désactivée, l'interface n'a pas à réapprendre les adresses. Si les adresses MAC sécurisées rémanentes ne sont pas enregistrées, elles seront perdues. </p>
+          <p></p>
+          <p>Si l'apprentissage rémanent est désactivé à l'aide de la commande de configuration d'interface <b>no switchport port-security mac-address sticky</b>, les adresses MAC sécurisées rémanentes restent intégrées à la table d'adresses mais sont supprimées de la configuration en cours. </p>
+          <p></p>
+          <p>La Figure 2 présente les caractéristiques des adresses MAC sécurisées rémanentes.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: la fonction de sécurité des ports ne fonctionnera pas si la sécurité des ports n’est pas activée sur l’interface avec la commande<b> switchport port-security</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un port Ethernet avec un bouclier de sécurité à côté.  Cela représente le concept de sécurisation des ports de commutateur.  La figure répertorie deux points concernant la sécurité sur les ports du commutateur.  La première étape consiste à spécifier une ou plusieurs adresses MAC autorisées sur un port.  La seconde étape consiste à spécifier qu’un port doit automatiquement être désactivé en cas de détection d’adresses MAC non autorisées. La Figure 2 répertorie les caractéristiques des ports de commutateur sécurisés rémanents.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

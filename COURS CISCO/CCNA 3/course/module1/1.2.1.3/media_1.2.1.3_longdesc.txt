@@ -1,0 +1,1 @@
+La figure présente un commutateur à vingt-quatre ports et indique que le taux de réacheminement du trafic est de vingt-quatre gigabits. La figure montre également un commutateur à quarante-huit ports et et indique que le taux de réacheminement du trafic est de quarante-huit gigabits.

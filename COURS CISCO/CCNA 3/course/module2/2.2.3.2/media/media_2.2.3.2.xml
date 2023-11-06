@@ -1,0 +1,40 @@
+﻿<textcomponents>
+
+    <component id="ID_title">
+        <text>
+            <![CDATA[<b>Problèmes courants avec les agrégations</b>]]></text>
+    </component>
+
+    <component id="ID_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+<tr >
+<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+</tr>
+
+<tr>
+<td width="85px" bgcolor='#077A77'><font color='#ffffff'><b>Composants VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>Définition</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Non-concordance du mode trunk</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-13"><ul><li>Par exemple, un port trunk est configuré en mode trunk et l&apos;autre extrémité est configurée en tant que port d&apos;accès. Autre exemple : les deux extrémités sont configurées en mode DTP automatique. D&apos;autres non-concordances sont également possibles.</li><li>En présence de cette erreur de configuration, la liaison agrégée cesse de fonctionner.</li><li>Pour résoudre le problème, arrêtez l&apos;interface, corrigez les paramètres du mode DTP et réactivez l&apos;interface.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>VLAN autorisés sur les trunks</td>
+<td bgcolor='#ffffff'><textformat blockindent="-13"><ul><li>La liste des VLAN autorisés sur un trunk n&apos;a pas été mise à jour pour prendre en compte les critères d&apos;agrégation de VLAN actuels.</li><li>Dans ce cas, un trafic imprévu, voire aucun trafic n&apos;est transmis sur le trunk.</li><li>Configurez correctement les VLAN autorisés sur le trunk.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Non-concordance du VLAN natif</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-13"><ul><li>Lorsque les VLAN natifs ne concordent pas, les commutateurs généreront des messages d&apos;information signalant le problème.</li><li>Assurez-vous que les deux extrémités de la liaison agrégée utilisent le même VLAN natif.</li></ul></textformat></td>
+</tr>
+
+
+</table>]]>
+        </text>
+    </component>
+   
+</textcomponents>

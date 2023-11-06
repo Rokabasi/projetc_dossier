@@ -1,0 +1,1 @@
+La figure montre un commutateur avec un câble Ethernet sur un port Ethernet connecté à un port LAN sur un routeur.  Il existe un ordinateur connecté au port de console à l'aide d'un câble de console.  Afin de pouvoir gérer un commutateur à distance, le commutateur doit d'abord être configuré par le biais d’un port de console.

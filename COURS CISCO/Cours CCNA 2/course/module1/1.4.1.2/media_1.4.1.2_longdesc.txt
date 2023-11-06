@@ -1,0 +1,1 @@
+La figure liste les structures clés suivantes et les caractéristiques liées aux performances des réseaux : topologie, vitesse, coût, sécurité, disponibilité, évolutivité et fiabilité.

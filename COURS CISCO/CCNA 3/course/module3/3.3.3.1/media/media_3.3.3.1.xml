@@ -1,0 +1,43 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Analyse de la topologie STP</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[<font face = "_typewriter"><b>show cdp <br/>neighbors</b></font>]]></text>
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Utilisez les connaissances <br/>STP.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[<font face = "_typewriter"><b>show spanning-tree <br/>vlan</b></font>]]></text> 
+</component>
+
+<component id="ID_txt04">
+<text><![CDATA[<font face = "_typewriter"><b>show spanning-tree <br/>vlan</b></font>]]></text> 
+</component>
+
+<component id="ID_txt05">
+<text><![CDATA[Analyse STP]]></text> 
+</component>
+
+<component id="ID_txt06">
+<text><![CDATA[Affichez la topologie de couche 2.]]></text> 
+</component>
+
+<component id="ID_txt07">
+<text><![CDATA[Préparez le chemin prévu de couche 2. ]]></text> 
+</component>
+
+<component id="ID_txt08">
+<text><![CDATA[Vérifiez le pont racine.]]></text> 
+</component>
+
+<component id="ID_txt09">
+<text><![CDATA[Confirmez le chemin de couche 2.]]></text> 
+</component>
+
+</textcomponents>

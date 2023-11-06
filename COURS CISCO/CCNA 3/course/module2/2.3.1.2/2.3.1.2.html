@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.2 Routage inter-VLAN au moyen d&#x0027;interfaces virtuelles de commutateurs</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routage inter-VLAN au moyen d&#x0027;interfaces virtuelles de commutateurs</h1>
+        <div>
+          <p>Au tout début des réseaux commutés, la commutation était rapide (souvent à la vitesse du matériel, ce qui signifie que la vitesse était équivalente au temps qu'il fallait physiquement pour recevoir et transmettre des trames vers d'autres ports) et le routage était lent (il devait être traité par un logiciel). Les concepteurs ont donc dû prolonger la partie commutée du réseau autant que possible. La couche d'accès, la couche de distribution et la couche cœur de réseau étaient souvent configurées pour communiquer au niveau de la couche 2. Cette topologie créait des problèmes de boucle. Pour résoudre ces problèmes, les technologies Spanning Tree étaient utilisées pour empêcher les boucles sans entraver la flexibilité et la redondance des connexions entre commutateurs.</p>
+          <p></p>
+          <p>Toutefois, à mesure que les technologies réseau ont évolué, le routage est devenu plus rapide et plus économique. De nos jours, le routage peut être effectué à la vitesse du câble. Cette évolution a pour conséquence que le routage peut être transféré aux couches de cœur et de distribution (et parfois même à la couche d'accès) sans que cela n'ait d'impact sur les performances du réseau. </p>
+          <p></p>
+          <p>De nombreux utilisateurs se trouvent sur des VLAN séparés, dont chacun constitue généralement un sous-réseau distinct. Par conséquent, il est logique de configurer les commutateurs de distribution en tant que passerelles de couche 3 pour les utilisateurs de chaque VLAN de commutateur d'accès. Cela implique que chaque commutateur de distribution doit avoir des adresses IP qui correspondent à chaque VLAN de commutateur d'accès. Cela peut être réalisé en utilisant des interfaces virtuelles de commutateur (SVI) et les ports routés.</p>
+          <p></p>
+          <p>Les ports de couche 3 (routés) sont généralement implémentés entre la couche de distribution et la couche principale. </p>
+          <p></p>
+          <p>L'architecture réseau représentée ne dépend pas de Spanning Tree, car il n'existe pas de boucles physiques dans la portion de couche 2 de la topologie. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une topologie de réseau organisée selon une structure hiérarchique avec des commutateurs de couche 2 présents dans la couche d'accès et des commutateurs de couche 3 dans les couches de distribution et de cœur. Tous les appareils connectés sont redondants.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

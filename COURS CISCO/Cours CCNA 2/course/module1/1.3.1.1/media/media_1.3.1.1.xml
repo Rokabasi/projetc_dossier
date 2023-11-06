@@ -1,0 +1,24 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Routes de réseaux connectés directement et distants</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+		<text><![CDATA[<b>Réseau connecté directement</b>]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Réseau connecté directement</b>]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Réseau connecté directement</b>]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Réseaux distants</b/&gt;]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[<b>Réseaux distants</b/&gt;]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[R1 a trois réseaux connectés directement : 192.168.10.0/24, 192.168.11.0/24 et 209.165.200.224/30. R1 a également deux réseaux distants dont il peut être informé par R2 : 10.1.1.0/24 et 10.1.2.0/24.]]></text>
+	</component>
+</textcomponents>

@@ -1,0 +1,1 @@
+La figure présente trois commutateurs, tous interconnectés avec un trunk « dot one q. ».  Cela prouve que différents commutateurs peuvent être pont racine pour différents VLAN et que les ports peuvent être en réacheminement pour un VLAN tout en étant bloquants pour un autre.

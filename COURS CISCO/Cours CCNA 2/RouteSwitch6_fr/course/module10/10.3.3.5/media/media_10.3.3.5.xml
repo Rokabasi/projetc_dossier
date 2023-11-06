@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Utilisation d&apos;un serveur TFTP pour la mise à niveau d&apos;une image Cisco IOS]]></text>
+	</component>
+	
+</textcomponents>

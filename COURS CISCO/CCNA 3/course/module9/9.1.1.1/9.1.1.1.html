@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.1 Protocole OSPF à zone unique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole OSPF à zone unique</h1>
+        <div>
+          <p>Le protocole OSPF à zone unique est utile sur les réseaux de petite taille où la structure des liaisons du routeur n'est pas complexe et où les chemins d'accès aux différentes destinations peuvent être déterminés facilement.</p>
+          <p></p>
+          <p>Toutefois, lorsqu'une zone devient trop grande, les problèmes suivants peuvent surgir (cf. figure pour l'illustration) :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Taille excessive de la table de routage de grande taille</b> : le protocole OSPF n'effectue pas une récapitulation de route par défaut. Si les routes ne sont pas récapitulées, la table de routage peut devenir très importante, selon la taille du réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de données d'états de liens (LSDB)</b> : dans un réseau OSPF à zone unique, la LSDB couvre la topologie de l'ensemble du domaine de routage. Chaque routeur doit tenir à jour des informations détaillées sur tous les réseaux du domaine de routage. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Fréquence élevée des calculs de l'algorithme SPF</b> : dans un réseau de grande taille, les changements sont inévitables ; les routeurs passent donc de nombreux cycles de processeur à recalculer l'algorithme SPF et à mettre à jour la table de routage.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour une efficacité et une évolutivité supérieures, le protocole OSPF prend en charge le routage hiérarchique à l'aide de zones. Une zone (ou area) OSPF correspond à un groupe de routeurs qui partagent les mêmes informations dans leur base de données d’états de liens. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la récapitulation des routes OSPF n'est pas abordée dans ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre dix routeurs qui sont tous connectés dans une seule zone. Ces routeurs ne disposent pas de suffisamment de mémoire, reçoivent trop de LSA et indiquent que l'algorithme SPF est exécuté trop souvent. Cette situation réduit l'efficacité du routage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

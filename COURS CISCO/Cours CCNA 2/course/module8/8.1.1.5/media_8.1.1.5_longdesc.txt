@@ -1,0 +1,1 @@
+La figure est une activité interactive qui permet à l'apprenant d'identifier les étapes du fonctionnement de DHCPv4.

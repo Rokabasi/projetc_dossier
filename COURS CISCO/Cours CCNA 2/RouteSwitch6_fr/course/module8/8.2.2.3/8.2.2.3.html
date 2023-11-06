@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.3 Vérification de DHCPv6 sans état </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de DHCPv6 sans état </h1>
+        <div>
+          <p>
+            <b>Vérification du serveur DHCPv6 sans état</b>
+          </p>
+          <p></p>
+          <p>Dans la Figure 1, la commande <b>show ipv6 dhcp pool</b> vérifie le nom du pool DHCP v6 et ses paramètres. Le nombre de clients actifs est 0, car le serveur ne conserve aucune information sur les états.</p>
+          <p></p>
+          <p>La commande <b>show running-config</b> permet également de vérifier toutes les commandes qui ont été configurées précédemment.</p>
+          <p></p>
+          <p>
+            <b>Vérification du client DHCPv6 sans état</b>
+          </p>
+          <p></p>
+          <p>Dans cet exemple, un routeur est utilisé en tant que client DHCPv6 sans état. Sur la Figure 2, le résultat de la commande <b>show ipv6 interface </b>indique « Stateless address autoconfig enabled », ce qui signifie que la configuration automatique des adresses sans état est activée sur le routeur et qu'il dispose d'une adresse de monodiffusion globale IPv6. L'adresse de monodiffusion globale IPv6 a été créée via SLAAC, qui inclut le préfixe contenu dans le message RA. L'IID a été généré à l'aide du processus EUI-64. DHCPv6 n'a pas été utilisé pour attribuer l'adresse IPv6.</p>
+          <p></p>
+          <p>Les informations concernant le routeur par défaut proviennent également du message RA. Il s'agissait de l'adresse IPv6 source du paquet contenant le message RA et de l'adresse link-local du routeur.</p>
+          <p></p>
+          <p>Le résultat de la commande <b>debug ipv6 dhcp detail</b> présenté à la Figure 3 montre les messages DHCPv6 échangés entre le client et le serveur. Dans cet exemple, la commande a été saisie sur le client. Le message DEMANDE D'INFORMATIONS s'affiche, car il est envoyé par un client DHCPv6 sans état. Notez que le client, le routeur R3, envoie les messages DHCPv6 de son adresse link-local à l'adresse All_DHCPv6_Relay_Agents_and_Servers FF02::1:2.</p>
+          <p></p>
+          <p>Le résultat du débogage affiche tous les messages DHCPv6 envoyés entre le client et le serveur, y compris les options de serveur DNS et de nom de domaine qui ont été configurées sur le serveur.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer et vérifier DHCPv6 sans état sur le routeur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show ipv6 dhcp pool ».  Elle présente la configuration DHCPv6 sur le routeur. La Figure 2 montre la sortie de la commande « show ipv6 interface g 0/1 ».  Les lignes qui stipulent que le routeur a l'autoconfiguration des adresses sans état activée, l'adresse i.p.v.6 et la configuration d'adresse de routeur par défaut sont mises en surbrillance dans la figure. La Figure 3 affiche la sortie de la commande « debug ipv6 dhcp detail ».  Tous les messages DHCPv6 envoyés entre le client et le serveur, y compris les options de serveur DNS et de nom de domaine qui ont été configurées sur le serveur sont mis en surbrillance dans la figure. La Figure 4 est une activité interactive qui permet à l’étudiant de configurer et de vérifier un DHCPv6 sans état sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

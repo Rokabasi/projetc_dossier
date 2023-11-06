@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.3 Vérification de la configuration du trunk</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la configuration du trunk</h1>
+        <div>
+          <p>La Figure 1 présente la configuration du port F0/1 du commutateur S1. La configuration est vérifiée à l’aide de la commande <b>show interfaces </b><i>interface-ID </i><b>switchport</b>. </p>
+          <p></p>
+          <p>La première zone en surbrillance indique que le mode administratif du port F0/1 est défini sur<b> trunk</b>. Le port est en mode trunking. La deuxième zone en surbrillance vérifie que le VLAN natif est le VLAN 99. Plus bas dans les résultats, la dernière zone en surbrillance indique que tous les VLAN sont activés sur le trunk.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer un trunk prenant en charge tous les VLAN sur l’interface F0/1, avec le VLAN 99 comme VLAN natif. Vérifiez la configuration du trunk à l’aide de la commande <b>show interfaces f0/1 switchport</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre la syntaxe pour configurer le port F0/1 pour être un port de trunk et pour définir le VLAN natif à 99.  La figure montre également la sortie de la commande « show interfaces F0/1 switchport » utilisée pour vérifier si les modifications ont été correctement appliquées. La Figure 2 est une activité interactive qui permet à l’apprenant de s’entraîner à la configuration d’un port pour le transformer en port de liaison et à la définition du VLAN natif.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

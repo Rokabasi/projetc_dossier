@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.2 Vérification de la configuration de DHCPv6 du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la configuration de DHCPv6 du routeur</h1>
+        <div>
+          <p>Les configurations des routeurs pour les services DHCPv6 avec et sans état présentent de nombreux points communs, mais également des différences importantes. La Figure 1 présente les commandes de configuration pour les deux types de services DHCPv6.</p>
+          <p></p>
+          <p>
+            <b>DHCPv6 avec état </b>
+          </p>
+          <p></p>
+          <p>Un routeur configuré pour les services DHCPv6 avec état dispose de la commande <b>address prefix</b> qui fournit les informations d'adressage.</p>
+          <p>Pour les services DHCPv6 avec état, la commande du mode de configuration d'interface <b>ipv6 nd managed-config-flag</b> est utilisée. Dans ce cas, le client ignore les informations d'adressage du message RA et communique avec un serveur DHCPv6 à la fois pour l'adressage et les autres informations.</p>
+          <p></p>
+          <p>
+            <b>DHCPv6 sans état</b>
+          </p>
+          <p></p>
+          <p>Pour les services DHCPv6 sans état, la commande du mode de configuration d'interface <b>ipv6 nd other-config-flag</b> est utilisée. Elle indique au périphérique d'utiliser SLAAC pour les informations d'adressage et un serveur DHCPv6 sans état pour les autres paramètres de configuration.</p>
+          <p></p>
+          <p>La commande <b>show ipv6 interface</b> peut être utilisée pour afficher la configuration actuelle pour déterminer la méthode d'attribution des adresses. Comme le montre la Figure 2, la dernière ligne du résultat indique comment les clients obtiennent les adresses et les autres paramètres.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les commandes utilisées pour configurer les services DHCPv6 avec état sur un routeur.  L’exemple commence en mode de configuration globale et les commandes sont comme suit.  La première commande est : i.p.v.6. unicast-routing.  La commande suivante est : d.h.c.p. pool i.p.v.6.  -stateful.  La commande suivante est : address prefix 2001:db8:cafe:1::/64 lifetime infinite.  La commande suivante est : d.n.s.-server 2001:db8:cafe:aaaa::5.  La commande suivante est : domain-name example.com.  Le pool DHCPv6 a été configuré et le jeu suivant de commandes associe le pool à l’interface.  La CLI dans l’exemple passe d’abord à l’interface locale à l’aide de la commande : exit. La commande exit est suivie par la commande : interface g 0/1.  La commande suivante est : i.p.v.6. address 2001:db8:cafe:1::1/64.  La commande suivante est : d.h.c.p. pool i.p.v.6.  -stateful.  La dernière commande est : i.p.v.6. n.d. managed-config-flag.  La commande « address prefix » et la commande « ipv6 nd managed » sont mises en surbrillance pour indiquer que ces commandes sont spécifiques à la configuration avec état.  La figure répertorie également les commandes pour configurer les services DHCPv6 sans état.  L’exemple commence en mode de configuration globale et les commandes sont comme suit.  La première commande est : i.p.v.6. unicast-routing.  La commande suivante est : d.h.c.p. pool i.p.v.6.-stateless.  La commande suivante est : d.n.s.-server 2001:db8:cafe:aaaa::5.  La commande suivante est : domain-name example.com.  Le pool DHCPv6 a été configuré et le jeu suivant de commandes associe le pool à l’interface.  La CLI dans l’exemple passe d’abord à l’interface locale à l’aide de la commande : exit. La commande exit est suivie par la commande : interface g 0/1.  La commande suivante est : i.p.v.6. address 2001:db8:cafe:1::1/64.  La commande suivante est : d.h.c.p. pool i.p.v.6.-stateless.  La dernière commande est : i.p.v.6. n.d. other-config-flag.  La commande « ipv6 nd other-config-flag » est mise en surbrillance dans la figure pour la désigner comme étant spécifique à la configuration DHCPv6 sans état. La Figure 2 montre le résultat pour trois configurations différentes en exécutant la commande « show ipv6 interface » sur une interface de routeur spécifique.  La première sortie est pour SLAAC et la figure met en surbrillance la ligne qui déclare « hosts use stateless autoconfig for address » (les hôtes utilisent l'autoconfiguration sans état pour l'adresse).  La sortie suivante concerne DHCPv6 sans état et la figure met en surbrillance la ligne qui déclare « hosts use d.h.c.p. to obtain other configuration » (les hôtes utilisent DHCP pour obtenir une autre configuration).  La troisième sortie concerne DHCPv6 avec état et la figure met en surbrillance la ligne qui déclare « hosts use d.h.c.p. to obtain routable addresses » (les hôtes utilisent DHCP pour obtenir des adresses routables).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

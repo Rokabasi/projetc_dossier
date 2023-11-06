@@ -1,0 +1,84 @@
+<textcomponents>
+
+
+<component id="ID_inst">
+	<text><![CDATA[<b>Exercice : identification des types de paquets EIGRP</b><br/>Faites glisser le type de paquet EIGRP vers la définition appropriée.]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Définition du paquet EIGRP</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+	<text><![CDATA[<b>Type de paquet</b>]]></text>
+</component>
+
+<component id="ID_txt03">
+	<text><![CDATA[Utilisé pour former des contiguïtés de voisinage.]]></text>
+</component>
+
+<component id="ID_txt04">
+	<text><![CDATA[Confirme la réception d&apos;un paquet EIGRP.]]></text>
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[Envoyé aux voisins lorsqu&apos;une route alternative à un réseau est requise.]]></text>
+</component>
+
+<component id="ID_txt06">
+	<text><![CDATA[Fournit à l&apos;algorithme DUAL les informations réseau requises.]]></text>
+</component>
+
+<component id="ID_txt07">
+	<text><![CDATA[Transmet les informations relatives à un réseau à un nouveau voisin par monodiffusion.]]></text>
+</component>
+
+
+
+<component id='ID_drag01'>
+	<text><![CDATA[Paquet<br>de reçu]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[Paquet Hello]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[Paquet de mise à jour]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[Paquet de réponse]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[Paquet de requête]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque type de paquet EIGRP à sa définition.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque type de paquet EIGRP à sa définition. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+</textcomponents>

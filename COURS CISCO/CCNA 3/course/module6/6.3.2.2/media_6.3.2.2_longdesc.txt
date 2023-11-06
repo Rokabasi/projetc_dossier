@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande « show ip interface » sur le routeur 1.  Les valeurs de bande passante et de délai, ainsi que la fiabilité et la charge sont mises en surbrillance en orange sur toutes les interfaces.

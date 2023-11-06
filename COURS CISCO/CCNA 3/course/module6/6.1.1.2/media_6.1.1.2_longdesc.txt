@@ -1,0 +1,1 @@
+La figure montre que EIGRP conserve trois tables distinctes pour IPv4 et IPv6.  Il s'agit de la table de voisinage, de la table topologique et de la table de routage.  Il existe six tables au total.

@@ -1,0 +1,1 @@
+La figure affiche une trame complète incluant l’en-tête et le pied. La commutation cut-through commence à transmettre la trame dès que l’adresse MAC de destination est reçue (elle est de 14 octets seulement dans l’en-tête).

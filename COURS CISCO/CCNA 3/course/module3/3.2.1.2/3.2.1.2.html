@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.2 Les caractéristiques des protocoles STP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les caractéristiques des protocoles STP</h1>
+        <div>
+          <p>Ci-dessous sont répertoriées les caractéristiques des différents protocoles STP. Les termes en italique indiquent si un protocole STP donné est propriétaire de Cisco ou s'il s'agit d'une implémentation IEEE standard :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>STP</b> - Présuppose une seule instance Spanning Tree IEEE 802.1D pour l'ensemble du réseau ponté, quel que soit le nombre de réseaux VLAN. Étant donné qu'il n'existe qu'une seule instance, les besoins en processeur et en mémoire pour cette version sont plus faibles que pour les autres protocoles. Cependant, puisqu'il n'existe qu'une seule instance, il n'existe qu'un pont racine et une arborescence. Le trafic pour l'ensemble des VLAN passe par le même chemin, ce qui peut entraîner des problèmes des flux de trafic peu performants. En raison des limitations du protocole 802.1D, cette version offre une convergence peu rapide.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>PVST+</b> - Version améliorée du protocole STP, proposée par Cisco, qui offre une instance de l'implémentation Cisco de 802.1D séparée pour chaque VLAN configuré dans le réseau. La vitesse de convergence est similaire à celle du protocole STP d'origine. L'instance séparée prend en charge PortFast, UplinkFast, BackboneFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle. Les rôles de port sont définis de la même façon qu'avec RSTP. Créer une instance pour chaque VLAN augmente les besoins en processeur et en mémoire, mais permet d'utiliser plusieurs ponts racine par VLAN. Cette conception optimise l'arborescence Spanning Tree pour le trafic de chaque VLAN. La convergence de cette version est similaire à celle du protocole 802.1D. Toutefois, elle s'effectue individuellement pour chaque VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RSTP (ou IEEE 802.1w)</b> - Évolution de Spanning Tree qui offre une convergence plus rapide que celle de l'implémentation 802.1D d'origine. Cette version résout de nombreux problèmes de convergence, mais, puisqu'elle offre encore une instance Spanning Tree unique, elle ne règle pas les problèmes de performances du flux de trafic. Pour prendre en charge cette convergence plus rapide, les exigences en matière d'utilisation du processeur et de la mémoire de cette version sont supérieures à celles de CST, mais inférieures à celles de Rapid PVST+.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Rapid PVST+</b> - Version améliorée du protocole RSTP proposée par Cisco et utilisant PVST+. Elle offre une instance 802.1w séparée pour chaque VLAN. L'instance séparée prend en charge PortFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle. Cette version traite les problèmes de convergence et de performances du flux de trafic. Toutefois, cette version présente les exigences les plus élevées en matière de processeur et de mémoire. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>MSTP</b> - Standard IEEE 802.1s, inspiré par l'implémentation MISTP plus ancienne propre à Cisco. Pour réduire le nombre d'instance STP requises, MSTP mappe dans une même instance Spanning Tree plusieurs VLAN présentant les mêmes besoins en termes de flux de trafic. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>MST</b> - Implémentation Cisco de MSTP, qui fournit jusqu'à 16 instances du protocole RSTP (802.1w) et allie plusieurs VLAN avec la même topologie physique et logique au sein d'une instance commune du protocole RSTP. Chaque instance prend en charge PortFast, la protection BPDU, le filtre BPDU, la protection de racine et la protection de boucle. Les exigences en matière d'utilisation du processeur et de la mémoire de cette version sont inférieures à celles de Rapid PVST+, mais supérieures à celles de RSTP.</li>
+            </ul>
+          </p>
+          <p>Les commutateurs Cisco fonctionnant sous IOS 15.0 ou une version ultérieure exécutent PVST+ par défaut. Cette version intègre plusieurs des caractéristiques du standard IEEE 802.1D-2004, telles que les ports alternatifs au lieu des anciens ports non désignés. Cependant, les commutateurs doivent être explicitement configurés pour le mode Rapid Spanning Tree afin d'exécuter le protocole Rapid Spanning Tree.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un tableau comparant le standard, les ressources, le temps de convergence et les calculs d'arborescence pour les divers types de STP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

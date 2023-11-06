@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.2 Configuration des ports de commutateur au niveau de la couche physique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration des ports de commutateur au niveau de la couche physique</h1>
+        <div>
+          <p>
+            <b>Mode bidirectionnel et débit</b>
+          </p>
+          <p></p>
+          <p>Les ports de commutateur peuvent être configurés manuellement avec des paramètres de bidirectionnalité et de vitesse spécifiques. Utilisez la commande<b> duplex </b>du mode de configuration d'interface pour spécifier manuellement le mode de bidirectionnalité d'un port de commutateur. Utilisez la commande <b>speed</b> du mode de configuration d'interface pour spécifier manuellement la vitesse d'un port de commutateur. Dans la Figure 1, le port F0/1 sur les commutateurs S1 et S2 est configuré manuellement avec le mot-clé<b> full </b>pour la commande<b> duplex</b>, et avec le mot-clé<b> 100 </b>pour la commande<b> speed</b>. </p>
+          <p></p>
+          <p>Le paramètre de bidirectionnalité et de vitesse d'un port de commutateur Cisco Catalyst 2960 ou 3560 est auto. Les ports 10/100/1000 fonctionnent soit en mode bidirectionnel non simultané, soit en mode bidirectionnel simultané lorsqu'ils sont définis à 10 ou 100 Mbit/s. Par contre, à 1 000 Mbit/s (1 Gbit/s), ils fonctionnent uniquement en mode bidirectionnel simultané. La négociation automatique est utile lorsque les paramètres de vitesse et de transmission bidirectionnelle du périphérique connecté au port sont inconnus ou susceptibles de changer. Lors d'une connexion à des équipements connus, tels que des serveurs, des postes de travail dédiés ou des périphériques réseau, il est recommandé de régler manuellement les paramètres de vitesse et de transmission bidirectionnelle.</p>
+          <p></p>
+          <p>Lors du dépannage des problèmes de port de commutateur, les paramètres de bidirectionnalité et de vitesses doivent être vérifiés.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: toute incohérence entre les paramètres de bidirectionnalité et de vitesse peut entraîner des problèmes de connectivité. L'échec de la négociation automatique produit des réglages incohérents.</p>
+          <p></p>
+          <p>Tous les ports fibre optique, tels que les ports 1000BASE-SX, fonctionnent uniquement à une vitesse prédéfinie et en mode bidirectionnel simultané.   </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer le port  F0/1 du commutateur S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un tableau qui regroupe les commandes de configuration de base pour les interfaces de commutateur.  La CLI commence en mode EXEC privilégié et la première commande est , configure terminal.  Cela fait passer en mode de configuration globale.  La commande suivante est « interface fast Ethernet 0/1 » et l’invite du commutateur devient « config-i.f. » entre parenthèses.  Cela fait passer au mode de configuration pour l’interface spécifiée.  La commande suivante est, duplex full. Cette commande règle l’option duplex sur intégrale.  La commande suivante est, speed 100. Cette commande règle la vitesse sur l’interface à 100 mégabits par seconde.  La configuration en cours est copiée vers le fichier de configuration de démarrage avec la commande, copy running-config startup-config. La Figure 2 est une activité interactive qui permet à l'étudiant de configurer une interface de port de commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

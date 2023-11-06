@@ -1,0 +1,1 @@
+La figure présente une topologie avec deux sous-réseaux séparés par un commutateur de couche trois. Il y a des liaisons trunk des deux côtés du commutateur de couche trois conduisant aux commutateurs de couche deux.

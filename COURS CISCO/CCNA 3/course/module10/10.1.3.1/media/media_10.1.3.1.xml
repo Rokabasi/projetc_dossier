@@ -1,0 +1,11 @@
+<textcomponents>
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Vérification des intervalles OSPFv2 sur R1</b>]]></text>
+</component>
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Vérification des intervalles OSPFv2 sur le filtre R1</b>]]></text> 
+</component>
+<component id="ID_s3_title">
+	<text><![CDATA[<b>Vérification de l&apos;activité du minuteur OSPFv2</b>]]></text> 
+</component>
+</textcomponents>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.5 Mode de calcul de la métrique EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mode de calcul de la métrique EIGRP</h1>
+        <div>
+          <p>Bien que le protocole EIGRP calcule automatiquement la métrique de table de routage servant à choisir le meilleur chemin, il est important que l'administrateur réseau comprenne le mode de détermination de ces métriques.</p>
+          <p></p>
+          <p>La figure montre la formule de métrique composite utilisée par le protocole EIGRP. À l'aide des valeurs par défaut de K1 et K3, le calcul peut être simplifié à la bande passante la plus lente (ou bande passante minimale), plus la somme de tous les délais. </p>
+          <p></p>
+          <p>Autrement dit, en examinant les valeurs de bande passante et de délai de toutes les interfaces sortantes sur la route, nous pouvons déterminer la métrique EIGRP comme suit : </p>
+          <p>
+            <b>Étape 1.  </b>Déterminez le lien avec la bande passante la plus lente. Utilisez cette valeur pour calculer la bande passante (10 000 000/bande passante).</p>
+          <p>
+            <b>Étape 2.  </b>Déterminez la valeur de délai de chaque interface sortante vers la destination. Additionnez les valeurs de délai et divisez le résultat par 10 (somme des délais/10). </p>
+          <p>
+            <b>Étape 3.  </b>Cette mesure composite génère une valeur de 24 bits ; EIGRP utilise cependant une valeur de 32 bits. Il suffit de multiplier la valeur 24 bits par 256 pour obtenir la mesure composite étendue en 32 bits. Vous devez donc additionner les valeurs calculées pour la bande passante et le délai, puis multiplier la somme par 256 pour obtenir la mesure EIGRP.</p>
+          <p></p>
+          <p>Le résultat de la table de routage pour R2 montre que la route vers 192.168.1.0/24 présente une métrique EIGRP de 3 012 096. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente la formule permettant de calculer la mesure EIGRP et le résultat de la commande « show ip route » sur le routeur 2.  La mesure pour une route est indiquée en orange.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

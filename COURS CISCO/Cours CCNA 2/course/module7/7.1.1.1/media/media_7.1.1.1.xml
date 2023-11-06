@@ -1,0 +1,39 @@
+<textcomponents>
+<component id="ID_title">
+  <text><![CDATA[<b>Qu’est-ce qu’une liste de contrôle d’accès ?</b>]]></text> 
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Autorise les e-mails entrants<br/>Refuse le trafic Telnet entrant]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Internet]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[Refuse la vidéo sur S1<br/>Refuse l&apos;accès de S1 à S2]]></text> 
+</component>
+<component id="ID_txt04">
+  <text><![CDATA[Refuse l&apos;accès HR]]></text> 
+</component>
+<component id="ID_txt05">
+  <text><![CDATA[Sous-réseau HR<br/>172.17.0.0/20]]></text> 
+</component>
+<component id="ID_txt06">
+  <text><![CDATA[Refuse les mises à jour<br/>Refuse le trafic FTP<br/>Refuse le trafic Web]]></text> 
+</component>
+
+
+
+<component id="ID_acl_txt01">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt02">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt03">
+  <text><![CDATA[ACL]]></text> 
+</component>
+<component id="ID_acl_txt04">
+  <text><![CDATA[ACL]]></text> 
+</component>
+
+</textcomponents>

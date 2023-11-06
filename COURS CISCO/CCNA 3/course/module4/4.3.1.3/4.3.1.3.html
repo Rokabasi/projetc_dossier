@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.3 Étapes relatives au basculement du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étapes relatives au basculement du routeur</h1>
+        <div>
+          <p>Lorsque le routeur actif est défaillant, le protocole de redondance définit le rôle de routeur actif pour le routeur en veille. Voici la procédure en cas de défaillance du routeur actif :</p>
+          <p></p>
+          <p>1. Le routeur en veille cesse de voir les messages Hello du routeur de transfert.</p>
+          <p></p>
+          <p>2. Le routeur en veille assume le rôle du routeur de transfert.</p>
+          <p></p>
+          <p>3. Étant donné que le nouveau routeur de transfert assume à la fois le rôle de l'adresse IPv4 et celui de l'adresse MAC du routeur virtuel, aucune interruption de service n'est constatée au niveau des périphériques hôtes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente quatre PC connectés à un LAN reliant deux routeurs physiques et un routeur virtuel.  La liaison vers le routeur situé à gauche est interrompue et le routeur virtuel réachemine le trafic vers le routeur situé à droite.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

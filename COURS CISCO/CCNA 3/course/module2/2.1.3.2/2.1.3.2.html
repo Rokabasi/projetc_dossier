@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.3.2 Création d&#x0027;un VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Création d&#x0027;un VLAN</h1>
+        <div>
+          <p>Lors de la configuration de VLAN à plage normale, les détails de la configuration sont stockés dans la mémoire Flash du commutateur dans un fichier nommé vlan.dat. La mémoire Flash est permanente et ne requiert pas la commande <b>copy running-config startup-config</b>. Cependant, du fait que, lors de la création des VLAN sur un commutateur Cisco, d'autres éléments sont souvent configurés, il est recommandé de sauvegarder les modifications de la configuration en cours d'exécution dans le fichier de configuration de démarrage.</p>
+          <p></p>
+          <p>La Figure 1 présente la syntaxe des commandes Cisco IOS utilisée pour ajouter un VLAN à un commutateur et le nommer. Il est recommandé de nommer chaque VLAN lors de la configuration du commutateur.</p>
+          <p></p>
+          <p>La Figure 2 montre comment le VLAN « étudiant » (le VLAN 20) est configuré sur le commutateur S1. Dans l'exemple de topologie, notez que l'ordinateur du stagiaire (PC2) s'est vu attribuer une adresse IP qui est appropriée pour VLAN 20, mais que le port auquel le PC se connecte n'a pas en encore été associé à un VLAN.</p>
+          <p></p>
+          <p>Servez-vous du contrôleur de syntaxe de la Figure 3 pour créer un VLAN et utilisez la commande <b>show vlan brief</b> pour afficher le contenu du fichier vlan.dat. </p>
+          <p></p>
+          <p>Outre un ID de VLAN unique, vous pouvez saisir une série d’ID de VLAN séparés par une virgule ou une plage d’ID de VLAN séparés par un trait d’union à l’aide de la commande <b>vlan</b>.<b> </b><i>vlan-id </i>. Par exemple, utilisez la commande suivante pour créer les VLAN 100, 102, 105, 106 et 107 :</p>
+          <p></p>
+          <p>
+            <span class="cmd">S1(config)#</span>
+            <span class="cmd">
+              <b> vlan 100 102 105-107</b>
+            </span>
+          </p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un tableau des commandes Cisco I.O.S. pour la création d’un numéro et d’un nom de VLAN. La Figure 2 montre un petit LAN et la syntaxe pour configurer le VLAN 20 et le nommer « étudiant ». La Figure 3 est une activité interactive qui permet aux étudiants de s’entraîner à la création d’un VLAN.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

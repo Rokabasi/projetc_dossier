@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.7 Processus de sélection de DR/BDR</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Processus de sélection de DR/BDR</h1>
+        <div>
+          <p>Les sélections d'un DR et d'un BDR OSPF n'ont pas d'effet rétroactif. Si un nouveau routeur de priorité ou d'ID de routeur plus élevés est ajouté au réseau après la sélection du DR et du BDR, ce nouveau routeur ne prend pas le rôle de DR ou de BDR, car ces rôles ont déjà été attribués. L'ajout d'un nouveau routeur ne déclenche pas un nouveau choix. </p>
+          <p></p>
+          <p>Une fois le DR choisi, ce routeur reste le DR jusqu'à ce l'un des événements ci-dessous survienne.</p>
+          <p>
+            <ul>
+              <li>Le DR tombe en panne.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le processus OSPF sur le DR tombe en panne ou est arrêté.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>L'interface à accès multiple sur le DR tombe en panne ou est désactivée.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En cas de panne du DR, le BDR devient automatiquement le DR, même si un DROther de priorité ou d'ID de routeur plus élevés a été ajouté au réseau après la sélection initiale du DR et du BDR. Cependant, une fois le BDR devenu DR, une nouvelle sélection de BDR a lieu et le DROther de priorité ou d'ID de routeur les plus élevés devient le nouveau BDR.</p>
+          <p></p>
+          <p>Les Figures 1 à 4 illustrent différents scénarios de sélection du DR et du BDR. </p>
+          <p></p>
+          <p>À la Figure 1, le DR actif (R3) est défaillant ; le BDR sélectionné au préalable (R2) assume donc le rôle de DR. Un processus de sélection se déroule ensuite pour choisir un nouveau BDR. Comme R1 est le seul DROther, il est sélectionné comme BDR.</p>
+          <p></p>
+          <p>À la Figure 2, R3 a rejoint le réseau après plusieurs minutes d'indisponibilité. Comme les rôles de DR et de BDR sont déjà attribués, R3 ne reprend aucun de ces rôles et devient un DROther.</p>
+          <p></p>
+          <p>À la Figure 3, un nouveau routeur (R4), d'ID de routeur plus élevé, est ajouté au réseau. Le DR (R2) et le BDR (R1) conservent leur rôle respectif. R4 devient automatiquement un DROther. </p>
+          <p></p>
+          <p>À la Figure 4, R2 est défaillant. Le BDR (R1) devient automatiquement le DR et le processus de sélection choisit R4 comme BDR car son ID de routeur est le plus élevé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure 1, il y a trois routeurs connectés à un commutateur. Le routeur 1 est le BDR. Le routeur 2 est le DR. Une x s'affiche sur le routeur 3. Dans la Figure 2, trois routeurs sont connectés à un commutateur. Le routeur 1 est le BDR. Le routeur 2 est le DR. Le routeur 3 est à nouveau en ligne en tant que routeur DROther. Dans la Figure 3, trois routeurs sont connectés à un commutateur. Le routeur 1 est le BDR. Le routeur 2 est le DR. Le routeur 3 est le routeur DROther.  Un quatrième routeur est ajouté et devient un routeur DROther. Dans la Figure 4, trois routeurs sont connectés à un commutateur. Le routeur 1 est le BDR. Le routeur 2 est le DR. Les routeurs 3 et 4 sont des routeurs DROther.  Le routeur 2 (DR) s'arrête, le routeur 1 devient le nouveau DR et le routeur 4 devient le nouveau BDR.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

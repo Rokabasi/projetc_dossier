@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.5 Configuration de l&#x0027;ID de routeur EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de l&#x0027;ID de routeur EIGRP </h1>
+        <div>
+          <p>La commande de configuration du routeur<b> eigrp router-id </b><i>ipv4-address </i>est la méthode recommandée pour configurer l'ID de routeur EIGRP. Cette méthode est prioritaire sur toutes les adresses IPv4 de l'interface de bouclage ou de l'interface physique configurée. La syntaxe de commande est la suivante :</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: l'adresse IPv4 servant à indiquer l'ID de routeur représente en fait tout nombre de 32 bits affiché dans une notation décimale à point. </p>
+          <p></p>
+          <p>L'ID de routeur <i>ipv4-address</i> peut être configuré avec n'importe quelle adresse IPv4, à l'exception de 0.0.0.0 et de 255.255.255.255. L'ID de routeur doit être un nombre de 32 bits unique dans le domaine de routage EIGRP ; sinon, des incohérences peuvent apparaître au niveau du routage.</p>
+          <p></p>
+          <p>La Figure 1 présente la configuration de l'ID de routeur EIGRP pour les routeurs R1 et R2.</p>
+          <p></p>
+          <p>Si un ID de routeur n'est pas explicitement configuré, le routeur utilise sa plus haute adresse IPv4 configurée sur une interface de bouclage. Contrairement aux interfaces physiques, les interfaces de bouclage présentent l'avantage de ne pas tomber en panne. Pour être à l’état actif, l’interface de bouclage ne dépend pas de câbles réels ou d’un périphérique contigu. Par conséquent, l'utilisation d'une adresse de bouclage pour spécifier l'ID de routeur permet de générer un ID de routeur plus cohérent qu'avec une adresse d'interface.</p>
+          <p></p>
+          <p>Si la commande<b> eigrp router-id </b>n'est pas utilisée et si des interfaces de bouclage sont configurées, le protocole EIGRP choisit l'adresse IPv4 la plus élevée parmi celles de ses interfaces de bouclage. Les commandes suivantes permettent d'activer et de configurer une interface de bouclage :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)#</span>
+            <span class="cmd">
+              <b> interface loopback </b>
+            </span>
+            <span class="cmd">
+              <i>numéro</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">Router(config-if)#</span>
+            <span class="cmd">
+              <b> adresse ip </b>
+            </span>
+            <span class="cmd">
+              <i>ipv4-address</i>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>
+            <span class="cmd">
+              <i>subnet-mask</i>
+            </span>
+          </p>
+          <p></p>
+          <p>
+            <b>Vérification du processus EIGRP</b>
+          </p>
+          <p></p>
+          <p>La Figure 2 montre le résultat de la commande<b> show ip protocols </b>pour R1, y compris son ID de routeur. La commande<b> show ip protocols </b>affiche les paramètres et l'état actuel des processus de routage actifs, y compris EIGRP et OSPF. La commande<b> show ip protocols </b>affiche différents types de résultats en fonction de chaque protocole de routage. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour configurer et vérifier l'ID de routeur pour R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la syntaxe de configuration d'un ID de routeur EIGRP pour les routeurs 1 et 2. La Figure 2 présente le résultat de la commande « show ip protocols » sur le routeur 1.  L'ID de routeur est mis en surbrillance. La Figure 3 est un exercice interactif qui permet au stagiaire de s'entraîner à la configuration d'un ID de routeur EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.1 Les types de réseau OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les types de réseau OSPF</h1>
+        <div>
+          <p>Pour configurer les paramètres OSPF, commencez par une implémentation de base du protocole de routage OSPF.  </p>
+          <p></p>
+          <p>OSPF définit cinq types de réseaux, comme illustré aux Figures 1 à 5.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Point à point</b> : deux routeurs interconnectés sur un lien commun. Aucun autre routeur n'est présent sur ce lien. Cette configuration est souvent utilisée pour les liens de réseaux étendus. (Figure 1)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Accès multiple avec diffusion</b> : routeurs multiples interconnectés sur un réseau Ethernet. (Figure 2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Accès NBMA (Nonbroadcast multiaccess)</b> : accès multiple sans diffusion, où des routeurs multiples sont interconnectés dans un réseau ne permettant pas les diffusions, par exemple Frame Relay. (Figure 3)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Point à multipoint</b> : routeurs multiples interconnectés dans une topologie Hub and Spoke sur un réseau à accès NBMA. Cette configuration est souvent utilisée pour connecter des sites d'agences (spokes) à un site central (hub). (Figure 4)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Liens virtuels</b> : réseau OSPF spécial utilisé pour interconnecter des zones OSPF distantes à la zone fédératrice. (Figure 5)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Un réseau à accès multiple est un réseau comportant des périphériques multiples sur le même support partagé, qui partagent des communications. Les réseaux locaux Ethernet constituent l'exemple le plus répandu de réseau à accès multiple avec diffusion. Dans les réseaux de diffusion, tous les périphériques du réseau voient toutes les trames de diffusion et de multidiffusion. Ce sont également des réseaux à accès multiple, car de nombreux hôtes, imprimantes, routeurs et autres périphériques peuvent être membres du même réseau. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la Figure 1, le routeur 1 est connecté au routeur 2. Le routeur 2 est connecté à Internet.  Chaque connexion est une liaison point à point. Dans la Figure 2, les routeurs 1, 2, 3 et 4 sont connectés à un commutateur via un réseau de diffusion. Le routeur deux est connecté à Internet avec une liaison point à point. Dans la Figure 3, les routeurs 1, 2 et 3 sont connectés via un réseau Frame Relay configuré en tant que réseau NMBA (Non Broadcast Multi Access). Le routeur deux est connecté à Internet avec une liaison point à point. Dans la Figure 4, les routeurs 1, 2 et 3 sont connectés via un réseau Frame Relay configuré en tant que réseau point à multipoint. Le routeur deux est connecté à Internet avec une liaison point à point. La Figure 5 présente trois zones.  La zone 0 comporte quatre routeurs connectés à un commutateur et le routeur 1 est à la frontière des zones 0 et 1. Le routeur 2 se connecte au routeur 1 à l'aide d'un câble série et le routeur 2 est à la frontière de la zone 51.  La zone 51 contient quatre routeurs connectés avec des câbles série.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

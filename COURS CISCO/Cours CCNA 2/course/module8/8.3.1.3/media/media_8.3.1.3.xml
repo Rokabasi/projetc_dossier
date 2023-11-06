@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Synthèse]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Chapitre 8]]></text>
+	</component>
+	
+</textcomponents>

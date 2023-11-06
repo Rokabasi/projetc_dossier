@@ -1,0 +1,1 @@
+La figure 1 présente une topologie comportant de nombreux commutateurs. La figure  2 est un tableau décrivant les composants de VTP.

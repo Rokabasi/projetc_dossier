@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.1 Connectivité de la couche 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Connectivité de la couche 3</h1>
+        <div>
+          <p>La connectivité de la couche 3 est indispensable pour former une contiguïté de voisinage entre deux routeurs connectés directement. En examinant le résultat de la commande<b> show ip interface brief</b>, un administrateur réseau peut vérifier que l'état et le protocole de connexion des interfaces sont actifs. Une requête ping envoyée depuis un routeur vers un autre routeur connecté directement devrait confirmer la connectivité IPv4 entre les périphériques. La figure affiche le résultat de la commande<b> show ip interface brief</b> pour R1. R1 montre la connectivité à R2 et les requêtes ping sont réussies. </p>
+          <p></p>
+          <p>Si la requête ping échoue, utilisez la commande <b>show cdp neighbor</b> pour vérifier les connexions de couches 1 et 2 au voisin. Si le résultat n'affiche pas le routeur voisin, vérifiez la couche 1, ainsi que le câblage, les connexions et les interfaces. Si le voisin s'affiche dans le résultat de la commande, cela signifie que les couches 1 et 2 ne présentent aucune anomalie et que le problème provient de la couche 3.</p>
+          <p></p>
+          <p>Les problèmes au niveau de la couche 3 peuvent résulter d'une mauvaise configuration des adresses IP, des sous-réseaux, de l'adressage réseau, etc. Par exemple, les interfaces des périphériques connectés doivent se trouver sur le même sous-réseau. Un message du journal indiquant que les voisins EIGRP ne se trouvent pas sur le même réseau signifie que l'adresse IPv4 de l'une des interfaces des voisins EIGRP n'est pas correcte.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>La commande équivalente utilisée avec le protocole EIGRP pour IPv6 est<b> show ipv6 interface brief</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs connectés par un câble série.  Le résultat des commandes « show ip interface brief » et « ping » est également présenté ci-dessous.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

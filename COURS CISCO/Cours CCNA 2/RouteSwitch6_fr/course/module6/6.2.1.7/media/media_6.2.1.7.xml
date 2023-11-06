@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[La configuration des réseaux locaux virtuels (VLAN)]]></text>
+	</component>
+	
+</textcomponents>

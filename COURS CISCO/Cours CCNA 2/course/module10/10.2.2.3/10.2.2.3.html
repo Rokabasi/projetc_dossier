@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.3 Format de message Syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Format de message Syslog</h1>
+        <div>
+          <p>Les périphériques Cisco génèrent des messages Syslog à la suite des événements réseau. Chaque message Syslog contient un niveau de gravité et une capacité. </p>
+          <p></p>
+          <p>Plus les numéros des niveaux sont petits, plus les alarmes Syslog sont critiques. Il est possible de définir le niveau de gravité des messages de manière à contrôler l'emplacement d'affichage de chaque type de message (par exemple sur la console ou d'autres destinations).  La liste complète des niveaux Syslog est illustrée à la Figure 1.</p>
+          <p>Chaque niveau Syslog a sa propre signification :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Niveau d'avertissement 4 - Niveau d'urgence 0 </b>: ces messages sont des messages d'erreur relatifs aux dysfonctionnements logiciels ou matériels ; ces types de messages signifient que la fonctionnalité du périphérique est affectée. La gravité du problème détermine le niveau Syslog réel appliqué. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Niveau de notification 5</b> : le niveau de notification concerne les événements normaux mais importants. Par exemple, les transitions d'interface à l'état « up » ou « down » ainsi que les messages de redémarrage du système s'affichent au niveau de notification. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Niveau informationnel 6</b> : un message d'informations normal qui n'affecte pas la fonctionnalité du périphérique. Par exemple, lorsqu'un périphérique Cisco redémarre, vous pouvez voir le message d'informations suivant : <span class="cmd">%LICENSE-6-EULA_ACCEPT_ALL: The Right to Use End User License Agreement is accepted</span>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Niveau de débogage 7</b> : ce niveau indique que les messages sont des résultats générés suite à l'exécution de diverses commandes <b>debug</b>.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En plus de spécifier la gravité du problème, les messages Syslog contiennent également des informations de capacité. Les capacités Syslog sont des identificateurs de service permettant de déterminer et de catégoriser les données d'état du système pour les rapports des messages d'événement et d'erreur. Les options de capacité de journalisation disponibles sont spécifiques au périphérique réseau. Par exemple, les commutateurs de la gamme Cisco 2960 exécutant Cisco IOS version 15.0(2) et les routeurs Cisco 1941 exécutant Cisco IOS version 15.2(4) prennent en charge 24 options de capacité classées en 12 types de capacité. </p>
+          <p></p>
+          <p>Les capacités classiques des messages Syslog signalées sur les routeurs Cisco IOS sont les suivantes :</p>
+          <p>
+            <ul>
+              <li>IP</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocole OSPF</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Système d'exploitation SYS</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IPsec (IP Security)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Adresse IP d'interface (IF)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Par défaut, le format des messages Syslog du logiciel Cisco IOS est le suivant :</p>
+          <p></p>
+          <p>
+            <span class="cmd">seq no: timestamp: %facility-severity-MNEMONIC: description</span>
+          </p>
+          <p></p>
+          <p>Les champs contenus dans le message Syslog du logiciel Cisco IOS sont expliqués à la Figure 2. </p>
+          <p></p>
+          <p>Exemple de résultat sur un commutateur Cisco en ce qui concerne la modification d'état à la valeur « up » d'une liaison EtherChannel :</p>
+          <p></p>
+          <p>
+            <span class="cmd">00:00:46: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up</span>
+          </p>
+          <p></p>
+          <p>Dans ce cas, la capacité est LINK et le niveau de gravité est égal à 3, avec une valeur mnémonique UPDOWN. </p>
+          <p></p>
+          <p>Les messages les plus courants sont les messages indiquant si la liaison est active ou non, ainsi que ceux qu'un périphérique produit lorsqu'il quitte le mode de configuration. Si la journalisation des listes de contrôle d'accès est configurée, le périphérique génère des messages Syslog lorsque des paquets satisfont à la condition d'un paramètre. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un tableau avec les noms, les niveaux et les descriptions de gravité de Syslog. La Figure 2 affiche un tableau avec les champs et les descriptions du message Syslog.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

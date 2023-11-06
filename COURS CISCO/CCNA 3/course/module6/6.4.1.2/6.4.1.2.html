@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.2 Comparaison de EIGRP pour IPv4 et IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comparaison de EIGRP pour IPv4 et IPv6</h1>
+        <div>
+          <p>Voici une comparaison des principales fonctionnalités des protocoles EIGRP pour IPv4 et EIGRP pour IPv6 :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Routes annoncées </b>: le protocole EIGRP pour IPv4 annonce des réseaux IPv4, tandis que le protocole EIGRP pour IPv6 annonce des préfixes IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Vecteur de distance </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 sont des protocoles de routage à vecteur de distance avancés. Les deux protocoles utilisent les mêmes distances administratives.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Technologie de convergence </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 utilisent l'algorithme DUAL. Les deux protocoles utilisent les mêmes techniques et processus DUAL, notamment le successeur, le successeur potentiel, la distance de faisabilité et la distance annoncée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrique </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 utilisent tous deux la bande passante, le délai, la fiabilité et la charge pour leur métrique composite. Les deux protocoles de routage utilisent la même métrique composite et utilisent uniquement la bande passante et le délai, par défaut. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole de transport </b>: le protocole de transport fiable (RTP, Reliable Transport Protocol) garantit l'acheminement des paquets EIGRP à tous les voisins pour les deux protocoles, le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Messages de mise à jour </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 envoient des mises à jour incrémentielles en cas de modification de l'état d'une destination. Les termes « partiel » et « limité » sont utilisés dans les deux protocoles pour désigner les mises à jour.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Mécanisme de détection de voisins </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 utilisent un simple mécanisme Hello pour identifier les routeurs voisins et établir des contiguïtés. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresses source et de destination </b>: le protocole EIGRP pour IPv4 envoie des messages à l'adresse de multidiffusion 224.0.0.10. Ces messages utilisent l'adresse IPv4 source de l'interface sortante. Le protocole EIGRP pour IPv6 envoie ses messages à l'adresse de multidiffusion FF02::A. Les messages EIGRP pour IPv6 sont fournis à l'aide de l'adresse link-local IPv6 de l'interface de sortie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Authentification</b> : EIGRP pour IPv4 et EIGRP pour IPv6 utilisent l'authentification MD5 (Message Digest 5). Le protocole EIGRP nommé prend également en charge l'algorithme SHA256, qui est plus puissant.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ID de routeur </b>: le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6 utilisent tous deux un nombre 32 bits comme ID de routeur EIGRP. L'ID de routeur 32 bits est représenté par une notation décimale à point et correspond généralement à une adresse IPv4. Si le routeur EIGRP pour IPv6 n'a pas été configuré avec une adresse IPv4, la commande<b> eigrp router-id </b>doit être utilisée pour configurer un ID de routeur 32 bits. Le processus de détermination de l'ID de routeur est le même pour le protocole EIGRP pour IPv4 et le protocole EIGRP pour IPv6.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une table comparant les fonctionnalités du protocole EIGRP pour IPv4 et IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

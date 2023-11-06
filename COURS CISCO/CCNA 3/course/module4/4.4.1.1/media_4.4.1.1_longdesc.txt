@@ -1,0 +1,1 @@
+La figure présente une pile de six commutateurs Cisco. La légende indique qu'EtherChannel offre une bande passante extensible et flexible avec résilience, et une répartition de la charge entre les liaisons du réseau.

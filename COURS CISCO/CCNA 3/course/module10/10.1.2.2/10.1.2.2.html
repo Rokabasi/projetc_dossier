@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.2 Vérifier la route IPv4 par défaut propagée</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier la route IPv4 par défaut propagée</h1>
+        <div>
+          <p>Vérifiez les paramètres de la route par défaut sur R2, au moyen de la commande<b> show ip route</b>, comme illustré à la Figure 1. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 2 pour vérifier que la route par défaut a été propagée vers R1 et R3. Notez que l'origine de la route est<b> O*E2</b>, ce qui signifie qu'elle a été apprise en utilisant OSPFv2. L'astérisque identifie cette route comme une bonne candidate pour la route par défaut. La désignation E2 indique qu'il s'agit d'une route externe. </p>
+          <p></p>
+          <p>Les routes externes sont soit de type externe 1, soit de type externe 2. La différence entre ces deux types réside dans le calcul du coût (de la métrique) de la route. Le coût d'une route de type 2 correspond toujours au coût externe, quel que soit le coût interne pour atteindre cette route. Un coût de type 1 ajoute au coût externe le coût interne utilisé pour atteindre cette route. Pour la même destination, une route de type 1 est toujours préférée à une route de type 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show i. p. route ».  La passerelle de dernier recours et la route d'état par défaut sont mises en surbrillance. La figure 2 représente une activité interactive qui permet au stagiaire de s'exercer à compléter la table de routage pour le routeur 2 et le routeur 3 et de s'assurer que la route statique par défaut est bien configurée et se propage correctement au routeur 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

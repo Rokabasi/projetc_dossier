@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.7 Résumé du routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Résumé du routage</h1>
+        <div>
+          <p>Le scénario suivant explique comment la récapitulation automatique peut également générer une boucle de routage.</p>
+          <p></p>
+          <p>Dans la figure : </p>
+          <p>1. Le routeur R1 dispose d'une route par défaut 0.0.0.0/0 passant par le routeur du fournisseur d'accès à Internet. </p>
+          <p>2. Le routeur R1 envoie une mise à jour de routage vers R2 contenant la route par défaut.</p>
+          <p>3. Le routeur R2 installe la route par défaut issue de R1 dans sa table de routage IPv4.</p>
+          <p>4. La table de routage de R2 contient les sous-réseaux 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24. </p>
+          <p>5. Le routeur R2 envoie une mise à jour récapitulative à R1 pour le réseau 172.16.0.0/16.</p>
+          <p>6. Le routeur R1 installe la route récapitulative pour 172.16.0.0/16 via R2.</p>
+          <p>7. Le routeur R1 reçoit un paquet pour 172.16.4.10. Étant donné que R1 dispose d'une route pour 172.16.0.0/16 via R2, il transfère le paquet à R2.</p>
+          <p>8. Le routeur R2 reçoit le paquet avec l'adresse de destination 172.16.4.10 à partir de R1. Le paquet ne correspond pas à une route spécifique ; R2 réachemine donc le paquet vers R1 à l'aide de la route par défaut figurant dans sa table de routage. </p>
+          <p>9. Le paquet destiné à 172.16.4.10 transite en boucle entre R1 et R2 jusqu'à ce que sa durée de vie expire et qu'il soit abandonné.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre un réseau dans lequel le routeur 1 est connecté au fournisseur d'accès à Internet et au routeur 2.  Le routeur 2 récapitule le sous-réseau 172.16.0.0 et l'envoie au routeur 1.  Le routeur 2 a également une route statique par défaut pointant vers le routeur 1.  En raison de la route récapitulative, le routeur R1 envoie au routeur R2 des paquets destinés au réseau 172.16.4.10.  En raison de sa route statique par défaut, le routeur R2 renvoie ces paquets au routeur R1.  Il s'agit d'une boucle de routage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

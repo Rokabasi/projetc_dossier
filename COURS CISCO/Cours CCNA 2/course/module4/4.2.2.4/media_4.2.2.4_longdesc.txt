@@ -1,0 +1,1 @@
+Les figures 1 à 9 sont des éléments multimédia interactifs qui testent la capacité de l’apprenant à déterminer les limites des domaines de collision et de diffusion. Chaque figure représente une topologie réseau différente et demande à l’apprenant de dessiner des formes autour de chaque domaine.  

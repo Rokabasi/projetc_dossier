@@ -1,0 +1,171 @@
+<textcomponents>
+<component id="ID_s1_inst">
+<text><![CDATA[<b>Activité – Partie 1 : Systèmes de trunk VLAN en action</b><br/>Faites glisser les trames Ethernet (enveloppes jaunes) vers leurs PC de destination pour le scénario. Les enveloppes ne sont pas toutes utilisées dans chaque scénario.<br/><b>Scénario 1 :</b> PC 1 envoie une diffusion. Quels PC vont recevoir une copie de la trame de diffusion ?]]></text>
+</component>
+
+<component id="ID_s2_inst">
+<text><![CDATA[<b>Activité – Partie 2 : Systèmes de trunk VLAN en action</b><br/>Faites glisser les trames Ethernet (enveloppes jaunes) vers leurs PC de destination pour le scénario. Les enveloppes ne sont pas toutes utilisées dans chaque scénario.<br/><b>Scénario 2 :</b> PC 2 envoie une diffusion. Quels PC vont recevoir une copie de la trame de diffusion ?]]></text>
+</component>
+
+<component id="ID_s3_inst">
+<text><![CDATA[<b>Activité – Partie 3 : Systèmes de trunk VLAN en action</b><br/>Faites glisser les trames Ethernet (enveloppes jaunes) vers leurs PC de destination pour le scénario. Les enveloppes ne sont pas toutes utilisées dans chaque scénario.<br/><b>Scénario 3 :</b> PC 3 envoie une diffusion. Quels PC vont recevoir une copie de la trame de diffusion ?]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s1_txt04'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s1_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s1_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s2_txt02'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt03'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s2_txt05'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s2_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt02'>
+	<text><![CDATA[VLAN 20]]></text>
+</component>
+<component id='ID_s3_txt03'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt04'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+<component id='ID_s3_txt05'>
+	<text><![CDATA[VLAN 10]]></text>
+</component>
+<component id='ID_s3_txt06'>
+	<text><![CDATA[VLAN 30]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[Trame<br>Ethernet]]></text>
+</component>
+
+<component id='ID_s2_drag01'>
+	<text><![CDATA[Trame<br>Ethernet]]></text>
+</component>
+
+<component id='ID_s3_drag01'>
+	<text><![CDATA[Trame<br>Ethernet]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les PC de destination amenés à recevoir la trame de diffusion. Cliquez sur Bouton 2 pour continuer.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les PC de destination amenés à recevoir la trame de diffusion. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les PC de destination amenés à recevoir la trame de diffusion. Cliquez sur Bouton 3 pour continuer.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les PC de destination amenés à recevoir la trame de diffusion. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les PC de destination amenés à recevoir la trame de diffusion.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les PC de destination amenés à recevoir la trame de diffusion. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+
+
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+</textcomponents>

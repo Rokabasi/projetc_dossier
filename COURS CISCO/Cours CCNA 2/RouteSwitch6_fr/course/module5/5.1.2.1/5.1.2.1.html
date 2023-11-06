@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.1 Communications bidirectionnelles</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Communications bidirectionnelles</h1>
+        <div>
+          <p>La figure illustre les communications bidirectionnelles simultanées et non simultanées.</p>
+          <p></p>
+          <p>Les communications bidirectionnelles simultanées améliorent les performances d'un réseau LAN commuté.  Les communications bidirectionnelles simultanées augmentent la bande passante réelle, car les deux extrémités de la connexion transmettent et reçoivent simultanément des données. On parle également de communication bidirectionnelle. Cette méthode d'optimisation des performances réseau nécessite la microsegmentation du réseau.  Un LAN microsegmenté est créé lorsqu'un port de commutateur est connecté à un seul périphérique et fonctionne en mode bidirectionnel simultané. Lorsqu'un port de commutateur fonctionne en mode bidirectionnel simultané, il n'y a pas de domaine de collision associé au port.</p>
+          <p></p>
+          <p>Contrairement aux communications bidirectionnelles simultanées, les communications bidirectionnelles non simultanées sont unidirectionnelles. L'envoi et la réception de données n'ont jamais lieu simultanément. Les communications bidirectionnelles non simultanées entraînent des problèmes de performances, car les données ne peuvent circuler que dans un sens à la fois, ce qui se traduit souvent par des collisions. Les connexions bidirectionnelles non simultanées se rencontrent généralement dans des équipements anciens, tels que des concentrateurs. Les communications bidirectionnelles simultanées ont remplacé les communications bidirectionnelles non simultanées pour la plupart du matériel.</p>
+          <p></p>
+          <p>Les cartes réseau Gigabit Ethernet et 10Gb fonctionnent obligatoirement en mode bidirectionnel simultané. En mode bidirectionnel simultané, le circuit de détection de collision de la carte réseau est désactivé. Les trames transmises par les deux périphériques connectés ne peuvent entrer en collision puisque ces derniers utilisent deux circuits distincts sur le câble réseau. Les connexions bidirectionnelles simultanées nécessitent un commutateur qui prend en charge la configuration bidirectionnelle simultanée, ou une connexion directe à l'aide d'un câble Ethernet entre les deux périphériques. </p>
+          <p></p>
+          <p>L'efficacité d'une configuration Ethernet avec concentrateur standard et partagée est généralement évaluée entre 50 et 60 % de la bande passante allouée. Les communications bidirectionnelles simultanées offrent une efficacité de 100 % dans les deux sens (émission et réception). Ainsi, le taux d'utilisation maximal potentiel de la bande passante allouée est de 200 %.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche deux jeux de commutateurs. Un jeu est étiqueté Communication en duplex intégral ou en semi-duplex. Ce jeu est connecté à un câble Ethernet et montre la capacité d’envoyer et de recevoir des données simultanément. Le deuxième jeu de commutateurs est étiqueté Communication en semi-duplex. Ce jeu montre la capacité d’envoyer ou de recevoir des données.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

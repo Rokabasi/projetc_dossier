@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.4.2 Commandes de débogage HSRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commandes de débogage HSRP </h1>
+        <div>
+          <p>Les commandes de débogage HSRP permettent d'en savoir plus sur le comportement et les événements HSRP en cas de défaillance ou d'arrêt d'un routeur. Pour afficher les commandes de débogage HSRP disponibles, saisissez la commande <b>debug standby ?</b>, comme illustré dans la Figure 1. La topologie est illustrée dans la Figure 2.</p>
+          <p></p>
+          <p>Utilisez la commande <b>debug standby packets</b> pour afficher les paquets Hello envoyés et reçus toutes les 3 secondes, comme illustré dans la Figure 3 pour R2. Les routeurs HSRP surveillent ces paquets « hello » et, en l'absence de messages « hello » d'un voisin HSRP pendant 10 secondes, ils déclenchent un changement d'état.</p>
+          <p></p>
+          <p>Le comportement de HSRP varie selon que le routeur actif tombe en panne ou est arrêté manuellement par l'administrateur. Utilisez la commande <b>debug standby terse</b> (Figure 4) pour afficher les événements HSRP lorsque R1 est mis hors tension et que R2 assume le rôle de routeur HSRP actif pour le réseau 172.16.10.0/24.</p>
+          <p></p>
+          <p>La Figure 5 illustre ce qu'il se passe au niveau de R2 lorsque R1 est remis sous tension. Comme R1 est configuré à l'aide de la commande <b>standby 1 preempt</b>, il reprend ses droits en tant que routeur actif, comme illustré ci-dessous. La suite du résultat de la commande montre que R2 reste à l'écoute des messages « hello » lors de la négociation (état « Speak ») jusqu'à ce qu'il confirme la sélection de R1 comme nouveau routeur actif et son propre rôle de routeur de secours.</p>
+          <p></p>
+          <p>Si l'interface R1 G0/1 est désactivée par une opération administrative, R1 envoie un message Init à tous les routeurs HSRP sur la liaison pour leur indiquer qu'il n'assure plus le rôle de routeur actif. Comme le montre la Figure 6, R2 prend le rôle de routeur HSRP actif 10 secondes plus tard.</p>
+          <p></p>
+          <p>Comme vous pouvez le voir, R2 démarre un minuteur passif de maintien (« holddown ») pour R1. Après 3 minutes, ce minuteur passif expire et R1 (172.16.10.2) est détruit, c.-à-d. qu'il est supprimé de la base de données HSRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

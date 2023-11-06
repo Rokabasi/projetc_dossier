@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Notions de base sur le routage et la commutation</title>
+    <link rel="stylesheet" type="text/css" href="course/common-ext/styles/course.css"/>
+    <link rel="stylesheet" type="text/css" href="course/common/styles/course.css"/>
+    <script type="text/javascript" src="course/common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/netacad.js"></script>
+    <script type="text/javascript" src="course/common-ext/scripts/course.js"></script>
+    <script>
+
+      netacad.settings.init("RouteSwitch6");
+
+      netacad.lang.set("Module", "Chapitre #");
+      netacad.lang.set("Section", "Section #");
+      netacad.lang.set("Topic", "Rubrique #");
+      netacad.lang.set("Page", "Page #");
+      netacad.lang.set("Figure", "Figure #");
+      netacad.lang.set("Figures", "Figures");
+      netacad.lang.set("NoItems", "Il n\u0027y a aucun élément.");
+      netacad.lang.set("NoBookmarks", "Il n\u0027y a pas de signets.");
+      netacad.lang.set("NoRecentPages", "Il n\u0027y a pas de pages récentes.");
+      netacad.lang.set("NoSearchResults", "Il n\u0027y a pas de résultats de recherche.");
+      netacad.lang.set("EnterSearchTerms", "Indiquez les termes à rechercher…");
+      netacad.lang.set("PageThumbnail", "Page #");
+      netacad.lang.set("BackgroundImage", "Fond d\u0027écran");
+
+      var course = function() {
+        var c, m, s, t, p;
+        c = new netacad.models.Course("RouteSwitch6", "fr", "Notions de base sur le routage et la commutation");
+        m = new netacad.models.Module("0", "Présentation du cours");
+        s = new netacad.models.Section("0.0", "Bienvenue dans le cours Notions de base sur le routage et la commutation");
+        t = new netacad.models.Topic("0.0.1", "Message destiné aux participants");
+        p = new netacad.models.Page("0.0.1.1", "Bienvenue", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.2", "Une communauté mondiale", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.3", "Plus que de simples informations", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.4", "Méthode d\u0027enseignement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.5", "La pratique mène à la maîtrise", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.6", "L\u0027esprit grand ouvert", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.7", "Journaux de conception", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.8", "Découverte du monde des réseaux", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.9", "Créez vos propres mondes", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.10", "Comment Packet Tracer permet d\u0027assimiler certains concepts", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("0.0.1.11", "Présentation du cours", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("1", "Principes de routage");
+        s = new netacad.models.Section("1.0", "Introduction");
+        t = new netacad.models.Topic("1.0.1", "Bienvenue");
+        p = new netacad.models.Page("1.0.1.1", "Chapitre 1 : concepts du routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.0.1.2", "Exercice - Avons-nous véritablement besoin d\u0027une carte ?", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("1.1", "Configuration initiale du routeur");
+        t = new netacad.models.Topic("1.1.1", "Fonctions de routeur");
+        p = new netacad.models.Page("1.1.1.1", "Caractéristiques d\u0027un réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.2", "Pourquoi le routage ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.3", "Les routeurs sont des ordinateurs", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.4", "Les routeurs interconnectent les réseaux", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.5", "Les routeurs choisissent les meilleurs chemins", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.6", "Mécanismes de transfert des paquets", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.7", "Exercice - Identifier les composants d\u0027un routeur ", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.8", "Packet Tracer : utilisation de Traceroute pour détecter le réseau", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.1.9", "Travaux pratiques - Carte d\u0027Internet", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.1.2", "Brancher les périphériques");
+        p = new netacad.models.Page("1.1.2.1", "Connexion à un réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.2", "Passerelles par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.3", "Documentation de l\u0027adressage réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.4", "Activation de l\u0027IP sur un hôte", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.5", "LED des périphériques", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.6", "Accès à la console", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.7", "Activation de l\u0027IP sur un commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.8", "Exercice : documentation d\u0027un schéma d\u0027adressage", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.2.9", "Packet Tracer : documentation du réseau", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.1.3", "Configurations de base du routeur");
+        p = new netacad.models.Page("1.1.3.1", "Configuration des paramètres de base du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.3.2", "Configuration d\u0027une interface du routeur IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.3.3", "Configuration d\u0027une interface du routeur IPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.3.4", "Configuration d\u0027une interface de bouclage IPv4", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.3.5", "Packet Tracer : configuration des interfaces IPv4 et IPv6", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.1.4", "Vérification de la connectivité des réseaux connectés directement");
+        p = new netacad.models.Page("1.1.4.1", "Vérification des paramètres d\u0027interface", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.4.2", "Vérification des paramètres d\u0027interface IPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.4.3", "Filtrage des résultats de commande show", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.4.4", "Fonction d\u0027historique de commande", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.4.5", "Packet Tracer : configuration et vérification d\u0027un petit réseau", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.1.4.6", "Travaux pratiques : configuration des paramètres de base du routeur avec l\u0027interface en ligne de commande IOS", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("1.2", "Décisions de routage");
+        t = new netacad.models.Topic("1.2.1", "Commutation des paquets entre les réseaux");
+        p = new netacad.models.Page("1.2.1.1", "Fonctions de commutation du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.1.2", "Envoi d\u0027un paquet", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.1.3", "Transfert vers le tronçon suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.1.4", "Routage de paquets", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.1.5", "Atteinte de la destination ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.1.6", "Exercice : mise en correspondance de l\u0027adressage des couches 2 et 3", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.2.2", "Détermination du chemin");
+        p = new netacad.models.Page("1.2.2.1", "Décisions de routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.2", "Meilleur chemin", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.3", "Équilibrage de charge", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.4", "Distance administrative", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.5", "Exercice : organisation des étapes du processus de transfert de paquets", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.2.2.6", "Exercice : Associer la distance administrative à la source de la route", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("1.3", "Fonctionnement d\u0027un routeur");
+        t = new netacad.models.Topic("1.3.1", "Analyse de la table de routage");
+        p = new netacad.models.Page("1.3.1.1", "La table de routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.1.2", "Sources de la table de routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.1.3", "Entrées de routage d\u0027un réseau distant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.1.4", "Exercice : interprétation du contenu d\u0027une entrée de table de routage", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.3.2", "Routes connectées directement");
+        p = new netacad.models.Page("1.3.2.1", "Interfaces connectées directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.2.2", "Entrées de table de routage d\u0027un réseau connecté directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.2.3", "Exemples d\u0027interfaces connectées directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.2.4", "Exemple d\u0027interface IPv6 connectée directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.2.5", "Packet Tracer : analyse des routes connectées directement ", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.3.3", "Routes apprises de manière statique");
+        p = new netacad.models.Page("1.3.3.1", "Routes statiques", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.3.2", "Exemples de routes statiques", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.3.3", "Exemples de routes IPv6 statiques", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("1.3.4", "Protocoles de routage dynamique");
+        p = new netacad.models.Page("1.3.4.1", "Routage dynamique ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.4.2", "Protocoles de routage IPv4 ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.4.3", "Exemples de routage dynamique IPv4 ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.4.4", "Protocoles de routage IPv6 ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.3.4.5", "Exemples de routage dynamique IPv6", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("1.4", "Synthèse");
+        t = new netacad.models.Topic("1.4.1", "Conclusion");
+        p = new netacad.models.Page("1.4.1.1", "Exercice - Une carte ne serait pas de refus !", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("1.4.1.2", "Chapitre 1 : concepts du routage", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("2", "Routage statique");
+        s = new netacad.models.Section("2.0", "Introduction");
+        t = new netacad.models.Topic("2.0.1", "Bienvenue");
+        p = new netacad.models.Page("2.0.1.1", "Chapitre 2 : routage statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.0.1.2", "Exercice : quelle route emprunter", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("2.1", "Implémenter des routes statiques");
+        t = new netacad.models.Topic("2.1.1", "Routage statique");
+        p = new netacad.models.Page("2.1.1.1", "Atteindre les réseaux distants", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.2", "Pourquoi utiliser le routage statique ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.3", "Quand utiliser les routes statiques ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.1.4", "Exercice : identifier les avantages et les inconvénients du routage statique", "Activity", "Other", "Case à cocher Flash");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.1.2", "Types de routes statiques");
+        p = new netacad.models.Page("2.1.2.1", "Applications des routes statiques", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.2.2", "Route statique standard", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.2.3", "Route statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.2.4", "Route statique récapitulative", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.2.5", "Route statique flottante", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.1.2.6", "Exercice : identification du type de route statique", "Activity", "Other", "Case à cocher Flash");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("2.2", "Configuration des routes statiques et par défaut");
+        t = new netacad.models.Topic("2.2.1", "Configuration des routes statiques IPv4");
+        p = new netacad.models.Page("2.2.1.1", "Commande ip route", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.2", "Options de tronçon suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.3", "Configuration d\u0027une route statique de tronçon suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.4", "Configuration d\u0027une route statique connectée directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.5", "Configuration d\u0027une route statique entièrement spécifiée", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.1.6", "Vérification d\u0027une route statique", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.2", "Configuration des routes par défaut IPv4");
+        p = new netacad.models.Page("2.2.2.1", "Route statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.2.2", "Configuration d\u0027une route statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.2.3", "Vérification d\u0027une route statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.2.4", "Packet Tracer : configuration des routes statiques et par défaut IPv4", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.2.5", "Travaux pratiques : configuration des routes statiques et par défaut IPv4", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.3", "Configuration des routes statiques IPv6");
+        p = new netacad.models.Page("2.2.3.1", "La commande ipv6 route", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.3.2", "Options de tronçon suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.3.3", "Configuration d\u0027une route IPv6 statique de tronçon suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.3.4", "Configuration d\u0027une route statique IPv6 connectée directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.3.5", "Configuration d\u0027une route IPv6 statique entièrement spécifiée", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.3.6", "Vérification des routes statiques IPv6", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.4", "Configuration des routes par défaut IPv6");
+        p = new netacad.models.Page("2.2.4.1", "Route IPv6 statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.4.2", "Configuration d\u0027une route IPv6 statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.4.3", "Vérification d\u0027une route statique par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.4.4", "Packet Tracer : configuration des routes statiques et par défaut IPv6", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.4.5", "Travaux pratiques : configuration des routes statiques et par défaut IPv6", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.5", "Configuration des routes statiques flottantes");
+        p = new netacad.models.Page("2.2.5.1", "Routes statiques flottantes", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.5.2", "Configurer une route statique flottante IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.5.3", "Tester la route statique flottante IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.5.4", "Configurer une route statique flottante IPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.5.5", "Packet Tracer – Configurer des routes statiques flottantes", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.2.6", "Configurer des routes statiques de l’hôte");
+        p = new netacad.models.Page("2.2.6.1", "Routes d’hôtes installées automatiquement", "Content", "Résumer l’activité");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.2.6.2", "Configurer les routes d’hôtes statiques IPv4 et IPv6", "Content", "Résumer l’activité");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("2.3", "Dépannage de routes statiques et par défaut");
+        t = new netacad.models.Topic("2.3.1", "Traitement des paquets à l\u0027aide de routes statiques");
+        p = new netacad.models.Page("2.3.1.1", "Routes statiques et transfert de paquets", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("2.3.2", "Dépannage de la configuration des routes statiques et par défaut IPv4");
+        p = new netacad.models.Page("2.3.2.1", "Dépannage d\u0027une route manquante", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.2.2", "Résolution d\u0027un problème de connectivité", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.2.3", "Packet Tracer : dépannage des routes statiques", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.3.2.4", "Travaux pratiques : dépannage des routes statiques", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("2.4", "Synthèse");
+        t = new netacad.models.Topic("2.4.1", "Conclusion");
+        p = new netacad.models.Page("2.4.1.1", "Exercice : l\u0027heure du routage statique", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("2.4.1.2", "Chapitre 2 : routage statique", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("3", "Routage dynamique");
+        s = new netacad.models.Section("3.0", "Introduction");
+        t = new netacad.models.Topic("3.0.1", "Bienvenue");
+        p = new netacad.models.Page("3.0.1.1", "Chapitre 3 : Routage dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.0.1.2", "Combien cela coûte-t-il ?", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.1", "Protocoles de routage dynamique");
+        t = new netacad.models.Topic("3.1.1", "Vue d’ensemble du protocole de routage dynamique");
+        p = new netacad.models.Page("3.1.1.1", "Évolution des protocoles de routage dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.1.2", "Composants des protocoles de routage dynamique", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.1.2", "Comparaison des routages statique et dynamique");
+        p = new netacad.models.Page("3.1.2.1", "Utilisations du routage statique ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.2.2", "Avantages et inconvénients du routage statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.2.3", "Utilisations des protocoles de routage dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.2.4", "Avantages et inconvénients du routage dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.1.2.5", "Exercice : comparer le routage statique et le routage dynamique", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.2", "RIPv2");
+        t = new netacad.models.Topic("3.2.1", "Configuration du protocole RIP");
+        p = new netacad.models.Page("3.2.1.1", "Mode de configuration RIP sur le routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.2", "Annonce des réseaux", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.3", "Vérifier le routage RIP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.4", "Activer et vérifier RIPv2", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.5", "Désactiver le résumé automatique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.6", "Configurer des interfaces passives", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.7", "Propagation d\u0027une route par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.8", "Packet Tracer : configuration du protocole RIPv2", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.2.1.9", "Atelier – Configuration de base du protocole de routage RIPv2 ", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.3", "La table de routage");
+        t = new netacad.models.Topic("3.3.1", "Parties d\u0027une entrée de route IPv4");
+        p = new netacad.models.Page("3.3.1.1", "Entrées de table de routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.2", "Entrées connectées directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.3", "Entrées de réseau distant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.1.4", "Exercice : identifier les parties d\u0027une entrée de table de routage IPv4", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.3.2", "Routes IPv4 apprises dynamiquement");
+        p = new netacad.models.Page("3.3.2.1", "Termes de la table de routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.2", "Meilleure route", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.3", "Route de niveau 1", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.4", "Route parent de niveau 1", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.5", "Route enfant de niveau 2", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.2.6", "Exercice : identifier les routes parent et enfant IPv4", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.3.3", "Processus de recherche de route IPv4");
+        p = new netacad.models.Page("3.3.3.1", "Processus de recherche de route", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.3.2", "Meilleure route = correspondance la plus longue", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.3.3", "Exercice : déterminer la route de correspondance la plus longue", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("3.3.4", "Analyse d\u0027une table de routage IPv6");
+        p = new netacad.models.Page("3.3.4.1", "Entrées de la table de routage IPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.4.2", "Entrées connectées directement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.4.3", "Entrée de réseau IPv6 distant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.3.4.4", "Exercice : identifier les parties d\u0027une entrée de table de routage IPv6", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("3.4", "Synthèse");
+        t = new netacad.models.Topic("3.4.1", "Conclusion");
+        p = new netacad.models.Page("3.4.1.1", "IPv6 : des détails...", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("3.4.1.2", "Chapitre 3 : Routage dynamique", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("4", "Réseaux commutés");
+        s = new netacad.models.Section("4.0", "Introduction");
+        t = new netacad.models.Topic("4.0.1", "Bienvenue");
+        p = new netacad.models.Page("4.0.1.1", "Chapitre 4 : Réseaux commutés", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.0.1.2", "Instructions envoyées ou reçues", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("4.1", "Conception d’un réseau local");
+        t = new netacad.models.Topic("4.1.1", "Réseaux convergents");
+        p = new netacad.models.Page("4.1.1.1", "Complexité croissante des réseaux", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.2", "Éléments d\u0027un réseau convergent", "Activity", "Other", "Flash PnC");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.3", "Réseaux sans frontières Cisco", "Activity", "Other", "Flash PnC");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.4", "Hiérarchie du réseau commuté sans frontières", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.5", "Couches d’accès, de distribution et cœur de réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.1.6", "Exercice : identification de la terminologie des réseaux commutés", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("4.1.2", "Réseaux commutés");
+        p = new netacad.models.Page("4.1.2.1", "Rôle des réseaux commutés", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.2.2", "Facteurs d\u0027encombrement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.1.2.3", "Exercice : identification du matériel de commutateur", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("4.2", "L\u0027environnement commuté");
+        t = new netacad.models.Topic("4.2.1", "Transfert de trame");
+        p = new netacad.models.Page("4.2.1.1", "La commutation : concept général des réseaux et des télécommunications", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.2", "Remplissage dynamique de la table d\u0027adresses MAC d\u0027un commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.3", "Méthodes de transmission par commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.4", "Commutation par stockage et retransmission (« store and forward »)", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.5", "Commutation cut-through", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.6", "Exercice - Méthodes de transfert de trames", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.1.7", "Exercice : commutation", "Activity", "Other", "Case à cocher Flash");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("4.2.2", "Domaines de commutation");
+        p = new netacad.models.Page("4.2.2.1", "Domaines de collision", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.2.2", "Domaines de diffusion", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.2.3", "Réduction de l\u0027encombrement du réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.2.2.4", "Exercice : traçage du domaine", "Activity", "Other", "Flash : outil cercle Packet Tracer");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("4.3", "Synthèse");
+        t = new netacad.models.Topic("4.3.1", "Conclusion");
+        p = new netacad.models.Page("4.3.1.1", "Temps d\u0027accès au réseau", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.2", "Configurations de base des commutateurs", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("4.3.1.3", "Chapitre 4 : Réseaux commutés", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("5", "Configuration de commutateur");
+        s = new netacad.models.Section("5.0", "Introduction");
+        t = new netacad.models.Topic("5.0.1", "Bienvenue");
+        p = new netacad.models.Page("5.0.1.1", "Chapitre 5 : Configuration de commutateur", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.0.1.2", "Exercice : tout le monde se lève", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("5.1", "Configuration de base d’un commutateur");
+        t = new netacad.models.Topic("5.1.1", "Configuration d\u0027un commutateur avec les paramètres d\u0027origine");
+        p = new netacad.models.Page("5.1.1.1", "Séquence de démarrage du commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.2", "Récupération après une panne système", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.3", "LED du commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.4", "Préparation à la gestion de commutateur de base", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.5", "Configuration de l\u0027accès à la gestion du commutateur de base à l\u0027aide d\u0027IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.1.6", "Travaux pratiques : configuration de commutateur de base", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.1.2", "Configuration des ports de commutateur");
+        p = new netacad.models.Page("5.1.2.1", "Communications bidirectionnelles", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.2", "Configuration des ports de commutateur au niveau de la couche physique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.3", "Auto-MDIX", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.4", "Vérification de la configuration des ports de commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.5", "Problèmes de couche d\u0027accès au réseau", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.1.2.6", "Dépannage des problèmes de couche d\u0027accès au réseau", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("5.2", "Sécurité des commutateurs");
+        t = new netacad.models.Topic("5.2.1", "Accès à distance sécurisé");
+        p = new netacad.models.Page("5.2.1.1", "Fonctionnement des SSH", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.1.2", "Configuration de SSH", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.1.3", "Vérification de SSH", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.1.4", "Packet Tracer : configuration de SSH", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("5.2.2", "Sécurité des ports de commutateur");
+        p = new netacad.models.Page("5.2.2.1", "sécurisation des ports inutilisés", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.2", "Sécurité des ports : fonctionnement", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.3", "Sécurité des ports : modes de violation", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.4", "Sécurité des ports : configuration", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.5", "Sécurité des ports : vérification", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.6", "Ports en état Error Disabled", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.7", "Packet Tracer : configuration de la sécurité des ports de commutateur", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.8", "Packet Tracer : dépannage de la sécurité des ports de commutateur", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.2.2.9", "Travaux pratiques : configuration des fonctions de sécurité des commutateurs", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("5.3", "Synthèse");
+        t = new netacad.models.Topic("5.3.1", "Conclusion");
+        p = new netacad.models.Page("5.3.1.1", "Exercice : trio de commutateurs", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.3.1.2", "Packet Tracer - Exercice d\u0027intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("5.3.1.3", "Chapitre 5 : Configuration de commutateur", "");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("6", "VLAN");
+        s = new netacad.models.Section("6.0", "Introduction");
+        t = new netacad.models.Topic("6.0.1", "Accueil");
+        p = new netacad.models.Page("6.0.1.1", "Chapitre 6 : VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.0.1.2", "Exercice en classe - Instructions pour la maison de vacances", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("6.1", "Segmentation d\u0027un VLAN");
+        t = new netacad.models.Topic("6.1.1", "Vue d\u0027ensemble des VLAN");
+        p = new netacad.models.Page("6.1.1.1", "Définitions des VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.1.2", "Avantages des VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.1.3", "Types de réseaux locaux virtuels", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.1.4", "VLAN voix", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.1.5", "Packet Tracer : qui entend la diffusion ?", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("6.1.2", "VLAN dans un environnement à commutateurs multiples");
+        p = new netacad.models.Page("6.1.2.1", "Agrégations de VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.2", "Contrôle des domaines de diffusion à l’aide de réseaux locaux virtuels", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.3", "Étiquetage des trames Ethernet pour l’identification des VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.4", "VLAN natifs et étiquetage 802.1Q", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.5", "Étiquetage VLAN voix", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.6", "Exercice : planification du comportement du commutateur", "Activity", "Other", "Flash Game");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.1.2.7", "Packet Tracer : étude de l’implémentation d’un VLAN", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("6.2", "Implémentations de VLAN");
+        t = new netacad.models.Topic("6.2.1", "Affectation de VLAN");
+        p = new netacad.models.Page("6.2.1.1", "Plages VLAN sur les commutateurs Catalyst", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.2", "Créer un VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.3", "Affectation de ports à des VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.4", "Modification de l’appartenance des ports aux VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.5", "Suppression de VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.6", "Vérification des informations VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.1.7", "Packet Tracer : configuration des VLAN", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("6.2.2", "Agrégations de VLAN");
+        p = new netacad.models.Page("6.2.2.1", "Configuration des liaisons trunk IEEE 802.1Q", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.2.2", "Réinitialisation du trunk à l’état par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.2.3", "Vérification de la configuration du trunk", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.2.4", "Packet Tracer : configuration des trunks", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.2.5", "Travaux pratiques : configuration des VLAN et du trunking", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("6.2.3", "Dépannage des VLAN et des trunks");
+        p = new netacad.models.Page("6.2.3.1", "Problèmes d’adressage IP avec VLAN", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.2", "VLAN manquants", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.3", "Introduction au dépannage des trunks", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.4", "Problèmes courants avec les agrégations", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.5", "Mode de port incorrect", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.6", "Liste de VLAN incorrecte", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.7", "Packet Tracer : dépannage d’une implémentation de VLAN : scénario 1", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.8", "Packet Tracer : dépannage d’une implémentation de VLAN : scénario 2", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.2.3.9", "Travaux pratiques : dépannage des configurations de VLAN", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("6.3", "Routage inter-VLAN avec des routeurs");
+        t = new netacad.models.Topic("6.3.1", "Fonctionnement du routage inter-VLAN");
+        p = new netacad.models.Page("6.3.1.1", "Qu’est-ce que le routage entre VLAN ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.1.2", "Routage inter-VLAN existant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.1.3", "Routage inter-VLAN avec la méthode router-on-a-stick", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.1.4", "Exercice : identification des types de routage inter-VLAN", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("6.3.2", "Configuration du routage inter-VLAN existant");
+        p = new netacad.models.Page("6.3.2.1", "Configuration du routage inter-VLAN existant : préparation", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.2.2", "Configuration du routage inter-VLAN existant : configuration du commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.2.3", "Configuration du routage inter-VLAN existant : configuration de l’interface du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.2.4", "Travaux pratiques : configuration du routage inter-VLAN par interface", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("6.3.3", "configuration du routage entre réseaux locaux virtuels avec la méthode « Router-on-a-stick »");
+        p = new netacad.models.Page("6.3.3.1", "Configuration de type router-on-a-stick : préparation", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.2", "Configuration de type router-on-a-stick : configuration du commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.3", "Configuration de type router-on-a-stick : configuration des sous-interfaces du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.4", "Configuration de type router-on-a-stick : vérification des sous-interfaces", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.5", "Configuration de type router-on-a-stick : vérification du routage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.6", "Packet Tracer : configuration du routage inter-VLAN de type router-on-a-stick", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.7", "Travaux pratiques : configuration du routage inter-VLAN basé sur un trunk 801.2Q", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.3.3.8", "Packet Tracer – Défi de routage inter-VLAN", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("6.4", "Synthèse");
+        t = new netacad.models.Topic("6.4.1", "Conclusion");
+        p = new netacad.models.Page("6.4.1.1", "Pole position", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.4.1.2", "Packet Tracer - Exercice d’intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("6.4.1.3", "Chapitre 6 : VLAN", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("7", "Listes de contrôle d’accès");
+        s = new netacad.models.Section("7.0", "Introduction");
+        t = new netacad.models.Topic("7.0.1", "Bienvenue");
+        p = new netacad.models.Page("7.0.1.1", "Chapitre 7 : listes de contrôle d\u0027accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.0.1.2", "Laissez-moi donc vous aider", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("7.1", "Fonctionnement des listes de contrôle d’accès");
+        t = new netacad.models.Topic("7.1.1", "Objectif des listes de contrôle d\u0027accès");
+        p = new netacad.models.Page("7.1.1.1", "Qu’est-ce qu’une liste de contrôle d’accès ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.1.2", "Filtrage des paquets", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.1.3", "Fonctionnement des listes de contrôle d’accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.1.4", "Packet Tracer : démonstration des listes de contrôle d\u0027accès", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.1.2", "Masques génériques dans les listes de contrôle d\u0027accès");
+        p = new netacad.models.Page("7.1.2.1", "Initiation au masque générique de liste de contrôle d\u0027accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.2", "Exemples de masques génériques ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.3", "Calcul du masque générique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.4", "Mots-clés de masque générique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.5", "Exemples de mot-clé de masque générique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.6", "Exercice : détermination du masque générique approprié", "Activity", "Other", "FIB Flash");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.2.7", "Exercice : détermination de l\u0027autorisation ou du refus", "Activity", "Other", "Case à cocher Flash");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.1.3", "Directives concernant la création des listes de contrôle d\u0027accès");
+        p = new netacad.models.Page("7.1.3.1", "Directives générales sur la création de listes de contrôle d’accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.3.2", "Méthodes recommandées pour les listes de contrôle d’accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.3.3", "Exercice : fonctionnement des listes de contrôle d\u0027accès", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.1.4", "Directives concernant le placement des listes de contrôle d\u0027accès");
+        p = new netacad.models.Page("7.1.4.1", "Positionnement des listes de contrôle d’accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.1.4.2", "Position de l’ACL standard", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("7.2", "Listes de contrôle d\u0027accès IPv4 standard ");
+        t = new netacad.models.Topic("7.2.1", "Configuration des listes de contrôle d\u0027accès IPv4 standard");
+        p = new netacad.models.Page("7.2.1.1", "Syntaxe de listes de contrôle d\u0027accès IPv4 standard numérotées", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.2", "Application de listes de contrôle d\u0027accès IPv4 standard aux interfaces", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.3", "Exemples de listes de contrôle d’accès IPv4 standard numérotées", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.4", "Syntaxe de listes de contrôle d\u0027accès IPv4 standard nommées", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.5", "Activité – Configurer des listes ACL IPv4 standard", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.6", "Packet Tracer – Configurer des listes ACL IPv4 standard numérotées", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.1.7", "Packet Tracer : configuration des listes de contrôle d\u0027accès IPv4 standard nommées", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.2.2", "Modification des listes de contrôle d\u0027accès IPv4");
+        p = new netacad.models.Page("7.2.2.1", "Méthode 1 : à l\u0027aide d\u0027un éditeur de texte", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.2.2", "Méthode 2 : à l\u0027aide de numéros d\u0027ordre", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.2.3", "Modification des listes de contrôle d\u0027accès standard nommées", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.2.4", "Vérification des listes de contrôle d’accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.2.5", "Statistiques de la liste de contrôle d\u0027accès", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.2.6", "Atelier – Configuration et modification de listes ACL IPv4 standard", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.2.3", "Sécurisation des ports VTY à l\u0027aide d\u0027une liste de contrôle d\u0027accès IPv4 standard ");
+        p = new netacad.models.Page("7.2.3.1", "La commande access-class ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.3.2", "Vérification de la sécurité du port VTY", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.3.3", "Packet Tracer – Configurer une liste de contrôle d’accès IPv4 sur des lignes VTY", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.2.3.4", "Travaux pratiques : configuration et vérification des restrictions VTY", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("7.3", "Dépannage des listes de contrôle d\u0027accès");
+        t = new netacad.models.Topic("7.3.1", "Traitement des paquets avec les listes de contrôle d\u0027accès");
+        p = new netacad.models.Page("7.3.1.1", "L\u0027énoncé deny any implicite", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.1.2", "L\u0027ordre des entrées ACE dans une liste ACL", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.1.3", "Cisco IOS réorganise les listes ACL standard ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.1.4", "Processus de routage et listes ACL", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("7.3.2", "Erreurs courantes liées aux listes ACL IPv4 standard ");
+        p = new netacad.models.Page("7.3.2.1", "Dépannage de listes ACL IPv4 standard – Exemple 1", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.2.2", "Dépannage de listes ACL IPv4 standard – Exemple 2", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.2.3", "Dépannage de listes ACL IPv4 standard – Exemple 3", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.3.2.4", "Packet Tracer – Dépanner des listes ACL IPv4 standard", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("7.4", "Synthèse");
+        t = new netacad.models.Topic("7.4.1", "Conclusion");
+        p = new netacad.models.Page("7.4.1.1", "Accès FTP refusé", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.4.1.2", "Packet Tracer - Exercice d\u0027intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("7.4.1.3", "Chapitre 7 : listes de contrôle d\u0027accès", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("8", "Protocole DHCP");
+        s = new netacad.models.Section("8.0", "Introduction");
+        t = new netacad.models.Topic("8.0.1", "Bienvenue");
+        p = new netacad.models.Page("8.0.1.1", "Chapitre 8 : DHCP", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("8.1", "DHCPv4");
+        t = new netacad.models.Topic("8.1.1", "Fonctionnement de DHCPv4");
+        p = new netacad.models.Page("8.1.1.1", "Présentation de l\u0027DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.1.2", "Fonctionnement de DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.1.3", "Format du message DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.1.4", "Messages de détection et d\u0027offre DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.1.5", "Exercice : identification des étapes du fonctionnement de DHCPv4", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.1.2", "Configuration d\u0027un serveur DHCPv4 de base");
+        p = new netacad.models.Page("8.1.2.1", "Configuration d\u0027un serveur DHCPv4 de base", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.2.2", "Vérification de DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.2.3", "Relais DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.2.4", "Travaux pratiques : configuration de DHCPv4 de base sur un routeur", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.2.5", "Travaux pratiques : configuration de DHCPv4 de base sur un commutateur", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.1.3", "Configurez le client DHCPv4");
+        p = new netacad.models.Page("8.1.3.1", "Configuration d\u0027un routeur en tant que client DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.3.2", "Configuration d\u0027un routeur sans fil en tant que client DHCPv4 ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.3.3", "Packet Tracer : configuration de DHCPv4 à l\u0027aide de Cisco IOS", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.1.4", "Dépannage de DHCPv4");
+        p = new netacad.models.Page("8.1.4.1", "Tâches de dépannage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.4.2", "Vérification de la configuration de DHCPv4 du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.4.3", "Débogage de DHCPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.1.4.4", "Travaux pratiques : dépannage de DHCPv4", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("8.2", "DHCPv6");
+        t = new netacad.models.Topic("8.2.1", "SLAAC et DHCPv6");
+        p = new netacad.models.Page("8.2.1.1", "Configuration automatique des adresses sans état (SLAAC)", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.2", "Fonctionnement des SLAAC", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.3", "SLAAC et DHCPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.4", "Option SLAAC", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.5", "Option DHCPv6 sans état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.6", "Option DHCPv6 avec état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.7", "Fonctionnement de DHCPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.1.8", "Exercice : identification des étapes du fonctionnement de DHCPv6", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.2.2", "DHCPv6 sans état");
+        p = new netacad.models.Page("8.2.2.1", "Configuration d\u0027un routeur en tant que serveur DHCPv6 sans état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.2.2", "Configuration d\u0027un routeur en tant que client DHCPv6 sans état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.2.3", "Vérification de DHCPv6 sans état ", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.2.3", "Serveur DHCPv6 avec état");
+        p = new netacad.models.Page("8.2.3.1", "Configuration d\u0027un routeur en tant que serveur DHCPv6 avec état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.3.2", "Configuration d\u0027un routeur en tant que client DHCPv6 avec état", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.3.3", "Vérification de DHCPv6 avec état ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.3.4", "Configuration d\u0027un routeur en tant qu\u0027agent de relais DHCPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.3.5", "Travaux pratiques : configuration de DHCPv6 sans état et avec état", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("8.2.4", "Dépannage de DHCPv6");
+        p = new netacad.models.Page("8.2.4.1", "Tâches de dépannage", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.4.2", "Vérification de la configuration de DHCPv6 du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.4.3", "Débogage de DHCPv6", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.2.4.4", "Travaux pratiques : dépannage de DHCPv6", "Activity", "Lab", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("8.3", "Synthèse");
+        t = new netacad.models.Topic("8.3.1", "Conclusion");
+        p = new netacad.models.Page("8.3.1.1", "de l\u0027exercice en classe : IoE et DHCP", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.3.1.2", "Packet Tracer - Exercice d\u0027intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("8.3.1.3", "Chapitre 8 : DHCP", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("9", "NAT pour IPv4");
+        s = new netacad.models.Section("9.0", "Introduction");
+        t = new netacad.models.Topic("9.0.1", "Bienvenue");
+        p = new netacad.models.Page("9.0.1.1", "Chapitre 9 : NAT pour IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.0.1.2", " NAT conceptuelle", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("9.1", "Fonctionnement de la NAT");
+        t = new netacad.models.Topic("9.1.1", "Caractéristiques de la NAT");
+        p = new netacad.models.Page("9.1.1.1", "Espace d\u0027adressage privé IPv4", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.1.2", "Qu’est-ce que la fonction NAT ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.1.3", "Terminologie NAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.1.4", "Terminologie NAT (suite)", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.1.5", "Fonctionnement de NAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.1.6", "Exercice : identification de la terminologie NAT", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.1.2", "Types de NAT");
+        p = new netacad.models.Page("9.1.2.1", "Traduction d\u0027adresses réseau statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.2.2", "NAT dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.2.3", "Port Address Translation (PAT)", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.2.4", "Port disponible suivant", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.2.5", "Comparaison entre NAT et PAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.2.6", "Packet Tracer : étude du fonctionnement de la NAT", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.1.3", "Avantages de la fonction NAT");
+        p = new netacad.models.Page("9.1.3.1", "Avantages de la fonction NAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.1.3.2", "Inconvénients de la fonction NAT", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("9.2", "Configuration du routage NAT");
+        t = new netacad.models.Topic("9.2.1", "Configuration de la fonction NAT statique");
+        p = new netacad.models.Page("9.2.1.1", "Configurer la traduction d\u0027adresses réseau statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.1.2", "Analyse de la NAT statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.1.3", "Vérification de la NAT statique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.1.4", "Packet Tracer : configuration de la NAT statique", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.2.2", "Configuration de la NAT dynamique");
+        p = new netacad.models.Page("9.2.2.1", "Fonctionnement de la NAT dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.2.2", "Configuration de la NAT dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.2.3", "Analyse de la NAT dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.2.4", "Vérification de la NAT dynamique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.2.5", "Packet Tracer : configuration de la NAT dynamique", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.2.6", "Travaux pratiques : configuration de la NAT dynamique et statique", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.2.3", "configuration de la fonction PAT");
+        p = new netacad.models.Page("9.2.3.1", "Configuration de la PAT : pool d\u0027adresses", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.2", "Configuration de la PAT : adresse unique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.3", "Analyse de la PAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.4", "Vérification de PAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.5", "Exercice : identification des informations d\u0027adresses à chaque saut", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.6", "Packet Tracer : mise en œuvre de la NAT statique et dynamique", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.3.7", "Travaux pratiques : configuration de la traduction d\u0027adresses de port (PAT)", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.2.4", "Configuration du transfert de port");
+        p = new netacad.models.Page("9.2.4.1", "Transfert de port", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.4.2", "Exemple de routeur sans fil ", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.4.3", "Configuration du transfert de port avec IOS", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.4.4", "Packet Tracer – Configurer un transfert de port sur un routeur sans fil", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("9.2.5", "NAT et IPv6");
+        p = new netacad.models.Page("9.2.5.1", "NAT pour IPv6 ?", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.5.2", "Adresses IPv6 locales uniques", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.2.5.3", "NAT pour IPv6", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("9.3", "Dépanner la NAT");
+        t = new netacad.models.Topic("9.3.1", "Commandes de dépannage de la NAT");
+        p = new netacad.models.Page("9.3.1.1", "Les commandes show ip nat", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.3.1.2", "La commande debug ip nat", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.3.1.3", "Scénario de dépannage de la NAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.3.1.4", "Packet Tracer : vérification et dépannage des configurations de la NAT", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.3.1.5", "Travaux pratiques : dépannage des configurations de la NAT", "Activity", "Packet Tracer", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("9.4", "Synthèse");
+        t = new netacad.models.Topic("9.4.1", "Conclusion");
+        p = new netacad.models.Page("9.4.1.1", "Contrôle de la NAT", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.4.1.2", "Packet Tracer - Exercice d\u0027intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("9.4.1.3", "Chapitre 9 : NAT pour IPv4", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        m = new netacad.models.Module("10", "Découverte, gestion et maintenance des périphériques");
+        s = new netacad.models.Section("10.0", "Introduction");
+        t = new netacad.models.Topic("10.0.1", "Bienvenue");
+        p = new netacad.models.Page("10.0.1.1", "Chapitre 10 : Découverte, gestion et maintenance des périphériques", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("10.1", "Détection de périphériques");
+        t = new netacad.models.Topic("10.1.1", "Détection de périphériques avec le protocole CDP");
+        p = new netacad.models.Page("10.1.1.1", "Présentation du protocole CDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.1.2", "Configuration et vérification du protocole CDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.1.3", "Détection des périphériques à l\u0027aide du protocole CDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.1.4", "Packet Tracer - Mappage d\u0027un réseau avec le protocole CDP", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.1.2", "Détection de périphériques avec le protocole LLDP");
+        p = new netacad.models.Page("10.1.2.1", "Présentation du protocole LLDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.2.2", "Configuration et vérification du protocole LLDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.2.3", "Détection des périphériques à l\u0027aide du protocole LLDP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.2.4", "Exercice - Comparaison des protocoles CDP et LLDP", "Activity", "Other", "Case à cocher Flash");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.1.2.5", "TP - Configuration des protocoles CDP et LLDP", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("10.2", "Gestion des périphériques");
+        t = new netacad.models.Topic("10.2.1", "Protocole NTP");
+        p = new netacad.models.Page("10.2.1.1", "Réglage de l\u0027horloge système", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.1.2", "Fonctionnement du protocole NTP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.1.3", "Configuration et vérification du protocole NTP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.1.4", "Packet Tracer - Configuration et vérification du protocole NTP", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.2.2", "Fonctionnement de Syslog");
+        p = new netacad.models.Page("10.2.2.1", "Présentation de Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.2.2", "Fonctionnement de Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.2.3", "Format de message Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.2.4", "Horodatage de service", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.2.5", "Exercice : interprétation des résultats Syslog", "Activity", "Other", "Flash DnD");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.2.3", "Configuration de Syslog");
+        p = new netacad.models.Page("10.2.3.1", "Serveur Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.3.2", "Journalisation par défaut", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.3.3", "Commandes de routeur et de commutateur pour les clients Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.3.4", "Vérification de Syslog", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.3.5", "Packet Tracer : configuration de Syslog et de NTP", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.2.3.6", "Travaux pratiques : configuration de Syslog et de NTP", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("10.3", "Maintenance des périphériques");
+        t = new netacad.models.Topic("10.3.1", "Maintenance des fichiers du routeur et du commutateur");
+        p = new netacad.models.Page("10.3.1.1", "Systèmes de fichiers du routeur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.2", "Systèmes de fichiers du commutateur", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.3", "Sauvegarde et restauration à l\u0027aide de fichiers texte", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.4", "Sauvegarde et restauration via TFTP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.5", "Utilisation des ports USB d\u0027un routeur Cisco", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.6", "Sauvegarde et restauration par USB", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.7", "Récupération des mots de passe", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.8", "Packet Tracer - Sauvegarde des fichiers de configuration", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.9", "Travaux pratiques - Gestion des fichiers de configuration du routeur avec Tera Term", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.10", "Travaux pratiques - Gestion des fichiers de configuration des périphériques via TFTP, Flash et USB", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.1.11", "Travaux pratiques - Procédures de récupération des mots de passe", "Activity", "Lab", "Hands-On");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.3.2", "Fichiers système IOS");
+        p = new netacad.models.Page("10.3.2.1", "Modèle de package d\u0027image système IOS 15", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.2.2", "Noms de fichiers d\u0027image IOS", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.3.3", "Gestion de l\u0027image IOS");
+        p = new netacad.models.Page("10.3.3.1", "Serveurs TFTP en tant qu\u0027emplacements de sauvegarde", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.3.2", "Étapes de sauvegarde de l\u0027image IOS sur serveur TFTP", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.3.3", "Étapes pour copier une image IOS sur un périphérique", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.3.4", "Commande « boot system »", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.3.5", "Packet Tracer : utilisation d\u0027un serveur TFTP pour la mise à niveau d\u0027une image Cisco IOS", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.3.6", "Démonstration vidéo : gestion des images Cisco IOS", "Activity", "Other", "Flash PnC");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.3.4", "Licences logicielles ");
+        p = new netacad.models.Page("10.3.4.1", "Présentation de l\u0027obtention des licences", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.4.2", "Processus d’obtention des licences", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.4.3", "Étape 1. Achat du package logiciel ou de la fonction à installer", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.4.4", "Étape 2. Obtention d\u0027une licence", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.4.5", "Étape 3. Installation de la licence", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        t = new netacad.models.Topic("10.3.5", "Vérification et gestion de la licence");
+        p = new netacad.models.Page("10.3.5.1", "Vérification de la licence", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.5.2", "Activation d\u0027une licence de droit d\u0027utilisation d\u0027évaluation", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.5.3", "Sauvegarde de la licence", "Content");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.5.4", "Désinstallation de la licence", "");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.3.5.5", "Démonstration vidéo : utilisation de licences d\u0027image Cisco IOS 15", "Activity", "Other", "Flash PnC");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        s = new netacad.models.Section("10.4", "Synthèse");
+        t = new netacad.models.Topic("10.4.1", "Conclusion");
+        p = new netacad.models.Page("10.4.1.1", "Packet Tracer - Exercice d\u0027intégration des compétences", "Activity", "Packet Tracer", "Skills Integration Challenge");
+        t.appendChild(p);
+        p = new netacad.models.Page("10.4.1.2", "Chapitre 10 : Détection, gestion et maintenance des périphériques", "Content");
+        t.appendChild(p);
+        s.appendChild(t);
+        m.appendChild(s);
+        c.appendChild(m);
+        return c;
+      }();
+
+    </script>
+  </head>
+  <body aria-live="polite">
+    <div id="login" role="document" aria-hidden="true">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+    <div id="splash" role="document" aria-hidden="true">
+      <div class="logo" title="Cisco Systems, Inc."></div>
+      <h1>Notions de base sur le routage et la commutation</h1>
+      <p>Cliquez sur une image pour commencer.</p>
+      <ul>
+        <li>
+          <div class="bg-0">
+            <input id="bg-0" type="image" src="course/common/backgrounds/bg-0-S.jpg" alt="Fond d&#x0027;écran 0" aria-label="Fond d&#x0027;écran 0"/>
+            <label id="bg-0-text" for="bg-0"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-1">
+            <input id="bg-1" type="image" src="course/common/backgrounds/bg-1-S.jpg" alt="Fond d&#x0027;écran 1" aria-label="Fond d&#x0027;écran 1"/>
+            <label id="bg-1-text" for="bg-1"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-2">
+            <input id="bg-2" type="image" src="course/common/backgrounds/bg-2-S.jpg" alt="Fond d&#x0027;écran 2" aria-label="Fond d&#x0027;écran 2"/>
+            <label id="bg-2-text" for="bg-2"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-3">
+            <input id="bg-3" type="image" src="course/common/backgrounds/bg-3-S.jpg" alt="Fond d&#x0027;écran 3" aria-label="Fond d&#x0027;écran 3"/>
+            <label id="bg-3-text" for="bg-3"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-4">
+            <input id="bg-4" type="image" src="course/common/backgrounds/bg-4-S.jpg" alt="Fond d&#x0027;écran 4" aria-label="Fond d&#x0027;écran 4"/>
+            <label id="bg-4-text" for="bg-4"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-5">
+            <input id="bg-5" type="image" src="course/common/backgrounds/bg-5-S.jpg" alt="Fond d&#x0027;écran 5" aria-label="Fond d&#x0027;écran 5"/>
+            <label id="bg-5-text" for="bg-5"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-6">
+            <input id="bg-6" type="image" src="course/common/backgrounds/bg-6-S.jpg" alt="Fond d&#x0027;écran 6" aria-label="Fond d&#x0027;écran 6"/>
+            <label id="bg-6-text" for="bg-6"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-7">
+            <input id="bg-7" type="image" src="course/common/backgrounds/bg-7-S.jpg" alt="Fond d&#x0027;écran 7" aria-label="Fond d&#x0027;écran 7"/>
+            <label id="bg-7-text" for="bg-7"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-8">
+            <input id="bg-8" type="image" src="course/common/backgrounds/bg-8-S.jpg" alt="Fond d&#x0027;écran 8" aria-label="Fond d&#x0027;écran 8"/>
+            <label id="bg-8-text" for="bg-8"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-9">
+            <input id="bg-9" type="image" src="course/common/backgrounds/bg-9-S.jpg" alt="Fond d&#x0027;écran 9" aria-label="Fond d&#x0027;écran 9"/>
+            <label id="bg-9-text" for="bg-9"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-10">
+            <input id="bg-10" type="image" src="course/common/backgrounds/bg-10-S.jpg" alt="Fond d&#x0027;écran 10" aria-label="Fond d&#x0027;écran 10"/>
+            <label id="bg-10-text" for="bg-10"></label>
+          </div>
+        </li>
+        <li>
+          <div class="bg-11">
+            <input id="bg-11" type="image" src="course/common/backgrounds/bg-11-S.jpg" alt="Fond d&#x0027;écran 11" aria-label="Fond d&#x0027;écran 11"/>
+            <label id="bg-11-text" for="bg-11"></label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="main" role="document" aria-hidden="false">
+      <div id="header">
+        <div class="logo" title="Cisco Systems, Inc."></div>
+        <h1><a id="course-title" href="">Notions de base sur le routage et la commutation</a></h1>
+      </div>
+      <div id="map" role="navigation">
+        <div class="map-container" id="map-modules" aria-live="polite">
+          <div class="scroll-pane active">
+            <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+            <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+            <div class="scroll-pane-content" tabindex="-1"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-sections" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+            <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+            <div class="scroll-pane-content" tabindex="-1"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-topics" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+            <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+            <div class="scroll-pane-content" tabindex="-1"></div>
+          </div>
+        </div>
+        <div class="map-container" id="map-pages" aria-live="polite">
+          <div class="scroll-pane">
+            <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+            <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+            <div class="scroll-pane-content" tabindex="-1"></div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="container">
+          <div id="page-header">
+            <nav class="breadcrumbs" aria-label="breadcumbs">
+              <ul>
+                <li aria-level="1">
+                  <a id="breadcrumbs-module" href="#">
+                    <span id="breadcrumbs-module-li" class="breadcrumbs-header">Chapitre #</span>
+                    <span id="breadcrumbs-module-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="2">
+                  <a id="breadcrumbs-section" href="#">
+                    <span id="breadcrumbs-section-li" class="breadcrumbs-header">Section #</span>
+                    <span id="breadcrumbs-section-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="3">
+                  <a id="breadcrumbs-topic" href="#">
+                    <span id="breadcrumbs-topic-li" class="breadcrumbs-header">Rubrique #</span>
+                    <span id="breadcrumbs-topic-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+                <li aria-level="4">
+                  <a id="breadcrumbs-page" href="#">
+                    <span id="breadcrumbs-page-li" class="breadcrumbs-header">Page #</span>
+                    <span id="breadcrumbs-page-title" class="breadcrumbs-title"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="page-menu">
+              <button type="button" id="page-menu-close-button" title="Fermer">
+                <span aria-hidden="true">Fermer</span>
+              </button>
+            </div>
+          </div>
+          <div id="page-content" role="main" aria-live="polite"></div>
+          <div id="page-footer">
+            <div id="page-slide-buttons"></div>
+            <div class="page-menu" role="menu">
+              <button type="button" id="page-menu-transcript-button" role="menuitem" title="Texte">Texte</button>
+              <button type="button" id="page-menu-bookmark-button" role="menuitem" title="Signet">Signet</button>
+              <button type="button" id="page-menu-previous-button" role="menuitem" title="Précédent">Précédent</button>
+              <button type="button" id="page-menu-next-button" role="menuitem" title="Suivant">Suivant</button>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-course-index" aria-hidden="true" aria-labelledby="menu-course-index" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Index du cours</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div id="course-index-buttons" role="menu">
+                <button type="button" class="index-button" id="index-course" role="menuitem" title="Index du cours">
+                  <span class="index-button-icon"></span>
+                  <span class="index-button-label">Index du cours</span>
+                </button>
+                <button type="button" class="index-button" id="index-packet-tracer" role="menuitem" title="Index de Packet Tracer">
+                  <span class="index-button-icon"></span>
+                  <span class="index-button-label">Index de Packet Tracer</span>
+                </button>
+                <button type="button" class="index-button" id="index-lab" role="menuitem" title="Index des travaux pratiques">
+                  <span class="index-button-icon"></span>
+                  <span class="index-button-label">Index des travaux pratiques</span>
+                </button>
+                <button type="button" class="index-button" id="index-video" role="menuitem" title="Index des vidéos">
+                  <span class="index-button-icon"></span>
+                  <span class="index-button-label">Index des vidéos</span>
+                </button>
+              </div>
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-recent-pages" aria-hidden="true" aria-labelledby="menu-recent-pages" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Pages récentes</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-bookmarks" aria-hidden="true" aria-labelledby="menu-bookmarks" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Signets</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-backgrounds" aria-hidden="true" aria-labelledby="menu-backgrounds" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Sélectionner l&#x0027;arrière-plan</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-search" aria-hidden="true" aria-labelledby="menu-search" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Rechercher</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+            <input id="search-input" title="Rechercher" aria-label="Rechercher" type="search"/>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-languages" aria-hidden="true" aria-labelledby="menu-languages" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Langues</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div class="scroll-pane active">
+                <button type="button" class="scroll-pane-up-button" title="Défiler vers le haut" aria-hidden="true">Défiler vers le haut</button>
+                <button type="button" class="scroll-pane-down-button" title="Défiler vers le bas" aria-hidden="true">Défiler vers le bas</button>
+                <div class="scroll-pane-content" tabindex="-1">
+                  <p>Sélectionnez une langue de cours :</p>
+                  <ul>
+                    <li><a href="#" data-lang="ar" lang="ar" title="العربية (Arabic)" >العربية</a></li>
+                    <li><a href="#" data-lang="de" lang="de" title="Deutsch (German)">Deutsch</a></li>
+                    <li><a href="#" data-lang="en" lang="en" title="English (English)">English</a></li>
+                    <li><a href="#" data-lang="es" lang="es" title="Español (Spanish)">Español</a></li>
+                    <li><a href="#" data-lang="fr" lang="fr" title="Français (French)">Français</a></li>
+                    <li><a href="#" data-lang="he" lang="he" title="עברית (Hebrew)">עברית</a></li>
+                    <li><a href="#" data-lang="hr" lang="hr" title="Hrvatski (Croatian)">Hrvatski</a></li>
+                    <li><a href="#" data-lang="hu" lang="hu" title="Magyar (Hungarian)">Magyar</a></li>
+                    <li><a href="#" data-lang="hy" lang="hy" title="Հայերեն (Armenian)">Հայերեն</a></li>
+                    <li><a href="#" data-lang="it" lang="it" title="Italiano (Italian)">Italiano</a></li>
+                    <li><a href="#" data-lang="jp" lang="ja" title="日本語 (Japanese)">日本語</a></li>
+                    <li><a href="#" data-lang="ka" lang="ka" title="ქართული (Georgian)">ქართული</a></li>
+                    <li><a href="#" data-lang="ko" lang="ko" title="한국어 (Korean)">한국어</a></li>
+                    <li><a href="#" data-lang="nl" lang="nl" title="Nederlands (Dutch)">Nederlands</a></li>
+                    <li><a href="#" data-lang="pl" lang="pl" title="Polski (Polish)">Polski</a></li>
+                    <li><a href="#" data-lang="pt" lang="pt" title="Português (Portuguese)">Português</a></li>
+                    <li><a href="#" data-lang="ro" lang="ro" title="Română (Romanian)">Română</a></li>
+                    <li><a href="#" data-lang="ru" lang="ru" title="Русский (Russian)">Русский</a></li>
+                    <li><a href="#" data-lang="tr" lang="tr" title="Türkçe (Turkish)">Türkçe</a></li>
+                    <li><a href="#" data-lang="uk" lang="uk" title="Українська (Ukrainian)">Українська</a></li>
+                    <li><a href="#" data-lang="zh" lang="zh-Hans" title="简体中文 (Simplified Chinese)">简体中文</a></li>
+                    <li><a href="#" data-lang="ch" lang="zh-Hant" title="繁體中文 (Traditional Chinese)">繁體中文</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-help" aria-hidden="true" aria-labelledby="menu-help" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Aide</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <div id="help-buttons" role="menu">
+                <button type="button" class="help-button" id="help-1" role="menuitem" title="Présentation">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">Présentation</span>
+                </button>
+                <button type="button" class="help-button" id="help-2" role="menuitem" title="Navigation dans le cours">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">Navigation dans le cours</span>
+                </button>
+                <button type="button" class="help-button" id="help-3" role="menuitem" title="Évaluation et attestation">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">Évaluation et attestation</span>
+                </button>
+                <button type="button" class="help-button" id="help-4" role="menuitem" title="Packet Tracer : didacticiel d'installation">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">Packet Tracer : didacticiel d'installation</span>
+                </button>
+                <button type="button" class="help-button" id="help-5" role="menuitem" title="Packet Tracer : didacticiel de navigation">
+                  <span class="help-button-icon"></span>
+                  <span class="help-button-label">Packet Tracer : didacticiel de navigation</span>
+                </button>
+                <div class="help-button" role="menuitem" title="Retrouvez-nous sur Facebook">
+                  <a href="http://www.facebook.com/cisconetworkingacademy" target="facebook-netacad">
+                    <div class="help-facebook-icon"></div>
+                    <div class="help-button-label">Retrouvez-nous sur Facebook</div>
+                  </a>
+                </div>
+              </div>
+              <div id="help-content" tabindex="-1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay-developer" aria-hidden="true" aria-labelledby="menu-developer" aria-live="polite" tabindex="0">
+          <div class="overlay-header">
+            <div class="overlay-icon"></div>
+            <div class="overlay-label">Developer Tools</div>
+            <button type="button" class="overlay-close-button" title="Fermer">
+              <span aria-hidden="true">Fermer</span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <div class="overlay-container">
+              <ul class="items">
+                <li><button id="clear-local-storage-button">Clear Local Storage</button></li>
+                <li><button id="clear-background-button">Clear Background</button></li>
+                <li>
+                  <button id="enable-pseudolocalization-button">Enable Pseudolocalization</button>
+                  <button id="disable-pseudolocalization-button">Disable Pseudolocalization</button>
+                </li>
+                <li><button id="disable-developer-tools-button">Disable Developer Tools</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="menu" role="menu">
+        <div class="menu-buttons">
+          <button type="button" class="menu-button" role="menuitem" id="menu-developer" title="Developer Tools" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Developer Tools</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-recent-pages" title="Pages récentes" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Pages récentes</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-bookmarks" title="Signets" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Signets</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-course-index" title="Index du cours" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Index du cours</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-search" title="Rechercher" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Rechercher</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-languages" title="Langues" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Langues</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-backgrounds" title="Sélectionner l'arrière-plan" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Sélectionner l'arrière-plan</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-help" title="Aide" aria-haspopup="true">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Aide</span>
+            </span>
+          </button>
+          <button type="button" class="menu-button" role="menuitem" id="menu-return" title="Revenir au cours">
+            <span class="menu-button-icon"></span>
+            <span class="menu-button-box">
+              <span class="menu-button-label">Revenir au cours</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

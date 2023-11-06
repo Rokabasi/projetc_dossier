@@ -1,0 +1,1 @@
+La figure illustre le processus DHCPv6 avec état pour un ordinateur.  Le routeur envoie un message d'annonce de routeur ne contenant aucune information d'adressage et il demande à l'ordinateur de trouver un serveur DHCPv6 pour obtenir toutes les informations d'adressage nécessaires.  Ceci en réponse au message de sollicitation du routeur envoyé par l’ordinateur.

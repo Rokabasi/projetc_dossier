@@ -1,0 +1,1 @@
+La figure illustre la topologie de référence pour le protocole OSPF.

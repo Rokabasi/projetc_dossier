@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.1 Configuration des liaisons trunk IEEE 802.1Q</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration des liaisons trunk IEEE 802.1Q</h1>
+        <div>
+          <p>Une trunk de VLAN est une liaison OSI de couche 2 entre deux commutateurs qui acheminent le trafic pour tous les VLAN (sauf si la liste des VLAN autorisés est limitée manuellement ou de façon dynamique). Pour activer les liaisons trunk, configurez les ports sur chaque extrémité de la liaison physique avec des ensembles parallèles de commandes.</p>
+          <p></p>
+          <p>Pour configurer un port de commutateur sur l’extrémité d’une liaison trunk, utilisez la commande switchport mode trunk. Avec cette commande, l’interface passe en mode trunking permanent. Le port entame une négociation DTP (Dynamic Trunking Protocol) pour convertir le lien en liaison trunk, même si l’interface connectée n’accepte pas ce changement. Dans ce cours, la commande switchport mode trunk est la seule méthode appliquée pour la configuration de trunk.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : ce cours n’a pas pour objet DTP.</p>
+          <p></p>
+          <p>La syntaxe de commande de Cisco IOS pour spécifier un autre VLAN natif que le VLAN 1 est indiquée dans la Figure 1. Dans cet exemple, le VLAN 99 est configuré en tant que VLAN natif à l’aide de la commande switchport trunk native vlan 99.</p>
+          <p></p>
+          <p>Utilisez la commande Cisco IOS <b>switchport trunk allowed vlan </b><i>vlan-list</i> pour indiquer la liste des VLAN autorisés sur la liaison.</p>
+          <p></p>
+          <p>Sur la Figure 2, les VLAN 10, 20 et 30 prennent en charge les ordinateurs Personnel, Étudiant et Invité (PC1, PC2 et PC3). Le port F0/1 du commutateur S1 est configuré en tant que port trunk et transmet le trafic pour les VLAN 10, 20 et 30. Le VLAN 99 est défini comme VLAN natif. </p>
+          <p></p>
+          <p>La Figure 3 illustre la configuration du port F0/1 du commutateur S1 en tant que port trunk. Le VLAN natif devient le VLAN 99 et la liste des VLAN autorisés est limitée à 10, 20, 30 et 99.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: cette configuration suppose l’utilisation de commutateurs Cisco Catalyst 2960 exploitant automatiquement l’encapsulation 802.1Q sur les liaisons trunk. D’autres commutateurs peuvent nécessiter la configuration manuelle de l’encapsulation. Configurez toujours les deux extrémités d’une liaison trunk avec le même VLAN natif. Si la configuration du trunk 802.1Q n’est pas identique à chaque extrémité, le logiciel Cisco IOS signale des erreurs.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un tableau des commandes pour la configuration d’une liaison sur un port de commutateur et leurs descriptions. La Figure 2 montre un simple LAN avec quatre VLAN.  Une légende illustre les quatre VLAN, leurs numéros et noms, et les adresses réseau de chacun. La Figure 3 montre la syntaxe pour la configuration de F0/1 en tant que liaison, la définition du VLAN natif à 99 et la définition des VLAN autorisés à inclure 10, 20 et 30.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

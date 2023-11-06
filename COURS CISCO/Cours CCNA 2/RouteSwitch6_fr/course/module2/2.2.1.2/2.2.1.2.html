@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.2 Options de tronçon suivant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Options de tronçon suivant</h1>
+        <div>
+          <p>Dans cet exemple, les Figures 1 à 3 affichent les tables de routage de R1, R2 et R3. Remarquez que chaque routeur comprend des entrées uniquement pour les réseaux directement connectés et les adresses locales associées. Aucun des routeurs n'a connaissance des réseaux au-delà de leurs interfaces connectées directement.</p>
+          <p></p>
+          <p>Par exemple, R1 n'a pas connaissance des réseaux :</p>
+          <p>
+            <ul>
+              <li>172.16.1.0/24 : le réseau local sur R2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.1.0/24 : le réseau série entre R2 et R3</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>192.168.2.0/24 : le réseau local sur R3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 4 illustre une requête ping réussie de R1 vers R2. La Figure 5 illustre une requête ping non réussie vers le réseau local R3. La raison en est que R1 n'a pas d'entrée dans sa table de routage pour le réseau local R3.</p>
+          <p></p>
+          <p>Le tronçon suivant peut être identifié par une adresse IP, une interface de sortie, ou les deux. La manière dont la destination est spécifiée crée un des trois types de route suivants : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Route de tronçon suivant </b>: seule l’adresse IP du tronçon suivant est spécifiée</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Route statique connectée directement </b>: seule l’interface de sortie du routeur est spécifiée</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Route statique entièrement spécifiée </b>: l’adresse IP de tronçon suivant et l’interface de sortie sont spécifiées</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures sont basées sur le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN.  Les Figures 1 à 3 présentent les tables de routage de chaque routeur.  Chaque routeur répertorie uniquement les réseaux directement connectés dans la table de routage. La Figure 4 affiche le routeur R1 envoyant une requête ping à l’autre extrémité de la liaison série vers le routeur 2.  Cette requête ping aboutit, car ces routeurs sont directement connectés. La Figure 5 affiche la tentative d’envoi d’une requête ping du routeur R1 à l’interface LAN sur le routeur R3.  Cette requête ping a échoué, car les routeurs reconnaissent uniquement leurs réseaux directement connectés.  Le routeur R1 n’a aucun chemin pour aller vers le LAN sur le routeur R3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.1 Agrégations de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Agrégations de VLAN</h1>
+        <div>
+          <p>Une agrégation est une liaison point à point entre deux périphériques réseau qui porte plusieurs VLAN. Un trunk de VLAN permet d’étendre les VLAN à l’ensemble d’un réseau. Cisco prend en charge la norme IEEE 802.1Q pour la coordination des trunks sur les interfaces Fast Ethernet, Gigabit Ethernet et 10 Gigabit Ethernet. </p>
+          <p></p>
+          <p>Sans trunks de VLAN, les VLAN ne serviraient pas à grand-chose. Les trunks de VLAN permettent à tout le trafic VLAN de se propager entre les commutateurs, de sorte que les périphériques du même VLAN connectés à différents commutateurs puissent communiquer sans l’intervention d’un routeur.</p>
+          <p></p>
+          <p>Un trunk de VLAN n’appartient pas à un VLAN spécifique, mais constitue plutôt un conduit pour plusieurs VLAN entre les commutateurs et les routeurs. Un trunk peut également être utilisée entre un périphérique réseau et un serveur ou un autre périphérique équipé d’une carte réseau 802.1Q appropriée. Par défaut, sur un commutateur Cisco Catalyst, tous les VLAN sont pris en charge sur un port trunk.</p>
+          <p></p>
+          <p>Dans la figure, les liaisons entre les commutateurs S1 et S2 ainsi que S1 et S3 sont configurés pour transmettre le trafic provenant des VLAN 10, 20, 30 et 99 sur l’ensemble du réseau. Ce réseau ne peut pas fonctionner sans trunks de VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois commutateurs ; le commutateur 1 est connecté au commutateur 2 et 3.  Les commutateurs 2 et 3 possèdent trois VLAN.  Il y a des légendes indiquant les ports attribués à chaque VLAN.  Il existe également une légende indiquant que le commutateur 1 est connecté au commutateur 2 et 3 via une liaison qui autorise les réseaux VLAN nécessaires sur le lien.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

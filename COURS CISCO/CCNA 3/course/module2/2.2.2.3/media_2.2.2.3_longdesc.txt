@@ -1,0 +1,1 @@
+Les figures 1 à 5 sont des activités interactives qui peuvent être utilisées pour aider le stagiaire à identifier les commandes qui sont nécessaires pour générer la sortie donnée. Diverses sorties d'écran sont fournies et le stagiaire doit faire sa sélection parmi plusieurs options à choix multiples.

@@ -1,0 +1,1 @@
+La figure affiche la sortie de la commande « show ip route pipe begin Gateway ».  Cela affiche la table de routage pour le routeur R1 qui dispose de trois routes connectées directement avec trois adresses d’interfaces IP, cinq routes obtenues par RIP, une route candidate par défaut et une passerelle de dernier recours configurée.

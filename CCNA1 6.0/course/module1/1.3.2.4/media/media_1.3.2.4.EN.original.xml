@@ -1,0 +1,25 @@
+﻿<textcomponents>
+
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Quality of Service (QoS)</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[Quality of Service, managed by the router, ensures that priorities are matched with the type of communication and its importance to the organization.]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[Web pages can usually receive a lower priority.]]></text> 
+</component>
+
+
+<component id="ID_s3_txt04">
+<text><![CDATA[Streaming media will need priority to maintain a smooth, uninterrupted user experience.]]></text> 
+</component>
+
+</textcomponents>

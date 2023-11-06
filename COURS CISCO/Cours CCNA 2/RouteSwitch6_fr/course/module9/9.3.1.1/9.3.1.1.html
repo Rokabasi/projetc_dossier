@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.1 Les commandes show ip nat</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les commandes show ip nat</h1>
+        <div>
+          <p>La Figure 1 représente le routeur R2 activé pour la PAT et utilisant la plage d'adresses 209.165.200.226 à 209.165.200.240. </p>
+          <p></p>
+          <p>Lorsque des problèmes de connectivité IPv4 surviennent dans un environnement NAT, il s'avère souvent difficile d'en déterminer la cause. Pour résoudre les problèmes, il faut d'abord s'assurer que la fonction NAT n'en est pas la cause. Respectez les étapes suivantes pour vérifier que NAT fonctionne normalement :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> À partir de la configuration, définissez clairement ce que la fonction NAT est censée faire. Cela peut permettre d'identifier un problème de configuration.</p>
+          <p></p>
+          <p>
+            <b>Étape 2.</b> Vérifiez que les traductions correctes existent dans la table de traduction à l'aide de la commande <b>show ip nat translations</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b> Utilisez les commandes <b>clear</b> et <b>debug</b> pour vérifier que la NAT fonctionne comme prévu. Regardez si les entrées dynamiques sont recréées après avoir été effacées.</p>
+          <p></p>
+          <p>
+            <b>Étape 4.</b> Analysez de façon détaillée ce qui arrive au paquet et assurez-vous que les routeurs disposent des informations de routage adéquates pour le déplacer.</p>
+          <p></p>
+          <p></p>
+          <p>La Figure 2 présente le résultat des commandes <b>show ip nat statistics</b> et <b>show ip nat translations</b>. Avant d'utiliser les commandes <b>show</b>, effacez les statistiques et les entrées NAT de la table à l'aide des commandes <b>clear ip nat statistics</b> et <b>clear ip nat translation *</b>. Une fois que l'hôte 192.168.10.10 établit une connexion Telnet avec le serveur à l'adresse 209.165.201.1, les statistiques et la table NAT s'affichent et vous permettent de vérifier que la NAT fonctionne correctement. </p>
+          <p></p>
+          <p>Dans un environnement réseau simple, il est utile de surveiller les statistiques NAT à l'aide de la commande <b>show ip nat statistics</b>. La commande <b>show ip nat statistics</b> affiche des informations sur le nombre total de traductions actives, les paramètres de configuration NAT, le nombre d’adresses dans le pool et le nombre d’adresses allouées. Toutefois, dans un environnement NAT plus complexe où plusieurs traductions ont lieu, cette commande ne permet pas forcément d'identifier clairement le problème. Il peut être nécessaire d'exécuter des commandes <b>debug</b> sur le routeur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche le routeur 2 avec un réseau interne sur la gauche et un réseau externe sur la droite. Le réseau interne contient 2 ordinateurs et le routeur 1. Le réseau externe contient deux serveurs.  Le routeur 2 utilise la PAT.  La Figure 2 affiche les résultats de plusieurs commandes.  Tout d’abord, la commande « clear i. p. nat statistics », puis la commande « clear i. p. nat translations star ».  Maintenant, un hôte établit une connexion Telnet avec un serveur, et la commande « show i. p. nat statistics », suivie de la commande « show i. p. nat translations ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

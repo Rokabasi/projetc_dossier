@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.2 Problèmes liés aux ports de commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes liés aux ports de commutateur</h1>
+        <div>
+          <p>Il n'est pas rare que certaines erreurs de configuration du commutateur surviennent lors de la configuration du routage entre plusieurs VLAN.</p>
+          <p></p>
+          <p>Lors de l'utilisation du modèle de routage existant pour le routage inter-VLAN, assurez-vous que les ports de commutateur se connectant aux interfaces de routeur sont configurés sur les VLAN corrects. Si un port de commutateur n'est pas configuré pour le bon VLAN, les périphériques configurés sur ce VLAN ne peuvent pas se connecter à l'interface du routeur et sont donc incapables d'envoyer des données à d'autres VLAN.</p>
+          <p></p>
+          <p>Comme illustré dans la topologie de la figure 1, PC1 et l'interface G0/0 du routeur R1 sont configurés pour figurer dans le même sous-réseau logique, comme indiqué par leur affectation d'adresse IPv4. Cependant, le port de commutateur F0/4 qui se connecte à l'interface G0/0 du routeur R1 n'a pas été configuré et reste dans le VLAN par défaut. Le routeur R1 se trouvant sur un autre VLAN que PC1, ils ne sont pas en mesure de communiquer.</p>
+          <p></p>
+          <p>Pour résoudre ce problème, le port F0/4 du commutateur S1 doit être en mode d'accès (<b>mode d'accès switchport</b>) et attribué au VLAN 20 (<b>accès switchport vlan 20</b>). Lorsque le port de commutateur est configuré pour le mode d'accès et que le VLAN correct lui est affecté, PC1 peut communiquer avec l'interface G0/0 du routeur R1, ce qui lui permet d'accéder aux autres VLAN connectés au routeur R1.</p>
+          <p></p>
+          <p>La topologie de la Figure 2 illustre le modèle de routage router-on-a-stick. Cependant, l'interface F0/5 sur le commutateur S1 n'est pas configurée comme trunk et demeure dans le VLAN par défaut pour le port. Par conséquent, le routeur n'est pas en mesure d'assurer le routage inter-VLAN, car chacune de ses sous-interfaces configurées est incapable d'envoyer ou de recevoir le trafic étiqueté VLAN. </p>
+          <p></p>
+          <p>Pour corriger ce problème, exécutez la commande en mode de configuration d'interface <b>switchport mode trunk</b> sur le port de commutateur F0/5 de S1. L'interface est alors convertie en port trunk, ce qui permet d'établir un trunk entre R1 et S1. Lorsque le trunk est établi avec succès, les périphériques connectés à chacun des VLAN sont en mesure de communiquer avec la sous-interface affectée à leur VLAN, ce qui permet d'activer le routage inter-VLAN.</p>
+          <p></p>
+          <p>La topologie de la Figure 3 montre que la liaison trunk entre S1 et S2 est interrompue. Comme il n'existe aucun chemin ni connexion redondante entre les périphériques, tous les périphériques connectés à S2 sont incapables d'atteindre R1. Par conséquent, tous les périphériques connectés à S2 sont incapables d'assurer le routage vers d'autres VLAN via R1.</p>
+          <p></p>
+          <p>Pour limiter le risque de perturbation du routage inter-VLAN dû à une une liaison inter-commutateur défaillante, les liaisons redondantes et les chemins alternatifs doivent faire partie de la conception du réseau.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente une topologie de routage inter-VLAN existante indiquant deux VLAN comme VLAN par défaut pour lesquels les liaisons physiques mènent au routeur. La figure 2 montre une topologie de routage inter-VLAN de type « router-on-a-stick » indiquant deux VLAN et une liaison physique unique menant à un routeur comme VLAN par défaut. La figure 3 montre une topologie de routage inter-v.lan de type « router-on-a-stick » indiquant l'ajout d'un second commutateur, mais avec une liaison trunk inopérante entre les deux commutateurs.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

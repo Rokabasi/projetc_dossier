@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.2.3 Protocole LACP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole LACP</h1>
+        <div>
+          <p>
+            <b>LACP</b>
+          </p>
+          <p>LACP fait partie d'une spécification IEEE (802.3ad) qui permet de regrouper plusieurs ports physiques pour former un seul canal logique. LACP permet à un commutateur de négocier un regroupement automatique en envoyant des paquets LACP à l'homologue. Il assure une fonction semblable à celle de PAgP avec Cisco EtherChannel. LACP étant une norme IEEE, il peut être utilisé pour faciliter les EtherChannel dans des environnements multifournisseurs. Sur les périphériques Cisco, les deux protocoles sont pris en charge. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: LACP était initialement défini comme IEEE 802.3ad. Cependant, LACP est désormais défini dans la norme plus récente IEEE 802.1AX pour les réseaux locaux et métropolitains.</p>
+          <p></p>
+          <p>LACP offre les mêmes avantages en matière de négociation que PAgP. LACP permet de créer la liaison EtherChannel en détectant les configurations de chacun des côtés et en assurant leur compatibilité, afin que la liaison EtherChannel puisse être activée au besoin. La figure illustre les modes pour LACP.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>On </b>: ce mode force l'interface à établir un canal sans LACP. Les interfaces configurées en mode On (Activé) n'échangent pas de paquets LACP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>LACP active </b>: ce mode LACP place un port dans un état de négociation actif. Dans cet état, le port entame des négociations avec d'autres ports en envoyant des paquets LACP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>LACP passive </b>: ce mode LACP place un port dans un état de négociation passif. Dans cet état, le port répond aux paquets LACP qu'il reçoit, mais n'entame pas de négociation par paquet LACP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Tout comme avec PAgP, les modes doivent être compatibles de chaque côté pour que la liaison EtherChannel se forme. Le mode On (Activé) est répété, car il crée la configuration EtherChannel de manière inconditionnelle, sans négociation dynamique PAgP ou LACP.</p>
+          <p></p>
+          <p>Le protocole LACP prend en charge huit liaisons actives et huit liaisons de secours. Une liaison de secours devient active en cas d'échec d'une des liaisons actives établies.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie les trois modes de port pour le protocole de contrôle d'agrégation de liaisons (LACP).  Dans le premier mode « on » (activé), le port est un membre de canal sans négociation, et donc sans protocole.  Dans le deuxième mode « active » (actif), le port demande activement si l'autre côté peut participer ou participera.  Dans le troisième mode « passive » (passif), le port attend passivement l'autre côté.  La figure illustre les modes du protocole LACP entre deux commutateurs et à quel moment un canal est établi.  Ce tableau récapitule le texte de la page.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

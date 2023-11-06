@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.1 Activation du protocole OSPF sur des interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Activation du protocole OSPF sur des interfaces</h1>
+        <div>
+          <p>La commande <b>network</b> détermine quelles interfaces participent au processus de routage pour une zone OSPFv2. Toute interface de routeur qui correspond à l'adresse réseau dans la commande <b>network</b> est activée pour envoyer et recevoir des paquets OSPF. La commande <b>network</b> indique également que l'adresse du réseau (ou du sous-réseau) de l'interface est incluse dans les mises à jour de routage OSPF.</p>
+          <p>La syntaxe de base de la commande est <b>network </b><i>network-address wildcard-mask</i><b> area </b><i>area-id</i>.</p>
+          <p>La syntaxe <b>area </b><i>area-id </i>désigne la zone OSPF. Lors de la configuration du routage OSPFv2 à zone unique, la commande <b>network</b> doit être configurée avec la même valeur<i> area-id </i>sur tous les routeurs. Bien que vous puissiez utiliser n'importe quel ID de zone, il est conseillé d'opter pour l'ID 0 avec le routage OSPFv2 à zone unique. Cette convention facilite la modification ultérieure du réseau pour prendre en charge le routage OSPFv2 à zones multiples.</p>
+          <p>La figure illustre la topologie de référence. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre la topologie de référence pour le protocole OSPF. Trois routeurs sont configurés en triangle. Chaque routeur est connecté aux deux autres routeurs à l'aide de câbles série WAN.  Chaque routeur dispose d'un LAN local configuré sur chaque interface Gigabit Ethernet.  L'un des trois routeurs dispose d'une interface de bouclage configurée pour simuler une connexion à Internet.  Les trois routeurs se trouvent dans la zone OSPF portant le numéro 0.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

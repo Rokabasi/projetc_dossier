@@ -1,0 +1,1 @@
+La figure affiche le routeur 2 avec un réseau interne sur la gauche et un réseau externe sur la droite. Le réseau interne contient le routeur 1 et deux ordinateurs.  Le réseau externe contient un serveur.  Le pool NAT i. p. v. 4 est présenté sous l’image.

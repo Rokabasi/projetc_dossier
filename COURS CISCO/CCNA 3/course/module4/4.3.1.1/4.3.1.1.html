@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.1 Les limitations de passerelle par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les limitations de passerelle par défaut</h1>
+        <div>
+          <p>En cas de défaillance d'un routeur ou d'une interface de routeur (servant de passerelle par défaut), les hôtes configurés avec cette passerelle par défaut sont isolés des réseaux extérieurs. Un mécanisme est nécessaire pour offrir des passerelles par défaut alternatives dans les réseaux commutés où deux routeurs ou plus sont connectés aux mêmes VLAN.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: aux fins de discussion sur la redondance des routeurs, nous partirons du principe qu'il n'existe pas de différences fonctionnelles entre un commutateur multicouche et un routeur de la couche de distribution. Dans la pratique, il est courant qu'un commutateur multicouche joue le rôle de passerelle par défaut pour chaque VLAN d'un réseau commuté. Cette discussion porte sur la fonctionnalité de <i>routage</i> pour l'ensemble des périphériques physiques potentiels.  </p>
+          <p></p>
+          <p>Dans un réseau commuté, chaque client reçoit une seule passerelle par défaut. Il n'est pas possible d'utiliser une passerelle secondaire, même s'il existe un deuxième chemin pour transporter les paquets hors du segment local.</p>
+          <p></p>
+          <p>Dans cette figure, R1 est responsable du routage des paquets en provenance de PC1. Si R1 n'est plus disponible, les protocoles de routage peuvent converger dynamiquement. R2 achemine désormais les paquets en provenance des réseaux extérieurs, qui auraient normalement été destinés à R1. Cependant, le trafic en provenance du réseau interne associé à R1, y compris le trafic en provenance des stations de travail, des serveurs et des imprimantes configurés avec R1 comme passerelle par défaut, est encore renvoyé vers R1 puis abandonné.</p>
+          <p></p>
+          <p>Les périphériques finaux sont généralement configurés avec une seule adresse IP pour une passerelle par défaut. Cette adresse ne change pas lorsque la topologie de réseau est modifiée. Si cette adresse IP de passerelle par défaut n'est pas accessible, le périphérique local ne pourra pas envoyer des paquets à partir du segment de réseau local, ce qui le déconnectera des autres réseaux. Même si un routeur redondant pourrait servir de passerelle par défaut sur ce segment, ces périphériques ne peuvent pas déterminer dynamiquement l’adresse d’une nouvelle passerelle par défaut.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente quatre commutateurs multicouches et deux commutateurs de couche d'accès.  P.C. 1 est connecté à l'un des commutateurs d'accès.  Deux des commutateurs multicouches se comportent comme des routeurs.  La légende du PC indique qu'il est impossible d'accéder à la passerelle par défaut.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

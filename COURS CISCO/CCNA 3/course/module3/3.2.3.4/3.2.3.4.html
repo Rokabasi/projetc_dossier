@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.4 Les types de liaisons</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les types de liaisons</h1>
+        <div>
+          <p>Le type de lien catégorise chaque port participant à RSTP en utilisant le mode bidirectionnel du port. Suivant l'élément connecté à chaque port, deux types de lien peuvent être identifiés :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Point à point</b> : un port fonctionnant en mode full duplex connecte généralement un commutateur à un commutateur et permet une transition rapide vers un état de réacheminement.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Partagé</b> : un port fonctionnant en mode semi-duplex connecte un commutateur à un hub qui relie plusieurs appareils.</li>
+            </ul>
+          </p>
+          <p>Dans cette figure, cliquez sur chaque lien pour en savoir plus sur son type.</p>
+          <p></p>
+          <p>Le type de lien détermine si le port peut passer immédiatement à l'état de réacheminement, sous réserve que certaines conditions soient remplies. Ces conditions ne sont pas les mêmes pour les ports d’extrémité et les autres types de ports. Les ports hors périphérie sont catégorisés en deux types de liaison : point à point et partagée. Le type de liaison est déterminé automatiquement, mais peut être remplacé par une configuration de port explicite à l'aide de la commande <b>spanning-tree link-type </b>{ <b>point-to-point</b> | <b>shared</b> }. En matière de types de liaisons, les caractéristiques des rôles de port sont les suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Les connexions de port de périphérie et point à point sont des candidats pour une transition rapide à un état de réacheminement. Cependant, avant de prendre en compte le paramètre de type de lien, RSTP doit déterminer le rôle du port. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les ports racine n'utilisent pas le paramètre de type de lien. Les ports racines sont capables de passer rapidement à l'état de réacheminement dès que le port est synchronisé (il reçoit un BPDU du pont racine).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les ports alternatifs et de sauvegarde n'utilisent pas le paramètre de type de lien dans la majorité des cas. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le paramètre de type de lien est principalement utilisé par les ports désignés. Le port désigné n'effectue une transition rapide à l'état de réacheminement que si le paramètre de type de lien est défini sur <b>point à point</b>.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois commutateurs qui sont tous interconnectés.  Le commutateur 1 est identifié comme pont racine et l'ensemble de ses ports sont des ports désignés et de réacheminement.  Les ports des commutateurs deux et trois sont identifiés en tant que port racine, désigné, alternatif et de périphérie, selon le cas.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

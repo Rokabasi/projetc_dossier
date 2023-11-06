@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.1 Processus de recherche de route</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Processus de recherche de route</h1>
+        <div>
+          <p>Lorsqu'un paquet arrive sur une interface de routeur, le routeur examine l'en-tête IPv4, identifie l'adresse IPv4 de destination et poursuit avec le processus de recherche de routeur.</p>
+          <p></p>
+          <p>Dans la Figure 1, le routeur examine les routes réseau de niveau 1 à la recherche de la meilleure correspondance avec l'adresse de destination du paquet IPv4:</p>
+          <p>1. Si la meilleure correspondance est une meilleure route de niveau 1, la route est alors utilisée pour transférer le paquet.</p>
+          <p>2. Si la meilleure correspondance est une route parent de niveau 1, passez à l'étape suivante.</p>
+          <p></p>
+          <p>Dans la Figure 2, le routeur examine les routes enfant (les routes de sous-réseau) de la route parent à la recherche d'une meilleure correspondance:</p>
+          <p>3. En cas de correspondance avec une route enfant de niveau 2, ce sous-réseau est utilisé pour transférer le paquet.</p>
+          <p>4. Si vous ne trouvez pas de correspondance avec une route enfant de niveau 2, passez à l'étape suivante.</p>
+          <p></p>
+          <p>Dans la Figure 3, le routeur continue à rechercher des routes de super-réseau de niveau 1 dans la table de routage, y compris la route par défaut, le cas échéant:</p>
+          <p>5. En cas de correspondance inférieure avec une route de super-réseau de niveau 1 ou une route par défaut, le routeur utilise maintenant cette route pour transférer le paquet.</p>
+          <p>6. En cas d'absence de correspondance avec une route de la table de routage, le routeur supprime le paquet.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : Si Cisco Express Forwarding (CEF) n’est pas utilisé, une route faisant référence à une adresse IP de tronçon suivant mais pas à une interface de sortie doit être résolue vers une route ayant une interface de sortie. Sans CEF, une recherche récurrente est effectuée sur l’adresse IP de tronçon suivant jusqu’à ce que la route soit convertie en interface de sortie. CEF est activé par défaut.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un graphique pour les routes correspondantes. Dans la figure, si la route finale de niveau 1 est la meilleure correspondance, alors le paquet est acheminé en suivant l’adresse IP du tronçon suivant ou en suivant l’interface de sortie. La Figure 2 illustre le processus si la meilleure correspondance pour le paquet est une route parent de niveau 1.  Si une correspondance avec une route enfant de niveau 2 est trouvée, alors le paquet est acheminé en suivant l’adresse IP du tronçon suivant ou en suivant l’interface de sortie.  La Figure 3 illustre le processus si aucune correspondance avec une route enfant de niveau 2 n’est trouvée, ce qui consiste à rechercher des routes de super-réseau, notamment la route par défaut dans la table de routage.  Si aucune correspondance n’est trouvée, alors le paquet est ignoré.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

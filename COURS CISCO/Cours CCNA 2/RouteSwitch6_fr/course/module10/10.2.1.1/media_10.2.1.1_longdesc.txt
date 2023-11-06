@@ -1,0 +1,1 @@
+Le routeur R1 est configuré avec la commande « clock set 20:36:00 dec 11 2015 ». Un message Syslog indique que l'horloge a été mise à jour

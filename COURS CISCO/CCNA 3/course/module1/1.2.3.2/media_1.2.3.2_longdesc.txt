@@ -1,0 +1,1 @@
+La figure présente deux exemples de connexion à un routeur pour apporter des modifications de configuration, intrabande et hors bande.

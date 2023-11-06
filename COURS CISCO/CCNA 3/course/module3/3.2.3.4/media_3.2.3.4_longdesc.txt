@@ -1,0 +1,1 @@
+La figure présente trois commutateurs qui sont tous interconnectés.  Le commutateur 1 est identifié comme pont racine et l'ensemble de ses ports sont des ports désignés et de réacheminement.  Les ports des commutateurs deux et trois sont identifiés en tant que port racine, désigné, alternatif et de périphérie, selon le cas.

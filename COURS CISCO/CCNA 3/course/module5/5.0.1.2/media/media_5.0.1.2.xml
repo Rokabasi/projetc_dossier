@@ -1,0 +1,6 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<i>Pour identifier le meilleur chemin de routage, utilisez un protocole de routage dynamique et les mesures utilisées par ce protocole.<br/><br/>Voici certaines des mesures disponibles :<textformat blockindent="-14"><ul><li>Bande passante</li><li>Coût</li><li>Délai</li><li>Sauts</li></ul></textformat</i&gt;]]></text>
+</component>
+
+</textcomponents>

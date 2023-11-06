@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.4 Port disponible suivant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Port disponible suivant</h1>
+        <div>
+          <p>Dans l'exemple précédent, les numéros de port du client, 1331 et 1555, n'ont pas été modifiés par le routeur configuré pour la NAT. Ce scénario est peu probable, car il y a de fortes chances que ces numéros de port soient déjà liés à d'autres sessions actives. </p>
+          <p></p>
+          <p>La fonction PAT tente de conserver le port source d’origine. Cependant, si le port source d'origine est déjà utilisé, la PAT attribue le premier numéro de port disponible en commençant au début du groupe de ports approprié 0 à 511, 512 à 1 023 ou 1 024 à 65 535. Lorsqu'il n'y a plus de ports disponibles et que le pool d'adresses comporte plusieurs adresses externes, la PAT passe à l'adresse suivante pour essayer d'attribuer le port source d'origine. Ce processus se poursuit jusqu’à ce qu’il n’y ait plus de ports ou d’adresses IPv4 externes disponibles. </p>
+          <p></p>
+          <p>Cliquez sur le bouton Lecture sur la figure pour découvrir le fonctionnement de la PAT. Dans cet exemple, la PAT a attribué le port disponible suivant (1445) à la deuxième adresse d'hôte.</p>
+          <p></p>
+          <p>Dans l'animation, les hôtes ont choisi le même numéro de port 1444. Cela est acceptable pour l’adresse interne, car les hôtes possèdent des adresses IPv4 privées uniques. Cependant, sur le routeur NAT, les numéros de port doivent être modifiés pour éviter que les paquets de deux hôtes différents quittent R2 avec la même adresse source. Cet exemple suppose que les 420 premiers ports dans la plage 1 024-65 535 sont déjà utilisés, donc le prochain numéro de port disponible, 1445, est utilisé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation affiche deux ordinateurs connectés à un routeur NAT. Les ordinateurs ont besoin d’accéder à Internet.  Lorsque les deux ordinateurs utilisent le même numéro de port à l’intérieur, le routeur NAT attribue toujours un numéro de port externe différent.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

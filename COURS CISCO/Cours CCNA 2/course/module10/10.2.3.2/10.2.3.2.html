@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.3.2 Journalisation par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Journalisation par défaut</h1>
+        <div>
+          <p>Par défaut, les routeurs et commutateurs Cisco envoient des messages journaux à la console pour tous les niveaux de gravité. Sur certaines versions de Cisco IOS, le périphérique consigne également les messages dans une mémoire tampon par défaut. Pour activer ces deux paramètres, utilisez les commandes de configuration globale <b>logging console</b> et <b>logging buffered</b>, respectivement. </p>
+          <p></p>
+          <p>La commande <b>show logging</b> affiche les paramètres de service de journalisation par défaut sur un routeur Cisco, comme le montre la figure. Les premières lignes du résultat affichent des informations relatives au processus de journalisation, tandis que la fin répertorie les messages du journal.</p>
+          <p></p>
+          <p>La première ligne en surbrillance indique que ce routeur consigne ses messages dans la console et elle contient des messages de débogage. Cela signifie en fait que tous les messages de niveau de débogage, ainsi que l'ensemble des messages de niveau inférieur (par exemple les messages de niveau de notification), sont consignés dans la console. Sur la plupart des routeurs Cisco IOS, le niveau de gravité par défaut est 7, débogage. Le résultat indique également que 32 messages de ce type ont été consignés.</p>
+          <p></p>
+          <p>La deuxième ligne en surbrillance indique que ce routeur consigne ses messages dans une mémoire tampon interne. Ce routeur ayant autorisé la journalisation dans une mémoire tampon interne, la commande <b>show logging</b> répertorie également les messages qui figurent dans celle-ci. Vous pouvez afficher certains des messages système qui ont été consignés à la fin du résultat.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre la sortie de la commande « show logging » sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

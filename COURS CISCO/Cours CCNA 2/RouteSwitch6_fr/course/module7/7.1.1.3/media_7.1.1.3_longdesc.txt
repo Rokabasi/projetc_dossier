@@ -1,0 +1,1 @@
+La figure présente un routeur avec un paquet entrant sur un port. Le paquet est traité par une liste de contrôle d'accès en entrée. La figure présente également un paquet quittant le routeur. Ce paquet est traité par une liste de contrôle d'accès en sortie.

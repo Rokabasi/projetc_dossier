@@ -1,0 +1,378 @@
+<textcomponents><!--slide 1--><component id="ID_s1_inst">
+<text><![CDATA[<b>Exercice – Identifier les informations d&apos;adresse à chaque tronçon</b><br><br>PC1 communique avec le serveur Web par le biais d&apos;un routeur configuré pour la NAT (R1). Suivez cette communication saut par saut pour déterminer comment l&apos;adresse source (AS), l&apos;adresse de destination (AD) et le numéro de port évoluent. Appuyez maintenant sur le bouton 2 pour démarrer.]]></text>
+</component>
+
+<component id='ID_s1_top01'>
+	<text><![CDATA[Topologie de réseau]]></text>
+</component>
+
+<component id="ID_s1_top02">
+<text><![CDATA[FAI]]></text> 
+</component>
+
+<component id="ID_s1_top03">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s1_top04">
+<text><![CDATA[Serveur web]]></text> 
+</component><!--slide 2--><component id='ID_s2_inst'>
+	<text><![CDATA[<b>Exercice – Identifier les informations d&apos;adresse à chaque tronçon<br>Tronçon 1 : PC 1 à routeur configuré pour la NAT (R1)</b><br><br>Faites glisser l&apos;adressage NAT du paquet IP source et destination approprié vers les zones correspondantes pour ce tronçon de la communication.]]></text>
+</component>
+
+<component id="ID_s2_top01">
+<text><![CDATA[FAI]]></text> 
+</component>
+
+<component id="ID_s2_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_top03">
+<text><![CDATA[Serveur web]]></text> 
+</component>
+
+<component id='ID_s2_txt01'>
+	<text><![CDATA[AS]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[AD]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[Port source]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Port de destination]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s2_txt06'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s2_dragsrc01'>
+	<text><![CDATA[64.100.10.2]]></text>
+</component>
+
+<component id='ID_s2_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s2_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s2_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s2_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s2_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s2_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s2_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur le bouton 3 pour continuer.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component><!--slide 3--><component id='ID_s3_inst'>
+	<text><![CDATA[<b>Exercice – Identifier les informations d&apos;adresse à chaque tronçon<br>Tronçon 2 : routeur (R1) configuré pour la NAT à serveur Web</b><br><br>Faites glisser l&apos;adressage AS, AD et port de destination approprié vers les zones correspondantes pour ce tronçon de la communication.]]></text>
+</component>
+
+<component id="ID_s3_top01">
+<text><![CDATA[FAI]]></text> 
+</component>
+
+<component id="ID_s3_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s3_top03">
+<text><![CDATA[Serveur web]]></text> 
+</component>
+
+<component id='ID_s3_txt01'>
+	<text><![CDATA[AS]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[AD]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[Port source]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Port de destination]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s3_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s3_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s3_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s3_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s3_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s3_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s3_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s3_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur le bouton 4 pour continuer.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component><!--slide 4--><component id='ID_s4_inst'>
+	<text><![CDATA[<b>Exercice – Identifier les informations d&apos;adresse à chaque tronçon<br>Tronçon 3 : serveur Web à routeur (R1) configuré pour la NAT</b><br><br>Faites glisser l&apos;adressage AS, AD et port source et de destination approprié vers les zones correspondantes pour ce tronçon de la communication.]]></text>
+</component>
+
+<component id="ID_s4_top01">
+<text><![CDATA[FAI]]></text> 
+</component>
+
+<component id="ID_s4_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s4_top03">
+<text><![CDATA[Serveur web]]></text> 
+</component>
+
+<component id='ID_s4_txt01'>
+	<text><![CDATA[AS]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[AD]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[Port source]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[Port de destination]]></text>
+</component>
+
+<component id='ID_s4_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s4_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s4_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s4_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s4_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s4_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s4_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s4_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur le bouton 5 pour continuer.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component><!--slide 5--><component id='ID_s5_inst'>
+	<text><![CDATA[<b>Exercice – Identifier les informations d&apos;adresse à chaque tronçon<br>Tronçon 4 : routeur (R1) configuré pour la NAT à PC 1</b><br><br>Faites glisser l&apos;adressage AS, AD et port de destination et source approprié vers les zones correspondantes pour ce tronçon de la communication.]]></text>
+</component>
+
+<component id="ID_s5_top01">
+<text><![CDATA[FAI]]></text> 
+</component>
+
+<component id="ID_s5_top02">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s5_top03">
+<text><![CDATA[Serveur web]]></text> 
+</component>
+
+<component id='ID_s5_txt01'>
+	<text><![CDATA[AS]]></text>
+</component>
+
+<component id='ID_s5_txt02'>
+	<text><![CDATA[AD]]></text>
+</component>
+
+<component id='ID_s5_txt03'>
+	<text><![CDATA[Port source]]></text>
+</component>
+
+<component id='ID_s5_txt04'>
+	<text><![CDATA[Port de destination]]></text>
+</component>
+
+<component id='ID_s5_dragsrc01'>
+	<text><![CDATA[64.100.10.2 ]]></text>
+</component>
+
+<component id='ID_s5_dragsrc02'>
+	<text><![CDATA[192.168.51.5]]></text>
+</component>
+
+<component id='ID_s5_dragsrc03'>
+	<text><![CDATA[1268]]></text>
+</component>
+
+<component id='ID_s5_dragsrc04'>
+	<text><![CDATA[209.165.201.11]]></text>
+</component>
+
+<component id='ID_s5_dragsrc05'>
+	<text><![CDATA[1150]]></text>
+</component>
+
+<component id='ID_s5_dragsrc06'>
+	<text><![CDATA[53]]></text>
+</component>
+
+<component id='ID_s5_dragsrc07'>
+	<text><![CDATA[192.168.51.1]]></text>
+</component>
+
+<component id='ID_s5_dragsrc08'>
+	<text><![CDATA[80]]></text>
+</component>
+
+<component id='ID_s5_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s5_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication.]]></text>
+</component>
+
+<component id='ID_s5_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s5_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié le paquet IP NAT de l&apos;adressage de ce saut de la communication. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s5_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s5_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+</textcomponents>

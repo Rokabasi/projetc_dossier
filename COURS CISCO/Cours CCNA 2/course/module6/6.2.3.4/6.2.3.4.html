@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.4 Problèmes courants avec les agrégations</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes courants avec les agrégations</h1>
+        <div>
+          <p>Les problèmes de trunking sont généralement associés à des configurations incorrectes. Lors de la configuration de VLAN et de trunks sur une infrastructure commutée, les types d’erreurs de configuration les plus courants sont les suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Non-concordance de VLAN natif</b> : les ports trunk sont configurés avec différents VLAN natifs. Cette erreur de configuration génère des notifications de console et peut entraîner, entre autres, des problèmes de routage inter-VLAN. Cela représente un risque de sécurité. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Non-concordance du mode trunk </b>: l’un des ports trunk est configuré dans un mode qui n’est pas compatible avec le trunking du port correspondant. En présence de cette erreur de configuration, la liaison agrégée cesse de fonctionner. Assurez-vous que les deux côtés du trunk sont configurés avec la commande <b>switchport mode trunk</b>. Ce cours n’a pas pour objet les commandes de configuration de trunk.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN autorisés sur les trunks</b> : la liste des VLAN autorisés sur un trunk n’a pas été mise à jour pour tenir compte des critères de trunking de VLAN actuels. Dans ce cas, un trafic imprévu, voire aucun trafic n’est transmis sur le trunk.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si un problème est détecté sur un trunk et que la cause en est inconnue, commencez par rechercher une éventuelle non-concordance de VLAN natif sur les liaisons. Si ce n’est pas l’origine du problème, vérifiez s’il ne s’agit pas d’une non-concordance du mode trunk et contrôlez enfin la liste des VLAN autorisés sur le trunk. Les deux pages suivantes indiquent comment résoudre les problèmes de trunk courants. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre un tableau répertoriant les problèmes courants avec des liaisons agrégées, leurs résultats et un exemple.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

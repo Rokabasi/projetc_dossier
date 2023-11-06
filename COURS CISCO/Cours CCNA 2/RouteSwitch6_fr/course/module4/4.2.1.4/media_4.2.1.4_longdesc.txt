@@ -1,0 +1,1 @@
+La figure affiche une trame complète incluant l’en-tête et le pied. La commutation par stockage et retransmission reçoit la trame entière avant de prendre toute décision de retransmission.

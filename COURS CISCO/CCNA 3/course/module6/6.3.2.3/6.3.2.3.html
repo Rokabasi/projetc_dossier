@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.3 Métrique de bande passante </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métrique de bande passante </h1>
+        <div>
+          <p>La métrique de bande passante est une valeur statique utilisée par certains protocoles de routage, notamment EIGRP et OSPF, pour calculer leur métrique de routage. La bande passante est indiquée en kilobits par seconde (kb/s). </p>
+          <p></p>
+          <p>Sur les anciens routeurs, la bande passante de la liaison série est par défaut définie sur 1 544 Kbit/s. Il s’agit de la bande passante d’une connexion T1. Sur les nouveaux routeurs tels que Cisco 4321, la bande passante de la liaison série correspond par défaut à la fréquence d'horloge utilisée sur la liaison. Les liaisons série dans la topologie de la Figure 1 ont été configurées avec les bandes passantes utilisées dans cette section. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les bandes passantes utilisées dans cette topologie ont été choisies pour expliquer le calcul des mesures du protocole de routage et le processus de sélection du meilleur chemin. Ces valeurs de bande passante ne correspondent pas aux types de connexions les plus courants dans les réseaux d'aujourd'hui. </p>
+          <p></p>
+          <p>Veillez à toujours vérifier la bande passante avec la commande <b>show interfaces</b>. La valeur par défaut de la bande passante ne correspond pas nécessairement à la bande passante physique réelle de l'interface. Si la bande passante réelle du lien est différente de la valeur de bande passante par défaut, cette dernière doit être modifiée.</p>
+          <p></p>
+          <p>
+            <b>Configuration du paramètre de bande passante</b>
+          </p>
+          <p></p>
+          <p>Étant donné que les protocoles EIGRP et OSPF utilisent la bande passante dans les calculs de métrique par défaut, il est important d’attribuer une valeur correcte à la bande passante afin que les informations de routage soient correctes. </p>
+          <p></p>
+          <p>Utilisez la commande de mode de configuration d'interface suivante pour modifier la métrique de bande passante : </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>bandwith </b>
+            </span>
+            <span class="cmd">
+              <i>kilobits-bandwidth-value</i>
+            </span>
+          </p>
+          <p></p>
+          <p>Utilisez la commande <b>no bandwidth</b> pour restaurer la valeur par défaut.</p>
+          <p></p>
+          <p>À la Figure 2, le lien entre R1 et R2 présente une bande passante de 64 kb/s et le lien entre R2 et R3 une bande passante de 1 024 kb/s. La figure montre les configurations utilisées sur les trois routeurs pour modifier la bande passante sur les interfaces série appropriées. Modifiez la mesure de bande passante sur les deux extrémités de la liaison pour garantir la qualité du routage dans les deux sens.</p>
+          <p></p>
+          <p>
+            <b>Vérification du paramètre de bande passante</b>
+          </p>
+          <p></p>
+          <p>Utilisez la commande<b> show interfaces </b>pour vérifier les nouveaux paramètres de bande passante, comme indiqué à la Figure 3. </p>
+          <p></p>
+          <p>La modification de la valeur de bande passante ne modifie pas la bande passante réelle de la liaison. La commande<b> bandwidth </b>modifie uniquement la métrique de bande passante utilisée par les protocoles de routage, notamment EIGRP et OSPF. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente la syntaxe de configuration de la bande passante sur les interfaces des routeurs 1, 2 et 3. La Figure 3 présente le résultat de la commande « show interface » sur les routeurs 1 et 2, qui permet d'afficher les paramètres de bande passante.  La bande passante par défaut pour les liaisons série est de 1 544 kilobits par seconde, sauf indication contraire.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

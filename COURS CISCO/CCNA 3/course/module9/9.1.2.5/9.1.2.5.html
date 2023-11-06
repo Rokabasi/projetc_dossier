@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.5 LSA OSPF de type 4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA OSPF de type 4</h1>
+        <div>
+          <p>Les LSA de type 4 et 5 sont utilisées collectivement pour identifier un ASBR et pour annoncer les réseaux externes dans un domaine de routage OSPF. </p>
+          <p></p>
+          <p>Les LSA de type 4 récapitulatives sont générées par un ABR uniquement lorsqu'un ASBR est présent dans une zone. Les LSA de type 4 identifient l’ASBR et annoncent une route jusqu’à ce dernier. Pour tout trafic destiné à un réseau externe, il est nécessaire de connaître la table de routage du routeur ASBR qui a généré les routes externes.</p>
+          <p></p>
+          <p>Comme indiqué à la Figure, le routeur ASBR envoie une LSA de type 1, s'identifiant ainsi en tant que routeur ASBR. La LSA comporte un bit spécial appelé « bit externe » (ou bit e) qui sert à identifier le routeur comme un ASBR. Lorsque ABR1 reçoit la LSA de type 1, il remarque le bit e, crée une LSA de type 4, puis diffuse celle-ci dans la zone fédératrice (zone 0). Les ABR suivants diffusent la LSA de type 4 dans d’autres zones.</p>
+          <p></p>
+          <p>L'ID d'état de liens est défini sur l'ID du routeur ASBR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche des messages LSA de type 4 générés par le routeur ABRS. Ces messages annoncent le routeur ASBR à d'autres zones et sont propagés dans toutes les zones connectées.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

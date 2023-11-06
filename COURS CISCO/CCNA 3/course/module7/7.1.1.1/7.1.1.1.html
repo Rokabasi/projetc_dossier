@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.1 Topologie de réseau</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topologie de réseau</h1>
+        <div>
+          <p>Avant de régler plus précisément les fonctions EIGRP, commencez avec une implémentation de base du protocole EIGRP.</p>
+          <p></p>
+          <p>La Figure 1 présente la topologie du réseau utilisée dans ce chapitre. </p>
+          <p></p>
+          <p>Les Figures 2, 3 et 4 présentent les configurations d'interface IPv4 et les implémentations EIGRP sur R1, R2 et R3, respectivement. </p>
+          <p></p>
+          <p>Les types des interfaces série et les bandes passantes associées ne correspondent pas nécessairement aux types de connexions les plus courants figurant sur les réseaux actuels. Les bandes passantes des liens série utilisés dans cette topologie permettent d'expliquer le calcul des métriques du protocole de routage et le processus de sélection du meilleur chemin.</p>
+          <p></p>
+          <p>Notez que les commandes<b> bandwidth </b>sur les interfaces série ont servi à modifier la bande passante par défaut de 1 544 kb/s.</p>
+          <p></p>
+          <p>Dans ce chapitre, le routeur du FAI est utilisé comme passerelle du domaine de routage pour accéder à Internet. Les trois routeurs exécutent Cisco IOS, version 15.2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès Internet. La Figure 2 présente le résultat de la commande « show running/config » sur le routeur R1.  La version d'IOS et la bande passante de la série 000 sont mises en évidence. La Figure 3 présente le résultat de la commande « show running/config » sur le routeur R2.  La version d'IOS et la bande passante des interfaces Serial 0/0/0 et 0/0/1 sont mises en évidence. La Figure 4 présente le résultat de la commande « show running/config » sur le routeur R3.  La version d'IOS et la bande passante de la série 000 sont mises en évidence.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<data>
+<slide>
+	
+	<element type="IMAGE" subType="bg" bgType="VIDEO" />
+	<element type="TEXT" subType="TITLE" compId="ID_title"/>
+	<element type="VIDEO" videoId="nnfafmsth0" x="13%" y="5%" width="73%" height="85%" api="wistia"/>
+	
+</slide>
+</data>

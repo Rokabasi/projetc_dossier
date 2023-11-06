@@ -1,0 +1,1 @@
+La figure illustre deux tables.  Une table montre la façon dont une fonction NAT utilise un pool d’adresses globales parmi lesquelles choisir. La seconde table montre la façon dont la PAT utilise une adresse unique et ajoute cependant un numéro de port unique au mappage.

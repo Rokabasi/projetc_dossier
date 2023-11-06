@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.1.2 Chapitre 3 : Routage dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 3 : Routage dynamique</h1>
+        <div>
+          <p>Les protocoles de routage dynamique sont utilisés par les routeurs pour faciliter l'échange d'informations de routage entre des routeurs. Rôle des protocoles de routage dynamique : détection des réseaux distants, actualisation des informations de routage, choix du meilleur chemin vers les réseaux de destination et découverte d’un autre meilleur chemin si l’actuel n’est plus disponible. Tandis que les protocoles de routage dynamique nécessitent moins de surcharge administrative que le routage statique, il est nécessaire de consacrer une partie des ressources d'un routeur au fonctionnement du protocole, y compris le temps processeur et la bande passante du lien réseau. </p>
+          <p></p>
+          <p>Les réseaux combinent généralement le routage dynamique et le routage statique. Le routage dynamique est le meilleur choix pour les réseaux de grande taille et le routage statique est idéal pour les réseaux d'extrémité.</p>
+          <p></p>
+          <p>Les protocoles de routage sont chargés de découvrir les réseaux distants, ainsi que de gérer des informations précises sur le réseau. En cas de modification affectant le routage de la topologie, les protocoles propagent ces informations dans l'ensemble du domaine de routage. Le processus consistant à amener toutes les tables de routage à un même état de cohérence, dans lequel tous les routeurs du même domaine ou de la même zone de routage disposent d’informations complètes et précises sur le réseau, est appelé la convergence. Certains protocoles de routage convergent plus rapidement que d'autres.</p>
+          <p></p>
+          <p></p>
+          <p>Les routeurs découvrent parfois plusieurs routes vers le même réseau par l’intermédiaire de routes statiques et de protocoles de routage dynamique. Lorsqu’un routeur découvre un réseau de destination via plusieurs sources de routage, les routeurs Cisco utilisent la valeur de la distance administrative pour déterminer quelle source utiliser. Chaque protocole de routage dynamique possède une valeur de distance administrative unique, il en va de même pour les routes statiques et les réseaux directement connectés. Plus la valeur de la distance administrative est faible, plus la source de la route est privilégiée. Un réseau connecté directement constitue toujours la source préférée, suivi par les routes statiques, puis par les différents protocoles de routage dynamique.</p>
+          <p></p>
+          <p>Les entrées de la table de routage contiennent une source de route, un réseau de destination et une interface sortante. Les sources de route peuvent être connectées, locales, statiques ou issues d’un protocole de routage dynamique. </p>
+          <p></p>
+          <p>Les tables de routage IPv4 peuvent contenir quatre types de routes : des routes finales, des routes de niveau 1, des routes parent de niveau 1 et des routes enfant de niveau 2. Étant donné que le protocole IPv6 est sans classe par sa conception, toutes les routes sont effectivement des meilleures routes de niveau 1. Il n'y a aucun parent de niveau 1 pour les routes enfant de niveau 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 constitue un tableau à lecture verticale qui classifie les protocoles de routage dynamique.  Le tableau les catégorise en protocoles de passerelle interne et protocoles de passerelle externe.  Les protocoles IGP sont ensuite ventilés en protocoles de routage de vecteur à distance et protocoles de routage d’état des liaisons.  Les protocoles de vecteur à distance sont RIPv1, RIPv2 et EIGRP.  Les protocoles de routage d’état de liaisons sont OSPF et IS-IS.  Les protocoles de routage externes sont considérés comme des protocoles de routage de vecteur de chemin et le protocole BGP est le seul de ce genre.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

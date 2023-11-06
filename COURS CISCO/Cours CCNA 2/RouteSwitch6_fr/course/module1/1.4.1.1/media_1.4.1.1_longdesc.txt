@@ -1,0 +1,1 @@
+La figure affiche le graphique d’activité standard indiquant qu’il y a une activité écrite à terminer.

@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande show ip OSPF. Cette commande affiche également l'ID de processus OSPF et l'ID de routeur. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier les informations relatives au processus OSPF.

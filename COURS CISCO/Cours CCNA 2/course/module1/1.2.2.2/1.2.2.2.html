@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.2 Meilleur chemin</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Meilleur chemin</h1>
+        <div>
+          <p>La détermination du meilleur chemin implique d'évaluer plusieurs chemins menant au même réseau de destination et de choisir le chemin optimal ou le plus court pour atteindre ce réseau. Lorsqu'il existe plusieurs chemins menant au même réseau, chaque chemin utilise une interface de sortie différente sur le routeur pour atteindre ce réseau. </p>
+          <p></p>
+          <p>Le meilleur chemin est sélectionné par un protocole de routage, qui utilise une valeur ou une métrique pour déterminer la distance à parcourir pour atteindre un réseau. Une métrique est une valeur quantitative utilisée pour mesurer la distance pour un réseau donné. Le meilleur chemin pour rejoindre un réseau est celui dont la métrique est la plus faible.</p>
+          <p></p>
+          <p>Les protocoles de routage dynamique utilisent généralement leurs propres règles et métriques pour constituer et mettre à jour leur table de routage. L’algorithme de routage génère une valeur ou métrique, pour chaque chemin traversant le réseau. Les métriques peuvent se baser sur une ou plusieurs caractéristiques d’un chemin. Pour choisir la route, certains protocoles de routage peuvent utiliser plusieurs métriques et les combiner en une seule. </p>
+          <p></p>
+          <p>Voici quelques protocoles dynamiques et les métriques qu'ils utilisent :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocol RIP</b> (Routing Information Protocol) : nombre de sauts</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole OSPF</b> (Open Shortest Path First) : coût de Cisco basé sur la bande passante cumulée entre la source et la destination</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole EIGRP</b> (Enhanced Interior Gateway Routing Protocol) : bande passante, délai, charge, fiabilité</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L'animation de la figure souligne comment le chemin peut être différent selon la métrique utilisée. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre une animation montrant la différence entre le nombre de sauts et la bande passante comme mesure de routage.  La figure présente un ordinateur envoyant un paquet de données à un ordinateur de destination. Elle comprend trois routeurs formant un maillage global qui présente deux chemins potentiels pour les données.  Une route utilise une ligne de 56 kbps ainsi qu'un routeur.  L’autre chemin comprend deux routeurs et chaque liaison correspond à une liaison T-1 de 1,544 Mbps.  En utilisant le nombre de sauts comme mesure, le paquet circulera dans le premier chemin à travers un routeur.  En utilisant la bande passante comme mesure, le paquet suivra les deux liaisons T-1 qui constituent un chemin plus rapide par rapport à la liaison de 56 kbps.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

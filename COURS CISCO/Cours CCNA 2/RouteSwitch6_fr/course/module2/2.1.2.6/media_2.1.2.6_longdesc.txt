@@ -1,0 +1,1 @@
+Cette activité interactive permet à l’apprenant de mettre en correspondance une description avec le type de route statique.  Les choix comprennent une route statique flottante, une route statique agrégée, une route statique par défaut, ou une route statique standard.

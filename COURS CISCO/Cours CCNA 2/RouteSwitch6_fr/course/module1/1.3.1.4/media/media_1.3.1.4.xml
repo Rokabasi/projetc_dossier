@@ -1,0 +1,81 @@
+﻿<textcomponents>
+<component id='ID_inst'>
+		<text><![CDATA[<b>Exercice : interprétation du contenu d'une entrée de table de routage</b>]]></text>
+	</component>
+
+	<component id='ID_instr_title'>
+		<text><![CDATA[Instructions]]></text>
+	</component>
+
+	<component id='ID_instr_body'>
+		<text><![CDATA[À l&apos;aide de la topologie présentée ici, créez une entrée de table de routage pour R1 selon le scénario ci-dessous. Indiquez vos réponses en les faisant glisser vers les zones appropriées.<br><b>Scénario :</b> les données du réseau sont envoyées du PC1 à l&apos;hôte 10.1.1.10. Il n&apos;y a pas de route statique ou par défaut configurée sur R1 ou R2. Les routeurs R1 et R2 utilisent le protocole EIGRP comme protocole de routage.]]></text>
+	</component>
+
+
+
+<component id='ID_txt01'>
+	<text><![CDATA[<b>Entrée de la table de routage de R1</b>]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">S0/0/1</font>]]></text>
+</component>
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">via<br>209.165.200.226</font>]]></text>
+</component>
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">via<br>209.165.200.225</font>]]></text>
+</component>
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">00:00:33</font>]]></text>
+</component>
+
+<component id='ID_drag05'>
+	<text><![CDATA[<font color="#393536">90/3072</font>]]></text>
+</component>
+
+<component id='ID_drag06'>
+	<text><![CDATA[<font color="#393536">10.1.1.0/24</font>]]></text>
+</component>
+
+<component id='ID_drag07'>
+	<text><![CDATA[<font id="font1" color="#393536">209.165.200.224/30</font>]]></text>
+</component>
+
+<component id='ID_drag08'>
+	<text><![CDATA[<font color="#393536">D</font>]]></text>
+</component>
+
+<component id='ID_drag09'>
+	<text><![CDATA[<font color="#393536">S0/0/0</font>]]></text>
+</component>
+
+<component id='ID_drag10'>
+	<text><![CDATA[<font color="#393536">S</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement créé une entrée de table de routage pour R1 selon le scénario ci-dessous.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement créé une entrée de table de routage pour R1 selon le scénario ci-dessous. Cliquez sur le bouton Réinitialiser et réessayez.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+</textcomponents>

@@ -1,0 +1,1 @@
+La figure illustre la topologie simplifiée d’un immeuble de bureaux avec trois VLAN étendus sur trois étages. Il y a une activité de classe interactive.

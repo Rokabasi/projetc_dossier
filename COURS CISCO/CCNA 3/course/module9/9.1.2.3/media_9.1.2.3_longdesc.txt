@@ -1,0 +1,1 @@
+La figure affiche des messages LSA de type 2 qui se propagent dans les différentes zones après avoir été générés par le routeur désigné (DR).

@@ -1,0 +1,1 @@
+La figure affiche le routeur 2 avec un réseau interne à gauche ainsi qu’un PC. Elle affiche également un réseau externe à droite avec un FAI. Les adresses globales externes, les adresses globales internes, les adresses locales externes et les adresses locales internes sont répertoriées pour le PC et le serveur  Web.

@@ -1,0 +1,1 @@
+La figure présente deux routeurs directement connectés.  Le routeur R1 a 3 sous-réseaux : 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24.  EIGRP récapitulera automatiquement ces sous-réseaux vers la frontière par classe du sous-réseau 172.16.0.0/16 étant donné qu'il s'agit de sous-réseaux d'un réseau de classe B.

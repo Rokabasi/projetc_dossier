@@ -1,0 +1,1 @@
+La Figure 1 présente un tableau des champs b.p.d.u. et de leur taille en octets. La Figure 3 montre une capture Wireshark d'un paquet Spanning Tree.

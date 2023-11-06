@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Placement des listes de contrôle d&apos;accès</b>]]></text>
+</component>
+<component id="ID_txt01">
+<text><![CDATA[Les listes de contrôle d&apos;accès étendues sont généralement placées près de la source.]]></text>
+</component>
+<component id="ID_txt02">
+  <text><![CDATA[Les listes de contrôle d&apos;accès standard sont généralement placées près de la destination.]]></text> 
+  </component>
+<component id="ID_txt03">
+  <text><![CDATA[<font color="#F68026"><b>Source</b></font>]]></text> 
+  </component>
+<component id="ID_txt04">
+  <text><![CDATA[<font color="#F68026"><b>Destination</b></font>]]></text> 
+  </component>
+</textcomponents>

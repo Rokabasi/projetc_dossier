@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.4 Intervalles des paquets Hello</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Intervalles des paquets Hello</h1>
+        <div>
+          <p>Comme illustré dans la figure, les paquets Hello du protocole OSPF sont transmis à l'adresse de multidiffusion 224.0.0.5 dans IPv4 et FF02::5 dans IPv6 (tous les routeurs OSPF) toutes les : </p>
+          <p>
+            <ul>
+              <li>10 secondes (valeur par défaut dans les réseaux à accès multiple et point à point)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>30 secondes (valeur par défaut sur les réseaux NBMA tels que les réseaux à relais de trames)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L'intervalle Dead correspond au laps de temps pendant lequel le routeur attend de recevoir un paquet Hello avant de déclarer le voisin hors service. Si l'intervalle Dead arrive à échéance avant que les routeurs ne reçoivent un paquet Hello, le protocole OSPF supprime le voisin de sa LSDB. Le routeur diffuse vers la LSDB les informations concernant le voisin hors service vers toutes les interfaces compatibles OSPF. </p>
+          <p></p>
+          <p>Cisco utilise par défaut le quadruple de l'intervalle Hello :</p>
+          <p>
+            <ul>
+              <li>40 secondes (valeur par défaut dans les réseaux à accès multiple et point à point)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>120 secondes (valeur par défaut sur les réseaux NBMA ; par exemple, à relais de trames)</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente quatre routeurs disposés en diamant. Chaque routeur est directement connecté à ses deux routeurs voisins.  Un routeur se trouve au centre du diamant et est connecté à deux des quatre routeurs.  La figure affiche les paquets Hello envoyés et reçus par les routeurs voisins.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

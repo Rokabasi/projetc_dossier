@@ -1,0 +1,1 @@
+La figure présente deux routeurs connectés par un câble série.  Le résultat des commandes « show ip interface brief » et « ping » est également présenté ci-dessous.

@@ -1,0 +1,61 @@
+<textcomponents><!--slide 1--><component id="ID_s1_title">
+<text><![CDATA[<b>Réseaux hiérarchiques</b>]]></text>
+</component><!--slide 2--><component id="ID_s2_title">
+<text><![CDATA[<b>Réseaux commutés sans frontières</b>]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Campus de grande taille<b>]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[Data center]]></text>
+</component>
+
+<component id="ID_s1_txt03">
+<text><![CDATA[Bloc services]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+<text><![CDATA[Périphérie d&apos;Internet]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+<text><![CDATA[Réseau étendu (WAN)]]></text>
+</component>
+
+<component id="ID_s1_txt06">
+<text><![CDATA[RTPC]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+<text><![CDATA[Internet]]></text>
+</component>
+
+<component id="ID_s1_txt08">
+<text><![CDATA[<b>Campus moyen<b>]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+<text><![CDATA[Data center]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+<text><![CDATA[Bloc services]]></text>
+</component>
+
+<component id="ID_s1_txt11">
+<text><![CDATA[<b>Petit campus<b>]]></text>
+</component>
+
+<component id="ID_s1_txt12">
+<text><![CDATA[Data center]]></text>
+</component>
+
+<component id="ID_s1_txt13">
+<text><![CDATA[Bloc services]]></text>
+</component>
+
+
+
+</textcomponents>

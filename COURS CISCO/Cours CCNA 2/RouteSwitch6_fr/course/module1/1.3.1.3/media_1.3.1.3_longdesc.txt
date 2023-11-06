@@ -1,0 +1,1 @@
+La figure affiche une ligne de la sortie de la commande « show ip route » et met en surbrillance chaque élément décrit dans le relevé.

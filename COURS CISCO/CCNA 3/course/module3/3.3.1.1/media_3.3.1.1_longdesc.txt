@@ -1,0 +1,1 @@
+La figure présente un tableau mettant en correspondance les fonctionnalités de PVST + avec leurs paramètres par défaut.

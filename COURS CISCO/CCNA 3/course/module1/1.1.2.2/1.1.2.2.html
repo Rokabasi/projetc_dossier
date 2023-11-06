@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.2 Planification pour la redondance</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Planification pour la redondance</h1>
+        <div>
+          <p>
+            <b>Implémentation de la redondance </b>
+          </p>
+          <p></p>
+          <p>Pour de nombreuses organisations, la disponibilité du réseau est essentielle à la prise en charge des besoins métier. La redondance constitue un aspect important de la conception d'un réseau, afin d'éviter l'interruption des services en réduisant la possibilité d'un point de défaillance unique. Pour mettre en œuvre la redondance, une méthode consiste à installer un équipement dupliqué et à assurer des services de basculement pour des appareils essentiels. </p>
+          <p></p>
+          <p>Les chemins d'accès redondants, illustrés par la figure, constituent un autre moyen d'implémenter la redondance. Les chemins d'accès redondants apportent aux données d'autres chemins physiques pour traverser le réseau. Les chemins d'accès redondants dans un réseau commuté apportent une disponibilité élevée. Cependant, en raison du fonctionnement des commutateurs, les chemins d'accès redondants dans un réseau Ethernet commuté peuvent entraîner des boucles logiques de couche 2. Pour cette raison, le protocole STP (Spanning Tree Protocol) est requis.</p>
+          <p></p>
+          <p>STP élimine les boucles de couche 2 lorsque des liaisons redondantes sont utilisées entre les commutateurs. Pour ce faire, il fournit un mécanisme de désactivation des chemins d'accès redondants dans un réseau commuté, jusqu'à ce que le chemin d'accès soit nécessaire, par exemple en cas de défaillances. STP est un protocole standard ouvert, utilisé dans un environnement commuté pour créer une topologie logique sans boucle. </p>
+          <p></p>
+          <p>Vous trouverez plus d'informations sur la redondance de réseau local et le fonctionnement de STP dans le chapitre intitulé « STP ».</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente plusieurs commutateurs interconnectés avec des liaisons redondantes.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

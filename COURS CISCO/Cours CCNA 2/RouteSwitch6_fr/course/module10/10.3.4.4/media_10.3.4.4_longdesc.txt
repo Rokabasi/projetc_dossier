@@ -1,0 +1,1 @@
+La Figure 1 affiche la sortie de la commande « show license udi » sur le routeur 1. La Figure 2 montre un routeur avec une étiquette escamotable affichant l'UID et le PID du routeur. La Figure 3 est une activité interactive qui permet aux étudiants de s’entraîner à l'affichage de l'UDI d'un routeur sur la ligne de commande.

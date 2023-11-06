@@ -1,0 +1,1 @@
+La figure est un élément multimédia interactif qui permet à l’apprenant de classifier les descriptions de type de routage selon que ce soit une caractéristique du routage statique ou une caractéristique du routage dynamique.

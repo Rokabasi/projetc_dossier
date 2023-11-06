@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.5 Étiquetage VLAN voix</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étiquetage VLAN voix</h1>
+        <div>
+          <p>Souvenez-vous que pour la prise en charge VoIP, un VLAN voix séparé est nécessaire. </p>
+          <p></p>
+          <p>Un port d’accès utilisé pour connecter un téléphone IP Cisco peut être configuré pour utiliser deux VLAN séparés : un VLAN pour le trafic voix et l’autre VLAN pour le trafic de données en provenance d’un appareil branché sur le téléphone. La liaison entre le commutateur et le téléphone IP fait office de trunk pour acheminer à la fois le trafic du VLAN voix et le trafic du VLAN de données.</p>
+          <p></p>
+          <p>Le téléphone IP Cisco contient un commutateur 10/100 à trois ports intégré. Les ports fournissent des connexions dédiées aux périphériques suivants :</p>
+          <p>
+            <ul>
+              <li>Le port 1 est connecté au commutateur ou à un autre périphérique de VoIP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le port 2 est une interface 10/100 interne qui transporte le trafic du téléphone IP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le port 3 (port d’accès) est connecté à un ordinateur ou autre périphérique.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Sur le commutateur, l’accès est configuré pour envoyer des paquets CDP (Cisco Discovery Protocol) demandant à un téléphone IP associé d’envoyer le trafic voix au commutateur avec l’une des trois méthodes possibles, selon le type de trafic :</p>
+          <p>
+            <ul>
+              <li>Dans un VLAN voix étiqueté avec une valeur de priorité CoS (Class of Service) de couche 2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dans un VLAN d’accès étiqueté avec une valeur de priorité CoS de couche 2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dans un VLAN d’accès non étiqueté (pas de valeur de priorité CoS de couche 2)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la Figure 1, l’ordinateur des étudiants, PC5, est connecté à un téléphone IP Cisco et ce dernier est connecté au commutateur S3. Le VLAN 150 est conçu pour acheminer le trafic vocal, tandis que le PC5 se trouve dans le VLAN 20, lequel est utilisé pour les données des étudiants.</p>
+          <p></p>
+          <p>
+            <b>Exemple de configuration</b>
+          </p>
+          <p></p>
+          <p>La Figure 2 présente un exemple de résultats. Ce cours ne prétend pas expliquer les commandes vocales Cisco IOS, mais les éléments en surbrillance dans l’exemple de résultats indiquent que l’interface F0/18 est dotée d’un VLAN configuré pour les données (VLAN 20) et d’un VLAN configuré pour le trafic vocal (VLAN 150).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un commutateur connecté à un téléphone V.O.I.P. et un ordinateur connecté au téléphone.  Des légendes indiquent que le commutateur est configuré pour prendre en charge le trafic voix ainsi que le trafic du réseau VLAN 20.  Le trafic destiné au téléphone et réservé au VLAN 150 est dirigé vers le téléphone.  Toutefois, s’il n’est pas destiné au téléphone, il est redirigé vers l’ordinateur. La Figure 2 montre la sortie de la commande « show interface f. 0/0 switchport » sur un commutateur.  Le VLAN d’accès et le VLAN voix sont mis en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

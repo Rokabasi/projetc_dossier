@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.1 Résoudre les problèmes de voisinage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Résoudre les problèmes de voisinage</h1>
+        <div>
+          <p>Cet exemple illustre comment résoudre des problèmes de voisinage. Dans la topologie de la figure 1, tous les routeurs ont été configurés pour prendre le routage OSPFv2 en charge. </p>
+          <p></p>
+          <p>En observant rapidement la table de routage de R1, comme illustré à la Figure 2, vous remarquez qu'aucune route OSPFv2 n'est ajoutée. Cela peut être causé par de multiples raisons. Cependant, une condition requise pour l'établissement d'une relation de voisinage entre deux routeurs est la connectivité de couche 3 OSI. </p>
+          <p></p>
+          <p>La Figure 3 confirme que l'interface S0/0/0 est activée et qu'elle fonctionne. La réussite de la requête ping confirme également que l'interface série de R2 est active. Une requête ping qui aboutit ne signifie pas qu'une contiguïté s'établira, parce qu'elle a peut-être chevauché des sous-réseaux ou mal configuré des paramètres OSPF. Vous devez encore vérifier que les interfaces sur les périphériques connectés partagent le même sous-réseau. En cas d'échec de la requête ping, vérifiez le câblage et vérifiez que les interfaces sur les périphériques connectés sont configurées correctement et qu'elles fonctionnent.</p>
+          <p></p>
+          <p>Pour qu'une interface soit activée pour OSPFv2, une commande<b> network </b>correspondante doit être configurée sous le processus de routage OSPFv2. Vous pouvez vérifier les interfaces OSPFv2 actives avec la commande <b>show ip ospf interface</b>. Le résultat présenté dans la Figure 4 confirme que l'interface série 0/0/0 est activée pour OSPFv2. Si les interfaces connectées de deux routeurs ne sont pas activées pour OSPF, les voisins ne peuvent pas établir de contiguïté.</p>
+          <p></p>
+          <p>Vérifiez les paramètres OSPFv2 avec la commande<b> show ip protocols</b>. Le résultat présenté dans la Figure 5 confirme que le protocole OSPFv2 est activé et dresse la liste des réseaux annoncés comme étant activés par la commande <b>network</b>. Si une adresse IPv4 sur une interface fait partie d'un réseau qui a été activé pour OSPFv2, l'interface sera activée pour OSPFv2. </p>
+          <p></p>
+          <p>Cependant, notez que l'interface Serial 0/0/0 est répertoriée comme passive. N'oubliez pas que la commande<b> passive-interface </b>stoppe les mises à jour de routage entrantes et sortantes, car elle entraîne l'arrêt par le routeur de l'envoi et de la réception des paquets Hello sur l'interface concernée. Pour cette raison, les routeurs ne deviennent pas des voisins.</p>
+          <p></p>
+          <p>Pour désactiver une interface passive, utilisez la commande de mode de configuration de routeur<b> no passive-interface </b>comme illustré à la Figure 6. Dès que vous avez désactivé l'interface passive, les routeurs deviennent contigus, comme indiqué par le message d'information produit automatiquement.</p>
+          <p></p>
+          <p>En analysant rapidement la table de routage, comme illustré dans la Figure 7, vous voyez que le protocole OSPFv2 échange désormais des informations de routage.</p>
+          <p></p>
+          <p>Un autre problème peut survenir lorsque deux routeurs voisins présentent des tailles de MTU (Maximum Transmission Unit, unité de transmission maximale) différentes sur leurs interfaces de connexion. La taille MTU est la taille maximale des paquets de couche réseau transférés par le routeur sur chaque interface. La taille MTU par défaut d'un routeur est de 1 500 octets. Cependant, cette valeur peut être modifiée pour les paquets IPv4 via la commande de configuration d'interface <b>ip mtu </b><i>size </i>ou la commande d'interface <b>ipv6 mtu </b><i>size </i>pour les paquets IPv6. Si deux routeurs connectés comportent des MTU différentes, ils tentent d'établir une contiguïté, mais ils ne réussissent pas à échanger leurs LSDB (Link-state Database, base de données d'états de liens) et la relation de voisinage échoue. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exclusion du lien entre le routeur 2 et le fournisseur d'accès à Internet. La figure 2 présente le résultat de la commande « show i. p. route » sur le routeur 1. La Figure 3 présente le résultat de la commande « show i. p. interface brief » sur le routeur 1 et une requête ping qui a abouti. La Figure 4 présente le résultat de la commande « show i. p. o. s. p. f. interface serial zero slash zero slash zero ». La Figure 5 présente le résultat de la commande « show i. p. protocols » sur le routeur 1. L'interface série 0/0/0 est mise en évidence pour vous permettre de l'identifier en tant qu'interface passive. La Figure 6 présente la syntaxe qui permet de configurer l'interface série 0/0/0 de sorte qu'elle ne soit pas passive. La Figure 7 présente le résultat de la commande « show i. p. route o. s. p. f. » sur le routeur 1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

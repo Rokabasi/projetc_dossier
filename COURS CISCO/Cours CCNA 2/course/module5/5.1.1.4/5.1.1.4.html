@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.4 Préparation à la gestion de commutateur de base</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Préparation à la gestion de commutateur de base</h1>
+        <div>
+          <p>Pour préparer l'accès à la gestion à distance d'un commutateur, il est nécessaire de configurer une adresse IP et un masque de sous-réseau sur le commutateur. Gardez à l'esprit que pour administrer le commutateur depuis un réseau distant, le commutateur doit être configuré avec une passerelle par défaut. Cette opération est très similaire à la configuration des informations d'adresse IP sur des périphériques hôtes. Dans la figure, l'interface virtuelle du commutateur (SVI) sur S1 doit se voir attribuer une adresse IP. Une interface SVI est une interface virtuelle, et non un port physique du commutateur. </p>
+          <p></p>
+          <p>Une interface SVI est un concept relatif aux VLAN.  Les VLAN sont des groupes logiques numérotés auxquels les ports physiques peuvent être attribués. Les configurations et les paramètres appliqués à un VLAN peuvent également être appliqués aux ports attribués à ce même VLAN. </p>
+          <p></p>
+          <p>Par défaut, le commutateur est configuré de telle sorte que sa gestion est régie par le VLAN 1. Tous les ports sont assignés à VLAN 1 par défaut. Pour des raisons de sécurité, les meilleures pratiques recommandent d'utiliser un VLAN de gestion autre que le VLAN 1.  </p>
+          <p></p>
+          <p>Notez que ces paramètres IP sont uniquement utilisés pour l'accès à la gestion à distance du commutateur. Les paramètres IP ne permettent pas au commutateur de router des paquets de couche 3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre un commutateur avec un câble Ethernet sur un port Ethernet connecté à un port LAN sur un routeur.  Il existe un ordinateur connecté au port de console à l'aide d'un câble de console.  Afin de pouvoir gérer un commutateur à distance, le commutateur doit d'abord être configuré par le biais d’un port de console.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

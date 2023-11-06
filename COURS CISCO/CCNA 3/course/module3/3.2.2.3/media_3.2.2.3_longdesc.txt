@@ -1,0 +1,1 @@
+La figure montre les champs d'ID de pont sous deux formats.  Un avec ID système étendu et un sans.  Sans : la priorité est de 2 octets.  Avec : la priorité utilise 4 bits et l'ID système utilise les 12 autres bits.

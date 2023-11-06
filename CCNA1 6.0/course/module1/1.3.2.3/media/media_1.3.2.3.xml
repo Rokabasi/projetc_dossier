@@ -1,0 +1,13 @@
+﻿<textcomponents><!-- slide 2 --><component id="ID_title">
+<text><![CDATA[<b>Évolutivité</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+<text><![CDATA[Il est possible de connecter des utilisateurs supplémentaires, et même des réseaux tout entiers, à Internet sans que les performances soient dégradées au niveau de l&apos;utilisateur.]]></text> 
+</component>
+
+</textcomponents>

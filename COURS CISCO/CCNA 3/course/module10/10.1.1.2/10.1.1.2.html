@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.2 Confirmations sur les réseaux à accès multiple</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Confirmations sur les réseaux à accès multiple</h1>
+        <div>
+          <p>Les réseaux à accès multiple peuvent présenter deux problématiques pour le protocole OSPF concernant l'inondation des LSA :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Création de plusieurs contiguïtés</b> : les réseaux Ethernet peuvent interconnecter plusieurs routeurs OSPF sur une liaison commune. Il est toutefois inutile et non souhaitable de créer une contiguïté avec chacun des routeurs. Elle se traduirait par un nombre excessif de paquets LSA circulant entre les routeurs du même réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Inondation massive de paquets LSA</b> : les routeurs à état de liens diffusent leurs paquets à état de liens à chaque initialisation du protocole OSPF ou à chaque modification de la topologie. L'inondation pourrait devenir excessive.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La formule suivante peut être utilisée pour calculer le nombre de contiguïtés requises. Le nombre de contiguïtés requises pour un certain nombre de routeurs (désigné par <i>n</i>) sur un réseau à accès multiple est :</p>
+          <p></p>
+          <p>
+            <i>n</i> (<i>n</i> – 1) / 2 </p>
+          <p></p>
+          <p>La Figure 1 illustre une simple topologie à quatre routeurs, tous rattachés au même réseau Ethernet à accès multiple. En l'absence de tout mécanisme pour réduire le nombre de contiguïtés, ces routeurs formeraient ensemble six contiguïtés : 4 x (4 - 1)/2 = 6, comme illustré à la Figure 2. La Figure 3 montre la progression considérable du nombre de contiguïtés à mesure que des routeurs sont ajoutés au réseau.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure 1, il y a quatre routeurs connectés à un commutateur. Dans la Figure 2, quatre routeurs sont connectés à un commutateur et des flèches relient les commutateurs entre eux. Dans la Figure 3, un tableau met en correspondance les numéros des routeurs avec le numéro des contiguïtés établies.  À mesure que le nombre de routeurs augmente, le nombre de contiguïtés explose.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<textcomponents>
+
+<component id="ID_footer">
+<text><![CDATA[Le protocole DHCP permet aux clients d&apos;obtenir des informations d&apos;adressage de façon dynamique, ce qui facilite la gestion du réseau et offre davantage de flexibilité.]]></text>
+</component>
+
+</textcomponents>

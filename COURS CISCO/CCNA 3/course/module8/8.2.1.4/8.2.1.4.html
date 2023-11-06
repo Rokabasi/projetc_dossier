@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.4 Configuration d&#x0027;un ID de routeur OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;un ID de routeur OSPF</h1>
+        <div>
+          <p>Utilisez la commande <b>router-id </b><i>rid </i>en mode de configuration de routeur pour attribuer manuellement une valeur 32 bits exprimée sous forme d'adresse IPv4 à un routeur. Un routeur OSPF s'identifie auprès des autres routeurs au moyen de cet ID de routeur. </p>
+          <p></p>
+          <p>Comme illustré dans la Figure 1, R1 est configuré avec l'ID de routeur 1.1.1.1, R2 avec 2.2.2.2 et R3 avec 3.3.3.3. </p>
+          <p></p>
+          <p>Dans la Figure 2, l'ID de routeur 1.1.1.1 est attribué à R1. Exécutez la commande <b>show ip protocols</b> pour vérifier l'ID de routeur.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> R1 n'avait jamais été configuré avec un ID de routeur OSPF. Si c'était le cas, l'ID du routeur devrait être modifié.</p>
+          <p></p>
+          <p>Si l'ID de routeur est identique sur deux routeurs voisins, le routeur affiche un message d'erreur similaire à celui-ci : </p>
+          <p></p>
+          <p>
+            <span class="cmd">%OSPF-4-DUP_RTRID1: Detected router with duplicate router ID. </span>
+          </p>
+          <p></p>
+          <p>Pour corriger ce problème, configurez tous les routeurs de manière à ce qu'ils aient un ID OSPF unique.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 pour attribuer un ID de routeur à R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre la topologie de référence pour le protocole OSPF, ainsi que les valeurs des ID de routeur.  L'ID configuré pour le routeur R1 équivaut à 1.1.1.1.  L'ID configuré pour le routeur R2 équivaut à 2.2.2.2.  L'ID configuré pour le routeur R3 équivaut à 3.3.3.3.  La Figure 2 affiche les commandes utilisées pour attribuer un ID de routeur.  La figure commence en mode de configuration globale.  La première commande est : router OSPF. 10.  Cette commande configure OSPF sur le routeur et attribue la valeur 10 au processus.  La commande suivante est : router, trait d'union, ID, un, point, un, point, un, point, un.  Cette commande définit l'ID de routeur.  La figure présente ensuite le résultat de la commande, show ip protocols. La ligne des résultats affichés contenant l'ID de routeur est surlignée. La Figure 3 illustre un élément multimédia interactif qui permet à l'étudiant d'attribuer un ID à un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

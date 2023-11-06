@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.2 Passerelles par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Passerelles par défaut</h1>
+        <div>
+          <p>Pour activer l'accès au réseau, les périphériques doivent être configurés avec les informations d'adresse IP permettant d'identifier les éléments corrects suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse IP</b> : identifie un hôte unique sur un réseau local.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Masque de sous-réseau</b> : identifie avec quel sous-réseau l'hôte peut communiquer.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Passerelle par défaut </b>: identifie l’adresse IP du routeur auquel envoyer un paquet lorsque la destination n’est pas sur le même sous-réseau de réseau local.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Lorsqu'un hôte envoie un paquet à un périphérique situé sur le même réseau IP, le paquet est simplement transféré de l'interface hôte au périphérique de destination. </p>
+          <p></p>
+          <p>Lorsqu'un hôte envoie un paquet à un périphérique situé sur un autre réseau IP, le paquet est transmis à la passerelle par défaut, car un périphérique hôte ne peut pas communiquer directement avec les périphériques situés en dehors du réseau local. La passerelle par défaut est la destination qui route le trafic du réseau local vers des périphériques sur des réseaux distants. Elle est souvent utilisée pour connecter un réseau local à Internet. </p>
+          <p></p>
+          <p>La passerelle par défaut est généralement l'adresse de l'interface du routeur connecté au réseau local. Le routeur gère des entrées de table de routage pour tous les réseaux connectés ainsi que des entrées de réseaux distants et détermine le meilleur chemin pour atteindre ces destinations. </p>
+          <p></p>
+          <p>Par exemple, si le PC1 envoie un paquet au serveur Web situé à l'adresse 176.16.1.99, il constate que le serveur Web n'est pas sur le réseau local et il doit, par conséquent, envoyer le paquet à l'adresse MAC (contrôle d'accès au support) de sa passerelle par défaut. L'unité de données de protocole de paquet présentée dans la figure identifie les adresses IP source et de destination ainsi que l'adresse MAC.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : en général, un routeur est également configuré avec sa propre passerelle par défaut. Celle-ci est appelée passerelle de dernier recours.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre un commutateur avec deux ordinateurs, auquel est connecté un serveur F.T.P.  Il existe une liaison entre le commutateur et le routeur. Le routeur se connecte à un autre routeur, qui se connecte à son tour à un troisième routeur.  La passerelle par défaut des deux ordinateurs et du serveur est le port du routeur connecté au commutateur.   Le troisième routeur est connecté à un commutateur, lequel est connecté à un serveur Web.  La figure illustre une unité de données du protocole créée en cas de demande de communication d'un des ordinateurs au serveur Web.  L'unité de données du protocole comprend l'adresse MAC de destination, qui sera l'adresse MAC de la passerelle par défaut, puisque le serveur Web n'est pas sur le réseau local et que le paquet doit être transmis au routeur.  L’adresse MAC source sera celle de l’ordinateur transmettant la demande et l'adresse IP source sera celle de l'ordinateur émetteur.  L'adresse IP de destination sera celle du serveur Web.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure présente un tableau qui répertorie les champs pour un b.p.d.u. R.S.T.P. version 2.  Un autre tableau présente la répartition du champ d'indicateurs et de ses bits individuels.

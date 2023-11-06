@@ -1,0 +1,1 @@
+La figure présente un organigramme décrivant les étapes à suivre pour diagnostiquer les problèmes de connectivité EIGRP.

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.1 Interface passive</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interface passive</h1>
+        <div>
+          <p>La commande <b>passive-interface</b> peut expliquer pourquoi les tables de routage ne répertorient pas les routes appropriées. Lorsque le protocole EIGRP est exécuté sur un réseau, la commande<b> passive-interface </b>arrête les mises à jour de routage entrantes et sortantes. C'est la raison pour laquelle les routeurs ne deviennent pas des voisins.</p>
+          <p></p>
+          <p>Pour vérifier si l'interface d'un routeur est configurée comme passive, utilisez la commande du mode d'exécution privilégié<b> show ip protocols</b>. La Figure 1 montre que l'interface GigabitEthernet 0/0 de R2 est configurée comme passive, car ce lien ne contient aucun voisin.</p>
+          <p></p>
+          <p>En plus d'être configurée sur des interfaces sans voisins, une interface passive peut être activée sur des interfaces à des fins de sécurité. À la Figure 2, notez que l'ombrage du domaine de routage EIGRP est différent des topologies précédentes. Le réseau 209.165.200.224/27 est maintenant inclus dans les mises à jour EIGRP de R2. Toutefois, pour des raisons de sécurité, l'administrateur réseau ne souhaite pas que R2 établisse une contiguïté de voisinage EIGRP avec le routeur FAI.</p>
+          <p></p>
+          <p>La Figure 3 montre l'ajout de la commande 209.165.200.224/27<b> network </b>sur R2. R2 annonce maintenant ce réseau aux autres routeurs dans le domaine de routage EIGRP. </p>
+          <p></p>
+          <p>La commande de mode de configuration du routeur<b> passive-interface</b> est configurée sur Serial 0/1/0 pour empêcher l'envoi des mises à jour EIGRP de R2 au routeur FAI. La commande<b> show ip eigrp neighbors </b>sur R2 vérifie que R2 n'a établi aucune contiguïté de voisinage avec le routeur FAI.</p>
+          <p></p>
+          <p>La Figure 4 montre que R1 possède une route EIGRP vers le réseau 209.165.200.224/27 dans sa table de routage IPv4 (R3 disposera également d'une route EIGRP vers ce réseau dans sa table de routage IPv4). Toutefois, R2 n'a établi aucune contiguïté de voisinage avec le routeur FAI. </p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>Voici les commandes équivalentes à utiliser avec le protocole EIGRP pour IPv6 :</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router(config-rtr)# </span>
+                <span class="cmd">
+                  <b>passive-interface </b>
+                </span>
+                <span class="cmd">
+                  <i>type number</i>
+                </span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un routeur avec trois câbles série et un LAN.  L'interface LAN est représentée par un cercle.  Le résultat de la commande « show ip protocols » est affiché en dessous et les interfaces passives sont mises en évidence.  L'interface LAN est la seule interface passive. La Figure 2 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur R1 et le routeur R3.  Le routeur R2 est connecté au fournisseur d'accès à Internet. La Figure 3 présente le résultat de la configuration de la liaison entre le routeur R2 et le fournisseur d'accès à Internet en tant qu'interface passive. La Figure 4 présente le résultat de la commande « show ip route » sur le routeur R1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

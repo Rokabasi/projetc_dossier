@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.1.3 Chapitre 8 : DHCP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 8 : DHCP</h1>
+        <div>
+          <p>Tous les nœuds d'un réseau nécessitent une adresse IP unique pour communiquer avec d'autres périphériques. L'attribution statique des informations d'adressage IP sur les réseaux de grande envergure entraîne une charge administrative qui peut être éliminée en utilisant DHCPv4 et DHCPv6 pour attribuer de façon dynamique les informations d'adressage IPv4 et IPv6 respectives.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>DHCPv4 attribue ou loue dynamiquement une adresse IPv4 d'un pool d'adresses pour une durée limitée configurée sur le serveur, ou jusqu'à ce que le client n'ait plus besoin de l'adresse. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>DHCPv4 implique l'échange de plusieurs paquets différents entre le serveur et le client DHCPv4. Cet échange se solde par la location d'informations d'adressage valides pendant une durée prédéfinie.</p>
+          <p></p>
+          <p>Les messages provenant du client (DHCPDISCOVER, DHCPREQUEST) sont diffusés pour permettre à tous les serveurs DHCPv4 sur le réseau d'entendre la demande d'informations d'adressage et l'accusé de réception de ces données émis par le client. Les messages provenant du serveur DHCPv4 (DHCPOFFER, DHCPACK) sont envoyés en monodiffusion directement au client.</p>
+          <p></p>
+          <p>Il existe deux méthodes disponibles pour la configuration dynamique des adresses de monodiffusion globale IPv6. </p>
+          <p>
+            <ul>
+              <li>la configuration automatique des adresses sans état (SLAAC)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Protocole DHCP (Dynamic Host Configuration Protocol) pour IPv6 (DHCPv6 avec état)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Avec la configuration automatique sans état, le client utilise les informations fournies par le message RA IPv6 pour sélectionner et configurer automatiquement une adresse IPv6 unique. L'option DHCPv6 sans état enjoint le client à utiliser les informations dans le message RA pour l'adressage, mais les paramètres de configuration supplémentaires sont fournis par un serveur DHCPv6. </p>
+          <p></p>
+          <p>DHCPv6 avec état est similaire à DHCPv4. Dans ce cas, le message RA enjoint le client de ne pas utiliser les informations qu'il contient. Toutes les informations d'adressage et de configuration DNS sont obtenues auprès d'un serveur DHCPv6 avec état. Le serveur DHCPv6 maintient à jour les informations sur l'état des adresses IPv6 comme un serveur DHCPv4 attribuant des adresses pour IPv4.</p>
+          <p></p>
+          <p>Si le serveur DHCP se trouve sur un segment de réseau différent de celui du client DHCP, alors il est nécessaire de configurer un agent de relais. Les agents de relais transfèrent les messages spécifiques de diffusion ou de multidiffusion, y compris les messages DHCP, provenant d'un hôte sur un segment de réseau local et conçu pour un serveur spécifique situé sur un autre segment LAN.</p>
+          <p></p>
+          <p>Les problèmes de dépannage de DHCPv4 et de DHCPv6 demandent l'exécution des mêmes tâches :</p>
+          <p>
+            <ul>
+              <li>Résolution des conflits d'adresses</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérification de la connectivité physique</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérification de la connectivité à l'aide d'une adresse IP statique</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérification de la configuration du port du commutateur</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérification du fonctionnement sur le même sous-réseau ou VLAN</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un commutateur auquel sont connectés un routeur et un ordinateur.  L’ordinateur envoie au routeur IPv6 un message de sollicitation qui se trouve être un message multidiffusion à tous les routeurs.  Le routeur reçoit ce message et répond par un message d’annonce du routeur, qui est en fait un message IPv6 multidiffusion à tous les nœuds.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

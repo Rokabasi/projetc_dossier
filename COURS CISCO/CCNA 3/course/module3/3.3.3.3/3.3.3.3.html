@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.3 Présentation de l&#x0027;état STP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation de l&#x0027;état STP</h1>
+        <div>
+          <p>La commande <b>show spanning-tree</b> utilisée sans options supplémentaires offre un aperçu rapide de l'état STP pour l'ensemble des VLAN configurés sur un commutateur. Si vous ne vous intéressez qu'à un VLAN en particulier, limitez l'étendue de cette commande en spécifiant le VLAN comme option.</p>
+          <p></p>
+          <p>Utilisez la commande <b>show spanning-tree vlan </b><i>vlan_id </i>afin d'obtenir les informations STP pour un VLAN spécifique. Utilisez notamment cette commande pour obtenir des informations sur le rôle et l'état de chaque port du commutateur. L'exemple de résultat pour le commutateur S1 indique que les trois ports sont en état de réacheminement (FWD) et que le rôle de ces trois ports est soit port désigné, soit port racine. Les ports bloqués, le cas échéant, affichent l'état « BLK » dans la sortie.</p>
+          <p></p>
+          <p>La sortie fournit également des informations sur l'ID de pont du commutateur local et sur l'ID de racine, qui correspond à l'ID de pont du pont racine.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente quatre commutateurs interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.  Le résultat de la commande « show spanning dash tree v. lan one hundred » est également affiché.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

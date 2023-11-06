@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.3 Sécurité des ports : modes de violation</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sécurité des ports : modes de violation</h1>
+        <div>
+          <p>Une interface peut être configurée pour l'un des trois modes de violation, en spécifiant les actions à entreprendre en cas de violation. La figure illustre les types de trafic de données transmis lorsque l’un des modes de violation de sécurité suivants est configuré sur un port : </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Protect</b> : lorsque le nombre d'adresses MAC sécurisées atteint la limite autorisée sur le port, les paquets munis d'adresses sources inconnues sont ignorés jusqu'à ce qu'un nombre suffisant d'adresses MAC sécurisées soit supprimé ou que le nombre maximal d'adresses à autoriser soit augmenté. Aucune notification n'indique qu'une violation de sécurité s'est produite. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Restrict : </b>lorsque le nombre d'adresses MAC sécurisées atteint la limite autorisée sur le port, les paquets munis d'adresses sources inconnues sont ignorés jusqu'à ce qu'un nombre suffisant d'adresses MAC sécurisées soit supprimé ou que le nombre maximal d'adresses à autoriser soit augmenté. Dans ce mode, une notification indique qu'une violation de sécurité s'est produite.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Shutdown </b>: dans ce mode (le mode par défaut), toute violation de sécurité de port entraîne immédiatement la désactivation de l’enregistrement des erreurs dans l’interface et celle de la LED du port. Dans ce mode, le compteur de violation est incrémenté. Lorsqu’un port sécurisé est placé dans l’état de désactivation des erreurs, il peut être mis hors de cet état en saisissant la commande du mode de configuration d’interface<b> shutdown </b>suivie de la commande<b> no shutdown</b>. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour modifier le mode de violation d’un port de commutateur, utilisez la commande de mode de configuration d’interface<b> switchport port-security violation </b>{<b>protect </b>|<b> restrict </b>|<b> shutdown</b>}.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie deux situations qui entraînent une violation de sécurité sur un commutateur et les trois modes de violation de sécurité.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

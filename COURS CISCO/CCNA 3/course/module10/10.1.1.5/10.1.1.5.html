@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.5 Vérifier les contiguïtés du routeur désigné (DR)/du routeur désigné de secours (BDR)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier les contiguïtés du routeur désigné (DR)/du routeur désigné de secours (BDR)</h1>
+        <div>
+          <p>Vérifiez les contiguïtés OSPFv2 au moyen de la commande<b> show ip ospf neighbor</b>, comme illustré à la Figure 1. </p>
+          <p></p>
+          <p>Contrairement aux liaisons série qui n'affichent que l'état<span class="cmd"></span>FULL/-, l'état des voisins sur les réseaux à accès multiple peut être :</p>
+          <p>
+            <ul>
+              <li>FULL/DROTHER<b></b> : c'est un routeur DR ou BDR qui est entièrement contigu avec un routeur non DR ou BDR. Ces deux voisins peuvent échanger des paquets Hello, des mises à jour, des demandes, des réponses et des accusés de réception.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>FULL/DR<b></b> : le routeur est entièrement contigu avec le DR voisin indiqué. Ces deux voisins peuvent échanger des paquets Hello, des mises à jour, des demandes, des réponses et des accusés de réception. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>FULL/BDR<b></b> : le routeur est entièrement contigu avec le BDR voisin indiqué. Ces deux voisins peuvent échanger des paquets Hello, des mises à jour, des demandes, des réponses et des accusés de réception.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>2-WAY/DROTHER<b></b> : le routeur non-DR ou BDR a une relation de voisinage avec un autre routeur non DR ou BDR. Ces deux voisins échangent des paquets Hello. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L'état normal d'un routeur OSPF est généralement FULL. Si un routeur reste bloqué dans un autre état, cela indique des problèmes dans l'établissement des contiguïtés. La seule exception est l'état 2-WAY, qui est normal sur un réseau de diffusion à accès multiple. </p>
+          <p></p>
+          <p>Dans les réseaux à accès multiple, seuls les DROthers établissent des contiguïtés complètes avec le DR et le BDR. Cependant, les DROthers établissent des contiguïtés de voisinage 2-WAY avec tout autre DROther rejoignant le réseau. Cela signifie que chaque routeur DROther d'un réseau à accès multiple reçoit les paquets Hello de tous les autres routeurs DROther. Ainsi, ils connaissent les autres routeurs du réseau. Lorsque deux routeurs DROther établissent une contiguïté de voisinage, l'état des voisins correspond à 2-WAY/DROTHER.</p>
+          <p></p>
+          <p>Le résultat produit par R1 confirme que R1 a des contiguïtés avec les routeurs suivants :</p>
+          <p>1. R2 avec l'ID 2.2.2.2 est à l'état « Full ». Son rôle est celui d'un BDR. (1)</p>
+          <p>2. Le routeur R3 avec l'ID de routeur 3.3.3.3 est dans un état Full et le rôle de R3 est routeur désigné (DR). (2)</p>
+          <p></p>
+          <p>Le résultat généré par R2 dans la figure 2 confirme que ce routeur dispose de contiguïtés avec le routeur :</p>
+          <p>1. R1 avec l'ID 1.1.1.1 est à l'état « Full ». Son rôle n'est pas celui d'un DR, ni d'un BDR. (1)</p>
+          <p>2. Le routeur R3 avec l'ID de routeur 3.3.3.3 est dans un état Full et le rôle de R3 est routeur désigné (DR). (2)</p>
+          <p></p>
+          <p>Le résultat produit par R3 à la Figure 3 confirme que R3 a des contiguïtés avec les routeurs suivants :</p>
+          <p>1. R1 avec l'ID 1.1.1.1 est à l'état « Full ». Son rôle n'est pas celui d'un DR, ni d'un BDR. (1)</p>
+          <p>2. R2 avec l'ID 2.2.2.2 est à l'état « Full ». Son rôle est celui d'un BDR. (2)</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show i. p. o. s. p. f. neighbor » sur le routeur 1.  Les deux voisins sont répertoriés, ainsi que leur état. La Figure 2 présente le résultat de la commande « show i. p. o. s. p. f. neighbor » sur le routeur 2.  Les deux voisins sont répertoriés, ainsi que leur état. La Figure 3 présente le résultat de la commande « show i. p. o. s. p. f. neighbor » sur le routeur 3.  Les deux voisins sont répertoriés, ainsi que leur état.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

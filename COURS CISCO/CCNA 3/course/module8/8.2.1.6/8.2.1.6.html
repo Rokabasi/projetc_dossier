@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.6 Utilisation d&#x0027;une interface de bouclage comme ID de routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Utilisation d&#x0027;une interface de bouclage comme ID de routeur</h1>
+        <div>
+          <p>Un ID de routeur peut également être affecté au moyen d'une interface de bouclage. </p>
+          <p></p>
+          <p>L'adresse IPv4 de l'interface de bouclage doit être configurée avec un masque de sous-réseau 32 bits (255.255.255.255). Cette méthode permet de créer une route d'hôte de façon efficace. Une route d'hôte 32 bits n'est pas annoncée comme route aux autres routeurs OSPF. </p>
+          <p></p>
+          <p>L'exemple de la figure indique comment configurer une interface de bouclage avec une route d'hôte sur R1. R1 utilise la route d'hôte comme ID de routeur, à supposer qu'aucun ID de routeur n'ait été explicitement configuré ou appris précédemment.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la commande <b>router-id</b> est la méthode recommandée. Toutefois, certaines versions antérieures de Cisco IOS ne reconnaissent pas la commande <b>router-id</b>. Dans ce cas, le meilleur moyen de définir l'ID de routeur consiste à utiliser une interface de bouclage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche les commandes utilisées pour configurer une interface de bouclage sur un routeur pour servir d'ID de routeur.  La figure commence en mode de configuration globale.  La première commande est interface loopback zero, qui passe en mode de configuration d'interface.  La commande suivante est ip address 1.1.1.1 255.255.255.255. Cette commande définit l'adresse IP.  Il s'agit désormais de l'ID de routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure présente deux scénarios. L'un des scénarios comporte deux hôtes appartenant à deux VLAN différents, chaque VLAN nécessitant un routeur afin de leur permettre de communiquer entre eux. Le deuxième scénario montre qu'un commutateur de couche 3 a été utilisé au lieu du routeur et que deux interfaces virtuelles commutées ont été créées pour permettre le routage inter-VLAN.

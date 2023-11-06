@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.5.1 Routes statiques flottantes</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.5.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routes statiques flottantes</h1>
+        <div>
+          <p>Les routes statiques flottantes sont des routes statiques qui ont une distance administrative supérieure à la distance administrative d'une autre route statique ou de routes dynamiques. Elles sont très utiles comme routes de secours pour une liaison principale, comme le montre la figure. </p>
+          <p></p>
+          <p>Par défaut, les routes statiques ont une distance administrative égale à 1, ce qui les rend préférables aux routes acquises à partir des protocoles de routage dynamique. Par exemple, les distances administratives de certains protocoles de routage dynamique courants sont les suivantes :</p>
+          <p>
+            <ul>
+              <li>EIGRP = 90</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IGRP = 100</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>OSPF = 110</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>IS-IS = 115</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>RIP = 120</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La distance administrative d'une route statique peut être augmentée pour rendre la route moins souhaitable que celle d'une autre route statique ou d'une route apprise via un protocole de routage dynamique. De cette manière, la route statique « flotte » et n'est pas utilisée lorsque la route dont la distance administrative est meilleure est active. Toutefois, si la route préférée est perdue, la route statique flottante peut relayer, et le trafic peut être envoyé par cette autre route. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre deux routeurs, et chaque routeur dispose de deux chemins pour se connecter à l’autre.  Un chemin passe par le réseau interne et l’autre chemin peut passer via Internet.  Il devrait y avoir une route EIGRP principale entre eux.  L’administrateur peut configurer une route statique flottante en tant que chemin alternatif au cas où l’autre chemin échouerait.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

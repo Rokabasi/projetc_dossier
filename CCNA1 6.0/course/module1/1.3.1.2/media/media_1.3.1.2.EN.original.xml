@@ -1,0 +1,49 @@
+﻿<textcomponents>
+
+
+	
+	<component id="ID_title">
+		<text><![CDATA[<b>Converged Networks</b>]]></text>
+	</component>
+	<component id="ID_caption">
+		<text><![CDATA[Converged data networks carry multiple services on one network.]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Devices]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Devices]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Devices]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Medium]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Medium]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Medium]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Rule<br>Agreement<br>Standard]]></text>
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[Converged Network]]></text>
+	</component>
+	<component id="ID_txt09">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt10">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt11">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt12">
+		<text><![CDATA[One Network-<br>Multiple Devices]]></text>
+	</component>	
+	
+	
+</textcomponents>

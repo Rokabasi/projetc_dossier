@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.3 L&#x0027;ID système étendu et le fonctionnement de PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>L&#x0027;ID système étendu et le fonctionnement de PVST+</h1>
+        <div>
+          <p>Dans un environnement PVST+, l'ID système étendu garantit que chaque commutateur dispose d'un BID unique pour chaque VLAN.</p>
+          <p></p>
+          <p>Par exemple, l'ID de pont par défaut du VLAN 2 est 32770 (priorité de 32768, plus ID système étendu de 2). Si aucune priorité n'a été configurée, chaque commutateur a la même priorité par défaut et la sélection du pont racine pour chaque VLAN dépend de l'adresse MAC. Comme l'ID de pont est basé sur l'adresse MAC la plus basse, il est possible que le commutateur sélectionné comme pont racine ne soit pas le commutateur le plus puissant ou aux fonctionnalités optimales. </p>
+          <p></p>
+          <p>Il existe cependant des situations où l'administrateur souhaite sélectionner un commutateur spécifique en tant que pont racine, Cela peut se produire pour les raisons variées, notamment :</p>
+          <p>
+            <ul>
+              <li>le commutateur est mieux situé dans le réseau LAN, compte tenu de la majorité des modèles de flux de trafic pour un VLAN spécifique ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>le commutateur dispose d'une puissance de traitement plus élevée ou ; </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>il est plus facile d'accéder au commutateur et de le gérer à distance.</li>
+            </ul>
+          </p>
+          <p>Pour gérer la sélection du pont racine, affectez une priorité inférieure au commutateur qui doit être sélectionné comme pont racine pour les VLAN souhaités.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre les champs d'ID de pont sous deux formats.  Un avec ID système étendu et un sans.  Sans : la priorité est de 2 octets.  Avec : la priorité utilise 4 bits et l'ID système utilise les 12 autres bits.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

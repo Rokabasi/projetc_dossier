@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.1 Traduction d&#x0027;adresses réseau statique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Traduction d&#x0027;adresses réseau statique</h1>
+        <div>
+          <p>Il existe trois types de traduction NAT : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traduction d'adresse statique (NAT statique)</b> : mappage « un à un » entre les adresses locale et globale.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traduction d'adresse dynamique (NAT dynamique)</b> : mappage de plusieurs adresses locales et globales. Les traductions sont effectuées selon les disponibilités ; par exemple, s’il y a 100 adresses locales internes et 10 adresses globales internes, à un moment donné, seules 10 adresses parmi les 100 adresses locales internes peuvent être traduites. Cette limitation de la NAT dynamique la rend moins utile pour les réseaux de production, comparée à la traduction d’adresse de port.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Traduction d'adresses de port (PAT)</b> : mappage de plusieurs adresses locales et globales vers une seule. Cette méthode est également appelée « surcharge » (surcharge NAT). Par exemple, s’il y a 100 adresses locales internes et 10 adresses globales internes, la PAT utilise les ports comme paramètre supplémentaire pour fournir un effet multiplicateur, permettant ainsi de réutiliser l’une des 10 adresses globales internes jusqu’à 65 536 fois (en fonction du protocole sur lequel le flux est basé : UDP, TCP ou ICMP).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Traduction d'adresses réseau statique</b>
+          </p>
+          <p></p>
+          <p>La NAT statique utilise un mappage de type un à un des adresses locales et globales. Ces mappages sont configurés par l'administrateur réseau et restent constants.</p>
+          <p></p>
+          <p>Sur la figure, R2 est configuré avec des mappages statiques pour les adresses locales internes de Svr1, PC2 et PC3. Lorsque ces périphériques envoient du trafic vers Internet, leurs adresses locales internes sont traduites en adresses globales internes (celles configurées). Pour les réseaux externes, ces périphériques possèdent des adresses IPv4 publiques.</p>
+          <p></p>
+          <p>La NAT statique est particulièrement utile pour les serveurs Web ou les périphériques qui doivent posséder une adresse permanente accessible depuis Internet, notamment les serveurs Web d'entreprise. Elle sert également aux périphériques qui doivent être accessibles à distance par le personnel autorisé, mais pas par tous les utilisateurs d'Internet. Par exemple, un administrateur réseau utilisant PC4 peut établir une connexion SSH à l'adresse globale interne de Svr1 (209.165.200.226). R2 traduit cette adresse globale interne en adresse locale interne et connecte la session de l'administrateur à Svr1. </p>
+          <p></p>
+          <p>La NAT statique nécessite qu'il existe suffisamment d'adresses publiques disponibles pour satisfaire le nombre total de sessions utilisateur simultanées.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre un réseau composé de trois ordinateurs. Le réseau est connecté à un routeur NAT, qui est lui-même connecté à Internet.  Une table mappe les adresses privées internes avec les adresses publiques externes.  Cela permet de mettre en évidence la NAT statique.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

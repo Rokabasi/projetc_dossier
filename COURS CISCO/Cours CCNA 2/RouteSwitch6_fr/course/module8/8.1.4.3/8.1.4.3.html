@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.4.3 Débogage de DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Débogage de DHCPv4</h1>
+        <div>
+          <p>Sur les routeurs configurés en tant que serveurs DHCPv4, le processus DHCPv4 échoue si le routeur ne reçoit pas les requêtes du client. Dans le cadre du dépannage, assurez-vous que le routeur reçoit la requête DHCPv4 du client. Cette étape de dépannage nécessite la configuration d'une liste de contrôle d'accès pour le résultat du débogage.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : bien que vous puissiez copier la liste de contrôle d'accès étendue représentée sur la figure et l'utiliser pour filtrer les messages DHCP, la configuration des listes de contrôle d'accès étendues sortent du cadre de ce cours.</p>
+          <p></p>
+          <p>La figure montre une liste de contrôle d'accès étendue autorisant uniquement les paquets dont les ports de destination UDP sont 67 ou 68. Ces ports sont généralement utilisés par les clients et les serveurs DHCPv4 pour l'envoi de messages DHCPv4. La liste de contrôle d'accès étendue est utilisée avec la commande <b>debug ip packet</b> pour afficher uniquement les messages DHCPv4.</p>
+          <p></p>
+          <p>Le résultat présenté sur la figure indique que le routeur reçoit les requêtes DHCP du client. L’adresse IP source est 0.0.0.0 car le client n’a pas encore d’adresse IP. La destination est 255.255.255.255, car le message de détection DHCP du client est envoyé sous forme de diffusion. Ce résultat ne montre qu'un résumé du paquet et non le message DHCPv4 lui-même. Néanmoins, le routeur a bien reçu un paquet de diffusion dont les adresses IP source et de destination ainsi que les ports UDP sont corrects pour DHCPv4. Le résultat complet du débogage affiche tous les paquets présents dans les communications DHCPv4 entre le serveur et le client DHCPv4.</p>
+          <p></p>
+          <p>La commande <b>debug ip dhcp server events</b> est également utile pour résoudre les problèmes de fonctionnement de DHCPv4. Cette commande indique les événements de serveur tels que les attributions d’adresses et les mises à jour des bases de données. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre une liste de contrôle d'accès étendue autorisant uniquement les paquets dont les ports de destination UDP sont 67 ou 68.  La première commande est « access-list 100 permit udp any eq 67 ».  La deuxième ligne de la liste de contrôle d'accès est « access-list 100 permit udp any eq 68 ».  La figure exécute la commande « debug ip packet 100 ».  Elle est utilisée pour afficher l'activité correspondant à la liste de contrôle d'accès. 100, qui est la liste de contrôle d'accès configurée pour autoriser DHCP.  La figure illustre le routeur qui reçoit deux solutions de diffusion de l'adresse IP source 255.255.255.255, qui sont des requêtes DHCP.  La dernière commande dans la figure est « debug ip dhcp server events ».  Cette commande génère des événements de serveur, et dans la figure, l'activité DHCP du serveur s'affiche.  Cette activité comporte une adresse IP en cours de renvoi vers le pool et une adresse IP en cours d'attribution.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure présente quatre PC connectés à un LAN reliant deux routeurs physiques et un routeur virtuel.  Le trafic est acheminé vers le routeur situé à gauche du routeur virtuel, qui se trouve au milieu.

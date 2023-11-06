@@ -1,0 +1,1 @@
+Les Figures 1, 2 et 3 sont des exercices interactifs dans lesquels le stagiaire peut s'entraîner à associer le réseau et le masque pour la table topologique du routeur R2.

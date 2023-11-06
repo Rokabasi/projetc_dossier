@@ -1,0 +1,35 @@
+<textcomponents>
+
+	<component id="ID_txt01">
+		<text><![CDATA[Tous les périphériques réseau Cisco utilisent un système d&apos;exploitation connu sous le nom de « système d&apos;exploitation interréseau » ou « IOS ».]]></text>
+	</component>
+
+	<component id="ID_txt02">
+		<text><![CDATA[<b>Sécurité</b>]]></text> 
+	</component>
+  
+	<component id="ID_txt03">
+		<text><![CDATA[<b>Adressage</b>]]></text> 
+	</component>
+
+	<component id="ID_txt04">
+		<text><![CDATA[<b>Interface</b>]]></text> 
+	</component>
+
+	<component id="ID_txt05">
+		<text><![CDATA[<b>Routage</b>]]></text> 
+	</component>
+
+	<component id="ID_txt06">
+		<text><![CDATA[<b>QoS</b>]]></text> 
+	</component>
+
+	<component id="ID_txt07">
+		<text><![CDATA[<b>Gestion des ressources</b>]]></text> 
+	</component>
+	
+	<component id="ID_footer">
+		<text><![CDATA[]]></text> 
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,1 @@
+La Figure 1 affiche la sortie de la commande « show version » sur le routeur 1.  La fonction de sécurité est mise en surbrillance. La Figure 2 affiche la sortie de la commande « show license » sur le routeur 1.  Les différentes fonctionnalités et leur type sont mis en surbrillance.

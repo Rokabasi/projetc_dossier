@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.4 Messages de détection et d&#x0027;offre DHCPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Messages de détection et d&#x0027;offre DHCPv4</h1>
+        <div>
+          <p>Si un client est configuré pour recevoir ses paramètres IPv4 de manière dynamique et souhaite se connecter au réseau, il demande des valeurs d'adressage au serveur DHCPv4. Le client transmet un message DHCPDISCOVER sur son réseau local au démarrage ou lorsqu'il détecte une connexion réseau active. Le client ne pouvant pas savoir à quel sous-réseau il appartient, le message DHCPDISCOVER est une diffusion IPv4 (l'adresse IPv4 de destination est 255.255.255.255). Le client n'ayant pas encore d'adresse IPv4 configurée, l'adresse IPv4 source utilisée est 0.0.0.0. </p>
+          <p></p>
+          <p>Comme le montre la Figure 1, l'adresse IPv4 du client (CIADDR), l'adresse de la passerelle par défaut (GIADDR) et le masque de sous-réseau sont tous marqués pour indiquer que l'adresse 0.0.0.0 est utilisée. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les informations inconnues sont envoyées sous la forme 0.0.0.0.</p>
+          <p></p>
+          <p>Lorsque le serveur DHCPv4 reçoit le message DHCPDISCOVER, il répond par un message DHCPOFFER. Ce message contient des informations de configuration initiale pour le client, notamment l'adresse IPv4 proposée par le serveur, le masque de sous-réseau, la durée du bail et l'adresse IPv4 du serveur DHCPv4 à l'origine de la proposition. </p>
+          <p></p>
+          <p>Le message DHCPOFFER peut être configuré pour inclure d'autres informations, telles que la date de renouvellement du bail et l'adresse DNS. </p>
+          <p></p>
+          <p>Comme le montre la Figure 2, le serveur DHCP répond au message DHCPDISCOVER en attribuant des valeurs à l'adresse CIADDR et au masque de sous-réseau. La trame est créée à l'aide de l'adresse matérielle du client (CHADDR) et envoyée au client demandeur.</p>
+          <p></p>
+          <p>Le client et le serveur accusent réception des messages, ce qui conclut le processus. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le message de détection DHCPv4. Les messages comprennent l'adresse MAC du client comme source, une adresse MAC de destination de tous les F, une adresse IP 0.0.0.0 est utilisée pour l'IP source, le masque de sous-réseau, et la passerelle par défaut.  L'adresse de destination est 255.255.255.255. La Figure 2 illustre le message de l'offre DHCPv4.  Le serveur répond en proposant une adresse IP et un masque de sous-réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

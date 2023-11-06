@@ -1,0 +1,1 @@
+La figure présente un routeur et un serveur pour décrire la sauvegarde de l'IOS sur un serveur TFTP.

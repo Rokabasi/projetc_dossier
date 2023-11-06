@@ -1,0 +1,202 @@
+<textcomponents><!--Feedback for use by actionscript--><!--Do not need to duplicate for each activity--><component id="ID_blankTitle">
+<text><![CDATA[<b>Aucune réponse</b>]]></text>
+</component>
+
+<component id="ID_blankBody">
+<text><![CDATA[Veuillez sélectionner une réponse.]]></text>
+</component><!--slide 1--><component id="ID_s1_inst">
+<text><![CDATA[<b>Activité – Partie 1 : identifiez la commande pour résoudre un problème lié à une configuration inter-VLAN</b><br><br>Vous tentez de résoudre un problème lié à une configuration inter-VLAN. Vous devez donc vérifier vos routeurs et vos commutateurs pour l&apos;opération inter-VLAN. Utilisez les résultats affichés et déterminez quelle commande les a produits. Cliquez sur le bouton en regard de votre réponse. Cliquez sur le bouton 2 pour poursuivre cette activité.]]></text>
+</component>
+
+
+
+<component id='ID_s1_output02'>
+	<text><![CDATA[&lt;résultat omis&gt;]]></text>
+</component>
+
+<component id='ID_s1_txt01'>
+<text><![CDATA[<font face="_typewriter">show interfaces Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+<text><![CDATA[<font face="_typewriter">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+<text><![CDATA[<font face="_typewriter">show run</font>]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+<text><![CDATA[<font face="_typewriter">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s1_txt05'>
+<text><![CDATA[<font face="_typewriter">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s1_check'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_s1_reset'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+<component id="ID_s1_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s1_correctBody">
+<text><![CDATA[Vous avez correctement identifié la commande utilisée pour produire le résultat affiché. Cliquez sur le bouton 2 pour continuer.]]></text>
+</component>
+
+<component id="ID_s1_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s1_incorrectBody">
+<text><![CDATA[Vous n&apos;avez pas correctement identifié la commande utilisée pour produire le résultat affiché. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component><!--slide 2--><component id="ID_s2_inst">
+<text><![CDATA[<b>Activité – Partie 2 : identifiez la commande pour résoudre un problème lié à une configuration inter-VLAN</b><br><br>Vous tentez de résoudre un problème lié à une configuration inter-VLAN. Vous devez donc vérifier vos routeurs et vos commutateurs pour l&apos;opération inter-VLAN. Utilisez les résultats affichés et déterminez quelle commande les a produits. Cliquez sur le bouton en regard de votre réponse. Cliquez sur le bouton 3 pour poursuivre cette activité.]]></text>
+</component>
+<component id='ID_s2_output01'>
+	<text><![CDATA[&lt;résultat omis&gt;]]></text>
+</component>
+
+<component id='ID_s2_txt01'>
+<text><![CDATA[<font face="_typewriter">show interfaces Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+<text><![CDATA[<font face="_typewriter">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+<text><![CDATA[<font face="_typewriter">show run</font>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+<text><![CDATA[<font face="_typewriter">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s2_txt05'>
+<text><![CDATA[<font face="_typewriter">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+<component id="ID_s2_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s2_correctBody">
+<text><![CDATA[Vous avez correctement identifié la commande utilisée pour produire le résultat affiché. Cliquez sur le bouton 3 pour continuer.]]></text>
+</component>
+
+<component id="ID_s2_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s2_incorrectBody">
+<text><![CDATA[Vous n&apos;avez pas correctement identifié la commande utilisée pour produire le résultat affiché. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component><!--slide 3--><component id="ID_s3_inst">
+<text><![CDATA[<b>Activité – Partie 3 : identifiez la commande pour résoudre un problème lié à une configuration inter-VLAN</b><br><br>Vous tentez de résoudre un problème lié à une configuration inter-VLAN. Vous devez donc vérifier vos routeurs et vos commutateurs pour l&apos;opération inter-VLAN. Utilisez les résultats affichés et déterminez quelle commande les a produits. Cliquez sur le bouton en regard de votre réponse. Cliquez sur le bouton 4 pour poursuivre cette activité.]]></text>
+</component>
+
+<component id='ID_s3_txt01'>
+<text><![CDATA[<font face="_typewriter">show interfaces Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+<text><![CDATA[<font face="_typewriter">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+<text><![CDATA[<font face="_typewriter">show run</font>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+<text><![CDATA[<font face="_typewriter">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s3_txt05'>
+<text><![CDATA[<font face="_typewriter">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+<component id="ID_s3_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s3_correctBody">
+<text><![CDATA[Vous avez correctement identifié la commande utilisée pour produire le résultat affiché. Cliquez sur le bouton 4 pour continuer.]]></text>
+</component>
+
+<component id="ID_s3_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s3_incorrectBody">
+<text><![CDATA[Vous n&apos;avez pas correctement identifié la commande utilisée pour produire le résultat affiché. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component><!--slide 4--><component id="ID_s4_inst">
+<text><![CDATA[<b>Activité – Partie 4 : identifiez la commande pour résoudre un problème lié à une configuration inter-VLAN</b><br><br>Vous tentez de résoudre un problème lié à une configuration inter-VLAN. Vous devez donc vérifier vos routeurs et vos commutateurs pour l&apos;opération inter-VLAN. Utilisez les résultats affichés et déterminez quelle commande les a produits. Cliquez sur le bouton en regard de votre réponse.]]></text>
+</component>
+
+<component id='ID_s4_txt01'>
+<text><![CDATA[<font face="_typewriter">show interfaces Gi0/23 switchport</font>]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+<text><![CDATA[<font face="_typewriter">show ip route</font>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+<text><![CDATA[<font face="_typewriter">show run</font>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+<text><![CDATA[<font face="_typewriter">show ip interface brief</font>]]></text>
+</component>
+
+<component id='ID_s4_txt05'>
+<text><![CDATA[<font face="_typewriter">show vlan</font>]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[Contrôler]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+<component id="ID_s4_correctTitle">
+<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s4_correctBody">
+<text><![CDATA[Vous avez correctement identifié la commande utilisée pour produire le résultat affiché.]]></text>
+</component>
+
+<component id="ID_s4_incorrectTitle">
+<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s4_incorrectBody">
+<text><![CDATA[Vous n&apos;avez pas correctement identifié la commande utilisée pour produire le résultat affiché. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+
+</textcomponents>

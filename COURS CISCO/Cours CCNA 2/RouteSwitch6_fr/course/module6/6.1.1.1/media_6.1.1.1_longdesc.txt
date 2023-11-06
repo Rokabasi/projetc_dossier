@@ -1,0 +1,1 @@
+La figure présente un immeuble de bureaux à 3 étages ; chaque étage a des stations de travail sur chacun des trois réseaux VLAN.

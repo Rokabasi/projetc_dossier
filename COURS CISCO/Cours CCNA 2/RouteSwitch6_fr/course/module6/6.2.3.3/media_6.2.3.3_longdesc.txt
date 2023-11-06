@@ -1,0 +1,1 @@
+La Figure 1 est un diagramme qui illustre les étapes à suivre pour diagnostiquer les problèmes liaison lorsque les VLAN sont en service. La Figure 2 montre la sortie de la commande « show interfaces F0/1 trunk » sur le commutateur 1.

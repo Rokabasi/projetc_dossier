@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.1 Utilisations du routage statique </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Utilisations du routage statique </h1>
+        <div>
+          <p>Avant de déterminer les avantages des protocoles de routage dynamique, réfléchissez aux raisons pour lesquelles les professionnels des réseaux utilisent le routage statique.  Bien que le routage dynamique présente certainement plusieurs avantages par rapport au routage statique, ce dernier est toujours utilisé sur les réseaux actuels.  Pour être plus précis, les réseaux combinent généralement le routage dynamique et le routage statique. </p>
+          <p></p>
+          <p>Le routage statique est principalement utilisé pour les raisons suivantes : </p>
+          <p>
+            <ul>
+              <li>faciliter la maintenance des tables de routage dans les réseaux de petite taille qui ne sont pas amenés à se développer de manière significative</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Permettre le routage vers et à partir d'un réseau d'extrémité, à savoir un réseau avec une seule route par défaut vers l'extérieur et aucune connaissance d'aucun des réseaux distants </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Accéder à une seule route par défaut (qui sert à représenter un chemin vers tout réseau ne présentant aucune correspondance plus spécifique avec une autre route figurant dans la table de routage) </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figure présente un exemple de routage statique. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente deux routeurs connectés par une liaison WAN de série.  Chaque routeur possède 2 réseaux locaux sur les ports Gigabit Ethernet.  Dans la figure, le routeur à gauche est nommé R-1 et celui de droite est nommé R-2  La figure explique que R-2 est connecté à Internet et est le seul chemin pour les données provenant de R-1. Par conséquent, R-1 disposera d’une route statique par défaut qui se traduit par ceci :  R-2 sait qu’il n’y a que deux réseaux connectés à R-1, alors, il demande deux entrées de route statique dans la table de routage afin d’atteindre ces deux réseaux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

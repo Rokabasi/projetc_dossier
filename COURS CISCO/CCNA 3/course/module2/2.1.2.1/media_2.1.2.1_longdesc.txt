@@ -1,0 +1,1 @@
+Le graphique présente la topologie de référence utilisée au cours des étapes de configuration de VTP.

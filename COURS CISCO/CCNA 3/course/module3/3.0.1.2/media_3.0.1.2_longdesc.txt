@@ -1,0 +1,1 @@
+La figure présente un opérateur avec un équipement de test intervenant sur une armoire de répartition.  La légende indique que le protocole STP (Spanning Tree Protocol) est un standard IEEE qui permet d'établir des itinéraires clairs sur les réseaux commutés.

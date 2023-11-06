@@ -1,0 +1,1 @@
+La Figure 1 présente un tableau contenant différents types de médias et leurs valeurs de délai correspondantes. La Figure 2 présente le résultat de la commande « show interface ». Les valeurs de délai sont mises en surbrillance.

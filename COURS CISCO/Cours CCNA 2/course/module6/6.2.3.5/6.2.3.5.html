@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.5 Mode de port incorrect</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mode de port incorrect</h1>
+        <div>
+          <p>Des liaisons trunk sont en général configurées de manière statique à l’aide de la commande <b>switchport mode trunk</b>. Les ports trunk du commutateur Cisco Catalyst utilisent le protocole DTP pour négocier l’état de la liaison. Lorsqu’un port d’une liaison trunk est défini sur un mode trunk qui n’est pas compatible avec le port trunk voisin, il est impossible de créer la liaison trunk entre les deux commutateurs. </p>
+          <p></p>
+          <p>Dans le scénario illustré en Figure 1, le PC4 ne peut pas se connecter au serveur Web interne. La topologie indique une configuration valide. Alors, pourquoi y a-t-il un problème ? </p>
+          <p>Vérifiez l’état des ports trunk du commutateur S1 à l’aide de la commande <b>show interfaces trunk</b>. Les informations de la Figure 2 révèlent que l’interface Fa0/3 du commutateur S1 n’est actuellement pas une liaison trunk. L’examen de l’interface F0/3 indique que le port du commutateur est configuré de manière statique en mode de ligne principale. Une analyse des trunks sur le commutateur S3 vous apprend qu’il n’y a aucun port trunk actif. Une étude plus approfondie indique que l’interface Fa0/3 est en mode d’accès statique. C’est parce que le port a été configuré à l’aide de la commande <b>switchport mode access</b>. Voilà pourquoi le trunk ne fonctionne pas.</p>
+          <p></p>
+          <p>Pour résoudre le problème, changez le mode trunk des ports F0/3 sur le commutateur S3, comme indiqué en Figure 3. Après la modification de la configuration, le résultat de la commande <b>show interfaces</b> signale que le port du commutateur S3 est désormais en trunking. Les résultats du PC4 indiquent que celui-ci peut de nouveau se connecter au serveur Web/TFTP situé à l’adresse IPv4 172.17.10.30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un LAN avec un PC connecté au commutateur 3 et un serveur Web connecté au commutateur 1.  Les liaisons entre les commutateurs sont des liaisons trunk avec des VLAN nécessaires autorisés.  Le PC présente une légende indiquant qu’il ne peut pas se connecter au serveur Web. La Figure 2 montre la sortie de la commande « show interfaces trunk » sur le commutateur 1 et la commande « show interface F0/3 switchport » sur le commutateur 1. Le mode de F0/3 est mis en surbrillance et défini sur le mode dynamique automatique.  La figure montre également la sortie de la commande « show interfaces trunk » sur le commutateur 3.  Il n’y a pas de trunk sur le commutateur 3.  La figure montre également la sortie de la commande « show interfaces F0/3 » sur le commutateur 3.  Le mode de port est mis en surbrillance et défini sur le mode dynamique automatique. La Figure 3 montre la syntaxe pour configurer le port F0/3 sur le commutateur 1 et 3 en tant que port agrégé et la sortie de la requête ping réussie du PC au serveur Web.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

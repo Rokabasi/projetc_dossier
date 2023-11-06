@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.3 Méthodes de transmission par commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Méthodes de transmission par commutateur</h1>
+        <div>
+          <p>À mesure de la croissance des réseaux et du ralentissement de leurs performances, du point de vue des entreprises, des ponts Ethernet (une version antérieure d'un commutateur) ont été ajoutés aux réseaux pour limiter la taille des domaines de collision. Dans les années 1990, les progrès de la technologie des circuits intégrés ont permis de remplacer les ponts Ethernet par des commutateurs LAN Ethernet.  Dans ces commutateurs, les décisions de transfert de couche 2 ne sont plus prises par du logiciel mais par des circuits intégrés spécifiques (ASIC, Application Specific Integrated Circuits). Les circuits ASIC réduisent le temps de traitement des paquets par le périphérique. Ils permettent aussi au périphérique de prendre en charge un nombre accru de ports sans dégrader les performances. Cette méthode de transfert de trames de données au niveau de la couche 2 a été désignée sous le nom de commutation par « stockage et retransmission ». Cette méthode de commutation est ainsi distinguée de la méthode « cut-through » (à la volée).</p>
+          <p></p>
+          <p>Comme illustré dans la Figure 1, la méthode de stockage et de retransmission décide de transmettre une trame après avoir reçu la trame complète et vérifié qu’elle était exempte d’erreurs à l’aide d’un mécanisme de contrôle d’erreurs mathématique connu sous le nom de contrôle de redondance cyclique (CRC). </p>
+          <p></p>
+          <p>En revanche, comme illustré à la Figure 2, la méthode cut-through lance le processus de transfert dès que l'adresse MAC de destination d'une trame entrante et le port de sortie sont déterminés. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 est une animation qui montre qu’un commutateur configuré pour le traitement de trame par stockage et retransmission reçoit une trame complète d’une source. D’abord, le commutateur calcule le CRC pour s’assurer que la trame n’a pas été corrompue. Le commutateur recherche l’adresse de destination et transfère ensuite la trame vers la destination. La Figure 2 est une animation qui montre qu’un commutateur configuré pour traitement de trame cut-through transmettra la trame immédiatement après avoir reçu et traité l’adresse de destination.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

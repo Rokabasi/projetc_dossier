@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.3 Équilibrage de charge</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Équilibrage de charge</h1>
+        <div>
+          <p>Que se passe-t-il si une table de routage contient plusieurs chemins avec des métriques identiques vers le même réseau de destination ? </p>
+          <p></p>
+          <p>Lorsqu'un routeur contient deux chemins ou plus vers une destination avec des métriques à coût égal, le routeur transmet les paquets en utilisant de manière égale les deux chemins. C'est ce que l'on appelle l'équilibrage de charge à coût égal. La table de routage contient le réseau de destination unique, mais plusieurs interfaces de sortie, une pour chaque chemin de coût égal. Le routeur transfère les paquets en utilisant les différentes interfaces de sortie répertoriées dans la table de routage. </p>
+          <p></p>
+          <p>S’il est correctement configuré, l’équilibrage de charge peut améliorer l’efficacité et les performances du réseau. L’équilibrage de charge à coût égal peut être configuré pour utiliser à la fois des protocoles de routage dynamique et des routes statiques. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : seul le protocole EIGRP prend en charge l'équilibrage de charge à coût inégal.</p>
+          <p></p>
+          <p>L'animation de la figure présente un exemple d'équilibrage de charge à coût égal.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure correspond à une animation sur l'équilibrage de charge à coût égal effectué par les routeurs.  Le réseau représenté comprend quatre routeurs connectés dans une configuration carrée disposant chaque routeur dans un angle et une liaison unique sur les quatre côtés.  Un ordinateur connecté au routeur du côté supérieur gauche envoie des données à un ordinateur connecté du côté inférieur droit.  La configuration carrée présente deux chemins pour les données et grâce à l'équilibrage de charge à coût égal, environ la moitié des données sera envoyée sur chaque chemin.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

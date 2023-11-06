@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.4 Vérifier la route IPv6 par défaut propagée</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier la route IPv6 par défaut propagée</h1>
+        <div>
+          <p>Vérifiez les paramètres de la route statique par défaut sur R2 au moyen de la commande<b> show ipv6 route static</b>, comme illustré à la Figure 1. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 2 pour vérifier que la route par défaut a été propagée vers R1. Notez que l'origine de la route est<b> OE2</b>, ce qui signifie qu'elle a été apprise en utilisant OSPFv3. La désignation E2 indique qu'il s'agit d'une route externe. </p>
+          <p></p>
+          <p>Contrairement à la table de routage IPv4, IPv6 n'utilise pas d'astérisque pour indiquer que la route constitue une bonne candidate pour la route par défaut.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show i. p. v. 6. route static » sur le routeur 2 qui mentionne la route statique par défaut configurée. La figure 2 représente une activité interactive qui permet au stagiaire de s'exercer à compléter la table de routage pour le routeur 2 et le routeur 3 et de s'assurer que la route statique par défaut est bien configurée et se propage correctement au routeur 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

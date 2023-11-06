@@ -1,0 +1,1 @@
+La figure montre le résultat de la commande « dir flash: ».  Cette commande affiche le contenu de la mémoire flash et la figure répertorie divers fichiers, notamment le fichier de l'IOS.

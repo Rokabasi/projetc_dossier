@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.2 Annonce des réseaux</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Annonce des réseaux</h1>
+        <div>
+          <p>Lorsque vous passez en mode de configuration du routeur RIP, le routeur est chargé d’exécuter le protocole RIPv1. Toutefois, le routeur doit encore savoir quelles interfaces locales il doit utiliser pour communiquer avec d’autres routeurs et quels réseaux connectés localement il doit annoncer à ces routeurs.  </p>
+          <p></p>
+          <p>Pour activer le routage RIP pour un réseau, utilisez la commande<b> network </b><i>network-address </i>en mode de configuration de routeur. Entrez l'adresse réseau par classe de chaque réseau connecté directement. Cette commande :</p>
+          <p>
+            <ul>
+              <li>active le protocole RIP sur toutes les interfaces qui appartiennent à un réseau spécifique. Les interfaces associées envoient et reçoivent désormais les mises à jour RIP.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>annonce le réseau spécifié dans les mises à jour de routage RIP envoyées aux autres routeurs toutes les 30 secondes. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : Le protocole RIPv1 est un protocole de routage par classe pour IPv4. Par conséquent, si une adresse de sous-réseau est entrée, l’IOS la convertit automatiquement en adresse réseau par classe.  Par exemple, la commande <b>network 192.168.1.32</b> serait automatiquement convertie en <b>network 192.168.1.0</b> dans le fichier de configuration en cours. L'IOS n'affiche pas de message d'erreur, mais à la place il corrige l'entrée et entre l'adresse réseau par classe.  </p>
+          <p></p>
+          <p>Dans la Figure 1, la commande <b>network</b> permet d'annoncer les réseaux connectés directement de R1.  </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 2 pour configurer R2 et R3 de manière similaire.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche les commandes de la ligne de commande permettant d’activer le routage RIPv1 pour un réseau spécifique sur un routeur.  La figure commence en mode de configuration globale.  La première commande est « router ip ».  La commande suivante utilise le mot-clé « network » suivi de l’adresse réseau.  Dans la figure, deux réseaux sont configurés sur le routeur et la première commande est « network 192.168.1.0».  La deuxième commande est « 192.168.2.0 ».  Notez que lorsque vous utilisez RIPv1, aucun masque de sous-réseau n’est répertorié dans les commandes. La Figure 2 est un élément multimédia interactif qui permet à l’apprenant d’entrer les commandes nécessaires pour configurer le protocole RIP et pour diffuser les réseaux appropriés sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

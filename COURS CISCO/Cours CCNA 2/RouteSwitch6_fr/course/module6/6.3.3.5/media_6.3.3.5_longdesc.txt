@@ -1,0 +1,1 @@
+La figure présente les résultats d’un test ping à un hôte distant du point de vue d’un PC sur un VLAN et sous-réseau distincts via une topologie de routage inter-VLAN de type router-on-a-stick.

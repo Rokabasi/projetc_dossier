@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.4 Augmentation de la bande passante</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Augmentation de la bande passante</h1>
+        <div>
+          <p>
+            <b>Implémentation d'EtherChannel</b>
+          </p>
+          <p></p>
+          <p>Dans une conception de réseau hiérarchique, certains liens entre les commutateurs d'accès et les commutateurs de distribution doivent parfois traiter une quantité de trafic plus élevée que d'autres liens. À mesure que le trafic provenant de liens multiples converge vers un lien sortant unique, il est possible que ce lien devienne un goulot d'étranglement.  L'agrégation de liens permet à un administrateur d'augmenter le volume de bande passante entre les appareils en créant un lien logique constitué de plusieurs liens physiques. EtherChannel est une forme d'agrégation de liens utilisée dans les réseaux commutés, comme illustré par la figure. </p>
+          <p></p>
+          <p>EtherChannel utilise les ports de commutations existants ; des frais supplémentaires sont donc inutiles pour mettre à niveau le lien à une connexion plus rapide et plus coûteuse. Le lien EtherChannel est considéré comme un lien logique unique, qui utilise une interface EtherChannel. La plupart des tâches de configuration sont réalisées sur l'interface EtherChannel plutôt que sur chaque port, ce qui assure la cohérence de la configuration sur tous les liens. Enfin, la configuration EtherChannel tire parti de l'équilibrage de la charge entre les liens qui constituent le même lien EtherChannel ; selon la plate-forme matérielle, une ou plusieurs méthodes d'équilibrage de la charge peuvent être mises en œuvre.</p>
+          <p></p>
+          <p>Le fonctionnement et la configuration d'EtherChannel sera traitée plus en détail dans le chapitre intitulé « EtherChannel et HSRP ». </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux commutateurs multicouches connectés à un seul commutateur.  Chaque connexion utilise un canal Ether.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

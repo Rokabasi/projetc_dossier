@@ -1,0 +1,1 @@
+La figure 1 montre la sortie résultant d'une tentative de création d'un VLAN étendu. La figure 2 montre la configuration d'un VLAN étendu. La figure 3 montre la vérification du VLAN et la figure 4 est un contrôleur de syntaxe pour configurer et vérifier les VLAN étendus.

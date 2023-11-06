@@ -1,0 +1,1 @@
+La figure est interactive et présente trois commutateurs interconnectés par une liaison trunk.  Le commutateur un est la racine pour le VLAN 100 et le commutateur deux la racine pour le VLAN 200.  Cette activité permet au stagiaire de s'exercer à définir l'état du port du commutateur trois pour chacun des VLAN.

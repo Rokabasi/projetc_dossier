@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.4.2 Exemple de routeur sans fil </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Exemple de routeur sans fil </h1>
+        <div>
+          <p>La figure montre la fenêtre de configuration Single Port Forwarding (transfert de port unique) pour un routeur sans fil Packet Tracer. Par défaut, le transfert de port n’est pas activé sur le routeur.</p>
+          <p></p>
+          <p>Pour activer le transfert de port pour les applications, il convient de spécifier l’adresse locale interne vers laquelle les demandes doivent être transférées. Dans la figure, les demandes de service HTTP arrivant sur le routeur sans fil sont transférées vers le serveur Web dont l'adresse locale interne est 192.168.1.254. Si l’adresse IPv4 du réseau étendu (WAN) externe du routeur sans fil est 209.165.200.225, l’utilisateur externe peut saisir <b>http://www.example.com</b>. Le routeur sans fil redirige alors la demande HTTP vers le serveur Web interne à l’adresse IPv4 192.168.1.254, en utilisant le numéro de port par défaut 80.</p>
+          <p></p>
+          <p>Il est possible d’indiquer un port différent du port par défaut 80. Cependant, l'utilisateur externe doit connaître le numéro de port à utiliser. Pour indiquer un autre port, il faut modifier la valeur du port externe (External Port) dans la fenêtre Single Port Forwarding (Transfert de port unique).</p>
+          <p></p>
+          <p>La méthode à suivre pour configurer le transfert de port dépend de la marque et du modèle du routeur haut débit utilisé sur le réseau. Il existe cependant des étapes communes à effectuer. Si les instructions indiquées par le FAI ou celles fournies avec le routeur n’offrent pas les consignes appropriées, vous trouverez sur le site Web <a href="http://www.portforward.com/" target="_blank">http://www.portforward.com</a> des guides pour plusieurs routeurs haut débit. Vous pouvez suivre les instructions pour ajouter ou supprimer des ports afin de répondre aux besoins des applications que vous voulez autoriser ou refuser.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre un routeur sans fil avec un réseau interne sur la gauche et un réseau externe sur la droite.  Une capture d’écran de I’interface graphique utilisateur de Packet Tracer montre la manière de configurer le transfert de port.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

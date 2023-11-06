@@ -1,0 +1,1 @@
+La figure présente la formule permettant de calculer la mesure EIGRP et le résultat de la commande « show ip route » sur le routeur 2.  La mesure pour une route est indiquée en orange.

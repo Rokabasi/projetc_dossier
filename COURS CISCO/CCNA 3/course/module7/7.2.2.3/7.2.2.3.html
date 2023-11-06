@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.3 Interfaces EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interfaces EIGRP</h1>
+        <div>
+          <p>Outre la vérification du numéro de système autonome, il est nécessaire de vérifier que toutes les interfaces participent au réseau EIGRP. La commande<b> network </b>configurée sous le processus de routage EIGRP indique les interfaces de routage qui participent au protocole EIGRP. Cette commande s'applique à l'adresse réseau par classe de l'interface ou à un sous-réseau lorsque le masque de sous-réseau est inclus. </p>
+          <p></p>
+          <p>À la Figure 1, la commande<b> show ip eigrp interfaces</b> affiche les interfaces activées pour le protocole EIGRP sur R1. Si les interfaces connectées ne sont pas activées pour le protocole EIGRP, les voisins n'établissent pas de contiguïté.</p>
+          <p></p>
+          <p>Dans la Figure 2, la section « Routing for Networks » de la commande <b>show ip protocols</b> répertorie les réseaux configurés. Toutes les interfaces de ces réseaux sont concernées par EIGRP.</p>
+          <p></p>
+          <p>Si le réseau ne figure pas dans cette section, utilisez la commande<b> show running-config </b>pour vous assurer que la commande<b> network </b>a été configurée correctement.</p>
+          <p></p>
+          <p>À la Figure 3, le résultat de la commande<b> show running-config </b>confirme que les interfaces associées à ces adresses ou à un sous-réseau de ces adresses sont activées pour le protocole EIGRP.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>Voici les commandes équivalentes à utiliser avec le protocole EIGRP pour IPv6 :</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 eigrp interfaces</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un routeur avec deux câbles série connectés. Elle présente également le résultat de la commande « show ip eigrp interfaces » sur le routeur R1. La Figure 2 présente le résultat de la commande « show ip protocols » qui affiche les réseaux concernés par le routage EIGRP. La Figure 3 présente le résultat de la commande « show running-config » qui affiche les réseaux appartenant au domaine EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

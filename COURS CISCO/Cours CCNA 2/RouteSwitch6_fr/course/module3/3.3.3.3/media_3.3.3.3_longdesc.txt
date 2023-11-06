@@ -1,0 +1,1 @@
+La Figure 1 est un élément multimédia interactif qui permet à l’apprenant de déterminer les routes de la plus longue correspondance pour les adresses IPv4. La Figure 2 est un élément multimédia interactif qui permet à l’apprenant de déterminer les routes de la plus longue correspondance pour les adresses IPv6.

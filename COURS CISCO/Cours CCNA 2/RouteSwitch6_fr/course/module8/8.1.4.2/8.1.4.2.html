@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.4.2 Vérification de la configuration de DHCPv4 du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la configuration de DHCPv4 du routeur</h1>
+        <div>
+          <p>Lorsque le serveur DHCPv4 se trouve sur un réseau local différent de celui du client, l'interface du routeur reliée au client doit être configurée pour relayer les requêtes DHCPv4 à l'aide de l'adresse de diffusion IPv4. Si l'adresse de diffusion IPv4 n'est pas correctement configurée, les requêtes du client DHCPv4 ne sont pas transférées au serveur DHCPv4.</p>
+          <p></p>
+          <p>Suivez les étapes suivantes pour vérifier la configuration du routeur :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. </b>Vérifiez que la commande <b>ip helper-address</b> est configurée sur l'interface appropriée. Elle doit être présente sur l'interface entrante du réseau local comprenant les stations de travail DHCPv4 clientes et doit être dirigée vers le bon serveur DHCPv4. Sur la figure, le résultat de la commande <b>show running-config</b> permet de vérifier que l'adresse IPv4 du relais DHCPv4 fait référence à l'adresse du serveur DHCPv4, 192.168.11.6.</p>
+          <p></p>
+          <p>La commande <b>show ip interface</b> peut également servir à vérifier le relais DHCPv4 sur une interface.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>Vérifiez que la commande de configuration globale <b>no service dhcp</b> n'a pas été configurée. Cette commande désactive toutes les fonctionnalités de relais et de serveur DHCP sur le routeur. La commande <b>service dhcp</b> n'apparaît pas dans la configuration en cours, car il s'agit de la configuration par défaut.</p>
+          <p></p>
+          <p>Sur la figure, la commande <b>show running-config | include no service dhcp</b> permet de vérifier que le service DHCPv4 est activé puisqu'il n'existe aucune correspondance avec la commande <b>show running-config | include no service dhcp</b>. Si le service a été désactivé, la commande <b>no service dhcp</b> apparaît dans le résultat.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre le résultat de la commande « show running-config pipe section interface gigabit Ethernet 0/0 ».  Le résultat affiche les paramètres de configuration de l'interface spécifiée, y compris tous les paramètres DHCP.  Dans la figure, le résultat indique une adresse IP et une adresse de diffusion IP.  La figure présente ensuite la sortie de la commande « show running-config pipe include no service dhcp ».  Dans l'exemple, le résultat est vide.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

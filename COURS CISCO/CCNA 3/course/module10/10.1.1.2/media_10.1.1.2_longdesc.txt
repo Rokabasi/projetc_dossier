@@ -1,0 +1,1 @@
+Dans la figure 1, il y a quatre routeurs connectés à un commutateur. Dans la Figure 2, quatre routeurs sont connectés à un commutateur et des flèches relient les commutateurs entre eux. Dans la Figure 3, un tableau met en correspondance les numéros des routeurs avec le numéro des contiguïtés établies.  À mesure que le nombre de routeurs augmente, le nombre de contiguïtés explose.

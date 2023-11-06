@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.3.5 Commandes de base de l&#x0027;interface en ligne des commutateurs</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commandes de base de l&#x0027;interface en ligne des commutateurs</h1>
+        <div>
+          <p>La configuration de base d'un commutateur inclut le nom d'hôte pour l'identification, des mots de passe pour la sécurité et l'affectation d'adresses IP pour la connectivité. Pour bénéficier de l’accès intrabande, le commutateur doit posséder une adresse IP. La Figure 1 illustre les commandes à saisir pour activer un commutateur.</p>
+          <p></p>
+          <p>La figure 2 illustre les résultats des commandes de configuration saisies dans la figure 1. Vérifiez et enregistrez la configuration du commutateur à l'aide de la commande <b>copy running-config startup-config</b>. Pour effacer la configuration du commutateur, utilisez la commande<b> erase startup-config</b>, puis la commande<b> reload</b>. Il peut également être nécessaire d'effacer toute information de réseau local virtuel, au moyen de la commande<b> delete flash:vlan.dat</b>.  Une fois les commutateurs configurés, affichez les configurations à l'aide de la commande <b>show running-config</b>. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente un exemple de configuration de commutateur. La figure 2 montre le résultat de la commande « show run ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

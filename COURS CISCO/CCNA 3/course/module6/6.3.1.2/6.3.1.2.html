@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.2 Table topologique EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Table topologique EIGRP</h1>
+        <div>
+          <p>Les mises à jour EIGRP contiennent les réseaux accessibles à partir du routeur qui envoie la mise à jour. Comme les mises à jour EIGRP sont échangées entre des voisins, le routeur destinataire ajoute ces entrées à sa table topologique EIGRP. </p>
+          <p></p>
+          <p>Chaque routeur EIGRP gère une table topologique pour chaque protocole routé configuré, notamment IPv4 et IPv6. La table topologique comprend les entrées de route de chaque destination apprise par le routeur à partir de ses voisins EIGRP connectés directement. </p>
+          <p></p>
+          <p>La figure présente la suite du processus de détection de route initiale décrit à la page précédente. Elle montre à présent la mise à jour de la table topologique. </p>
+          <p></p>
+          <p>Lorsqu'un routeur reçoit une mise à jour de routage EIGRP, il ajoute les informations de routage à sa table topologique EIGRP et répond avec un reçu EIGRP. </p>
+          <p></p>
+          <p>1. R1 reçoit la mise à jour EIGRP du voisin R2, qui comprend des informations sur les routes annoncées par le voisin, notamment la mesure pour atteindre chaque destination. R1 ajoute toutes les entrées de mise à jour dans sa table topologique. La table topologique comprend toutes les destinations annoncées par les routeurs (adjacents) voisins et le coût (métrique) pour atteindre chaque réseau.</p>
+          <p></p>
+          <p>2. Les paquets de mise à jour EIGRP utilisent le mode d'acheminement fiable ; R1 répond donc avec un paquet de reçu EIGRP informant R2 de la réception de la mise à jour.</p>
+          <p></p>
+          <p>3. R1 envoie une mise à jour EIGRP à R2 annonçant les routes connues, à l'exception de celles apprises avec R2 (découpage d'horizon).</p>
+          <p></p>
+          <p>4. R2 reçoit la mise à jour EIGRP de son voisin R1 et ajoute les informations dans sa propre table topologique.</p>
+          <p></p>
+          <p>5. R2 répond au paquet de mise à jour de R1 avec un accusé de réception EIGRP. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs. Chaque routeur exécute le protocole EIGRP. Le routeur un envoie un paquet Hello au routeur deux.  Le routeur deux envoie un paquet de mise à jour et un paquet Hello au routeur un.  Le routeur un renvoie un paquet d'accusé de réception et un paquet de mise à jour au routeur deux.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

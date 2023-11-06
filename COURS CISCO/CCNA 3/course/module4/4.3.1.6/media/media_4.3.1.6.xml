@@ -1,0 +1,63 @@
+﻿<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Exercice : identification du type de protocole FHRP</b><br><br>Faites glisser le type de protocole FHRP vers la définition appropriée. Chaque type de protocole FHRP peut être utilisé plus d&apos;une fois.]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Protocole FHRP propriétaire Cisco qui protège le trafic de données en provenance d&apos;un routeur ou d&apos;un circuit défaillant, tout en permettant un <br><b>équilibrage de la charge</b> au sein d&apos;un groupe de routeurs redondants.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Utilisé dans un groupe de routeurs pour sélectionner un périphérique <b>actif</b> et un périphérique <b>de secours</b>.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Protocole FHRP propriétaire de Cisco, conçu pour permettre le basculement transparent de périphériques IPv4 au premier saut.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Choix d&apos;un routeur comme routeur virtuel <b>principal</b>, les autres servant de routeurs <b>de secours</b> en cas de défaillance du routeur virtuel principal.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Protocole de sélection non propriétaire permettant à plusieurs routeurs, sur une liaison à accès multiples, d&apos;utiliser la même adresse IPv4 virtuelle.]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">HSRP</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">VRRP</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">GLBP</font>]]></text>
+</component>
+
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque type de FHRP à sa définition.]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque type de FHRP à sa définition. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+</textcomponents>

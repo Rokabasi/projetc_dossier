@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.4.3 Les problèmes courants de configuration HSRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les problèmes courants de configuration HSRP </h1>
+        <div>
+          <p>Les commandes <b>debug</b> de la page précédente illustrent le comportement attendu de HSRP. Vous pouvez également les utiliser pour détecter des problèmes de configuration habituels :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Les routeurs HSRP ne sont pas connectés au même segment de réseau. Bien que le problème puisse être lié à la couche physique, il peut également s'agir d'un problème de configuration de la sous-interface VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les routeurs HSRP ne sont pas configurés avec des adresses IPv4 provenant du même sous-réseau. Les paquets « hello » HSRP sont locaux. Ils ne sont pas acheminés au delà du segment de réseau. Dans un tel cas, un routeur de secours (standby) ne sera pas informé de la défaillance du routeur actif.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les routeurs HSRP ne sont pas configurés avec la même adresse IPv4 virtuelle. L'adresse IPv4 virtuelle fait fonction de passerelle par défaut des terminaux.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les routeurs HSRP ne sont pas configurés avec le même numéro de groupe HSRP. Dans ce cas, chaque routeur assumera le rôle de routeur actif.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les périphériques finaux ne sont pas configurés avec la bonne adresse de passerelle par défaut. Ce problème n'est pas directement lié à HSRP. Toutefois, si le serveur DHCP est configuré avec l'une des adresses IP physiques du routeur HSRP, les périphériques finaux ne pourront se connecter aux réseaux distants que si ce routeur HSRP est actif.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la figure pour vous exercer au dépannage du protocole HSRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

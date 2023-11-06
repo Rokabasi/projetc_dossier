@@ -1,0 +1,1 @@
+La figure présente un FAI avec un numéro de système autonome qui fournit le protocole EIGRP entre deux entreprises et le protocole OSPF entre les deux autres entreprises.  Le FAI 1 est connecté au FAI 2 et le protocole BGP est utilisé entre eux.

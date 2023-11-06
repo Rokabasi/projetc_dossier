@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.5 Désactiver le résumé automatique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Désactiver le résumé automatique</h1>
+        <div>
+          <p>Comme l'illustre la Figure 1, le protocole RIPv2 récapitule automatiquement les réseaux au niveau des périphéries du réseau principal par défaut, tout comme le protocole RIPv1.  </p>
+          <p></p>
+          <p>Pour modifier le comportement par défaut de récapitulation automatique du protocole RIPv2, utilisez la commande du mode de configuration de routeur <b>no auto-summary </b>comme illustré dans la Figure 2. Cette commande n'a aucun effet lors de l'utilisation du protocole RIPv1. Une fois la récapitulation automatique désactivée, le protocole RIPv2 ne récapitule plus les réseaux dans leur adresse par classe au niveau des routeurs de périphérie. RIPv2 inclut maintenant tous les sous-réseaux et leurs masques appropriés dans ses mises à jour de routage.  La commande <b>show ip protocols </b>indique à présent que « la récapitulation réseau automatique n’est pas en vigueur » (automatic network summarization is not in effect). </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> le protocole RIPv2 doit être activé avant la désactivation de la récapitulation automatique. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 pour désactiver la récapitulation automatique sur R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show ip protocols » et met en surbrillance la ligne qui affirme que le résumé automatique du réseau est actif. La Figure 2 montre comment désactiver le résumé d’une route sur un routeur utilisant le protocole RIP. La ligne de commande commence en mode de configuration globale et la première commande « router rip » permet d’activer le protocole RIP.  La commande suivante est « no auto-summary »  Cette commande est vérifiée grâce à la commande « show ip protocols pipe section Automatic » et les sorties stipulent que le résumé automatique du réseau n’est pas actif. La Figure 3 est un élément multimédia interactif qui permet à l’apprenant de configurer le routage RIP et de désactiver le résumé automatique sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.3 Routeur désigné et routeur désigné de secours du protocole OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routeur désigné et routeur désigné de secours du protocole OSPF</h1>
+        <div>
+          <p>Pourquoi une sélection du routeur DR et du routeur BDR est-elle nécessaire ?</p>
+          <p></p>
+          <p>Les réseaux à accès multiple peuvent présenter deux problématiques pour le protocole OSPF concernant l'inondation des LSA :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Création de plusieurs contiguïtés</b> : les réseaux Ethernet peuvent interconnecter plusieurs routeurs OSPF sur une liaison commune. Il est toutefois inutile et non souhaitable de créer une contiguïté avec chacun des routeurs. Elle se traduirait par un nombre excessif de paquets LSA circulant entre les routeurs du même réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Diffusion massive de paquets LSA</b> - Les routeurs à état de liens diffusent leurs paquets LSA chaque fois que le protocole OSPF est initialisé, ou lorsqu'une modification topologique se produit. L'inondation pourrait devenir excessive.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour mieux appréhender le problème des contiguïtés multiples, nous devons étudier une formule :</p>
+          <p></p>
+          <p>Pour n'importe quel nombre de routeurs (désigné via le signe <i>n</i>) sur un réseau à plusieurs accès, il existe <i>n</i> (<i>n</i> – 1)/2 contiguïtés. </p>
+          <p></p>
+          <p>La Figure 1 illustre une topologie à cinq routeurs, tous rattachés au même réseau à accès multiple Ethernet. S'il n'existe aucun mécanisme permettant de réduire le nombre de contiguïtés, ces routeurs formeront, ensemble, 10 contiguïtés : </p>
+          <p></p>
+          <p>5 (5 – 1) / 2 = 10 </p>
+          <p></p>
+          <p>Cela peut sembler peu, mais à mesure que des routeurs sont ajoutés au réseau, le nombre de contiguïtés augmente de façon considérable, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>Pour comprendre le problème lié à la diffusion massive de paquets LSA, lancez l'animation de la Figure 3. Dans l'animation, R2 envoie une LSA. Cet événement déclenche chez tous les routeurs l'envoi d'une LSA. L'animation ne montre pas les accusés de réception renvoyés pour chaque paquet LSA reçu. Si chaque routeur d'un réseau à accès multiple devait envoyer une LSA, puis accuser réception de toutes les LSA qu'il a reçues pour tous les routeurs de ce réseau à accès multiple, le trafic réseau deviendrait chaotique.</p>
+          <p></p>
+          <p>Pour gérer le nombre de contiguïtés et l'inondation de LSA sur un réseau à accès multiple, la solution consiste à s'appuyer sur un routeur désigné (DR). Sur les réseaux à accès multiple, le protocole OSPF choisit un DR, qui sera le point de collecte et de distribution pour les LSA envoyées et reçues. Un BDR est également sélectionné en cas de panne du routeur DR. Tous les autres routeurs deviennent des DROthers. Un DROther est un routeur qui n'est ni le routeur DR ni le routeur BDR.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : le routeur désigné est utilisé uniquement pour la diffusion des paquets LSA. Il utilise toujours le routeur de tronçon suivant le plus approprié indiqué dans la table de routage pour la transmission de tous les autres paquets.</p>
+          <p></p>
+          <p>Lancez l'animation de la Figure 4 pour voir le rôle du routeur DR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche cinq routeurs. Ils sont reliés tous les cinq à un commutateur central. Aucun routeur n'est relié directement à un autre routeur.  La figure illustre un réseau à plusieurs accès qui nécessiterait la constitution de 10 contiguïtés. La Figure 2 est un tableau qui démontre dans quelle mesure un accroissement du nombre de routeurs entraîne une augmentation radicale du nombre de contiguïtés.  Par exemple, 5 routeurs nécessitent 10 contiguïtés, 20 routeurs nécessitent 190 contiguïtés, et 100 routeurs nécessitent 4 950 contiguïtés. La Figure 3 affiche cinq routeurs. Ils sont tous reliés à un commutateur central. Aucun routeur n'est relié directement à un autre routeur.  La figure est une animation qui illustre l'un des routeurs en train d'envoyer un paquet LSA à chacun des autres routeurs avec lesquels il entretient une relation de contiguïté.  Lorsque ces quatre routeurs recevront le paquet LSA, ils enverront le leur.  Cette approche implique un volume considérable de trafic réseau superflu. La Figure 4 affiche la même topologie que la Figure 3. Cependant, dans ce cas, un routeur est sélectionné comme routeur désigné et un autre en tant que routeur désigné de secours.  Les autres routeurs enverront uniquement leur paquet LSA à ces deux routeurs.  Le routeur désigné enverra ensuite le paquet LSA aux autres routeurs.  Cette approche réduit considérablement le trafic réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

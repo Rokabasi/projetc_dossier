@@ -1,0 +1,53 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_title">
+		<text><![CDATA[<b>Configuration de base du commutateur</b>]]></text>
+	</component>
+
+
+	<component id="ID_sc_reset">
+		<text><![CDATA[Réinitialiser]]></text>
+	</component>
+	
+	<component id="ID_sc_showme">
+		<text><![CDATA[Démonstration]]></text>
+	</component>
+	
+	<component id="ID_sc_showall">
+		<text><![CDATA[Afficher tout]]></text>
+	</component>
+
+	
+        <component id="ID_SC5" fontSize="12" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><fontface="_sans" color="#0000FF">***Vous devez entrer la commande exacte et complète. Les commandes qui incluent un nom ou un mot de passe sont sensibles à la casse.***</font></b></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b><ul>Configurez un commutateur avec les paramètres suivants :<li>Définissez le nom d&apos;hôte sur S1</li><li>Créez une interface SVI pour le VLAN 99 avec l&apos;adresse IP 172.17.99.11 /24</li><li>Activez l&apos;interface SVI</li><li>Définissez 172.17.99.1 comme passerelle par défaut</li></b></font>]]></existingcommands>
+                <command prompt="Switch#">
+                       <correctresponse><![CDATA[ configure terminal]]></correctresponse>
+                                <deviceresponse><![CDATA[Enter configuration commands, one per line. End with CNTL/Z.]]></deviceresponse>
+              </command>
+                <command prompt="Switch(config)#">
+                       <correctresponse><![CDATA[ hostname S1]]></correctresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ interface vlan 99]]></correctresponse>
+              </command>
+                <command prompt="S1(config-if)#">
+                       <correctresponse><![CDATA[ ip address 172.17.99.11 255.255.255.0]]></correctresponse>
+              </command>
+                <command prompt="S1(config-if)#">
+                       <correctresponse><![CDATA[ no shutdown]]></correctresponse>
+              </command>
+                <command prompt="S1(config-if)#">
+                       <correctresponse><![CDATA[ ip default-gateway 172.17.99.1]]></correctresponse>
+                                <deviceresponse><![CDATA[S1(config-if)#]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b><ul>Vérifiez que l&apos;interface SVI est configurée et activée<li>Retournez en mode d&apos;exécution privilégié</li><li>Utilisez une commande show pour afficher un résumé de l&apos;état de toutes les interfaces</li></font>]]></instruction>
+              </command>
+                <command prompt="S1(config-if)#">
+                       <correctresponse><![CDATA[ end]]></correctresponse>
+              </command>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ show ip interface brief]]></correctresponse>
+                                <deviceresponse><![CDATA[Interface IP-Address OK? Method Status Protocol<br>Vlan1 unassigned YES unset administratively down down<br>Vlan99 172.17.99.11 YES manual up up<br>FastEthernet0/1 unassigned YES unset administratively down down<br>FastEthernet0/2 unassigned YES unset administratively down down<br>FastEthernet0/3 unassigned YES unset administratively down down<br>FastEthernet0/4 unassigned YES unset administratively down down<br>FastEthernet0/5 unassigned YES unset administratively down down<br>]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Vous avez effectué les configurations de base du commutateur S1.</font>]]></instruction>
+              </command>
+<command prompt=""/>
+ </component>
+</textcomponents>

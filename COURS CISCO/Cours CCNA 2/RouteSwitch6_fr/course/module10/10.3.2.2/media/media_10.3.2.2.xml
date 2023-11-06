@@ -1,0 +1,53 @@
+<textcomponents><!--SLIDE 1 --><component id="ID_s1_title">
+<text><![CDATA[<b>Affichage de l&apos;image Cisco IOS</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[&lt;résultat omis&gt;]]></text>
+</component><!--SLIDE 2 --><component id="ID_s3_title">
+<text><![CDATA[<b>Exemple d&apos;un nom d&apos;image de logiciel Cisco IOS 15.2<br>sur un périphérique ISR G2</b>]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[<b>Matériel</b>]]></text>
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[<b>Désignation de l&apos;image</b>]]></text>
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[<b>Emplacement de mémoire</b>]]></text>
+</component>
+
+<component id="ID_s3_txt04">
+<text><![CDATA[<b>Format de compression</b>]]></text>
+</component>
+
+<component id="ID_s3_txt05">
+<text><![CDATA[<b>Indicateur de signature numérique</b>]]></text>
+</component>
+
+<component id="ID_s3_txt06">
+<text><![CDATA[<b>Version principale</b>]]></text>
+</component>
+
+<component id="ID_s3_txt07">
+<text><![CDATA[<b>Version mineure</b>]]></text>
+</component>
+
+<component id="ID_s3_txt08">
+<text><![CDATA[<b>Version avec nouvelles fonctionnalités</b>]]></text>
+</component>
+
+<component id="ID_s3_txt09">
+<text><![CDATA[<b>Version à maintenance étendue</b>]]></text>
+</component>
+
+<component id="ID_s3_txt10">
+<text><![CDATA[<b>Reconstruction de maintenance</b>]]></text>
+</component>
+
+<component id="ID_s3_txt11">
+<text><![CDATA[<b>Extension de fichier</b>]]></text>
+</component>
+
+</textcomponents>

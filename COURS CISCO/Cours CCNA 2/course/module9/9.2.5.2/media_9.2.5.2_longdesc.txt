@@ -1,0 +1,1 @@
+La figure montre comment une adresse IPV6 unique est formée.  Les champs d’adresse affichés incluent le préfixe, l’ID global, l’ID de sous-réseau et l’ID d’interface.

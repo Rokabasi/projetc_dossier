@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.4 Route parent de niveau 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route parent de niveau 1</h1>
+        <div>
+          <p>Comme illustré dans la Figure 1, les routes 172.16.0.0 et 209.165.200.0 sont des routes parent de niveau 1. Une route parent est une route de réseau de niveau 1 divisée en sous-réseaux. Une route parent ne peut jamais être une meilleure route. </p>
+          <p></p>
+          <p>La Figure 2 illustre les routes parent de niveau 1 dans la table de routage de R1. La table de routage fournit essentiellement un en-tête pour les sous-réseaux spécifiques qu'elle contient. Chaque entrée affiche l’adresse réseau par classe, le nombre de sous-réseaux et le nombre de masques de sous-réseau différents correspondant aux subdivisions de l’adresse par classe. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la relation entre la route de niveau 1 et la route parent.  La figure constitue un tableau qui mentionne une route de réseau en tant que route de niveau 1 ; en dessous, il y a un titre Route parent si le réseau de niveau 1 est un réseau divisé en sous-réseau. La Figure 2 affiche le résultat de la commande : show i.p. route pipe begin Gateway. Deux routes parent sont mises en surbrillance.  La première route lit que l’adresse 172.16.0.0/16 est divisée inégalement en sous-réseaux, dont 5 sous-réseaux et 3 masques.  En dessous de cela, les cinq sous-réseaux sont répertoriés avec l’adresse IP du tronçon suivant.  Par exemple, on peut lire sur l’une des lignes du sous-réseau la lettre R pour RIP et l’adresse 172.16.2.0/24 120/2 via l’adresse 209.165.200.226.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

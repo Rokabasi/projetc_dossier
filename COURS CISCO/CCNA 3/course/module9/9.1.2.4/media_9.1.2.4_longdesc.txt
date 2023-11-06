@@ -1,0 +1,1 @@
+La figure affiche des messages LSA de type 3 qui se propagent dans les différentes zones via le routeur ABR et indique qu'une LSA de type 3 est requise pour chaque sous-réseau.

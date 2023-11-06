@@ -1,0 +1,1 @@
+La figure montre dix routeurs qui sont tous connectés dans une seule zone. Ces routeurs ne disposent pas de suffisamment de mémoire, reçoivent trop de LSA et indiquent que l'algorithme SPF est exécuté trop souvent. Cette situation réduit l'efficacité du routage.

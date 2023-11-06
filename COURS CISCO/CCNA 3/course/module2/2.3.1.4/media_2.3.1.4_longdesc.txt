@@ -1,0 +1,1 @@
+La figure montre deux VLAN connectés à un cluster de commutateurs de couche de distribution avec un certain nombre de connexions redondantes. Une légende indique qu'une des liaisons entre une paire de commutateurs de distribution a été configurée comme interface routée.

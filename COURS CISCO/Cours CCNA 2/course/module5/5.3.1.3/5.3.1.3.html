@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.1.3 Chapitre 5 : Configuration de commutateur</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 5 : Configuration de commutateur</h1>
+        <div>
+          <p>Lorsqu'un commutateur LAN Cisco est mis sous tension pour la première fois, il exécute la séquence de démarrage suivante :</p>
+          <p></p>
+          <p>1. D'abord, le commutateur exécute un programme de Power-On Self Test (POST) stocké dans la mémoire ROM.  Le POST contrôle le sous-système du processeur. Il teste le processeur, la mémoire vive dynamique et la partie du périphérique flash qui compose le système de fichiers flash.</p>
+          <p>2. Le commutateur exécute ensuite le bootloader. Le bootloader est un petit programme stocké dans la mémoire morte et exécuté immédiatement après la réussite du POST.</p>
+          <p>3. Il effectue l'initialisation de bas niveau du processeur. Il initialise les registres de l’unité centrale qui contrôlent l’emplacement auquel la mémoire physique est mappée, la quantité de mémoire et sa vitesse. </p>
+          <p>4. Le bootloader initialise le système de fichiers flash sur la carte système. </p>
+          <p>5. Finalement, le chargeur de démarrage localise et charge dans la mémoire une image par défaut du logiciel du système d’exploitation IOS et donne le contrôle du commutateur à l’IOS. </p>
+          <p></p>
+          <p>Le fichier Cisco IOS spécifique chargé est spécifié par la variable d'environnement BOOT. Une fois le logiciel Cisco IOS chargé, il utilise les commandes qui se trouvent dans le fichier de configuration initiale pour configurer les interfaces. Si les fichiers du logiciel Cisco IOS sont manquants ou endommagés, le bootloader peut être utilisé pour procéder au redémarrage ou à la récupération à la suite d’un problème.</p>
+          <p></p>
+          <p>L'état opérationnel du commutateur est affiché par une série de LED sur le panneau avant. Ces LED affichent des informations telles que l'état des ports, la bidirectionnalité et la vitesse.</p>
+          <p></p>
+          <p>Une adresse IP est configurée sur l'interface SVI du VLAN de gestion afin de permettre la configuration à distance du périphérique. Une passerelle par défaut appartenant au VLAN de gestion doit être configurée sur le commutateur à l'aide de la commande <b>ip default-gateway</b>. Si la passerelle par défaut n'est pas correctement configurée, la gestion à distance est impossible. Il est recommandé d'utiliser Secure Shell (SSH) pour créer une connexion de gestion sécurisée (chiffrée) vers un périphérique distant, afin d'éviter que les noms d'utilisateur et les mots de passe non chiffrés ne soient interceptés. Certains protocoles, notamment Telnet, ne permettent pas de se prémunir contre ces interceptions. </p>
+          <p></p>
+          <p>Les commutateurs présentent l'avantage de prendre en charge les communications bidirectionnelles simultanées entre les périphériques, doublant ainsi le débit effectif des communications. Bien qu'il soit possible de spécifier les paramètres de vitesse et de bidirectionnalité d'une interface de commutateur, il est recommandé de laisser le commutateur procéder à ces réglages automatiquement afin d'éviter toute erreur.</p>
+          <p></p>
+          <p>La sécurité des ports est nécessaire pour éviter les attaques, notamment par inondation d'adresses MAC et par usurpation de DHCP.  Les ports de commutateur doivent être configurés de sorte à autoriser uniquement les trames provenant d'adresses MAC sources spécifiques. Les trames provenant d'adresses MAC inconnues doivent être refusées et entraîner la désactivation du port de sorte afin d'éviter toute attaque supplémentaire.</p>
+          <p></p>
+          <p>La sécurité des ports ne constitue qu'une des méthodes permettant de se prémunir contre les attaques sur le réseau. Pour protéger au mieux un réseau, observez les 10 meilleures pratiques suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Développez une stratégie de sécurité écrite pour l'organisation.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Arrêtez les services et les ports inutilisés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Utilisez des mots de passe forts et modifiez-les souvent.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Contrôlez l'accès physique aux périphériques.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Évitez de vous connecter à des sites Web HTTP non sécurisés.  Préférez les écrans de connexion qui utilisent le protocole HTTPS.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Effectuez des sauvegardes et testez les fichiers enregistrés de façon régulière.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Éduquez les employés à propos des attaques par manipulation psychologique, et développez des stratégies de validation des identités par téléphone, par e-mail, et en personne.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Chiffrez les données sensibles et protégez-les avec un mot de passe fort.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implémentez des logiciels et des matériels de sécurité, tels que des pare-feu.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Veillez à mettre le logiciel Cisco IOS à jour en installant les correctifs de sécurité chaque semaine voire chaque jour, si possible.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Ces méthodes sont uniquement un point de départ pour la gestion de la sécurité. Les entreprises doivent constamment rester vigilantes pour se défendre contre des menaces en constante évolution.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un tableau qui regroupe les commandes de configuration de base pour les interfaces de commutateur.  La CLI commence en mode EXEC privilégié et la première commande est : configure terminal.  Cela fait passer en mode de configuration globale.  La commande suivante est « interface fast Ethernet 0/1 » et l’invite du commutateur devient « config-i.f. » entre parenthèses.  Cela fait passer au mode de configuration pour l’interface spécifiée.  La commande suivante est : duplex full. Cette commande règle l’option duplex sur intégrale.  La commande suivante est : speed 100. Cette commande règle la vitesse sur l’interface à 100 mégabits par seconde.  La configuration en cours est copiée vers le fichier de configuration de démarrage avec la commande : copy running-config startup-config.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

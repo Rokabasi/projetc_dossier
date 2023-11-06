@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.3 Vérification de SSH</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de SSH</h1>
+        <div>
+          <p>Sur un PC, un client SSH, par exemple PuTTY, est utilisé pour établir une connexion à un serveur SSH. Voici les configurations appliquées dans les exemples des Figures 1 à 3 :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>SSH activé sur le commutateur S1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Interface VLAN 99 (SVI) avec l’adresse IPv4 172.17.99.11 sur le commutateur S1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>PC1 avec adresse IPv4 172.17.99.21</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la Figure 1, le PC initie une connexion SSH à l’adresse IPv4 du VLAN SVI de S1.</p>
+          <p></p>
+          <p>Dans la Figure 2, l'utilisateur a été invité à saisir un nom d'utilisateur et un mot de passe. En utilisant la configuration de l'exemple précédent, le nom d'utilisateur<b> admin </b>et le mot de passe<b> ccna </b>sont saisis. Après avoir saisi la combinaison adéquate, l'utilisateur est connecté via SSH à l'interface en ligne de commande du commutateur Cisco Catalyst 2960.</p>
+          <p></p>
+          <p>Pour afficher les données de version et de configuration SSH du périphérique configuré en tant que serveur SSH, utilisez la commande<b> show ip ssh</b>. Dans l'exemple, SSH version 2 est activé. Pour vérifier les connexions SSH vers le périphérique, utilisez la commande<b> show ssh </b>(voir Figure 3).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la fenêtre de configuration pour PuTTY. Dans cet exemple, le type de connexion est configuré sur SSH, le port est défini sur 22 et l’adresse IP de l’hôte avec laquelle se connecter est configurée. La Figure 2 affiche la fenêtre de connexion actuelle pour PuTTY. Dans cet exemple, le commutateur nécessite le nom d’utilisateur et le mot de passe. La Figure 3 affiche la sortie de la commande « show ip ssh ».  La sortie répertorie la version de SSH qui s’exécute sur le commutateur, ainsi que d’autres informations de configuration.  La Figure 3 affiche également la sortie de la commande « show ssh ».  Cette sortie répertorie les connexions ssh actuelles qui s’exécutent sur le commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande suivante sur le routeur R1 : show ipv6 OSPF interface brief.  Le résultat est une liste détaillée pour chaque interface OSPF. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier les interfaces OSPFv3 sur le routeur R2.

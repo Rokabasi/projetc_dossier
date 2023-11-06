@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Fonctionnement du protocole CDP (Cisco Discovery Protocol)</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[Annonces CDP]]></text> 
+  </component>
+<component id="ID_txt02">
+  <text><![CDATA[Les périphériques Cisco envoient régulièrement des annonces CDP aux périphériques connectés.]]></text> 
+  </component>
+  
+</textcomponents>

@@ -1,0 +1,8 @@
+<textcomponents>
+<component id="ID_txt01">
+<text><![CDATA[<b>Commutateurs</b><br/><br/><textformat blockindent='-14'><ul><li>Ils identifient les hôtes connectés, l&apos;emplacement des ports et les adresses MAC uniques.</li><li>Ils enregistrent les adresses d&apos;hôte uniques dans la table d&apos;adresses MAC.</li><li>Ils envoient et reçoivent le trafic de données à l&apos;aide de monodiffusions, de multidiffusions et de diffusions.</li></ul></textformat>]]></text>
+</component>
+
+
+
+</textcomponents>

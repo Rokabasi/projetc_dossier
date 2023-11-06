@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.3 Le routeur désigné OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le routeur désigné OSPF</h1>
+        <div>
+          <p>Pour gérer le nombre de contiguïtés et l'inondation de LSA sur un réseau à accès multiple, la solution consiste à s'appuyer sur un routeur désigné (DR). Sur les réseaux à accès multiple, le protocole OSPF choisit un DR, qui sera le point de collecte et de distribution pour les LSA envoyées et reçues. Un BDR est également sélectionné en cas de panne du routeur DR. Le BDR écoute passivement cet échange et maintient une relation avec tous les routeurs. Lorsque le DR arrête de produire des paquets Hello, le BDR s'autodésigne comme DR et en assume le rôle.</p>
+          <p></p>
+          <p>Tous les autres routeurs non DR ou non BDR deviennent des routeurs DROthers (ni DR, ni BDR). </p>
+          <p></p>
+          <p>À la Figure 1, R1 a été sélectionné comme routeur désigné pour le réseau local Ethernet interconnectant R2, R3 et R4. Notez que le nombre de contiguïtés a été ainsi réduit à 3.</p>
+          <p></p>
+          <p>Les routeurs d’un réseau à accès multiple choisissent un DR et un BDR. Les routeurs DROthers forment des contiguïtés complètes uniquement avec le DR et le BDR du réseau. Au lieu d'inonder de paquets LSA tous les routeurs du réseau, les DROthers envoient leurs LSA uniquement au DR et au BDR, en utilisant l'adresse de multidiffusion 224.0.0.6 (tous les routeurs DR). </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : le routeur DR est uniquement utilisé pour la distribution de LSA. Les paquets sont acheminés conformément aux tables de routage de chaque routeur.</p>
+          <p></p>
+          <p>Cliquez sur le bouton Lecture de la Figure 2 pour visualiser l'animation du rôle du DR. Dans l'animation, R1 envoie des LSA au DR. Le BDR écoute également. Le DR est chargé de transmettre les LSA depuis R1 vers les autres routeurs. Le DR utilise l'adresse de multidiffusion 224.0.0.5 (tous les routeurs OSPF). Au final, un seul routeur assure la diffusion de l’ensemble des LSA dans le réseau à accès multiple.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les sélections de DR/BDR ont lieu uniquement dans les réseaux à accès multiple et non dans les réseaux point à point. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure 1, il y a quatre routeurs connectés à un commutateur.  Une flèche bidirectionnelle relie le routeur 1 aux autres routeurs.  Le routeur 1 est nommé DR (routeur désigné) dans cette topologie. La Figure 2 est une animation qui présente cinq routeurs connectés à un commutateur.  Le routeur 2 est nommé DR et le routeur 3 est désigné par BDR (routeur désigné de secours). Le routeur 1 envoie une LSA aux routeurs DR et BDR.  Le routeur DR transfère ensuite la LSA aux autres routeurs, dont le BDR.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

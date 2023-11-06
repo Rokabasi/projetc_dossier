@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.4.1 Transfert de port</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Transfert de port</h1>
+        <div>
+          <p>Le transfert de port consiste à transférer le trafic adressé à un port réseau spécifique d’un nœud réseau à un autre. Cette technique permet à un utilisateur externe d'atteindre un port sur une adresse IPv4 privée (dans un réseau local) à partir de l'extérieur, via un routeur configuré pour la NAT. </p>
+          <p></p>
+          <p>En règle générale, les programmes et opérations de partage de fichiers peer to peer, tels que les services Web et le FTP sortant, exigent que les ports du routeur soient redirigés ou ouverts pour que ces applications puissent fonctionner (voir Figure 1). La NAT masquant les adresses internes, l'opération peer to peer ne fonctionne que de l'intérieur vers l'extérieur, car la NAT peut mapper les requêtes sortantes avec les réponses entrantes. </p>
+          <p></p>
+          <p>Le problème est que la NAT n'autorise pas les requêtes provenant de l'extérieur. Ce problème peut être résolu par une intervention manuelle. Le transfert de port peut être configuré pour identifier des ports spécifiques pouvant être redirigés vers des hôtes internes.</p>
+          <p></p>
+          <p>Rappelez-vous que les applications logicielles Internet interagissent avec des ports utilisateur qui doivent être ouverts ou à la disposition de ces applications. Les applications utilisent des ports différents. Cela permet aux applications et aux routeurs d'identifier les services réseau de manière prévisible. Par exemple, HTTP fonctionne sur le port réservé 80. Lorsque quelqu'un saisit l'adresse <b>http://cisco.com</b>, le navigateur affiche le site Web de Cisco Systems, Inc. Notez qu’il n’est pas nécessaire de préciser le numéro de port HTTP pour demander la page, car l'application suppose qu'il s'agit du port 80. </p>
+          <p></p>
+          <p>Si un autre numéro de port est requis, il peut être ajouté à la fin de l'URL après le signe deux-points (:). Par exemple, si le serveur Web écoute le port 8080, l'utilisateur saisit <b>http://www.example.com:8080</b>.</p>
+          <p></p>
+          <p>Le transfert de port permet aux utilisateurs sur Internet d'accéder aux serveurs internes à l'aide de l'adresse du port WAN du routeur et du numéro de port externe correspondant. Les serveurs internes sont généralement configurés avec des adresses IPv4 privées de l’espace RFC 1918. Lorsqu'une requête est envoyée à l'adresse IPv4 du port WAN via Internet, le routeur transfère la demande au serveur approprié sur le réseau local. Pour des raisons de sécurité, les routeurs haut débit n’autorisent pas par défaut le transfert d’une requête réseau externe vers un hôte interne. </p>
+          <p></p>
+          <p>Sur la Figure 2, le propriétaire d'une petite entreprise utilise un serveur de point de vente (PoS) pour suivre les ventes et le stock dans le magasin. Le serveur est accessible dans le magasin, mais comme il ne possède pas d'adresse IPv4 privée, il n'est pas accessible publiquement sur Internet. L’activation du transfert de port sur le routeur local permet au gérant d'accéder au serveur de point de vente en tout lieu à partir d'Internet. Le transfert de port sur le routeur est configuré avec le numéro de port de destination et l'adresse IPv4 privée du serveur de point de vente. Pour accéder au serveur, le logiciel client utilise l'adresse IPv4 publique du routeur et le port de destination du serveur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un cloud avec trois serveurs sur la gauche et un PC sur la droite.  Trois flèches vont du PC vers chaque serveur.  Le serveur du haut est un serveur telnet, le serveur du milieu est un serveur FTP et le serveur du bas est un serveur Web. La Figure 2 affiche un routeur S. O. H. O. avec un réseau interne sur la gauche et un réseau externe sur la droite. La figure montre un utilisateur envoyant des données à un serveur P.O.S. à partir du réseau externe, du routeur S.O.H.O et du réseau interne.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

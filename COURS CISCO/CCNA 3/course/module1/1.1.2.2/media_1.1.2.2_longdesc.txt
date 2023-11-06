@@ -1,0 +1,1 @@
+La figure présente plusieurs commutateurs interconnectés avec des liaisons redondantes.

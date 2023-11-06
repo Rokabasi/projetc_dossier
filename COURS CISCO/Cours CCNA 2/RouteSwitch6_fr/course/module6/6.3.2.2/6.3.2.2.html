@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.2 Configuration du routage inter-VLAN existant : configuration du commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration du routage inter-VLAN existant : configuration du commutateur</h1>
+        <div>
+          <p>Pour configurer le routage inter-VLAN existant, commencez par configurer le commutateur. </p>
+          <p></p>
+          <p>Comme indiqué dans la figure, le routeur R1 est connecté aux ports de commutateur F0/4 et F0/5, qui ont été configurés respectivement pour les VLAN 10 et 30.</p>
+          <p></p>
+          <p>Utilisez la commande de mode de configuration globale <b>vlan</b><i> vlan_id </i>pour créer des VLAN. Dans cet exemple, les VLAN 10 et 30 ont été créés sur le commutateur S1. </p>
+          <p></p>
+          <p>Une fois les VLAN créés, les ports de commutateur sont affectés aux VLAN appropriés. La commande <b>switchport access vlan</b><i> vlan_id </i>est exécutée en mode de configuration d’interface sur le commutateur correspondant à chaque interface à laquelle le routeur est connecté.</p>
+          <p></p>
+          <p>Dans cet exemple, les interfaces F0/4 et F0/11 ont été affectées au VLAN 10 à l’aide de la commande switchport access vlan 10. Le même processus est utilisé pour affecter le VLAN 30 aux interfaces F0/5 et F0/6 sur le commutateur S1. </p>
+          <p></p>
+          <p>Enfin, pour protéger la configuration afin qu’elle ne soit pas perdue après un redémarrage du commutateur, la commande <b>copy running-config startup-config</b> est exécutée pour sauvegarder la configuration courante dans la configuration initiale.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre les commandes nécessaires afin de configurer un commutateur pour le routage inter-VLAN existant.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

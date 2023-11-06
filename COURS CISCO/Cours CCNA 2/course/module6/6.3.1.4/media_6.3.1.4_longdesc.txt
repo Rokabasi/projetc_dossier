@@ -1,0 +1,1 @@
+Les Figures 1, 2 et 3 sont des activités interactives. Chaque activité montre une topologie différente et l’étudiant doit identifier s’il s’agit d’un routage existant, d’un router-on-a-stick ou d’un routage inter-VLAN de commutateur multicouche.

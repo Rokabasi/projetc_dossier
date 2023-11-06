@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.3.3 Modifier les intervalles OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modifier les intervalles OSPFv3</h1>
+        <div>
+          <p>Comme pour OSPFv2, les intervalles OSPFv3 peuvent également être ajustés.</p>
+          <p></p>
+          <p>Les intervalles Hello et Dead OSPFv3 peuvent être modifiés manuellement au moyen des commandes suivantes de mode de configuration d'interface : </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf hello-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf dead-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : pour rétablir les intervalles sur leur valeur par défaut, utilisez les commandes<b> no ipv6 ospf hello-interval </b>et<b> no ipv6 ospf dead-interval</b>.</p>
+          <p></p>
+          <p>Consultez la topologie IPv6 à la Figure 1.  Supposez que le réseau est convergent par l'utilisation du protocole OSPFv3.</p>
+          <p></p>
+          <p>L'exemple de la Figure 2 définit l'intervalle Hello OPSFv3 sur 5 secondes. Immédiatement après la modification de l'intervalle Hello, Cisco IOS modifie automatiquement l'intervalle Dead pour le porter à 4 fois la valeur de l'intervalle Hello. Cependant, comme pour OSPFv2, la modification explicite du minuteur est une bonne pratique, plutôt que de compter sur une fonction automatique d'IOS. Les modifications figurent ainsi dans la configuration. Par conséquent, l'intervalle Dead est également défini manuellement à 20 secondes sur l'interface série 0/0/0 de R1.</p>
+          <p></p>
+          <p>Lorsque le minuteur Dead arrive à expiration sur R1, R1 et R2 perdent leur contiguïté, comme illustré par le message de contiguïté OSPFv3 en surbrillance à la Figure 2. En effet, les valeurs ont été modifiées uniquement d'un côté du lien série entre R1 et R2. N'oubliez pas que les intervalles des paquets Hello et Dead OSPFv3 doivent être équivalents d'un voisin à l'autre. </p>
+          <p></p>
+          <p>Utilisez la commande<b> show ipv6 ospf neighbor </b>sur R1 pour vérifier les contiguïtés de voisinage (Figure 3). Notez que R1 n'est plus contigu au voisin 2.2.2.2 (R2). </p>
+          <p></p>
+          <p>Pour restaurer la contiguïté entre R1 et R2, l'intervalle d'attente Hello de l'interface série 0/0/0 sur R2 est défini sur 5 secondes (Figure 4). Presque immédiatement, IOS affiche un message indiquant que la contiguïté a été établie avec un état FULL.</p>
+          <p></p>
+          <p>Vérifiez les intervalles de l'interface au moyen de la commande<b> show ipv6 ospf interface </b>(Figure 5). Notez que l'intervalle Hello est de 5 secondes et que l'intervalle Dead a été automatiquement défini à 20 secondes au lieu des 40 secondes par défaut. Rappelez-vous que le protocole OSPF définit automatiquement la valeur de l'intervalle Dead à quatre fois celle de l'intervalle Hello.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exclusion du lien entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente la syntaxe qui permet de configurer les intervalles d'attente Hello et Dead sur l'interface série 0/0/0 sur le routeur 1 pour IPv6. La Figure 3 présente le résultat de la commande « show i. p. v. 6.  o. s. p. f. neighbor ». La Figure 4 présente la syntaxe qui permet de configurer l'intervalle d'attente Hello sur l'interface série 0/0/0 sur le routeur 2. La Figure 5 présente le résultat de la commande « show i. p. v. 6.  o. s. p. f. interface s. zero slash zero slash zero pipe include timer » et de la commande « show i. p. v. 6.  o. s. p. f. neighbor » sur le routeur 2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

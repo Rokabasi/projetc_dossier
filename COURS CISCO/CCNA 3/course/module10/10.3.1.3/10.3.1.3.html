@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.3 Chapitre 10 : réglage et dépannage du protocole OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 10 : réglage et dépannage du protocole OSPF</h1>
+        <div>
+          <p>OSPF définit cinq types de réseaux : point à point, accès multiple avec diffusion, accès multiple sans diffusion, point à multipoint et liens virtuels. </p>
+          <p></p>
+          <p>Les réseaux à accès multiple peuvent présenter deux difficultés pour OSPF en matière d'inondation de LSA : la création de contiguïtés multiples et la diffusion massive de paquets LSA. Pour gérer le nombre de contiguïtés et l'inondation de LSA sur un réseau à accès multiple, la solution consiste à s'appuyer sur un routeur désigné (DR) et un routeur désigné de secours (BDR). Si le DR arrête de produire des paquets Hello, le BDR s'autodésigne comme DR et en assume le rôle.</p>
+          <p></p>
+          <p>Les routeurs du réseau choisissent le routeur ayant la priorité d'interface la plus élevée comme étant le DR. Le routeur ayant la deuxième priorité d'interface la plus élevée est choisi comme BDR. Plus la priorité est élevée, plus il y a de chances que le routeur soit sélectionné comme DR. Un routeur de priorité 0 ne peut pas devenir DR. La priorité par défaut des interfaces de diffusion à accès multiple est de 1. De ce fait, tous les routeurs ont une valeur de priorité égale, sauf si la configuration définie est différente. Le choix du DR/BDR se fait donc à l'aide d'une autre méthode. Si les priorités d'interface sont égales, c'est le routeur dont l'ID est le plus élevé qui est choisi comme DR. Le routeur ayant le deuxième ID le plus élevé est choisi comme BDR. L'ajout d'un nouveau routeur ne déclenche pas un nouveau choix. </p>
+          <p></p>
+          <p>Pour propager une route par défaut dans OSPF, le routeur doit être configuré avec une route statique par défaut et la commande<b> default-information originate </b>doit être ajoutée à la configuration. Vérifiez les routes au moyen de la commande<b> show ip route </b>ou<b> show ipv6 route</b>.</p>
+          <p></p>
+          <p>Pour aider le protocole OSPF à déterminer le chemin exact, la bande passante de référence doit être remplacée par une valeur supérieure pour prendre en compte les réseaux disposant de liens plus rapides que 100 Mbit/s. Pour ajuster la bande passante de référence, utilisez la commande<b> auto-cost reference-bandwidth </b><i>Mbits/s </i>en mode de configuration de routeur. Pour ajuster la bande passante de l'interface, utilisez la commande<b> bandwidth </b><i>kilobits </i>en mode de configuration d'interface. Vous pouvez configurer manuellement le coût sur une interface grâce à la commande <b>ip ospf cost </b><i>valeur </i>en mode de configuration d'interface. </p>
+          <p></p>
+          <p>Si les intervalles Hello et Dead OSPF ne correspondent pas, la contiguïté de voisinage ne peut pas s'établir. Pour modifier ces intervalles, exécutez les commandes d'interface suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf hello-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf dead-interval </b>
+                <i>secondes</i>
+                <b></b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf hello-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf dead-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Lors du dépannage de voisins OSPF, sachez que les états FULL ou 2WAY sont normaux. Les commandes suivantes récapitulent le dépannage des protocoles OSPFv2 :<b></b></p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf neighbor </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route ospf </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>clear ip ospf </b>[<i>process-id</i>]<b> process</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le dépannage des protocoles OSPFv3 est similaire à celui des protocoles OSPFv2. Les commandes suivantes sont les commandes équivalentes utilisées avec OSPFv3 :<b> show ipv6 protocols</b>,<b> show ipv6 ospf neighbor</b>,<b> show ipv6 ospf interface</b>,<b> show ipv6 ospf</b>,<b> show ipv6 route ospf</b> et<b> clear ipv6 ospf </b>[<i>process-id</i>]<b> process</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la Figure, les routeurs 1, 2, 3 et 4 sont connectés à un commutateur via un réseau de diffusion. Le routeur deux est connecté à Internet avec une liaison point à point.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

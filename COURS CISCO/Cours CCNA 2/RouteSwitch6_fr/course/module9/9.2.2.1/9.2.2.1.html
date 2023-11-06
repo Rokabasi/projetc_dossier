@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.1 Fonctionnement de la NAT dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement de la NAT dynamique</h1>
+        <div>
+          <p>Alors que la NAT statique assure un mappage permanent entre une adresse locale interne et une adresse globale interne, la NAT dynamique permet le mappage automatique des adresses locales internes avec les adresses globales internes. Généralement, ces adresses globales internes sont des adresses IPv4 publiques. La NAT dynamique utilise un groupe, ou pool d'adresses publiques IPv4 pour la traduction. </p>
+          <p></p>
+          <p>Comme la NAT statique, la NAT dynamique nécessite la configuration des interfaces interne et externe participant à la NAT. Cependant, alors que la NAT statique crée un mappage permanent à une seule adresse, la NAT dynamique utilise un pool d'adresses.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la traduction entre les adresses IPv4 publiques et privées est de loin l'utilisation la plus courante de la NAT. Cependant, les traductions NAT peuvent être effectuées entre toutes les paires d'adresses.</p>
+          <p></p>
+          <p>L'exemple de topologie représenté sur la figure dispose d'un réseau interne utilisant des adresses de l'espace d'adressage privé RFC 1918. Deux réseaux locaux sont reliés au routeur R1, 192.168.10.0/24 et 192.168.11.0/24.  Le routeur R2, qui est le routeur de frontière, est configuré pour la NAT dynamique avec un pool d'adresses IPv4 publiques allant de 209.165.200.226 à 209.165.200.240.  </p>
+          <p></p>
+          <p>Le pool d'adresses IPv4 publiques (pool d'adresses globales internes) est disponible pour tous les périphériques du réseau interne et les adresses sont distribuées selon l'ordre des demandes. Avec la NAT dynamique, une adresse interne est traduite en une seule adresse externe. Avec ce type de traduction, le pool doit contenir suffisamment d'adresses pour prendre en charge tous les périphériques internes ayant besoin d'accéder simultanément au réseau externe. Si toutes les adresses du pool ont été utilisées, le prochain périphérique doit attendre qu'une adresse se libère avant de pouvoir accéder au réseau externe.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche le routeur 2 avec un réseau interne sur la gauche et un réseau externe sur la droite. Le réseau interne contient le routeur 1 et deux ordinateurs.  Le réseau externe contient un serveur.  Le pool NAT i. p. v. 4 est présenté sous l’image.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

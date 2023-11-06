@@ -1,0 +1,1 @@
+La figure présente le routeur R-1 avec une interface Fast Ethernet active, qui est connecté à trois autres routeurs sur chacune des trois liaisons WAN.  La figure est une animation qui présente le routeur envoyant des paquets Hello sur chacune des quatre interfaces actives.  Les trois routeurs connectés renvoient des paquets Hello au routeur R-1.

@@ -1,0 +1,1 @@
+La figure est un organigramme qui explique le processus Finite State Machine (FSM) DUAL.

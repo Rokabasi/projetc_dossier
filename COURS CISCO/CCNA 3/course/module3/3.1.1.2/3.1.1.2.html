@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.2 Les problèmes liés à la redondance de la couche 1 : instabilité de la base de données MAC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les problèmes liés à la redondance de la couche 1 : instabilité de la base de données MAC</h1>
+        <div>
+          <p>Les trames Ethernet n'ont pas d'attribut de durée de vie (TTL). Ainsi, si aucun mécanisme ne vient bloquer la propagation ininterrompue de ces trames sur le réseau commuté, elles continuent à se propager sans fin entre les commutateurs, ou jusqu'à ce qu'un lien soit coupé et mette fin à la boucle. Cette propagation continue entre les commutateurs peut avoir pour conséquence une instabilité de la base de données MAC. Celle-ci se produit du fait du réacheminement des trames de diffusion. </p>
+          <p></p>
+          <p>Les trames de diffusion sont envoyées à tous les ports de commutation, excepté au port d'entrée initial. Ceci garantit que tous les périphériques d'un domaine de diffusion reçoivent bien les trames. S'il existe plusieurs chemins pour le réacheminement de la trame, il est possible qu'une boucle sans fin soit créée. Lorsqu'une boucle se produit, il est possible que la table d'adresses MAC d'un commutateur change constamment en raison des mises à jour provenant des trames de diffusion, entraînant ainsi une instabilité de la base de données MAC.</p>
+          <p></p>
+          <p>Cliquez sur le bouton <b>Lecture</b> de la figure pour afficher l'animation. Lorsque l’animation s’interrompt, lisez le texte à gauche de la topologie. L'animation continuera après une courte pause.</p>
+          <p></p>
+          <p>Dans l'animation :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>PC1 envoie une trame de diffusion à S2. S2 reçoit la trame de diffusion sur F0/11. Lorsque S2 reçoit la trame de diffusion, il met à jour sa table d'adresses MAC afin d'enregistrer la disponibilité de PC1 sur le port F0/11. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Puisqu'il s'agit d'une trame de diffusion, S2 réachemine la trame à tous les ports, y compris Trunk1 et Trunk2. Lorsque la trame de diffusion parvient sur S3 et S1, les commutateurs mettent à jour leurs tables d'adresses MAC pour indiquer que PC1 est disponible en sortie du port F0/1 sur S1 et en sortie du port F0/2 sur S3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S'agissant d'une trame de diffusion, S3 et S1 réacheminent la trame sur tous les ports, à l'exception du port d'entrée. S3 envoie la trame de diffusion à S1 depuis PC1. S1 envoie la trame de diffusion à S3 depuis PC1. Chacun d’eux met à jour sa table d’adresses MAC en consignant le port incorrect pour PC1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Chaque commutateur réachemine la trame de diffusion en sortie de tous ses ports, à l'exception du port d'entrée. De ce fait, les deux commutateurs envoient la trame à S2.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Lorsque S2 reçoit les trames de diffusion de S3 et S1, la table d'adresses MAC est mise à jour avec la dernière entrée reçue des deux autres commutateurs. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Ce processus se répète indéfiniment jusqu'à ce que la boucle soit interrompue, soit en débranchant physiquement les connexions qui la provoquent, soit en éteignant l'un des commutateurs impliqués dans celle-ci. Ce phénomène a pour conséquence une charge de processeur élevée sur tous les commutateurs pris dans la boucle. Puisque les mêmes trames sont constamment réacheminées entre l'ensemble des commutateurs de la boucle, les processeurs de commutateur doivent traiter un gros volume de données. Par conséquent, les performances du commutateur se dégradent lors de l’arrivée du trafic légitime.</p>
+          <p></p>
+          <p>Lorsqu’un hôte est pris dans une boucle réseau, les autres hôtes du réseau ne peuvent pas y accéder. En outre, en raison des modifications constantes apportées à la table d'adresses MAC, le commutateur ne sait plus à partir de quel port réacheminer les trames de monodiffusion. Dans l'exemple ci-dessus, les commutateurs disposent de ports incorrects pour PC1. Toute trame de monodiffusion destinée à PC1 crée une boucle dans le réseau, comme le font les trames de diffusion. Le nombre sans cesse croissant de trames effectuant des boucles dans le réseau engendre par la suite une tempête de diffusion.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation présente trois commutateurs : s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  L'animation montre comment les bases de données d'adresses MAC peuvent devenir instables en présence de boucles de couche deux dans un réseau.  Une diffusion peut conduire à des erreurs dans la création d'un mappage entre l'adresse MAC et le port à cause de la boucle, car la diffusion continue de rebondir sur le réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

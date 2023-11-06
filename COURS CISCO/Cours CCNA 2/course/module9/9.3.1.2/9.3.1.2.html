@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.2 La commande debug ip nat</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La commande debug ip nat</h1>
+        <div>
+          <p>Utilisez la commande <b>debug ip nat</b> pour vérifier le fonctionnement de la NAT en affichant des informations sur chacun des paquets traduits par le routeur. La commande <b>debug ip nat detailed</b> génère une description individuelle des paquets dont la traduction est envisagée. Cette commande renvoie également des informations sur certaines erreurs ou situations exceptionnelles, par exemple l'impossibilité d'allouer une adresse globale. La commande <b>debug ip nat detailed</b> entraîne une plus grande surcharge que la commande <b>debug ip nat</b>, mais elle peut fournir les détails requis pour résoudre le problème de NAT. Pensez à toujours désactiver le débogage lorsque vous avez terminé.</p>
+          <p></p>
+          <p>La Figure 1 montre un exemple de résultats de la commande <b>debug ip nat</b>. Le résultat indique que l'hôte interne (192.168.10.10) a envoyé du trafic vers l'hôte externe (209.165.201.1) et que l'adresse source a été traduite en 209.165.200.226. </p>
+          <p></p>
+          <p>Lorsque vous décodez le résultat du débogage, notez la signification des valeurs et symboles suivants : </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>* (astérisque)</b> : l'astérisque en regard de la NAT indique que la traduction s'effectue sur le chemin à commutation rapide. Le premier paquet d’une conversation est toujours commuté par le processus, ce qui est plus lent. Les paquets restants passent par le chemin à commutation rapide s’il existe une entrée de cache. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>s=</b> : ce symbole fait référence à l’adresse IPv4 source. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>a.b.c.d</b>---><b>w.x.y.z</b> : indique que l'adresse source a.b.c.d est traduite par w.x.y.z. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>d=</b> : ce symbole fait référence à l’adresse IPv4 de destination. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>[xxxx]</b> : la valeur entre crochets représente le numéro d’identification IPv4. Ces informations peuvent être utiles pour le débogage, car elles permettent d’établir une corrélation avec d’autres traces de paquets provenant d’analyseurs de protocole. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : vérifiez que l’ACL indiquée dans la commande NAT autorise tous les réseaux requis. Sur la Figure 2, seules les adresses 192.168.0.0/16 peuvent être traduites. Les paquets provenant du réseau interne et destinés à Internet dont les adresses sources ne sont pas explicitement autorisées par l'ACL 1 ne sont pas traduits par R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche le résultat de la commande « debug i. p. nat ». La Figure 2 affiche le routeur 2 avec un réseau interne sur la gauche et un réseau externe sur la droite. Le réseau interne contient 2 ordinateurs et le routeur 1. Le réseau externe contient deux serveurs.  Le routeur 2 utilise la PAT.   Le résultat de la commande « show access dash lists » s’affiche également.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

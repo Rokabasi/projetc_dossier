@@ -1,0 +1,96 @@
+﻿<textcomponents>
+	
+	<component id="ID_s1_title">
+	  <text><![CDATA[<b>Topologie physique</b>]]></text> 
+	  </component>
+	<component id="ID_txt01">
+	  <text><![CDATA[Internet]]></text> 
+	  </component>
+	<component id="ID_txt02">
+	  <text><![CDATA[Serveur web]]></text> 
+	  </component>
+	<component id="ID_txt03">
+	  <text><![CDATA[Serveur de messagerie]]></text> 
+	  </component>
+	<component id="ID_txt04">
+	  <text><![CDATA[Serveur de fichiers]]></text> 
+	  </component>
+	<component id="ID_txt05">
+	  <text><![CDATA[Rack 2<br/>Étagère 1]]></text> 
+	  </component>
+	<component id="ID_txt06">
+	  <text><![CDATA[Rack 2<br/>Étagère 2]]></text> 
+	  </component>
+	<component id="ID_txt07">
+	  <text><![CDATA[Rack 2<br/>Étagère 3]]></text> 
+	  </component>
+	<component id="ID_txt08">
+	  <text><![CDATA[Rack 1<br/>Étagère 2]]></text> 
+	  </component>
+	<component id="ID_txt09">
+	  <text><![CDATA[Rack 1<br/>Étagère 1]]></text> 
+	  </component>
+	<component id="ID_txt10">
+	  <text><![CDATA[Rack 1<br/>Étagère 3]]></text> 
+	  </component>
+	<component id="ID_txt11">
+	  <text><![CDATA[Rack 1<br/>Étagère 1]]></text> 
+	  </component>
+	<component id="ID_txt12">
+	  <text><![CDATA[Rack 1<br/>Étagère 2]]></text> 
+	  </component>
+	<component id="ID_txt13">
+	  <text><![CDATA[Rack 1<br/>Étagère 3]]></text> 
+	  </component>
+	<component id="ID_txt14">
+	  <text><![CDATA[<b>Salle de serveurs : salle : 2158</b>]]></text> 
+	  </component>
+	<component id="ID_txt15">
+	  <text><![CDATA[<b>Bureau informatique : salle : 2159</b>]]></text> 
+	  </component>
+	<component id="ID_txt16">
+	  <text><![CDATA[<b>Salle : 2124</b>]]></text> 
+	  </component>
+	<component id="ID_txt17">
+	  <text><![CDATA[<b>Classe 1 : salle : 2125</b>]]></text> 
+	  </component>
+	<component id="ID_txt18">
+	  <text><![CDATA[<b>Classe 2 : salle : 2126</b>]]></text> 
+	  </component>
+	<component id="ID_txt19">
+	  <text><![CDATA[<b>Classe 3 : salle : 2127</b>]]></text> 
+	  </component>
+	  
+	  
+	 <component id="ID_s2_title">
+	  <text><![CDATA[<b>Topologie logique</b>]]></text> 
+	  </component>
+	 <component id="ID_txt20">
+	  <text><![CDATA[Internet]]></text> 
+	  </component>
+	 <component id="ID_txt21">
+	  <text><![CDATA[Serveur web</b>]]></text> 
+	  </component>
+	<component id="ID_txt22">
+	  <text><![CDATA[Serveur de messagerie]]></text> 
+	  </component>
+	<component id="ID_txt23">
+	  <text><![CDATA[Serveur de fichiers]]></text> 
+	  </component>
+	<component id="ID_txt24">
+	  <text><![CDATA[<b>Réseau <br/>192.168.10.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt25">
+	  <text><![CDATA[<b>Réseau <br/>192.168.11.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt26">
+	  <text><![CDATA[<b>Réseau 192.168.100.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt27">
+	  <text><![CDATA[<b>Réseau 192.168.101.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt28">
+	  <text><![CDATA[<b>Réseau 192.168.102.0</b>]]></text> 
+	  </component>
+	
+</textcomponents>

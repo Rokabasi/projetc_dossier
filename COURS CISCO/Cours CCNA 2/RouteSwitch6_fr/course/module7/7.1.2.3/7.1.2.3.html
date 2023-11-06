@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.3 Calcul du masque générique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Calcul du masque générique</h1>
+        <div>
+          <p>Le calcul des masques génériques peut être complexe. La méthode la plus rapide consiste à soustraire le masque de sous-réseau de 255.255.255.255.</p>
+          <p></p>
+          <p>
+            <b>Calcul du masque générique : exemple 1</b>
+          </p>
+          <p></p>
+          <p>Dans le premier exemple de la figure, supposons que vous souhaitiez autoriser l'accès de tous les utilisateurs du réseau 192.168.3.0. Sachant que le masque de sous-réseau est 255.255.255.0, vous pouvez utiliser 255.255.255.255 et y soustraire le masque de sous-réseau 255.255.255.0. Cette solution génère le masque générique 0.0.0.255.</p>
+          <p></p>
+          <p>
+            <b>Calcul du masque générique : exemple 2</b>
+          </p>
+          <p></p>
+          <p>Dans le deuxième exemple de la figure, supposons que vous souhaitiez autoriser les 14 utilisateurs du sous-réseau 192.168.3.32/28 à accéder au réseau. Le masque du sous-réseau IPv4 est 255.255.255.240. Nous utilisons donc 255.255.255.255 et y soustrayons le masque de sous-réseau 255.255.255.240. Cette solution génère le masque générique 0.0.0.15.</p>
+          <p></p>
+          <p>
+            <b>Calcul du masque générique : exemple 3</b>
+          </p>
+          <p></p>
+          <p>Dans le troisième exemple, supposons que vous souhaitiez faire correspondre uniquement les réseaux 192.168.10.0 et 192.168.11.0. Utilisons 255.255.255.255 et soustrayons le masque de sous-réseau normal, à savoir 255.255.254.0 dans cet exemple. Cette solution génère 0.0.1.255.</p>
+          <p></p>
+          <p>Vous pouvez obtenir le même résultat en utilisant des instructions telles que les suivantes :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.10.0</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.11.0</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Il est bien plus efficace de configurer le masque générique de la manière suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)#</span>
+            <span class="cmd">
+              <b> access-list 10 permit 192.168.10.0 0.0.1.255</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Prenons un exemple dans lequel vous devez faire correspondre les réseaux dans la plage 192.168.16.0/24 à 192.168.31.0/24. Ces réseaux reviennent à 192.168.16.0/20. Dans ce cas, 0.0.15.255 est le masque générique approprié pour configurer une instruction de liste de contrôle d'accès efficace, comme indiqué ci-dessous :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)#</span>
+            <span class="cmd">
+              <b> access-list 10 permit 192.168.16.0 0.0.15.255</b>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois exemples pour calculer les masques génériques à l’aide de la soustraction de la méthode avec toutes les valeurs 255.  Dans le premier exemple, nous avons quatre séries de 255 suivies par le masque de sous-réseau IPv4.  Le masque de sous-réseau est ensuite soustrait des quatre séries de 255, ce qui donne le masque générique.  La figure montre 255.255.255.255 - 255.255.255.0.  Cela donnera zéro point 0.0.255 comme masque de saisie.  L'Exemple 2 montre comment calculer un masque générique pour un réseau /28.  La figure fait la liste 255.255.255.255 moins 255.255.255.240.  Cela donnera 0.0.0.15 comme masque de saisie.  L'Exemple 3 montre comment calculer un masque générique pour un réseau /23.  La figure fait la liste 255.255.255.255 moins 255.255.255.254.  Cela donnera 0.0.1.255 comme masque de saisie.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

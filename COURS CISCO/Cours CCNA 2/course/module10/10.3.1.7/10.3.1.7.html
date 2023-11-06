@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.7 Récupération des mots de passe</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Récupération des mots de passe</h1>
+        <div>
+          <p>Les mots de passe des périphériques permettent d'empêcher les accès non autorisés. Les mots de passe chiffrés, tels que les mots de passe secrets chiffrés, doivent être remplacés après récupération. Selon le périphérique, la procédure détaillée de récupération des mots de passe varie ; toutefois, toutes les procédures de récupération des mots de passe suivent le même principe :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Activez le mode ROMMON.</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Modifiez le registre de configuration en 0x2142 pour ignorer le fichier de configuration de démarrage.</p>
+          <p></p>
+          <p>
+            <b>Étape 3</b>. Apportez les modifications nécessaires au fichier de configuration de démarrage initial.</p>
+          <p></p>
+          <p>
+            <b>Étape 4</b>. Enregistrez la nouvelle configuration.</p>
+          <p></p>
+          <p>L'accès de la console au périphérique par le biais d'un terminal ou d'un émulateur de terminal sur PC est requis pour la récupération de mots de passe. Les paramètres du terminal pour accéder au périphérique sont les suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Débit de 9 600 bauds</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Aucune parité</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>8 bits de données</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>1 bit d'arrêt</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Aucun contrôle de flux</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La console d'accès permet à l'utilisateur d'accéder au mode ROMMON au moyen d'une séquence de pause pendant le processus de démarrage ou en retirant la mémoire flash externe au moment de la mise hors tension du périphérique.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la séquence de pause pour PuTTY est Ctrl+Break. Vous trouverez la liste des séquences de pause standard pour les autres émulateurs de terminaux et systèmes d'exploitation à l'adresse <a href="http://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/12818-61.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/12818-61.html</a></p>
+          <p></p>
+          <p>Le logiciel ROMMON prend en charge certaines commandes de base, telles que la commande <b>confreg</b>. La commande confreg 0x2142 permet à l'utilisateur de régler le registre de configuration sur 0x2142. Une fois le registre de configuration sur 0x2142, le périphérique ignorera le fichier de configuration initiale au démarrage. Le fichier de configuration de démarrage est l'endroit où les mots de passe oubliés sont enregistrés. Une fois le registre de configuration défini sur 0x2142, tapez<b> reset</b> à l'invite pour redémarrer le périphérique. Saisissez la séquence de pause au moment où le périphérique redémarre et décompresser l'IOS. La Figure 1 montre la sortie du terminal d'un routeur 1941 en mode ROMMON après utilisation d'une séquence de pause au cours du processus de démarrage.</p>
+          <p></p>
+          <p>Une fois le rechargement du périphérique terminé, copiez la configuration de démarrage dans la configuration en cours, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>ATTENTION : <i>ne</i> saisissez pas <b>copy running-config startup-config</b>. Cette commande efface la configuration initiale.</p>
+          <p></p>
+          <p>Étant donné que vous êtes en mode d'exécution privilégié, vous pouvez maintenant configurer tous les mots de passe requis. Une fois les nouveaux mots de passe configurés, redéfinissez le registre de configuration 0x2102 à l'aide de la commande <b>config-register 0x2102</b> en mode de configuration globale. Enregistrez la configuration en cours dans la configuration initiale et redémarrez le périphérique, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : le mot de passe <b>cisco</b> n'est pas un mot de passe fort et est uniquement utilisé ici à titre d'exemple.</p>
+          <p></p>
+          <p>Le périphérique utilise désormais les mots de passe récemment configurés pour l'authentification. Assurez-vous d'utiliser les commandes show pour vérifier que toutes les configurations sont toujours en place. Par exemple, vérifiez que les interfaces appropriées ne sont pas désactivées après récupération de mot de passe.</p>
+          <p></p>
+          <p>Le lien suivant fournit des instructions détaillées sur la procédure de récupération de mot de passe pour un périphérique spécifique :</p>
+          <p></p>
+          <p>
+            <a href="http://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/6130-index.html" target="_blank">http://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/ios-software-releases-121-mainline/6130-index.html</a>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour pratiquer la récupération de mot de passe sur un routeur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

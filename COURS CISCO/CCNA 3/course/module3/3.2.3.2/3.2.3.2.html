@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.3.2 Trames BPDU du protocole RTSP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Trames BPDU du protocole RTSP</h1>
+        <div>
+          <p>RSTP utilise des BPDU de type 2, version 2. Le protocole STP 802.1D d'origine utilise des BPDU de type 0, version 0. Toutefois, un commutateur exécutant RSTP peut communiquer directement avec un commutateur exécutant le protocole 802.1D initial. RSTP envoie des trames BPDU et renseigne l'octet d'indicateur par une méthode légèrement différente de celle utilisée par le protocole 802.1D d'origine :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Les informations relatives au protocole peuvent immédiatement dépasser la limite d'âge sur un port si aucun paquet Hello n'est reçu pendant trois périodes Hello consécutives (six secondes par défaut) ou si le minuteur « Max Age » expire. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les BPDU sont utilisés comme mécanisme de maintien de connexion. Par conséquent, trois BPDU manqués à la suite indiquent la perte de connectivité entre un pont et sa racine voisine ou son pont désigné. Le vieillissement accéléré des informations permet une détection rapide des pannes.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Remarque</b> : comme dans STP, un commutateur RSTP envoie un BPDU avec ses informations actuelles à chaque période Hello (2 secondes par défaut) même s'il ne reçoit pas de BPDU du pont racine. </p>
+          <p></p>
+          <p>Comme indiqué dans la figure, RSTP utilise l'octet d'indicateur de la BPDU de version 2 :</p>
+          <p>
+            <ul>
+              <li>Les bits 0 et 7 sont utilisés pour le changement de topologie et l'accusé de réception. Ils figurent dans le standard 802.1D d'origine. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les bits 1 et 6 sont utilisés pour le processus de proposition et d’accord (employé pour la convergence rapide).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les bits 2 à 5 encodent le rôle et l'état du port.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les bits 4 et 5 sont utilisés pour coder le rôle du port à l’aide d’un code sur 2 bits.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un tableau qui répertorie les champs pour un b.p.d.u. R.S.T.P. version 2.  Un autre tableau présente la répartition du champ d'indicateurs et de ses bits individuels.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

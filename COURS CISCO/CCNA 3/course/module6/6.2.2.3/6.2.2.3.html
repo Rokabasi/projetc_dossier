@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.3 Vérification du protocole EIGRP : examen de la table de routage IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification du protocole EIGRP : examen de la table de routage IPv4</h1>
+        <div>
+          <p>Une autre façon de vérifier la configuration du protocole EIGRP et d'autres fonctions consiste à examiner les tables de routage IPv4 à l'aide de la commande<b> show ip route</b>. Comme avec tout protocole de routage dynamique, l'administrateur réseau doit vérifier les informations contenues dans la table de routage afin de s'assurer qu'elles sont conformes aux configurations saisies. C'est la raison pour laquelle il est important de bien comprendre les commandes de configuration du protocole de routage, ainsi que les opérations du protocole de routage et les processus utilisés pour créer la table de routage IP.</p>
+          <p></p>
+          <p>Notez que les résultats utilisés tout au long de ce cours proviennent de Cisco IOS 15. Avant IOS 15, la récapitulation automatique EIGRP était activée par défaut. L'état de la récapitulation automatique peut faire une différence sur les informations affichées dans la table de routage IPv4. Si une version précédente de IOS est utilisée, la récapitulation automatique peut être désactivée à l'aide de la commande de mode de configuration du routeur <b>no auto-summary </b>: </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>no auto-summary</b>
+            </span>
+          </p>
+          <p></p>
+          <p>La Figure 1 présente la topologie de R1, R2 et R3.</p>
+          <p></p>
+          <p>À la Figure 2, la table de routage IPv4 est examinée à l'aide de la commande<b> show ip route</b>. Les routes EIGRP sont signalées dans la table de routage par la lettre<b> D</b>. La lettre D a servi à représenter le protocole EIGRP, car le protocole repose sur l'algorithme DUAL. </p>
+          <p></p>
+          <p>La commande<b> show ip route </b>vérifie que les routes reçues par les voisins EIGRP sont installées dans la table de routage IPv4. La commande<b> show ip route </b>affiche toute la table de routage, y compris les réseaux distants appris de façon dynamique, connectés directement et les routes statiques. C'est la raison pour laquelle la première commande sert normalement à vérifier la convergence. Une fois le routage correctement configuré sur tous les routeurs, la commande<b> show ip route </b>montre que chaque routeur dispose d'une table de routage complète, avec une route vers chaque réseau de la topologie.</p>
+          <p></p>
+          <p>Notez que R1 a installé des routes vers trois réseaux distants IPv4 dans sa table de routage IPv4 :</p>
+          <p>
+            <ul>
+              <li>Réseau 172.16.2.0/24, reçu à partir du routeur R2 sur l'interface Serial0/0/0</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Réseau 192.168.1.0/24, reçu à partir du routeur R2 sur l'interface Serial0/0/1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Réseau 192.168.10.8/30, reçu à partir du routeur R2 sur l'interface Serial0/0/0 et du routeur R3 sur l'interface Serial0/0/1</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>R1 dispose de deux chemins vers le réseau 192.168.10.8/30, car son coût ou sa métrique pour atteindre ce réseau est identique ou équivalent à l'utilisation des deux routeurs. C'est ce que l'on appelle des routes à coût égal. R1 utilise les deux chemins pour atteindre ce réseau, que l'on appelle équilibrage de la charge. La métrique EIGRP est présentée plus loin dans ce chapitre.</p>
+          <p></p>
+          <p>La Figure 3 illustre la table de routage pour R2. Notez que les mêmes résultats s'affichent avec une route à coût égal pour le réseau 192.168.10.4/30.</p>
+          <p></p>
+          <p>La Figure 4 illustre la table de routage pour R3. Tout comme les résultats de R1 et R2, les réseaux distants sont appris à l'aide du protocole EIGRP, avec une route à coût égal pour le réseau 172.16.3.0/30.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente le résultat de la commande « show ip route » sur le routeur 1.  Les routes EIGRP sont signalées en orange. La Figure 3 présente le résultat de la commande « show ip route » sur le routeur 2.  Les routes EIGRP sont signalées en orange. La Figure 4 présente le résultat de la commande « show ip route » sur le routeur 3.  Les routes EIGRP sont signalées en orange.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

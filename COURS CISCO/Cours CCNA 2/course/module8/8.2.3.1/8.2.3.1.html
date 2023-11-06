@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.1 Configuration d&#x0027;un routeur en tant que serveur DHCPv6 avec état</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;un routeur en tant que serveur DHCPv6 avec état</h1>
+        <div>
+          <p>La configuration d'un serveur DHCPv6 avec état est similaire à celle d'un serveur sans état. La principale différence réside dans le fait que les serveurs avec état disposent également des informations d'adressage IPv6, de la même manière qu'un serveur DHCPv4 dispose des informations d'adressage IPv4. </p>
+          <p></p>
+          <p>
+            <b>Étape 1. Activation du routage IPv6 </b>
+          </p>
+          <p></p>
+          <p>Comme le montre la Figure 1, la commande<b> ipv6 unicast-routing </b> doit être utilisée pour activer le routage IPv6. Cette commande n'est pas nécessaire pour que le routeur agisse comme un serveur DHCPv6 avec état, mais elle est requise pour qu'il récupère des messages RA ICMPv6. </p>
+          <p></p>
+          <p>
+            <b>Étape 2.</b>
+            <b>Configuration d'un pool DHCPv6</b>
+          </p>
+          <p></p>
+          <p>La commande<b> ipv6 dhcp pool </b><i>pool-name </i>crée un pool et entre dans le routeur en mode de configuration DHCPv6, identifié par l’invite Router(config-dhcpv6)#.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b>
+            <b>Configuration des paramètres du pool</b>
+          </p>
+          <p></p>
+          <p>Dans le cas de DHCPv6 avec état, tous les paramètres d'adressage et de configuration doivent être attribués par le serveur DHCPv6. La commande<b> address prefix </b>sert à indiquer le pool d'adresses à attribuer par le serveur. L'option <b>lifetime</b> indique la durée de validité et la durée préférée des baux, en secondes. Comme pour DHCPv6 sans état, le client utilise l'adresse IPv6 source du paquet contenant le message RA.</p>
+          <p></p>
+          <p>Les autres informations fournies par le serveur DHCPv6 avec état incluent généralement l'adresse du serveur DNS et le nom de domaine.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. Commandes d'interface</b>
+          </p>
+          <p></p>
+          <p>La commande d'interface<b> ipv6 dhcp server </b><i>pool-name </i>relie le pool DHCPv6 à l'interface. Le routeur répond aux requêtes DHCPv6 sans état sur cette interface avec les informations contenues dans le pool. L'indicateur M doit être modifié pour passer de 0 à 1 à l'aide de la commande d'interface <b>ipv6 nd managed-config-flag</b>. Il indique au périphérique de ne pas utiliser SLAAC, mais d'obtenir l'adressage IPv6 et tous les paramètres de configuration auprès d'un serveur DHCPv6 avec état.</p>
+          <p></p>
+          <p>
+            <b>Exemple de serveur DHCPv6 avec état</b>
+          </p>
+          <p></p>
+          <p>La Figure 2 présente un exemple des commandes de serveur DHCPv6 avec état utilisées pour un routeur configuré sur R1. Notez qu'aucune passerelle par défaut n'est spécifiée, car le routeur envoie automatiquement sa propre adresse link-local comme passerelle par défaut. Le routeur R3 est configuré en tant que client pour permettre de vérifier le fonctionnement de DHCPv6 avec état. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les commandes utilisées pour configurer un routeur DHCPv6 avec état.  La première commande est : i.p.v.6. unicast-routing.  Ensuite, le pool est créé avec la commande « ipv6 dhcp pool » et le nom du pool suit.  La commande suivante est : address prefix/. Elle est suivie par la longueur du préfixe.  Un serveur DNS est configuré avec la commande « dns-server », suivie de l'adresse.  Le nom de domaine peut également être configuré avec la commande « domain-name », suivie du nom de domaine  La commande suivante relie le pool DHCPv6 à une interface. La commande est « ipv6 dhcp server » suivie du nom de pool.  La dernière commande est : i.p.v.6. n.d. managed-config-flag. La Figure 2 illustre un exemple complet de configuration d'un routeur en tant que serveur DHCPv6 avec état.  L’exemple commence en mode de configuration globale et les commandes utilisées sont comme suit.  La première commande est : i.p.v.6. unicast-routing.  La commande suivante est : d.h.c.p. pool i.p.v.6.-stateful.  La commande suivante est : address prefix 2001:db8:cafe:1::/64 lifetime infinite.  La commande suivante est : d.n.s.-server 2001:db8:cafe:aaaa::5.  La commande suivante est : domain-name example.com.  Le pool DHCPv6 a été configuré et le jeu suivant de commandes associe le pool à l’interface.  La CLI dans l’exemple passe d’abord à l’interface locale à l’aide de la commande : exit. La commande exit est suivie par la commande : interface g 0/1.  La commande suivante est : i.p.v.6. address 2001:db8:cafe:1::1/64.  La commande suivante est : d.h.c.p. pool i.p.v.6.  -stateful.  La dernière commande est : i.p.v.6. n.d. managed-config-flag.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

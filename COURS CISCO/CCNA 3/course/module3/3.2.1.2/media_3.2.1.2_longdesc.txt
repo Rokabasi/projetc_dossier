@@ -1,0 +1,1 @@
+La figure présente un tableau comparant le standard, les ressources, le temps de convergence et les calculs d'arborescence pour les divers types de STP.

@@ -1,0 +1,1 @@
+La Figure 1 montre un tableau des commandes Cisco I.O.S. pour la création d’un numéro et d’un nom de VLAN. La Figure 2 montre un petit LAN et la syntaxe pour configurer le VLAN 20 et le nommer « étudiant ». La Figure 3 est une activité interactive qui permet aux étudiants de s’entraîner à la création d’un VLAN.

@@ -1,0 +1,1 @@
+La figure présente deux routeurs connectés via un réseau IPv6. Les messages sont envoyés via une adresse source IPv6 et une adresse de destination IPv6.

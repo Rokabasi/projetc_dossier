@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.3 Algorithme Spanning Tree : pont racine</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algorithme Spanning Tree : pont racine</h1>
+        <div>
+          <p>Comme indiqué dans la Figure 1, chaque instance Spanning Tree (réseau local commuté ou domaine de diffusion) possède un commutateur désigné en tant que pont racine. Ce pont racine sert de point de référence pour tous les calculs de l'algorithme STA afin de déterminer les chemins d'accès redondants devant être bloqués.</p>
+          <p></p>
+          <p>Un processus de sélection détermine le commutateur qui servira de pont racine. </p>
+          <p></p>
+          <p>La Figure 2 illustre les champs de l'ID de pont. L'ID de pont est composé d'une valeur de priorité, d'un ID système étendu et de l'adresse MAC du commutateur. La valeur de priorité de pont est attribuée automatiquement, mais peut être modifiée. L'ID système étendu est utilisé pour spécifier un ID de VLAN ou un ID d'instance MSTP (Multiple Spanning Tree Protocol). Le champ d'adresse MAC contient initialement l'adresse MAC du commutateur émetteur.</p>
+          <p></p>
+          <p>Tous les commutateurs du domaine de diffusion participent au processus d’élection. Après son amorçage, le commutateur commence à envoyer des trames BPDU toutes les deux secondes. Ces trames BPDU contiennent l'ID de pont du commutateur et l'ID de racine. </p>
+          <p></p>
+          <p>Le commutateur ayant l'identificateur de pont (BID) le plus bas devient le pont racine. Initialement, tous les commutateurs se déclarent en tant que pont racine. Par la suite, les commutateurs échangent les BPDU et s'accordent sur la sélection d'un seul pont racine.</p>
+          <p></p>
+          <p>Lorsque le commutateur réachemine ses trames BPDU, les commutateurs adjacents dans le domaine de diffusion lisent les données d'ID de racine contenues dans ces trames BPDU. Si l'ID de racine d'une trame BPDU reçue est inférieur à l'ID de racine du commutateur qui la reçoit, ce dernier met à jour son propre ID de racine, identifiant le commutateur adjacent en tant que pont racine. Cependant, ce dernier peut ne pas être un commutateur adjacent. Ce peut être n'importe quel autre commutateur dans le domaine de diffusion. Le commutateur transmet ensuite les nouvelles trames BPDU dotées de l’ID de racine plus faible aux autres commutateurs adjacents. Au final, le commutateur présentant l'ID de pont le plus bas est identifié comme étant le pont racine pour l'instance Spanning Tree.</p>
+          <p></p>
+          <p>Un pont racine est déterminé pour chaque instance Spanning Tree. Il est possible de disposer de plusieurs ponts racine distincts pour différents ensembles de réseaux VLAN. Si tous les ports de tous les commutateurs sont membres de VLAN 1, il n'y aura qu'une seule instance Spanning Tree. L'ID système étendu comprend l'ID du réseau VLAN et joue un rôle dans la façon dont les instances Spanning Tree sont déterminées.</p>
+          <p></p>
+          <p>Le BID se compose d'un numéro de priorité de pont configurable et d'une adresse MAC. La priorité de pont est une valeur comprise entre 0 et 65 535. La valeur par défaut est 32 768. Si deux commutateurs ou plus ont la même priorité, c'est le commutateur ayant l'adresse MAC la plus basse qui devient le pont racine. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la valeur de priorité de pont sur la Figure 1 indique 32 769 au lieu de la valeur par défaut 32 768 du fait que l'algorithme STA ajoute également le numéro du réseau VLAN par défaut (VLAN 1) à la valeur de priorité. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente trois commutateurs, s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  Chaque commutateur affiche l'I.D., la priorité et l'adresse MAC du pont.  Le commutateur 1 est indiqué comme pont racine, car sa valeur de priorité est la plus faible. La figure 2 montre les champs d'I.D. du pont.  Ils comprennent la priorité, l'I.D. système étendu et l'adresse MAC.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

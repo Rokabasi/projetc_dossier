@@ -1,0 +1,1 @@
+La figure présente la conception d'un grand réseau d'entreprise.  Le site principal est connecté à trois sites distants à l'aide de différentes connexions notamment le WAN, le RTC, et l'Internet public.

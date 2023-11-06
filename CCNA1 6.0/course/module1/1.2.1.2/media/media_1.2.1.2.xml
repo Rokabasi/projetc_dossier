@@ -1,0 +1,76 @@
+<textcomponents>
+
+    <component id='ID_s2_txt01'>
+        <text><![CDATA[<b>Périphériques finaux</b>]]></text>
+    </component>
+
+    <component id='ID_s2_txt02'>
+        <text><![CDATA[Ordinateur de bureau]]></text>
+    </component>
+
+    <component id='ID_s2_txt03'>
+        <text><![CDATA[Ordinateur portable]]></text>
+    </component>
+
+    <component id='ID_s2_txt04'>
+        <text><![CDATA[Imprimante]]></text>
+    </component>
+
+    <component id='ID_s2_txt05'>
+        <text><![CDATA[Téléphone IP]]></text>
+    </component>
+
+    <component id='ID_s2_txt06'>
+        <text><![CDATA[Tablette sans fil]]></text>
+    </component>
+
+    <component id='ID_s2_txt07'>
+        <text><![CDATA[Système de téléprésence]]></text>
+    </component>
+    
+    <component id="ID_txt01">
+        <text><![CDATA[Supports]]></text>
+    </component>
+    <component id="ID_txt02">
+        <text><![CDATA[<b>Interréseau<b>]]></text> 
+    </component>
+  <component id="ID_txt03-1">
+  <text><![CDATA[Réseau local]]></text> 
+  </component>
+  <component id="ID_txt03-2">
+  <text><![CDATA[Réseau local]]></text> 
+  </component>
+
+    <component id="ID_txt04">
+      <text><![CDATA[Les messages peuvent emprunter d'autres routes.]]></text> 
+    </component>
+  
+  <component id="ID_txt05">
+  <text><![CDATA[Les données proviennent d'un périphérique final, traversent le réseau et arrivent sur un périphérique final.]]></text> 
+  </component> 
+   
+<component id="end">
+<text><![CDATA[Fin]]></text>
+</component>
+
+<component id="fforward">
+<text><![CDATA[Avance rapide]]></text>
+</component>
+
+<component id="pause">
+<text><![CDATA[Pause]]></text>
+</component>
+
+<component id="play">
+<text><![CDATA[Lecture]]></text>
+</component>
+
+<component id="rewind">
+<text><![CDATA[Rembobiner]]></text>
+</component>
+
+<component id="start">
+<text><![CDATA[Début]]></text>
+</component>
+
+</textcomponents>

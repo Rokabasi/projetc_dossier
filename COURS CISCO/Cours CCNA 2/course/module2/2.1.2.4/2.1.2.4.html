@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.4 Route statique récapitulative</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route statique récapitulative</h1>
+        <div>
+          <p>Pour réduire le nombre d'entrées de la table de routage, plusieurs routes statiques peuvent être récapitulées en une seule route statique si :</p>
+          <p>
+            <ul>
+              <li>Les réseaux de destination sont contigus et peuvent être récapitulés dans une adresse réseau unique. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les multiples routes statiques utilisent toutes la même interface de sortie ou adresse IP de tronçon suivant.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la figure, R1 nécessiterait quatre routes statiques distinctes pour accéder aux réseaux 172.20.0.0/16 à 172.23.0.0/16. Au lieu de cela, une route statique récapitulative peut être configurée et continuer à fournir la connectivité à ces réseaux.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : Reportez-vous à l’annexe du chapitre pour plus d’informations sur le calcul et la configuration des routes statiques récapitulatives.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un routeur (R1) connecté à un autre routeur connecté à 4 réseaux.  Le routeur R1 peut utiliser une route récapitulative unique pour pointer vers les réseaux connectés à l’autre routeur.  Les routes récapitulatives sont des routes statiques.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure illustre une topologie router-on-a-stick et les étapes nécessaires pour configurer les VLAN et une liaison sur un commutateur qui a une connexion physique unique à un routeur.

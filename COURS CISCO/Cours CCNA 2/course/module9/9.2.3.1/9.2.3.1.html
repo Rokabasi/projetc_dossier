@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.3.1 Configuration de la PAT : pool d&#x0027;adresses</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de la PAT : pool d&#x0027;adresses</h1>
+        <div>
+          <p>La PAT (également appelée surcharge NAT) économise les adresses du pool d'adresses globales internes en autorisant le routeur à utiliser une adresse globale interne pour plusieurs adresses locales internes. En d'autres termes, une même adresse IPv4 publique peut être utilisée pour des centaines, voire des milliers d'adresses IPv4 privées internes. Lorsque ce type de traduction est configuré, le routeur maintient à jour suffisamment d'informations provenant des protocoles de niveau supérieur et des numéros de ports TCP ou UDP par exemple, pour pouvoir retraduire correctement l'adresse globale interne en adresse locale interne. Lorsque plusieurs adresses locales internes correspondent à une adresse globale interne, les numéros de port TCP ou UDP de chaque hôte interne permettent de faire la différence entre les différentes adresses locales.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : théoriquement, jusqu’à 65 536 adresses internes peuvent être traduites en une adresse externe IPv4. En réalité, le nombre d’adresses internes pouvant être attribuées à une seule adresse IPv4 avoisine les 4 000.</p>
+          <p></p>
+          <p>Il existe deux façons de configurer la PAT, selon la méthode dont le FAI attribue les adresses IPv4 publiques. Dans le premier cas, le FAI attribue plusieurs adresses IPv4 publiques à l'entreprise, et dans le second, il attribue une seule adresse IPv4 publique nécessaire pour permettre à l'entreprise de se connecter au FAI.</p>
+          <p></p>
+          <p>
+            <b>Configuration de la PAT pour un pool d’adresses IPv4 publiques</b>
+          </p>
+          <p></p>
+          <p>Si un site a obtenu plusieurs adresses IPv4 publiques, celles-ci peuvent faire partie d'un pool utilisé par la PAT. Cela équivaut à la NAT dynamique, sauf qu'il n'y a pas suffisamment d'adresses publiques pour permettre un mappage de type un à un des adresses internes/externes. Le petit pool d'adresses est partagé par un plus grand nombre de périphériques. </p>
+          <p></p>
+          <p>La Figure 1 décrit les étapes permettant de configurer la PAT de sorte qu'elle utilise un pool d'adresses. La principale différence entre cette configuration et la configuration de la NAT dynamique un à un est l’utilisation du mot clé <b>overload</b>. Le mot clé <b>overload</b> active la fonction PAT.</p>
+          <p></p>
+          <p>L'exemple de configuration représenté à la Figure 2 établit la traduction de surcharge pour le pool NAT nommé NAT-POOL2. NAT-POOL2 contient les adresses 209.165.200.226 à 209.165.200.240.  Les hôtes du réseau 192.168.0.0/16 sont soumis à la traduction. L'interface S0/0/0 est identifiée comme étant une interface interne et l'interface S0/1/0 comme une interface externe.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour configurer la PAT à l'aide d'un pool d'adresses sur R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un tableau répertoriant les étapes et les commandes de configuration de la traduction d’adresses de port, également appelée PAT ou NAT surchargée. La Figure 2 montre la syntaxe pour configurer la PAT (notamment le pool et l’ACL), mapper l’ACL avec le pool et définir les interfaces internes et externes. La Figure 3 constitue une ⁪activité interactive qui permet à l’apprenant de s’exercer dans la configuration de la PAT.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

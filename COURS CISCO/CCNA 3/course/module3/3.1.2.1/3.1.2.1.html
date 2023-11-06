@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.1 Algorithme Spanning Tree : introduction</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algorithme Spanning Tree : introduction</h1>
+        <div>
+          <p>La redondance améliore la disponibilité de la topologie du réseau en supprimant le risque de points de défaillance uniques dans un réseau ; par exemple, une panne d’un commutateur ou d’un câble du réseau. Lorsqu'une redondance physique est intégrée à la conception, des problèmes de boucle et de trames en double apparaissent. Ceux-ci ont des conséquences désastreuses pour un réseau commuté. Le protocole STP (Spanning Tree Protocol) a été conçu afin de résoudre ces problèmes.</p>
+          <p></p>
+          <p>Le protocole STP garantit la présence d'un seul chemin logique entre toutes les destinations sur le réseau en bloquant intentionnellement les chemins redondants susceptibles de provoquer une boucle. Un port est considéré comme bloqué lorsque les données utilisateur ne sont pas autorisées à entrer ou à sortir du port, à l’exception des trames d'unité BDPU (Bridged Protocol Data Unit) qui sont employées par le protocole STP pour empêcher la formation de boucles. Le blocage des chemins redondants est essentiel pour empêcher la formation de boucles sur le réseau. Les chemins physiques sont préservés pour assurer la redondance, mais ils sont désactivés afin d’empêcher la création de boucles. Si le chemin est amené à être utilisé en cas de panne d’un commutateur ou d’un câble réseau, l’algorithme Spanning Tree (STA) recalcule les chemins et débloque les ports nécessaires pour permettre la réactivation du chemin redondant.</p>
+          <p></p>
+          <p>Cliquez sur le bouton <b>Lecture</b> de la Figure 1 pour voir STP en action.</p>
+          <p></p>
+          <p>Dans l’exemple, le protocole STP est activé sur tous les commutateurs :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>1. PC1 envoie une trame de diffusion sur le réseau. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S2 est configuré avec STP et a bloqué le port pour Trunk2. L'état de blocage empêche d'utiliser les ports pour réacheminer les données utilisateur, ce qui évite qu'une boucle ne se produise. S2 réachemine une trame de diffusion vers tous les ports de commutation, excepté le port d'origine sur PC1 et le port pour Trunk2. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S1 reçoit la trame de diffusion et la réachemine vers tous ses ports, via lesquels elle atteint PC4 et S3. S3 réachemine la trame par le port destiné à Trunk2 et S2 abandonne la trame. La boucle de couche 2 est évitée.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cliquez sur le bouton <b>Lecture</b> de la Figure 2 pour voir le recalcul de STP lorsqu'une défaillance se produit.</p>
+          <p></p>
+          <p>Le protocole STP empêche la boucle de se former en configurant un chemin sans boucle sur l'ensemble du réseau, grâce à des ports bloqués stratégiquement placés. Les commutateurs qui exécutent le protocole STP sont capables d’assurer la continuité des communications en cas de panne en débloquant dynamiquement les ports préalablement bloqués et en autorisant le trafic à emprunter les chemins de substitution.</p>
+          <p></p>
+          <p>Jusqu'à maintenant, nous avons utilisé le terme Spanning Tree Protocol et l'acronyme STP. Toutefois, cela peut prêter à confusion. De nombreux professionnels utilisent ces termes pour désigner des implémentations différentes du concept de Spanning Tree, par exemple le protocole RSTP (Rapid Spanning Tree Protocol) et le protocole MSTP (Multiple Spanning Tree Protocol). Pour pouvoir communiquer clairement sur les concepts de Spanning Tree, il est important de parler d'une implémentation ou d'une norme particulière dans son contexte. La documentation la plus récente de l'IEEE sur Spanning Tree (IEEE-802-1D-2004) indique que « STP est désormais remplacé par le protocole RSTP (Rapid Spanning Tree Protocol) ». L'IEEE utilise « STP » pour faire référence à l'implémentation d'origine de Spanning Tree et « RSTP » pour décrire la version de Spanning Tree dont les spécifications figurent dans le document IEEE-802.1D-2004. Dans ce cadre, lorsque le protocole STP original est utilisé dans un contexte de discussion, le terme « STP 802.1D initial » est préféré pour éviter toute confusion. Puisque les deux protocoles partagent en grande partie la même terminologie et les mêmes méthodes en matière de chemin sans boucle, nous mettrons principalement l'accent sur le standard actuel et les implémentations propres à Cisco de STP et de RSTP.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : STP repose sur un algorithme inventé par Radia Perlman alors qu'elle travaillait pour Digital Equipment Corporation et publié dans l'article de 1985 « An Algorithm for Distributed Computation of a Spanning Tree in an Extended LAN ».</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 est une animation présentant trois commutateurs : s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  L'animation montre comment S.T.P empêche une tempête de diffusion de se produire, en plaçant un port de S.2 en mode de blocage, évitant ainsi une boucle. La figure 2 est une animation qui présente trois commutateurs, s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  L'animation montre comment S.T.P assure la reprise à la suite d'une interruption, en faisant passer le port de l'état bloqué à réacheminement, restaurant ainsi une liaison redondante et transférant correctement les paquets.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

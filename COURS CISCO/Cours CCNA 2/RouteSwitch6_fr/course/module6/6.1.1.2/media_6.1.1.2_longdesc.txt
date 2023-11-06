@@ -1,0 +1,1 @@
+La figure présente un routeur connecté au commutateur 1.  Le commutateur 1 est connecté au commutateur 2 et 3 avec une liaison.  Les commutateurs 2 et 3 possèdent trois VLAN.

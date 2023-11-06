@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.1 Topologie de réseau OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topologie de réseau OSPFv3</h1>
+        <div>
+          <p>La Figure 1 illustre la topologie de réseau qui est utilisée pour configurer OSPFv3. </p>
+          <p></p>
+          <p>La Figure 2 illustre le routage de monodiffusion IPv6 et la configuration des adresses de monodiffusion globale de R1, comme indiqué dans la topologie de référence. Supposons que les interfaces de R2 et R3 ont aussi été configurées avec leur adresse de monodiffusion globale, comme indiqué dans la topologie de référence.</p>
+          <p></p>
+          <p>Dans cette topologie, aucune adresse IPv4 n'est configurée pour les routeurs. Un réseau dont les interfaces de routeur sont configurées avec des adresses IPv4 et IPv6 est appelé « à double pile » (dual-stack). Sur un réseau à double pile, les protocoles OSPFv2 et OSPFv3 peuvent être activés simultanément. </p>
+          <p></p>
+          <p>La Figure 3 présente les étapes de configuration du protocole OSPFv3 de base dans une zone unique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre la topologie de référence pour le protocole OSPF avec l'adressage IPv6 au lieu de l'adressage IPv4 utilisé précédemment avec OSPFv2. La Figure 2 affiche les commandes nécessaires pour configurer l'adressage et OSPFv3 sur le routeur R1.   La figure commence en mode de configuration globale et la première commande est ipv6. unicast-routing.  L'étape suivante consiste à passer à une interface spécifique avec la commande interface gigabit ethernet 0/0.  La commande suivante est description R1 LAN.  La commande suivante est ipv6 address 2001:DB8:CAFE:A001::1/64. Cette commande configure l'adresse IPv6 sur l'interface.  L'interface est alors activée avec la commande « no shut ».  La figure continue avec la première interface série. La première commande est interface serial 0/0/0.  La commande suivante est description link to R2.  La commande suivante est ipv6 address 2001:DB8:CAFE:A001::1/64. Cette commande configure l'adresse IPv6 sur l'interface.  L'interface est alors activée avec la commande « no shut ».  La figure poursuit avec la deuxième interface série. La première commande est interface serial 0/0/1.  La commande suivante est description link to R3.  La commande suivante est ipv6 address 2001:DB8:CAFE:A001::1/64. Cette commande configure l'adresse IPv6 sur l'interface.  L'interface est alors activée avec la commande « no shut ». La Figure 3 répertorie les six étapes de configuration d'OSPFv3.  La première étape consiste à activer le routage unicast IPv6 avec la commande ipv6  unicast-routing.  La deuxième étape est facultative. Lors de cette étape, les adresses link-local sont configurées.  La troisième étape consiste à configurer un ID de routeur 32 bits dans le mode de configuration de routeur OSPFv3 à l'aide de la commande router-id.  La quatrième étape consiste à configurer les informations facultatives de routage, telles que l'ajustement de la bande passante de référence.  La cinquième étape est facultative. Lors de cette étape, les paramètres spécifiques à l'interface OSPFv3 sont configurés, tels que la bande passante.  La sixième étape consiste à activer le routage IPv6  via la commande ipv6 OSPF area.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

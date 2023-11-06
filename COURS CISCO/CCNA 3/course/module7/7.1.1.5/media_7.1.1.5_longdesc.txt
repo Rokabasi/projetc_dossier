@@ -1,0 +1,1 @@
+La Figure 1 présente le schéma standard des travaux pratiques.  Les routeurs 1 et 2 récapitulent tous deux le réseau 172.16.0.0/16 et l'annoncent au routeur R3. La Figure 2 présente le résultat de la commande « show ip eigrp topology all-links » sur le routeur R3. Cela montre que deux sources ont indiqué la route vers le réseau 172.16.0.0 au routeur R3.

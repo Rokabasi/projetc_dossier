@@ -1,0 +1,1 @@
+La figure montre que le protocole EIGRP remplace TCP par RTPEIGRP.

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.3 Vérifier le routage RIP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier le routage RIP</h1>
+        <div>
+          <p>La commande<b> show ip protocols </b>affiche les paramètres de protocole de routage IPv4 actuellement configurés sur le routeur. Ce résultat illustré dans la Figure 1 confirme la plupart des paramètres RIP, notamment :</p>
+          <p></p>
+          <p>1. Le routage RIP est configuré et s'exécute sur le routeur R1.</p>
+          <p>2. Les valeurs des différents compteurs ; par exemple, la prochaine mise à jour de routage est envoyée par R1 en 16 secondes.</p>
+          <p>3. La version configurée du protocole RIP est actuellement le protocole RIPv1.</p>
+          <p>4. R1 effectue actuellement la récapitulation au niveau de la périphérie du réseau par classe.</p>
+          <p>5. Les réseaux par classe sont annoncés par R1. Il s’agit des réseaux que R1 inclut dans ses mises à jour RIP.</p>
+          <p>6. Les voisins RIP sont répertoriés avec leur adresse IP de tronçon suivant, la distance administrative associée que R2 utilise pour les mises à jour envoyées par ce voisin et le moment auquel la dernière modification envoyée par ce voisin a été reçue.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> cette commande s'avère également très utile pour vérifier les opérations effectuées par d'autres protocoles de routage (c'est-à-dire, EIGRP et OSPF). </p>
+          <p></p>
+          <p>La commande <b>show ip route</b> affiche les routes RIP installées dans la table de routage. Dans la Figure 2, R1 connaît désormais les réseaux en surbrillance. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 pour vérifier les paramètres et les routes RIP de R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show ip protocols ».  Ce routeur utilise RIPv1 et la sortie affiche les valeurs répertoriées dans le relevé.  La Figure 2 affiche la sortie de la commande « show ip route begin Gateway ».  Elle liste la table de routage montrant deux routes connectées, deux adresses IP d’interfaces et trois routes de réseau acquises avec le protocole RIP.  Ces trois réseaux sont répertoriés avec un R en majuscule dans la table, ce qui signifie qu’ils ont été acquis grâce à des mises à jour du protocole RIP. La Figure 3 est un élément multimédia interactif qui permet à l’apprenant d’utiliser les commandes « show ip protocols » et « show ip route » pour consulter la configuration actuelle du protocole de routage et la table de routage pour un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure 1 est le résultat des commandes « show vlan brief » et « show vlan », la figure 2 montre comment supprimer un VLAN et vérifier.

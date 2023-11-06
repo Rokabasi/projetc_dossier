@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.4.1 Route IPv6 statique par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route IPv6 statique par défaut</h1>
+        <div>
+          <p>Une route par défaut est une route statique qui correspond à tous les paquets. Plutôt que de stocker des routes pour tous les réseaux sur Internet, les routeurs peuvent stocker une seule route par défaut pour représenter n'importe quel réseau absent de la table de routage. Une route par défaut ne nécessite pas un bit le plus à gauche pour une correspondance entre la route par défaut et l’adresse IPv6 de destination.</p>
+          <p></p>
+          <p>Les routeurs utilisent couramment des routes par défaut configurées localement ou apprises d’un autre routeur, à l’aide d’un protocole de routage dynamique. Ils sont utilisés lorsqu'aucune autre route ne correspond à l'adresse IP de destination du paquet dans la table de routage. En d'autres termes, si aucune correspondance plus spécifique n'existe, utilisez la route par défaut comme passerelle de dernier recours. </p>
+          <p></p>
+          <p>Les routes statiques par défaut sont communément utilisées lors de la connexion :</p>
+          <p>
+            <ul>
+              <li>Le routeur de périphérie d'une entreprise vers un réseau de fournisseur de services.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un routeur avec un seul routeur voisin en amont. Le routeur n’a pas d’autres voisins et est donc appelé routeur d’extrémité. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Comme l’illustre la figure, la syntaxe des commandes pour une route statique par défaut est similaire à celle de toute autre route statique, excepté que ipv6-prefix/prefix-length correspond à<span class="cmd"><b></b></span><b>::/0</b>, ce qui correspond à toutes les routes. </p>
+          <p></p>
+          <p>La syntaxe des commandes de base d'une route statique par défaut est :</p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 route ::/0</b>
+                <span class="cmd">
+                  <b></b>
+                </span>{<i>ipv6-address </i>|<i> exit-intf</i>}</li>
+            </ul>
+          </p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche la syntaxe pour configurer une route statique par défaut en utilisant IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

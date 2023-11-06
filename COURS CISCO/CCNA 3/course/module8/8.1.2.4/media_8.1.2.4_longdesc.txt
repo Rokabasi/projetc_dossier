@@ -1,0 +1,1 @@
+La Figure 1 présente quatre routeurs disposés en diamant. Chaque routeur est directement connecté à ses deux routeurs voisins.  Un routeur se trouve au centre du diamant et est connecté à deux des quatre routeurs.  La figure affiche les paquets Hello envoyés et reçus par les routeurs voisins.

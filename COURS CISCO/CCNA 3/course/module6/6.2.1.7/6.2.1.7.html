@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.7 Commande network et masque générique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commande network et masque générique</h1>
+        <div>
+          <p>Par défaut, lorsque vous utilisez la commande<b> network </b>et une adresse réseau IPv4, par exemple 172.16.0.0, toutes les interfaces du routeur qui appartiennent à cette adresse réseau par classe sont activées pour le protocole EIGRP. Toutefois, l’administrateur réseau ne veut pas toujours inclure toutes les interfaces d’un réseau lorsqu’il active EIGRP. Par exemple, à la Figure 1, supposons qu'un administrateur souhaite activer le protocole EIGRP sur R2, mais uniquement pour le sous-réseau 192.168.10.8 255.255.255.252, sur l'interface S0/0/1.</p>
+          <p></p>
+          <p>Pour configurer le protocole EIGRP en vue d'annoncer uniquement des sous-réseaux spécifiques, utilisez l'option<i> wildcard-mask </i>avec la commande network :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>network</b>
+            </span>
+            <span class="cmd">
+              <i>network-address</i>
+            </span>
+            <span class="cmd">
+              <b></b>
+            </span>[<span class="cmd"><i>wildcard-mask</i></span>]</p>
+          <p></p>
+          <p>Un masque générique peut être considéré comme l'inverse d'un masque de sous-réseau. Dans un masque de sous-réseau, les chiffres binaires 1 sont significatifs, alors que les chiffres binaires 0 ne le sont pas. Dans un masque générique, c'est l'inverse : les chiffres binaires 0 sont significatifs alors que les chiffres binaires 1 ne le sont pas. Par exemple, l'inverse du masque de sous-réseau 255.255.255.252 est 0.0.0.3. </p>
+          <p></p>
+          <p>Le calcul d'un masque générique peut paraître laborieux, mais c'est finalement assez simple. Pour calculer l'inverse du masque de sous-réseau, soustrayez le masque de sous-réseau de 255.255.255.255, comme suit :</p>
+          <p></p>
+          <p>
+            <span class="cmd">   255.255.255.255 </span>
+          </p>
+          <p>
+            <span class="cmd"> - 255.255.255.252  </span>
+          </p>
+          <p>
+            <span class="cmd">   ---------------</span>
+          </p>
+          <p>
+            <span class="cmd">     0.  0.  0.  3   </span>Masque générique</p>
+          <p></p>
+          <p>La Figure 2 poursuit sur la configuration réseau EIGRP de R2. La commande<b> network 192.168.10.8 0.0.0.3 </b>active spécifiquement le protocole EIGRP sur l'interface S0/0/1, un membre du sous-réseau 192.168.10.8 255.255.255.252. </p>
+          <p></p>
+          <p>La configuration d'un masque générique correspond à la syntaxe de commande officielle de la commande <b>network</b> du protocole EIGRP. Toutefois, il est possible d'utiliser un masque de sous-réseau dans les versions de Cisco IOS. Par exemple, la Figure 3 configure la même interface S0/0/1 sur le routeur R2, mais cette fois à l'aide d'un masque de sous-réseau dans la commande<b> network</b>. Notez que dans le résultat de la commande<b> show running-config</b>, IOS a fait de la commande de masque de sous-réseau son masque générique.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer les commandes <b>network</b> EIGRP pour le routeur R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au FAI et le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le FAI. L'interface série sur le routeur 2 pointant vers le routeur 3 est entourée, y compris l'adresse IP du point neuf. La Figure 2 présente la syntaxe de configuration des instructions réseau EIGRP pour l'interface série entourée sur le routeur 2 utilisant le masque générique. La figure 3 présente le résultat de la commande « show running dash config » sur le routeur 2.  La section EIGRP met en surbrillance le réseau récemment configuré. La Figure 4 est un exercice interactif qui permet au stagiaire de s'entraîner à la configuration du protocole EIGRP sur le routeur 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

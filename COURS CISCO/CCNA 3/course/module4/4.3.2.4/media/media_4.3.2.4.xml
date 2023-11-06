@@ -1,0 +1,52 @@
+﻿<textcomponents>
+   <component id="ID_title">
+        <text>
+            <![CDATA[<b>États HSRP</b>]]></text>
+    </component>
+  <component id="ID_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+		<tr >
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+		</tr>
+
+		<tr>
+		<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Etat</b></font></td>
+		<td bgcolor='#077A77'><font color='#ffffff'><b>Définition</b></font></td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>Initial</td>
+		<td bgcolor='#eff8f7'>État initial lorsqu&apos;une interface devient disponible pour la première fois ou qu&apos;un changement de configuration a lieu.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Apprendre</td>
+		<td bgcolor='#ffffff'>Le routeur n’a pas encore appris son adresse IP virtuelle, ni reçu de messages « hello » du routeur actif. Il est en attente d’un message du routeur actif.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>Écouter</td>
+		<td bgcolor='#eff8f7'>Le routeur connait son adresse IP virtuelle, mais n’est ni le routeur actif, ni le routeur de secours. Il attend un message de ceux-ci.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Parler</td>
+		<td bgcolor='#ffffff'>Le routeur envoie des messages « hello » périodiques et participe activement à la sélection du routeur actif et/ou du routeur de secours (standby).</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'>En veille</td>
+		<td bgcolor='#eff8f7'>Le routeur est candidat pour devenir le prochain routeur actif et envoie des messages « hello » périodiques.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'>Actif</td>
+		<td bgcolor='#ffffff'>Le routeur est actif et transmet les paquets destinés à l’adresse MAC virtuelle du groupe. Il envoie des messages « hello » périodiques.</td>
+		</tr>
+
+		</table>]]>
+		        </text>
+		    </component>
+	
+</textcomponents>

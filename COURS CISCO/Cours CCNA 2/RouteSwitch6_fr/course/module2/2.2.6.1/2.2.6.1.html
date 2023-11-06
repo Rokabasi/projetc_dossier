@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.6.1 Routes d’hôtes installées automatiquement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.6.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routes d’hôtes installées automatiquement</h1>
+        <div>
+          <p>Une route d’hôte est une adresse IPv4 avec un masque de 32 bits ou une adresse IPv6 avec un masque de 128 bits. Il existe trois façons d'ajouter une route d'hôte à la table de routage :</p>
+          <p>
+            <ul>
+              <li>Installée automatiquement lorsqu’une adresse IP est configurée sur le routeur (comme illustré dans les Figures 1 et 2)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configurée comme route d'hôte statique</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Route d'hôte obtenue automatiquement au moyen d'autres méthodes (abordées dans des cours ultérieurs)</li>
+            </ul>
+          </p>
+          <p>Cisco IOS installe automatiquement une route d'hôte, également appelée route d'hôte local, lorsqu'une adresse d'interface est configurée sur le routeur. Une route d'hôte permet d'optimiser le processus d'envoi des paquets au routeur, par rapport au transfert de paquets. Elle s'ajoute à la route connectée, désignée par la lettre C dans la table de routage de l'adresse réseau de l'interface.</p>
+          <p></p>
+          <p>Lorsqu'une interface active sur un routeur est configurée avec une adresse IP, une route d'hôte local est automatiquement ajoutée à la table de routage. Les routes locales sont désignées par la lettre « L » dans la table de routage. Les adresses IP attribuées à l'interface Serial0/0/0 de la succursale sont 198.51.100.1/30 pour IPv4 et 2001:DB8:ACAD:1::1/64 pour IPv6. Les routes locales de l’interface sont installées par IOS dans la table de routage, comme illustré dans la Figure 1 pour IPv4 et la Figure 2 pour IPv6.</p>
+          <p></p>
+          <p>Remarque : pour IPv4, les routes locales désignées par la lettre « L » ont été introduites avec la version 15 d'IOS.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Graphique statique</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

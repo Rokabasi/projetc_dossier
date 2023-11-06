@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Comparaison des commutateurs 2960 et 3560]]></text>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,1 @@
+La Figure 1 montre la syntaxe pour désactiver le package technologique et supprimer la licence. La Figure 2 est une activité interactive qui permet aux étudiants de s’entraîner à désactiver le package technologique et à supprimer la licence.

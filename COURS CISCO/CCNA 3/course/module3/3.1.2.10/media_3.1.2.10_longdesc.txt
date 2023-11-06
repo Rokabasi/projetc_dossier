@@ -1,0 +1,1 @@
+La figure présentée est interactive et comprend quatre commutateurs interconnectés.  Un tableau répertorie les priorités et les adresses MAC.  Cette activité interactive permet au stagiaire de s'exercer à définir le rôle des ports (racine, désigné et alternatif) en fonction des informations du tableau.

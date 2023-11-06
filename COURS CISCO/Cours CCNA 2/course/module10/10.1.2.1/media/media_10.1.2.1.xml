@@ -1,0 +1,13 @@
+﻿<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Fonctionnement du protocole LLDP (Link Layer Discovery Protocol)</b>]]></text>
+	</component>
+    <component id="ID_txt01">
+		<text><![CDATA[Annonces LLDP]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Les périphériques Cisco prennent en charge l&apos;envoi d&apos;annonces LLDP de vendeur neutre aux périphériques connectés.]]></text>
+	</component>
+	
+</textcomponents>

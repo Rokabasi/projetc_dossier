@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.5 Protocole OSPF à zone unique et à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole OSPF à zone unique et à zones multiples</h1>
+        <div>
+          <p>Pour une efficacité et une évolutivité supérieures, le protocole OSPF prend en charge le routage hiérarchique à l'aide de zones. Une zone OSPF est un groupe de routeurs qui partagent les mêmes informations d'état de liens dans leurs LSDB.</p>
+          <p></p>
+          <p>La téléphonie OSPF peut être mise en œuvre de deux manières différentes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF à zone unique</b> - Dans la Figure 1, tous les routeurs sont situés dans une zone appelée zone fédératrice (zone 0).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF multizone</b> - Dans la Figure 2, le protocole OSPF est mis en œuvre à l'aide de plusieurs zones, de façon hiérarchique. Toutes les zones doivent se connecter à la zone de réseau fédérateur (zone 0). Les routeurs qui relient les zones entre elles sont des routeurs ABR (Area Border Router). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le protocole OSPF à zones multiples permet de répartir un vaste domaine de routage en zones de petite taille pour permettre le routage hiérarchique. Avec le routage hiérarchique, le routage s'effectue toujours entre les zones (routage interzone), alors que la plupart des opérations de routage exigeant beaucoup de temps du processeur, comme le recalcul de la base de données, sont conservées dans une zone.</p>
+          <p></p>
+          <p>Par exemple, chaque fois qu'un routeur reçoit de nouvelles informations relatives à une modification topologique dans la zone (notamment l'ajout, la suppression ou la modification d'un lien), le routeur doit relancer l'algorithme SPF, créer une nouvelle arborescence SPF et mettre à jour la table de routage. L'algorithme SPF utilise une partie importante de la capacité de traitement du processeur et le temps qu'il prend pour le calcul dépend de la taille de la zone. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les routeurs des autres zones reçoivent les messages liés à la modification de la topologie, mais mettent uniquement à jour la table de routage. Ils ne réexécutent pas l'algorithme SPF. </p>
+          <p></p>
+          <p>Un nombre excessif de routeurs dans une zone rendrait les LSDB très volumineuses et augmenterait la charge sur le processeur. Par conséquent, l'organisation des routeurs en zones partitionne efficacement une base de données potentiellement volumineuse en bases de données plus petites et plus faciles à gérer.</p>
+          <p></p>
+          <p>Les options de conception d'une topologie hiérarchique avec le protocole OSPF à zones multiples présentent les avantages suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Réduction de la taille des tables de routage</b> - Moins d'entrées dans la table de routage parce que les adresses réseau peuvent être récapitulées entre les zones. La récapitulation de route n'est pas activée par défaut.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réduction de la charge de mise à jour des états de liens </b>- La conception d'un plan de routage OSPF à zones multiples avec des zones de petite taille permet de minimiser la puissance de calcul et la mémoire requises. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réduction de la fréquence des calculs SPF </b>- Recherche l'impact d'une modification topologique au sein d'une zone. Par exemple, l'impact des mises à jour de routage est limité parce que l'inondation des paquets LSA s'arrête à la limite de zone.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 3 illustre ces avantages. </p>
+          <p></p>
+          <p>Par exemple, R2 est un routeur ABR pour la zone 51. En tant que routeur ABR, il récapitulerait les routes de la zone 51 dans la zone 0. Lorsque l'un des liens récapitulés échoue, les paquets LSA sont échangés au sein de la zone 51 uniquement. Les routeurs de la zone 51 doivent exécuter de nouveau l'algorithme SPF pour identifier les meilleures routes. Cependant, les routeurs de la zone 0 et de la zone 1 ne reçoivent aucune mise à jour ; par conséquent, ils n'exécutent pas l'algorithme SPF. </p>
+          <p></p>
+          <p>Ce chapitre porte sur le protocole OSPF à zone unique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche trois routeurs connectés par des liens. Ils se trouvent tous les trois dans la même zone OSPF. La Figure 2 présente trois zones OSPF : la zone 0, la zone 1 et la zone 51.  La zone 1 et la zone 51 sont chacune connectées à la zone 0 conformément aux exigences du protocole OSPF. La Figure 3 illustre une panne réseau dans la zone 51. Cette panne entraîne une modification du réseau.  Cette modification est uniquement appliquée aux routeurs de la zone 51.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

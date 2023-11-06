@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.5 Route enfant de niveau 2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route enfant de niveau 2</h1>
+        <div>
+          <p>Une route enfant de niveau 2 est une route correspondant à un sous-réseau d'une adresse réseau par classe. Comme le montre la Figure 1, une route parent de niveau 1 est une route réseau de niveau 1 divisée en sous-réseaux. Les routes parent de niveau 1 contiennent des routes enfant de niveau 2, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>À l'instar d'une route de niveau 1, la source d'une route de niveau 2 peut être un réseau connecté directement, une route statique ou une route apprise dynamiquement. Les routes enfant de niveau 2 sont également de meilleures routes.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : n'oubliez pas que la hiérarchie des tables de routage dans Cisco IOS se base sur un schéma de routage par classe. Une route parent de niveau 1 est l’adresse réseau par classe de la route de sous-réseau. Cela est vrai même si un protocole de routage sans classe est la source de la route de sous-réseau.</p>
+          <p></p>
+          <p>La Figure 3 indique les routes enfant dans la table de routage de R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la relation entre une route de niveau 1, une route enfant de niveau 2 et une route parent.  La Figure 2 répertorie la route de niveau 1 de l’adresse 172.16.0.0, suivie de quatre routes de niveau 2 des adresses 172.16.1.0/24, 172.16.2.0/24, 172.16.3.0/24 et 172.16.4.0/2. La Figure 3 affiche la sortie de la commande « show ip route pipe begin Gateway ». Les routes enfant sont mises en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

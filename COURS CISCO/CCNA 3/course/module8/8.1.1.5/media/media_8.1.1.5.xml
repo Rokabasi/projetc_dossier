@@ -1,0 +1,72 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Protocole OSPF à zone unique</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Protocole OSPF à zones multiples</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>La modification du lien affecte uniquement la zone locale</b>]]></text> 
+  </component>	
+  
+   <component id="ID_s1_txt01">
+  <text><![CDATA[<b>OSPF zone 0</b>]]></text> 
+  </component>	
+    <component id="ID_Title_txt01">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt01">
+		<text><![CDATA[<textformat blockindent='-14'><ul><li>La zone 0 est également appelée zone fédératrice.</li><li>Le protocole OSPF à zone unique est utile sur les plus petits réseaux comportant peu de routeurs.</li></ul></textformat>]]></text>
+	</component>
+  
+  
+  
+  <component id="ID_s2_txt01">
+  <text><![CDATA[<b>Zone 1</b>]]></text> 
+  </component>	
+  
+  <component id="ID_s2_txt02">
+  <text><![CDATA[<b>Zone 0</b>]]></text> 
+  </component>
+  
+  <component id="ID_s2_txt03">
+  <text><![CDATA[<b>Zone 51</b>]]></text> 
+  </component>
+  
+  <component id="ID_Title_txt01">
+	<text><![CDATA[<b></b>]]></text>
+  </component>
+	
+	<component id="ID_s3_txt01">
+	<text><![CDATA[<b>Zone 1</b>]]></text> 
+	</component>	
+  
+	<component id="ID_s3_txt02">
+	  <text><![CDATA[<b>Zone 0</b>]]></text> 
+	</component>
+  
+    <component id="ID_s3_txt03">
+    <text><![CDATA[<b>Zone 51</b>]]></text> 
+    </component>
+
+  
+  
+    <component id="ID_Title_txt02">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt02">
+		<text><![CDATA[<textformat blockindent='-14'><ul><li>Mise en œuvre au moyen d&apos;une hiérarchie de zones à deux couches étant donné que toutes les zones doivent se connecter à la zone de réseau fédérateur (zone 0).</li><li>Les routeurs interconnectés sont appelés routeurs ABR (Area Border Router).</li><li>Utile pour les déploiements de réseau plus importants pour réduire la charge de traitement et de stockage.</li></ul></textformat>]]></text>
+	</component>
+	
+	  <component id="ID_Title_txt03">
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+	
+	<component id="ID_Body_txt03">
+		<text><![CDATA[<textformat blockindent='-14'><ul><li>La défaillance d&apos;un lien affecte la zone locale uniquement (zone 51).</li><li>Le routeur ABR (R2) isole la panne dans la zone 51.</li><li>Les routeurs des zones 0 et 1 n&apos;ont pas besoin d&apos;exécuter l&apos;algorithme SPF.</li></ul></textformat>]]></text>
+	</component>
+  
+
+</textcomponents>

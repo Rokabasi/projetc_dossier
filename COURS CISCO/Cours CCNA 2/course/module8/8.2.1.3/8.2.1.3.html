@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.3 SLAAC et DHCPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>SLAAC et DHCPv6</h1>
+        <div>
+          <p>Ce sont les paramètres indiqués dans le message RA qui déterminent si un client est configuré pour obtenir automatiquement ses informations d'adresse IPv6 via SLAAC, DHCPv6 ou une combinaison des deux. </p>
+          <p></p>
+          <p>Il s'agit de l'indicateur de configuration des adresses gérée (indicateur M) et de l'indicateur de configuration autre (indicateur O). </p>
+          <p></p>
+          <p>Différentes combinaisons des indicateurs M et O permettent aux messages RA d'indiquer une des trois options d'adressage pour le périphérique IPv6, comme illustré sur la figure :</p>
+          <p>
+            <ul>
+              <li>SLAAC (annonce de routeur uniquement)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>DHCPv6 sans état (annonce de routeur et DHCPv6)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>DHCPv6 avec état (DHCPv6 uniquement)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Quelle que soit l'option utilisée, le document RFC 4861 recommande que tous les périphériques IPv6 effectuent une détection des adresses en double (DAD) sur toutes les adresses de monodiffusion, y compris les adresses configurées via SLAAC ou DHCPv6. La DAD est mise en œuvre à l'aide de l'ICMPv6, spécifié par le document RFC 4443.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : bien que le message RA indique le processus à utiliser par le client pour obtenir une adresse IPv6 dynamique, le système d'exploitation du client peut choisir d'ignorer le message RA et d'utiliser exclusivement les services d'un serveur DHCPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente les trois options de message d'annonce de routeur.  Le premier est SLAAC, dans lequel le routeur demande à l'ordinateur d'utiliser uniquement les informations du message d'annonce de routeur. Il s'agit du paramètre par défaut.  La deuxième option est DHCPv6 sans état qui utilise à la fois SLAAC et DHCP.  Dans cette option, le routeur fournit des informations dans un message d'annonce de routeur, mais demande également à l'ordinateur d'obtenir des données auprès d'un serveur DHCPv6.  L'option trois est DHCP avec état. Dans cette option, le routeur demande à l'ordinateur d'obtenir toutes les informations d'un serveur DHCPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

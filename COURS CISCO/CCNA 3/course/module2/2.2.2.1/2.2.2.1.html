@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.1 Erreurs au niveau des adresses IP et des masques de sous-réseau</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Erreurs au niveau des adresses IP et des masques de sous-réseau</h1>
+        <div>
+          <p>Les VLAN correspondent à des sous-réseaux uniques sur le réseau. Pour que le routage inter-VLAN fonctionne, un routeur doit être connecté à tous les VLAN, par des interfaces physiques distinctes ou des sous-interfaces. Une adresse IP correspondant au sous-réseau pour lequel elle est connectée doit être affectée à chaque interface ou sous-interface. Ceci permet aux périphériques du VLAN de communiquer avec l'interface de routeur et d'activer le routage de trafic vers d'autres VLAN connectés au routeur.</p>
+          <p></p>
+          <p>Voici quelques erreurs courantes d'adressage IP :</p>
+          <p>
+            <ul>
+              <li>Comme l'illustre la figure 1, le routeur R1 a été configuré avec une adresse IPv4 incorrecte sur l'interface G0/0. Ceci empêche PC1 de communiquer avec le routeur R1 sur le VLAN 10. Pour corriger ce problème, affectez l'adresse IPv4 correcte à l'interface G0/0 du routeur R1 à l'aide de la commande <b>ip address 172.17.10.1 255.255.255.0</b>. Une fois l'adresse IP correcte affectée à l'interface du routeur, le PC1 peut utiliser cette dernière comme passerelle par défaut pour accéder à d'autres VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Dans la figure 2, PC1 a été configuré avec une adresse IPv4 incorrecte pour le sous-réseau associé à VLAN 10. Ceci empêche PC1 de communiquer avec le routeur R1 sur le VLAN 10. Pour corriger ce problème, affectez l'adresse IPv4 correcte à PC1. Selon le type de PC utilisé, les détails de configuration peuvent être différents.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la Figure 3, le PC1 a été configuré avec un masque de sous-réseau incorrect. Selon le masque de sous-réseau configuré pour PC1, PC1 se trouve sur le réseau 172.17.0.0. Il en résulte que PC1 calcule que PC3, dont l'adresse IPv4 est 172.17.30.23, se trouve dans le même sous-réseau que lui. Par conséquent, le PC1 ne transmet pas le trafic destiné au PC3 à l'interface G0/0 du routeur R1. Ce trafic n'atteint donc jamais le PC3. Pour corriger ce problème, changez le masque de sous-réseau sur PC1 en 255.255.255.0. Selon le type de PC utilisé, les détails de configuration peuvent être différents.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 montre que la sous-interface d'un routeur connecté à une topologie de routage inter-VLAN existante a été configurée avec une adresse IP incorrecte. Cela empêche les hôtes de ce VLAN d'être correctement acheminés vers d'autres VLAN. La figure 2 présente un hôte configuré avec une adresse IP incorrecte. Cela empêche l'hôte de communiquer avec le routeur d'un VLAN différent. La figure 3 présente un hôte configuré avec l'adresse IP « 172 dot 17 dot 10 dot 21 slash 16 » sur un VLAN et un hôte situé sur un VLAN différent configuré avec l'adresse IP « 172 dot 17 dot 30 dot 23 slash 24 ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

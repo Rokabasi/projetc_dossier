@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.1 Entrées de la table de routage IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrées de la table de routage IPv6</h1>
+        <div>
+          <p>Les composants de la table de routage IPv6 sont très similaires à ceux de la table de routage IPv4. Par exemple, elle est peuplée au moyen d'interfaces connectées directement, de routes statiques et de routes apprises de manière dynamique. </p>
+          <p></p>
+          <p>Étant donné que le protocole IPv6 est sans classe par sa conception, toutes les routes sont effectivement des meilleures routes de niveau 1. Il n'y a aucun parent de niveau 1 pour les routes enfant de niveau 2. </p>
+          <p></p>
+          <p>La topologie illustrée dans la figure est utilisée comme topologie de référence pour cette section.  Notez que dans la topologie :</p>
+          <p>
+            <ul>
+              <li>R1, R2 et R3 sont configurés dans une topologie à maillage global. Tous les routeurs ont des chemins redondants vers divers réseaux.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 est le routeur de périphérie et se connecte au FAI ; toutefois, une route statique par défaut n'est pas annoncée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le protocole EIGRP pour IPv6 a été configuré sur l'ensemble des trois routeurs.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Remarque</b> : Même si le protocole EIGRP pour IPv6 est utilisé pour remplir les tables de routage, le fonctionnement et la configuration de ce protocole dépassent le cadre de ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre une topologie de trois routeurs configurés dans une disposition triangulaire. Chaque routeur est connecté aux deux autres routeurs, créant une topologie à maillage global.  Chaque routeur dispose de deux liaisons WAN de série avec des adresses IPv6 et dispose d’un LAN sur une interface Gigabit Ethernet avec une adresse IPv6.  Pour IPv6, le protocole de routage utilisé est le protocole EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

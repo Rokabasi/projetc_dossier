@@ -1,0 +1,1 @@
+La figure illustre un organigramme du processus décisionnel de transfert de paquets qu'un routeur effectue lors de la réception d'un paquet.  Ceci est un résumé de la lecture.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.5 Vérification de la configuration du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la configuration du routeur</h1>
+        <div>
+          <p>Avec les configurations router-on-a-stick, il arrive souvent que l'ID de VLAN attribué à la sous-interface ne soit pas correct.</p>
+          <p></p>
+          <p>Comme l'illustre la Figure 1, le routeur R1 a été configuré avec le mauvais VLAN sur la sous-interface G0/0.10, empêchant les périphériques configurés sur le VLAN 10 de communiquer avec la sous-interface G0/0.10. Ces périphériques se retrouvent dans l'incapacité d'envoyer des données à d'autres VLAN du réseau.</p>
+          <p></p>
+          <p>L'utilisation des commandes <b>show interfaces</b> et <b>show running-config</b> peut être utile pour dépanner ce type de problème, comme le montre la figure 2. </p>
+          <p></p>
+          <p>La commande <b>show interfaces</b> produit une sortie volumineuse, ce qui ne permet pas de voir facilement le problème, comme l'illustre la figure 2. Cependant, la section supérieure mise en surbrillance indique que la sous-interface G0/0.10 sur le routeur R1 utilise le VLAN 100.</p>
+          <p></p>
+          <p>La commande <b>show running-config</b> confirme que la sous-interface G0/0.10 sur le routeur R1 a été configurée pour permettre l'accès au trafic de VLAN 100 mais pas à celui de VLAN 10.</p>
+          <p></p>
+          <p>Pour corriger ce problème, configurez la sous-interface G0/0.10 pour qu'elle soit sur le VLAN correct à l'aide de la commande de mode de configuration de la sous-interface <b>encapsulation dot1q 10</b>. Lorsque la sous-interface a été affectée au VLAN correct, elle est accessible par des périphériques de ce VLAN et le routeur peut assurer le routage inter-VLAN.</p>
+          <p></p>
+          <p>Une vérification appropriée permet de traiter rapidement les problèmes de configuration du routeur, ce qui permet au routage inter-VLAN de fonctionner à nouveau correctement.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente un routeur qui a été configuré avec le VLAN inapproprié sur la sous-interface « G 0 slash 0 dot 10 » dans une topologie de type « router-on-a-stick ». Cela empêcherait les hôtes du VLAN dix d'envoyer des données aux autres VLAN du réseau. La figure 2 présente la sortie de la commande « show interface » et de la commande « show run » en mettant l'accent sur le type d'encapsulation et l'affectation de VLAN.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

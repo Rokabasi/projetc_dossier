@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.1 Présentation du protocole PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation du protocole PVST+</h1>
+        <div>
+          <p>Le standard IEEE 802.1D d'origine définit un CST (Common Spanning Tree) qui suppose une seule instance Spanning Tree pour l'ensemble du réseau commuté, quel que soit le nombre de VLAN. Un réseau utilisant CST présente les caractéristiques suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Aucun partage de charge n'est possible. Une liaison ascendante doit bloquer tous les VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>L'utilisation du processeur est allégée. Une seule instance Spanning Tree doit être calculée.</li>
+            </ul>
+          </p>
+          <p>Cisco a mis au point le protocole PVST+ afin qu'un réseau puisse exécuter une instance indépendante de l'implémentation IEEE 802.1D de Cisco pour chacun de ses VLAN. Avec PVST+, il est possible qu'un port trunk d'un commutateur bloque un VLAN tout en réacheminant les autres. Le protocole PVST+ peut être utilisé pour implémenter l'équilibrage de la charge de couche 2. Les commutateurs dans un environnement PVST+ nécessitent davantage de traitement par le processeur et consomment plus de bande passante BPDU qu'une implémentation CST classique de STP, car chaque VLAN exécute une instance distincte de STP.</p>
+          <p></p>
+          <p>Dans un environnement PVST+, les paramètres Spanning Tree peuvent être ajustés de manière à ce que la moitié des VLAN réacheminent les données sur chaque trunk de liaison ascendante. Dans cette figure, le port F0/3 de S2 est le port de réacheminement pour VLAN 20 et F0/2 de S2 est le port de réacheminement pour VLAN 10. Pour ce faire, un commutateur est configuré de manière à être défini comme pont racine pour la moitié des VLAN du réseau, et un second commutateur pour être défini comme pont pour l'autre moitié des VLAN. Dans la figure, S3 est le pont racine pour VLAN 20 et S1 le pont racine pour VLAN 10. Définir plusieurs ponts racine STP par VLAN augmente la redondance du réseau.</p>
+          <p></p>
+          <p>Les réseaux utilisant PVST+ présentent les caractéristiques suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Un équilibrage optimal de la charge peut être atteint.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Une instance Spanning Tree pour chaque VLAN peut impliquer un gaspillage important en termes de cycles de processeur pour l'ensemble des commutateurs du réseau (outre la bande passante utilisée pour chaque instance afin d'envoyer sa propre trame BPDU). Cela n'est problématique que si un grand nombre de VLAN sont configurés.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois commutateurs, tous interconnectés avec un trunk « dot one q. ».  Cela prouve que différents commutateurs peuvent être pont racine pour différents VLAN et que les ports peuvent être en réacheminement pour un VLAN tout en étant bloquants pour un autre.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

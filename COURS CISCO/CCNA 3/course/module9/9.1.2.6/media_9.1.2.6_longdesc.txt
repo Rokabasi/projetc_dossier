@@ -1,0 +1,1 @@
+La figure affiche des messages LSA de type 5 générés par le routeur ABRS. Ces messages transportent des informations sur les adresses réseau externes. Ils sont ensuite générés à nouveau dans d'autres zones par le routeur ABRS.

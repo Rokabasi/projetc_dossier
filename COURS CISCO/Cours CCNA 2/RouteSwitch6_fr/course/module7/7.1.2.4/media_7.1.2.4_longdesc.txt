@@ -1,0 +1,1 @@
+La figure illustre un exemple de masque générique composé de zéros correspondant à tous les bits binaires pour une correspondance exacte d'adresse IP. La figure montre également le masque générique composé de uns, ce qui donne une correspondance avec toutes les adresses IP.

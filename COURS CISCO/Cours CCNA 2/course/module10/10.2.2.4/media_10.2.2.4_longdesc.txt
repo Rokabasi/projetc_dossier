@@ -1,0 +1,1 @@
+La figure montre R1 configuré avec la commande « service timestamps log datetime » pour forcer les messages de journal à afficher la date et l'heure.

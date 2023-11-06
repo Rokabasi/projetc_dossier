@@ -1,0 +1,22 @@
+<textcomponents>
+	<component id="ID_txt01">
+		<text><![CDATA[<font color="#ffffff">J&apos;ai une imprimante à partager.</font>]]></text> 
+	</component>
+	
+	<component id="ID_txt02">
+		<text><![CDATA[<font color="#ffffff">J&apos;ai des fichiers à partager.</font>]]></text> 
+	</component>
+	
+	<component id="ID_txt03">
+		<text><![CDATA[Partage d&apos;imprimantes]]></text> 
+	</component>
+	
+	<component id="ID_txt04">
+		<text><![CDATA[Partage de fichiers]]></text> 
+	</component>
+
+	<component id="ID_table01">
+		<text><![CDATA[<font size="13"><b>Avantages du réseau peer-to-peer :</b></font><textformat blockindent="-14"><ul><li>Facile à configurer</li><li>Moins de complexité</li><li>Coût inférieur étant donné que les périphériques réseau et les serveurs dédiés peuvent ne pas être nécessaires</li><li>Peut être utilisé pour des tâches simples telles que le transfert de fichiers et le partage des imprimantes</li></textformat><br/><font size="13"><b>Inconvénients du réseau peer-to-peer :</b></font><br /><textformat blockindent="-14"><li>Pas d&apos;administration centralisée</li><li>Peu sécurisé</li><li>Non évolutif</li><li>Tous les périphériques peuvent servir à la fois de client et de serveur, ce qui peut ralentir les performances</li></ul></textformat>]]></text>
+	</component>
+
+</textcomponents>

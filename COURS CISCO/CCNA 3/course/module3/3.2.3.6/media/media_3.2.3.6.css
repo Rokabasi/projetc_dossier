@@ -1,0 +1,23 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+html, body {
+	margin:0;
+	height:100%;
+
+}
+#flashContent {
+	width:98%;
+	height:98%;
+}
+
+#htmlMedia{
+	margin-left: 80px !important;
+	margin-top: 10px !important;
+}
+
+#mc_table{
+	height: 370px !important;
+}

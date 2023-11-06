@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.2 Domaines de diffusion</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Domaines de diffusion</h1>
+        <div>
+          <p>Un ensemble de commutateurs interconnectés constitue un domaine de diffusion unique. Seul un périphérique de couche réseau, tel qu'un routeur, peut diviser un domaine de diffusion de couche 2. Les routeurs sont utilisés pour segmenter les domaines de diffusion, mais ils segmentent également les domaines de collision.</p>
+          <p></p>
+          <p>Lorsqu'un périphérique envoie une diffusion de couche 2, l'adresse MAC de destination de la trame est remplie de 1 binaires. </p>
+          <p></p>
+          <p>Le domaine de diffusion de couche 2 est appelé domaine de diffusion MAC. Le domaine de diffusion MAC est constitué de tous les périphériques du réseau local qui reçoivent les trames de diffusion provenant d'un hôte. </p>
+          <p></p>
+          <p>Dans la figure, cliquez sur Lire pour le constater dans la première partie de l'animation.</p>
+          <p></p>
+          <p>Lorsqu'un commutateur reçoit une trame de diffusion, il la transfère à tous ses ports, sauf au port d'entrée où elle a été reçue. Chaque périphérique connecté au commutateur reçoit un exemplaire de la trame de diffusion et la traite. Les diffusions sont parfois nécessaires pour localiser initialement d'autres équipements et services réseau, mais elles réduisent l'efficacité du réseau. La bande passante du réseau est utilisée pour transmettre le trafic de diffusion. Un nombre de diffusions et une charge de trafic trop élevés sur un réseau peuvent entraîner un encombrement qui ralentit les performances réseau.</p>
+          <p></p>
+          <p>Lorsque deux commutateurs sont interconnectés, le domaine de diffusion augmente, comme l'illustre la deuxième partie de l'animation. Dans cet exemple, une trame de diffusion est transférée à tous les ports connectés sur le commutateur S1. Le commutateur S1 est connecté au commutateur S2. La trame est alors également propagée à tous les périphériques connectés au commutateur S2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est une animation qui représente un commutateur recevant un message de diffusion d’une source, puis transmettant la diffusion vers tous les autres membres connectés au commutateur. Les commutateurs transmettront les diffusions, ce qui fait que tous les périphériques connectés au commutateur appartiennent au même domaine de diffusion.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure affiche un commutateur auquel sont connectés un routeur et un ordinateur.  L’ordinateur envoie au routeur IPv6 un message de sollicitation qui se trouve être un message multidiffusion à tous les routeurs.  Le routeur reçoit ce message et répond par un message d’annonce du routeur, qui est en fait un message IPv6 multidiffusion à tous les nœuds.

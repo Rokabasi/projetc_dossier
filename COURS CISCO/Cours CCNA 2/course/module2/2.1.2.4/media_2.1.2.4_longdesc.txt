@@ -1,0 +1,1 @@
+La figure affiche un routeur (R1) connecté à un autre routeur connecté à 4 réseaux.  Le routeur R1 peut utiliser une route récapitulative unique pour pointer vers les réseaux connectés à l’autre routeur.  Les routes récapitulatives sont des routes statiques.

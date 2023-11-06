@@ -1,0 +1,1 @@
+La figure représente le schéma de TP standard.  Un paquet de mise à jour se déplace du routeur deux au routeur trois. Une légende indique que EIGRP est un protocole de routage à vecteur de distance sans classe.

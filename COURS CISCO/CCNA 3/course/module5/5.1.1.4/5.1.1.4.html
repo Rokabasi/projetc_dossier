@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.4 Protocoles de routage à état de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocoles de routage à état de liens</h1>
+        <div>
+          <p>À la différence d'un protocole de routage à vecteur de distance, un routeur configuré avec un protocole de routage à état de liens peut créer une « vue complète » ou une topologie du réseau en récupérant des informations provenant de tous les autres routeurs.  </p>
+          <p></p>
+          <p>Pour reprendre l’analogie avec les poteaux indicateurs, lorsque vous utilisez un protocole de routage à état de liens, c’est comme si vous disposiez d’une carte complète de la topologie du réseau. Les poteaux indicateurs le long du chemin entre la source et la destination ne sont pas nécessaires, car tous les routeurs à état de liens utilisent une carte du réseau identique. Un routeur à état de liens utilise les informations d’état de liens pour créer une topologie et sélectionner le meilleur chemin vers tous les réseaux de destination de la topologie.  </p>
+          <p></p>
+          <p>Les protocoles de routage à état de liens n’utilisent pas de mises à jour régulières. Par contre, les routeurs compatibles RIP envoient des mises à jour périodiques de leurs informations de routage à leurs voisins. Une fois que les routeurs se sont renseignés sur tous les réseaux requis (convergence réussie), une mise à jour de l'état du lien n'est envoyée qu'en cas de modification de la topologie. Par exemple, dans l’animation, la mise à jour d’état de liens n’est pas envoyée tant que le réseau 172.16.3.0 n’est pas hors service.  </p>
+          <p></p>
+          <p>Cliquez sur Lecture dans la figure pour afficher les opérations d'état de liens.  </p>
+          <p></p>
+          <p>Les protocoles à état de liens sont tout particulièrement adaptés dans les situations suivantes :</p>
+          <p>
+            <ul>
+              <li>Réseau conçu de manière hiérarchique (il s'agit généralement de grands réseaux)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Une adaptation rapide aux modifications du réseau est cruciale</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les administrateurs savent parfaitement mettre en œuvre et maintenir un protocole de routage à état de liens</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Il existe deux protocoles IGP à état de liens IPv4 :</p>
+          <p>
+            <ul>
+              <li>
+                <b>OSPF </b>: protocole de routage courant reposant sur les standards</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IS-IS :</b> courant sur les réseaux des fournisseurs</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 2 présente trois routeurs connectés en triangle par des liaisons WAN série. Chaque routeur est connecté aux deux autres routeurs.  Chaque routeur a deux liaisons série actives plus une interface Ethernet. Il y a au total six adresses réseau dans la figure.  La figure est une animation qui illustre le processus qui permet à un protocole de routage à état de liens de détecter une panne d'un réseau directement connecté et d'envoyer immédiatement des mises à jour de liens pour prévenir les autres routeurs de la défaillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

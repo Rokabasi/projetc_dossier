@@ -1,0 +1,40 @@
+<textcomponents>
+
+
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Inconvénients des protocoles de routage à état de liens</b>]]></text> 
+</component>
+
+<component id="ID_s1_txt02">
+<text><![CDATA[<textformat blockindent="-14"><ul><li>La mise à jour d&apos;une base de données d&apos;états de liens et d&apos;une arborescence SPF nécessite plus de mémoire.</li><li>Le calcul de l&apos;algorithme SPF nécessite également un traitement supplémentaire du processeur.</li><li>La bande passante peut être affectée par la diffusion de paquets à état de liens.</li></ul></textformat>]]></text> 
+</component>
+
+
+<component id="ID_title">
+<text><![CDATA[<b>Créer des zones pour réduire l&apos;utilisation des ressources <br/>du routeur</b>]]></text>
+</component>
+<component id="ID_txt01">
+  <text><![CDATA[<b>Zone 0</b>]]></text> 
+  </component>
+
+  <component id="ID_txt02">
+  <text><![CDATA[<b>Zone 51</b>]]></text> 
+  </component>
+
+  <component id="ID_txt03">
+  <text><![CDATA[<b>Zone 1</b>]]></text> 
+  </component>
+
+    <component id="ID_txt04">
+  <text><![CDATA[Ces zones ne sont pas inondées de paquets LSP. Une nouvelle exécution de l&apos;algorithme SPF dans ces zones n&apos;est pas nécessaire.]]></text> 
+  </component>
+
+ <component id="ID_txt05">
+  <text><![CDATA[Inondation de LSP uniquement dans cette zone.]]></text> 
+  </component>
+
+   <component id="ID_txt06">
+  <text><![CDATA[Nouvelle exécution de l&apos;algorithme SPF]]></text> 
+  </component>
+
+</textcomponents>

@@ -1,0 +1,1 @@
+La figure constitue une activité interactive qui permet à l’apprenant de s’exercer à faire correspondre les différents types d’adressage NAT avec leur position au sein d’un réseau.

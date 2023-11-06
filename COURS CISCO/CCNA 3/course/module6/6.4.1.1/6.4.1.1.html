@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.1 Protocole EIGRP pour IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole EIGRP pour IPv6</h1>
+        <div>
+          <p>Tout comme son homologue IPv4, le protocole EIGRP pour IPv6 échange des informations de routage pour renseigner la table de routage IPv6 avec des préfixes distants. Le protocole EIGRP pour IPv6 a été intégré à Cisco IOS, version 12.4(6)T.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : dans IPv6, l'adresse réseau est considérée comme étant le préfixe et le masque de sous-réseau est appelé la longueur de préfixe.</p>
+          <p></p>
+          <p>EIGRP pour IPv4 s'exécute sur la couche réseau IPv4, communique avec d'autres homologues IPv4 EIGRP et annonce uniquement les routes IPv4. Le protocole EIGRP pour IPv6 présente les mêmes fonctionnalités que le protocole EIGRP pour IPv4, mais utilise IPv6 comme transport de couche réseau, pour communiquer avec les homologues EIGRP pour IPv6 et annoncer les routes IPv6. </p>
+          <p></p>
+          <p>Le protocole EIGRP pour IPv6 utilise également l'algorithme DUAL comme moteur de calcul pour garantir la présence de chemins sans boucle et de chemins de secours dans tout le domaine de routage.</p>
+          <p></p>
+          <p>Comme avec tous les protocoles de routage IPv6, le protocole EIGRP pour IPv6 a des processus distincts par rapport à son homologue IPv4. Les processus et les opérations sont fondamentalement les mêmes que dans le protocole de routage IPv4, mais ils s'exécutent indépendamment. Les protocoles EIGRP pour IPv4 et EIGRP pour IPv6 disposent chacun des tables de voisinage EIGRP, des tables topologiques EIGRP et des tables de routage IP distinctes, comme indiqué dans la figure. Le protocole EIGRP pour IPv6 est un module dépendant d'un protocole (PDM) distinct.</p>
+          <p></p>
+          <p>Les commandes de configuration et de vérification du protocole EIGRP pour IPv6 ressemblent beaucoup à celles utilisées dans le protocole EIGRP pour IPv4. Elles sont décrites plus loin dans cette section.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs exécutant le protocole EIGRP. Le schéma montre que chaque routeur dispose des tables distinctes pour les voisins, la topologie et le routage, pour IPv4 et IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

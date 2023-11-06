@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.5 Sécurité des ports : vérification</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sécurité des ports : vérification</h1>
+        <div>
+          <p>
+            <b>Vérification de la sécurité des ports</b>
+          </p>
+          <p></p>
+          <p>Après avoir configuré la sécurité des ports sur un commutateur, contrôlez chaque interface pour vous assurer que la sécurité des ports et les adresses MAC statiques ont été configurées correctement. </p>
+          <p></p>
+          <p>
+            <b>Vérifier les paramètres de sécurité des ports</b>
+          </p>
+          <p></p>
+          <p>Pour afficher les paramètres de sécurité des ports du commutateur ou de l'interface spécifiée, utilisez la commande<b> show port-security interface</b>[<i>interface-id</i>]. Le résultat de la configuration de la sécurité des ports dynamique est indiqué à la Figure 1. Par défaut, une seule adresse MAC est autorisée sur ce port.</p>
+          <p></p>
+          <p>Le résultat indiqué à la Figure 2 présente les valeurs des paramètres de sécurité des ports rémanente. Le nombre maximal d'adresses est défini sur 10, tel que configuré. </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> l'adresse MAC est identifiée comme adresse MAC rémanente.</p>
+          <p></p>
+          <p>Les adresses MAC rémanentes sont ajoutées à la table d'adresses MAC et à la configuration en cours. Comme illustré à la Figure 3, l'adresse MAC rémanente pour PC2 a été ajoutée à la configuration en cours pour S1.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Vérification des adresses MAC sécurisées</b>
+          </p>
+          <p></p>
+          <p>Pour afficher toutes les adresses MAC sécurisées configurées sur toutes les interfaces de commutateur ou sur une interface définie avec informations d'obsolescence pour chacune, utilisez la commande<b> show port-security address</b>. Comme illustré à la Figure 4, les adresses MAC sécurisées sont référencées avec les types. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show port-security interface fast Ethernet 0/18 ».  Le paramètre pour les adresses MAC maximum est défini sur la valeur 1 et mis en surbrillance dans cet exemple. La Figure 2 met en évidence le fait que le nouveau nombre maximal est défini sur la valeur 50 et que les adresses MAC rémanentes sont maintenant définies sur la valeur 1. La Figure 3 affiche la sortie de la commande « show run pipe begin fast Ethernet 0/19 ».  La sortie répertorie la configuration du port, notamment la sécurité des ports.  Une adresse MAC est répertoriée dans la configuration et représente un ordinateur connecté au port de commutateur et ajouté au fichier de configuration en cours. La Figure 4 affiche la sortie de la commande « show port-security address ».  La figure répertorie l’adresse MAC de l’ordinateur qui a été ajoutée au commutateur comme adresse MAC sécurisée rémanente dans la figure précédente.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

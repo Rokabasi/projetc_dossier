@@ -1,0 +1,245 @@
+<textcomponents>
+
+
+<component id='ID_s1_inst'>
+<text><![CDATA[<b>Topologie : dépannage des problèmes de commutation de couche 3</b><br><br>Reportez-vous à ce diagramme de la topologie du réseau pour répondre correctement aux trois scénarios fournis.]]></text>
+</component>
+
+<component id="ID_s1_txt01">
+<text><![CDATA[VLAN 4]]></text>
+</component>
+
+<component id="ID_s1_txt02">
+   <text><![CDATA[Commutateur de couche 2 (SW1)]]></text>
+</component>
+
+
+<component id="ID_s1_txt03">
+   <text><![CDATA[VLAN 3]]></text>
+</component>
+
+<component id="ID_s1_txt04">
+   <text><![CDATA[Serveur]]></text>
+</component>
+
+<component id="ID_s1_txt05">
+   <text><![CDATA[VLAN 3]]></text>
+</component>
+
+
+<component id="ID_s1_txt06">
+   <text><![CDATA[Commutateur de couche 2 (SW2)]]></text>
+</component>
+
+<component id="ID_s1_txt07">
+   <text><![CDATA[VLAN 2]]></text>
+</component>
+
+
+<component id="ID_s1_txt08">
+   <text><![CDATA[Commutateur de couche 3 (SW3)]]></text>
+</component>
+
+<component id="ID_s1_txt09">
+   <text><![CDATA[Trunk C2]]></text>
+</component>
+
+<component id="ID_s1_txt10">
+   <text><![CDATA[Trunk C2]]></text>
+</component>
+
+
+<component id="ID_s1_table">
+  <text><![CDATA[<table  class="mtable" header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+<tr class="mtable_top"><td colspan='2'class="mtable_top" bgcolor='#0E6360' class="liner_top"><font size='1' color='#0E6360'><span style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr colspan='2'>
+		<td bgcolor='#077A77' class="mtitle"  valign="top" ><font color='#ffffff' size="11" style="font-size:11px">VLAN</font></td>
+		<td bgcolor='#077A77'  class="mtitle" valign="top" ><font color='#ffffff' size="11" style="font-size:11px">Sous-réseau</font></td>
+		
+	</tr>
+
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">2</font></td>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">10.2.0.0/24</font></td>
+		
+		
+	</tr>
+
+	   <tr>
+		<td bgcolor='#FFFFFF' valign="top"><font color='#393536' size="11" style="font-size:11px">3</font></td>
+		<td bgcolor='#FFFFFF' valign="top"><font color='#393536' size="11" style="font-size:11px">10.3.0.0/24</font></td>
+		
+	</tr>
+
+	   <tr>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">4</font></td>
+		<td bgcolor='#EFF8F7' valign="top"><font color='#393536' size="11" style="font-size:11px">10.4.0.0/24</font></td>
+		
+		
+	</tr>
+	
+	
+	</table>]]></text>
+  </component>
+
+
+
+
+<component id='ID_s2_inst'>
+<text><![CDATA[<b>Scénario 1 : dépannage des problèmes de commutation de couche 3</b><br><br>PC2 ne peut pas communiquer avec PC3, mais il peut communiquer avec tous les autres appareils. Cliquez sur la cause la plus probable du problème. Vous pouvez sélectionner plusieurs réponses. Utilisez le résultat des commandes du commutateur de couche 3 et reportez-vous au schéma de topologie du réseau pour répondre correctement à ce scénario.]]></text>
+</component>
+
+<component id="ID_s2_ans01">
+<text><![CDATA[VLAN 3 et 4 sont désactivés.]]></text>
+</component>
+
+<component id="ID_s2_ans02">
+<text><![CDATA[L&apos;adresse IP du VLAN 3 n&apos;est pas correcte.]]></text>
+</component>
+
+<component id="ID_s2_ans03">
+<text><![CDATA[VLAN 4 n&apos;a pas d&apos;adresse IP.]]></text>
+</component>
+
+<component id="ID_s2_ans04">
+<text><![CDATA[VLAN 2 n&apos;est pas configuré.]]></text>
+</component>
+
+<component id="ID_s2_ans05">
+<text><![CDATA[10.2.0.0/24 n&apos;est pas attribué au bon VLAN.]]></text>
+</component>
+
+
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les problèmes de commutation de couche 3. Veuillez cliquer sur le bouton 3 pour continuer.]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les problèmes de commutation de couche 3. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s2_check'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_s2_reset'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+<component id='ID_s3_inst'>
+	<text><![CDATA[<b>Scénario 2 : dépannage des problèmes de commutation de couche 3</b><br><br>PC2 ne peut pas communiquer avec les autres appareils, ni avec sa propre passerelle. Cliquez sur la cause la plus probable du problème. Vous pouvez sélectionner plusieurs réponses. Utilisez le résultat des commandes du commutateur de couche 3 et reportez-vous au schéma de topologie du réseau pour répondre correctement à ce scénario.]]></text>
+</component>
+
+<component id='ID_s3_ans01'>
+	<text><![CDATA[Le masque de sous-réseau VLAN 2 n&apos;est pas correct.]]></text>
+</component>
+
+<component id='ID_s3_ans02'>
+	<text><![CDATA[L&apos;adresse IP du VLAN 3 n&apos;est pas correcte.]]></text>
+</component>
+
+<component id='ID_s3_ans03'>
+	<text><![CDATA[Le masque de sous-réseau VLAN 4 n&apos;est pas correct.]]></text>
+</component>
+
+<component id='ID_s3_ans04'>
+	<text><![CDATA[VLAN 2 n&apos;est pas configuré.]]></text>
+</component>
+
+<component id='ID_s3_ans05'>
+	<text><![CDATA[L&apos;adresse IP du VLAN 4 n&apos;est pas correcte.]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les problèmes de commutation de couche 3. Veuillez cliquer sur le bouton 4 pour continuer.]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les problèmes de commutation de couche 3. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s3_check'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_s3_reset'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+<component id='ID_s4_inst'>
+	<text><![CDATA[<b>Scénario 3 : dépannage des problèmes de commutation de couche 3</b><br><br>PC1 ne peut pas communiquer avec PC2 ou PC3, mais il peut communiquer avec le serveur. Cliquez sur la cause la plus probable du problème. Vous pouvez sélectionner plusieurs réponses. Utilisez le résultat des commandes du commutateur de couche 3 et reportez-vous au schéma de topologie du réseau pour répondre correctement à ce scénario.]]></text>
+</component>
+
+
+<component id='ID_s4_ans01'>
+	<text><![CDATA[L&apos;encapsulation de trunk n&apos;est pas correcte.]]></text>
+</component>
+
+<component id='ID_s4_ans02'>
+	<text><![CDATA[Les VLAN 2 et 3 sont supprimés des trunks.]]></text>
+</component>
+
+<component id='ID_s4_ans03'>
+	<text><![CDATA[Le port Gigabit 0/1 n&apos;est pas configuré comme trunk.]]></text>
+</component>
+<component id='ID_s4_ans04'>
+	<text><![CDATA[VLAN 2 n&apos;est pas configuré.]]></text>
+</component>
+
+<component id='ID_s4_ans05'>
+	<text><![CDATA[Le port Gigabit 0/2 n&apos;est pas configuré comme trunk.]]></text>
+</component>
+
+<component id='ID_s4_ans06'>
+	<text><![CDATA[Le port G1/1 du commutateur SW2 est désactivé.]]></text>
+</component>
+
+
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement identifié les problèmes de commutation de couche 3.]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les problèmes de commutation de couche 3. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s4_check'>
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id='ID_s4_reset'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+
+</textcomponents>

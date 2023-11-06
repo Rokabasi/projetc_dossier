@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.3 Auto-MDIX</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Auto-MDIX</h1>
+        <div>
+          <p>Jusqu'à récemment, il était nécessaire d'utiliser certains types de câbles (droit ou croisé) pour connecter les périphériques. Différents câbles Ethernet étaient notamment nécessaires pour connecter deux commutateurs ou un commutateur et un routeur. La fonctionnalité d'interface croisée dépendante du support (auto-MDIX) d'une interface permet d'éliminer ce problème. Lorsque la fonction auto-MDIX est activée, l'interface détecte automatiquement le type de câble requis pour la connexion (droit ou croisé) et configure la connexion en conséquence. Pour la connexion aux commutateurs sans utiliser la fonctionnalité auto-MDIX, des câbles droits doivent être utilisés pour connecter des périphériques tels que des serveurs, des stations de travail ou des routeurs. Des câbles croisés doivent être utilisés pour se connecter à d'autres commutateurs ou à des répéteurs. </p>
+          <p></p>
+          <p>Lorsque la fonction auto-MDIX est activée, le type de câble utilisé n'a pas d'importance. L'interface s'adapte et fait en sorte d'assurer la communication. Sur les commutateurs Cisco les plus récents, la commande du mode de configuration d’interface<b> mdix auto </b>permet d’activer cette fonctionnalité. Lorsque la fonctionnalité auto-MDIX est utilisée sur une interface, la vitesse de l'interface et le mode de bidirectionnalité doivent être réglés sur <b>auto</b> pour un fonctionnement correct.</p>
+          <p>Les commandes permettant d'activer la fonctionnalité auto-MDIX sont indiquées sur la Figure 1.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: La fonctionnalité auto-MDIX est activée par défaut sur les commutateurs Cisco Catalyst 2960 et 3560, mais n'est pas disponible sur les anciens commutateurs Cisco Catalyst 2950 et 3550.</p>
+          <p></p>
+          <p>Pour examiner le paramètre auto-MDIX d'une interface donnée, utilisez la commande <b>show controllers ethernet-controller</b> avec le mot-clé <b>phy</b>. Pour limiter le résultat aux lignes relatives à la fonction auto-MDIX, utilisez le filtre<b> include Auto-MDIX</b>. Comme illustré à la Figure 2, le résultat indique si la fonctionnalité est activée ou désactivée (On/Off).</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour configurer la fonctionnalité auto-MDIX sur l'interface FastEthernet 0/1 de S2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un tableau répertoriant les commandes utilisées pour configurer la fonctionnalité MDIX sur une interface de port de commutateur (switchport).  La CLI commence en mode EXEC privilégié et la première commande est : configure terminal.  Cela fait passer en mode de configuration globale.  La commande suivante est « interface fast Ethernet 0/1 » et l’invite du commutateur devient « config-i.f. » entre parenthèses.  La commande suivante est : duplex full.  La commande suivante est : speed 100.  La nouvelle commande est « m.d.i.x. auto » qui définit l'option m.d.i.x. sur auto. Le tableau se termine par la commande : copy running-config startup-config. La Figure 2 montre la sortie de la commande « show controllers Ethernet-controller f.a. 0/1 p.h.y. pipe include auto-m.d.i.x ». La Figure 3 est une activité interactive qui permet à l'étudiant de configurer une interface de port de commutateur avec l'option m.d.i.x.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

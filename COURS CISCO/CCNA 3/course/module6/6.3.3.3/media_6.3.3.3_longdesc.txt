@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande « show ip route » sur le routeur 2.  Une route EIGRP est indiquée, la mesure et l'adresse du successeur étant mises en surbrillance en orange.

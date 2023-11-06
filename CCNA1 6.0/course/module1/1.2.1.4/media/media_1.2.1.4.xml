@@ -1,0 +1,23 @@
+﻿<textcomponents>
+    <component id='ID_title'>
+        <text>
+            <![CDATA[Network Media]]>
+        </text>
+    </component>
+        <component id='ID_s1_txt01'>
+            <text>
+                <![CDATA[Cuivre]]></text>
+        </component>
+        <component id='ID_s1_txt02'>
+            <text>
+                <![CDATA[Fibre optique]]></text>
+        </component>
+        <component id='ID_s1_txt03'>
+            <text>
+                <![CDATA[Sans fil]]></text>
+        </component>
+        <component id='ID_s2_txt01'>
+            <text>
+                <![CDATA[<ul><textformat blockindent='-18'><li>Quelle est la distance maximale sur laquelle les supports peuvent transporter correctement un signal ?</li><li>Dans quel type d&apos;environnement les supports seront-ils installés ?</li><li>Quels sont la quantité de données et le débit de la transmission ?</li><li>Quel est le coût des supports et de l&apos;installation ?</li></textformat></ul>]]></text>
+        </component>
+</textcomponents>

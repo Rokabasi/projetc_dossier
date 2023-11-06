@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Travaux pratiques]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Configurer Rapid PVST+, PortFast et la protection BPDU]]></text>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,237 @@
+﻿<textcomponents>
+
+<component id='ID_s1_title'>
+	<text><![CDATA[<b>Exercice : organisation des étapes du processus de transfert de paquets<b>]]></text>
+</component>
+
+<component id='ID_s1_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_s1_instr_body'>
+	<text><![CDATA[Dans cet exercice, vous disposez de quatre scénarios de transfert de paquets. Glissez le rapport de réponse qui répond le mieux au processus de transfert de paquet pour chaque scénario dans le champ correspondant. Vérifiez votre réponse en utilisant le bouton Vérifier ; si elle est correcte, passez au scénario suivant en sélectionnant le bouton à droite. Si la réponse est incorrecte, cliquez sur Réinitialiser et réessayez.]]></text>
+</component>
+
+<component id='ID_s1_txt02'>
+	<text><![CDATA[<b>Transmission de paquets - scénario 1</b>]]></text>
+</component>
+
+<component id='ID_s1_txt03'>
+	<text><![CDATA[<b>Étape suivante</b>]]></text>
+</component>
+
+<component id='ID_s1_txt04'>
+	<text><![CDATA[Votre routeur a reçu un paquet destiné à une adresse IP d&apos;un autre réseau. L&apos;adresse IP de destination n&apos;est pas sur un réseau local et ne correspond à aucun élément de votre table de routage. Il n&apos;y a aucune passerelle de dernier recours disponible.]]></text>
+</component><!--Drag and Drop--><component id='ID_s1_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulez la trame et transférez-la hors de l&apos;interface de sortie au tronçon suivant.</font>]]></text>
+</component>
+
+<component id='ID_s1_target02'>
+	<text><![CDATA[<font color="#393536">Vérifiez le cache ARP et transférez-le à l&apos;hôte sur le sous-réseau local.</font>]]></text>
+</component>
+
+<component id='ID_s1_target03'>
+	<text><![CDATA[<font color="#393536">Abandonnez le paquet et renvoyez un message ICMP à l&apos;adresse IP source.</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Correct ! Cliquez sur le bouton 2 pour passer à un autre scénario.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Cette réponse est incorrecte. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[Vérifier]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component><!--slide02--><component id='ID_s2_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_s2_instr_body'>
+	<text><![CDATA[Organiser les étapes du processus de transfert de paquet</b><br><br>Dans cette activité, vous recevez quatre scénarios de transfert de paquet. Glissez le rapport de réponse qui répond le mieux au processus de transfert de paquet pour chaque scénario dans le champ correspondant. Vérifiez votre réponse en utilisant le bouton Vérifier ; si elle est correcte, passez au scénario suivant en sélectionnant le bouton à droite. Si la réponse est incorrecte, cliquez sur Réinitialiser et réessayez.]]></text>
+</component>
+
+<component id='ID_s2_txt02'>
+	<text><![CDATA[<b>Transmission de paquets - scénario 2</b>]]></text>
+</component>
+
+<component id='ID_s2_txt03'>
+	<text><![CDATA[<b>Étape suivante</b>]]></text>
+</component>
+
+<component id='ID_s2_txt04'>
+	<text><![CDATA[Votre routeur a reçu un paquet destiné à une adresse IP d&apos;un réseau distant. Votre routeur dispose d&apos;une entrée de table de routage pour le réseau distant.]]></text>
+</component><!--Drag and Drop--><component id='ID_s2_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulez la trame et transférez-la hors de l&apos;interface de sortie au tronçon suivant.</font>]]></text>
+</component>
+
+<component id='ID_s2_target02'>
+	<text><![CDATA[<font color="#393536">Vérifiez le cache ARP et transférez-le à l&apos;hôte sur le sous-réseau local.</font>]]></text>
+</component>
+
+<component id='ID_s2_target03'>
+	<text><![CDATA[<font color="#393536">Abandonnez le paquet et renvoyez un message ICMP à l&apos;adresse IP source.</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s2_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s2_CORRECT_BODY'>
+	<text><![CDATA[Correct ! Cliquez sur le bouton 3 pour passer à un autre scénario.]]></text>
+</component>
+
+
+<component id='ID_s2_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s2_INCORRECT_BODY'>
+	<text><![CDATA[Cette réponse est incorrecte. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s2_CHECK'>
+	<text><![CDATA[Vérifier]]></text>
+</component>
+
+<component id='ID_s2_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component><!--slide03--><component id='ID_s3_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_s3_instr_body'>
+	<text><![CDATA[Organiser les étapes du processus de transfert de paquet</b><br><br>Dans cette activité, vous recevez quatre scénarios de transfert de paquet. Glissez le rapport de réponse qui répond le mieux au processus de transfert de paquet pour chaque scénario dans le champ correspondant. Vérifiez votre réponse en utilisant le bouton Vérifier ; si elle est correcte, passez au scénario suivant en sélectionnant le bouton à droite. Si la réponse est incorrecte, cliquez sur Réinitialiser et réessayez.]]></text>
+</component>
+
+<component id='ID_s3_txt02'>
+	<text><![CDATA[<b>Transmission de paquets - scénario 3</b>]]></text>
+</component>
+
+<component id='ID_s3_txt03'>
+	<text><![CDATA[<b>Étape suivante</b>]]></text>
+</component>
+
+<component id='ID_s3_txt04'>
+	<text><![CDATA[Votre routeur a reçu un paquet destiné à une adresse IP d&apos;un autre réseau. L&apos;adresse IP de destination n&apos;est pas sur un réseau local, ne correspond à aucun élément de votre table de routage, mais il y a une passerelle de dernier recours.]]></text>
+</component><!--Drag and Drop--><component id='ID_s3_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulez la trame et transférez-la hors de l&apos;interface de sortie au tronçon suivant.</font>]]></text>
+</component>
+
+<component id='ID_s3_target02'>
+	<text><![CDATA[<font color="#393536">Vérifiez le cache ARP et transférez-le à l&apos;hôte sur le sous-réseau local.</font>]]></text>
+</component>
+
+<component id='ID_s3_target03'>
+	<text><![CDATA[<font color="#393536">Abandonnez le paquet et renvoyez un message ICMP à l&apos;adresse IP source.</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s3_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s3_CORRECT_BODY'>
+	<text><![CDATA[Correct ! Cliquez sur le bouton 4 pour passer à un autre scénario.]]></text>
+</component>
+
+
+<component id='ID_s3_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s3_INCORRECT_BODY'>
+	<text><![CDATA[Cette réponse est incorrecte. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s3_CHECK'>
+	<text><![CDATA[Vérifier]]></text>
+</component>
+
+<component id='ID_s3_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component><!--slide03--><component id='ID_s4_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_s4_instr_body'>
+	<text><![CDATA[Organiser les étapes du processus de transfert de paquet</b><br><br>Dans cette activité, vous recevez quatre scénarios de transfert de paquet. Glissez le rapport de réponse qui répond le mieux au processus de transfert de paquet pour chaque scénario dans le champ correspondant. Vérifiez votre réponse en utilisant le bouton Vérifier ; si elle est correcte, passez au scénario suivant en sélectionnant le bouton à droite. Si la réponse est incorrecte, cliquez sur Réinitialiser et réessayez.]]></text>
+</component>
+
+<component id='ID_s4_txt02'>
+	<text><![CDATA[<b>Transmission de paquets - scénario 4</b>]]></text>
+</component>
+
+<component id='ID_s4_txt03'>
+	<text><![CDATA[<b>Étape suivante</b>]]></text>
+</component>
+
+<component id='ID_s4_txt04'>
+	<text><![CDATA[Votre routeur a reçu un paquet destiné à une adresse IP d&apos;un sous-réseau local. Votre routeur dispose d&apos;une entrée de table de routage enregistrée pour ce sous-réseau et il se trouve sur une interface connectée directement.]]></text>
+</component><!--Drag and Drop--><component id='ID_s4_target01'>
+	<text><![CDATA[<font color="#393536">Encapsulez la trame et transférez-la hors de l&apos;interface de sortie au tronçon suivant.</font>]]></text>
+</component>
+
+<component id='ID_s4_target02'>
+	<text><![CDATA[<font color="#393536">Vérifiez le cache ARP et transférez-le à l&apos;hôte sur le sous-réseau local.</font>]]></text>
+</component>
+
+<component id='ID_s4_target03'>
+	<text><![CDATA[<font color="#393536">Abandonnez le paquet et renvoyez un message ICMP à l&apos;adresse IP source.</font>]]></text>
+</component>
+
+
+
+ 
+
+<component id='ID_s4_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct]]></text>
+</component>
+
+<component id='ID_s4_CORRECT_BODY'>
+	<text><![CDATA[Correct !]]></text>
+</component>
+
+
+<component id='ID_s4_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect]]></text>
+</component>
+
+<component id='ID_s4_INCORRECT_BODY'>
+	<text><![CDATA[Cette réponse est incorrecte. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s4_CHECK'>
+	<text><![CDATA[Vérifier]]></text>
+</component>
+
+<component id='ID_s4_RESET'>
+	<text><![CDATA[Réinitialiser]]></text>
+</component>
+
+</textcomponents>

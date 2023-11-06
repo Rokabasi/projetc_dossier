@@ -1,0 +1,1 @@
+La figure présente trois routeurs interconnectés.  L'icône d'un verrou apparaît sur chaque routeur et une flèche bidirectionnelle est placée entre chaque routeur.  Cela indique que le protocole EIGRP peut utiliser l'authentification avant de partager des données de routage.

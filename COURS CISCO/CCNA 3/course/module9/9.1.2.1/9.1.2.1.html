@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.1 Types de LSA OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Types de LSA OSPF</h1>
+        <div>
+          <p>Les annonces d'état de liens (LSA, Link-State Advertisement) sont les éléments de base d'une LSDB OSPF. Individuellement, elles jouent le rôle d'enregistrements de base de données et fournissent des détails spécifiques au réseau OSPF. Combinées, elles décrivent la topologie globale d'une zone ou d'un réseau OSPF. </p>
+          <p></p>
+          <p>Les RFC OSPF spécifient actuellement jusqu'à 11 types de LSA différents (Figure 1). Cependant, une implémentation OSPF à zones multiples doit prendre en charge les cinq premières : LSA 1 à LSA 5 (Figure 2). Cette rubrique traite donc principalement de ces cinq LSA.</p>
+          <p></p>
+          <p>Chaque liaison du routeur est définie comme un type de LSA. Une LSA comprend un champ d’ID de lien qui identifie, par numéro de réseau et masque, l’objet auquel le lien est connecté. Selon le type, l’ID de lien a différentes significations. Les LSA diffèrent dans la manière dont elles sont émises et propagées à travers le domaine de routage. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: le protocole OSPFv3 comprend des types de LSA supplémentaires. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 contient un tableau qui répertorie tous les types de LSA OSPF (1 à 11). La Figure 2 contient un tableau qui répertorie les types de LSA OSPF les plus courants (1 à 5).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.2 Application de listes de contrôle d&#x0027;accès IPv4 standard aux interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Application de listes de contrôle d&#x0027;accès IPv4 standard aux interfaces</h1>
+        <div>
+          <p>Une fois qu’une liste de contrôle d’accès standard IPv4 est configurée, elle est associée à une interface à l’aide de la commande « <b>ip access-group</b> » en mode de configuration d'interface :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ip access-group</b>
+            </span>
+            <span class="cmd"> { </span>
+            <span class="cmd">
+              <i>access-list-number</i>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <i>access-list-name</i>
+            </span>
+            <span class="cmd"> } { </span>
+            <span class="cmd">
+              <b>in</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>out</b>
+            </span>
+            <span class="cmd"> }</span>
+          </p>
+          <p></p>
+          <p>Pour supprimer une liste de contrôle d'accès IP d'une interface, entrez d'abord la commande <b>no ip access-group</b> sur l'interface, puis la commande globale <b>no access-list</b> pour supprimer l'ensemble de la liste.</p>
+          <p></p>
+          <p>La Figure 1 décrit les étapes à suivre et la syntaxe à adopter pour configurer et appliquer une liste de contrôle d'accès standard numérotée sur un routeur.</p>
+          <p></p>
+          <p>La Figure 2 présente un exemple de liste de contrôle d'accès conçue pour autoriser un seul réseau.</p>
+          <p></p>
+          <p>Cette liste autorise uniquement le trafic provenant du réseau source 192.168.10.0 à sortir de l'interface S0/0/0. Le trafic émanant d’autres réseaux que 192.168.10.0 est bloqué.</p>
+          <p></p>
+          <p>La première ligne identifie la liste de contrôle d'accès numérotée 1. Elle autorise le trafic correspondant aux paramètres sélectionnés. Dans ce cas, l'adresse IPv4 et le masque générique identifiant le réseau source sont 192.168.10.0 0.0.0.255. N'oubliez pas qu'il existe une instruction implicite « deny all » qui équivaut à ajouter la ligne <b>access-list 1 deny 0.0.0.0 255.255.255.255</b> ou <b>access-list deny any</b> à la fin de la liste.</p>
+          <p></p>
+          <p>La commande de configuration d'interface <b>ip access-group 1 out</b> relie l'ACL 1 à l'interface Serial 0/0/0 en tant que filtre sortant.</p>
+          <p></p>
+          <p>C'est pourquoi l'ACL 1 autorise uniquement les hôtes provenant du réseau 192.168.10.0/24 à quitter le routeur R1. Tout autre réseau est refusé, notamment 192.168.11.0</p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La Figure 1 illustre l'application d'une liste de contrôle d'accès à une interface. La première ligne crée une liste de contrôle d'accès. La commande suivante touche l'interface sur laquelle la liste de contrôle d'accès sera placée. La commande est « interface serial 0/0/0 ». Une fois dans le mode de configuration d'interface, la commande utilisée pour appliquer une liste de contrôle d'accès à l'interface est « ip access-group 1 out ». La Figure 2 montre une topologie qui décrit les étapes et les commandes répertoriées dans la Figure 1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure est une image de trois personnes dans une armoire de répartition.  La légende indique que le modèle de conception hiérarchique à trois couches divise la conception en couches, ce qui simplifie l'élaboration du réseau et, par voie de conséquence, son déploiement et sa gestion.

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.1 Syntaxe de listes de contrôle d&#x0027;accès IPv4 standard numérotées</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Syntaxe de listes de contrôle d&#x0027;accès IPv4 standard numérotées</h1>
+        <div>
+          <p>Pour utiliser des listes de contrôle d'accès standard numérotées sur un routeur Cisco, vous devez d'abord créer la liste de contrôle d'accès standard, puis l'activer sur une interface.</p>
+          <p></p>
+          <p>La commande de configuration globale <b>access-list</b> définit une liste de contrôle d'accès standard associée à un numéro compris entre 1 et 99. La version 12.0.1 du logiciel Cisco IOS a élargi cette plage de numéros et permet d'attribuer les numéros 1 300 à 1 999 aux listes de contrôle d'accès standard. Cela permet d'obtenir un maximum de 798 listes de contrôle d'accès standard. Ces numéros supplémentaires sont appelés des listes de contrôle d'accès IPv4 étendues.</p>
+          <p></p>
+          <p>La syntaxe complète de la commande des listes de contrôle d'accès standard est la suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>access-list</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>access-list-number</i>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <b>deny</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>permit</b>
+            </span>
+            <span class="cmd"> | </span>
+            <span class="cmd">
+              <b>remark</b>
+            </span>
+            <span class="cmd"> } </span>
+            <span class="cmd">
+              <i>source</i>
+            </span>
+            <span class="cmd"> [ </span>
+            <span class="cmd">
+              <i>masque-générique-source</i>
+            </span>
+            <span class="cmd"> ][ </span>
+            <span class="cmd">
+              <b>log</b>
+            </span>
+            <span class="cmd"> ]</span>
+          </p>
+          <p></p>
+          <p>La Figure 1 explique en détail la syntaxe d'une liste de contrôle d'accès standard.</p>
+          <p></p>
+          <p>Les ACE peuvent autoriser ou refuser un hôte ou une plage d'adresses d'hôte. Pour créer une instruction d'hôte dans la liste de contrôle d'accès 10 qui autorise un hôte spécifique possédant l'adresse IPv4 192.168.10.10, vous devrez saisir :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit host 192.168.10.10</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Comme l'illustre la Figure 2, pour créer une instruction autorisant une plage d'adresses IPv4 dans une liste de contrôle d'accès numérotée ACL 10 qui autorise toutes les adresses IPv4 du réseau 192.168.10.0/24, vous devez saisir :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>access-list 10 permit 192.168.10.0 0.0.0.255</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Pour supprimer la liste de contrôle d'accès, la commande de configuration globale <b>no access-list</b> est utilisée. La commande <b>show access-list</b> permet de vérifier que la liste d'accès 10 a été supprimée.</p>
+          <p></p>
+          <p>En général, lorsqu'un administrateur crée une liste de contrôle d'accès, il connait et comprend la fonction de chaque instruction. Cependant, pour s'assurer que l'administrateur et d'autres intervenants se souviennent de l'objectif d'une instruction, il est important d'ajouter des remarques. Le mot-clé <b>remark</b> est utilisé à des fins de documentation et rend les listes de contrôle d'accès bien plus simples à comprendre. Chaque remarque comporte 100 caractères au maximum. La liste de contrôle d'accès de la figure 3 est relativement simple ; elle est utilisée à des fins d'illustration. Lorsque l'on consulte la liste de contrôle d'accès dans la configuration à l'aide de la commande <b>show running-config</b>, la remarque s'affiche également.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La Figure 1 répertorie la syntaxe de la commande des listes de contrôle d'accès standard. Les principaux paramètres sont la commande « access-list » suivie par un numéro, puis l’instruction « permit » ou « deny », les adresses IP source et de destination, et le masque générique facultatif. D'autres options incluent une instruction « remark » utilisée pour représenter la liste de contrôle d'accès et le journal de mot clé qui est utilisé pour envoyer à la console des messages sur les paquets qui correspondent aux critères de la liste. La Figure 2 montre la création d'une liste de contrôle d'accès standard, « access-list 10 permit 192.168.10.0 0.0.0.255 ». Le système IOS propose une commande exécutée en mode d'exécution privilégié qui affiche toutes les listes d'accès sur un routeur. Cette commande est « show access-list ». Le processus de suppression d'une liste de contrôle d'accès d'un routeur est réalisé en mode de configuration globale. La commande est « no access-list » suivie du numéro de la liste à supprimer. La Figure 3 décrit l'utilisation du mot clé « remark ». La commande est « access-list 10 remark permit hosts from the 192.168.10.0 LAN ». Cette commande est suivie de la commande de configuration de liste de contrôle d’accès « access-list 10 permit hosts from the 192.168.10.0 0.0.0.255 ». La figure montre la liste de contrôle d'accès finale et indique que « remark » figure dans le fichier de configuration en tant que documentation des fonctions de la liste.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

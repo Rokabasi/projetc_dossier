@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.4 Configuration d&#x0027;une route statique IPv6 connectée directement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;une route statique IPv6 connectée directement</h1>
+        <div>
+          <p>Lors de la configuration d'une route statique sur des réseaux point à point, une alternative à l'utilisation de l'adresse IPv6 du tronçon suivant consiste à spécifier l'interface de sortie. Cette alternative est utilisée sur les systèmes d'exploitation IOS plus anciens ou lorsque le protocole CEF est désactivé, afin d'éviter le problème de recherche récursive. </p>
+          <p></p>
+          <p>Par exemple, dans la Figure 1, trois routes statiques directement connectées sont configurées sur R1 au moyen de l'interface de sortie. </p>
+          <p></p>
+          <p>La table de routage IPv6 pour R1 dans la Figure 2 illustre que lorsqu'un paquet est destiné au réseau 2001:DB8:ACAD:3::/64, R1 recherche une correspondance dans la table de routage et s'aperçoit qu'il peut transmettre le paquet en dehors de son interface Serial 0/0/0. Aucune autre recherche n'est requise.</p>
+          <p></p>
+          <p>Remarquez comme la table de routage est différente entre la route configurée avec une interface de sortie et la route configurée avec une entrée récursive.</p>
+          <p></p>
+          <p>La configuration d'une route statique directement connectée à une interface de sortie permet à la table de routage de résoudre l'interface de sortie en une seule recherche, au lieu de deux recherches. Souvenez-vous qu'en utilisant le mécanisme de transfert CEF, les routes statiques avec une interface de sortie sont considérées comme inutiles. Une seule recherche est effectuée à l'aide d'une combinaison de la table FIB et de la table de contiguïtés enregistrée dans le plan de données.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 et la Figure 4 pour configurer les routes IPv6 statiques connectées directement.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures sont basées sur le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN. La Figure 1 montre la configuration de routes statiques vers des réseaux distants sur le routeur R1 en utilisant IPv6.  Les routes statiques étaient configurées en utilisant l’interface de sortie. La Figure 2 démontre le processus de recherche pour le routeur R1 afin d’atteindre le LAN du routeur R3. La Figure 3 constitue une activité interactive qui permet à l’apprenant de configurer une route statique sur le routeur R2 en utilisant IPv6 afin d’atteindre le LAN du routeur R3, à l’aide d’une interface de sortie. La Figure 4 constitue une ⁪activité interactive qui permet à l’apprenant de configurer des routes statiques sur le routeur R3 en utilisant IPv6 en direction des réseaux de l’autre côté du routeur R2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.6 Calcul de la métrique EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Calcul de la métrique EIGRP</h1>
+        <div>
+          <p>La Figure 1 présente la topologie à trois routeurs. Cet exemple illustre la façon dont le protocole EIGRP détermine la métrique affichée dans la table de routage de R2 pour le réseau 192.168.1.0/24. </p>
+          <p></p>
+          <p>
+            <b>Bande passante</b>
+          </p>
+          <p></p>
+          <p>Le protocole EIGRP utilise la bande passante la plus lente dans le calcul de sa métrique. Vous pouvez déterminer la bande passante la plus lente en examinant chaque interface entre R2 et le réseau de destination 192.168.1.0. L'interface Serial 0/0/1 sur R2 présente une bande passante de 1 024 kb/s. L'interface GigabitEthernet 0/0 sur R3 présente une bande passante de 1 000 000 kb/s. Par conséquent, la bande passante la plus lente est 1 024 kb/s et sert au calcul de la métrique.</p>
+          <p></p>
+          <p>Le protocole EIGRP divise une valeur de bande passante de référence de 10 000 000 par la valeur de bande passante de l'interface en kb/s. Résultat : les valeurs de bande passante plus élevées reçoivent une métrique inférieure et les valeurs de bande passante plus basses reçoivent une métrique supérieure. 10 000 000 est divisé par 1 024. Si le résultat n'est pas un nombre entier, la valeur est arrondie au nombre inférieur. Dans le cas présent, 10 000 000 divisé par 1 024 est égal à 9 765,625. En arrondissant au nombre inférieur, le résultat est 9 765 pour la partie bande passante de la métrique composite, comme indiqué à la Figure 2.</p>
+          <p></p>
+          <p>
+            <b>Délai</b>
+          </p>
+          <p></p>
+          <p>Les mêmes interfaces sortantes servent à déterminer la valeur de délai, comme indiqué à la Figure 3.</p>
+          <p></p>
+          <p>Le protocole EIGRP utilise la somme de tous les délais vers la destination. Le délai de l’interface série Serial 0/0/1 de R2 est de 20 000 microsecondes. L'interface Gigabit 0/0 sur R3 a un délai de 10 microsecondes. La somme de ces délais est divisée par 10. Dans cet exemple, (20 000+10)/10 est égal à 2 001 pour la partie délai de la métrique composite.</p>
+          <p></p>
+          <p>
+            <b>Calcul de la métrique</b>
+          </p>
+          <p></p>
+          <p>Utilisez les valeurs calculées de bande passante et de délai dans la formule de métrique. Il en résulte une métrique de 3 012 096, comme indiqué à la Figure 4. Cette valeur correspond à celle figurant dans la table de routage de R2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au FAI et le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le FAI. Une flèche pointe du routeur 2 au routeur LAN 3. La Figure 2 présente le résultat de la commande « show interface » sur les routeurs 2 et 3.  La bande passante de la liaison série est mise en surbrillance en orange. La Figure 3 présente le résultat de la commande « show interface » sur les routeurs 2 et 3.  Le délai de la liaison série est mis en surbrillance en orange. La Figure 4 présente le résultat de la commande « show ip route » sur le routeur 2.  La mesure pour une route est indiquée en orange.  Voici le calcul de la mesure.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

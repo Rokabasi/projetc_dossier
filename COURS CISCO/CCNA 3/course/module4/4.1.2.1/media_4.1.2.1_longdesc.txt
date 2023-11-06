@@ -1,0 +1,1 @@
+La figure présente un commutateur Cisco Catalyst 2960.  Les ports 1 à 6 du commutateur sont mis en évidence et désignés comme formant une interface de canal de port logique.  Il en est de même pour les ports 9 à 13.

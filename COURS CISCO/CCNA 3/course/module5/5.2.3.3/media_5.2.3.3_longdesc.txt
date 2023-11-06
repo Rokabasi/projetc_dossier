@@ -1,0 +1,1 @@
+La Figure 1 est un élément multimédia interactif qui permet au stagiaire de classer une description donnée comme appartenant à RIP ou EIGRP. La Figure 2 est un autre élément multimédia interactif qui permet au stagiaire de classer une description donnée comme appartenant à RIP ou EIGRP.

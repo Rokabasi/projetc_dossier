@@ -1,0 +1,1 @@
+La figure présente trois routeurs. Chaque routeur est connecté à un PC. La légende indique qu'il est possible de comparer RIP et EIGRP, car ils sont tous deux des protocoles de routage à vecteur de distance.

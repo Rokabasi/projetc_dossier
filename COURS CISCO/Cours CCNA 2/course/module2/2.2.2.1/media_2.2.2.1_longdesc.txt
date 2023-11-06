@@ -1,0 +1,1 @@
+La figure affiche la syntaxe pour configurer une route statique par défaut.  La syntaxe est similaire à une route statique standard, excepté le réseau de destination et le masque de sous-réseau qui sont tous des zéros.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.3.1 Entrées de la table de routage OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrées de la table de routage OSPF</h1>
+        <div>
+          <p>La Figure 1 présente un exemple de table de routage IPv4 pour une topologie OSPF à zones multiples avec une liaison vers un réseau externe non OSPF, une route par défaut fournie par la LSA de type 5 du routeur ASBR. Les routes OSPF d’une table de routage IPv4 sont identifiées grâce aux descripteurs suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>O</b> : les LSA de routeur (type 1) et de réseau (type 2) décrivent en détail la zone concernée. La table de routage signale ces informations d’état de liens par la désignation <b>O</b>, qui signifie que la route est interne à la zone.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O IA</b> : lorsqu'un routeur ABR reçoit une LSA de routeur (type 1) dans une zone, il envoie une LSA récapitulative (type 3) dans la zone adjacente. Les LSA récapitulatives apparaissent dans la table de routage sous forme d’IA (routes interzones) Les LSA récapitulatives reçues dans une zone sont également transférées vers d'autres zones.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O E1 </b>ou<b> O E2</b> : les LSA externes apparaissent dans la table de routage marquées en tant que routes externes de type 1 (E1) ou de type 2 (E2). Le type 2 (E2) est le type par défaut. La différence entre le type 1 (E1) et le type 2 (E2) n'est pas traitée dans ce cours.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 2 affiche une table de routage IPv6 avec des entrées de routage OSPF intrazone, interzone et externe.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche le résultat de la commande show ip route dans Cisco IOS.  Divers types de routes OSPF sont indiquées, en particulier les routes internes à la zone, les routes interzones et les routes externes. La Figure 2 affiche le résultat de la commande show ipv6 route dans Cisco IOS.  Divers types de routes OSPF sont indiquées, en particulier les routes internes à la zone, les routes interzones et les routes externes.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

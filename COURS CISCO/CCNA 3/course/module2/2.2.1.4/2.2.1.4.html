@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.4 Problèmes d&#x0027;interface</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes d&#x0027;interface</h1>
+        <div>
+          <p>Lors de l'activation du routage inter-VLAN sur un routeur, l'une des erreurs de configuration les plus courantes consiste à connecter l'interface de routeur physique au mauvais port de commutateur. L'interface du routeur se trouve alors dans le mauvais VLAN, ce qui l'empêche d'atteindre les autres périphériques du même sous-réseau. </p>
+          <p></p>
+          <p>Comme l'illustre la figure, l'interface G0/0 du routeur R1 est connectée au port F0/9 du commutateur S1. Le port de commutateur F0/9 est configuré pour le VLAN par défaut, et non le VLAN 10. Ceci empêche PC1 de communiquer avec sa passerelle par défaut, à savoir l'interface du routeur. Par conséquent, le PC ne peut pas communiquer avec les autres VLAN tels que VLAN 30.</p>
+          <p></p>
+          <p>Pour corriger ce problème, connectez physiquement l'interface G0/0 du routeur R1 au port F0/4 du commutateur S1. L'interface de routeur se trouve alors dans le bon VLAN et autorise le routage inter-VLAN. Vous pouvez également modifier l'affectation VLAN du port de commutateur F0/9 au VLAN 10. Ceci permet également à PC1 de communiquer avec l'interface G0/0 du routeur R1.  </p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un problème de configuration concernant un switchport mal configuré comme VLAN par défaut dans une topologie de routage inter-VLAN existante.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

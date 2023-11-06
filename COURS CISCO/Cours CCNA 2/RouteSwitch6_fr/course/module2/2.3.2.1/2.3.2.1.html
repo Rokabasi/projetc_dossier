@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.1 Dépannage d&#x0027;une route manquante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dépannage d&#x0027;une route manquante</h1>
+        <div>
+          <p>Les réseaux sont soumis à des événements susceptibles d'entraîner assez fréquemment la modification de leur état :</p>
+          <p>
+            <ul>
+              <li>Une interface est désactivée</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un fournisseur de services perd une connexion</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les liaisons sont sursaturées</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un administrateur entre une configuration erronée</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Lorsqu’un réseau subit une modification, la connectivité risque d’être perdue. Les administrateurs réseau sont responsables de l'identification et de la résolution du problème. Pour trouver et résoudre ces problèmes, un administrateur réseau doit également connaître les outils nécessaires vous permettant d'identifier les problèmes de routage rapidement. </p>
+          <p></p>
+          <p>Les commandes standard de dépannage IOS sont notamment : </p>
+          <p>
+            <ul>
+              <li>
+                <b>ping</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>traceroute</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface brief </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show cdp neighbors detail</b>
+                <span class="cmd">
+                  <b></b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 1 présente le résultat d'une commande ping étendue à partir de l'interface source de R1 vers l'interface du réseau local de R3. Une requête ping étendue est une version améliorée de l’utilitaire ping. Une requête ping étendue vous permet de spécifier l’adresse IP source pour les paquets ping.</p>
+          <p></p>
+          <p>La Figure 2 présente le résultat d'une commande traceroute depuis R1 vers le réseau local de R3.</p>
+          <p></p>
+          <p>La Figure 3 affiche la table de routage de R1. </p>
+          <p></p>
+          <p>La Figure 4 fournit un statut rapide de toutes les interfaces du routeur. </p>
+          <p></p>
+          <p>La Figure 5 fournit une liste des périphériques Cisco connectés directement. Cette commande valide la connectivité de couche 2 (et donc de couche 1). Par exemple, si un périphérique voisin est répertorié dans le résultat de la commande, mais qu'il ne peut pas être testé avec une commande ping, l'adressage de couche 3 doit être examiné.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures sont basées sur le schéma standard de l’atelier.  La Figure 1 montre la sortie de la commande « ping » sur le routeur R1 vers le PC sur le LAN du routeur R3.  Cette requête ping utilise l’option source pour obtenir la requête ping depuis le routeur sur l’interface LAN. La Figure 2 montre la sortie de la commande « trace route » sur le routeur R1 vers le PC sur le LAN du routeur R3. La Figure 3 montre la sortie de la commande « show i. p. route static » sur le routeur R1 en affichant la table de routage. La Figure 4 montre la sortie de la commande « show i. p. interface brief » sur le routeur R1 indiquant que les interfaces LAN et WAN sont toutes deux ouvertes. La Figure 5 montre la sortie de la commande « show c. d. p. neighbors » sur le routeur R1, répertoriant le routeur R2 en tant que voisin avec le commutateur LAN connecté au routeur R1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

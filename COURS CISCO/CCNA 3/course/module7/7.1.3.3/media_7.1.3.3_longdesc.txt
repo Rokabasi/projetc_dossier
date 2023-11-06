@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande « show ip route » sur le routeur R3. La Figure 2 présente le résultat de la commande « show ip protocols » sur le routeur R3.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.5 Commutation cut-through</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Commutation cut-through</h1>
+        <div>
+          <p>La commutation cut-through présente l'avantage, par rapport à la commutation par stockage et retransmission, de commencer à transférer une trame plus tôt. La commutation cut-through comporte deux caractéristiques principales : la transmission rapide des trames et la méthode fragment free.</p>
+          <p></p>
+          <p>
+            <b>Transmission rapide des trames</b>
+          </p>
+          <p></p>
+          <p>Comme indiqué par la figure, un commutateur cut-through peut décider de transférer une trame dès qu'il a trouvé l'adresse MAC de destination de la trame dans sa table d'adresses MAC. Il n'a pas besoin d'attendre que le reste de la trame soit arrivé au port d'entrée pour prendre une décision.</p>
+          <p></p>
+          <p>Grâce aux contrôleurs MAC et aux circuits ASIC d'aujourd'hui, un commutateur cut-through peut déterminer rapidement s'il doit examiner une plus grande partie des en-têtes d'une trame, à des fins de filtrage supplémentaire. Par exemple, le commutateur peut analyser les 14 premiers octets (l'adresse MAC source, l'adresse MAC de destination et les champs EtherType), puis examiner 40 octets supplémentaires afin d'effectuer des fonctions plus sophistiquées relatives aux couches 3 et 4 d'IPv4.</p>
+          <p></p>
+          <p>La commutation cut-through transfère la plupart des trames non valides. Les trames comportant des erreurs sont transférées vers d'autres segments du réseau.  En cas de taux d'erreur élevé dans le réseau (trames non valides), la commutation cut-through risque d'encombrer la bande passante avec des trames endommagées et incorrectes.</p>
+          <p></p>
+          <p>
+            <b>Fragment Free </b>
+          </p>
+          <p></p>
+          <p>La commutation « fragment free » est une forme modifiée de la commutation cut-through, où le commutateur attend la fin de la réception de la fenêtre de collision (64 octets) avant de transférer la trame. Le champ de données de chaque trame est ainsi contrôlé, afin d'assurer qu'aucune fragmentation ne s'est produite. La commutation fragment free assure un meilleur contrôle des erreurs que la méthode cut-through, pratiquement sans augmentation de la latence. </p>
+          <p></p>
+          <p>La faible latence de la commutation cut-through la rend mieux adaptée aux applications HPC (high-performance computing) extrêmement exigeantes, qui nécessitent des latences de processus à processus de 10 microsecondes au plus.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche une trame complète incluant l’en-tête et le pied. La commutation cut-through commence à transmettre la trame dès que l’adresse MAC de destination est reçue (elle est de 14 octets seulement dans l’en-tête).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

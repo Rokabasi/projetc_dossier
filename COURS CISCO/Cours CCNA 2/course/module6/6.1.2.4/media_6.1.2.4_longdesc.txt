@@ -1,0 +1,1 @@
+La figure montre un réseau commuté avec plusieurs réseaux VLAN.  Un ordinateur est connecté à un concentrateur connecté au réseau commuté.  Un paquet envoyé par l’ordinateur circule sur tout commutateur ayant une connexion au réseau VLAN.

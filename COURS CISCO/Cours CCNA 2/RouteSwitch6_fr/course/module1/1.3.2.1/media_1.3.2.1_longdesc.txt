@@ -1,0 +1,1 @@
+La figure illustre la sortie de la commande « show ip route » ; c'est une table de routage vide.  C'est le résultat de l'exécution de la commande sur un routeur qui n'a aucune interface configurée.

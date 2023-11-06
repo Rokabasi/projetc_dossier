@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.4 Configuration de type router-on-a-stick : vérification des sous-interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de type router-on-a-stick : vérification des sous-interfaces</h1>
+        <div>
+          <p>Par défaut, les routeurs Cisco sont configurés pour acheminer le trafic entre les sous-interfaces locales. Par conséquent, le routage ne doit pas spécifiquement être activé.</p>
+          <p></p>
+          <p>Dans la Figure 1, la commande <b>show vlan</b> affiche des informations sur les sous-interfaces VLAN du logiciel IOS Cisco. Le résultat présente les deux sous-interfaces VLAN, GigabitEthernet 0/0.10 et GigabitEthernet 0/0.30.</p>
+          <p></p>
+          <p>Examiner la table de routage en utilisant la commande <span class="cmd"><b></b></span><b>show ip route</b><span class="cmd"><b></b></span> (Figure 2). Dans l’exemple, les routes définies dans la table de routage indiquent qu’elles sont associées à des sous-interfaces spécifiques, et non à des interfaces physiques distinctes. Il existe deux routes dans la table de routage. Une route mène au sous-réseau 172.17.10.0, connecté à la sous-interface locale G0/0.10. L’autre route mène au sous-réseau 172.17.30.0, connecté à la sous-interface locale G0/0.30. Le routeur utilise cette table de routage pour déterminer où envoyer le trafic qu’il reçoit. Par exemple, si le routeur a reçu un paquet sur la sous-interface G0/0.10 destiné au sous-réseau 172.17.30.0, il identifie qu’il doit envoyer le paquet par la sous-interface G0/0.30 pour atteindre les hôtes du sous-réseau 172.17.30.0.</p>
+          <p></p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe indiqué à la Figure 3 pour configurer et vérifier le routage router-on-a-stick sur R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre la sortie de la commande « show vlan » du point de vue d’un routeur configuré pour le routage inter-VLAN de type router-on-a-stick. La Figure 2 montre la sortie de la table de routage IP du point de vue d’un routeur configuré pour le routage inter-VLAN de type router-on-a-stick. La Figure 3 est un contrôleur de syntaxe qui présente le processus de création des sous-interfaces, la définition de l’encapsulation et l’activation des interfaces physiques sur un routeur qui est utilisé pour le routage inter-VLAN de type router-on-a-stick.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

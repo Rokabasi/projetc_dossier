@@ -1,0 +1,1 @@
+La figure présente une table comparant les fonctionnalités du protocole EIGRP pour IPv4 et IPv6.

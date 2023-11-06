@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.1 Tâches de dépannage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Tâches de dépannage</h1>
+        <div>
+          <p>Le dépannage de DHCPv6 est similaire au dépannage de DHCPv4. </p>
+          <p></p>
+          <p>
+            <b>1re tâche de dépannage : résoudre les conflits </b>
+          </p>
+          <p></p>
+          <p>Comme pour les adresses IPv4, le bail d'une adresse IPv6 peut expirer alors qu'un client a encore besoin de se connecter au réseau. La commande <b>show ipv6 dhcp conflict</b> affiche tous les conflits d'adresses consignés par le serveur DHCPv6 avec état. Si un conflit d'adresses IPv6 est détecté, le client supprime généralement l'adresse et en génère une nouvelle via SLAAC ou DHCPv6 avec état. </p>
+          <p></p>
+          <p>
+            <b>2e tâche de dépannage : vérifier la méthode d'attribution</b>
+          </p>
+          <p></p>
+          <p>La commande d'interface <b>show ipv6 interface </b><i> </i>peut être utilisée pour vérifier la méthode d'attribution des adresses indiquée dans le message RA par les paramètres des indicateurs M et O. Cette information apparaît dans les dernières lignes du résultat. Si un client ne reçoit pas ses informations d'adresse IPv6 d'un serveur DHCPv6 avec état, cela peut être dû à des indicateurs M et O incorrects dans le message RA.</p>
+          <p></p>
+          <p>
+            <b>3e tâche de dépannage : tester à l'aide d'une adresse IPv6 statique</b>
+          </p>
+          <p></p>
+          <p>Lorsque vous essayez de résoudre un problème DHCP, qu'il s'agisse de DHCPv4 ou DHCPv6, la connectivité réseau peut être vérifiée en configurant une adresse IP statique sur un poste de travail client. Dans le cas d'IPv6, si le poste de travail ne parvient pas à atteindre les ressources réseau avec une adresse IPv6 configurée de manière statique, la cause première du problème n'est ni le processus SLAAC ni le protocole DHCPv6. Le dépannage de la connectivité du réseau est alors nécessaire.</p>
+          <p></p>
+          <p>
+            <b>4e tâche de dépannage : vérifier la configuration du port du commutateur</b>
+          </p>
+          <p></p>
+          <p>Si le client DHCPv6 ne parvient pas à obtenir des informations d'un serveur DHCPv6, vérifiez que le port du commutateur est activé et fonctionne correctement. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : si un commutateur se trouve entre le client et le serveur DHCPv6 et que le client ne parvient pas à obtenir la configuration DHCP, il peut s'agir de problèmes de configuration du port du commutateur. Les causes peuvent inclure des problèmes liés au trunking, aux canaux ou au Spanning Tree.  Les configurations PortFast et de ports de périphérie permettent de résoudre les problèmes les plus courants des clients DHCPv6 qui surviennent lors de l'installation initiale d'un commutateur Cisco. </p>
+          <p></p>
+          <p>
+            <b>5e tâche de dépannage : Tester le fonctionnement de DHCPv6 sur le même sous-réseau ou réseau local virtuel</b>
+          </p>
+          <p></p>
+          <p>Si le serveur DHCPv6 avec ou sans état fonctionne correctement, mais qu'il se trouve sur un réseau IPv6 ou un réseau local virtuel différent de celui du client, le problème peut provenir de l'agent de relais DHCPv6. Le client relié à l'interface du routeur doit être configuré à l'aide de la commande <b>ipv6 dhcp relay destination</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est un tableau qui liste des tâches pour le dépannage DHCPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

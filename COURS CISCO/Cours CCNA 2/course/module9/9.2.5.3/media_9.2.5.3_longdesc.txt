@@ -1,0 +1,1 @@
+La figure montre trois cloud.  Deux d’entre eux sont étiquetés IPv6 et l’un est étiqueté IPv4.  Les paquets transférés entre les deux réseaux IPv6 sont des paquets IPv6 natifs.  Les paquets transférés entre les réseaux IPv4 et IPv6 sont traduits.

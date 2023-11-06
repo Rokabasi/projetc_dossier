@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.4 Le routage inter-VLAN au moyen de ports routés</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le routage inter-VLAN au moyen de ports routés</h1>
+        <div>
+          <p>
+            <b>Ports routés et ports d'accès sur un commutateur</b>
+          </p>
+          <p></p>
+          <p>Un port routé est un port physique qui fait office d'interface sur un routeur. Contrairement à un port d'accès, un port routé n'est pas associé à un VLAN spécifique. Un port routé se comporte comme une interface de routeur normale. De plus, comme la fonctionnalité de couche 2 a été supprimée, les protocoles de couche 2, tels que STP, ne fonctionnent pas sur une interface routée. Cependant, certains protocoles, tels que LACP et EtherChannel, fonctionnent au niveau de la couche 3.</p>
+          <p></p>
+          <p>Contrairement aux routeurs Cisco IOS, les ports routés sur un commutateur Cisco IOS ne prennent pas en charge les sous-interfaces.</p>
+          <p></p>
+          <p>Les ports de routage sont utilisés pour les liaisons point à point. La connexion des routeurs WAN et les périphériques de sécurité sont des exemples d'utilisation des ports routés. Dans un réseau commuté, les ports routés sont principalement configurés entre les commutateurs de la couche cœur de réseau et de la couche de distribution. La figure présente un exemple de ports routés dans le réseau commuté d'un campus.</p>
+          <p></p>
+          <p>Pour configurer des ports routés, utilisez la commande en mode de configuration d'interface <b>no switchport</b> sur les ports appropriés. Par exemple, la configuration par défaut des interfaces des commutateurs Catalyst 3560 sont des interfaces de couche 2. Elles doivent donc être configurées manuellement en tant que ports routés. En outre, attribuez-leur une adresse IP et d'autres paramètres de couche 3 si nécessaire. Après avoir attribué l'adresse IP, vérifiez que le routage IP est activé globalement et que les protocoles de routage applicables sont configurés. </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> les commutateurs de la gamme Catalyst 2960 ne prennent pas en charge les ports routés.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre deux VLAN connectés à un cluster de commutateurs de couche de distribution avec un certain nombre de connexions redondantes. Une légende indique qu'une des liaisons entre une paire de commutateurs de distribution a été configurée comme interface routée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

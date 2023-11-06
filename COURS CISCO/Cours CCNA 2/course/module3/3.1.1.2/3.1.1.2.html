@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.2 Composants des protocoles de routage dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Composants des protocoles de routage dynamique</h1>
+        <div>
+          <p>Les protocoles de routage sont utilisés pour faciliter l’échange d’informations de routage entre des routeurs. Un protocole de routage est un ensemble de processus, d’algorithmes et de messages qui sont utilisés pour échanger des informations de routage et construire la table de routage en y indiquant les meilleurs chemins choisis par le protocole. La fonction des protocoles de routage dynamique inclut les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>découverte des réseaux distants ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>actualisation des informations de routage ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>choix du meilleur chemin vers des réseaux de destination ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>capacité à trouver un nouveau meilleur chemin si le chemin actuel n’est plus disponible.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les principaux composants des protocoles de routage dynamique incluent les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Structures de données</b> : pour fonctionner, les protocoles de routage utilisent généralement des tables ou des bases de données. Ces informations sont conservées dans la mémoire vive.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Messages de protocoles de routage</b> : les protocoles de routage utilisent différents types de messages pour découvrir les routeurs voisins, échanger des informations de routage et effectuer d'autres tâches afin d'obtenir et de gérer des informations précises relatives au réseau. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Algorithme</b> : un algorithme est une liste précise d'étapes permettant d'accomplir une tâche. Les protocoles de routage utilisent des algorithmes pour faciliter l’échange d’informations de routage et déterminer le meilleur chemin d’accès.  </li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>Ils permettent aux routeurs de partager de manière dynamique des informations sur les réseaux distants et de fournir automatiquement ces informations à leurs propres tables de routage. Cliquez sur Lecture dans la figure pour voir une animation de ce processus.</p>
+          <p></p>
+          <p>Les protocoles de routage déterminent le meilleur chemin, ou la meilleure route, vers chaque réseau. Cette route est alors fournie à la table de routage. La route est installée dans la table de routage à défaut d’autre source de routage avec une distance administrative inférieure. Par exemple, une route statique avec une distance administrative de 1 prévaut sur le même réseau obtenu par un protocole de routage dynamique. L'un des principaux avantages des protocoles de routage dynamique est l'échange d'informations de routage entre les routeurs lors de la modification de la topologie. Cet échange permet aux routeurs de découvrir automatiquement de nouveaux réseaux et également de trouver d’autres chemins en cas d’échec d’un lien vers un réseau actif.  </p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente l’animation de trois réseaux connectés dans une disposition triangulaire. Chaque routeur est connecté aux deux autres routeurs.  L’animation montre chacun des trois routeurs envoyant un paquet de mises à jour aux deux autres routeurs.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

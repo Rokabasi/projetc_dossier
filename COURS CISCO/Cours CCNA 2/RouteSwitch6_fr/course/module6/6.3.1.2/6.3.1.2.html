@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.2 Routage inter-VLAN existant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routage inter-VLAN existant</h1>
+        <div>
+          <p>Traditionnellement, la première solution de routage inter-VLAN reposait sur des routeurs dotés de plusieurs interfaces physiques. Chaque interface devait être connectée à un réseau distinct et configurée pour un sous-réseau différent. </p>
+          <p></p>
+          <p>Selon cette approche, le routage inter-VLAN s’effectue par la connexion de différentes interfaces de routeur physiques à différents ports de commutateur physiques. Les ports de commutateur connectés au routeur sont placés en mode d’accès et chaque interface physique est affectée à un VLAN distinct. Chaque interface de routeur peut alors accepter le trafic du VLAN associé à l’interface de commutateur à laquelle elle est connectée, et le trafic peut être acheminé vers les autres VLAN connectés aux autres interfaces.</p>
+          <p></p>
+          <p>Dans la figure, cliquez sur le bouton Lecture pour voir une animation illustrant le routage inter-VLAN existant.</p>
+          <p></p>
+          <p>Observez l’animation :</p>
+          <p></p>
+          <p>1. Le PC1 sur le VLAN 10 communique avec le PC3 sur le VLAN 30 via le routeur R1.</p>
+          <p></p>
+          <p>2. Les PC1 et PC3 se trouvent sur des VLAN différents et possèdent des adresses IPv4 de sous-réseaux différents. </p>
+          <p></p>
+          <p>3. 3. Le routeur R1 dispose d’une interface distincte configurée pour chacun des VLAN.</p>
+          <p></p>
+          <p>4. Le PC1 envoie le trafic de monodiffusion destiné au PC3 au commutateur S2 sur le VLAN 10, où il est ensuite transféré de l’interface de trunk au commutateur S1. </p>
+          <p></p>
+          <p>5. Le commutateur S1 transfère ensuite le trafic via son interface F0/3 vers l’interface G0/0 sur le routeur R1. </p>
+          <p></p>
+          <p>6. Le routeur achemine le trafic de monodiffusion jusqu’à son interface G0/1, connectée au VLAN 30. </p>
+          <p></p>
+          <p>7. Le routeur transfère le trafic de monodiffusion vers le commutateur S1 sur VLAN30. </p>
+          <p></p>
+          <p>8. Le commutateur S1 transfère ensuite le trafic de monodiffusion au commutateur S2 via la liaison trunk active, après quoi le commutateur S2 peut le transférer au PC3 sur le VLAN 30.</p>
+          <p></p>
+          <p>Dans cet exemple, le routeur a été configuré avec deux interfaces physiques distinctes pour interagir avec les différents VLAN et effectuer le routage.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : cette méthode de routage inter-VLAN n’est pas efficace et n’est généralement plus implémentée dans les réseaux commutés. Elle est uniquement présentée dans ce cours à des fins explicatives.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette figure présente l’animation d’une topologie qui montre trois hôtes connectés à un cluster à trois commutateurs. Les commutateurs sont connectés entre eux par des liaisons et un commutateur est connecté à un routeur en utilisant deux câbles physiques. L’animation montre la façon dont un paquet monodiffusion circule à travers la topologie et demande au routeur d’être capable de transmettre des paquets à différents sous-réseaux. Le concept important est la nécessité de deux câbles connectés à deux interfaces physiques sur le routeur pour obtenir une connectivité entre sous-réseaux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

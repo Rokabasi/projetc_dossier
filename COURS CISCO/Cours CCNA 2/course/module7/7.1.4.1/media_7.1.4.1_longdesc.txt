@@ -1,0 +1,1 @@
+La figure montre trois routeurs et décrit le placement des listes de contrôle d'accès.  Les listes de contrôle d'accès standard sont généralement placées près de la destination.  Les listes de contrôle d'accès étendues sont généralement placées près de la source.

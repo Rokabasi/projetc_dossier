@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.1 Présentation du protocole HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation du protocole HSRP</h1>
+        <div>
+          <p>Le protocole HSRP (Hot Standby Router Protocol) a été conçu par Cisco pour assurer la redondance des passerelles sans configuration supplémentaire des périphériques finaux. Les routeurs configurés avec le protocole HSRP s'associent pour se présenter aux périphériques finaux sous la forme d'une passerelle (routeur) virtuelle par défaut unique, comme le montre la figure. HSRP sélectionne l'un des routeurs comme routeur actif. Le routeur actif fait fonction de passerelle par défaut des périphériques finaux. L'autre routeur devient le routeur de secours (standby). En cas de défaillance du routeur, le routeur de secours prend automatiquement le relais comme routeur actif. Il devient la passerelle par défaut des périphériques finaux. Cette opération ne nécessite aucune modification de la configuration des périphériques finaux.</p>
+          <p></p>
+          <p>Les hôtes sont configurés avec une adresse de passerelle par défaut unique, reconnaissable à la fois par les routeurs actifs et les routeurs de secours. L'adresse de passerelle par défaut se compose d'une adresse IPv4 virtuelle et d'une adresse MAC virtuelle, et est partagée par les deux routeurs HSRP.  Les périphériques finaux utilisent cette adresse IPv4 virtuelle comme adresse de passerelle par défaut. L'adresse IPv4 virtuelle HSRP est configurée par l'administrateur réseau. L'adresse MAC virtuelle est créée automatiquement. Quel que soit le routeur physique utilisé, les adresses IPv4 et MAC virtuelles fournissent un adressage de passerelle par défaut cohérent pour les périphériques finaux.</p>
+          <p></p>
+          <p>Seul le routeur actif reçoit et transmet le trafic envoyé à la passerelle par défaut. En cas de défaillance du routeur actif ou d'un échec de la communication avec ce dernier, le routeur de secours prend automatiquement la main.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

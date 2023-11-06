@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.4 Vérification des listes de contrôle d’accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification des listes de contrôle d’accès</h1>
+        <div>
+          <p>Comme le montre la Figure 1, la commande <b>show ip interface</b> permet de vérifier la liste de contrôle d'accès sur l'interface. Le résultat de cette commande inclut le numéro ou le nom de la liste de contrôle d'accès et la direction dans laquelle celle-ci a été appliquée. Le résultat indique que la liste d'accès 1 est appliquée à l'interface sortante S0/0/0 du routeur R1 et la liste d'accès NO_ACCESS à son interface sortante G0/0.</p>
+          <p></p>
+          <p>L'exemple de la Figure 2 présente le résultat de la commande <b>show access-lists</b> sur le routeur R1. Pour afficher une liste d'accès spécifique, exécutez la commande <b>show access-lists</b> suivie du numéro ou du nom de la liste d'accès de votre choix. Les instructions de la liste NO_ACCESS peuvent sembler étranges. Notez que le numéro d'ordre 15 s'affiche avant le numéro d'ordre 10. Cela est dû au processus interne du routeur et sera traité dans la suite de ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre l’utilisation de la commande « show ip interface » pour afficher toute liste de contrôle d'accès appliquée.  La figure montre la sortie de la commande « show ip interface serial 0/0/0 ». La ligne suivante est mise en surbrillance, la liste d'accès sortante est 1.  La commande est exécutée à nouveau pour l'interface Gigabit Ethernet et la sortie indique que la liste d'accès sortante est no_access list, qui est une liste de contrôle d'accès nommée. La Figure 2 affiche la sortie de la commande « show access-lists ».  Cette commande affiche tout le contenu de toutes les listes de contrôle d'accès d'un routeur, mais n'indique pas le placement de chaque liste.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

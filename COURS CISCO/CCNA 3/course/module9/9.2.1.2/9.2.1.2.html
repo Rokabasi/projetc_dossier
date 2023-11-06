@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.2 Configuration du routage OSPFv2 à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration du routage OSPFv2 à zones multiples</h1>
+        <div>
+          <p>La Figure 1 présente la topologie OSPF à zones multiples de référence. Dans cet exemple :</p>
+          <p>
+            <ul>
+              <li>R1 est un routeur ABR. Il dispose de plusieurs interfaces dans la zone 1 et d'une dans la zone 0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 est un routeur fédérateur interne, car toutes ses interfaces se situent dans la zone 0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 est un routeur ABR. Il dispose de plusieurs interfaces dans la zone 2 et d'une dans la zone 0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : cette topologie est utilisée à titre d'exemple et ne représente pas un domaine de routage OSPF à zones multiples classique.</p>
+          <p></p>
+          <p>Aucune commande spéciale n’est requise pour mettre en œuvre ce réseau OSPF à zones multiples. Un routeur devient un routeur ABR lorsqu'il possède deux instructions <b>network</b> dans différentes zones.</p>
+          <p></p>
+          <p>Comme illustré à la Figure 2, l'ID du routeur R1 est 1.1.1.1. Cet exemple active le routage OSPF sur les deux interfaces LAN dans la zone 1. L’interface série est configurée dans la zone OSPF 0. Puisque R1 a des interfaces connectées dans deux zones différentes, il s’agit d’un ABR.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe à la Figure 3 pour configurer le protocole OSPF à zones multiples sur R2 et R3. Dans le contrôleur de syntaxe, pour R2, utilisez le masque générique de l'adresse d'interface réseau. Pour R3, utilisez le masque générique 0.0.0.0 pour tous les réseaux.</p>
+          <p></p>
+          <p>Une fois la configuration de R2 terminée, notez les messages d'information indiquant une contiguïté avec R1 (1.1.1.1).</p>
+          <p></p>
+          <p>Une fois la configuration de R3 terminée, notez les messages d'information indiquant une contiguïté avec R2 (2.2.2.2). Observez également comment le modèle d'adressage IPv4 utilisé pour l'ID de routeur facilite l'identification du voisin. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: les masques génériques inverses utilisés pour configurer R2 et R3 ont des fonctions différentes, afin de présenter les alternatives à la saisie d'instructions <b>network</b>. La méthode d'interface utilisée pour R3 est plus simple, car le masque générique est toujours défini sur <b>0.0.0.0</b> et n'a pas besoin d'être calculé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente une topologie à trois routeurs (R1, R2 et R3) et trois zones OSPF (zone 1, zone 0 et zone 2). La Figure 2 montre comment configurer le routeur ABR R1 dans les zones OSPF 1 et 0. La Figure 3 affiche la syntaxe nécessaire pour configurer un protocole OSPF à zones multiples pour deux routeurs (R2 et R3).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+Il s’agit d’un élément multimédia interactif qui teste la capacité de l’apprenant à identifier comment le commutateur transmet une trame en fonction de l’adresse MAC source et de l’adresse MAC de destination lorsqu’il dispose de la table de commutation MAC.

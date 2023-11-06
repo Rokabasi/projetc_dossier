@@ -1,0 +1,30 @@
+﻿<textcomponents>
+	<component id='ID_title'>
+		<text><![CDATA[<b>Ensemble de réseaux LAN et WAN interconnectés</b>]]></text>
+	</component>
+
+	<component id='ID_txt01'>
+		<text><![CDATA[LAN de filiale]]></text>
+	</component>
+
+	<component id='ID_txt02'>
+		<text><![CDATA[LAN du gouvernement]]></text>
+	</component>
+
+	<component id='ID_txt03'>
+		<text><![CDATA[Réseau local d'entreprise]]></text>
+	</component>
+
+	<component id='ID_txt04'>
+		<text><![CDATA[LAN des établissements]]></text>
+	</component>
+
+	<component id='ID_txt05'>
+		<text><![CDATA[LAN domestique]]></text>
+	</component>
+
+	<component id='ID_txt06'>
+		<text><![CDATA[Les services des réseaux étendus permettent d'interconnecter les réseaux locaux.]]></text>
+	</component>
+
+</textcomponents>

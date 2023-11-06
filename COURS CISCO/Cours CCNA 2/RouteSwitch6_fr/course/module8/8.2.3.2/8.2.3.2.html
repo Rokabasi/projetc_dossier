@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.2 Configuration d&#x0027;un routeur en tant que client DHCPv6 avec état</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;un routeur en tant que client DHCPv6 avec état</h1>
+        <div>
+          <p>Comme sur la figure, utilisez la commande de mode de configuration d'interface <b>ipv6 enable</b> pour permettre au routeur de recevoir une adresse link-local afin d'envoyer des messages RS et de participer à DHCPv6.</p>
+          <p></p>
+          <p>La commande de mode de configuration d'interface <b>ipv6 address dhcp</b> permet au routeur de se comporter comme un client DHCPv6 sur cette interface.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre les commandes utilisées pour configurer un routeur en tant que client DHCPv6 avec état.  L'exemple démarre en mode de configuration globale et commence par le passage à l'interface souhaitée.  La première commande est « interface g 0/1 ».  La commande suivante est : i.p.v.6. enable.  La dernière commande est : i.p.v.6. address dhcp.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

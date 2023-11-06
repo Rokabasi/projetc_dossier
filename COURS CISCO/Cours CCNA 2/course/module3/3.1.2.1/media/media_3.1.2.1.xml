@@ -1,0 +1,17 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Scénario de routage statique</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Le routeur R2 est connecté à d&apos;autres réseaux et à Internet. Il s&apos;agit également de l&apos;unique point de sortie du réseau. J&apos;utilise juste une route statique par défaut pour atteindre n&apos;importe quel réseau que je ne connais pas.]]></text> 
+</component>
+
+<component id="ID_txt03">
+<text><![CDATA[Le routeur R1 n&apos;a que deux réseaux qui m&apos;intéressent, j&apos;utilise juste deux routes statiques pour atteindre ces réseaux.]]></text> 
+</component>
+</textcomponents>

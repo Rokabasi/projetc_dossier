@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.2 Dépannage d&#x0027;EtherChannel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dépannage d&#x0027;EtherChannel</h1>
+        <div>
+          <p>Toutes les interfaces d'un EtherChannel doivent avoir la même configuration en termes de vitesse et utiliser le même mode bidirectionnel, les mêmes VLAN natifs et autorisés sur les trunks, et le même VLAN d'accès sur les ports d'accès :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Attribuez tous les ports du EtherChannel au même VLAN, ou configurez-les en tant que trunks. Des ports avec des VLAN natifs différents ne peuvent pas former un EtherChannel.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Lorsque vous configurez un trunk sur un EtherChannel, vérifiez le mode de trunking sur l'EtherChannel. Nous vous déconseillons de configurer le mode de trunking sur les ports qui composent l'EtherChannel. Si cela est déjà fait, vérifiez que la configuration du trunking est la même sur toutes les interfaces.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un EtherChannel prend en charge la même plage autorisée de VLAN sur tous les ports. Si la plage autorisée de VLAN n'est pas identique, les ports ne forment pas un EtherChannel, même si PAgP est défini en mode <b>auto</b> ou <b>desirable.</b></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les options de négociation dynamique pour PAgP et LACP doivent être configurées pour être compatibles aux deux extrémités d'EtherChannel.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: il est facile de confondre PAgP ou LACP avec DTP, car ce sont des protocoles utilisés pour automatiser le comportement de liaisons trunk. PAgP et LACP sont utilisés pour l'agrégation de liaisons (EtherChannel). DTP est utilisé pour automatiser la création de liaisons trunk. Quand un trunk EtherChannel est configuré, EtherChannel (PAgP ou LACP) est généralement configuré en premier et DTP ensuite.</p>
+          <p></p>
+          <p>Dans la Figure 1, les interfaces F0/1 et F0/2 des commutateurs S1 et S2 sont connectés avec un EtherChannel. Le résultat indique que l'EtherChannel est désactivé. </p>
+          <p></p>
+          <p>Dans la Figure 2, le résultat plus détaillé indique que des modes PAgP non compatibles sont configurés sur S1 et S2.</p>
+          <p></p>
+          <p>Dans la Figure 3, le mode PAgP de l'EtherChannel passe à Desirable (Souhaitable) et l'EtherChannel devient actif.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: EtherChannel et l'arbre recouvrant doivent fonctionner ensemble. Par conséquent, l'ordre dans lequel les commandes associées à l'EtherChannel sont saisies est important. Cela explique pourquoi (dans la Figure 3) l'interface Port-Channel 1 est supprimée, puis à nouveau ajoutée à l'aide de la commande<span class="cmd"><b> channel-group, </b></span>au lieu d'être directement modifiée. Si l'on essaye de modifier la configuration directement, des erreurs d'arbre recouvrant font passer les ports associés à un état de blocage ou de désactivation des erreurs.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande show ether channel summary.  Cette commande est utilisée à des fins de dépannage. Dans la figure, une lettre D apparaît en regard des ports impliqués dans le canal EtherChannel pour indiquer que le canal EtherChannel est inactif. La Figure 2 présente le résultat de la commande show run pipe begin interface port-channel.  Cette commande affiche des informations plus détaillées sur le canal EtherChannel, telles que les ports de commutation configurés dans le canal et le mode dans lequel ils se trouvent. La figure montre que les ports du commutateur 1 sont configurés sur le mode « on » du protocole d'agrégation de ports et que les ports du commutateur 2 sont configurés sur le mode « desirable » du protocole d'agrégation de ports.  Cette divergence de configuration ne permet pas d'établir un canal EtherChannel. La Figure 3 illustre la reconfiguration des ports sur le commutateur 1 du mode « on » au mode « desirable » qui permet d'activer le canal EtherChannel.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

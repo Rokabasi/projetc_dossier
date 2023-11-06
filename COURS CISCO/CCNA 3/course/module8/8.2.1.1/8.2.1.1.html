@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.1 Topologie de réseau OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Topologie de réseau OSPF</h1>
+        <div>
+          <p>Introduit en 1991, OSPFv2 est un protocole de routage à état de liens pour IPv4. Le protocole OSPF a été conçu comme alternative à un autre protocole de routage IPv4, le protocole RIP.</p>
+          <p></p>
+          <p>La figure montre la topologie utilisée pour configurer le protocole OSPFv2 dans cette section. Les types des interfaces série et les bandes passantes associées ne correspondent pas nécessairement aux types de connexions les plus courants figurant sur les réseaux actuels. Les bandes passantes des liens série utilisés dans cette topologie ont été choisies pour expliquer le calcul des métriques du protocole de routage et le processus de sélection du meilleur chemin.</p>
+          <p></p>
+          <p>Les routeurs de la topologie disposent d'une configuration initiale, qui inclut les adresses d'interface. Aucun routage statique ou dynamique n'est actuellement configuré sur l'un des routeurs. Toutes les interfaces des routeurs R1, R2 et R3 (sauf le bouclage sur R2) se trouvent dans la zone fédératrice OSPF. Le routeur du fournisseur d'accès à Internet est utilisé comme passerelle du domaine de routage pour accéder à Internet.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> dans cette topologie, l'interface de bouclage est utilisée pour simuler le lien de réseau étendu donnant accès à Internet. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre trois routeurs configurés sous forme de triangle. Chaque routeur est connecté aux deux autres routeurs à l'aide de câbles série WAN.  Chaque routeur dispose d'un LAN local configuré sur chaque interface Gigabit Ethernet.  L'un des trois routeurs dispose d'une interface de bouclage configurée pour simuler une connexion à Internet.  Les trois routeurs se trouvent dans la zone OSPF portant le numéro 0.  Sept réseaux constituent cette topologie, laquelle est désignée en tant que topologie de référence pour le protocole OSPF dans les pages qui suivent.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<textcomponents><!--Slide 1--><component id="ID_s1_title">
+		<text><![CDATA[<b>Affichage des statistiques de liste de contrôle d&apos;accès</b>]]></text>
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Les correspondances ont été incrémentées.]]></text>
+	</component>
+	
+		<component id="ID_s1_txt02">
+		<text><![CDATA[Sortie après l&apos;envoi d&apos;un ping vers PC3 à partir de PC1]]></text>
+	</component><!--Slide 2--><component id="ID_s2_title">
+		<text><![CDATA[<b>Suppression des statistiques ACL</b>]]></text>
+	</component>
+	
+	<component id="ID_s2_txt01">
+		<text><![CDATA[Les correspondances ont été effacées.]]></text>
+	</component>
+	
+</textcomponents>

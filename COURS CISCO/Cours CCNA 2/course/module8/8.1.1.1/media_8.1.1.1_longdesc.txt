@@ -1,0 +1,1 @@
+La figure affiche un commutateur auquel sont connectés un routeur et un ordinateur.  Le routeur est configuré pour servir de serveur DHCP et l’ordinateur est un client DHCP.  Le routeur peut fournir une adresse IP et d’autres données au client.

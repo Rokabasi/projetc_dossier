@@ -1,0 +1,20 @@
+/*
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#router_text1 span {background-color:#FACCA8;}
+#router_text2 span {background-color:#FACCA8;}
+#router_text3 span {background-color:#FACCA8;}
+/*#ID_s1_txt01 {
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    writing-mode: tb-rl;
+
+}*/
+#ID_s2_title{
+	line-height: 18px;
+}*/

@@ -1,0 +1,1 @@
+La figure présente une topologie OSPF IPv4 à zones multiples.

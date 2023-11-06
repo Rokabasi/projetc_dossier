@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.2 Vérification de la sécurité du port VTY</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la sécurité du port VTY</h1>
+        <div>
+          <p>Une fois que la liste de contrôle d'accès aux lignes VTY est configurée, il est important de vérifier qu'elle fonctionne correctement. La figure illustre deux périphériques tentant de se connecter à R1 via SSH. La liste d'accès 21 a été configurée sur les lignes VTY de R1. PC1 parvient à établir une connexion SSH, tandis que PC2 échoue. Ce comportement est normal, car la liste d'accès configurée permet au réseau 192.168.10.0/24 d'accéder aux lignes VTY, mais refuse tous les autres périphériques.</p>
+          <p></p>
+          <p>Le résultat de R1 présente l'effet de la commande <b>show access-lists</b> après les tentatives SSH de PC1 et PC2.  La correspondance de la ligne « permit » fait référence à la connexion SSH réussie de PC1. La correspondance à l'instruction « deny » est due à l'échec de la connexion SSH de PC2, un périphérique du réseau 192.168.11.0/24.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche la topologie de la page précédente et la capture d’écran d’un ordinateur sur chacun des deux LAN tentant d'accéder au routeur via SSH.  Le premier ordinateur est sur le réseau 192.168.10.0, qui représente le réseau accepté configuré dans la liste de contrôle d'accès ; et l'accès est autorisé.  Le deuxième ordinateur est sur le réseau 192.168.11.0 ; son accès est refusé en raison de la liste de contrôle d'accès.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.2 Configuration de SSH</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de SSH</h1>
+        <div>
+          <p>Avant de configurer SSH, le commutateur doit au moins être configuré avec un nom d'hôte unique et avec les paramètres de connectivité réseau adéquats.</p>
+          <p></p>
+          <p>
+            <b>Étape 1. Vérifiez la prise en charge du protocole SSH.</b>
+          </p>
+          <p></p>
+          <p>Utilisez la commande<b> show ip ssh </b>pour vérifier que le commutateur prend en charge SSH. Si le commutateur n'exécute pas une version du logiciel IOS qui prend en charge les fonctionnalités de cryptographie (chiffrement), cette commande n'est pas reconnue. </p>
+          <p></p>
+          <p>
+            <b>Étape 2. configuration du domaine IP</b>
+          </p>
+          <p></p>
+          <p>Configurez le nom de domaine IP du réseau à l'aide de la commande<b> ip domain-name </b><i>domain-name </i>en mode de configuration globale. Dans la Figure 1, la valeur<i> domain-name </i>est<b> cisco.com</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. Générez des paires de clés RSA.</b>
+          </p>
+          <p></p>
+          <p>Toutes les versions de l'IOS utilisent par défaut SSH version 2. SSH version 1 a des failles de sécurité connues. Pour configurer SSH version 2, exécutez la commande du mode de configuration globale<b> ip ssh version 2</b>. La génération d'une paire de clés RSA active automatiquement SSH. Utilisez la commande de mode de configuration globale<b> crypto key generate rsa </b>pour activer le serveur SSH sur le commutateur et pour générer une paire de clés RSA. Lors de la génération de clés RSA, l'administrateur est invité à saisir une longueur de module. L'exemple de configuration de la Figure 1 utilise une taille de module de 1 024 bits. Une longueur de module plus importante peut se révéler plus sûre, mais sa création et son utilisation prennent plus de temps.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : pour supprimer la paire de clés RSA, utilisez la commande de configuration globale<b> crypto key zeroize rsa</b>. Une fois la paire de clés RSA supprimée, le serveur SSH est automatiquement désactivé.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. Configurez l'authentification utilisateur.</b>
+          </p>
+          <p></p>
+          <p>Le serveur SSH peut authentifier les utilisateurs localement ou avoir recours à un serveur d'authentification. Pour utiliser la méthode d'authentification locale, créez un nom d'utilisateur et un mot de passe en utilisant la commande<b> username </b><i>username</i><b> secret </b><i>password </i>en mode de configuration globale. Dans cet exemple, l'utilisateur<b> admin </b>se voit attribuer le mot de passe<b> ccna</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 5. Configurez les lignes vty.</b>
+          </p>
+          <p></p>
+          <p>Activez le protocole SSH sur les lignes vty à l'aide de la commande de mode de configuration de ligne<b> transport input ssh</b>. Le commutateur Cisco Catalyst 2960 intègre des lignes vty allant de 0 à 15. Cette configuration permet d'interdire toute connexion autre que SSH (par exemple Telnet). Seules les connexions SSH sont ainsi autorisées sur le commutateur. Utilisez la commande de mode de configuration globale<b> line vty, </b>puis la commande de mode de configuration de ligne<b> login local </b>pour exiger l'authentification locale des connexions SSH provenant d'une base de données de noms d'utilisateur locale.</p>
+          <p></p>
+          <p>
+            <b>Étape 6. Activez SSH version 2.</b>
+          </p>
+          <p></p>
+          <p>Par défaut, SSH prend en charge les versions 1 et 2. Cette double prise en charge se voit dans les résultats de la commande<b> show ip ssh (</b>prise en charge de la version 1.99). La version 1 a des vulnérabilités connues. Par conséquent, il est préférable d'activer uniquement la version 2. Activez cette version de SSH avec la commande de configuration globale <b>ip ssh version 2</b>.</p>
+          <p></p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer SSH sur le commutateur S1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre les commandes utilisées pour configurer un commutateur pour la gestion à distance par le biais de SSH.  La figure commence en mode EXEC privilégié.  La première commande est « configure terminal ».  La commande suivante est « domain-name cisco.com », cisco.com étant un exemple de nom de domaine.  La commande suivante est « crypto key generate rsa ».  Le commutateur demandera la taille du module, avec une valeur par défaut de 512.  Dans la figure, la valeur 1 024 est utilisée.  La commande suivante est « username admin password c.c.n.a. », où les administrateurs et les c.c.n.a. servent d’exemples. Cette commande permet de créer un nom d'utilisateur et un mot de passe.  L'étape suivante consiste à configurer les lignes vty pour accepter uniquement des connexions SSH.  La commande est « line v.t.y. 0 15 ».  La commande suivante est « transport input s.s.h. ».  La dernière commande est « login local ». La Figure 2 est une activité interactive qui permet à l'étudiant de configurer SSH sur un commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.5 Résolution d&#x0027;un problème relatif au mode Spanning Tree</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Résolution d&#x0027;un problème relatif au mode Spanning Tree</h1>
+        <div>
+          <p>L'une des méthodes pour remédier à une défaillance STP est de supprimer manuellement les liens redondants au niveau du réseau commuté, que ce soit physiquement ou par configuration, jusqu'à ce que toutes les boucles aient été éliminées de la topologie. Lorsque les boucles sont interrompues, le trafic et les charges de processeur doivent rapidement revenir à la normale, et la connectivité vers les périphériques doit être restaurée.</p>
+          <p></p>
+          <p>Bien que cette intervention restaure la connectivité au réseau, il ne s'agit pas de la fin du processus de résolution pour ce problème. Toute redondance a été éliminée du réseau commuté ; il est donc nécessaire à présent de restaurer les liens redondants.</p>
+          <p></p>
+          <p>Si la cause sous-jacente de la défaillance STP n'a pas été réglée, il est plus que probable que la restauration des liens redondants déclenche une nouvelle tempête de diffusion. Avant de restaurer les liens redondants, identifiez et corrigez la cause de la défaillance STP. Surveillez étroitement l'ensemble du réseau pour vous assurer que le problème a bien été réglé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente quatre commutateurs interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.  La boucle a été éliminée et Spanning Tree fonctionne de nouveau comme prévu.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

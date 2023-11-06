@@ -1,0 +1,1 @@
+La figure illustre un élément multimédia interactif qui permet à l'étudiant de calculer un masque de sous-réseau et un masque générique lorsqu'une adresse IP et une valeur / sont indiquées.

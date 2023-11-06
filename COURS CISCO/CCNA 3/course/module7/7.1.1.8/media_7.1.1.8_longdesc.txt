@@ -1,0 +1,1 @@
+La figure illustre un réseau dans lequel le routeur R1 est connecté au fournisseur d'accès à Internet et au routeur R2.  Le routeur 2 récapitule le sous-réseau 172.16.0.0 et l'envoie au routeur 1.  Le routeur 2 a également une route statique par défaut pointant vers le routeur 1.  Dans ce cas, une interface Null0 est utilisée pour éviter toute boucle de routage.

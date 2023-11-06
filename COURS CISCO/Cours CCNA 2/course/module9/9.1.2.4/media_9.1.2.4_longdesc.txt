@@ -1,0 +1,1 @@
+Cette animation affiche deux ordinateurs connectés à un routeur NAT. Les ordinateurs ont besoin d’accéder à Internet.  Lorsque les deux ordinateurs utilisent le même numéro de port à l’intérieur, le routeur NAT attribue toujours un numéro de port externe différent.

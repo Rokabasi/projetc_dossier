@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.3 LSA OSPF de type 2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA OSPF de type 2</h1>
+        <div>
+          <p>Les LSA de type 2 existent uniquement dans les réseaux à accès multiple et NBMA où un DR est élu et au moins deux routeurs existent sur le segment à accès multiple. Les LSA de type 2 contiennent l'ID du routeur et l'adresse IP du routeur désigné (DR), ainsi que l'ID de tous les autres routeurs du segment à accès multiple. Une LSA de type 2 est créée pour chaque réseau à accès multiple de la zone. </p>
+          <p></p>
+          <p>L'objectif d'une LSA de type 2 est de fournir aux autres routeurs des informations sur les réseaux à accès multiple présents au sein de la même zone.</p>
+          <p></p>
+          <p>Le DR diffuse des LSA de type 2 uniquement dans la zone depuis laquelle elles ont été émises. Les LSA de type 2 ne sont pas transférées en dehors d’une zone donnée.</p>
+          <p></p>
+          <p>Les LSA de type 2 sont également appelées « annonces de réseau ». </p>
+          <p></p>
+          <p>Comme l’illustre la figure, ABR1 est le routeur désigné pour le réseau Ethernet dans la zone 1. Il émet des LSA de type 2 et les transfère à la zone 1. ABR2 est le routeur désigné pour le réseau à accès multiple dans la zone 0. Il n’y a pas de réseau à accès multiple dans la zone 2. De ce fait, aucune LSA de type 2 n’est diffusée dans cette zone.</p>
+          <p></p>
+          <p>L'ID d'état de liens pour une LSA de réseau correspond à l'adresse d'interface IP du routeur désigné (DR) qui l'annonce.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche des messages LSA de type 2 qui se propagent dans les différentes zones après avoir été générés par le routeur désigné (DR).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

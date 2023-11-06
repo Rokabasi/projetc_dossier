@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Détermination du routeur désigné (DR) et du routeur désigné de secours (BDR)]]></text>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,15 @@
+﻿<textcomponents>
+
+<!-- slide 1 -->
+<component id="ID_title">
+<text><![CDATA[<b>Fault Tolerance</b>]]></text> 
+</component>
+
+<component id="ID_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_txt02">
+<text><![CDATA[Redundant connections allow for alternative paths if a device or a link fails. The user experience is unaffected.]]></text> 
+</component>
+</textcomponents>

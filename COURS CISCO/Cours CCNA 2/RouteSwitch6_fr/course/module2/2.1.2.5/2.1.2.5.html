@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.5 Route statique flottante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route statique flottante</h1>
+        <div>
+          <p>Un autre type de route statique est une route statique flottante. Les routes statiques flottantes sont des routes statiques utilisées pour fournir un chemin de secours à une route statique ou une route dynamique principale, en cas de défaillance de la liaison. La route statique flottante est utilisée uniquement lorsque la route principale n'est pas disponible.</p>
+          <p></p>
+          <p>Pour cela, la route statique flottante est configurée avec une distance administrative plus élevée que la route principale. La distance administrative indique la fiabilité d’une route. Si plusieurs chemins vers la destination existent, le routeur choisira le chemin présentant la plus courte distance administrative. </p>
+          <p></p>
+          <p>Par exemple, supposons qu'un administrateur souhaite créer une route statique flottante de secours pour une route apprise par le protocole EIGRP. La route statique flottante doit être configurée avec une distance administrative plus élevée que le protocole EIGRP. L’EIGRP possède une distance administrative de 90. Si la route statique flottante est configurée avec une distance administrative de 95, la route dynamique associée au protocole EIGRP est préférée à la route statique flottante.  Si la route associée au protocole EIGRP est perdue, la route statique flottante est utilisée à la place. </p>
+          <p></p>
+          <p>Dans la figure, le routeur Branch transfère généralement l'ensemble du trafic vers le routeur HQ via la liaison WAN privée. Dans cet exemple, les routeurs échangent des informations de routage au moyen du protocole EIGRP. Une route statique flottante, avec une distance administrative supérieure ou égale à 91, peut être configurée pour servir de route de secours. Si la liaison WAN privée échoue et que la route EIGRP disparaît de la table de routage, le routeur sélectionne la route statique flottante comme meilleur chemin pour accéder au réseau local HQ.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre deux routeurs, et chaque routeur dispose de deux chemins pour se connecter à l’autre.  Un chemin passe par le réseau interne et l’autre chemin peut passer via Internet.  Il devrait y avoir une route EIGRP principale entre eux.  L’administrateur peut configurer une route statique flottante en tant que chemin alternatif au cas où l’autre chemin échouerait.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

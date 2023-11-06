@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.3 La commande router eigrp</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La commande router eigrp</h1>
+        <div>
+          <p>Cisco IOS inclut les processus d'activation et de configuration de plusieurs types de protocoles de routage dynamique différents. La commande de mode de configuration globale <b>router</b> permet de commencer la configuration de tout protocole de routage dynamique. La topologie illustrée à la Figure 1 présente cette commande.</p>
+          <p></p>
+          <p>Comme indiqué à la Figure 2, lorsqu'elle est suivie d'un point d'interrogation (<b>?</b>), la commande de mode de configuration globale<b> router</b> répertorie tous les protocoles de routage disponibles pris en charge par la version IOS exécutée sur le routeur.</p>
+          <p></p>
+          <p>La commande de mode de configuration globale suivante sert à accéder au mode de configuration du routeur EIGRP et à commencer la configuration du processus EIGRP : </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>router eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>autonomous-system</i>
+            </span>
+          </p>
+          <p></p>
+          <p>L'argument<i> autonomous-system </i>peut être attribué à toute valeur 16 bits comprise entre 1 et 65 535. Tous les routeurs situés à l'intérieur du domaine de routage EIGRP doivent utiliser le même numéro de système autonome. </p>
+          <p></p>
+          <p>La Figure 3 illustre la configuration du processus EIGRP sur les routeurs R1, R2 et R3. Notez que l'invite passe du mode de configuration globale au mode de configuration du routeur. </p>
+          <p></p>
+          <p>Dans cet exemple,<b> 1 </b>identifie le processus EIGRP particulier fonctionnant sur ce routeur. Pour que le protocole EIGRP puisse établir des contiguïtés de voisinage, tous les routeurs du même domaine de routage doivent être configurés avec le même numéro de système autonome. À la Figure 3, ce même protocole EIGRP est activé sur les trois routeurs avec le numéro de système autonome<b> 1</b>.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : EIGRP et OSPF peuvent prendre en charge plusieurs instances du protocole de routage. Cependant, il n'est généralement pas nécessaire ni recommandé d'implémenter plusieurs protocoles de routage.</p>
+          <p></p>
+          <p>La commande<b> router eigrp </b><i>autonomous-system </i>ne démarre pas le processus EIGRP proprement dit. Le routeur ne commence pas l'envoi des mises à jour. Cette commande sert uniquement à configurer les paramètres EIGRP. </p>
+          <p></p>
+          <p>Pour supprimer complètement le processus de routage EIGRP d'un appareil, utilisez la commande de mode de configuration globale <b>no router eigrp </b><i>autonomous-system </i>, qui arrête le processus EIGRP et supprime toutes les configurations de routeur EIGRP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente le résultat de la commande « conf t » sur le routeur 1, puis le résultat correspondant au point d'interrogation du routeur.  Le résultat obtenu répertorie les différents protocoles de routage disponibles. La Figure 3 présente la commande « router eigrp one » sur chacun des routeurs.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

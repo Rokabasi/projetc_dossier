@@ -1,0 +1,76 @@
+<textcomponents>
+
+<component id="ID_s0_title">
+<text><![CDATA[<b>Décisions relatives aux rôles des ports</b>]]></text>
+</component>
+
+<component id="ID_s0_txt01"><text><![CDATA[Trunk3]]></text></component>
+<component id="ID_s0_txt02"><text><![CDATA[Trunk2]]></text></component>
+<component id="ID_s0_txt03"><text><![CDATA[Trunk1]]></text></component>
+
+<component id="ID_s0_txt04">
+<text><![CDATA[<b>F0/1</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 32769.000A00222222<br/>Path Cost = 19]]></text>
+</component>
+<component id="ID_s0_txt05">
+<text><![CDATA[<b>F0/2</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 32769.000A00222222<br/>Path Cost = 19]]></text>
+</component>
+<component id="ID_s0_txt06">
+<text><![CDATA[<b>F0/2</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 32769.000A00111111<br/>Path Cost = 19]]></text>
+</component>
+<component id="ID_s0_txt07">
+<text><![CDATA[<b>F0/1</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 24577.000A00333333<br/>Path Cost = 19]]></text>
+</component>
+<component id="ID_s0_txt08">
+<text><![CDATA[<b>F0/2</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 24577.000A00333333<br/>Path Cost = 19]]></text>
+</component>
+<component id="ID_s0_txt09">
+<text><![CDATA[<b>F0/1</b><br/>Root ID = 24577.000A00333333<br/>Bridge ID = 32769.000A00111111<br/>Path Cost = 19]]></text>
+</component>
+
+<component id="ID_s0_txt10">
+<text><![CDATA[Pont<br/>racine]]></text>
+</component>
+
+
+
+<component id="ID_s1_caption">
+<text><![CDATA[Le commutateur S1 présente l’identificateur de priorité de pont le plus faible ; il s’agit donc du pont racine.]]></text>
+</component>
+
+<component id="ID_s2_caption">
+<text><![CDATA[Le commutateur S1 configure ses deux ports agrégés comme ports désignés.]]></text>
+</component>
+<component id="ID_s2_txt01">
+<text><![CDATA[Ports désignés]]></text>
+</component>
+
+<component id="ID_s3_caption">
+<text><![CDATA[Le commutateur S2 configure le port F0/1 comme port racine.<br/>Le commutateur S3 configure le port F0/1 comme port racine.]]></text>
+</component>
+<component id="ID_s3_txt01">
+<text><![CDATA[Ports racines]]></text>
+</component>
+
+<component id="ID_s4_caption">
+<text><![CDATA[Le commutateur S2 et le commutateur S3 partagent un segment LAN. Ils doivent déterminer quel commutateur a l&apos;ID de pont le plus faible pour identifier le commutateur qui peut configurer son port en tant que port désigné.]]></text>
+</component>
+
+<component id="ID_s5_caption">
+<text><![CDATA[Les commutateurs S2 et S3 s&apos;échangent des trames BDPU. Le commutateur S3 identifie le commutateur S2 comme ayant l&apos;ID de pont le plus faible du fait que son adresse MAC est plus faible.]]></text></component>
+
+<component id="ID_s6_caption">
+<text><![CDATA[Le commutateur S3 configure le port F0/2 comme port alternatif avec l&apos;état bloqué pour empêcher la boucle.]]></text>
+</component>
+<component id="ID_s6_txt01">
+<text><![CDATA[Port alternatif]]></text>
+</component>
+
+<component id="ID_s7_caption">
+<text><![CDATA[Étant donné que le commutateur S2 possède l’identificateur de pont le plus faible, il configure son port F0/2 comme port désigné pour réaliser l’arbre recouvrant.]]></text>
+</component>
+<component id="ID_s7_txt01">
+<text><![CDATA[Port désigné]]></text>
+</component>
+
+
+</textcomponents>

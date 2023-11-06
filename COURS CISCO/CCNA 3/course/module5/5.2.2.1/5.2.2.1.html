@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.1 Les technologies de vecteur de distance</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les technologies de vecteur de distance</h1>
+        <div>
+          <p>Les protocoles de routage à vecteur de distance partagent les mises à jour entre voisins. Les voisins sont des routeurs partageant une liaison et sont configurés pour utiliser le même protocole de routage. Le routeur ne connaît que les adresses réseau de ses propres interfaces et les adresses des réseaux distants qu'il peut atteindre par le biais de ses voisins. Les routeurs utilisant le routage à vecteur de distance ne connaissent pas la topologie du réseau.</p>
+          <p>Certains protocoles de routage à vecteur de distance envoient des mises à jour périodiques. Par exemple, le protocole RIP envoie une mise à jour périodique à tous ses voisins toutes les 30 secondes. Il le fait même si la topologie n'a pas changé. RIPv1 envoie ces mises à jour en tant que diffusions à l'adresse IPv4 de tous les hôtes, à savoir 255.255.255.255.</p>
+          <p>La diffusion de mises à jour périodiques est inefficace, car celles-ci consomment de la bande passante et pèsent sur le processeur des appareils réseau. Chaque périphérique réseau doit traiter un message de diffusion, au lieu d'utiliser des diffusions comme RIP, RIPv2 et EIGRP peuvent utiliser des adresses de multidiffusion pour atteindre uniquement certains routeurs voisins. EIGRP peut également utiliser un message de monodiffusion pour atteindre un routeur voisin particulier. De plus EIGRP n'envoie les mises à jour que lorsque cela s'avère nécessaire, au lieu de le faire à intervalles réguliers. </p>
+          <p>Comme l'illustre la figure, les deux protocoles modernes de routage à vecteur de distance IPv4 sont RIPv2 et EIGRP. Les protocoles RIPv1 et IGRP sont indiqués uniquement à des fins de précision historique. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente les protocoles de routage à vecteur de distance suivants : RIP version 1, RIP version 2, IGRP et EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

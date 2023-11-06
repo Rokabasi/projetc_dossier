@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.2.3 Route de niveau 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route de niveau 1</h1>
+        <div>
+          <p>Une route de niveau 1 est une route possédant un masque de sous-réseau inférieur ou égal au masque par classe de l’adresse réseau. Par conséquent, une route de niveau 1 peut être :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Une route de réseau</b> : une route de réseau est une route dotée d'un masque de sous-réseau égal à celui du masque par classe. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Une route de super-réseau </b>: une route de super-réseau est une adresse réseau avec un masque inférieur au masque par classe, par exemple une adresse récapitulative. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Une route par défaut</b> : une route par défaut est une route statique avec l'adresse 0.0.0.0/0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La source d’une route de niveau 1 peut être un réseau connecté directement, une route statique ou un protocole de routage dynamique.</p>
+          <p></p>
+          <p>La Figure 1 illustre en quoi les routes de niveau 1 sont également de meilleures routes. </p>
+          <p></p>
+          <p>La Figure 2 illustre les routes de niveau 1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 répertorie trois types de routes de niveau 1 et présente un exemple de chacun de ces types de routes.  Le premier exemple est 192.168.1.0/24, le second est 192.168.0.0/16 et le dernier est une route par défaut de 0.0.0.0/0.  Ce sont toutes des routes finales dans une table de routage lorsque l’adresse IP du tronçon suivant ou l’interface de sortie est répertoriée dans la table de routage. La Figure 2 affiche le résultat de la commande : show i.p. route pipe begin Gateway.  Elle présente la table de routage pour le routeur R-1 et met en surbrillance deux routes de niveau 2. L’une des routes est la route statique par défaut et l’autre est 192.168.0.0/16 accessible via 209.165.200.226.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

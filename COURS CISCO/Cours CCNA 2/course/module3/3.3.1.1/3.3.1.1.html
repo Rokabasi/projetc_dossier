@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.1 Entrées de table de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrées de table de routage</h1>
+        <div>
+          <p>La topologie illustrée dans la Figure 1 est utilisée comme topologie de référence pour cette section.  Notez que dans la topologie :</p>
+          <p>
+            <ul>
+              <li>R1 est le routeur de périphérie connecté à Internet ; par conséquent, il propage une route statique par défaut vers R2 et R3. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R1, R2 et R3 contiennent des réseaux discontinus séparés par un autre réseau par classe.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 introduit en outre une route de super-réseau 192.168.0.0/16.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 2 affiche la table de routage IPv4 de R1 avec des routes connectées directement, statiques et dynamiques.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la hiérarchie de table de routage de Cisco IOS était à l'origine mise en œuvre avec le schéma de routage par classe. Bien que la table de routage incorpore à la fois l’adressage par classe et sans classe, la structure globale se base toujours sur le schéma par classe.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois routeurs connectés linéairement par des liaisons WAN.  R-1 est connecté à R-2 par une liaison WAN de série et il dispose d’un LAN sur une interface Ethernet.  R-2 est connecté à la fois à R-1 et à R-3 par des liaisons WAN de série et il dispose d’un LAN sur une interface Ethernet.  R-3 est uniquement connecté à R-2 par une liaison WAN de série et dispose de deux LAN sur ses interfaces Ethernet.  R-1 dispose d’une liaison WAN de série vers Internet, et le routeur R-3 dispose d’une liaison WAN de série vers un autre réseau cloud. La Figure 2 affiche le résultat de la commande : show i.p. route pipe begin Gateway.  Cela affiche la table de routage pour le routeur R1 qui dispose de trois routes connectées directement avec trois adresses d’interfaces IP, cinq routes obtenues par RIP, une route candidate par défaut et une passerelle de dernier recours configurée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

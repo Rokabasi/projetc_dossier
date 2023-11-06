@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.5 Vérifier le protocole OSPFv3 à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier le protocole OSPFv3 à zones multiples</h1>
+        <div>
+          <p>Le protocole OSPFv3 propose des commandes de vérification similaires à celles du protocole OSPFv2. Pour référence, consultez la topologie OSPFv3 présentée à la Figure 1. </p>
+          <p></p>
+          <p>La Figure 2 présente les paramètres OSPFv3 de R1. Notez que la commande confirme qu'il existe désormais deux zones. Elle identifie également chaque interface activée respectivement pour les zones.</p>
+          <p></p>
+          <p>La commande indiquée à la Figure 3 vérifie les interfaces OSPFv3 et la zone à laquelle elles appartiennent.</p>
+          <p></p>
+          <p>La figure 4 affiche la table de routage de R1. Notez que la table de routage IPv6 contient des entrées <b>OI</b> pour identifier les réseaux appris à partir des autres zones. En particulier,<b> O </b>représente les routes OSPF et <b>I</b> les routes interzones, c'est-à-dire les routes provenant d'une autre zone. Souvenez-vous que le routeur R1 se situe dans la zone 0, et que le sous-réseau 2001:DB8:CAFE:3::/64 est connecté à R3 dans la zone 2. L'entrée [110/1 295] dans la table de routage représente la distance administrative assignée à OSPF (110) et le coût total des routes (coût de 1 295).</p>
+          <p></p>
+          <p>La commande illustrée à la Figure 5 affiche le contenu de la LSDB de R1. Cette commande fournit des informations similaires à son homologue OSPFv2. Toutefois, la LSDB OSPFv3 contient des types de LSA supplémentaires, non disponibles avec OSPFv2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente une topologie OSPFv3 IPv6 à zones multiples. La Figure 2 présente le résultat de la commande « show ipv6 protocols ».  L'image indique le nombre de zones auxquelles le routeur appartient et les réseaux acheminés. La Figure 3 présente le résultat de la commande « show ipv6 ospf interface brief » et met en évidence la colonne qui répertorie les zones dans lesquelles les interfaces sont connectées. La Figure 4 présente le résultat de la commande « show ipv6 route ospf » qui vérifie les routes OSPF à zones multiples.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

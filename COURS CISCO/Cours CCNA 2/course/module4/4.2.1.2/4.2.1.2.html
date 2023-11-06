@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.2 Remplissage dynamique de la table d&#x0027;adresses MAC d&#x0027;un commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Remplissage dynamique de la table d&#x0027;adresses MAC d&#x0027;un commutateur</h1>
+        <div>
+          <p>Les commutateurs utilisent des adresses MAC pour diriger les communications réseau vers la destination, via le port approprié. Un commutateur est constitué de circuits intégrés et du logiciel associé qui contrôle les chemins de données dans le commutateur. Pour qu'un commutateur sache vers quel port transférer une trame, il doit tout d'abord apprendre quels périphériques existent sur chaque port. À mesure que le commutateur découvre la relation entre les ports et les périphériques, il remplit une table appelée table d'adresses MAC ou table CAM (Content Addressable Memory, mémoire adressable par contenu).  La CAM est un type particulier de mémoire utilisé dans des applications de recherche haut débit.</p>
+          <p></p>
+          <p>Les commutateurs LAN déterminent comment traiter les trames de données entrantes en gérant la table d'adresses MAC. Un commutateur établit sa table d'adresses MAC en enregistrant l'adresse MAC de chaque périphérique connecté à chacun de ses ports. Le commutateur utilise les informations de la table d'adresses MAC pour envoyer des trames destinées à un périphérique donné au port qui a été attribué à ce périphérique.</p>
+          <p></p>
+          <p>Le processus en deux étapes suivant se déroule sur chaque trame Ethernet entrant dans un commutateur.</p>
+          <p></p>
+          <p>
+            <b>Étape 1. Découverte - Examen de l'adresse MAC source</b>
+          </p>
+          <p></p>
+          <p>Le commutateur vérifie si de nouvelles informations sont disponibles sur chacune des trames entrantes. Pour cela, il examine l'adresse MAC source de la trame et le numéro du port par lequel la trame est entrée dans le commutateur:</p>
+          <p>
+            <ul>
+              <li>Si l'adresse MAC source n'existe pas, elle est ajoutée à la table , tout comme le numéro du port d'entrée. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si l'adresse MAC source existe, le commutateur réinitialise le compteur d'obsolescence de cette entrée. Par défaut, la plupart des commutateurs Ethernet conservent les entrées dans la table pendant cinq minutes.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : si l'adresse MAC source existe dans la table, mais sur un autre port, le commutateur la traite comme une nouvelle entrée. L’ancienne entrée est alors remplacée par la même adresse MAC associée au numéro de port actuel.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. Transfert - Examen de l'adresse MAC de destination</b>
+          </p>
+          <p></p>
+          <p>Si l’adresse MAC de destination est une adresse de monodiffusion, le commutateur recherche une correspondance entre l’adresse MAC de destination qui figure dans la trame et une entrée de sa table des adresses MAC :</p>
+          <p>
+            <ul>
+              <li>Si l'adresse MAC de destination se trouve dans la table, le commutateur transfère la trame par le port spécifié.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si l'adresse MAC de destination ne se trouve pas dans la table, le commutateur transfère la trame sur tous les ports sauf celui d'entrée. Cela s’appelle une monodiffusion inconnue. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : si l'adresse MAC de destination est une adresse de diffusion ou de multidiffusion, la trame est également envoyée par tous les ports sauf celui d'entrée.</p>
+          <p></p>
+          <p>Cliquez sur Lecture sur la figure pour lancer une vidéo expliquant comment deux commutateurs connectés créent des tables d'adresses MAC.</p>
+          <p></p>
+          <p>Cliquez <a href="../../files/5.2.1.4%20Video%20Slides%20-%20MAC%20Address%20Tables%20on%20Connected%20Switches.pdf" target="_blank">ici</a> pour télécharger les extraits vidéo de la démonstration.</p>
+          <p></p>
+          <p>Cliquez <a href="../../files/5.2.1.4%20Video%20-%20MAC%20Address%20Tables%20on%20Connected%20Switches.pdf" target="_blank">ici</a> pour lire la transcription de cette vidéo.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente trois PC. Chaque PC est connecté à un commutateur. Une trame est envoyée depuis l’un des PC au commutateur. La Figure 2 présente trois PC. Chaque PC est connecté à un commutateur. Une trame est envoyée depuis PC 1 au commutateur. Le texte de la figure indique que la table de commutation MAC a créé une nouvelle entrée indiquant que le port 1 a appris l’adresse MAC de PC 1, et tous les autres ports sont vides. La Figure 3 illustre un commutateur transmettant une trame des ports 2 et 3 à PC  3 et PC 2. Le commutateur ne connaît pas les adresses MAC pour PC 3 et PC 2. La Figure 4 illustre PC 3 répondant en envoyant une trame au commutateur. La Figure 5 indique qu’un commutateur a traité une trame reçue de PC 3. L’onglet de l’adresse MAC contient désormais l’adresse MAC pour PC 3. La Figure 6 montre qu’une trame est renvoyée à PC 1 depuis le commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

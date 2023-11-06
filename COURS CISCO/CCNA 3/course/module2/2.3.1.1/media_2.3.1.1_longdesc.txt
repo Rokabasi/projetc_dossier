@@ -1,0 +1,1 @@
+La figure présente une topologie structurée avec des hôtes se connectant à une grappe de commutateurs redondants qui conduit à un routeur de passerelle. Le routeur de passerelle se connecte à une batterie de serveurs, à Internet et aux segments Intranet du réseau.

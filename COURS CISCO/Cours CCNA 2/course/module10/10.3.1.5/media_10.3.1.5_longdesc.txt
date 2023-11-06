@@ -1,0 +1,1 @@
+The figure is a picture of the back of a Cisco 1941 router.  Les ports USB sont mis en surbrillance. La figure montre la sortie de la commande « dir usbflash0: ».

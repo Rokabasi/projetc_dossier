@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.1 Évolution des protocoles de routage dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Évolution des protocoles de routage dynamique</h1>
+        <div>
+          <p>Les protocoles de routage dynamique sont utilisés dans les réseaux depuis la fin des années quatre-vingt. Le protocole RIP est l’un des tout premiers protocoles de routage. RIPv1 a été publiée en 1988, mais certains de ses algorithmes de base étaient déjà utilisés sur ARPANET (Advanced Research Projects Agency Network) dès 1969. </p>
+          <p></p>
+          <p>À mesure que les réseaux évoluaient et devenaient plus complexes, de nouveaux protocoles de routage ont émergé. Le protocole RIP a été mis à jour vers RIPv2 pour s’adapter à la croissance dans l’environnement réseau.  Cependant, RIPv2 n’est pas encore suffisamment évolué pour les mises en œuvre actuelles de réseaux plus vastes.  Aussi, deux protocoles de routage avancés ont été développés pour répondre aux besoins des réseaux plus importants : OSPF (Open Shortest Path First) et IS-IS (Intermediate System-to-Intermediate System). Cisco a développé les protocoles IGRP (Interior Gateway Routing Protocol) et Enhanced IGRP (EIGRP), qui s'adaptent également bien aux réseaux de plus grande taille. </p>
+          <p></p>
+          <p>Il a fallu par ailleurs interconnecter des interréseaux différents et assurer un routage entre ces derniers. Le protocole BGP (Border Gateway Protocol) (BGP) est désormais utilisé entre les fournisseurs d'accès Internet (FAI).  Le protocole BGP est également utilisé entre les FAI et leurs clients privés plus importants pour échanger des informations de routage. </p>
+          <p></p>
+          <p>La Figure 1 illustre le calendrier de l'ajout des divers protocoles. </p>
+          <p></p>
+          <p>La Figure 2 classifie les protocoles. </p>
+          <p></p>
+          <p>Le nombre d'appareils personnels utilisant le protocole IP ne cessant de croître, l'espace d'adressage IPv4 est pratiquement épuisé, ce qui a donné lieu à l'émergence du protocole IPv6. De nouvelles versions des protocoles de routage IP ont été développées pour prendre en charge les communications reposant sur IPv6, comme indiqué à la ligne IPv6 de la Figure 2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 est un calendrier interactif pour l’évolution des protocoles de routage commençant par le protocole de passerelle externe au cours de l’année 1980 jusqu’à l’élaboration du protocole EIGRP pour IPv6 en 2005.  Parmi les autres événements importants, il y a la publication de la version 1 du protocole d’information de routage en 1998, puis celle de la version 1 du protocole OSPF en 1989 et de sa version 2 en 1991.  En 1992 est sorti le protocole EIGRP et en 1993 la version 2 du protocole RIP.  La nouvelle génération du protocole RIP pour l’IPv6 est sortie en 1997, suivie de la version 3 du protocole OSPF en 1999. La Figure 2 représente une table qui organise les protocoles de routage en des protocoles de routage internes et des protocoles de routage externes. Cette table les classifie également selon qu’on les utilise pour l’IPv4 ou pour l’IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

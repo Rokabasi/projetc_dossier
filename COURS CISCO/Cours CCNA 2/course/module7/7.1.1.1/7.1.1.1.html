@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.1 Qu’est-ce qu’une liste de contrôle d’accès ?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Qu’est-ce qu’une liste de contrôle d’accès ?</h1>
+        <div>
+          <p>Une liste de contrôle d'accès (ou ACL) est une série de commandes IOS qui déterminent si un routeur achemine ou abandonne les paquets en fonction des informations contenues dans l'en-tête de paquet. Les listes de contrôle d'accès font partie des fonctionnalités les plus utilisées du logiciel Cisco IOS. </p>
+          <p></p>
+          <p>Une fois configurées, les listes de contrôle d'accès assurent les tâches suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Elles limitent le trafic réseau pour accroître les performances réseau. Si la stratégie de l’entreprise interdit, par exemple, le trafic vidéo sur le réseau, vous pouvez configurer et appliquer des listes de contrôle d’accès pour bloquer ce trafic. Ainsi, la charge réseau est nettement réduite et les performances réseau sont sensiblement améliorées. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elles contrôlent le flux de trafic. Les listes de contrôle d’accès peuvent limiter la diffusion des mises à jour de routage pour s’assurer que les mises à jour viennent d'une source reconnue. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elles fournissent un niveau de sécurité de base pour l’accès réseau. Les listes de contrôle d’accès permettent à un hôte d’accéder à une section du réseau tout en empêchant un autre hôte d’y avoir accès. Par exemple, l'accès au réseau du département Ressources humaines peut être limité aux utilisateurs autorisés. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elles filtrent le trafic en fonction de son type.  Ainsi, une liste de contrôle d'accès peut autoriser le trafic des e-mails, mais bloquer tout le trafic Telnet. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Elles filtrent les hôtes pour autoriser ou refuser l’accès aux services sur le réseau. Les listes de contrôle d’accès peuvent autoriser ou refuser à un utilisateur l’accès à certains types de fichier, tels que FTP ou HTTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Par défaut, aucune liste de contrôle d'accès n'est configurée sur les routeurs. Par conséquent, les routeurs ne filtrent pas le trafic, par défaut. Le trafic qui entre dans le routeur est routé uniquement en fonction des informations de la table de routage. Toutefois, lorsqu'une liste de contrôle d'accès est appliquée à une interface, le routeur évalue en outre tous les paquets réseau lorsqu'ils traversent l'interface pour déterminer s'ils peuvent être acheminés.  </p>
+          <p></p>
+          <p>En dehors de l'autorisation ou du blocage du trafic, les listes de contrôle d'accès peuvent être utilisées pour sélectionner les types de trafic à analyser, à acheminer et à traiter selon d'autres méthodes. Par exemple, les listes de contrôle d'accès permettent de classer le trafic par ordre de priorité. Cette fonction s’assimile à une carte VIP pour un concert ou un événement sportif. La carte VIP offre aux spectateurs privilégiés des avantages qui ne sont pas proposés aux détenteurs d'un billet standard, notamment l'entrée prioritaire ou le droit d'accéder à une zone privée.</p>
+          <p></p>
+          <p>La figure présente un exemple de topologie sur laquelle des listes de contrôle d'accès sont appliquées.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un routeur nommé R-2 avec une liaison série WAN à Internet. Le routeur a une liste de contrôle d'accès placée sur l'interface série.  La liste de contrôle d'accès permet la réception des e-mails, mais bloque les demandes entrantes de Telnet.  Il existe deux autres liaisons série WAN actives sur le routeur et chacune de ces deux liaisons série WAN se connecte aux routeurs R-1 et R-3.  R-1 et R-3 ont des interfaces LAN qui se connectent aux commutateurs. Il existe des listes de contrôle d'accès configurées sur les interfaces LAN.  La liste de contrôle d'accès sur le routeur R-1 refuse le trafic vidéo dirigé vers le commutateur connecté. R-1 refuse également la connexion entre le commutateur et le commutateur de l'autre interface LAN.  R-3 a deux interfaces LAN. Une interface LAN est connectée à un commutateur et une liaison série WAN est connectée à un sous-réseau interne.  Il existe une liste de contrôle d'accès sur le lien du sous-réseau interne qui refuse tout trafic provenant du routeur vers le sous-réseau. Par conséquent, seules les données provenant du sous-réseau sont autorisées à quitter le réseau.  L'interface LAN possède une liste de contrôle d'accès refusant toute mise à jour, trafic FTP ou Web.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

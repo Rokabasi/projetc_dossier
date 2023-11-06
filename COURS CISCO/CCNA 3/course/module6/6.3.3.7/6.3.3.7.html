@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.7 Table topologique : aucun successeur potentiel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Table topologique : aucun successeur potentiel</h1>
+        <div>
+          <p>Pour voir comment DUAL utilise les successeurs et successeurs potentiels, examinez la table de routage de R1, à condition que le réseau soit convergent, comme indiqué à la Figure 1. </p>
+          <p></p>
+          <p>La Figure 2 affiche un résultat partiel à partir de la commande<b> show ip route </b>sur R1. La route vers 192.168.1.0/24 montre que le successeur est R3 via 192.168.10.6 avec une distance de faisabilité de 2 170 112.</p>
+          <p></p>
+          <p>La table de routage IP inclut uniquement le meilleur chemin, le successeur. Pour voir s'il existe des successeurs potentiels, nous devons examiner la table topologique EIGRP. La table topologique présentée à la Figure 3 montre uniquement le successeur 192.168.10.6, qui est R3. Il n'existe aucun successeur potentiel. En examinant la topologie physique réelle ou le schéma du réseau, on peut immédiatement constater qu’un chemin de secours existe vers 192.168.1.0/24 via R2. R2 n'est pas un successeur potentiel, car il ne remplit pas la condition de faisabilité. Même si, en regardant la topologie, il est évident que R2 est une route de sauvegarde, le protocole EIGRP ne dispose pas de carte de la topologie du réseau. EIGRP est un protocole de routage à vecteur de distance qui ne connaît les informations de réseau distant que par ses voisins.</p>
+          <p></p>
+          <p>DUAL ne stocke pas la route via R2 dans la table topologique. Tous les liens peuvent être affichés à l'aide de la commande<b> show ip eigrp topology all-links</b>. Cette commande affiche les liens, qu'ils remplissent ou non la condition de faisabilité.</p>
+          <p></p>
+          <p>Comme indiqué à la Figure 4, la commande<b> show ip eigrp topology all-links </b>affiche tous les chemins possibles vers un réseau, y compris les successeurs, les successeurs potentiels et même les routes qui ne correspondent pas à des successeurs potentiels. La distance de faisabilité de R1 vers 192.168.1.0/24 est 2 170 112 via le successeur R3. Pour que R2 soit considéré comme un successeur potentiel, il doit remplir la condition de faisabilité. La distance annoncée de R2 vers R1 pour atteindre 192.168.1.0/24 doit être inférieure à la distance de faisabilité actuelle de R1. D'après la figure, la distance annoncée de R2 est 3 012 096, ce qui est supérieur à la distance de faisabilité actuelle de R1, 2 170 112. </p>
+          <p></p>
+          <p>Même si R2 semble être un chemin de secours viable vers 192.168.1.0/24, R1 ne voit pas que le chemin n'est pas un bouclage potentiel. EIGRP est un protocole à vecteur de distance, qui ne dispose pas d’une carte topologique sans boucle du réseau. La méthode de l'algorithme DUAL pour garantir qu'un voisin dispose d'un chemin sans boucle consiste à vérifier que la métrique du voisin remplit la condition de faisabilité. En s'assurant que la distance annoncée du voisin est inférieure à sa propre distance de faisabilité, le routeur peut supposer que son routeur voisin n'appartient pas à sa propre route annoncée, ce qui permet d'éviter toute boucle potentielle.</p>
+          <p></p>
+          <p>R2 peut servir de successeur en cas d'échec de R3 ; toutefois, le délai d'ajout à la table de routage est plus long. Pour que R2 soit utilisé comme successeur, DUAL doit effectuer un traitement supplémentaire.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente le résultat de la commande « show ip route » sur le routeur 1.  La distance de faisabilité et l'adresse du routeur de saut suivant sont mises en surbrillance en orange. La Figure 3 présente le résultat de la commande « show ip eigrp topology » sur le routeur 1.  L'adresse du successeur, les distances et l'interface de sortie sont mises en surbrillance en orange. La Figure 4 présente le résultat de la commande « show ip eigrp topology » sur le routeur 1.  L'adresse du successeur et des successeurs de faisabilité potentiels, les distances et l'interface de sortie sont mises en surbrillance en orange.  La dernière adresse ne correspond pas à un successeur potentiel, car la condition de faisabilité n'est pas respectée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

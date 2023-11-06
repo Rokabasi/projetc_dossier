@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.3.1 Vérifier les voisins OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier les voisins OSPFv3</h1>
+        <div>
+          <p>Utilisez la commande <b>show ipv6 ospf neighbor</b> pour vérifier qu'une contiguïté est bien établie entre le routeur et ses routeurs voisins. Si l'ID du routeur voisin ne s'affiche pas ou si l'état du routeur voisin n'est pas FULL, les deux routeurs n'ont pas établi de contiguïté OSPFv3. </p>
+          <p></p>
+          <p>Lorsque deux routeurs n'établissent pas de contiguïté de voisinage, les informations d'état de liens ne sont pas échangées. Une LSDB incomplète peut entraîner des erreurs dans les arborescences SPF et les tables de routage. Les routes menant aux réseaux de destination peuvent ne pas exister ou ne pas représenter le meilleur chemin.</p>
+          <p></p>
+          <p>La Figure 1 illustre la contiguïté des voisins de R1. Pour chaque voisin, cette commande affiche les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Neighbor ID</b> : ID de routeur voisin.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Pri</b> : niveau de priorité OSPFv3 de l'interface. Cette valeur est utilisée pour le choix du routeur désigné (DR) et du routeur désigné de secours (BDR).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>State</b> : état OSPFv3 de l'interface. L'état FULL signifie que le routeur et son voisin disposent de LSDB OSPFv3 identiques. sur les réseaux à accès multiple tels que l'Ethernet, deux routeurs contigus peuvent avoir pour état affiché 2WAY. Le tiret indique qu'aucun routeur désigné ou routeur désigné de secours n'est requis en raison du type de réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Dead Time</b> : délai pendant lequel le routeur attend de recevoir un paquet Hello OSPFv3 émis par un voisin avant de déclarer ce voisin hors service. Cette valeur est réinitialisée lorsque l'interface reçoit un paquet Hello.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface ID :</b> ID de l'interface ou du lien.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface</b> : interface sur laquelle ce routeur a établi une contiguïté avec son voisin.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 2 pour vérifier les voisins R2 et R3 au moyen de la commande <b>show ipv6 opsf neighbor</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande suivante sur le routeur R1 : show ipv6 OSPF neighbor.  La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier les voisins OSPFv3 sur le routeur R2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+Cet exercice interactif permet au stagiaire de s'entraîner à mettre en correspondance une fonctionnalité EIGRP avec le bon protocole IP.

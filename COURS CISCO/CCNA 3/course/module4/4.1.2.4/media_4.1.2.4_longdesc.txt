@@ -1,0 +1,1 @@
+La Figure 1 est un exercice interactif dans lequel le stagiaire peut associer les termes de protocole d'agrégation de ports et de protocole de contrôle d'agrégation de liaisons à leur description.  Les Figures 2 et 3 sont des exercices interactifs dans lesquels le stagiaire peut identifier les modes des protocoles PAgP et LACP et indiquer si un canal EtherChannel va être établi.

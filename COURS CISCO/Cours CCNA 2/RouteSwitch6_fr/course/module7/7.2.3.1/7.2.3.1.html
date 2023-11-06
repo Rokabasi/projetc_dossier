@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.1 La commande access-class </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La commande access-class </h1>
+        <div>
+          <p>Vous pouvez améliorer la sécurité des lignes administratives en limitant l'accès VTY. La restriction de l'accès VTY est une technique vous permettant de définir les adresses IP avec un accès à distance au processus EXEC du routeur. Vous pouvez indiquer les adresses IP autorisées à avoir l’accès à distance à votre routeur via une liste de contrôle d'accès et l'instruction <b>access-class</b> configurés sur vos lignes VTY. Utilisez cette technique avec SSH pour renforcer la sécurité de tout accès administratif.</p>
+          <p></p>
+          <p>La commande<b> access-class </b>configurée en mode de configuration de ligne limite les connexions entrantes et sortantes entre un VTY spécifique (vers un périphérique Cisco) et les adresses renseignées dans une liste de contrôle d'accès. </p>
+          <p></p>
+          <p>La syntaxe de la commande <b>access-class</b> est la suivante :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-line)# </span>
+            <span class="cmd">
+              <b>access-class</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>access-list-number</i>
+            </span>
+            <span class="cmd"> {</span>
+            <span class="cmd">
+              <b>in </b>
+            </span>
+            <span class="cmd">[</span>
+            <span class="cmd">
+              <b>vrf-also</b>
+            </span>
+            <span class="cmd">]</span>
+            <span class="cmd">
+              <b></b>
+            </span>
+            <span class="cmd">|</span>
+            <span class="cmd">
+              <b> out</b>
+            </span>
+            <span class="cmd">}</span>
+          </p>
+          <p></p>
+          <p>Le paramètre <b>in</b> limite les connexions entrantes entre les adresses de la liste d'accès et le périphérique Cisco, tandis que le paramètre <b>out</b> limite les connexions sortantes entre un périphérique Cisco spécifique et les adresses de la liste d'accès. </p>
+          <p></p>
+          <p>La Figure 1 présente un exemple où une plage d'adresses est autorisée à accéder aux lignes VTY 0 à 4. La liste de contrôle d'accès de la figure est configurée pour autoriser le réseau 192.168.10.0 à accéder aux lignes VTY 0 à 4, mais refuser tous les autres réseaux. </p>
+          <p></p>
+          <p>Vous devez prendre en compte les éléments suivants lors de la configuration de listes de contrôle d’accès sur des lignes VTY :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Vous pouvez appliquer aux lignes VTY aussi bien les listes d'accès nommées que celles numérotées.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vous devez définir les mêmes restrictions sur toutes les lignes VTY car un utilisateur peut tenter de se connecter à n’importe laquelle.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour vous entraîner à sécuriser les accès VTY.</p>
+          <p></p>
+          <p>Remarque : les listes d’accès s'appliquent aux paquets traversant un routeur. Elles ne sont pas destinées à bloquer les paquets créés sur le routeur. Par défaut, une liste de contrôle d'accès sortante n'empêche pas les connexions d'accès à distance lancées par le routeur. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un routeur avec un segment de réseau local sur chacune des deux interfaces Gigabit Ethernet.  Chaque segment se compose d'un commutateur et d'un ordinateur.  Le routeur dispose des ports VTY 0 à 4 configurés pour l'accès.  La figure illustre les commandes requises pour créer une liste de contrôle d'accès qui limite les connexions VTY.  La figure débute en mode de configuration globale puis se déplace aux lignes VTY avec la commande « line vty 0 4 ».  La commande suivante configure le routeur pour utiliser une base de données locale pour l'accès avec la commande « login local ».  La ligne suivante définit le type de connexion à autoriser. La commande est « transport input ssh ».  Ensuite intervient l'application d'une liste de contrôle d'accès sur les lignes avec la commande « access-class 21 in ». La figure passe du mode de configuration de ligne au mode de configuration globale avec la commande « exit ».  La liste de contrôle d'accès est créée avec la commande « access-list 21 permit 192.168.10.0 0.0.0.255 » et la commande « access-list 21 deny any ». La Figure 2 est un élément multimédia interactif qui permet à l’étudiant de configurer les lignes VTY pour accepter SSH sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

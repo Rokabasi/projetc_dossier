@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.2 Réinitialisation du trunk à l’état par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Réinitialisation du trunk à l’état par défaut</h1>
+        <div>
+          <p>La Figure 1 présente les commandes permettant de supprimer les VLAN autorisés et de réinitialiser le VLAN natif du trunk. Une fois réinitialisée sur l’état par défaut, le trunk autorise tous les VLAN et utilise le VLAN 1 comme VLAN natif.</p>
+          <p></p>
+          <p>La Figure 2 présente les commandes utilisées pour rétablir toutes les caractéristiques d’une interface de trunking à leurs paramètres par défaut. La commande <b>show interfaces F0/1 switchport</b> révèle que le trunk a été reconfiguré avec un état par défaut.</p>
+          <p></p>
+          <p>Dans la Figure 3, l’exemple de résultats montre les commandes utilisées pour supprimer la fonctionnalité de trunk du port F0/1 du commutateur S1. La commande <b>show interfaces f0/1 switchport</b> révèle que l’interface F0/1 est désormais en mode d’accès statique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un tableau des commandes pour réinitialiser le VLAN natif et réinitialiser les VLAN autorisés sur une liaison. La Figure 2 montre la syntaxe pour réinitialiser le VLAN natif et réinitialiser les VLAN autorisés sur une liaison. La figure montre également la sortie de la commande « show interfaces F0/1 switchport » utilisée pour vérifier si le port a été correctement reconfiguré. La Figure 3 montre la syntaxe pour configurer le port F0/1 en tant que port d’accès. La figure montre également la commande « show interfaces F0/1 switchport » utilisée pour vérifier si le port a été correctement reconfiguré.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

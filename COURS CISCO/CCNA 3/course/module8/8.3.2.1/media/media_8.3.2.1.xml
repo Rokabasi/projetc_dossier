@@ -1,0 +1,27 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+<text><![CDATA[<b>Topologie OSPFv3</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+<text><![CDATA[<b>Zone 0</b>]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[L&apos;adresse FE80 représente l&apos;adresse link-local attribuée à chaque routeur.]]></text>
+</component>
+
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Configuration des adresses de monodiffusion globale sur R1</b>]]></text>
+</component>
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Étapes de configuration du protocole OSPFv3</b>]]></text>
+</component>
+ 
+<component id="ID_s3_tx01">
+	   <text><![CDATA[<b>Étape 1 :</b> activez le routage de monodiffusion IPv6 :<font face="_typewriter" color="#393536"><b> routage de monodiffusion ipv6</b></font>.<br/><b>Étape 2 :</b> (facultative) configurez des adresses de liaison locale.<br/><b>Étape 3 :</b> configurez un ID de routeur 32 bits en mode de configuration de routeur OSPFv3 avec la commande<font face="_typewriter" color="#393536"><b> router-id </b></font> <font face="_typewriter"><i>rid</i></font>.<br/><b>Étape 4 :</b> configurez des paramètres de routage facultatifs tels que l&apos;ajustement de la bande passante de référence.<br/><b>Étape 5 :</b> (facultative) configurez des paramètres spécifiques d&apos;interface OSPFv3. Par exemple, ajustez la bande passante de l&apos;interface.<br/><b>Étape 6 :</b> activez le routage IPv6 avec la commande <font face="_typewriter" color="#393536"><b>ipv6 ospf area</b></font>.]]></text>
+</component>
+
+
+</textcomponents>

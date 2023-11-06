@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande show ipv6 interface brief.  La figure affiche les adresses IPv6 pour les trois interfaces du routeur R1 et met en avant les adresses link-local.  Chaque interface utilise la même adresse link-local, qui est FE80::32F7:DEF:FEA3:DA0.

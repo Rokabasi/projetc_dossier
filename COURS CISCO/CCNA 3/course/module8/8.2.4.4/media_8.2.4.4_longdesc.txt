@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande suivante sur le routeur R1 : show ip OSPF interface brief.  Le résultat répertorie les trois interfaces qui participent au processus OSPF, les adresses IP, les coûts et la zone OSPF. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier les paramètres d'interface OSPF.

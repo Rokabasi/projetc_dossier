@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.4.1.3 Chapitre 9 : NAT pour IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 9 : NAT pour IPv4</h1>
+        <div>
+          <p>Ce chapitre a décrit la manière dont la NAT est utilisée pour éviter la pénurie d'espace d'adressage IPv4. La NAT pour IPv4 permet aux administrateurs réseau d'utiliser l'espace d'adressage privé RFC 1918 tout en offrant une connectivité à Internet, à l'aide d'une seule adresse publique ou d'un nombre d'adresses publiques limité.</p>
+          <p></p>
+          <p>La NAT permet de ménager l'espace d'adressage public et représente une économie considérable en termes de coûts d'administration liés à la gestion des ajouts, des déplacements et des modifications. La NAT et la PAT peuvent être mises en œuvre pour économiser de l’espace d’adressage public sans affecter la connexion au FAI. Cependant, la NAT présente également des inconvénients, notamment des effets négatifs sur les performances, la mobilité et la connectivité de bout en bout des périphériques. Par conséquent, elle doit être considérée comme une solution à court terme à la pénurie d'adresses. La solution à long terme est la transition vers IPv6.</p>
+          <p></p>
+          <p>Ce chapitre a abordé la NAT pour IPv4, notamment :</p>
+          <p>
+            <ul>
+              <li>Les caractéristiques, la terminologie et le fonctionnement général de la NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les différents types de NAT, notamment la NAT statique, la NAT dynamique et la PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les avantages et les inconvénients de la NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La configuration, la vérification et l'analyse de la NAT statique, de la NAT dynamique et de la PAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La manière dont le transfert de port peut être utilisé pour accéder à un périphérique interne à partir d’Internet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La raison pour laquelle la NAT est disponible, mais ne fait pas partie intégrante du domaine des réseaux IPv6</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le dépannage de la NAT à l’aide des commandes<b> show </b>et<b> debug</b></li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche le routeur 1 connecté à deux LAN. Le routeur 1 est également connecté au routeur 2 par le biais d’un lien en série.  Le routeur 2 est également connecté à un FAI. Les réseaux connectés au routeur 1 sont internes et utilisent un adressage privé.  Une légende précise qu’il s’agit d’un réseau souche.  Le routeur 2 a une légende précisant qu’il s’agit d’un routeur de frontière activé pour la NAT.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

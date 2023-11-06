@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.4 Sauvegarde et restauration via TFTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sauvegarde et restauration via TFTP</h1>
+        <div>
+          <p>
+            <b>Sauvegarde des configurations via TFTP</b>
+          </p>
+          <p></p>
+          <p>Les copies des fichiers de configuration doivent être stockées en tant que fichiers de sauvegarde afin de parer à toute éventualité. Les fichiers de configuration peuvent être stockés sur un serveur TFTP (Trivial File Transfer Protocol) ou sur un périphérique de stockage USB. Vous devez également inclure un fichier de configuration dans la documentation du réseau. </p>
+          <p></p>
+          <p>Pour enregistrer la configuration en cours ou la configuration de démarrage sur un serveur TFTP, utilisez la commande <b>copy running-config tftp</b> ou <b>copy startup-config tftp</b>, comme le montre la figure. Procédez comme suit pour sauvegarder la configuration en cours sur un serveur TFTP :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Entrez la commande <b>copy running-config tftp</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Entrez l'adresse IP de l'hôte sur lequel le fichier de configuration sera stocké.</p>
+          <p></p>
+          <p>
+            <b>Étape 3</b>. Entrez le nom à attribuer au fichier de configuration.</p>
+          <p></p>
+          <p>
+            <b>Étape 4</b>. Appuyez sur Entrée pour confirmer chaque choix.</p>
+          <p></p>
+          <p>
+            <b>Restauration des configurations via TFTP</b>
+          </p>
+          <p></p>
+          <p>Pour restaurer la configuration en cours ou la configuration de démarrage à partir d'un serveur TFTP, utilisez la commande <b>copy tftp running-config</b> ou <b>copy tftp startup-config</b>. Procédez comme suit pour restaurer la configuration en cours à partir d'un serveur TFTP :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Saisissez la commande <b>copy tftp running-config</b>.</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Saisissez l'adresse IP de l'hôte sur lequel le fichier de configuration est stocké.</p>
+          <p></p>
+          <p>
+            <b>Étape 3</b>. Entrez le nom à attribuer au fichier de configuration.</p>
+          <p></p>
+          <p>
+            <b>Étape 4</b>. Appuyez sur <b>Entrée</b> pour confirmer chaque choix.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre la sortie de la commande « copy running-config tftp » sur un routeur.  Cela permet à l'utilisateur d'effectuer une sauvegarde de la configuration actuelle sur un serveur TFTP du réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

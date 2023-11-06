@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.3.3 Affectation de ports à des VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Affectation de ports à des VLAN</h1>
+        <div>
+          <p>Après la création d’un VLAN, l’étape suivante consiste à lui attribuer des ports. Un port d'accès peut appartenir à un seul VLAN à la fois. La seule exception à cette règle consiste en un port connecté à un téléphone IP. Dans ce cas, deux VLAN sont associés au port : un pour la voix et l'autre pour les données.</p>
+          <p></p>
+          <p>La Figure 1 présente la syntaxe permettant de définir un port d’accès et de l’affecter à un VLAN. La commande <b>switchport mode access</b> est facultative, mais vivement recommandée comme meilleure pratique de sécurité. Avec cette commande, l’interface passe en mode d’accès permanent.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: utilisez la commande <b>interface range</b> pour configurer simultanément plusieurs interfaces.  </p>
+          <p></p>
+          <p>Dans l’exemple de la Figure 2, le VLAN 20 est affecté au port F0/18 du commutateur S1 ; par conséquent, l’ordinateur « étudiant » (PC2) se trouve dans le VLAN 20. Lorsque le VLAN 20 est configuré sur d’autres commutateurs, l’administrateur réseau sait qu’il doit configurer les autres ordinateurs des étudiants dans le même sous-réseau que le PC2 (172.17.20.0/24).</p>
+          <p></p>
+          <p>La commande <b>switchport access vlan</b> force la création d’un VLAN s’il n’existe pas déjà sur le commutateur. </p>
+          <p></p>
+          <p>La commande <b>switchport access vlan</b> force la création d’un VLAN s’il n’existe pas déjà sur le commutateur. Par exemple, le VLAN 30 n’est pas présent dans le résultat de la commande <b>show vlan brief</b> du commutateur. Si la commande <b>switchport access vlan 30</b> est saisie sur n’importe quelle interface sans configuration précédente, le commutateur affiche les éléments suivants :</p>
+          <p></p>
+          <p>
+            <span class="cmd">% Access VLAN does not exist. Creating vlan 30</span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un tableau des commandes Cisco I.O.S. pour configurer un port de commutateur en mode d’accès et membre d’un VLAN spécifique. La Figure 2 montre un petit LAN et la syntaxe pour configurer F0/18 pour être un port d’accès et membre du VLAN 20. La Figure 3 est une activité interactive qui permet à l’apprenant de s’entraîner à la configuration d’un port de commutateur pour le transformer en port d’accès et membre du VLAN 20.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

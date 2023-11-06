@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.2.4 Métrique de délai</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métrique de délai</h1>
+        <div>
+          <p>Le délai correspond au temps nécessaire pour qu'un paquet parcoure une route. La métrique de délai (DLY) est une valeur statique déterminée à partir du type de liaison à laquelle l’interface est connectée et s’exprime en microsecondes. Le délai n’est pas mesuré de façon dynamique. Autrement dit, le routeur ne suit pas réellement la durée nécessaire aux paquets pour atteindre la destination. La valeur de délai, comme la valeur de bande passante, est une valeur par défaut que l’administrateur peut modifier.</p>
+          <p></p>
+          <p>Lorsqu'il sert à déterminer la métrique EIGRP, le délai correspond à la somme de tous les délais d'interface le long du chemin (mesuré en dizaines de microsecondes). </p>
+          <p></p>
+          <p>Le tableau de la Figure 1 présente les valeurs de délai par défaut des différentes interfaces. Notez que la valeur par défaut est de 20 000 microsecondes pour les interfaces série et de 10 microsecondes pour les interfaces GigabitEthernet.</p>
+          <p></p>
+          <p>Utilisez la commande<b> show interfaces </b>pour vérifier la valeur de délai sur une interface, comme indiqué à la Figure 2. Bien qu'une interface dotée de différentes bandes passantes puisse comporter la même valeur de délai, par défaut, Cisco recommande de ne pas modifier le paramètre de délai, sauf si l'administrateur réseau a une raison particulière de le faire.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un tableau contenant différents types de médias et leurs valeurs de délai correspondantes. La Figure 2 présente le résultat de la commande « show interface ». Les valeurs de délai sont mises en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

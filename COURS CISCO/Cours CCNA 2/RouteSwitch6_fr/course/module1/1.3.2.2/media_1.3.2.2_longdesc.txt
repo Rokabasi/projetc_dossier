@@ -1,0 +1,1 @@
+La figure illustre les deux codes source de routage pour une route connectée directement sur un routeur.  La figure souligne comment la route a été enregistrée, le réseau de destination et l’interface du routeur connecté au réseau de destination.

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.5 Comparaison entre NAT et PAT</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Comparaison entre NAT et PAT</h1>
+        <div>
+          <p>Faisons le point sur les différences entre la NAT et la PAT pour mieux comprendre leurs fonctions respectives. </p>
+          <p></p>
+          <p>Comme le montre la figure, la NAT traduit les adresses IPv4 une à une, d'adresses IPv4 privées en adresses IPv4 publiques et vice versa. En revanche, la PAT modifie à la fois l'adresse et le numéro de port. </p>
+          <p></p>
+          <p>La NAT achemine les paquets entrants vers leur destination interne en se référant à l'adresse IPv4 source entrante donnée par l'hôte sur le réseau public. Avec la PAT, il n'y a généralement qu'une ou quelques adresses IPv4 visibles de l'extérieur. Les paquets entrants provenant du réseau public sont acheminés vers leur destination sur le réseau privé selon une table appartenant au routeur NAT. Cette table enregistre les associations entre ports publics et privés. On parle alors de suivi de connexion.</p>
+          <p></p>
+          <p>
+            <b>Paquets sans segment de couche 4</b>
+          </p>
+          <p></p>
+          <p>Qu'en est-il des paquets IPv4 transportant des données autres qu'un segment TCP ou UDP ? Ces paquets ne comportent pas de numéro de port de couche 4. La fonction PAT traduit la plupart des protocoles communs transportés par IPv4 qui n'utilisent pas le protocole TCP ou UDP comme protocole de couche transport. Le plus connu de ces derniers est ICMPv4. Chacun de ces types de protocole est pris en charge différemment par la PAT. Par exemple, les messages de requête, les demandes d'écho et les réponses d'écho ICMPv4 incluent un ID de requête. ICMPv4 utilise l'ID de requête pour identifier une demande d'écho et sa réponse d'écho correspondante. L'ID de requête est incrémenté à chaque envoi de demande d'écho. La fonction PAT utilise l'ID de requête au lieu du numéro de port de couche 4. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les autres messages ICMPv4 n'utilisent pas l'ID de requête. Ces messages et d'autres protocoles qui n'utilisent pas les numéros de port TCP ou UDP peuvent varier et sortent du cadre de ce programme.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre deux tables.  Une table montre la façon dont une fonction NAT utilise un pool d’adresses globales parmi lesquelles choisir. La seconde table montre la façon dont la PAT utilise une adresse unique et ajoute cependant un numéro de port unique au mappage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<textcomponents>
+   <component id="ID_title">
+        <text>
+            <![CDATA[<b>Syntaxe des commandes HSRP</b>]]></text>
+    </component>
+  <component id="ID_table01">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'>
+		<tr >
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+		</tr>
+
+		<tr>
+		<td width="205px" bgcolor='#077A77'><font color='#ffffff'><b>Commande</b></font></td>
+		<td bgcolor='#077A77'><font color='#ffffff'><b>Définition</b></font></td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'><font face="_typewriter">Router(config-if)# <b>standby version 2</b></font></td>
+		<td bgcolor='#eff8f7'>Configure HSRP pour utiliser la version 2. HSRPv1 est la version utilisée par défaut.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'><font face="_typewriter">Router(config-if)# <b>standby</b> [<i>numéro-groupe</i>] <i>adresse-ip</i></font></td>
+		<td bgcolor='#ffffff'>Configure l&apos;adresse IP virtuelle utilisée par le groupe HSRP spécifié. Si aucun groupe n&apos;est configuré, l&apos;adresse IP virtuelle est attribuée au groupe 0.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#eff8f7'><font face="_typewriter">Router(config-if)# <b>standby </b>[<i>numéro-groupe</i>] <i>priority </i> [<i>valeur_priorité</i>]</font></td>
+		<td bgcolor='#eff8f7'>Configure le routeur actif souhaité avec une priorité plus élevée que la priorité par défaut (100). La plage de valeurs est comprise entre 0 et 255. À priorité égale ou si aucune priorité n&apos;est configurée, le routeur dont l&apos;adresse IP est la plus élevée est prioritaire.</td>
+		</tr>
+
+		<tr>
+		<td bgcolor='#ffffff'><font face="_typewriter">Router(config-if)# <b>standby </b>[<i>numéro-groupe</i>] <i>preempt</i></font></td>
+		<td bgcolor='#ffffff'>Configure un routeur pour qu&apos;il prenne la main sur le routeur actif.</td>
+		</tr>
+
+
+		</table>]]>
+		        </text>
+		    </component>
+	
+</textcomponents>

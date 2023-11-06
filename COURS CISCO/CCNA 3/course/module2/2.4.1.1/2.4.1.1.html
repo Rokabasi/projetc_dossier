@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.4.1.1 Conclusion</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Conclusion</h1>
+        <div>
+          <p>Le protocole VTP (VLAN Trunking Protocol) permet de réduire les tâches d'administration de VLAN sur un réseau commuté. Un commutateur configuré en tant que serveur VTP distribue et synchronise les informations VLAN sur les liaisons trunk vers les commutateurs activés pour VTP sur tout le domaine.</p>
+          <p></p>
+          <p>Les trois modes VTP sont le mode serveur, le mode client et le mode transparent.</p>
+          <p></p>
+          <p>Le numéro de révision de la configuration permet de déterminer si un commutateur VTP doit conserver sa base de données VLAN ou la mettre à jour. Un commutateur remplacera sa base de données VLAN s'il reçoit une mise à jour VTP d'un autre commutateur du même domaine portant un numéro de révision de configuration plus élevé. De ce fait, lorsqu'un commutateur est ajouté à un domaine VTP, il doit avoir la configuration VTP par défaut ou un numéro de révision de configuration inférieur à celui du serveur VTP.</p>
+          <p></p>
+          <p>Le dépannage de VTP peut également impliquer de traiter des erreurs imputables à des versions incompatibles de VTP, ainsi qu'à une mauvaise configuration des noms de domaine ou des mots de passe. </p>
+          <p></p>
+          <p>La négociation des trunks est gérée par le protocole DTP (Dynamic Trunking Protocol), qui fonctionne selon une liaison point à point entre les appareils réseau. Le protocole DTP est un protocole appartenant à Cisco, qui est automatiquement activé sur les commutateurs Catalyst 2960 et Catalyst 3560. Lorsqu'une liaison trunk est nécessaire, une pratique conseillée consiste à paramétrer l'interface sur <b>trunk</b> et <b>nonegotiate</b>. Sur les liaisons où vous ne souhaitez pas de trunking, désactivez le mode DTP. </p>
+          <p></p>
+          <p>Lorsque vous dépannez DTP, les problèmes peuvent être liés aux non-concordances du mode trunk, aux VLAN autorisés sur un trunk et aux non-concordances des VLAN natifs. </p>
+          <p></p>
+          <p>La commutation de couche 3 au moyen d'interfaces virtuelles de commutateur (SVI) est une méthode de routage inter-VLAN pouvant être configurée sur les commutateurs Catalyst 2960. Une SVI avec un adressage IP approprié est configurée pour chaque VLAN et assure un traitement de couche 3 pour les paquets depuis et vers tous les ports de commutateur associés à ces VLAN.</p>
+          <p></p>
+          <p>Une autre méthode de routage inter-VLAN de couche 3 consiste à utiliser des ports routés.  Un port routé est un port physique qui fait office d'interface sur un routeur. Les ports routés sont pour la plupart configurés entre les commutateurs dans les couches principale et de distribution.</p>
+          <p></p>
+          <p>Le dépannage du routage inter-VLAN avec un routeur ou un commutateur de couche 3 est similaire. Les erreurs les plus courantes impliquent les configurations de VLAN, de trunk, d'interface de couche 3 et d'adresses IP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Graphique résumé de la figure.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

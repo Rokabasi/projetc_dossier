@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.4 Bandes passantes d&#x0027;interface par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Bandes passantes d&#x0027;interface par défaut</h1>
+        <div>
+          <p>Toutes les interfaces ont des valeurs de bande passante par défaut qui leur sont affectées. Comme pour la bande passante de référence, les valeurs de bande passante des interfaces n'affectent pas réellement le débit ou la capacité du lien. Au lieu de cela, elles permettent à certains protocoles de routage, tels que le protocole OSPF, de calculer la métrique de routage. Par conséquent, il est important que la valeur de bande passante reflète la vitesse réelle du lien, afin que la table de routage contienne des informations de chemin précises.</p>
+          <p></p>
+          <p>Bien que les valeurs de bande passante des interfaces Ethernet correspondent généralement à la vitesse des liens, ce n'est peut-être pas le cas pour d'autres interfaces. Par exemple, la vitesse réelle des interfaces série est souvent différente de celle de la bande passante par défaut. Sur les routeurs Cisco, la bande passante par défaut de la plupart des interfaces série est réglée sur 1,544 Mbit/s. </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> les interfaces série plus anciennes peuvent afficher une vitesse par défaut de 128 Kbit/s. </p>
+          <p></p>
+          <p>Consultez l'exemple dans la Figure 1. Notez que le lien entre :</p>
+          <p>
+            <ul>
+              <li>R1 et R2 doivent être définis sur 1 544 Kbit/s (la valeur par défaut) </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 et R3 doivent être définis sur 1 024 Kbit/s</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R1 et R3 doivent être définis sur 64 Kbit/s</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez la commande <b>show interfaces</b> pour afficher le paramètre de bande passante des interfaces. La Figure 2 présente les paramètres de l'interface série 0/0/0 de R1. Le paramètre de bande passante est correct et donc l'interface série ne doit pas être modifiée. </p>
+          <p></p>
+          <p>La Figure 3 présente les paramètres de l'interface série 0/0/1 de R1. Elle confirme également que l'interface utilise la valeur par défaut de 1 544 Kbit/s pour la bande passante des interfaces. Selon la topologie de référence, cette valeur doit être définie sur 64 Kbit/s. Par conséquent, l'interface série 0/0/1 de R1 doit être modifiée.</p>
+          <p></p>
+          <p>La Figure 4 indique une métrique de coût résultant de 647, qui est basée sur la bande passante de référence définie sur 1 000 000 000 Bit/s et la bande passante d'interface par défaut de 1,544 Kbit/s (1 000 000 000/1 544 000).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre la topologie de référence pour le protocole OSPF et inclut la vitesse des liaisons série. La liaison entre le routeur R1 et le routeur R2 présente un débit de 1 544 Kbit/s. Le lien entre R2 et R3 présente un débit de 1 024 Kbit/s. La liaison entre R1 et R3 présente un débit de 64 Kbit/s.  La Figure 2 présente le résultat de la commande show interfaces serial 0/0/0 sur le routeur R1.  La figure met en évidence la ligne qui répertorie la bande passante de 1 544 Kbit/s.  La Figure 3 présente le résultat de la commande show interfaces serial 0/0/1 | include BW sur le routeur R1.  La figure présente la bande passante de 1 544 Kbit/s. La Figure 4 présente le résultat de la commande suivante sur le routeur R1 : show ip OSPF interface serial 0/0/1.  La figure met en évidence le coût de la liaison qui s'élève à 647.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

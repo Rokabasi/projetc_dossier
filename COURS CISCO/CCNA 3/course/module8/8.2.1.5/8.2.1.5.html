@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.5 Modification d&#x0027;un ID de routeur </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modification d&#x0027;un ID de routeur </h1>
+        <div>
+          <p>Parfois, un ID de routeur doit être modifié, par exemple, lorsqu'un administrateur réseau définit un nouveau modèle d'ID de routeur pour le réseau. Toutefois, après la sélection d'un ID par le routeur, un routeur OSPFv2 actif ne permet pas de modifier cet lD tant que le routeur n'a pas été rechargé ou que le processus OSPFv2 n'a pas été désactivé.</p>
+          <p></p>
+          <p>Dans la Figure 1, notez que l'ID de routeur actuel est 192.168.10.5. L'ID de routeur doit être 1.1.1.1. </p>
+          <p></p>
+          <p>Dans la Figure 2, l'ID de routeur 1.1.1.1 est attribué à R1. Notez la présence du message d'information indiquant que le processus OSPFv2 doit être désactivé ou que le routeur doit être rechargé. La raison de ceci est que R1 dispose déjà de contiguïtés avec d'autres voisins utilisant l'ID de routeur 192.168.10.5. Ces contiguïtés doivent être renégociées avec le nouvel ID de routeur 1.1.1.1.</p>
+          <p></p>
+          <p>Pour réinitialiser l'ID de routeur, il est préférable de supprimer le processus OSPF. </p>
+          <p></p>
+          <p>Dans la Figure 3, le processus de routage OSPFv2 est désactivé via la commande <b>clear ip ospf process</b> en mode d'exécution privilégié. Cette opération oblige OSPFv2 sur R1 à adopter les états Down et Init. Notez que la contiguïté change les messages de Full à Down, puis de Loading à Full. La commande <b>show ip protocols</b> vérifie que l'ID de routeur a changé.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 4 pour modifier l'ID de routeur de R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande show ip protocols. La ligne des résultats affichés contenant l'ID de routeur est surlignée. Pour ce routeur, l'ID correspond à 192.168.10.5.  La Figure 2 affiche les commandes utilisées pour modifier l'ID de routeur et commence en mode de configuration globale.  La première commande est : router OSPF. 10.  Cette commande configure OSPF sur le routeur et attribue la valeur 10 au processus.  La commande suivante est : router, trait d'union, ID, un, point, un, point, un, point, un.  Cette commande définit l'ID de routeur.  Le routeur affiche la directive demandant à l'utilisateur de recharger ou d'utiliser la commande clear ip OSPF process pour que l'ID prenne effet.  La Figure 3 affiche la commande clear ip OSPF process exécutée en mode d'exécution privilégié.  Résultat : le routeur redémarre le protocole de routage.  La figure met également en avant le résultat du routeur, qui illustre le passage des contiguïtés de l'état Full à Down, puis de l'état Load à Full.  Le nouvel ID de routeur 1.1.1.1 est affiché. La Figure 4 illustre un élément multimédia interactif qui permet à l'étudiant de modifier l'ID de routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

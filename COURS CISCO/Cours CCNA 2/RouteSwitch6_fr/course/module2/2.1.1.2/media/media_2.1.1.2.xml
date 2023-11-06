@@ -1,0 +1,51 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Comparaison des routages statique et dynamique</b>]]></text> 
+</component>
+
+<component id="ID_table">
+<text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4'  cellspacing="2" class="mtable">
+	<tr class="mtable_title">
+		<td colspan='3' bgcolor='#FFFFFF' class="liner_top"><font size='1' color='#434321'><span style="color:#DAE17A">.</span></font></td>
+	</tr>
+	<tr class="mtable_top">
+			<td colspan='3' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+		</tr>
+	<tr>
+		<td bgcolor='#666263' valign="top" width='105'><font bgcolor='#097A76' color='#EFF8F7'> </font></td>
+		<td bgcolor='#666263' valign="top" width='175'><font bgcolor='#097A76' color='#EFF8F7'><b>Routage dynamique</b></font></td>
+		<td bgcolor='#666263' valign="top" width='175'><font bgcolor='#097A76' color='#EFF8F7'><b>Routage statique</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Complexité de la configuration</font></b></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Généralement indépendant de la taille du réseau</font></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Augmente avec la taille du réseau</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Modifications de topologie</font></b></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>S’adapte automatiquement aux modifications de la topologie</font></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Intervention de l’administrateur requise</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Évolutivité</font></b></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Idéal pour les topologies simples et complexes</font></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Idéal pour les topologies simples</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Sécurité</font></b></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Moins sécurisé</font></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>Plus sécurisé</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Utilisation des ressources</font></b></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Utilise l’UC, la mémoire, la bande passante de la liaison.</font></td>
+		<td bgcolor='#E9E7E8'><font color='#393536'>Aucune ressource supplémentaire n’est requise</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#666263'><b><font color='#FFFFFF'>Prévisibilité</font></b></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>La route dépend de la topologie en cours</font></td>
+		<td bgcolor='#F2F2F2'><font color='#393536'>La route menant à la destination est toujours la même</font></td>
+	</tr>
+</table>]]></text>
+</component>
+</textcomponents>

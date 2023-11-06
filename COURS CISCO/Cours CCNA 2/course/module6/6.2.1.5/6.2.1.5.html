@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.5 Suppression de VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Suppression de VLAN</h1>
+        <div>
+          <p>Dans la figure, la commande du mode de configuration globale <b>no vlan </b><i>vlan-id </i>est utilisée pour supprimer le VLAN 20 du commutateur. Le commutateur S1 possède une configuration minimale avec tous les ports du VLAN 1 et un VLAN 20 non utilisé dans la base de données VLAN. La commande <b>show vlan brief</b> vérifie que le VLAN 20 n’est plus présent dans le fichier vlan.dat après utilisation de la commande <b>no vlan 20</b>.</p>
+          <p></p>
+          <p>
+            <b>Attention</b> : Avant de supprimer un VLAN, réaffectez tous les ports membres à un autre VLAN. Tous les ports qui ne sont pas déplacés vers un VLAN actif ne pourront plus communiquer avec d’autres hôtes une fois le VLAN supprimé et tant qu’ils ne seront pas attribués à un VLAN actif.</p>
+          <p></p>
+          <p>Le fichier vlan.dat peut aussi être entièrement supprimé à l’aide de la commande <b>delete flash:vlan.dat</b> en mode d’exécution privilégié. La version abrégée de la commande (<b>delete vlan.dat)</b> peut être utilisée si le fichier vlan.dat n’a pas été déplacé de son emplacement par défaut. Après l’exécution de cette commande et le redémarrage du commutateur, les VLAN précédemment configurés ne sont plus présents. Cette commande rétablit les paramètres d’usine par défaut du commutateur en ce qui concerne les configurations de VLAN.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: pour un commutateur Catalyst, la commande <b>erase startup-config</b> doit accompagner la commande <b>delete vlan.dat</b> avant le redémarrage afin de rétablir les paramètres par défaut du commutateur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente la syntaxe pour supprimer un VLAN.  La figure montre également la sortie de la commande « show v. lan brief » utilisée pour vérifier que le VLAN a été supprimé.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

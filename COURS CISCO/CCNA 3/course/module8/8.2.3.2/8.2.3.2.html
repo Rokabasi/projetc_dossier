@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.2 OSPF cumule les coûts</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>OSPF cumule les coûts</h1>
+        <div>
+          <p>Le coût d'une route OSPF est la valeur cumulée depuis un routeur jusqu'au réseau de destination. </p>
+          <p></p>
+          <p>Par exemple, dans la Figure 1, le coût permettant d'atteindre le réseau local de R2 172.16.2.0/24 à partir de R1 devrait être comme suit :</p>
+          <p>
+            <ul>
+              <li>Coût du lien série de R1 à R2 = 64</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Coût du lien Gigabit Ethernet sur R2 = 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Coût total pour atteindre 172.16.2.0/24 = <b>65</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La table de routage de R1 dans la Figure 2 confirme que la mesure pour atteindre le réseau local du routeur R2 a un coût de 65.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre la topologie de référence pour le protocole OSPF. Trois routeurs sont configurés en triangle. Chaque routeur est connecté aux deux autres routeurs à l'aide de câbles série WAN.  La liaison entre le routeur R1 et le routeur R2 a un débit de 1 544 Kbit/s, la liaison entre R2 et R3 a un débit de 1 024 Kbit/s, et la liaison entre R1 et R3 a un débit de 64 Kbit/s.  Chaque routeur dispose d'un réseau local configuré sur l'interface Gigabit Ethernet 0/0.  L'un des trois routeurs dispose d'une interface de bouclage configurée pour simuler une connexion à Internet.  Les trois routeurs se trouvent dans la zone OSPF 0. La Figure 2 présente le résultat de la commande show ip route | include 172.16.2.0.  La figure met en avant la métrique 65, qui permet d'atteindre le réseau.  La figure montre ensuite le résultat de la commande show ip route 172.16.2.0. La section de la commande qui indique « route metric is 65 » est mise en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

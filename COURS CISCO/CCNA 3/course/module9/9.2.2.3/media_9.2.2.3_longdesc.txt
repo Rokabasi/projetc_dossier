@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande « show ip route ospf » et met en évidence les routes interzones acquises dans la configuration OSPF à zones multiples. La Figure 2 est un exercice interactif qui permet au stagiaire d'utiliser la commande « show ip route ospf » sur deux routeurs OSPF à zones multiples connectés.

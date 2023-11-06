@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.2 Démarrage à froid</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Démarrage à froid</h1>
+        <div>
+          <p>Tous les protocoles de routage suivent les mêmes schémas de fonctionnement. Pour illustrer ceci, examinez le scénario suivant dans lequel les trois routeurs exécutent tous RIPv2. </p>
+          <p></p>
+          <p>Lorsqu'un routeur est mis sous tension, il ne dispose d'aucune information sur la topologie du réseau. Il ne sait même pas que des périphériques sont connectés à l’autre extrémité de ses liaisons. Les seules informations dont dispose un routeur sont celles de son propre fichier de configuration qui est stocké dans la mémoire vive non volatile. Une fois amorcé avec succès, le routeur applique la configuration enregistrée. Si l'adressage IP est correctement configuré, le routeur détecte d'abord ses propres réseaux connectés directement. </p>
+          <p></p>
+          <p>Cliquez sur Lecture dans la figure pour voir une animation de détection initiale des réseaux connectés pour chaque routeur. </p>
+          <p></p>
+          <p>Remarquez comment les routeurs exécutent le processus de démarrage, puis détectent les réseaux directement connectés et les masques de sous-réseau. Ces informations sont ajoutées à leurs tables de routage comme suit :</p>
+          <p>
+            <ul>
+              <li>R1 ajoute le réseau 10.1.0.0 disponible via l'interface FastEthernet 0/0 et 10.2.0.0 devient alors disponible via l'interface Serial 0/0/0.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 ajoute le réseau 10.2.0.0 disponible via l'interface Serial 0/0/0 et 10.3.0.0 devient alors disponible via l'interface Serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 ajoute le réseau 10.3.0.0 disponible via l'interface Serial 0/0/1 et 10.4.0.0 devient alors disponible via l'interface FastEthernet 0/0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Avec ces informations initiales, les routeurs recherchent ensuite des sources de route supplémentaires pour leurs tables de routage. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois routeurs connectés linéairement par des liaisons WAN.  Le routeur R-1 est connecté au routeur R-2 par une liaison WAN de série et dispose d'un réseau LAN sur une interface Ethernet.  R-2 est connecté à R-1 et R-3 par des liaisons WAN de série, et dispose donc de deux réseaux.  R-3 est seulement connecté à R-2 par une liaison WAN de série et dispose d'un LAN sur une interface Ethernet.  L'animation affiche la table de routage en cours de création, au fur et à mesure que chaque routeur y ajoute ses propres réseaux connectés.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

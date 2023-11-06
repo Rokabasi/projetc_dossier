@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.2 Exemple : dépannage de la commutation de couche 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Exemple : dépannage de la commutation de couche 3</h1>
+        <div>
+          <p>La société XYZ ajoute un nouvel étage, le cinquième, au réseau. Il s'agit de s'assurer que les utilisateurs du cinquième étage puissent communiquer avec les utilisateurs des autres étages, ce qui n'est pas le cas actuellement. Voici un plan d'implémentation visant à installer un nouveau VLAN pour les utilisateurs du cinquième étage et à s'assurer que ce VLAN achemine le trafic vers d'autres VLAN.</p>
+          <p></p>
+          <p>L'implémentation d'un nouveau VLAN se divise en quatre étapes :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Créez un nouveau VLAN 500 sur le commutateur du cinquième étage et sur les commutateurs de distribution. Nommez ce VLAN.</p>
+          <p></p>
+          <p>
+            <b>Étape 2.</b> Identifiez les ports requis pour les utilisateurs et les commutateurs. Définissez la commande<b> switchport access vlan </b>sur<b> 500 </b>et vérifiez que le trunk entre les commutateurs de distribution est correctement configuré et que le VLAN 500 est autorisé sur le trunk.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b> Créez une interface SVI sur les commutateurs de distribution et assurez-vous que les adresses IP sont attribuées.</p>
+          <p></p>
+          <p>
+            <b>Étape 4.</b> Vérifiez la connectivité.</p>
+          <p></p>
+          <p>Le plan de dépannage consiste à rechercher les éléments suivants :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Vérifiez que tous les VLAN ont été créés :</p>
+          <p>
+            <ul>
+              <li>le VLAN a-t-il été créé sur tous les commutateurs ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérifiez cela à l'aide de la commande <b>show vlan</b>.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Étape 2.</b> Assurez-vous que les ports se trouvent dans le bon VLAN et que le trunking fonctionne comme prévu :</p>
+          <p>
+            <ul>
+              <li>la commande <b>switchport access VLAN 500</b> a-t-elle été ajoutée à tous les ports d'accès ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Aurait-elle dû être ajoutée à d'autres ports ? Si c'est le cas, apportez les modifications nécessaires.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ces ports ont-ils été précédemment utilisés ? Si c'est le cas, assurez-vous qu'aucune commande supplémentaire pouvant entraîner des conflits n'est activée sur ces ports. Si ce n'est pas le cas, les ports sont-ils activés ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Y a-t-il des ports utilisateur définis dans des trunks ? Si c'est le cas, lancez la commande <b>switchport mode access</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les ports trunk sont-ils définis en mode trunk ? </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>L'élagage manuel des VLAN est-il configuré ? Si c'est le cas, assurez-vous que les trunks nécessaires pour transporter le trafic VLAN 500 ont défini les VLAN selon les énoncés autorisés.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b> Vérifiez les configurations d'interface SVI (si nécessaire) :</p>
+          <p>
+            <ul>
+              <li>L'interface SVI a-t-elle été déjà créée avec la bonne adresse IP et le masque de sous-réseau approprié ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Est-elle activée ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le routage est-il activé ?</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une vue de haut en bas d'un bâtiment d'entreprise montrant comment créer un nouveau réseau en tenant compte de la disposition des différents éléments impliqués dans l'activité.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

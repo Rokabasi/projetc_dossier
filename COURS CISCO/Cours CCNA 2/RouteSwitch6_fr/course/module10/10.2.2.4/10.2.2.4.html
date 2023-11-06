@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.4 Horodatage de service</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Horodatage de service</h1>
+        <div>
+          <p>Par défaut, les messages de journal ne sont pas horodatés. Par exemple, dans la figure, l'interface GigabitEthernet 0/0 de R1 est arrêtée. Le message journalisé dans la console n'identifie pas la date/l'heure de changement de l'état de l'interface. Les messages de journal doivent être horodatés de sorte que lorsqu'ils sont envoyés à une autre destination, comme un serveur Syslog, il reste une trace du moment où le message a été généré. </p>
+          <p></p>
+          <p>Utilisez la commande <b>service timestamps log datetime</b> pour forcer les événements journalisés à afficher la date et l'heure. Comme le montre la figure, lorsque l'interface GigabitEthernet 0/0 de R1 est de nouveau activée, les messages de journal contiennent maintenant la date et l'heure.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : si vous utilisez le mot clé <b>datetime</b>, vérifiez que l'horloge du périphérique réseau est définie manuellement, ou via NTP, comme indiqué précédemment. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre R1 configuré avec la commande « service timestamps log datetime » pour forcer les messages de journal à afficher la date et l'heure.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

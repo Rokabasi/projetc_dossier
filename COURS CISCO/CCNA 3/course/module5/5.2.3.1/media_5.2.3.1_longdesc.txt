@@ -1,0 +1,1 @@
+La figure est un tableau qui compare le protocole RIP version 1 à RIP version 2.  Ceci est un résumé de la lecture.

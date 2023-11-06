@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.3 Route statique par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route statique par défaut</h1>
+        <div>
+          <p>Une route par défaut est une route correspondant à tous les paquets et utilisée par le routeur si un paquet ne correspond à aucune autre route plus spécifique dans la table de routage. Une route par défaut peut être apprise dynamiquement ou configurée de manière statique. Une route statique par défaut est simplement une route statique avec 0.0.0.0/0 comme adresse IPv4 de destination. La configuration d'une route statique par défaut crée une passerelle de dernier recours. </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>Les routes statiques par défaut sont utilisées :</p>
+          <p>
+            <ul>
+              <li>Quand aucune autre route de la table de routage ne correspond à l'adresse IP de destination du paquet. en d’autres termes, en l’absence d’une correspondance plus spécifique. Elles sont couramment utilisées lors de la connexion d’un routeur de périphérie d’une société au réseau ISP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Lorsqu’un routeur n’est connecté qu’à un seul autre routeur. Dans ce cas, le routeur est identifié en tant que routeur souche.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Reportez-vous à la figure pour un scénario de route par défaut de réseau souche.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un routeur sur Internet (R2) connecté à un routeur souche (R1).  Le routeur R1 se connecte à l’extérieur via une route statique par défaut qui pointe vers le routeur R2.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

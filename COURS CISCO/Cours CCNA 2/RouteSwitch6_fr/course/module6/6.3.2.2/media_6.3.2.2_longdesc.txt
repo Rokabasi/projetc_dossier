@@ -1,0 +1,1 @@
+La figure montre les commandes nécessaires afin de configurer un commutateur pour le routage inter-VLAN existant.

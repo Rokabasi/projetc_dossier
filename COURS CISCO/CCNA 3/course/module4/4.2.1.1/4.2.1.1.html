@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.1.1 Les instructions de configuration</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les instructions de configuration</h1>
+        <div>
+          <p>Les instructions et restrictions suivantes sont utiles pour la configuration d'EtherChannel :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Prise en charge d'EtherChannel </b>: toutes les interfaces Ethernet sur tous les modules doivent prendre en charge EtherChannel, sans que les interfaces soient nécessairement contiguës de manière physique ou sur le même module.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Débit et duplex </b>: configurez le même débit et le même mode duplex sur l'ensemble des interfaces d'un EtherChannel.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN correspondant </b>: toutes les interfaces d'une liaison EtherChannel doivent être attribuées au même VLAN, ou être configurées en tant que trunk (également illustré dans la figure).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plage de VLAN </b>: un EtherChannel prend en charge la même plage autorisée de VLAN sur toutes les interfaces d'un trunk EtherChannel. Si la plage autorisée de VLAN n'est pas identique, les interfaces ne forment pas un EtherChannel, même si elles sont définies en mode <b>auto </b>ou<b> desirable.</b></li>
+            </ul>
+          </p>
+          <p>La Figure 1 présente une configuration qui permettrait la formation d'une liaison EtherChannel entre S1 et S2. Dans la Figure 3, les ports S1 sont configurés en mode semi-duplex. Par conséquent, aucune liaison EtherChannel ne sera établie entre S1 et S2.</p>
+          <p></p>
+          <p>Si ces paramètres doivent être modifiés, configurez-les dans le mode de configuration de l'interface de canal de port. Toute configuration appliquée à l'interface de canal de port affecte également les autres interfaces. Cependant, les configurations appliquées à chaque interface n'affectent pas l'interface de canal de port. Par conséquent, modifier la configuration d'une interface appartenant à une liaison EtherChannel peut entraîner des problèmes de compatibilité d'interface.</p>
+          <p></p>
+          <p>Le canal de port peut être configuré en mode d'accès, en mode trunk (le plus couramment utilisé) ou sur un port routé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre deux topologies. Chaque topologie comporte deux commutateurs. Des connexions ont été établies entre les commutateurs sur deux ports.  Dans la première topologie, les ports connectés à chaque commutateur s'exécutent à un gigabit par seconde, se trouvent en mode full duplex et sont placés dans le VLAN 10.  Cette configuration permet de créer un canal EtherChannel.  Dans la deuxième topologie, les ports de chaque commutateur s'exécutent à un gigabit par seconde et sont placés dans le VLAN 10. Toutefois, un port fonctionne en mode semi-duplex et l'autre en mode duplex intégral.  Cette configuration ne permet pas de créer de canal EtherChannel.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

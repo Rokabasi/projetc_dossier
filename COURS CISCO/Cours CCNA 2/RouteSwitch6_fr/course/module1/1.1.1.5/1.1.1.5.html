@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.1.5 Les routeurs choisissent les meilleurs chemins</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les routeurs choisissent les meilleurs chemins</h1>
+        <div>
+          <p>Les principales fonctions d'un routeur sont les suivantes :</p>
+          <p>
+            <ul>
+              <li>Déterminer le meilleur chemin pour l'envoi des paquets </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Transférer les paquets vers leur destination</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le routeur utilise sa table de routage pour déterminer le meilleur chemin à utiliser pour transférer un paquet. Lorsque le routeur reçoit un paquet, il examine l'adresse de destination du paquet et utilise la table de routage pour rechercher le meilleur chemin vers ce réseau. La table de routage contient également l'interface à utiliser pour transmettre des paquets vers chaque réseau connu. Une fois qu'une correspondance a été trouvée, le routeur encapsule le paquet dans la trame liaison de données de l'interface sortante ou de sortie et le paquet est transféré vers sa destination.</p>
+          <p></p>
+          <p>Il est possible qu'un routeur reçoive un paquet encapsulé dans un type de trame liaison de données et transfère le paquet depuis une interface qui utilise un autre type de trame liaison de données. Par exemple, un routeur peut recevoir un paquet sur une interface Ethernet, mais doit le transférer à partir d'une interface configurée avec le protocole PPP (Point-to-Point Protocol). L'encapsulation de la liaison de données dépend du type d'interface présente sur le routeur et du type de support auquel celui-ci est connecté. Les différentes technologies de liaison de données auxquelles un routeur peut se connecter incluent Ethernet, PPP, Frame Relay, DSL, câble et sans fil (802.11, Bluetooth, etc.).</p>
+          <p></p>
+          <p>L'animation de la figure suit un paquet du PC source à l'ordinateur de destination. Notez que le routeur doit trouver le réseau de destination dans sa table de routage et transférer le paquet vers sa destination. Dans cet exemple, le routeur R1 reçoit le paquet encapsulé dans une trame Ethernet. Après avoir désencapsulé le paquet, R1 utilise l'adresse IP de destination du paquet pour rechercher dans sa table de routage une adresse réseau correspondante. Une fois qu’une adresse réseau de destination est trouvée dans cette table, R1 encapsule le paquet dans une trame PPP et transfère le paquet à R2. R2 effectue un processus similaire.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: les routeurs utilisent des routes statiques et des protocoles de routage dynamique pour découvrir des réseaux distants et créer leurs tables de routage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre deux LAN. Chaque LAN a un routeur. Les LAN sont connectés les uns aux autres par un lien WAN.  Chaque routeur a un commutateur connecté à un port Ethernet, et chaque commutateur a plusieurs périphériques locaux qui y sont connectés.  Une animation montre un paquet en cours d’envoi depuis un ordinateur sur un LAN vers un ordinateur sur un autre LAN.  Le paquet circule d'abord vers le commutateur, puis vers le routeur.  Lorsque le routeur reçoit le paquet, il l'examine et localise l'adresse IP de destination. Le routeur analyse sa table de routage pour déterminer le chemin à utiliser pour acheminer le paquet.  Le routeur transfère le paquet au port série et le transmet à l'autre routeur.  Ce routeur reçoit le paquet sur l’interface série et effectue également les processus d’analyse des adresses IP et de consultation de la table de routage.  Il transfère le paquet à son interface Ethernet puis le transmet au commutateur, qui achemine le paquet à l’ordinateur de destination.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

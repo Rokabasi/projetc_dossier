@@ -1,0 +1,1 @@
+La Figure 1 est un exercice interactif dans lequel le stagiaire peut associer les termes FHRP à leur description. La Figure 2 est un exercice interactif dans lequel le stagiaire peut s'entraîner à identifier le routeur virtuel, le routeur de transfert et le routeur de secours dans une topologie.

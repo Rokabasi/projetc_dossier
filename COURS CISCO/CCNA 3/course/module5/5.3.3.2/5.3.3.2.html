@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.3.2 Inconvénients des protocoles à état de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Inconvénients des protocoles à état de liens</h1>
+        <div>
+          <p>Comme le récapitule la Figure 1, les protocoles à état de liens présentent quelques inconvénients par rapport aux protocoles de routage à vecteur de distance :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Besoins en matière de mémoire</b> - Les protocoles à état de liens nécessitent des capacités mémoire supplémentaires pour créer et mettre à jour la base de données d'états de liens et l'arborescence SPF.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Besoins en matière de traitement</b> - Les protocoles à état de liens peuvent également nécessiter davantage de temps processeur que leurs homologues à vecteur de distance. L'algorithme SPF a besoin de davantage de temps processeur que les algorithmes à vecteur de distance tels que Bellman-Ford, car les protocoles à état de liens construisent une carte topologique complète. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Besoins en matière de bande passante</b> - La diffusion de paquets à état de liens peut affecter la bande passante disponible sur le réseau de plusieurs façons. Il se peut que cela ne se produise que pendant le démarrage initial des routeurs, mais peut s’avérer problématique sur les réseaux instables.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Toutefois, les protocoles de routage à état de liens modernes sont conçus pour limiter les effets sur la mémoire, le processeur et la bande passante. L’utilisation et la configuration de plusieurs zones permettent de réduire la taille des bases de données à état de liens. Les zones multiples permettent de limiter la quantité d'informations d'état de liens diffusées dans un domaine de routage et permettent de n'envoyer les paquets LSP qu'aux routeurs qui en ont besoin. Lorsqu'une modification de la topologie se produit, seuls les routeurs de la zone concernée reçoivent le paquet LSP et exécutent l'algorithme SPF. Cela peut permettre d’isoler un lien instable dans une zone spécifique du domaine de routage. </p>
+          <p></p>
+          <p>Par exemple, dans la Figure 2, il y a trois domaines de routage séparés : la zone 1, la zone 0 et la zone 51. Si un réseau de la zone 51 tombe en panne, le paquet LSP contenant les informations sur le lien interrompu est uniquement diffusé vers les autres routeurs de cette zone. Seuls les routeurs de la zone 51 doivent mettre à jour leurs bases de données d'états de liens, ré-exécuter l'algorithme SPF, créer une nouvelle arborescence SPF et mettre à jour leurs tables de routage. Les routeurs des autres zones découvrent que cette route est interrompue, mais par un type de paquet LSP ne nécessitant pas la ré-exécution de leur algorithme SPF. Les routeurs des autres zones peuvent mettre à jour leurs tables de routage directement. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les inconvénients du routage à état de liens. La Figure 2 présente trois ensembles de cinq routeurs séparés en domaines appelés zones.  Elle illustre le fait que les paquets à état de liens provenant d'une zone ne sont pas diffusés dans les autres zones.  Par exemple, si un lien d'une zone est défaillant, seuls les autres routeurs de cette zone reçoivent un paquet à état de liens de mise à jour concernant le lien défaillant.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

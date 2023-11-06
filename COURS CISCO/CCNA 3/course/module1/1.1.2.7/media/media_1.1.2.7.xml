@@ -1,0 +1,72 @@
+<textcomponents>
+
+<component id='ID_inst'>
+	<text><![CDATA[<b>Exercice : identification de la terminologie de l&apos;évolutivité</b><br/>Associez chaque terme de conception d&apos;évolutivité de réseau à sa description.]]></text>
+</component><!--Drag and Drop--><component id='ID_drag01'>
+	<text><![CDATA[<font color="#393536">Redondance</font>]]></text>
+</component>
+
+<component id='ID_drag02'>
+	<text><![CDATA[<font color="#393536">Agrégation de liens</font>]]></text>
+</component>
+
+<component id='ID_drag03'>
+	<text><![CDATA[<font color="#393536">OSPF</font>]]></text>
+</component>
+
+<component id='ID_drag04'>
+	<text><![CDATA[<font color="#393536">EIGRP</font>]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque terme de conception d&apos;évolutivité de réseau à sa description.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque terme de conception d&apos;évolutivité de réseau à sa description. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+<component id='ID_target_header'>
+	<text><![CDATA[<b>Conditions</b>]]></text>
+</component>
+<component id='ID_text_header'>
+	<text><![CDATA[<b>Descriptions</b>]]></text>
+</component>
+
+
+
+<component id="ID_txt01">
+	<text><![CDATA[Protocole avec comportements à vecteur de distance.]]></text>
+</component>
+
+<component id="ID_txt02">
+  <text><![CDATA[Autre chemin de données.]]></text>
+</component>
+
+<component id="ID_txt03">
+  <text><![CDATA[Plusieurs liens d&apos;interface Ethernet regroupés en un seul<br>canal de bande passante. ]]></text>
+</component>
+
+<component id="ID_txt04">
+  <text><![CDATA[Protocole utilisant une zone fédératrice.]]></text>
+</component>   
+</textcomponents>

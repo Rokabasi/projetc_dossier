@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.1.6 Sauvegarde et restauration par USB</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Sauvegarde et restauration par USB</h1>
+        <div>
+          <p>
+            <b>Sauvegarde des configurations à l'aide d'un disque Flash USB</b>
+          </p>
+          <p></p>
+          <p>Lorsque vous effectuez une sauvegarde vers un port USB, il est recommandé d'exécuter la commande <b>show file systems</b> pour vérifier que le disque USB est connecté et pour confirmer son nom, comme le montre la figure 1. </p>
+          <p></p>
+          <p>Ensuite, utilisez la commande <b>copy run usbflash0:</b><i>/</i> pour copier le fichier de configuration sur la clé USB à mémoire Flash. Veillez à utiliser le nom du disque Flash tel qu'il apparait dans le système de fichiers. La barre oblique est facultative et indique le répertoire racine du disque Flash USB. </p>
+          <p></p>
+          <p>IOS vous invite à indiquer le nom du fichier. Si le fichier existe déjà sur le périphérique USB, le routeur demande s'il peut le remplacer, comme le montre la figure 2.</p>
+          <p></p>
+          <p>Utilisez la commande <b>dir</b> pour afficher le fichier sur le disque USB et la commande <b>more</b> pour voir le contenu, comme l'illustre la figure 3.</p>
+          <p></p>
+          <p>
+            <b>Restauration des configurations à l'aide d'un disque Flash USB</b>
+          </p>
+          <p></p>
+          <p>Pour copier le fichier, il est nécessaire de modifier le fichier USB R1-Config au moyen d'un éditeur de texte.  En supposant que le nom du fichier est <b>R1-Config</b>, utilisez la commande <b>copy usbflash0:/R1-Config </b><i>running-config</i> pour restaurer la configuration en cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la sortie de la commande « show file systems » sur un routeur.  Le système de fichiers « usbflash0: » est mis en surbrillance. La Figure 2 affiche la sortie de la commande « copy running-config usbflash0: » deux fois.  Une fois lorsque le fichier de destination n'existe pas et une fois lorsqu'il existe.  Si le fichier de destination existe déjà, l'utilisateur est invité à l'écraser. La Figure 3 montre la sortie de la commande « dir usbflash0:/ ».  Elle montre également la capacité à afficher le fichier R1-config dans la mémoire Flash via la commande « more usbflash0:/R1-Config ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

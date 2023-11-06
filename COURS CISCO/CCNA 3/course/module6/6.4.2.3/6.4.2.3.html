@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.2.3 Configuration du protocole EIGRP pour le processus de routage IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration du protocole EIGRP pour le processus de routage IPv6</h1>
+        <div>
+          <p>La commande de mode de configuration globale<b> ipv6 unicast-routing </b>active le routage IPv6 sur le routeur. Cette commande doit être exécutée avant la configuration d'un protocole de routage IPv6. Cette commande n'est pas indispensable pour configurer les adresses IPv6 des interfaces, mais elle est nécessaire pour activer le routeur comme routeur IPv6.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6 </b>
+          </p>
+          <p></p>
+          <p>La commande de mode de configuration globale suivante permet d'entrer dans le mode de configuration du routeur pour le protocole EIGRP pour IPv6 :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>ipv6</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <b>router eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>autonomous-system</i>
+            </span>
+          </p>
+          <p></p>
+          <p>Tout comme EIGRP pour IPv4, la valeur <i>autonomous-system </i>doit être la même sur tous les routeurs dans le domaine de routage. À la Figure 1, le processus de routage EIGRP pour IPv6 n'a pu être configuré qu'une fois le routage IPv6 activé à l'aide de la commande de mode de configuration globale<b> ipv6 unicast-routing</b>.</p>
+          <p></p>
+          <p>
+            <b>Configuration de l'ID de routeur</b>
+          </p>
+          <p></p>
+          <p>Comme indiqué à la Figure 2, la commande<b> eigrp router-id </b>sert à configurer l'ID de routeur. Le protocole EIGRP pour IPv6 utilise un ID de routeur 32 bits. Pour obtenir cette valeur, le protocole EIGRP pour IPv6 utilise le même processus que le protocole EIGRP pour IPv4. La commande<b> eigrp router-id </b>prime sur toute adresse de bouclage ou d'interface physique IPv4. Si un routeur EIGRP pour IPv6 ne dispose d'aucune interface active avec une adresse IPv4, la commande<b> eigrp router-id </b>doit être exécutée.</p>
+          <p></p>
+          <p>L'ID de routeur doit être un nombre de 32 bits unique dans le domaine de routage IP EIGRP ; sinon, des incohérences peuvent apparaître au niveau du routage.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la commande<b> eigrp router-id </b>est utilisée pour configurer l'ID de routeur pour le protocole EIGRP. Certaines versions d'IOS acceptent la commande<b> router-id</b>, sans la spécification préalable de l'option<b> eigrp</b>. Toutetefois, l'option running-config, affichera<b> eigrp router-id </b>quelle que soit la commande utilisée.</p>
+          <p></p>
+          <p>Par défaut, le processus EIGRP pour IPv6 est désactivé. Vous devez exécuter la commande<b> no shutdown </b>pour activer le processus EIGRP pour IPv6, comme indiqué à la Figure 3. Cette commande n'est pas nécessaire pour le protocole EIGRP pour IPv4. Bien que le processus EIGRP pour IPv6 soit activé, il est impossible d'envoyer et de recevoir des mises à jour de routage et des contiguïtés de voisinage tant que le protocole EIGRP n'est pas activé sur les interfaces appropriées. </p>
+          <p></p>
+          <p>Vous avez besoin de la commande<b> no shutdown </b>et d'un ID de routeur pour établir des contiguïtés de voisinage du routeur.</p>
+          <p></p>
+          <p>La Figure 4 montre la configuration EIGRP pour IPv6 complète pour le routeur R2.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 5 pour configurer le processus EIGRP pour IPv6 sur le routeur R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la syntaxe de configuration du routage IPv6 pour le protocole EIGRP sur le routeur 1. La Figure 2 présente la syntaxe de configuration de l'ID de routeur EIGRP sur le routeur 1. La Figure 3 présente la commande « no shut down » après la configuration de l'ID de routeur EIGRP sur le routeur 1.  Cette commande permet d'activer le processus de routage EIGRP pour IPv6, qui est par défaut indisponible. La Figure 4 présente le processus de configuration du protocole EIGRP pour IPv6, notamment l'ID de routeur et la commande no shut down sur le routeur 2. La Figure 5 est un exercice interactif qui permet au stagiaire de s'entraîner à configurer le protocole EIGRP pour IPv6, notamment l'ID de routeur et la commande no shut down sur le routeur 3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

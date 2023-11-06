@@ -1,0 +1,25 @@
+﻿<textcomponents>
+
+
+<component id="ID_s3_title">
+<text><![CDATA[<b>Qualité de service (QoS)</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt01">
+<text><![CDATA[Internet]]></text> 
+</component>
+
+<component id="ID_s3_txt02">
+<text><![CDATA[La qualité de service, gérée par le routeur, veille à ce que les priorités correspondent au type de la communication et à son importance pour l'entreprise.]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+<text><![CDATA[Les pages web se voient généralement affecter une priorité moins élevée.]]></text> 
+</component>
+
+
+<component id="ID_s3_txt04">
+<text><![CDATA[La transmission multimédia en continu a besoin de se voir attribuer une priorité permettant de maintenir une expérience utilisateur homogène et ininterrompue.]]></text> 
+</component>
+
+</textcomponents>

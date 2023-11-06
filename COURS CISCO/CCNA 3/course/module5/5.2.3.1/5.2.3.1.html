@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.3.1 Le protocole RIP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le protocole RIP</h1>
+        <div>
+          <p>Le protocole RIP (Routing Information Protocol) était un protocole de routage de première génération pour le protocole IPv4 initialement défini dans le document RFC 1058. Il est facile à configurer, ce qui en fait un bon choix pour les petits réseaux. </p>
+          <p></p>
+          <p>Les principales caractéristiques du protocole RIPv1 sont les suivantes :</p>
+          <p>
+            <ul>
+              <li>Les mises à jour de routage sont diffusées (255.255.255.255) toutes les 30 secondes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le nombre de sauts est utilisé comme métrique de sélection d'un chemin.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un nombre de sauts supérieur à 15 est considéré comme étant infini (trop loin). Le routeur de ce 15e saut ne propagerait pas la mise à jour de routage au routeur suivant. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>En 1993, RIPv1 a été mis à jour pour en faire un protocole de routage sans classe appelé RIP version 2 (RIPv2). RIPv2 intégrait les améliorations suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole de routage sans classe</b> - Prend en charge VLSM et CIDR, car il inclut le masque de sous-réseau dans les mises à jour de routage. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Efficacité accrue</b> - Transmet les mises à jour à l'adresse de multidiffusion 224.0.0.9, au lieu de l'adresse de diffusion 255.255.255.255. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Entrées de routage réduites</b> - Prend en charge la récapitulation de route manuelle sur n'importe quelle interface.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sécurité</b> - Prend en charge un mécanisme d'authentification visant à sécuriser les mises à jour des tables de routage entre les voisins. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La table dans la figure récapitule les différences entre les protocoles RIPv1 et RIPv2. </p>
+          <p></p>
+          <p>Les mises à jour RIP sont encapsulées dans un segment UDP, avec les numéros de ports source et de destination définis sur le port UDP 520.  </p>
+          <p>En 1997, la version IPv6 du protocole RIP a été publiée. RIPng repose sur le protocole RIPv2. Il est toujours limité à 15 sauts et la distance administrative est de 120.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est un tableau qui compare le protocole RIP version 1 à RIP version 2.  Ceci est un résumé de la lecture.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Configuration et vérification des routes d&apos;hôte IPv4 et IPv6</b>]]></text>
+	</component>
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Route d&apos;hôte IPv6 entièrement spécifiée avec l&apos;adresse link-local de tronçon suivant</b>]]></text>
+	</component>
+	
+
+	<component id='ID_s1_txt01'>
+		<text><![CDATA[&lt;résultat omis&gt;]]></text>
+	</component>
+	<component id='ID_s1_txt02'>
+		<text><![CDATA[Serveur]]></text>
+	</component>
+	<component id='ID_s1_txt03'>
+		<text><![CDATA[Filiale]]></text>
+	</component>
+
+	<component id='ID_s2_txt01'>
+		<text><![CDATA[&lt;résultat omis&gt;]]></text>
+	</component>
+	<component id='ID_s2_txt02'>
+		<text><![CDATA[Serveur]]></text>
+	</component>
+	<component id='ID_s2_txt03'>
+		<text><![CDATA[Filiale]]></text>
+	</component>
+
+	<component id="ID_s3_title">
+        <text><![CDATA[<b>Configurer des routes statiques de l’hôte</b>]]></text>
+	</component>
+
+	<component id="ID_s3_reset">
+			<text><![CDATA[Réinitialiser]]></text>
+		</component>
+
+        <component id="ID_s3_showme">
+			<text><![CDATA[Démonstration]]></text>
+		</component>
+
+        <component id="ID_s3_showall">
+			<text><![CDATA[Afficher tout]]></text>
+		</component><!--End Syntax Checker Button Text--><component id="ID_s3_SC" fontSize="12" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><font face="_sans" color="#FFF">***Vous devez entrer la commande exacte et complète. Les commandes qui incluent un nom ou un mot de passe sont sensibles à la casse.***</font></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b><ul>Affichez les tables de routage sur le routeur de la filiale.<li>Exécutez la commande pour afficher la table de routage IPv4.</li><li>Exécutez la commande permettant d’afficher la table de routage iPv6.</li></b></font>]]></existingcommands>
+                <command prompt="Branch#">
+                       <correctresponse><![CDATA[ show ip route]]></correctresponse>
+                                <deviceresponse><![CDATA[Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP<br>       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area<br>       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2<br>       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP<br>       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area<br>       * - candidate default, U - per-user static route, o - ODR<br>       P - periodic downloaded static route<br><br>Gateway of last resort is not set<br><br>     198.51.100.0/24 is variably subnetted, 2 subnets, 2 masks<br>C 198.51.100.0/30 is directly connected, Serial0/0/1<br>L 198.51.100.2/32 is directly connected, Serial0/0/1<br>]]></deviceresponse>
+              </command>
+                <command prompt="Branch#">
+                       <correctresponse><![CDATA[ show ipv6 route]]></correctresponse>
+                                <deviceresponse><![CDATA[IPv6 Routing Table - 3 entries<br>Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP<br>       U - Per-user Static route, M - MIPv6<br>       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary<br>       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2<br>       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2<br>       D - EIGRP, EX - EIGRP external<br>C 2001:DB8:ACAD::/64 [0/0]<br>     via Serial0/0/1, directly connected<br>L 2001:DB8:ACAD::2/128 [0/0]<br>     via Serial0/0/1, receive<br>L FF00::/8 [0/0]<br>     via Null0, receive<br>]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b><ul>Entrez en mode de configuration globale pour configurer les éléments suivants :<li>Une route IPv4 statique vers un hôte dont l’adresse est 209.165.200.238 et l’interface de sortie est Serial0/0/1.</li><li>Une route IPv6 statique vers un hôte dont l’adresse est 2001:DB8:ACAD::2 et l’interface de sortie est Serial0/0/1.</li><li>Quittez le mode de configuration globale.</li></font>]]></instruction>
+              </command>
+                <command prompt="Branch#">
+                       <correctresponse><![CDATA[ configure terminal]]></correctresponse>
+              </command>
+                <command prompt="Branch(config)#">
+                       <correctresponse><![CDATA[ ip route 209.165.200.238 255.255.255.255 Serial0/0/1]]></correctresponse>
+              </command>
+                <command prompt="Branch(config)#">
+                       <correctresponse><![CDATA[ ipv6 route 2001:DB8:ACAD::2/128 Serial0/0/1]]></correctresponse>
+              </command>
+                <command prompt="Branch(config)#">
+                       <correctresponse><![CDATA[ exit]]></correctresponse>
+                       <instruction><![CDATA[<font face="_sans"><b><ul>Affichez les tables de routage sur le routeur de la filiale.<li>Exécutez la commande pour afficher la table de routage IPv4.</li><li>Exécutez la commande permettant d’afficher la table de routage iPv6.</li></font>]]></instruction>
+              </command>
+                <command prompt="Branch#">
+                       <correctresponse><![CDATA[ show ip route]]></correctresponse>
+                                <deviceresponse><![CDATA[Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP<br>       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area<br>       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2<br>       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP<br>       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area<br>       * - candidate default, U - per-user static route, o - ODR<br>       P - periodic downloaded static route<br><br>Gateway of last resort is not set<br><br>     198.51.100.0/24 is variably subnetted, 2 subnets, 2 masks<br>C 198.51.100.0/30 is directly connected, Serial0/0/1<br>L 198.51.100.2/32 is directly connected, Serial0/0/1<br>     209.165.200.0/32 is subnetted, 1 subnets<br>S 209.165.200.238/32 is directly connected, Serial0/0/1]]></deviceresponse>
+              </command>
+                <command prompt="Branch#">
+                       <correctresponse><![CDATA[ show ipv6 route]]></correctresponse>
+                                <deviceresponse><![CDATA[IPv6 Routing Table - 4 entries<br>Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP<br>       U - Per-user Static route, M - MIPv6<br>       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary<br>       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2<br>       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2<br>       D - EIGRP, EX - EIGRP external<br>       S 2001:DB8:ACAD::2/128 [1/0]<br>       via Serial0/0/1, directly connected<br>       C 2001:DB8:CAFE::/64 [0/0]<br>       via Serial0/0/1, directly connected<br>       L 2001:DB8:CAFE::2/128 [0/0]<br>       via Serial0/0/1, receive<br>       L FF00::/8 [0/0]<br>       via Null0, receive]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Vous avez correctement configuré les routes d’hôtes statiques.</font>]]></instruction>
+              </command>
+<command prompt=""/>
+ </component>
+</textcomponents>

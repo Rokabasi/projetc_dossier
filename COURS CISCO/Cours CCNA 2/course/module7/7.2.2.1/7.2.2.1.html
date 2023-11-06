@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.1 Méthode 1 : à l&#x0027;aide d&#x0027;un éditeur de texte</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Méthode 1 : à l&#x0027;aide d&#x0027;un éditeur de texte</h1>
+        <div>
+          <p>Si vous êtes habitué à créer et à modifier des listes de contrôle d'accès, il peut être plus facile de les rédiger dans un éditeur de texte tel que le Bloc-notes Microsoft. Ainsi, vous pourrez créer ou modifier une liste, puis la coller dans l'interface du routeur. Si vous souhaitez modifier une liste de contrôle d'accès existante, vous pouvez utiliser la commande <b>show running-config</b> pour afficher la liste de contrôle d'accès, la copier/coller dans un éditeur de texte, effectuer les changements nécessaires, puis la coller à nouveau dans l'interface du routeur. </p>
+          <p></p>
+          <p>
+            <b>Configuration</b> : supposons, par exemple, que l'adresse d'hôte IPv4 de la figure a été mal saisie. L’hôte 192.168.10.99 a été entré alors que c’est l’hôte 192.168.10.10 qui aurait du l’être. Voici la procédure à suivre pour modifier et corriger l'ACL 1 :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. </b>Affichez la liste de contrôle d'accès à l'aide de la commande <b>show running-config</b>. L'exemple de la figure utilise le mot-clé <b>include</b> (inclure) pour afficher uniquement les ACE.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>Mettez en surbrillance la liste de contrôle d'accès, copiez-la, puis collez-la dans le Bloc-notes Microsoft. Modifiez la liste comme nécessaire. Une fois que la liste de contrôle d'accès est correcte dans le Bloc-notes Microsoft, mettez-la en surbrillance et copiez-la.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. </b>En mode de configuration globale, supprimez la liste d'accès à l'aide de la commande <b>no access-list 1</b>. Sinon, les nouvelles instructions sont ajoutées à la liste de contrôle d’accès existante. Collez ensuite la nouvelle liste de contrôle d'accès dans la configuration du routeur.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. </b>Vérifiez les modifications à l'aide de la commande <b>show running-config</b>.</p>
+          <p></p>
+          <p>Remarque : l'effet de la commande <b>no access-list</b> est différent selon la version du logiciel IOS. Si la liste de contrôle d'accès qui a été supprimée est toujours appliquée à une interface, certaines versions d'IOS agissent comme si aucune liste de contrôle d'accès ne protégeait votre réseau tandis que d'autres refusent tout le trafic. Il est donc recommandé de supprimer de l'interface la référence à la liste d'accès avant de la modifier. Si la nouvelle liste contient une erreur, désactivez-la et corrigez le problème. Dans ce cas, sachez que le réseau est dépourvu de toute liste de contrôle d'accès lors du processus de correction.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le processus d'utilisation d'un éditeur de texte pour modifier une liste de contrôle d'accès numérotée.  La première commande crée une liste de contrôle d'accès numérotée avec le numéro 1. La liste de contrôle d'accès peut être affichée au moyen de la commande « show running-config pipe include access-list 1 ».  La liste de contrôle d'accès peut être copiée et collée dans un éditeur de texte puis modifiée.  La liste de contrôle d'accès actuelle est supprimée de l'interface en utilisant le mot clé « no ». La nouvelle liste de contrôle d'accès peut être ensuite collée et vérifiée au moyen de la commande « show running-config pipe include access-list 1 ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

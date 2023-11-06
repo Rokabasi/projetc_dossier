@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.6 Ports en état Error Disabled</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Ports en état Error Disabled</h1>
+        <div>
+          <p>Lorsque la sécurité des ports est configurée sur un port, ce dernier peut passer en mode de désactivation des erreurs (Error Disabled) à la suite d'une violation. Lorsqu'un port passe en mode de désactivation des erreurs, il est désactivé et ne peut plus ni envoyer ni recevoir de trafic. Une série de messages relatifs à la sécurité des ports s'affiche sur la console (Figure 1). </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: le protocole et l'état de la liaison du port passent à l'état down.</p>
+          <p></p>
+          <p>Le témoin LED du port s'éteint. La commande<b> show interfaces </b>identifie l'état du port comme étant<b> err-disabled </b>(Figure 2). Le résultat de la commande<b> show port-security interface </b>indique désormais que l'état du port est passé à<b> secure-shutdown</b>. Étant donné que le mode de violation du port est défini sur shutdown, le port sujet à une violation de sécurité passe en mode de désactivation des erreurs. </p>
+          <p></p>
+          <p>L'administrateur doit déterminer la cause de la violation de sécurité avant de réactiver le port. Si un périphérique non autorisé est connecté à un port sécurisé, le port ne doit pas être réactivé tant que la menace de sécurité n'a pas été éliminée. Pour réactiver le port, exécutez la commande de mode de configuration d'interface<b> shutdown </b>(Figure 3). Exécutez ensuite la commande de mode de configuration de d'interface <b>no shutdown</b> pour que le port fonctionne.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche des messages d'erreur envoyés à la console d'un commutateur lorsqu'un port passe à l'état désactivé par erreur.  Le message contient de nombreux détails concernant la violation et inclut l'adresse MAC qui a entraîné la violation. La Figure 2 affiche le résultat de la commande « show interface fast Ethernet 0/18 ».  Le résultat affiche des informations sur le port, y compris le statut comme étant « err-disabled ».  La Figure 2 affiche également le résultat de la commande « show port-security interface fast Ethernet 0/18 ».  Cette sortie affiche des informations complémentaires concernant la sécurité du port spécifique, y compris les détails de la violation. La Figure 3 affiche le processus de réactivation d’un port qui a été arrêté en raison d’une violation de sécurité.  La figure commence en mode de configuration globale et passe au port avec la commande « interface fast Ethernet 0 ».  Le port est arrêté avec la commande « shutdown ».  Le port est activé avec la commande « no shut ».  Le port fonctionne maintenant de nouveau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

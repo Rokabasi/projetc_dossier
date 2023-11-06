@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.2 Vérifier des paramètres généraux du protocole OSPFv2 à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier des paramètres généraux du protocole OSPFv2 à zones multiples</h1>
+        <div>
+          <p>Utilisez la commande <b>show ip protocols</b> pour vérifier le statut OSPFv2. La sortie de la commande indique les protocoles de routage qui sont configurés sur un routeur. Elle présente également des détails sur ces protocoles, tels que l’ID du routeur, le nombre de zones dans le routeur et les réseaux inclus dans la configuration des protocoles de routage. </p>
+          <p></p>
+          <p>La Figure 1 présente les paramètres OSPFv2 de R1. Notez que la commande montre qu'il y a deux zones. La section Routing for Networks identifie les réseaux et leurs zones respectives.</p>
+          <p></p>
+          <p>Utilisez la commande <b>show ip ospf interface brief</b> pour afficher des informations concises et spécifiques à OSPFv2 sur les interfaces OSPFv2. Cette commande révèle des informations utiles, telles que l'ID de processus OSPFv2 attribué à l'interface, la zone contenant les interfaces et le coût des différentes interfaces. </p>
+          <p></p>
+          <p>La commande indiquée à la Figure 2 vérifie les interfaces OSPFv2 et les zones auxquelles elles appartiennent.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe à la Figure 3 pour vérifier les paramètres généraux sur R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de l'exécution de la commande « show ip protocols » dans un réseau OSPF à zones multiples. L'image indique le nombre de zones auxquelles le routeur appartient et les réseaux acheminés. La Figure 2 présente le résultat de la commande « show ip ospf interface brief » et met en évidence la colonne qui répertorie les zones dans lesquelles les interfaces sont connectées. La Figure 3 présente le résultat de l'exécution des commandes « show ip protocols » et « show ip ospf interface brief » sur deux routeurs connectés dans un réseau OSPF à zones multiples.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

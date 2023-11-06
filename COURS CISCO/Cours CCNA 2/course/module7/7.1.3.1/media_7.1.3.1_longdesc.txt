@@ -1,0 +1,1 @@
+La figure présente un routeur avec deux interfaces actives. Les interfaces entrantes et sortantes exécutent IPv4 et IPv6.  Avec deux interfaces et deux protocoles, ce routeur peut avoir un total de huit listes de contrôle d’accès distinctes appliquées.

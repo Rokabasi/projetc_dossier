@@ -1,0 +1,1 @@
+La figure présente trois routeurs interconnectés.  Le LAN du routeur 2 est en panne.  Un paquet de demande se déplace du routeur 2 aux routeurs 1 et 3.  Les routeurs 1 et 3 renvoient un paquet de réponse au routeur 2.

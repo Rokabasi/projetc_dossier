@@ -1,0 +1,1 @@
+La figure affiche le schéma standard de l’atelier avec la sortie de la commande « show ip route static ».  Elle indique les relations entre la passerelle de dernier recours au sommet de la sortie et la route statique par défaut en bas.

@@ -1,0 +1,1 @@
+Cette activité interactive fournit les ID de pont et les types de liaison. À l'aide de ces informations, le stagiaire est invité à identifier les différents rôles de port sur une topologie.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.4 Les conséquences des défaillances du mode Spanning Tree</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les conséquences des défaillances du mode Spanning Tree</h1>
+        <div>
+          <p>La Figure 1 présente un réseau STP fonctionnel. Mais que se passe-t-il en cas de défaillance STP ? Il y a deux types de défaillances STP. D'abord, le protocole STP peut bloquer par erreur des ports qui auraient dû passer à l'état de réacheminement. Il est possible que la connectivité soit perdue pour le trafic qui normalement transiterait par le commutateur, mais que le reste du réseau fonctionne normalement. Ensuite, le protocole STP peut placer par erreur un ou plusieurs ports à l'état de réacheminement, comme pour S4 sur la Figure 2.</p>
+          <p></p>
+          <p>Souvenez-vous que l'en-tête de trame Ethernet n'inclut pas de champ TTL, ce qui signifie que toute trame entrant dans une boucle de pontage est retransmise indéfiniment par les commutateurs. Les seules exceptions sont les trames ayant une adresse de destination enregistrée dans la table d'adresses MAC des commutateurs. Ces trames sont simplement réacheminées vers le port associé à l'adresse MAC, et n'entrent pas dans une boucle. Cependant, toute trame envoyée en continu par un commutateur entre dans la boucle (Figure 2). Il peut s'agir de trames de diffusion, de multidiffusion et de monodiffusion avec une adresse MAC de destination globalement inconnue.</p>
+          <p></p>
+          <p>Quels sont les conséquences et les symptômes d'une défaillance STP (Figure 3) ?</p>
+          <p></p>
+          <p>La charge appliquée sur tous les liens d'un réseau local commuté augmente rapidement, du fait du nombre croissant de trames entrant dans la boucle. Ce problème ne se limite pas aux liens qui forment la boucle, mais affecte également tous les autres liens du domaine commuté car les trames inondent l'ensemble des liens. Lorsque la défaillance STP est limité à un VLAN, seuls les liens de ce VLAN sont affectés. Les commutateurs et les trunks qui ne portent pas le VLAN fonctionnent normalement.</p>
+          <p></p>
+          <p>Si la défaillance STP a créé une boucle de pontage, le trafic augmente de manière exponentielle. Les commutateurs inondent alors les ports de trames de diffusion. Une copie de chaque trame est créée à chaque fois qu'un commutateur la réachemine.</p>
+          <p></p>
+          <p>Lorsque le trafic de plan de contrôle commence à entrer dans la boucle (par exemple en routant les messages), les appareils qui exécutent ces protocoles sont rapidement surchargés. Leurs processeurs approchent une utilisation de 100 %, en tentant de traiter une charge croissante de trafic de plan de contrôle. Dans de nombreux cas, le premier symptôme de cette tempête de diffusion est que les routeurs ou les commutateurs de couche 3 signalent des défaillances de plan de contrôle et fonctionnent à charge de processeur élevée. </p>
+          <p></p>
+          <p>Les commutateurs subissent de fréquents changements au niveau de la table d'adresses MAC. Si une boucle existe, le commutateur peut observer sur un port une trame présentant une certaine adresse MAC source, puis une autre trame présentant la même adresse MAC source arrivant sur un port différent une fraction de seconde plus tard seulement. Dans un tel cas, le commutateur met à jour sa table d'adresses MAC deux fois, pour la même adresse MAC.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente quatre commutateurs qui sont interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.  Les priorités et les adresses MAC sont répertoriées pour chaque commutateur. La Figure 2 présente quatre commutateurs qui sont interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.   Le commutateur quatre comporte un port qui a basculé par erreur de blocage à réacheminement. La Figure 3 présente quatre commutateurs qui sont interconnectés.  Chaque port est étiqueté avec le mode qui lui est associé. Le commutateur 2 est identifié comme étant le pont racine.  Un paquet entre dans le réseau par le commutateur trois et rebondit indéfiniment, car une boucle a été introduite dans la topologie.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.1 Résolution des problèmes de protocole VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Résolution des problèmes de protocole VTP</h1>
+        <div>
+          <p>Les problèmes courants liés à VTP sont les suivants :</p>
+          <p></p>
+          <p>Versions VTP incompatibles </p>
+          <p>
+            <ul>
+              <li>Les versions de VTP sont incompatibles les unes avec les autres. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Vérifiez que tous les commutateurs peuvent prendre en charge la version de VTP requise.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Problèmes liés aux mots de passe VTP </p>
+          <p>
+            <ul>
+              <li>Si l'authentification VTP est activée, le même mot de passe doit être configuré sur les commutateurs pour qu'ils puissent participer à VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Veillez à ce que le mot de passe soit configuré manuellement sur tous les commutateurs du domaine VTP. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Nom de domaine VTP incorrect </p>
+          <p>
+            <ul>
+              <li>Un domaine VTP mal configuré affecte la synchronisation des VLAN entre les commutateurs et si un commutateur reçoit une mauvaise annonce VTP, il supprime le message. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Pour éviter toute configuration incorrecte du nom de domaine VTP, définissez-le sur un seul commutateur de serveur VTP. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Tous les autres commutateurs du même domaine VTP accepteront et configureront automatiquement leur nom de domaine VTP en recevant la première annonce VTP de type résumé. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Définition de tous les commutateurs en mode client VTP</p>
+          <p>
+            <ul>
+              <li>Si tous les commutateurs du domaine VTP sont configurés en mode client, vous ne pouvez pas créer, supprimer et gérer les VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Pour éviter de perdre toutes les configurations de VLAN d'un domaine VTP, configurez deux commutateurs comme serveurs VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Numéro de révision de la configuration incorrect </p>
+          <p>
+            <ul>
+              <li>En cas d'ajout au domaine d'un commutateur portant le même nom de domaine VTP mais un numéro de configuration plus élevé, des VLAN non valides risquent d'être propagés et/ou des VLAN valides peuvent être supprimés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La solution consiste à réinitialiser chaque commutateur à une configuration antérieure puis à reconfigurer les VLAN corrects. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Avant d'ajouter un commutateur à un réseau compatible VTP, réinitialisez à 0 le numéro de révision sur le commutateur en l'affectant à un autre faux domaine VTP puis en le réaffectant au nom de domaine VTP correct.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente les problèmes courants associés à VTP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

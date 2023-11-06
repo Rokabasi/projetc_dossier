@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.2.2 Configuration d&#x0027;adresses link-local IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;adresses link-local IPv6</h1>
+        <div>
+          <p>Les adresses link-local sont créées automatiquement lorsqu'une adresse de monodiffusion globale IPv6 est attribuée à l'interface. Les adresses de monodiffusion globales ne sont pas obligatoires sur une interface ; en revanche, les adresses link-local IPv6 le sont, comme le montre la Figure 1.</p>
+          <p></p>
+          <p>Lorsqu'ils n'ont pas été configurés manuellement, les routeurs Cisco créent l'adresse link-local au moyen du préfixe FE80::/10 et du processus EUI-64. EUI-64 consiste à utiliser l'adresse MAC Ethernet 48-bit, à insérer FFFE au milieu et à manipuler le septième bit. Pour les interfaces série, Cisco utilise l'adresse MAC d'une interface Ethernet. Un routeur avec plusieurs interfaces série peut attribuer la même adresse link-local à chaque interface IPv6 puisque les adresses link-local doivent être uniquement locales sur le lien.</p>
+          <p></p>
+          <p>Il est difficile d'identifier et de mémoriser les adresses link-local créées au moyen du format EUI-64 ou, dans certains cas, les ID d'interface aléatoires. Étant donné que les protocoles de routage IPv6 utilisent des adresses link-local IPv6 pour l'adressage de monodiffusion et les informations d'adresse de tronçon suivant dans la table de routage, il est courant de définir des adresses facilement reconnaissables. La configuration manuelle de l'adresse link-local permet de créer une adresse qui est reconnaissable et plus facile à mémoriser.</p>
+          <p></p>
+          <p>Les adresses link-local peuvent être configurées manuellement avec la même commande de mode de configuration d'interface que celle utilisée pour créer des adresses de monodiffusion globale IPv6, mais avec des paramètres différents :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 address</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>link-local-address</i>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <b>link-local</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Une adresse link-local possède un préfixe dans la plage FE80 à FEBF. Lorsqu'une adresse commence par cet hextet (segment de 16 bits), le mot-clé <b>link-local</b> doit suivre l'adresse. </p>
+          <p></p>
+          <p>La Figure 2 montre la configuration d'une adresse link-local à l'aide de la commande de mode de configuration d'interface <b>ipv6 address</b>. L'adresse link-local FE80::1 est utilisée pour indiquer clairement qu'elle appartient au routeur R1. La même adresse link-local IPv6 est configurée sur toutes les interfaces du routeur R1. L'adresse FE80::1 peut être configurée sur chaque liaison, car elle ne doit être unique que sur cette liaison.</p>
+          <p></p>
+          <p>Tout comme R1, à la Figure 3, le routeur R2 est configuré avec FE80::2 comme adresse link-local IPv6 sur toutes ses interfaces.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer FE80::3 comme adresse link-local sur toutes les interfaces de R3.</p>
+          <p></p>
+          <p>Comme indiqué à la Figure 5, la commande<b> show ipv6 interface brief </b>sert à vérifier les adresses link-local IPv6 et de monodiffusion globale sur toutes les interfaces. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet.  Les adresses LAN IPv6 sont utilisées. La Figure 2 présente la syntaxe de configuration de l'adresse link-local IPv6 sur les interfaces du routeur 1. La Figure 3 présente la syntaxe de configuration de l'adresse link-local IPv6 sur les interfaces du routeur 2. La Figure 4 est un exercice interactif qui permet au stagiaire de s'entraîner à configurer des interfaces sur le routeur 3 avec des adresses link-local. La Figure 5 présente le résultat de la commande « show ipv6 interface brief » sur le routeur 1 et met en surbrillance les adresses link-local sur chaque interface.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

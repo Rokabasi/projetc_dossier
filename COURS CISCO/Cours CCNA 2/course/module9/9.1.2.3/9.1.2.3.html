@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.3 Port Address Translation (PAT)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Port Address Translation (PAT)</h1>
+        <div>
+          <p>La traduction d'adresses de port (PAT), également appelée surcharge NAT, mappe plusieurs adresses IPv4 privées à une seule adresse IPv4 publique unique ou à quelques adresses. C’est ce que font la plupart des routeurs personnels. Le FAI attribue une adresse au routeur et pourtant, plusieurs membres de la famille peuvent accéder simultanément à Internet. C'est la forme la plus courante de NAT.</p>
+          <p></p>
+          <p>Grâce à la PAT, plusieurs adresses peuvent être mappées à une ou quelques adresses, car chaque adresse privée est également identifiée par un numéro de port. Lorsqu’un périphérique lance une session TCP/IP, il génère une valeur de port source TCP ou UDP ou un ID de requête attribué spécialement au ICMP, pour identifier uniquement la session. Lorsque le routeur NAT reçoit un paquet du client, il utilise son numéro de port source pour identifier de manière unique la traduction NAT spécifique.</p>
+          <p></p>
+          <p>La PAT garantit que les périphériques utilisent un numéro de port TCP différent pour chaque session avec un serveur sur Internet. Lorsqu'une réponse est retournée par le serveur, le numéro de port source, qui devient le numéro du port de destination lors du retour, détermine le périphérique auquel le routeur transfère les paquets. Le processus PAT confirme également que les paquets entrants étaient demandés, ce qui renforce la sécurité de la session.</p>
+          <p></p>
+          <p>Cliquez sur les boutons Lecture et Pause de la figure pour gérer l'animation.</p>
+          <p></p>
+          <p>L'animation illustre le processus PAT. La fonction PAT ajoute des numéros de port source uniques à l'adresse globale interne, de façon à permettre de distinguer les traductions. </p>
+          <p></p>
+          <p>Lorsque R2 traite chaque paquet, il utilise un numéro de port (1331 et 1555 dans cet exemple) pour identifier le périphérique expédiant le paquet. L'adresse source (AS) correspond à l'adresse locale interne à laquelle a été ajouté le numéro de port TCP/IP attribué. L'adresse de destination (AD) est l'adresse locale externe à laquelle le numéro de port de service a été ajouté. Dans cet exemple, le port de service est 80, HTTP.</p>
+          <p></p>
+          <p>Concernant l'adresse source, R2 traduit l'adresse locale interne en une adresse globale interne à laquelle est ajouté le numéro de port. L’adresse de destination n’est pas modifiée, mais est désormais appelée adresse IPv4 globale externe. Lorsque le serveur Web répond, le chemin est inversé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation affiche deux ordinateurs connectés à un routeur NAT. Les ordinateurs ont besoin d’accéder à Internet.  Lorsque les deux ordinateurs tentent de se connecter de l’extérieur, le routeur NAT leur attribue l’adresse IP de l’interface externe, avec un numéro de port.  Ceci permet de mettre en évidence le processus de PAT.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

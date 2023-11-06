@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.3 Protocole de transport fiable</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocole de transport fiable</h1>
+        <div>
+          <p>EIGRP a été conçu comme protocole de routage de couche réseau indépendant. C'est pourquoi il ne peut pas utiliser les services du protocole UDP ou TCP. EIGRP utilise plutôt le protocole RTP (Reliable Transport Protocol) pour acheminer et recevoir les paquets EIGRP. Il offre donc plus de souplesse et peut être utilisé avec d'autres protocoles que ceux de la suite TCP/IP, à savoir les protocoles IPX et AppleTalk, désormais obsolètes. </p>
+          <p></p>
+          <p>La figure illustre le fonctionnement du protocole RTP.</p>
+          <p></p>
+          <p>Bien qu'il soit qualifié de « fiable » dans son nom, le protocole comprend à la fois l'acheminement fiable et non fiable de paquets EIGRP, tout comme les protocoles TCP et UDP, respectivement. Un protocole RTP fiable exige le renvoi d'un reçu à l'expéditeur. Un protocole RTP non fiable ne nécessite aucun reçu. Par exemple, un paquet de mise à jour EIGRP est envoyé de façon fiable via RTP et requiert un reçu. Un paquet Hello EIGRP est également envoyé via RTP, mais de façon non fiable. Cela signifie que les paquets Hello EIGRP ne nécessitent pas de reçu. </p>
+          <p></p>
+          <p>RTP peut envoyer les paquets EIGRP en monodiffusion ou multidiffusion. </p>
+          <p>
+            <ul>
+              <li>Les paquets EIGRP de multidiffusion pour IPv4 utilisent l'adresse de multidiffusion IPv4 réservée 224.0.0.10.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les paquets EIGRP de multidiffusion pour IPv6 sont envoyés à l'adresse de multidiffusion IPv6 réservée FF02::A.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre que le protocole EIGRP remplace TCP par RTPEIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.1 Route statique par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route statique par défaut</h1>
+        <div>
+          <p>Les routeurs utilisent couramment des routes par défaut configurées localement ou apprises d'un autre routeur, à l'aide d'un protocole de routage dynamique. Une route par défaut ne nécessite pas un bit le plus à gauche pour une correspondance entre la route par défaut et l’adresse IPv4 de destination. Une route par défaut est utilisée lorsqu'aucune autre route de la table de routage ne correspond à l'adresse IP de destination du paquet. En d'autres termes, si une correspondance plus spécifique n'existe pas, la route par défaut est utilisée comme passerelle de dernier recours. </p>
+          <p></p>
+          <p>Les routes statiques par défaut sont communément utilisées lors de la connexion :</p>
+          <p>
+            <ul>
+              <li>D'un routeur de périphérie au réseau d'un fournisseur de services</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>D'un routeur d'extrémité (un routeur avec un seul routeur voisin en amont) </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Comme vous le voyez dans la figure, la syntaxe de commande pour une route statique par défaut est similaire à toute autre route statique, à l'exception du fait que l'adresse réseau correspond à <b>0.0.0.0</b> et que le masque de sous-réseau correspond à <b>0.0.0.0</b>. </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> une route statique par défaut IPv4 est généralement appelée « route à quatre zéros ». </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche la syntaxe pour configurer une route statique par défaut.  La syntaxe est similaire à une route statique standard, excepté le réseau de destination et le masque de sous-réseau qui sont tous des zéros.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

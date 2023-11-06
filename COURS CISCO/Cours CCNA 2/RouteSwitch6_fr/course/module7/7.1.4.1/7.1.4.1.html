@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.4.1 Positionnement des listes de contrôle d’accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Positionnement des listes de contrôle d’accès</h1>
+        <div>
+          <p>Le positionnement approprié d'une liste de contrôle d'accès peut optimiser l'efficacité du réseau. Une liste de contrôle d'accès peut être placée de sorte à réduire le trafic superflu. Par exemple, le trafic qui sera refusé sur une destination distante ne doit pas être acheminé à l'aide de ressources réseau situées sur la route menant à cette destination. </p>
+          <p></p>
+          <p>Chaque liste de contrôle d'accès doit être placée là où elle aura le plus grand impact sur les performances. Comme le montre la figure, les règles de base sont les suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Listes de contrôle d'accès étendues</b> : placez les listes de contrôle d'accès étendues le plus près possible de la source du trafic à filtrer. De cette manière, le trafic indésirable est refusé près du réseau source et ne traverse pas l'infrastructure réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Listes de contrôle d'accès standard</b> : étant donné que les listes de contrôle d'accès standard ne précisent pas les adresses de destination, placez-les le plus près possible de la destination. Le fait de placer une liste de contrôle d'accès standard à la source du trafic empêche efficacement ce trafic d'accéder à tous les autres réseaux via l'interface à laquelle la liste est appliquée. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La position de la liste de contrôle d'accès et donc le type de liste utilisé peuvent également dépendre des caractéristiques suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Le contrôle de l'administrateur réseau</b> : la position de la liste de contrôle d'accès peut être différente si l'administrateur réseau contrôle à la fois les réseaux source et de destination.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Bande passante des réseaux concernés</b> : le filtrage du trafic indésirable à la source empêche la transmission du trafic avant qu'il consomme de la bande passante sur le chemin vers une destination. Cela est particulièrement important sur les réseaux à faible bande passante.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Facilité de configuration</b> : si un administrateur réseau souhaite refuser le trafic provenant de plusieurs réseaux, il est possible d'utiliser une seule liste de contrôle d'accès standard sur le routeur le plus proche de la destination. L'inconvénient est que le trafic de ces réseaux « gaspille » de la bande passante. Une liste de contrôle d'accès étendue peut être utilisée sur chaque routeur d'où provient le trafic. Cela permet d'économiser de la bande passante en filtrant le trafic à la source, mais nécessite la création de listes de contrôle d'accès étendues sur plusieurs routeurs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : bien que les listes de contrôle d’accès étendues soient hors de portée de l’examen ICND1/CCENT, vous devez connaître les recommandations générales pour le placement des listes standard et étendues. Pour la certification CCNA, la règle générale est de placer les listes de contrôle d'accès étendues aussi près que possible de la source et les listes de contrôle d'accès standard aussi près que possible de la destination.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois routeurs et décrit le placement des listes de contrôle d'accès.  Les listes de contrôle d'accès standard sont généralement placées près de la destination.  Les listes de contrôle d'accès étendues sont généralement placées près de la source.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

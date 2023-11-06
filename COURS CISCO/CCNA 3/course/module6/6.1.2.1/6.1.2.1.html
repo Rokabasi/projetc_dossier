@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.1 Types de paquets EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Types de paquets EIGRP</h1>
+        <div>
+          <p>EIGRP utilise cinq types de paquets différents, dont certains par paires. Les paquets EIGRP sont envoyés via RTP de façon fiable ou non fiable et peuvent être acheminés via monodiffusion, multidiffusion ou parfois les deux modes. Les types de paquets EIGRP sont également appelés formats de paquets EIGRP ou messages EIGRP.</p>
+          <p></p>
+          <p>Comme indiqué à la Figure 1, les cinq types de paquets EIGRP sont :</p>
+          <p></p>
+          <p>
+            <b>Paquets Hello : </b>utilisés pour la détection des voisins et la gestion des contiguïtés de voisinage.</p>
+          <p>
+            <ul>
+              <li>Envoyé avec un acheminement non fiable</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Multidiffusion (sur la plupart des types de réseaux)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paquets de mise à jour :</b> propagent les informations de routage vers les voisins EIGRP.</p>
+          <p>
+            <ul>
+              <li>Envoyé avec un acheminement fiable</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Monodiffusion ou multidiffusion</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paquets de reçu :</b> utilisés pour accuser réception d'un message EIGRP envoyé à l'aide du mode d'acheminement fiable.</p>
+          <p>
+            <ul>
+              <li>Envoyé avec un acheminement non fiable</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Monodiffusion</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paquets de demande :</b> utilisés pour rechercher les routes des voisins.</p>
+          <p>
+            <ul>
+              <li>Envoyé avec un acheminement fiable</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Monodiffusion ou multidiffusion</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Paquets de réponse : </b>envoyés en réponse à une demande EIGRP.</p>
+          <p>
+            <ul>
+              <li>Envoyé avec un acheminement fiable</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Monodiffusion</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 2 montre que les messages EIGRP sont généralement encapsulés dans des paquets IPv4 ou IPv6. Les messages EIGRP pour IPv4 utilisent le protocole de couche réseau IPv4. La valeur 88 du champ du protocole IPv4 indique que la partie données du paquet est un message EIGRP pour IPv4. Les messages EIGRP pour IPv6 sont encapsulés dans des paquets IPv6 à l'aide du champ d'en-tête suivant de 88. Comme le champ de protocole pour IPv4, le champ d'en-tête IPv6 suivant indique le type de données acheminées dans le paquet IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 est un tableau comprenant les cinq types de paquets EIGRP et leur description. La Figure 2 explique le mode d'encapsulation d'un paquet EIGRP dans un paquet IP standard.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

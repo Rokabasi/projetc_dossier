@@ -1,0 +1,1 @@
+La figure montre un réseau composé de trois ordinateurs. Le réseau est connecté à un routeur NAT, qui est lui-même connecté à Internet.  Une table mappe les adresses privées internes avec les adresses publiques externes.  Cela permet de mettre en évidence la NAT statique.

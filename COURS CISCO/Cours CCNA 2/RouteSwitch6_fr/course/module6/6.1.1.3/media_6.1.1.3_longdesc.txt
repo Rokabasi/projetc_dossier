@@ -1,0 +1,1 @@
+La figure montre la sortie de la commande « show v. lan brief » sur un commutateur.

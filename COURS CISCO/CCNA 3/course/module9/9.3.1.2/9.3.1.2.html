@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.3.1.2 Chapitre 9 : Protocole OSPF à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 9 : Protocole OSPF à zones multiples</h1>
+        <div>
+          <p>La topologie OSPF à zone unique est une méthode utile pour les réseaux de petite taille, mais on lui préférera le protocole OSPF à zones multiples pour les réseaux de plus grande envergure. Le protocole OSPF à zones multiples permet de résoudre les problèmes de taille excessive des tables de routage et des bases de données d'états de liens, et de réduire les calculs d'algorithme SPF, comme illustré aux Figures 1 et 2.</p>
+          <p></p>
+          <p>La zone principale est appelée zone fédératrice (zone 0) et toutes les autres zones doivent y être reliées. Le routage est toujours effectué entre les zones, tandis qu'une grande partie des opérations de routage, telles que le recalcul de la base de données, est conservée dans une zone.</p>
+          <p></p>
+          <p>Il existe quatre types de routeurs OSPF différents : le routeur interne, le routeur fédérateur, le routeur ABR (Area Border Router) et le routeur ASBR (Autonomous System Boundary Router). Un routeur peut appartenir à plusieurs catégories de routeur.</p>
+          <p></p>
+          <p>Les annonces d'état de liens (LSA, Link State Advertisement) sont les éléments de base de la topologie OSPF. Ce chapitre traite principalement des LSA de type 1 à 5. Les LSA de type 1 sont également appelées entrées de liaisons du routeur. Les LSA de type 2 sont appelées entrées de liaison du réseau et sont diffusées par un routeur désigné (DR). Les LSA de type 3 sont appelées entrées de liaison récapitulatives ; elles sont créées et propagées par les routeurs ABR. Les LSA de type 4 récapitulatives sont générées par un ABR uniquement lorsqu'un ASBR est présent dans une zone. Les LSA externes de type 5 décrivent les routes menant à des réseaux externes au système autonome OSPF. Les LSA de type 5 sont émises par l'ASBR et diffusées au système autonome entier. </p>
+          <p></p>
+          <p>Les routes OSPFv2 d'une table de routage IPv4 sont identifiées grâce aux descripteurs suivants : O, O IA, O E1 ou O E2. Chaque routeur applique l'algorithme SPF à sa LSDB pour construire l'arborescence SPF. L'arborescence SPF est ensuite utilisée pour calculer les meilleures routes. </p>
+          <p></p>
+          <p>Aucune commande spéciale n'est requise pour implémenter un réseau OSPF à zones multiples. Un routeur devient un routeur ABR lorsqu'il possède deux instructions <b>network</b> dans différentes zones.</p>
+          <p></p>
+          <p>Exemple de configuration OSPF à zones multiples :</p>
+          <p></p>
+          <p>
+            <span class="cmd">R1(config)# </span>
+            <span class="cmd">
+              <b>router ospf 10</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>router-id 1.1.1.1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 10.1.1.1 0.0.0.0 area 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 10.1.2.1 0.0.0.0 area 1</b>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">R1(config-router)# </span>
+            <span class="cmd">
+              <b>network 192.168.10.1 0.0.0.0 area 0</b>
+            </span>
+          </p>
+          <p></p>
+          <p>Voici les commandes utilisées pour vérifier la configuration de OSPFv2 :</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf neighbor </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface </b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip protocols</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf interface brief</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route ospf</b>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip ospf database </b>
+              </li>
+            </ul>
+          </p>
+          <p>Pour utiliser la commande OSPFv3 équivalente, remplacez <b>ip</b> par <b>ipv6</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Les Figures 1 et 2 affichent une topologie OSPF à zones multiples avec des légendes mettant en avant ses avantages, notamment des tables de routage de taille réduite, des messages LSA organisés et une utilisation moins fréquente de l'algorithme SPF pour un routage plus efficace.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

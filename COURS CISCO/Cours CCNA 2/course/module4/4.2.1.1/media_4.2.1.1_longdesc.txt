@@ -1,0 +1,1 @@
+La figure est une animation expliquant comment un commutateur LAN prend des décisions de transfert en fonction de l’adresse de destination d’une trame entrante.

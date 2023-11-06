@@ -1,0 +1,1 @@
+La figure répertorie les mesures courantes suivantes utilisées par les protocoles de routage : bande passante, coût de retard et sauts.

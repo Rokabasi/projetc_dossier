@@ -1,0 +1,1 @@
+La Figure 1 affiche le résultat de la commande : show i.p. route pipe begin Gateway. Les trois routes connectées directement, les cinq routes acquises par RIP et la route statique par défaut sont mises en surbrillance.  Cela affiche toutes les routes finales, car chacune des entrées des réseaux de destination dispose d’une adresse de tronçon suivant ou d’une interface de sortie.

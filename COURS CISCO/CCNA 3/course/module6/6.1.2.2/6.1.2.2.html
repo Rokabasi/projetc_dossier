@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.2.2 Paquets Hello EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paquets Hello EIGRP</h1>
+        <div>
+          <p>Le protocole EIGRP utilise des petits paquets Hello pour détecter d'autres routeurs connectés directement sur lesquels le protocole EIGRP est activé. Les routeurs utilisent les paquets Hello pour former des contiguïtés de voisinage EIGRP, également appelées relations de voisinage.</p>
+          <p></p>
+          <p>Les paquets Hello EIGRP sont envoyés en multidiffusion IPv4 ou IPv6 via le mode d'acheminement RTP non fiable. Autrement dit, le destinataire n'a pas besoin de renvoyer un paquet de reçu. </p>
+          <p>
+            <ul>
+              <li>L'adresse de multidiffusion EIGRP réservée pour IPv4 est 224.0.0.10.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>L'adresse de multidiffusion EIGRP réservée pour IPv6 est FF02::A.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les routeurs EIGRP détectent les voisins et établissent des contiguïtés avec les routeurs voisins au moyen de paquets Hello. Sur la plupart des réseaux modernes, les paquets Hello EIGRP sont envoyés en tant que paquets de multidiffusion toutes les cinq secondes. Néanmoins, sur les réseaux multipoints NBMA (réseaux à accès multiple de non-diffusion) avec des liaisons d'accès de type T1 (1,544 Mbit/s) ou moins rapides, les paquets Hello sont envoyés en tant que paquets de monodiffusion toutes les 60 secondes. </p>
+          <p></p>
+          <p>Remarque : les réseaux NBMA utilisant des interfaces moins rapides incluent les anciens segments X.25, Frame Relay et ATM (Asynchronous Transfer Mode).</p>
+          <p></p>
+          <p>Le protocole EIGRP utilise également les paquets Hello pour gérer les contiguïtés établies. Tant qu'il reçoit des paquets Hello envoyés par un voisin, un routeur EIGRP suppose que le voisin et ses routes restent viables. </p>
+          <p></p>
+          <p>Le protocole EIGRP utilise un minuteur de mise en attente pour déterminer le temps maximal pendant lequel le routeur doit attendre le prochain paquet Hello avant de déclarer que ce voisin est inaccessible. Par défaut, le temps d'attente correspond à 3 fois l'intervalle Hello ou à 15 secondes sur la plupart des réseaux et 180 secondes sur les réseaux NBMA bas débit. À l'expiration du temps d'attente, le protocole EIGRP déclare la route désactivée et DUAL recherche un nouveau chemin en envoyant des demandes.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois routeurs interconnectés.  Un paquet Hello se trouve entre chacun de ces routeurs.  Un tableau répertorie les minuteurs Hello pour différents débits de liaison.  La liaison T1 (ou d'un débit inférieur) envoie les paquets Hello toutes les soixante secondes.  Une liaison plus rapide que T1 envoie les paquets Hello toutes les cinq secondes.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

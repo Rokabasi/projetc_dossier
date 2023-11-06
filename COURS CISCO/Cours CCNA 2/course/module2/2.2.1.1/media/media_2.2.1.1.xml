@@ -1,0 +1,41 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>Syntaxe de la commande <font face="_typewriter">ip route</font> ]]></text>
+</component>
+
+  <component id="ID_table">
+  <text><![CDATA[<table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+  	<tr class="mtable_title">
+			<td colspan="2" bgcolor='#FFFFFF'><font size="1"><br/> </font></td>
+		</tr>
+	<tr>
+
+		<td colspan='2' bgcolor='#4E4C4D' class="mtable_top"><font size='1' color='#4E4C4D'>.</font></td>
+	</tr>
+	<tr>
+	
+		
+		<td width="110" bgcolor='#666263' valign="top" ><font color='#ffffff' ><b>Paramètre</b></font></td>
+		<td bgcolor='#666263'  valign="top" class="mtitle"><font color='#ffffff' ><b>Description</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">network-address</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><textformat blockindent="-14">Adresse de destination du réseau distant, à ajouter à la table de routage</textformat></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">subnet-mask</font></td>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536' ><ul><li>Masque de sous-réseau du réseau distant, à ajouter à la table de routage.</li><li>Le masque de sous-réseau peut être modifié pour <span id="span1">résumer un groupe de réseaux</span>.</li></ul></font></td></tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">ip-address</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><ul><li>Généralement appelé <span id="span1">adresse IP</span> du routeur du tronçon suivant.</li><li>Généralement utilisé lors de la connexion à un <span id="span1">support de diffusion (par exemple Ethernet).</span></li><li>Crée généralement une recherche récursive</li></ul></font></td>
+	</tr>
+	<tr><td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">exit-intf</font></td>
+		<td bgcolor='#F2F2F2' valign="top"><font color='#393536'  ><ul><li>Utilisez l’interface de sortie pour transférer les paquets <span id="span1">vers le réseau de destination</span>.</li><li>Également appelée route statique connectée directement.</li><li>Ces routes sont généralement utilisées pour la connexion dans une <span id="span1">configuration point à point.</span></li></ul></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">distance</font></td>
+		<td bgcolor='#E9E7E8' valign="top"><font color='#393536' ><textformat blockindent="-14"><ul><li>(Facultatif) Configure une <span id="span1">distance</span> administrative.</li><li>Généralement utilisée pour configurer une <span id="span1">route</span> statique flottante.</li></ul></textformat></font></td>
+	</tr>
+	</table>]]></text>
+  </component>
+</textcomponents>

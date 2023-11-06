@@ -1,0 +1,1 @@
+La figure affiche un tableau comparant la complexité de la configuration, les modifications de topologie, l’évolutivité, la sécurité, l’utilisation des ressources et la prévisibilité entre le routage statique et le routage dynamique.

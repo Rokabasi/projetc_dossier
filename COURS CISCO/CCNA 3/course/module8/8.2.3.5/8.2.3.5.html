@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.5 Réglage de la bande passante des interfaces</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Réglage de la bande passante des interfaces</h1>
+        <div>
+          <p>
+            <b>Réglage de la bande passante des interfaces</b>
+          </p>
+          <p></p>
+          <p>Pour ajuster la bande passante d'une interface, utilisez la commande <b>bandwidth </b><i>kilobits </i>en mode de configuration d'interface. Utilisez la commande <b>no bandwidth</b> pour restaurer la valeur par défaut.</p>
+          <p></p>
+          <p>L'exemple de la Figure 1 modifie la bande passante de l'interface série 0/0/1 de R1 sur 64 Kbit/s. Une vérification rapide permet de confirmer que le paramètre de bande passante de l'interface correspond désormais à 64 Kbit/s. </p>
+          <p></p>
+          <p>La bande passante doit être modifiée à chaque extrémité des liens série, donc :</p>
+          <p>
+            <ul>
+              <li>R2 requiert la modification de son interface S0/0/1 sur 1 024 Kbit/s.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 requiert la modification de son interface série 0/0/0 sur 64 Kbit/s et de son interface série 0/0/1 sur 1 024 Kbit/s.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour modifier l'interface série de R2 et R3.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les participants qui commencent tout juste leur formation sur les réseaux et sur Cisco IOS font souvent l'erreur de penser que la commande <b>bandwidth</b> modifie la bande passante physique du lien. La commande ne change que la métrique de bande passante utilisée par EIGRP et OSPF. La commande ne modifie pas la bande passante réelle du lien.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre les commandes requises pour ajuster la bande passante sur une interface.  La figure commence en mode de configuration globale et la première commande est interface serial 0/0/1.  La commande suivante est bandwidth 64.  La figure présente ensuite le résultat de la commande show interfaces serial 0/0/1 | include BW. Le résultat indique que la bande passante est de 64 Kbit/s.  Ce résultat provient de la commande show ip OSPF interface serial 0/0/1 | include cost.  Le coût de la liaison est de 15 625. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant d'ajuster la bande passante des interfaces.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

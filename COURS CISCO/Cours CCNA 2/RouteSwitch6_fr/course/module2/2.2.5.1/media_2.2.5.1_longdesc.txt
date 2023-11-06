@@ -1,0 +1,1 @@
+La figure montre deux routeurs, et chaque routeur dispose de deux chemins pour se connecter à l’autre.  Un chemin passe par le réseau interne et l’autre chemin peut passer via Internet.  Il devrait y avoir une route EIGRP principale entre eux.  L’administrateur peut configurer une route statique flottante en tant que chemin alternatif au cas où l’autre chemin échouerait.

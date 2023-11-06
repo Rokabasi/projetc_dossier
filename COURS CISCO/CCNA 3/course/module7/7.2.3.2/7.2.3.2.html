@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.3.2 Instruction réseau manquante</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Instruction réseau manquante</h1>
+        <div>
+          <p>Dans la Figure 1, l'interface GigabitEthernet 0/1 de R1 vient d'être configurée avec l'adresse 10.10.10.1/24 et est désormais active. Une contiguïté de voisinage EIGRP a été établie entre R1 et R3 qui échangent des informations de routage. Cependant, comme le montre la Figure 2, un test ping envoyé depuis le routeur R3 vers une interface G0/1 du réseau 10.10.10.1 de R1 a échoué. </p>
+          <p></p>
+          <p>Dans la Figure 3, le résultat de la commande <b>show ip protocols</b> sur le routeur R1 montre que le réseau 10.10.10.0/24 n'a pas été annoncé aux voisins EIGRP. Par conséquent, le réseau 10.10.10.0 doit être annoncé.</p>
+          <p></p>
+          <p>Dans la Figure 4, le processus EIGRP de R1 est configuré pour annoncer le réseau 10.0.0.0 par classe.</p>
+          <p></p>
+          <p>La Figure 5 confirme l'ajout de la route 10.10.10.0/24 à la table de routage de R3. L'accessibilité est vérifiée et confirmée à l'aide d'une requête ping ciblant l'interface GigabitEthernet 0/1 de R1.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>Voici les commandes équivalentes à utiliser avec le protocole EIGRP pour IPv6 :</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols </b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 route</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>Pour ajouter une instruction réseau manquante sous IPv6, utilisez la commande <b>ipv6 eigrp </b><i>autonomous-system</i> en mode de configuration d'interface : </p>
+          <p>Router(config-if)#<b> ipv6 eigrp </b><i>autonomous-system</i></p>
+          <p>
+            <b>Remarque </b>: une autre forme de route manquante peut entraîner le filtrage des mises à jour de routage entrantes et sortantes. Les listes de contrôle d'accès assurent le filtrage pour plusieurs protocoles et peuvent avoir un impact sur l'échange de messages de protocole de routage. Cela peut expliquer l'absence de certaines routes dans la table de routage. Utilisez la commande <b>show ip protocols</b> pour afficher les éventuelles listes de contrôle d'accès appliquées à EIGRP. Le filtrage des mises à jour de routage n'est pas abordé dans ce programme.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre deux routeurs connectés par un câble série.  Le routeur R1 dispose de deux LAN et le routeur R3 d'un seul LAN. La Figure 2 présente le résultat de la commande « ping » sur le routeur R3 qui tente d'atteindre le réseau 10 associé au routeur R1.  Cette requête ping échoue. La Figure 3 présente le résultat de la commande « show ip protocols » sur le routeur R1. Le résultat indique que le routeur R1 n'inclut pas le réseau 10 dans ses mises à jour EIGRP. La Figure 4 affiche la syntaxe requise pour ajouter le réseau 10 à la configuration EIGRP sur le routeur R1. La Figure 5 affiche le résultat de la commande « show ip route » sur le routeur R1 avec une requête ping réussie vers le réseau 10.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

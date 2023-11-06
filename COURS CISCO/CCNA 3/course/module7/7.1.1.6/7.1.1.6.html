@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.6 Vérification de la récapitulation automatique : table de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la récapitulation automatique : table de routage</h1>
+        <div>
+          <p>Examinez la table de routage pour vérifier la bonne réception de la route récapitulative.</p>
+          <p></p>
+          <p>Dans la partie supérieure de la Figure 1, la table de routage de R3 s'affiche avant que la récapitulation automatique soit activée. Dans la partie inférieure de la figure, la même table de routage s'affiche après que la récapitulation soit activée à l'aide de la commande <b>auto-summary</b>. Notez qu'une fois la récapitulation automatique activée, la table de routage de R3 contient uniquement l'adresse réseau de classe B 172.16.0.0/16. R1 est le successeur ou routeur de tronçon suivant via 192.168.10.5.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: la récapitulation automatique n'est qu'une option avec le protocole EIGRP pour IPv4. L'adressage par classe n'existant pas dans IPv6, la récapitulation automatique n'est pas nécessaire avec le protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>L'un des problèmes avec la récapitulation de route automatique est qu'une adresse récapitulative annonce également les réseaux qui ne sont pas disponibles sur le routeur à l'origine de l'annonce. Par exemple, R1 annonce l'adresse récapitulative de 172.16.0.0/16 mais n'est réellement connecté qu'aux sous-réseaux 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/30. Par conséquent, R1 peut recevoir des paquets entrants dont la destination n'existe pas. Cela peut poser problème si R1 dispose d'une passerelle par défaut configurée, car la requête serait transférée vers une destination qui n'existe pas.</p>
+          <p></p>
+          <p>Pour éviter ce problème, le protocole EIGRP ajoute à la table de routage une route de réseau pour la route de réseau par classe. Cette entrée de réseau achemine les paquets vers une interface Null0. L'interface Null0 est une interface IOS virtuelle qui ne conduit nulle part, également appelée « le grand vide ». Les paquets qui correspondent à une route avec une interface de sortie Null0 sont mis à l'écart. </p>
+          <p></p>
+          <p>La figure 2 affiche la table de routage de R1. Notez que les deux entrées mises en surbrillance représentent les routes récapitulatives pour 172.16.0.0/16 et 192.168.10.0/24 vers Null0. Si R1 reçoit un paquet destiné à un réseau annoncé par le masque par classe, mais qui n'existe pas, il rejettera le paquet et enverra une notification à la source. </p>
+          <p></p>
+          <p>Le protocole EIGRP pour IPv4 intègre automatiquement une route récapitulative Null0 dans les conditions suivantes :</p>
+          <p>
+            <ul>
+              <li>La récapitulation automatique est activée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>il existe au moins un sous-réseau qui a été acquis via EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Il existe plusieurs commandes de mode de configuration du routeur EIGRP<b> network</b>.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande « show ip route eigrp » sur le routeur R3.  Le résultat s'affiche une fois avec l'option de récapitulation automatique activée et une fois avec l'option de récapitulation automatique désactivée.  La Figure 2 présente le résultat de la commande « show ip route » sur le routeur R1 montrant l'utilisation de l'interface Null0 dans EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

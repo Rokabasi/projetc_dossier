@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.3.2 Inconvénients de la fonction NAT</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Inconvénients de la fonction NAT</h1>
+        <div>
+          <p>La NAT présente également quelques inconvénients. Le fait que les hôtes sur Internet semblent communiquer directement avec le périphérique NAT-enabled, plutôt qu'avec l'hôte interne du réseau privé, pose un certain nombre de problèmes.  </p>
+          <p></p>
+          <p>L'un des inconvénients de la fonction NAT concerne les performances du réseau, en particulier pour les protocoles en temps réel tels que la voix sur IP. La fonction NAT augmente les délais de transfert, car la traduction de chaque adresse IPv4 des en-têtes de paquet prend du temps. Le premier paquet est toujours commuté par le processus, ce qui veut dire qu'il emprunte le chemin le plus lent. Le routeur examine chaque paquet pour déterminer s’il doit être ou non traduit. Il doit modifier l'en-tête IPv4 et éventuellement l'en-tête TCP ou UDP. La somme de contrôle de l'en-tête IPv4 ainsi que la somme de contrôle TCP ou UDP doivent être recalculées à chaque traduction. Les paquets restants passent par le chemin à commutation rapide s'il existe une entrée de cache ; sinon, ils sont également retardés.</p>
+          <p>Un autre inconvénient de l'utilisation de la NAT est la perte de l'adressage de bout en bout. De nombreux protocoles et applications Internet dépendent de l'adressage de bout en bout de la source à la destination. Certaines applications ne sont pas compatibles avec la NAT. Par exemple, certaines applications de sécurité, telles que les signatures numériques échouent, car l'adresse IPv4 source change avant d'atteindre la destination. Les applications qui utilisent des adresses physiques au lieu d'un nom de domaine qualifié n'atteignent pas les destinations qui sont traduites sur le routeur NAT. Ce problème peut parfois être évité par l'utilisation de mappages NAT statiques.</p>
+          <p></p>
+          <p>La traçabilité IPv4 de bout en bout est également perdue. Il devient bien plus difficile de suivre les paquets qui subissent de nombreux changements d’adresse sur plusieurs sauts NAT, ce qui complique le dépannage. </p>
+          <p></p>
+          <p>L’utilisation de la fonction NAT complique également l’utilisation des protocoles de tunneling, tels qu’IPsec, car la NAT modifie les valeurs dans les en-têtes, provoquant ainsi l’échec des vérifications d’intégrité.</p>
+          <p></p>
+          <p>Les services nécessitant l'établissement de connexions TCP depuis le réseau externe ou les protocoles sans état tels que ceux utilisant UDP peuvent être perturbés. Si le routeur NAT n'a pas été configuré pour prendre en charge ce type de protocole, les paquets entrants ne peuvent pas atteindre leur destination. Certains protocoles peuvent accepter une instance de NAT entre les hôtes participants (FTP en mode passif, par exemple), mais échouent lorsque les deux systèmes sont coupés d'Internet par la NAT.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure répertorie les inconvénients de la fonction NAT.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

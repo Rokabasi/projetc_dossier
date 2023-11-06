@@ -1,0 +1,1 @@
+La figure illustre un exemple de tableau ou de schéma utilisé pour collecter et documenter les informations sur le réseau.  Le tableau présente les en-têtes de colonne suivants : périphérique, interface, adresse IP, masque de sous-réseau et passerelle par défaut.  Un administrateur réseau complète le tableau pour tous les périphériques du réseau.

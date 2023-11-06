@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.3.3 Réglage de la bande passante de référence</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Réglage de la bande passante de référence</h1>
+        <div>
+          <p>OSPF utilise une bande passante de référence de 100 Mbit/s pour tout lien égal ou supérieur à une connexion Fast Ethernet. Par conséquent, le coût attribué à une interface Fast Ethernet avec une bande passante d'interface de 100 Mbit/s correspondrait au nombre 1. </p>
+          <p></p>
+          <p>
+            <span class="cmd">
+              <b>Coût =</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>
+                <u>100 000 000 bits/s</u>
+              </i>
+            </span>
+            <span class="cmd"> / </span>
+            <span class="cmd">
+              <i>
+                <u>100 000 000</u>
+              </i>
+            </span>
+            <span class="cmd">
+              <i> = </i>
+            </span>
+            <span class="cmd">
+              <i>
+                <u>1</u>
+              </i>
+            </span>
+          </p>
+          <p></p>
+          <p>Bien que ce calcul fonctionne pour les interfaces Fast Ethernet, il est problématique pour les liens plus rapides que 100 Mbit/s, étant donné que la métrique OSPF utilise uniquement des entiers comme coût final d'un lien. Si un élément inférieur à un entier est calculé, OSPF arrondit à l'entier le plus proche. Pour cette raison, du point de vue du protocole OSPF, une interface avec une bande passante d'interface de 100 Mbit/s (coût de 1) a le même coût qu'une interface disposant d'une bande passante de 100 Gbit/s (coût de 1). </p>
+          <p></p>
+          <p>Pour aider le protocole OSPF à déterminer le chemin exact, la bande passante de référence doit être remplacée par une valeur supérieure pour prendre en compte les réseaux disposant de liens plus rapides que 100 Mbit/s.</p>
+          <p></p>
+          <p>
+            <b>Réglage de la bande passante de référence</b>
+          </p>
+          <p></p>
+          <p>La modification de la bande passante de référence n'affecte pas réellement la capacité de la bande passante sur le lien ; en revanche, cela affecte simplement le calcul utilisé pour déterminer la métrique. Pour ajuster la bande passante de référence, utilisez la commande<b> auto-cost reference-bandwidth </b><i>Mb/s </i>en mode de configuration de routeur. Cette commande doit être configurée sur chaque routeur du domaine OSPF. Notez que la valeur est exprimée en Mbit/s ; par conséquent, pour modifier les coûts pour :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Gigabit Ethernet </b>-<span class="cmd"><b></b></span><b>auto-cost reference-bandwidth 1000</b></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>10 Gigabit Ethernet </b>-<span class="cmd"><b></b></span><b>auto-cost reference-bandwidth 10000</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour revenir à la bande passante de référence par défaut, utilisez la commande <b>auto-cost reference-bandwidth 100</b>.</p>
+          <p></p>
+          <p>La table de la Figure 1 indique le coût OSPF si la bande passante de référence est définie sur Gigabit Ethernet. Bien que les valeurs de métriques augmentent, le protocole OSPF effectue de meilleurs choix car il peut désormais distinguer les liens FastEthernet des liens Gigabit Ethernet.</p>
+          <p></p>
+          <p>La Figure 2 indique le coût OSPF si la bande passante de référence est modifiée pour prendre en compte les liens 10 Gigabit Ethernet. La bande passante de référence doit être modifiée chaque fois qu'il existe des liens plus rapides que FastEthernet (100 Mbit/s).</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> :<b></b> les coûts représentent des nombres entiers qui ont été arrondis à la baisse.</p>
+          <p></p>
+          <p>Dans la Figure 3, tous les routeurs ont été configurés pour prendre en compte le lien Gigabit Ethernet avec la commande de configuration de routeur <b>auto-cost reference-bandwidth 1000</b>. Nouveau coût cumulé pour atteindre le réseau local de R2 172.16.2.0/24 à partir de R1 :</p>
+          <p>
+            <ul>
+              <li>Coût du lien série de R1 à R2 = 647</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Coût du lien Gigabit Ethernet sur R2 = 1</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Coût total pour atteindre 172.16.2.0/24 = <b>648</b></li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez la commande <b>show ip ospf interface s0/0/0</b> pour vérifier le coût OSPFv2 assigné à l'interface 0/0/0 de R1, comme illustré dans la Figure 4. Remarquez que le coût affiché est de 647. </p>
+          <p></p>
+          <p>La table de routage de R1 dans la Figure 5 confirme que la mesure pour atteindre le réseau local du routeur R2 a un coût de 648.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche un tableau des coûts après l'exécution de la commande auto-cost reference-bandwidth 1000.  Dans la table, chaque calcul utilise la bande passante de référence de 1 gigabit. Le résultat indique un coût de 10 pour 100 Mbit/s et un coût de 1 pour une interface Gigabit Ethernet et 10 Gigabit Ethernet.  La Figure 2 affiche un tableau des coûts après l'exécution de la commande auto-cost reference-bandwidth 10000.  Dans la table, chaque calcul utilise la bande passante de référence de 10 gigabit. Le résultat indique un coût de 100 pour 100 Mbit/s, un coût de 10 pour une interface Gigabit Ethernet et un coût de 1 pour une interface 10 Gigabit Ethernet. La Figure 3 illustre la topologie de référence pour le protocole OSPF et répertorie le coût des liaisons série après l'exécution de la commande auto-cost reference-bandwidth 1000.  Cette commande entraîne le passage du coût de la liaison entre les routeurs R1 et R2 à 647 contre 64 auparavant. La Figure 4 montre le résultat de la commande show ip OSPF interface serial 0/0/0.  La figure illustre le coût 647 de la liaison. La Figure 5 montre le résultat de la commande show ip route | include 172.16.2.0. La métrique de la route indique 648 et est mise en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

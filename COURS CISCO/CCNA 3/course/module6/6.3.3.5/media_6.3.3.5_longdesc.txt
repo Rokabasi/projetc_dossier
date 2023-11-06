@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande « show ip eigrp topology » sur le routeur 2.  Elle indique toutes les routes sans boucle vers les réseaux distants.  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.1 Le fonctionnement des protocoles de routage dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le fonctionnement des protocoles de routage dynamique</h1>
+        <div>
+          <p>Tous les protocoles de routage sont conçus pour découvrir les réseaux distants et s'adapter rapidement en cas de modification de la topologie. La méthode adoptée à cette fin par un protocole de routage dépend de l’algorithme qu’il utilise et des caractéristiques de fonctionnement de ce protocole.  </p>
+          <p></p>
+          <p>D’une manière générale, le fonctionnement d’un protocole de routage dynamique peut être décrit de la manière suivante :</p>
+          <p>1. Le routeur envoie et reçoit des messages de routage sur ses interfaces. </p>
+          <p>2. Le routeur partage les messages et les informations de routage avec d’autres routeurs qui utilisent le même protocole de routage. </p>
+          <p>3. Les routeurs échangent des informations de routage pour découvrir des réseaux distants.  </p>
+          <p>4. Lorsqu'un routeur détecte une modification de topologie, le protocole de routage peut annoncer cette modification aux autres routeurs. </p>
+          <p></p>
+          <p>Cliquez sur <b>Lecture</b> dans la figure pour voir une animation présentant un protocole de routage dynamique en fonctionnement. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs nommés R-1 et R-2 connectés par une liaison WAN de série.  La figure est une animation qui commence par la création par R-1 d'un message contenant les informations de routage réseau et par l'envoi de cette mise à jour à l'autre routeur.  Le routeur destinataire utilise cette mise à jour pour créer ou modifier sa table de routage.  Le routeur destinataire envoie une mise à jour lorsqu'il détecte un changement dans ses réseaux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

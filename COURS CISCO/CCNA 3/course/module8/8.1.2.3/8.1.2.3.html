@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.3 Paquet Hello</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paquet Hello</h1>
+        <div>
+          <p>
+            <b>Paquet Hello</b>
+          </p>
+          <p>Le paquet de type 1 du protocole OSPF correspond au paquet Hello. Les paquets Hello sont utilisés pour :</p>
+          <p>
+            <ul>
+              <li>Découvrir des voisins OSPF et établir des contiguïtés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Annoncer les paramètres sur lesquels les deux routeurs doivent s'accorder pour devenir voisins.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Définir le routeur désigné (DR) et le routeur désigné de secours (BDR) sur les réseaux à accès multiple, de type Ethernet et Frame Relay Les liens point-à-point ne nécessitent pas de routeur DR ou BDR.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La figure affiche les champs qui font partie du paquet Hello de type 1 du protocole OSPFv2. Les champs importants indiqués dans le schéma incluent :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Type</b> - Identifie le type de paquet. Un (1) indique un paquet Hello. La valeur 2 identifie un paquet DBD, 3 un paquet LSR, 4 un paquet LSU et 5 un paquet LSAck.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ID du routeur </b>- Valeur 32 bits représentée par une notation décimale à point (comme une adresse IPv4) et qui identifie le routeur de manière unique.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ID de zone </b>- Numéro identifiant la zone d'origine du paquet. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Masque réseau</b> - Masque de sous-réseau associé à l'interface émettrice.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Intervalle Hello</b> - Indique la fréquence en secondes à laquelle un routeur envoie des paquets Hello. L'intervalle Hello par défaut sur des réseaux à accès multiple est de 10 secondes. Ce minuteur doit être identique sur les routeurs voisins. Dans le cas contraire, aucune contiguïté n'est établie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Priorité du routeur -</b> Utilisé dans une sélection DR/BDR. La priorité par défaut pour tous les routeurs OSPF correspond à 1, mais elle peut être changée manuellement en une valeur comprise entre 0 et 255. Plus la valeur est élevée, plus le routeur devient le routeur désigné sur le lien.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Intervalle Dead</b> - Durée en secondes pendant laquelle le routeur attend des informations d'un voisin avant de le déclarer hors service. Par défaut, l'intervalle Dead du routeur est quatre fois plus long que l'intervalle Hello. Ce minuteur doit être identique sur les routeurs voisins. Dans le cas contraire, aucune contiguïté n'est établie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur désigné (DR)</b> - ID du routeur désigné.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur désigné de secours (BDR)</b> - ID du routeur désigné de secours.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Liste des voisins</b> - Liste qui identifie les ID de routeur de tous les routeurs adjacents. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cliquez sur chacun des champs en surbrillance dans la figure pour plus d'informations.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le contenu du paquet Hello OSPF.  La figure met en évidence le type, l'ID de routeur, l'ID de zone, le masque de réseau, l'intervalle Hello, la priorité de routeur, l'ID du routeur désigné, l'ID de routeur désigné de secours et la liste des voisins.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

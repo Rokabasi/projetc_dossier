@@ -1,0 +1,1 @@
+La figure 1 montre un commutateur connecté à un téléphone IP et à un point d'accès sans fil.  Tous deux sont alimentés via Ethernet. La figure 2 présente un Cisco Catalyst 3650 et un commutateur Catalyst d'alimentation passthrough PoE.  Trois appareils PoE sont connectés au commutateur passthrough.

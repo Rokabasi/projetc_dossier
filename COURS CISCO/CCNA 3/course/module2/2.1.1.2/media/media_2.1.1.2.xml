@@ -1,0 +1,85 @@
+﻿<textcomponents><!-- slide 1 --><component id="ID_s1_title">
+        <text><![CDATA[<b>Modes VTP</b>]]></text>
+    </component><!--s1 table--><component id="ID_s1_table01">
+        <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+    <tr class="mtable_title">
+            <td colspan="2" bgcolor='#98D3D1'></td>
+        </tr>
+ 
+             <tr class="mtable_top">
+                <td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+            </tr>
+
+<tr>
+<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Mode VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>Définition</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Serveur VTP</td>
+<td bgcolor='#eff8f7'><ul><textformat blockindent="-14"><li>Les serveurs VTP annoncent les informations VLAN du domaine VTP aux autres commutateurs VTP dans le même domaine VTP.</li><li>Les serveurs VTP stockent les informations VLAN pour l’ensemble du domaine dans la mémoire vive non volatile.</li><li>Les commutateurs configurés en mode serveur VTP sont autorisés à créer, supprimer ou renommer les VLAN pour le domaine.</li></textformat></ul></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Client VTP</td>
+<td bgcolor='#ffffff'><ul><textformat blockindent="-14"><li>Les clients VTP fonctionnent de la même manière que les serveurs VTP, mais il n&apos;est pas possible de créer, changer ou supprimer des VLAN sur un client VTP.</li><li>Un client VTP stocke uniquement les informations VLAN pour l’ensemble du domaine pendant que le commutateur est sous tension.</li><li>Une réinitialisation du commutateur entraîne la suppression des informations VLAN.</li><li>Vous devez configurer le mode client VTP sur un commutateur.</li></textformat></ul></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>VTP transparent</td>
+<td bgcolor='#eff8f7'><ul><textformat blockindent="-14"><li>Les commutateurs transparents ne participent pas à un domaine VTP sauf pour transmettre des annonces VTP aux clients et aux serveurs VTP.</li><li>Les réseaux locaux virtuels créés, renommés ou supprimés sur un commutateur transparent sont uniquement associés à ce commutateur.</li><li> Pour créer un réseau VLAN étendu, un commutateur doit être configuré en tant que commutateur transparent VTP avec les versions VTP 1 ou 2.</li></textformat></ul></td>
+</tr>
+
+</table>]]>
+        </text>
+    </component><!-- end slide 1 --><!-- slide 2 --><component id="ID_s2_title">
+        <text><![CDATA[<b>Comparer les modes VTP</b>]]></text>
+    </component><!-- table 2 --><component id="ID_s2_table01">
+        <text>
+           <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+    <tr class="mtable_title">
+            <td colspan="4" bgcolor='#98D3D1'></td>
+        </tr>
+ 
+             <tr class="mtable_top">
+                <td colspan='4' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+            </tr>
+
+<tr>
+<td width="100px" bgcolor='#077A77'><font color='#ffffff'><b>Question VTP</b></font></td>
+<td width="110px" bgcolor='#077A77'><font color='#ffffff'><b>Serveur VTP</b></font></td>
+<td width="110px" bgcolor='#077A77'><font color='#ffffff'><b>Client VTP</b></font></td>
+<td bgcolor='#077A77'><font color='#ffffff'><b>VTP transparent</b></font></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Quelles sont les différences ?</td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Gère le domaine et la configuration VLAN.</li><li>Permet de configurer plusieurs serveurs VTP.</li></ul></textformat></td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Met à jour les configurations VTP locales.</li><li>Les commutateurs clients VTP ne peuvent pas changer les configurations VLAN.</li></ul></textformat></td>
+<td bgcolor='#eff8f7'><textformat blockindent="-14"><ul><li>Gère les configurations VLAN locales.</li><li>Les configurations VLAN ne sont pas partagées avec le réseau VTP.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Répond-il aux annonces VTP ?</td>
+<td bgcolor='#ffffff'>Participe pleinement</td>
+<td bgcolor='#ffffff'>Participe pleinement</td>
+<td bgcolor='#ffffff'>Transmet seulement les annonces VTP</td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>La configuration VLAN globale est-elle conservée en cas de redémarrage ?</td>
+<td bgcolor='#eff8f7'>Oui, les configurations globales sont stockées dans la mémoire vive non volatile (NVRAM)</td>
+<td bgcolor='#eff8f7'>Non, les configurations globales sont stockées uniquement dans la RAM</td>
+<td bgcolor='#eff8f7'>Non, la configuration VLAN locale est stockée uniquement dans la NVRAM</td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Met-il à jour d&apos;autres commutateurs compatibles ?</td>
+<td bgcolor='#ffffff'>Oui</td>
+<td bgcolor='#ffffff'>Oui</td>
+<td bgcolor='#ffffff'>Non</td>
+</tr>
+
+</table>]]>
+        </text>
+    </component><!-- end table 2 --><!-- end slide 2 --></textcomponents>

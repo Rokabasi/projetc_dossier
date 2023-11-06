@@ -1,0 +1,1 @@
+La figure montre le contenu de la base de données d'états de liens sur le routeur R-1.  Ce tableau répertorie les états de liens pour tous les routeurs du réseau local.  Par exemple, la base de données répertorie tous les réseaux connectés au routeur R-1, le coût de chaque lien et les états de liens pour les routeurs R-2, R-3, R-4 et R-5.

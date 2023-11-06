@@ -1,0 +1,16 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+#ID_CORRECT_TITLE,#ID_INCORRECT_TITLE
+{
+	margin-top: -13px !important;
+}
+
+@media only screen and (device-width: 768px){
+#ID_CORRECT_TITLE,#ID_INCORRECT_TITLE
+{
+	margin-top: -13px !important;
+}
+}

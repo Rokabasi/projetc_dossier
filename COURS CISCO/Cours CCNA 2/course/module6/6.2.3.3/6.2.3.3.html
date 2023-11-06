@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.3 Introduction au dépannage des trunks</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introduction au dépannage des trunks</h1>
+        <div>
+          <p>L’une des tâches courantes d’un administrateur réseau consiste à dépanner la formation de liaisons trunk ou les ports fonctionnant incorrectement en tant que port agrégé. Il arrive parfois qu’un port de commutateur se comporte comme un port trunk même s’il n’est pas configuré comme tel. Par exemple, un port d’accès peut accepter des trames issues de VLAN différents du VLAN auquel il est affecté. Cette fonctionnalité est appelée fuite de VLAN.</p>
+          <p></p>
+          <p>La Figure 1 présente un diagramme correspondant aux instructions générales de dépannage de trunk.</p>
+          <p></p>
+          <p>Pour résoudre les problèmes lorsqu’un trunk ne se crée pas ou en cas de fuite de VLAN, procédez comme suit :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Utilisez la commande show interfaces trunk pour vérifier si le VLAN local et son homologue natif correspondent. Si le VLAN natif ne correspond pas aux deux extrémités, il y a une fuite de VLAN. </p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Utilisez la commande <b>show interfaces trunk</b> pour vérifier si un trunk est établi entre les commutateurs. Configurez des liaisons trunk de manière statique autant que possible. Les ports du commutateur Cisco Catalyst utilisent le protocole DTP par défaut et essaient de négocier une liaison trunk.</p>
+          <p></p>
+          <p>Pour afficher l’état du trunk, le VLAN natif utilisé sur cette liaison trunk et contrôler l’établissement du trunk, utilisez la commande <b>show interfaces trunk</b>. L’exemple de la Figure 2 montre que le VLAN natif à une extrémité de la liaison trunk a été remplacé par le VLAN 2. Si une extrémité du trunk est configurée en tant que VLAN 99 natif et l’autre extrémité en tant que VLAN 2 natif, une trame envoyée par le VLAN 99 à une extrémité est reçue sur le VLAN 2 à l’autre extrémité. Le VLAN 99 « fuit » dans le segment VLAN 2.</p>
+          <p></p>
+          <p>Le protocole CDP signale une non-concordance de VLAN natif sur une liaison trunk avec le message suivant :</p>
+          <p></p>
+          <p>
+            <span class="cmd">*Mar  1 06:45:26.232: %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on FastEthernet0/1 (2), with S2 FastEthernet0/1 (99).</span>
+          </p>
+          <p></p>
+          <p>Des problèmes de connectivité surviennent sur le réseau en cas de non-concordance de VLAN natif. Le trafic de données des VLAN autres que les deux VLAN natifs configurés se propage sur la liaison trunk, mais les données associées à l’un des VLAN natifs ne sont pas correctement transmises. </p>
+          <p></p>
+          <p>Comme vous le voyez sur la Figure 2, les problèmes de non-concordance de VLAN natif n’empêchent pas le trunk d’effectuer l’assemblage. Pour résoudre ce problème de concordance, choisissez le même VLAN natif aux deux extrémités de la liaison.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 est un diagramme qui illustre les étapes à suivre pour diagnostiquer les problèmes liaison lorsque les VLAN sont en service. La Figure 2 montre la sortie de la commande « show interfaces F0/1 trunk » sur le commutateur 1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

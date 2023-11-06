@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.5 Étape 4 : Configuration des VLAN sur le serveur VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étape 4 : Configuration des VLAN sur le serveur VTP</h1>
+        <div>
+          <p>Actuellement, aucun VLAN différent de ceux par défaut n'est configuré sur S1. Configurez 3 VLAN, comme illustré sur la figure 1.</p>
+          <p>Vérifiez les VLAN sur S1, comme illustré sur la figure 2.</p>
+          <p></p>
+          <p>Remarquez que les 3 VLAN figurent désormais dans la base de données de VLAN. Vérifiez l'état de VTP, comme illustré sur la figure 3.</p>
+          <p></p>
+          <p>Remarquez que le numéro de révision de la configuration a été incrémenté six fois, passant de la valeur par défaut 0 à 6. Cela est dû au fait que trois nouveaux VLAN nommés ont été ajoutés. Chaque fois que l'administrateur modifie la base de données VLAN du serveur VTP, ce numéro augmente d'une unité. Le numéro a augmenté d'une unité lors de l'ajout d'un VLAN et d'une unité lors de la configuration du nom de ce VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente la configuration de 3 VLAN sur S1. La figure 2 montre la vérification de ces VLAN. La figure 3 montre la vérification de l'état de VTP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

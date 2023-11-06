@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.2 Paramètres EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Paramètres EIGRP</h1>
+        <div>
+          <p>Lors du dépannage d'un réseau EIGRP, l'une des premières choses à vérifier est que tous les routeurs participants au réseau EIGRP sont configurés avec le même numéro de système autonome. La commande<b> router eigrp </b><i>as-number </i>lance le processus EIGRP et est suivie du numéro de système autonome. La valeur de l'argument<i> as-number </i>doit être identique sur tous les routeurs qui se trouvent dans le domaine de routage EIGRP.</p>
+          <p></p>
+          <p>La Figure 1 montre que tous les routeurs doivent participer au numéro de système autonome 1. À la Figure 2, la commande<b> show ip protocols </b>vérifie que R1, R2 et R3 utilisent tous le même numéro de système autonome.</p>
+          <p></p>
+          <p>
+            <b>Protocole EIGRP pour IPv6</b>
+          </p>
+          <p></p>
+          <p>Des commandes et des critères de dépannage analogues s'appliquent au protocole EIGRP pour IPv6.</p>
+          <p></p>
+          <p>Voici les commandes équivalentes à utiliser avec le protocole EIGRP pour IPv6 :</p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router(config)# </span>
+                <span class="cmd">
+                  <b>ipv6 router eigrp </b>
+                </span>
+                <span class="cmd">
+                  <i>as-number</i>
+                </span>
+                <span class="cmd">
+                  <b></b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <span class="cmd">Router# </span>
+                <span class="cmd">
+                  <b>show ipv6 protocols</b>
+                </span>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: en haut du résultat, « IP Routing is NSF aware » renvoie à la fonction NSF (Nonstop Forwarding). Cette fonction permet aux homologues EIGRP d'un routeur défaillant de conserver les informations de routage annoncées et de continuer à utiliser ces informations jusqu'à ce que le routeur défaillant reprenne un fonctionnement normal et puisse échanger des informations de routage. Pour en savoir plus, visitez la page : <a href="http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/eigrp-nsf-awa.html" target="_blank">http://www.cisco.com/en/US/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/eigrp-nsf-awa.html</a></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur R2 est connecté à un fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exclusion de la liaison entre le routeur R2 et le fournisseur d'accès à Internet. La Figure 2 présente le résultat de la commande « show ip protocols » sur les routeurs R1, R2 et R3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande show ipv6 route OSPF.  La sortie répertorie trois routes dans la table de routage du routeur R1, lesquelles ont été acquises via OSPF. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier la table de routage IPv6 sur les routeurs R2 et R3.

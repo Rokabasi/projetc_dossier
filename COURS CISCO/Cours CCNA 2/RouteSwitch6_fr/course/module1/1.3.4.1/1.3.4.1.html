@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.3.4.1 Routage dynamique </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routage dynamique </h1>
+        <div>
+          <p>Les protocoles de routage dynamique sont utilisés par les routeurs pour partager des informations sur l’accessibilité et l’état des réseaux distants. Les protocoles de routage dynamique effectuent plusieurs tâches, notamment la détection de réseaux et la gestion des tables de routage.</p>
+          <p></p>
+          <p>La détection de réseaux est la capacité d’un protocole de routage à partager des informations concernant les réseaux qu’il connaît avec d’autres routeurs utilisant le même protocole de routage. Au lieu de configurer manuellement des routes statiques vers des réseaux distants sur chaque routeur, un protocole de routage dynamique permet aux routeurs de recevoir automatiquement, par le biais d'autres routeurs, les informations nécessaires concernant ces réseaux. Ces réseaux, ainsi que le meilleur chemin vers chacun d'eux, sont ajoutés à la table de routage du routeur et identifiés comme des réseaux détectés par un protocole de routage dynamique spécifique.</p>
+          <p></p>
+          <p>Lors de la découverte du réseau, les routeurs échangent des routes et mettent à jour leurs tables de routage. Les routeurs ont convergé après avoir terminé leurs échanges et mis à jour leurs tables de routage. Les routeurs gèrent alors les réseaux dans leurs tables de routage. </p>
+          <p></p>
+          <p>La figure présente un scénario simple illustrant la manière dont deux routeurs voisins échangeraient initialement des informations de routage. Dans cet échange simplifié, le routeur R1 se présente et indique les réseaux qu’il peut atteindre. Le routeur R2 répond avec sa liste de réseaux.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche deux routeurs connectés via une liaison WAN exécutant le protocole de routage dynamique EIGRP.  Chaque routeur dispose de trois réseaux connectés et annonce ces réseaux à l’autre routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

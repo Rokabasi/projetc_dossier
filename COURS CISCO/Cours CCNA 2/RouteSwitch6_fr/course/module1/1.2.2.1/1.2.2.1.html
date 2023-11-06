@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.2.1 Décisions de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Décisions de routage</h1>
+        <div>
+          <p>La fonction principale d'un routeur est de déterminer le meilleur chemin à utiliser pour envoyer des paquets. Pour déterminer le meilleur chemin, le routeur recherche dans sa table de routage une adresse réseau correspondant à l'adresse IP de destination du paquet.</p>
+          <p></p>
+          <p>La recherche de la table de routage détermine l'un des trois chemins suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Réseau connecté directement</b> : si l'adresse IP de destination du paquet appartient à un périphérique situé sur un réseau qui est connecté directement à l'une des interfaces du routeur, le paquet est transféré directement au périphérique de destination. Cela signifie que l'adresse IP de destination du paquet est une adresse d'hôte sur le même réseau que l'interface de ce routeur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réseau distant</b> : si l'adresse IP de destination du paquet appartient à un réseau distant, le paquet est transféré à un autre routeur. Il n’est possible d’accéder aux réseaux distants qu’en transférant les paquets à un autre routeur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>No route determined</b> : si l'adresse IP de destination du paquet n'appartient pas à un réseau connecté ou distant, le routeur détermine s'il existe une passerelle de dernier recours disponible. Une passerelle de dernier recours est définie lorsqu'une route par défaut est configurée ou enregistrée sur un routeur. S'il existe une route par défaut, le paquet est transmis à la passerelle de dernier recours. Si le routeur n'a pas de route par défaut, le paquet est rejeté.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le diagramme logique de la figure illustre le processus de décision du transfert de paquet du routeur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre un organigramme du processus décisionnel de transfert de paquets qu'un routeur effectue lors de la réception d'un paquet.  Ceci est un résumé de la lecture.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

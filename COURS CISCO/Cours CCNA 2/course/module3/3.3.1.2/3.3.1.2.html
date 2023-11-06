@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.1.2 Entrées connectées directement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrées connectées directement</h1>
+        <div>
+          <p>Comme indiqué dans la Figure 1, la table de routage de R1 contient trois réseaux connectés directement. Remarquez que deux entrées de la table de routage sont automatiquement créées lorsqu'une interface de routeur active est configurée avec une adresse IP et un masque de sous-réseau. </p>
+          <p></p>
+          <p>La Figure 2 illustre une des entrées de la table de routage sur R1 pour le réseau connecté directement 172.16.1.0. Ces entrées ont été automatiquement ajoutées à la table de routage lorsque l'interface GigabitEthernet 0/0 a été configurée et activée. Les rapports contiennent les informations suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origine de la route</b> : indique comment la route a été apprise. Les interfaces connectées directement ont deux codes d'origine de la route. <b>C</b> signale un réseau connecté directement. Les réseaux connectés directement sont automatiquement créés lorsqu'une interface est configurée à l'aide d'une adresse IP et activée.<b> L</b> indique qu'il s'agit d'une route locale. Les routes locales sont automatiquement créées chaque fois qu'une interface est configurée avec une adresse IP et est activée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réseau de destination</b> : adresse du réseau distant et façon dont ce réseau est connecté.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface de sortie</b> : identifie l'interface de sortie à utiliser lors du transfert de paquets au réseau de destination.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Plusieurs interfaces sont généralement configurées sur un routeur. La table de routage stocke des informations à la fois sur les routes connectées directement et les routes distantes. Comme avec les réseaux connectés directement, la source de la route indique comment la route a été découverte. Par exemple, les codes courants des réseaux distants sont les suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>S</b> – Indique que la route a été créée manuellement par un administrateur pour atteindre un réseau spécifique. Il s'agit d'une route statique.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>D</b> – Indique que la route a été apprise dynamiquement à partir d'un autre routeur au moyen du protocole de routage EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>O</b> – Indique que la route a été apprise dynamiquement à partir d'un autre routeur au moyen du protocole de routage OSPF.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>R</b> – Indique que la route a été apprise dynamiquement à partir d'un autre routeur au moyen du protocole de routage RIP.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche le résultat de la commande : show i.p. route pipe begin Gateway. Dans la figure, les trois routes connectées directement et les trois adresses IP des interfaces locales sont mises en surbrillance. La Figure 2 est un gros plan sur l’une des entrées. La source de la route, le réseau de destination et l’interface sortante sont mis en surbrillance.  Dans la première ligne, la lettre C correspond à l’adresse 172.16.1.0/24 connectée pour le réseau de destination et l’interface de sortie correspond à l’interface Gigabit Ethernet0/0.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

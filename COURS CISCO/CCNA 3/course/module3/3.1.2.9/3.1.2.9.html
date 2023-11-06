@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.9 L&#x0027;ID système étendu</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.9_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>L&#x0027;ID système étendu</h1>
+        <div>
+          <p>L'ID de pont (BID) permet de déterminer le pont racine d'un réseau. Le champ BID d'une trame BPDU contient trois champs distincts : </p>
+          <p>
+            <ul>
+              <li>Priorité du pont</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>ID système étendu</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Adresse MAC</li>
+            </ul>
+          </p>
+          <p>Chaque champ est utilisé lors du processus de sélection du pont racine.</p>
+          <p></p>
+          <p>
+            <b>Priorité du pont</b>
+          </p>
+          <p></p>
+          <p>La priorité du pont est une valeur personnalisable pouvant être utilisée pour influencer quel commutateur devient le pont racine. Le commutateur présentant la priorité la plus basse, et donc l'ID de pont le plus bas, devient pont racine car la valeur de priorité la plus basse a préséance sur les autres. Par exemple, pour garantir qu'un commutateur donné est toujours défini en tant que pont racine, définissez sa priorité sur une valeur plus basse que celle de tous les autres commutateurs du réseau. La valeur de priorité par défaut pour tous les commutateurs Cisco est la valeur décimale 32 768. La plage va de 0 à 61 440 par incrément de 4 096. Les valeurs de priorité valides sont donc : 0, 4096, 8192, 12288, 16384, 20480, 24576, 28672, 32768, 36864, 40960, 45056, 49152, 53248, 57344 et 61440. Toute autre valeur sera rejetée. Une priorité de pont de 0 a préséance sur toutes les autres priorités de pont.</p>
+          <p></p>
+          <p>
+            <b>L'ID système étendu</b>
+          </p>
+          <p></p>
+          <p>Les premières versions du protocole IEEE 802.1D avaient été conçues pour des réseaux n'utilisant pas de réseau local virtuel (VLAN). Il existait un seul arbre recouvrant commun sur tous les commutateurs. Pour cette raison, sur les anciens commutateurs Cisco, l'ID système étendu n'était pas obligatoire dans les trames BPDU. Au fur et à mesure que le recours aux réseaux VLAN s'est répandu pour segmenter l'infrastructure de réseau, le standard 802.1D a été mis à jour pour en intégrer la prise en charge, ce qui imposait d'inclure l'ID du réseau VLAN dans la trame BPDU. Les données de VLAN sont incluses dans la trame BPDU par le biais d'un ID système étendu. Tous les commutateurs récents intègrent par défaut l'utilisation de l'ID système étendu.</p>
+          <p></p>
+          <p>Comme le montre la Figure 1, le champ de priorité du pont comporte 2 octets ou 16 bits. 4 bits sont utilisés pour la priorité de pont et 12 bits pour l'ID système étendu, qui identifie le réseau VLAN participant à ce processus STP particulier. L'utilisation de ces 12 bits pour l'ID système étendu réduit le champ de priorité du pont à 4 bits seulement. Ce processus réserve les 12 bits les plus à droite à l'ID de VLAN et les 4 bits les plus à gauche à la priorité du pont. Ceci explique pourquoi la valeur de priorité du pont peut uniquement être configurée sur des multiples de 4 096, ou 2^12. Si les bits à l'extrême gauche sont 0001, la priorité de pont est 4 096. Si les bits à l'extrême gauche sont 1111, la priorité de pont est 61 440 (= 15 x 4 096). Les commutateurs Catalyst 2960 et 3560 ne permettent pas de configurer la priorité du pont sur 65 536 (= 16 x 4 096), car cela implique d'utiliser un 5e bit, qui n'est pas disponible du fait de l'utilisation de l'ID système étendu.</p>
+          <p></p>
+          <p>La valeur de l'ID système étendu est une valeur décimale ajoutée à la valeur de priorité du pont du BID afin d'identifier la priorité et le VLAN de la trame BPDU. </p>
+          <p></p>
+          <p>Lorsque deux commutateurs sont configurés avec la même priorité et possèdent le même ID système étendu, le commutateur dont l'adresse MAC de valeur est la plus faible, exprimée au format hexadécimal, aura le BID le plus bas. Au départ, tous les commutateurs sont configurés avec la même valeur de priorité par défaut. L'adresse MAC est alors le facteur décisif pour savoir quel commutateur deviendra le pont racine. Pour garantir que la décision relative au pont racine répond au mieux aux besoins du réseau, il est recommandé que l'administrateur configure le commutateur pont racine souhaité avec une priorité inférieure. Cela permet également de garantir que l'ajout de nouveaux commutateurs au réseau ne déclenche pas une nouvelle configuration Spanning Tree, qui pourrait perturber la communication sur le réseau avec la détermination d'un nouveau pont racine.</p>
+          <p></p>
+          <p>Dans la Figure 2, S1 a une priorité plus faible que les autres commutateurs. Par conséquent, il est préféré comme pont racine pour cette instance de Spanning Tree.</p>
+          <p></p>
+          <p>Lorsque tous les commutateurs sont configurés avec la même priorité, ce qui est le cas lorsque tous les commutateurs ont conservé la configuration par défaut avec une priorité de 32 768, l'adresse MAC devient le facteur décisif pour savoir quel commutateur devient le pont racine, comme l'illustre la Figure 3.</p>
+          <p></p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: dans cet exemple, la priorité de tous les commutateurs est de 32769. Cette valeur est basée sur la priorité par défaut (32768) et sur l'attribution du VLAN 1 associé à chaque commutateur (32768 + 1).</p>
+          <p></p>
+          <p>L’adresse MAC dont la valeur hexadécimale est la plus faible sera celle choisie pour la désignation du pont racine. Dans cet exemple, S2 présente la valeur d'adresse MAC la plus basse et devient donc pont racine pour l'instance Spanning Tree.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les champs d'ID de pont sous deux formats.  Un avec ID système étendu et un sans.  Sans : la priorité est de 2 octets.  Avec : la priorité utilise 4 bits et l'ID système utilise les 12 autres bits. La Figure 2 présente trois commutateurs, chacun connecté aux deux autres par une liaison trunk.  Chaque commutateur a une légende qui affiche l'ID de pont racine, l'ID de pont et le coût de chemin.  Les priorités sont mises en évidence et le commutateur un est identifié comme pont racine parce qu'il a la priorité la plus faible. La Figure 3 présente trois commutateurs, chacun connecté aux deux autres par une liaison trunk.  Chaque commutateur a une légende qui affiche l'ID de pont racine, l'ID de pont et le coût de chemin.  Cette fois, les priorités sont toutes identiques.  Les adresses MAC sont mises en évidence et le commutateur deux est identifié comme pont racine parce que son adresse MAC est la plus basse.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

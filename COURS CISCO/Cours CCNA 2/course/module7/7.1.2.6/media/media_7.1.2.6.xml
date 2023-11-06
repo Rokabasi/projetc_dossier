@@ -1,0 +1,90 @@
+<textcomponents>
+
+<component id='ID_title'>
+	<text><![CDATA[<b>Exercice – Déterminer le masque générique correct</b><br><br>Faites glisser le masque générique vers l&apos;instruction de liste de contrôle d&apos;accès appropriée. Certaines réponses seront utilisées plusieurs fois et d&apos;autres ne serviront pas du tout. ]]></text>
+</component>
+
+<component id='ID_drag_header01'>
+	<text><![CDATA[<b>Instruction de liste de contrôle d&apos;accès</b>]]></text>
+</component>
+<component id='ID_drag_header02'>
+	<text><![CDATA[<b>Masque générique</b>]]></text>
+</component>
+
+<component id='ID_txt01'>
+	<text><![CDATA[Refuser tous les hôtes du réseau 10.10.10.0/24.]]></text>
+</component>
+
+<component id='ID_txt02'>
+	<text><![CDATA[Refuser l&apos;hôte 192.168.5.7.]]></text>
+</component>
+
+<component id='ID_txt03'>
+	<text><![CDATA[Autoriser tous les hôtes du sous-réseau 172.18.15.0/24.]]></text>
+</component>
+
+<component id='ID_txt04'>
+	<text><![CDATA[Autoriser l&apos;hôte 10.10.10.1.]]></text>
+</component>
+
+<component id='ID_txt05'>
+	<text><![CDATA[Autoriser tous les hôtes du réseau 10.0.0.0/8.]]></text>
+</component>
+
+<component id='ID_txt06'>
+	<text><![CDATA[Refuser l&apos;hôte 172.18.33.1.]]></text>
+</component>
+
+<component id='ID_txt07'>
+	<text><![CDATA[Autoriser tous les hôtes du sous-réseau 192.168.5.0/27.]]></text>
+</component>
+
+<component id='ID_txt08'>
+	<text><![CDATA[Refuser tous les hôtes du réseau 172.18.0.0/16.]]></text>
+</component><!--Drag and Drop--><component id='ID_ip1_DS'>
+	<text><![CDATA[0.0.0.255]]></text>
+</component>
+
+<component id='ID_ip2_DS'>
+	<text><![CDATA[0.0.0.0]]></text>
+</component>
+
+<component id='ID_ip3_DS'>
+	<text><![CDATA[0.255.255.255]]></text>
+</component>
+
+<component id='ID_ip4_DS'>
+	<text><![CDATA[0.0.0.31]]></text>
+</component>
+
+<component id='ID_ip5_DS'>
+	<text><![CDATA[0.0.255.255]]></text>
+</component>
+
+
+<component id='ID_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement déterminé le masque générique pour chaque instruction de liste de contrôle d&apos;accès.]]></text>
+</component>
+
+
+<component id='ID_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas déterminé correctement le masque générique pour chaque instruction de liste de contrôle d&apos;accès. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+</textcomponents>

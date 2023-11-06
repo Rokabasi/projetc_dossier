@@ -1,0 +1,1 @@
+La figure présente le résultat de la commande « show ip route » sur les routeurs R1 et R3 qui ont pris connaissance de la route statique par défaut via le protocole EIGRP.

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.3 Configuration d&#x0027;une route statique de tronçon suivant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;une route statique de tronçon suivant</h1>
+        <div>
+          <p>Dans une route statique de tronçon suivant, seule l'adresse IP de tronçon suivant est spécifiée. L’interface de sortie est dérivée du tronçon suivant. Par exemple, dans la Figure 1, trois routes statiques de tronçon suivant sont configurées sur R1 à l'aide de l'adresse IP du tronçon suivant, R2.</p>
+          <p></p>
+          <p>Avant qu’un routeur ne transfère un paquet, le processus de la table de routage doit déterminer l’interface de sortie à utiliser pour transférer le paquet. C’est ce que l’on appelle la résolvabilité d’une route. </p>
+          <p></p>
+          <p>La Figure 2 présente en détail le processus de base de transfert des paquets dans la table de routage pour le routeur R1. Lorsqu'un paquet est destiné au réseau 192.168.2.0/24, R1 :</p>
+          <p></p>
+          <p>1. Recherche une correspondance dans la table de routage et découvre qu'il doit envoyer les paquets vers l'adresse IPv4 de tronçon suivant 172.16.2.2, comme indiqué par l'étiquette 1 dans la figure. Pour chaque route qui ne fait référence qu'à une seule adresse IPv4 de tronçon suivant et qui ne fait référence à aucune interface de sortie, l'adresse IPv4 de tronçon suivant doit être résolue à l'aide d'une autre route figurant dans la table de routage et disposant d'une interface de sortie.</p>
+          <p></p>
+          <p>2. R1 doit maintenant déterminer la façon d'atteindre 172.16.2.2 ; par conséquent, il recherche une deuxième fois une correspondance pour 172.16.2.2. Dans ce cas, l'adresse IPv4 correspond à la route pour le réseau connecté directement 172.16.2.0/24 avec l'interface de sortie Serial 0/0/0, comme indiqué par l'étiquette 2 dans la figure. Cette recherche indique au processus de la table de routage que ce paquet est transféré à cette interface. </p>
+          <p></p>
+          <p>Il faut donc deux processus de recherche dans la table de routage pour transférer un paquet vers le réseau 192.168.2.0/24. Lorsque le routeur effectue plusieurs recherches dans la table de routage avant de transférer un paquet, il exécute un processus appelé recherche récursive. Étant donné que les recherches récurrentes consomment des ressources du routeur, elles doivent être évitées si possible.</p>
+          <p></p>
+          <p>Une route statique récursive est valide (c'est-à-dire qu'elle convient pour une insertion dans la table de routage) uniquement lors de la résolution du tronçon suivant spécifié, directement ou indirectement, vers une interface valide de sortie. Si l’interface de sortie est à l’arrêt (down) ou fermée par l’administrateur (administratively down), alors la route statique ne sera pas installée dans la table de routage.</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans les Figures 3 et 4 pour configurer et vérifier les routes statiques du tronçon suivant sur R2 et R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures sont basées sur le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN. La Figure 1 montre la configuration de deux LAN auxquels le routeur R1 n’est pas connecté, les LAN des routeurs R2 et R3, ainsi que le WAN entre les routeurs R2 et R3.  Les routes statiques ont été configurées en utilisant l’adresse du tronçon suivant. La Figure 2 démontre le processus de recherche récursive pour le routeur R1 afin d’atteindre le LAN du routeur R3.  Ce processus est nécessaire lorsqu’une route statique est entrée en utilisant les différences entre un tronçon suivant et une interface de sortie. La Figure 3 constitue une activité interactive qui permet à l’apprenant de configurer une route statique sur le routeur R2, afin d’atteindre le LAN du routeur R3, à l’aide d’une adresse de tronçon suivant. La Figure 4 constitue une activité interactive qui permet à l’apprenant de configurer des routes statiques sur le routeur R3 en direction des réseaux de l’autre côté du routeur R2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

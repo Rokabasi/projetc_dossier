@@ -1,0 +1,1 @@
+La figure montre trois commutateurs ; le commutateur 1 est connecté au commutateur 2 et 3.  Les commutateurs 2 et 3 possèdent trois VLAN.  Il y a des légendes indiquant les ports attribués à chaque VLAN.  Il existe également une légende indiquant que le commutateur 1 est connecté au commutateur 2 et 3 via une liaison qui autorise les réseaux VLAN nécessaires sur le lien.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.4 Interface passive</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interface passive</h1>
+        <div>
+          <p>Par défaut, les messages OSPF sont acheminés à partir de toutes les interfaces compatibles OSPF. Cependant, ces messages ne doivent réellement être envoyés qu'à partir des interfaces connectées aux autres routeurs compatibles OSPF. </p>
+          <p></p>
+          <p>Consultez la topologie dans la figure. Les messages OSPFv2 sont transmis à partir de l'interface G0/0 des trois routeurs, même s'il n'existe pas de voisin OSPFv2 sur ce réseau local. L'envoi de messages inutiles sur un réseau local a trois effets néfastes sur le réseau :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Utilisation inefficace de la bande passante</b> - La bande passante disponible est monopolisée par le transport de messages inutiles. Les messages sont à diffusion multiple ; par conséquent, les commutateurs acheminent également les messages à partir de tous les ports. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Utilisation inefficace des ressources</b> - Tous les périphériques du réseau local doivent traiter le message, voire éventuellement le supprimer.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Risques de sécurité accru</b>s - L'annonce de mises à jour sur un réseau de diffusion constitue un risque de sécurité. Les messages OSPF peuvent être interceptés par un logiciel d'analyse de paquets. Les mises à jour de routage peuvent être modifiées et retournées au routeur avec des métriques fausses qui altèrent la table de routage et provoquent l'acheminement incorrect du trafic.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre la topologie de référence pour le protocole OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

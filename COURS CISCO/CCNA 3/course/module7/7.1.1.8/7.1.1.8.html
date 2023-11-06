@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.8 Route récapitulative (suite)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Route récapitulative (suite)</h1>
+        <div>
+          <p>Le protocole EIGRP utilise l'interface Null0 pour empêcher ces types de boucles de routage. La figure illustre un scénario selon lequel une route Null0 empêche la boucle de routage illustrée dans l'exemple précédent :</p>
+          <p></p>
+          <p>1. Le routeur R1 dispose d'une route par défaut 0.0.0.0/0 passant par le routeur du fournisseur d'accès à Internet.</p>
+          <p>2. Le routeur R1 envoie une mise à jour de routage vers R2 contenant la route par défaut.</p>
+          <p>3. Le routeur R2 installe la route par défaut issue de R1 dans sa table de routage IPv4.</p>
+          <p>4. La table de routage de R2 contient les sous-réseaux 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24.</p>
+          <p>5. R2 installe la route récapitulative 172.16.0.0/16 vers Null0 dans sa table de routage.</p>
+          <p>6. Le routeur R2 envoie une mise à jour récapitulative à R1 pour le réseau 172.16.0.0/16.</p>
+          <p>7. Le routeur R1 installe la route récapitulative pour 172.16.0.0/16 via R2.</p>
+          <p>8. Le routeur R1 reçoit un paquet pour 172.16.4.10. Étant donné que R1 dispose d'une route pour 172.16.0.0/16 via R2, il transfère le paquet à R2.</p>
+          <p>9. Le routeur R2 reçoit le paquet avec l'adresse de destination 172.16.4.10 à partir de R1. Le paquet ne correspond à aucun sous-réseau de 172.16.0.0, mais correspond à la route récapitulative 172.16.0.0/16 vers Null0. À l'aide de la route Null0, le paquet est mis à l'écart.</p>
+          <p></p>
+          <p>Une route récapitulative sur R2 pour 172.16.0.0/16 vers l'interface Null0 rejette tout paquet commençant par 172.16.x.x et n'ayant pas de correspondance plus longue avec l'un des sous-réseaux (172.16.1.0/24, 172.16.2.0/24 ou 172.16.3.0/24).</p>
+          <p></p>
+          <p>Même si R2 comporte une route par défaut de 0.0.0.0/0 dans sa table de routage, la route Null0 est une correspondance plus longue.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la route récapitulative Null0 est supprimée lorsque la récapitulation automatique est désactivée à l'aide de la commande de mode de configuration de routeur <b>no auto-summary</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre un réseau dans lequel le routeur R1 est connecté au fournisseur d'accès à Internet et au routeur R2.  Le routeur 2 récapitule le sous-réseau 172.16.0.0 et l'envoie au routeur 1.  Le routeur 2 a également une route statique par défaut pointant vers le routeur 1.  Dans ce cas, une interface Null0 est utilisée pour éviter toute boucle de routage.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

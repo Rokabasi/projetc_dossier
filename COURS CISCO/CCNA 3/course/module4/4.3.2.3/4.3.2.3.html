@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.3 La priorité et la préemption HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La priorité et la préemption HSRP</h1>
+        <div>
+          <p>Le rôle des routeurs actifs et de secours est déterminé lors du processus de sélection de HSRP. Par défaut, le routeur avec l'adresse IPv4 la plus élevée devient le routeur actif. Cependant, il est toujours plus judicieux de contrôler la manière dont votre réseau fonctionne en conditions normales plutôt que de laisser le hasard faire les choses.</p>
+          <p></p>
+          <p>
+            <b>Priorité HSRP</b>
+          </p>
+          <p></p>
+          <p>Il est possible d'utiliser la priorité HSRP pour déterminer le routeur actif. Le routeur associé à la priorité HSRP la plus élevée devient le routeur actif. La valeur par défaut de la priorité HSRP est 100. Si les priorités sont identiques, le routeur avec l'adresse IPv4 la plus élevée devient le routeur actif.</p>
+          <p>Pour configurer un routeur en tant que routeur actif, utilisez la commande d'interface <b>standby priority</b>. La plage de priorité HSRP va de 0 à 255.</p>
+          <p></p>
+          <p>
+            <b>Préemption HSRP</b>
+          </p>
+          <p></p>
+          <p>Par défaut, après être devenu le routeur actif, ce routeur le reste même si un autre routeur associé à une priorité plus élevée est connecté.</p>
+          <p></p>
+          <p>Pour imposer un nouveau processus de sélection de routeur HSRP, activez la préemption à l'aide de la commande d'interface <b>standby preempt</b>. La préemption est la capacité d'un routeur HSRP à déclencher un nouveau processus de sélection. Lorsque la préemption est activée, un routeur mis en ligne avec une priorité HSRP plus élevée assume le rôle de routeur actif.</p>
+          <p></p>
+          <p>La préemption permet de définir un routeur comme routeur actif uniquement si celui-ci affiche une priorité plus élevée. Un routeur pour lequel la préemption a été activée et qui a une adresse IPv4 plus élevée, mais une priorité identique ne prendra pas la main sur un routeur actif. Consultez la topologie dans la figure.</p>
+          <p></p>
+          <p>R1 a été configuré avec la priorité HSRP 150 et R2 avec la priorité HSRP par défaut, soit 100. La préemption est activée sur R1. Comme sa priorité est plus élevée, R1 est le routeur actif et R2 le routeur de secours (standby). En raison d'une panne de courant affectant seulement R1, le routeur actif n'est plus disponible et le routeur de secours R2 prend le relais. Une fois l'alimentation rétablie, R1 est de nouveau disponible. Comme la priorité de R1 est plus élevée et que la préemption est activée, il déclenche un nouveau processus de sélection. R1 reprend son rôle de routeur actif et R2 celui du routeur de secours.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : lorsque la préemption est désactivée, le premier routeur qui démarre devient le routeur actif si aucun autre routeur n'est disponible pendant le processus de sélection.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

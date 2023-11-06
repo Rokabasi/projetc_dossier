@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.1.1 OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>OSPFv3</h1>
+        <div>
+          <p>OSPFv3 est l'équivalent OSPFv2 pour l'échange de préfixes IPv6. Rappelez-vous que dans IPv6, l'adresse réseau est considérée comme étant le préfixe et le masque de sous-réseau est appelé la longueur de préfixe.</p>
+          <p></p>
+          <p>De la même façon que son homologue IPv4, OSPFv3 échange les informations de routage pour insérer les préfixes distants dans la table de routage IPv6, comme illustré dans la figure.  </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> grâce à la fonctionnalité de familles d'adresses OSPFv3, OSPFv3 prend en charge à la fois les protocoles IPv4 et IPv6. Les familles d'adresses OSPF ne font pas partie des thèmes abordés dans ce programme d'études.  </p>
+          <p></p>
+          <p>OSPFv2 s'exécute sur la couche réseau IPv4, communique avec d'autres homologues OSPF IPv4 et annonce uniquement les routes IPv4. </p>
+          <p></p>
+          <p>OSPFv3 dispose des mêmes fonctionnalités qu'OSPFv2, à la différence près qu'il utilise IPv6 comme transport de couche réseau, en communiquant avec les homologues OSPFv3 et en annonçant les routes IPv6. OSPFv3 utilise également l'algorithme SPF comme moteur de calcul pour déterminer les meilleurs chemins dans l'ensemble du domaine de routage.</p>
+          <p></p>
+          <p>Comme avec tous les protocoles de routage IPv6, OSPFv3 a des processus distincts par rapport à son homologue IPv4. Les processus et les opérations sont fondamentalement les mêmes que dans le protocole de routage IPv4, mais ils fonctionnent indépendamment. OSPFv2 et OSPFv3 ont chacun des tables de contiguïté, des tables topologiques OSPF et des tables de routage IP différentes, comme illustré dans la figure. </p>
+          <p></p>
+          <p>Les commandes de configuration et de vérification OSPFv3 sont similaires à celles utilisées dans OSPFv2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un récapitulatif des structures de données des versions OSPF 2 et 3.  Elle précise que chaque version possède une table de voisinage, une table topologique et une table de routage.  OSPF version 2 est exécuté sur les réseaux IPv4, et OSPF version 3 sur les réseaux IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

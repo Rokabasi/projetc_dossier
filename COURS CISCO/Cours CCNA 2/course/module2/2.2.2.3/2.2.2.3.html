@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.3 Vérification d&#x0027;une route statique par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification d&#x0027;une route statique par défaut</h1>
+        <div>
+          <p>Dans la figure, la commande <b>show ip route static</b> affiche le contenu des routes statiques dans la table de routage. Notez l’astérisque (*) <b></b>en regard de la route avec le code « S ». Comme affiché dans la table des codes de la figure, l'astérisque indique que cette route statique est la route par défaut idéale, c'est pourquoi elle est sélectionnée comme passerelle de dernier recours. </p>
+          <p></p>
+          <p>L'élément essentiel de cette configuration est le masque /0. Le masque de sous-réseau dans une table de routage détermine le nombre de bits devant correspondre entre l’adresse IP de destination du paquet et la route dans la table de routage. Le chiffre binaire 1 indique que les bits doivent correspondre. Le chiffre binaire 0 indique que les bits ne doivent pas correspondre. Le masque /0 dans cette entrée de route indique qu'aucun des bits ne doit correspondre. La route statique par défaut correspond à tous les paquets pour lesquels il n'existe pas de correspondance plus spécifique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche le schéma standard de l’atelier avec la sortie de la commande « show ip route static ».  Elle indique les relations entre la passerelle de dernier recours au sommet de la sortie et la route statique par défaut en bas.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

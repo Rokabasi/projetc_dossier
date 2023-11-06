@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.2 Lien et état de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Lien et état de liens</h1>
+        <div>
+          <p>La première étape du processus de routage à état de liens consiste à faire en sorte que chaque routeur prenne connaissance de ses propres liens et de ses propres réseaux connectés directement. Lorsqu’une interface de routeur est configurée avec une adresse IP et un masque de sous-réseau, elle devient partie intégrante de ce réseau.  </p>
+          <p></p>
+          <p>Consultez la topologie illustrée dans la figure 1. Dans le cadre de cette discussion, supposons que le routeur R1 ait préalablement été configuré et dispose d'une connectivité totale avec tous les voisins. Toutefois, une brève coupure de courant est survenue sur le routeur R1 et ce dernier a dû redémarrer. </p>
+          <p></p>
+          <p>Pendant le démarrage, R1 charge le fichier de configuration initiale qui a été enregistré. Lorsque les interfaces précédemment configurées deviennent actives, R1 prend connaissance de ses propres réseaux connectés directement. Quels que soient les protocoles de routage utilisés, ces réseaux connectés directement figurent à présent comme entrées dans la table de routage. </p>
+          <p></p>
+          <p>Comme pour les protocoles à vecteur de distance et les routes statiques, l'interface doit être correctement configurée avec une adresse IPv4 et un masque de sous-réseau, et le lien doit être à l'état actif (up) avant que le protocole de routage à état de liens puisse le détecter. Comme avec les protocoles à vecteur de distance, l'interface doit être incluse dans une des instructions de configuration de routeur <b>network</b> avant de pouvoir participer au processus d'état de liens. </p>
+          <p></p>
+          <p>La figure 1 montre R1 lié à quatre réseaux connectés directement : </p>
+          <p>
+            <ul>
+              <li>FastEthernet 0/0 - 10.1.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Série 0/0/0 : 10.2.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Série 0/0/1 : 10.3.0.0/16 </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Série 0/1/0 : 10.4.0.0/16 </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Comme l'illustrent les Figures 2 à 5, les informations d'état de liens comprennent :</p>
+          <p>
+            <ul>
+              <li>L'adresse IPv4 et le masque de sous-réseau de l'interface</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le type de réseau, par exemple Ethernet (diffusion) ou lien série point à point</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le coût du lien</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les éventuels routeurs voisins sur ce lien</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> l'implémentation Cisco du protocole OSPF indique la métrique de routage OSPF comme coût du lien basé sur la bande passante de l'interface de sortie. Pour les besoins de ce chapitre, nous emploierons des valeurs de coût arbitraires pour simplifier la démonstration.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente quatre routeurs disposés en diamant. Chaque routeur est directement connecté à ses deux routeurs voisins.  Un routeur se trouve au centre et est connecté à deux des autres routeurs.  Elle indique les coûts pour chaque liaison entre les routeurs.  La figure se focalise sur le routeur R1, qui dispose de trois liaisons WAN série actives et d'un réseau local sur une interface Fast Ethernet.  Un coût est indiqué en regard de chaque liaison.  La Figure 2 répertorie les informations relatives à l'interface Fast Ethernet du routeur R-1.  Son adresse IP est 10.1.0.1, elle se trouve sur le réseau 10.1.0.0/16 et son coût s'élève à 2. La Figure 3 répertorie les informations relatives à l'interface série 0/0/0 du routeur R1.  Son adresse IP est 10.2.0.1, sur le réseau 10.2.0.0/16. Son coût s'élève à 20 et son routeur voisin est le routeur R2. La Figure 4 répertorie les informations relatives à l'interface série 0/0/0 du routeur R-1.  Son adresse IP est 10.3.0.1, elle se trouve sur le réseau 10.3.0.0/16, son coût s'élève à 5 et son routeur voisin est le routeur R-3. La Figure 5 répertorie les informations relatives à l'interface série 0/0/0 du routeur R-1.  Son adresse IP est 10.4.0.1, elle se trouve sur le réseau 10.4.0.0/16, son coût s'élève à 20 et son routeur voisin est le routeur R-4.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

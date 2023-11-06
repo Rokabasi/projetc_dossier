@@ -1,0 +1,54 @@
+﻿<textcomponents>
+
+    <component id="ID_s1_title">
+        <text><![CDATA[<b>Gestion de réseaux locaux virtuels : un défi</b>]]></text>
+    </component>
+ 
+    <component id="ID_s2_title">
+        <text><![CDATA[<b>Composants VTP</b>]]></text>
+    </component>
+
+    <component id="ID_table01">
+    <text><![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+
+    	<tr class="mtable_title">
+            <td colspan="2" bgcolor='#98D3D1'><font size="5"></font></td>
+        </tr>
+ 
+        <tr class="mtable_top">
+            <td colspan='2' bgcolor='#4E4C4D'><font size='1' color='#4E4C4D'>.</font></td>
+        </tr>
+
+		<tr>
+			<td width="105px" bgcolor='#077A77'><font color='#ffffff'><b>Composants VTP</b></font></td>
+			<td bgcolor='#077A77'><font color='#ffffff'><b>Définition</b></font></td>
+		</tr>
+
+		<tr>
+			<td bgcolor='#eff8f7'>Domaine VTP</td>
+			<td bgcolor='#eff8f7'><textformat blockindent="-16"><ul><li>Composé d&apos;un ou de plusieurs commutateurs interconnectés.</li><li>Tous les commutateurs d&apos;un domaine partagent les détails de configuration VLAN à l&apos;aide d&apos;annonces VTP.</li><li>Les commutateurs se trouvant dans des domaines VTP différents n&apos;échangent pas de messages VTP.</li><li>Un routeur ou commutateur de couche 3 définit la limite de chaque domaine.</li></ul></textformat></td>
+		</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Annonces VTP</td>
+<td bgcolor='#ffffff'><textformat blockindent="-16"><ul><li>Chaque commutateur du domaine VTP envoie régulièrement des annonces de configuration globale depuis chaque port d&apos;agrégation vers une adresse de multidiffusion réservée.</li><li>Les commutateurs voisins reçoivent ces annonces et mettent à jour leurs configurations VTP et VLAN selon les besoins.</li></ul></textformat></td>
+</tr>
+
+<tr>
+<td bgcolor='#eff8f7'>Modes VTP</td>
+<td bgcolor='#eff8f7'>Il est possible de configurer un commutateur dans l&apos;un des trois modes VTP : serveur, client ou transparent.</td>
+</tr>
+
+<tr>
+<td bgcolor='#ffffff'>Mot de passe VTP</td>
+<td bgcolor='#ffffff'>Les commutateurs du domaine VTP peuvent également être configurés à l&apos;aide d&apos;un mot de passe.</td>
+</tr>
+
+</table>]]></text>
+    </component>
+	
+	<component id="ID_s2_txt01">
+        <text><![CDATA[<b>Remarque :</b> les annonces VTP ne sont pas échangées si le trunk entre les commutateurs est inactif ou s&apos;il n&apos;est pas correctement configuré.]]></text>
+    </component>
+
+</textcomponents>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.4 Les problèmes liés à la redondance de la couche 1 : trames de monodiffusion en double</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les problèmes liés à la redondance de la couche 1 : trames de monodiffusion en double</h1>
+        <div>
+          <p>Les boucles ne concernent pas uniquement les trames de diffusion : Lorsque des trames de monodiffusion inconnues sont envoyées dans un réseau comportant des boucles, des trames peuvent arriver en double sur l'appareil de destination. Une trame de monodiffusion inconnue se produit lorsque le commutateur n'a pas d'adresse MAC de destination dans sa table d'adresses MAC et qu'il doit réacheminer la trame à tous les ports, à l'exception du port d'entrée. </p>
+          <p></p>
+          <p>Cliquez sur le bouton <b>Lecture</b> de la figure pour afficher une animation traitant ce problème. Lorsque l'animation s'interrompt, lisez le texte à droite de la topologie. L'animation continuera après une courte pause.</p>
+          <p>Dans l'animation :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>1. PC1 envoie une trame de monodiffusion destinée à PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S2 n'a pas d'entrée pour PC4 dans sa table MAC. Afin d'essayer de trouver PC4, il inonde tous les ports de commutateur avec la trame de monodiffusion unknown, à l'exception du port qui a reçu le trafic. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>3. La trame parvient aux commutateurs S1 et S3. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S1, qui dispose d'une entrée d'adresse MAC pour PC4, réachemine la trame en sortie vers PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S3, qui dispose d'une entrée dans sa table d'adresses MAC pour PC4, réachemine la trame de monodiffusion en sortie de Trunk3 vers S1. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>S1 reçoit la trame en double et la réachemine vers PC4. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>7. PC4 a reçu la même trame deux fois.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La plupart des protocoles des couches supérieures ne sont pas conçus pour identifier les transmissions en double. En général, les protocoles qui utilisent un mécanisme de numérotation de séquences considèrent que la transmission a échoué et que le numéro d’ordre a été recyclé pour une autre session de communication. Les autres protocoles tentent de transférer la transmission en double au protocole de la couche supérieure approprié afin qu'elle soit traitée et éventuellement supprimée. </p>
+          <p></p>
+          <p>Les protocoles de réseau local de la couche 2, tels qu'Ethernet, n'intègrent pas de mécanisme pour identifier et éliminer les trames prises dans une boucle infinie. Certains protocoles de couche 3 implémentent un mécanisme TTL qui limite le nombre de fois qu'un périphérique réseau de couche 3 est autorisé à retransmettre un paquet. Les appareils de couche 2 ne disposent pas de ce mécanisme, de sorte qu'ils continuent à retransmettre indéfiniment le trafic de bouclage. STP, mécanisme de prévention des boucles de couche 2, a été développé pour traiter ces problèmes.</p>
+          <p></p>
+          <p>Pour empêcher ces problèmes de survenir dans un réseau redondant, un certain type d'arborescence (Spanning Tree) doit être appliqué aux commutateurs. Spanning Tree est activé par défaut sur les commutateurs Cisco pour empêcher la formation de boucles de couche 2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation présente trois commutateurs : s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  L'animation montre comment P.C.4 peut recevoir des trames de monodiffusion en double en cas de boucle de couche deux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

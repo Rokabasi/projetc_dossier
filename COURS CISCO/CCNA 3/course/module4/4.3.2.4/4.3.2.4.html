@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.2.4 Les états et les minuteurs HSRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les états et les minuteurs HSRP</h1>
+        <div>
+          <p>Un routeur peut avoir le rôle de routeur HSRP actif, chargé de transférer le trafic du segment ou celui de routeur HSRP passif, en standby et prêt à prendre la main en cas de défaillance du routeur actif. Lorsqu'une interface est configurée avec HSRP ou activée pour la première fois avec une configuration HSRP existante, le routeur envoie et reçoit des paquets « hello » HSRP pour commencer à déterminer son état au sein du groupe HSRP.  La figure répertorie les états HSRP.</p>
+          <p></p>
+          <p>Par défaut, les routeurs actif et de secours envoient des paquets « hello » à l'adresse de multidiffusion du groupe HSRP toutes les 3 secondes. Le routeur de secours (standaby) prend la main s'il ne reçoit pas un message « hello » du routeur actif après 10 secondes. Vous pouvez diminuer ces délais pour accélérer le basculement ou la préemption. Toutefois, pour éviter une utilisation accrue du processeur et des changements d'état « standby » inutiles, ne définissez pas une valeur inférieure à une seconde pour le minuteur « hello » et à 4 secondes pour le minuteur « hold » (attente).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

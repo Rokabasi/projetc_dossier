@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.1 Présentation de la commutation de couche 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Présentation de la commutation de couche 3</h1>
+        <div>
+          <p>Le routage inter-VLAN à l'aide de la méthode router-on-a-stick était simple à mettre en œuvre parce que les routeurs étaient généralement disponibles dans chaque réseau. Toutefois, comme le montre la figure, la plupart des réseaux d'entreprise modernes utilisent des commutateurs multicouches pour atteindre des débit de traitement de paquets élevés grâce à la commutation matérielle. Les commutateurs de couche 3 offrent généralement des débits de l'ordre de plusieurs millions de paquets par seconde (pps), alors que les routeurs traditionnels assurent des commutations allant de 100 000 à plus de 1 million de paquets par seconde.</p>
+          <p></p>
+          <p>Tous les commutateurs multicouches Catalyst prennent en charge les types d'interfaces de couche 3 suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Port routé</b> : interface de couche 3 pure similaire à une interface physique sur un routeur Cisco IOS.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface virtuelle de commutateur (SVI)</b> : interface VLAN virtuelle pour le routage inter-VLAN. En d'autres termes, les interfaces SVI sont des interfaces VLAN virtuellement acheminées.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Des commutateurs hautes performances, tels que le Catalyst 6500 et le Catalyst 4500, assument la plupart des fonctions impliquant la couche 3 OSI et supérieure en utilisant la commutation matérielle reposant sur le protocole CEF (Cisco Express Forwarding).</p>
+          <p></p>
+          <p>Tous les commutateurs Cisco Catalyst de couche 3 prennent en charge les protocoles de routage, mais plusieurs modèles de commutateurs Catalyst nécessitent un logiciel optimisé pour des fonctions spécifiques de protocole de routage. Les commutateurs de la gamme Catalyst 2960 exécutant IOS 12.2(55) ou une version ultérieure prennent en charge le routage statique.</p>
+          <p></p>
+          <p>Les commutateurs Catalyst utilisent différents paramètres par défaut pour les interfaces. Tous les produits des familles de commutateurs Catalyst 3560 et 4500 utilisent des interfaces de couche 2 par défaut. Les modèles de commutateurs de la gamme Catalyst 6500 exécutant Cisco IOS utilisent des interfaces de couche 3 par défaut. Selon la gamme de commutateurs Catalyst utilisée, les commandes de mode de configuration d'interface <b>switchport</b> ou <b>no switchport</b> peuvent être présentes dans la configuration en cours d'exécution ou les fichiers de configuration de démarrage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une topologie structurée avec des hôtes se connectant à une grappe de commutateurs redondants qui conduit à un routeur de passerelle. Le routeur de passerelle se connecte à une batterie de serveurs, à Internet et aux segments Intranet du réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

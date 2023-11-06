@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.2.2 Masque générique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Masque générique</h1>
+        <div>
+          <p>Le protocole OSPFv2 utilise la combinaison d'arguments<i> network-address wildcard-mask </i>pour activer le protocole OSPF sur les interfaces. Le protocole OSPF est sans classe par conception ; par conséquent, le masque générique est toujours obligatoire. Lors de l'identification des interfaces qui participent à un processus de routage, le masque générique est généralement l'inverse du masque de sous-réseau configuré sur cette interface. </p>
+          <p></p>
+          <p>Un masque générique est une chaîne de 32 chiffres binaires utilisés par le routeur pour déterminer quels bits de l'adresse examiner afin d'établir une correspondance. Dans un masque de sous-réseau, le chiffre binaire 1 équivaut à une correspondance et le chiffre binaire 0 n'est pas une correspondance. Dans un masque générique, l'inverse est également vrai :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Bit 0 de masque générique</b> : permet de vérifier la valeur du bit correspondant dans l'adresse. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Bit 1 de masque générique</b> : permet d'ignorer la valeur du bit correspondant dans l'adresse.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La méthode la plus simple pour calculer un masque générique consiste à soustraire le masque de sous-réseau de 255.255.255.255.</p>
+          <p></p>
+          <p>L'exemple de la Figure 1 calcule le masque générique à partir de l'adresse réseau 192.168.10.0/24. Pour cela, le masque de sous-réseau 255.255.255.0 est soustrait de 255.255.255.255, ce qui donne le résultat 0.0.0.255. Ainsi, 192.168.10.0/24 équivaut à 192.168.10.0 avec un masque générique de 0.0.0.255.</p>
+          <p></p>
+          <p>L'exemple de la Figure 2 calcule le masque générique à partir de l'adresse réseau 192.168.10.64/26. À nouveau, le masque de sous-réseau 255.255.255.192 est soustrait de 255.255.255.255, ce qui donne le résultat 0.0.0.63. Ainsi, 192.168.10.0/26 équivaut à 192.168.10.0 avec un masque générique de 0.0.0.63.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre comment calculer un masque générique pour un réseau /24.  Cette méthode saisit quatre ensembles correspondant à 255. Le masque de sous-réseau IPv4 est répertorié ci-dessous.  Le masque de sous-réseau est ensuite soustrait des quatre séries de 255, ce qui donne le masque générique.  La figure montre 255.255.255.255 - 255.255.255.0.  On obtient ainsi un masque générique dont la valeur est zéro, point, zéro, point, zéro, point, deux, cinq, cinq. La Figure 2 montre comment calculer un masque générique pour un réseau /26.  La figure montre 255.255.255.255 - 255.255.255.192.  On obtient ainsi un masque générique dont la valeur est 0.0.0.63.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

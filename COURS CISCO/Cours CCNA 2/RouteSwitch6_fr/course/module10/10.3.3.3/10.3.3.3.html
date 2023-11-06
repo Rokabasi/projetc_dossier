@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.3.3 Étapes pour copier une image IOS sur un périphérique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étapes pour copier une image IOS sur un périphérique</h1>
+        <div>
+          <p>Cisco publie régulièrement de nouvelles versions du logiciel Cisco IOS pour résoudre les difficultés et fournir de nouvelles fonctionnalités. Cet exemple utilise le protocole IPv6 pour le transfert, afin de montrer que le protocole TFTP peut également être utilisé dans les réseaux IPv6. </p>
+          <p></p>
+          <p>La Figure 1 illustre la copie d'une image du logiciel Cisco IOS à partir d'un serveur TFTP.  Un nouveau fichier d'image (c1900-universalk9-mz.SPA.152-4.M3.bin) sera copié à partir du serveur TFTP à 2001:DB8:CAFE:100::99 vers le routeur. </p>
+          <p></p>
+          <p>Procédez comme suit pour mettre à niveau le logiciel sur le routeur Cisco :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. </b>Sélectionnez un fichier d'image Cisco IOS répondant aux exigences en termes de plate-forme, de fonctionnalités et de logiciel. Téléchargez le fichier à partir de cisco.com et transférez-le sur le serveur TFTP.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>vérification de la connectivité au serveur TFTP Envoyez une requête ping au serveur TFTP à partir du routeur. Le résultat de la Figure 2 montre que le serveur TFTP est accessible à partir du routeur.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.  </b>Assurez-vous que l'espace dans la mémoire Flash est suffisant sur le routeur à mettre à niveau. La quantité de mémoire Flash disponible peut être vérifiée à l'aide de la commande<b> show flash0:</b>. Comparez l'espace de mémoire Flash disponible avec la nouvelle taille du fichier d'image. La commande<b> show flash0: </b>à la Figure 3 sert à vérifier la taille de la mémoire Flash. Dans l'exemple, l'espace de mémoire Flash disponible est de 182 394 880 octets. </p>
+          <p></p>
+          <p>
+            <b>Étape 4. </b>Copiez le fichier d'image IOS à partir du serveur TFTP vers le routeur à l'aide de la commande<b> copy </b>présentée à la Figure 4. Une fois la commande exécutée à l'aide des URL source et de destination spécifiées, l'utilisateur est invité à indiquer l'adresse IP de l'hôte distant, le nom du fichier source et le nom du fichier de destination. Le transfert du fichier commence.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un routeur et un serveur pour décrire la copie de l'IOS d'un serveur TFTP vers le routeur. La Figure 2 affiche le résultat de l’envoi réussi d’une requête ping au serveur depuis le routeur. La Figure 3 affiche la sortie de la commande « show flash:zero » sur le routeur. La Figure 4 montre la syntaxe pour copier l'IOS d'un serveur TFTP vers une mémoire Flash sur le routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

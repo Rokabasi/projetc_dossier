@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.2 Qu’est-ce que la fonction NAT ?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Qu’est-ce que la fonction NAT ?</h1>
+        <div>
+          <p>La fonction NAT peut être utilisée à différentes fins, mais son utilisation principale consiste à limiter la consommation des adresses IPv4 publiques. Ainsi, elle permet aux réseaux d'utiliser des adresses IPv4 privées en interne, et assure la traduction de ces adresses en une adresse publique lorsque nécessaire uniquement. La NAT permet également d'ajouter un niveau de confidentialité et de sécurité à un réseau, car elle empêche les réseaux externes de voir les adresses IPv4 internes.</p>
+          <p></p>
+          <p>Les routeurs configurés pour la NAT peuvent être configurés avec une ou plusieurs adresses IPv4 publiques valides. Ces adresses publiques sont appelées collectivement « pool NAT ». Lorsqu'un périphérique interne envoie du trafic hors du réseau, le routeur configuré pour la NAT traduit l'adresse IPv4 interne du périphérique en une adresse publique du pool NAT. Pour les périphériques externes, tout le trafic entrant sur le réseau et sortant de celui-ci semble posséder une adresse IPv4 publique du pool d'adresses fourni. </p>
+          <p></p>
+          <p>Un routeur NAT fonctionne généralement à la périphérie d'un réseau d'extrémité. Un réseau d'extrémité est un réseau ayant une seule connexion à son réseau voisin, avec un seul chemin pour émettre et recevoir. Dans l'exemple de la figure, R2 est un routeur périphérique. Du point de vue du FAI, R2 forme un réseau d'extrémité. </p>
+          <p></p>
+          <p>Lorsqu'un périphérique situé dans un réseau d'extrémité souhaite communiquer avec un périphérique en dehors de son réseau, le paquet est transmis au routeur périphérique. Le routeur périphérique mène à bien le processus NAT et traduit l'adresse privée interne du périphérique en une adresse publique externe routable. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la connexion au FAI peut utiliser une adresse privée ou une adresse publique qui est partagée parmi les clients. Pour les besoins de ce chapitre, une adresse publique est représentée.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche le routeur 1 connecté à deux LAN. Le routeur 1 est également connecté au routeur 2 par le biais d’un lien en série.  Le routeur 2 est également connecté à un ISP. Les réseaux connectés au routeur 1 sont internes et utilisent un adressage privé.  Une légende précise qu’il s’agit d’un réseau souche.  Le routeur 2 a une légende précisant qu’il s’agit d’un routeur de périphérie activé pour la NAT.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

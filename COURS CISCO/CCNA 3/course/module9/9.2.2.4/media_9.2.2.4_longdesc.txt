@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de l'exécution de la commande « show ip ospf database » sur un routeur OSPF à zones multiples.  Elle met en évidence les états de liens du routeur dans la base de données LSDB. La Figure 2 est un exercice interactif qui permet au stagiaire d'utiliser la commande « show ip ospf database » sur deux routeurs OSPF à zones multiples connectés.

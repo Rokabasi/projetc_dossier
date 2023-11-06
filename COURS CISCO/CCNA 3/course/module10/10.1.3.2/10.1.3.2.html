@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.3.2 Modifier les intervalles OSPFv2</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modifier les intervalles OSPFv2</h1>
+        <div>
+          <p>Il peut être souhaitable de modifier les minuteurs OSPF afin que les routeurs détectent plus rapidement les défaillances du réseau. Cela augmente le trafic, mais le besoin d'une convergence rapide est parfois plus important que les inconvénients du trafic supplémentaire produit.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les valeurs par défaut des intervalles des paquets Hello et Dead sont basées sur les meilleures pratiques et doivent être modifiées uniquement dans de rares circonstances. </p>
+          <p></p>
+          <p>Les intervalles Hello et Dead OSPFv2 peuvent être modifiés manuellement au moyen des commandes suivantes de mode de configuration d'interface : </p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf hello-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf dead-interval </b>
+                <i>secondes</i>
+              </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour rétablir les intervalles sur leur valeur par défaut, utilisez les commandes<b> no ip ospf hello-interval </b>et<b> no ip ospf dead-interval</b>.</p>
+          <p></p>
+          <p>L'exemple de la Figure 1 remplace l'intervalle Hello par la valeur de 5 secondes. Immédiatement après la modification de l'intervalle Hello, Cisco IOS modifie automatiquement l'intervalle Dead pour le porter à 4 fois la valeur de l'intervalle Hello. Cependant, le fait de modifier de façon explicite le minuteur est une saine pratique, plutôt que de compter sur une fonction automatique d’IOS. Les modifications figurent ainsi dans la configuration. Par conséquent, l'intervalle Dead est également défini manuellement à 20 secondes sur l'interface série 0/0/0 de R1.</p>
+          <p></p>
+          <p>Comme affiché par le message de contiguïté OSPFv2 en surbrillance à la Figure 1, lorsque le minuteur Dead de R1 arrive à expiration, R1 et R2 perdent leur contiguïté. En effet, les valeurs ont été modifiées uniquement d'un côté du lien série entre R1 et R2. N'oubliez pas que les intervalles des paquets Hello et Dead doivent correspondre d'un voisin à l'autre. </p>
+          <p></p>
+          <p>Utilisez la commande<b> show ip ospf neighbor </b>sur R1 pour vérifier les contiguïtés de voisinage, comme illustré à la Figure 2. Notez que le seul voisin répertorié est le routeur 3.3.3.3 (R3) et que R1 n'est plus contigu au voisin 2.2.2.2 (R2). Les minuteurs définis sur Serial 0/0/0 n’affectent pas la contiguïté de voisinage avec R3.</p>
+          <p></p>
+          <p>Pour restaurer la contiguïté entre R1 et R2, l'intervalle d'attente Hello de l'interface série 0/0/0 sur R2 est défini sur 5 secondes, comme illustré à la Figure 3. Presque immédiatement, IOS affiche un message indiquant que la contiguïté a été établie avec un état FULL.</p>
+          <p></p>
+          <p>Vérifiez les intervalles de l'interface au moyen de la commande<b> show ip ospf interface</b>, comme illustré à la Figure 4. Notez que l'intervalle Hello est de 5 secondes et que l'intervalle Dead a été automatiquement défini à 20 secondes au lieu des 40 secondes par défaut. Rappelez-vous que le protocole OSPF définit automatiquement la valeur de l'intervalle Dead à quatre fois celle de l'intervalle Hello.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la syntaxe qui permet de configurer les intervalles d'attente Hello et Dead sur l'interface série 0/0/0 sur le routeur 1. La Figure 2 présente le résultat de la commande « show i. p. o. s. p. f. neighbor ». La Figure 3 présente la syntaxe qui permet de configurer l'intervalle d'attente Hello sur l'interface série 0/0/0 sur le routeur 2. La Figure 4 présente le résultat de la commande « show i. p. o. s. p. f. interface s. zero slash zero slash zero pipe include timer » et de la commande « show i. p. o. s. p. f. neighbor » sur le routeur 2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

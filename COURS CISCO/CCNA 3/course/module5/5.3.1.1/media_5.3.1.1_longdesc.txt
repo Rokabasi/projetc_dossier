@@ -1,0 +1,1 @@
+La Figure 1 est un tableau à lecture verticale qui classe les protocoles de routage dynamique et met en évidence les protocoles de passerelle interne.

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.3 Entrée de réseau IPv6 distant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Entrée de réseau IPv6 distant</h1>
+        <div>
+          <p>La Figure 1 met en évidence les entrées de la table de routage pour les trois réseaux distants (c'est-à-dire, le LAN de R2, le LAN de R3, et le lien entre R2 et R3). Les trois entrées ont été ajoutées par le protocole EIGRP. </p>
+          <p></p>
+          <p>La Figure 2 illustre une entrée de table de routage sur R1 pour la route vers le réseau distant 2001:DB8:CAFE:3::/64 sur R3. L'entrée identifie les informations suivantes :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Origine de la route</b> : indique comment la route a été apprise. Les codes courants sont O (OSPF), D (EIGRP), R (RIP) et S (route statique).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réseau de destination</b> : identifie l'adresse du réseau IPv6 distant.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Distance administrative </b>: identifie la fiabilité de la route source. L'IPv6 utilise les mêmes distances que l'IPv4.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Métrique</b> : indique la valeur attribuée pour atteindre le réseau distant. Les valeurs les plus faibles indiquent les routes préférées. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Tronçon suivant</b> : indique l'adresse IPv6 du prochain routeur auquel transférer le paquet.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface de sortie</b> : identifie l'interface de sortie à utiliser pour transférer un paquet vers la destination finale.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Lorsqu'un paquet IPv6 arrive sur une interface de routeur, le routeur examine l'en-tête IPv6 et identifie l'adresse IPv6 de destination. Le routeur passe ensuite au processus de recherche du routeur suivant.</p>
+          <p></p>
+          <p>Le routeur examine les routes réseau de niveau 1 à la recherche de la meilleure correspondance avec l'adresse de destination du paquet IPv6. Tout comme pour le protocole IPv4, la plus longue correspondance est la meilleure correspondance. Par exemple, s'il existe plusieurs correspondances dans la table de routage, le routeur choisit la route présentant la plus longue correspondance.  Une correspondance est obtenue en associant les bits les plus à gauche dans l'adresse IPv6 de destination du paquet au préfixe et à la longueur de préfixe IPv6 dans la table de routage IPv6.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche la table de routage IPv6 pour le routeur R1 produite par la commande : show i.p. route.  La figure met en surbrillance les trois réseaux distants acquis grâce au protocole EIGRP.  La Figure 2 mentionne l’une des entrées et identifie chaque partie de cette entrée.  Sur la ligne, on peut lire la lettre D pour la source de la route qui est le protocole EIGRP, l’adresse 2001:DB8:CAFE:3::/64 pour l’adresse réseau, 90 pour la distance administrative et /2170112 pour la mesure.  La ligne se termine par FE80::3 pour l’adresse IP du tronçon suivant et serial0/0/0 pour l’interface sortante.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

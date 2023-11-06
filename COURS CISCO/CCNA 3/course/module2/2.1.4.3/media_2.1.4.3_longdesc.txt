@@ -1,0 +1,1 @@
+La figure est une activité interactive présentant quatre commutateurs avec des connexions entre eux.  Les ports sont étiquetés avec leur mode d. t. p.  Le stagiaire doit mettre en correspondance chaque liaison avec les modes de ports trunk ou basé sur l'accès.

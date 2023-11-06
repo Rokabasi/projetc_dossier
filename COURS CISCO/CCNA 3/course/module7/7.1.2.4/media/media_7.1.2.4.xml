@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Packet Tracer]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Propagation d&apos;une route par défaut avec le protocole EIGRP pour IPv4 et IPv6]]></text>
+	</component>
+	
+</textcomponents>

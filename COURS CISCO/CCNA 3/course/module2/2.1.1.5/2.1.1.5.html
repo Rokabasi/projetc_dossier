@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.5 Configuration VTP par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration VTP par défaut</h1>
+        <div>
+          <p>La commande EXEC privilégiée <b>show vtp status</b> affiche l'état du VTP. L'exécution de cette commande sur un commutateur de la gamme Cisco 2960 Plus génère la sortie indiquée dans la figure.</p>
+          <p></p>
+          <p>Vous trouverez ci-après une brève description du résultat de la commande pour les paramètres de <b>show vtp status</b>.</p>
+          <p></p>
+          <p>VTP Version capable and running</p>
+          <p>
+            <ul>
+              <li>Le premier paramètre affiche la version VTP que le commutateur est en mesure d'exécuter et le second celle qu'il exécute actuellement.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, les commutateurs implémentent la version 1.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si la plupart d'entre eux prennent en charge la version 2, les commutateurs plus récents prennent également en charge la version 3.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP Domain Name</p>
+          <p>
+            <ul>
+              <li>Nom identifiant le domaine administratif du commutateur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, le nom du domaine VTP est laissé vide (valeur NULL). </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP Pruning Mode</p>
+          <p>
+            <ul>
+              <li>Indique si l'élagage est activé ou désactivé.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, l'élagage VTP est désactivé.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP Traps Generation</p>
+          <p>
+            <ul>
+              <li>Indique si des traps VTP sont envoyés à un poste de gestion du réseau.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, les traps VTP sont désactivés.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Device ID</p>
+          <p>
+            <ul>
+              <li>Adresse MAC du commutateur.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Configuration Last Modified</p>
+          <p>
+            <ul>
+              <li>Date et heure de la dernière modification de la configuration.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Affiche l’adresse IP du commutateur ayant entraîné la modification de configuration dans la base de données.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>VTP Operating Mode</p>
+          <p>
+            <ul>
+              <li>Il peut s'agir du mode serveur, client ou transparent.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Par défaut, un commutateur fonctionne en mode serveur VTP.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Maximum VLANs Supported Locally</p>
+          <p>
+            <ul>
+              <li>Le nombre de VLAN pris en charge varie selon les plates-formes de commutateurs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Number of Existing VLANs</p>
+          <p>
+            <ul>
+              <li>Intègre le nombre de VLAN par défaut et configurés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le nombre par défaut de VLAN existants varie selon les plates-formes de commutateurs.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Configuration Revision</p>
+          <p>
+            <ul>
+              <li>Numéro actuel de révision de la configuration sur ce commutateur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le numéro de révision de est un nombre de 32 bits qui indique le niveau de révision d’une trame VTP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le numéro de configuration par défaut d’un commutateur est zéro.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Chaque fois qu’un réseau local virtuel est ajouté ou supprimé, le numéro de révision de configuration est incrémenté.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Chaque commutateur VTP effectue un suivi du numéro de révision de configuration VTP qui lui est attribué.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>MD5 Digest</p>
+          <p>
+            <ul>
+              <li>Somme de contrôle de 16 octets de la configuration VTP.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 montre le résultat de la commande « show vtp status ». La figure 2 décrit les paramètres de la commande « show vtp status ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.4.4 Vérifier les paramètres d&#x0027;interface OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.4.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier les paramètres d&#x0027;interface OSPF</h1>
+        <div>
+          <p>La méthode la plus rapide pour vérifier les paramètres d'interface OSPFv2 consiste à utiliser la commande <b>show ip ospf interface</b>. Cette commande permet d'obtenir une liste détaillée de toutes les interfaces activées conformément au protocole OSPFv2. Cette commande est utile pour déterminer si les instructions <b>network</b> ont été correctement composées.</p>
+          <p></p>
+          <p>Pour générer un résumé des interfaces compatibles OSPFv2, utilisez la commande <b>show ip ospf interface brief</b>, comme illustré dans la figure 1. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour générer et afficher un résumé des interfaces compatibles OSPFv2 sur R2 à l'aide de la commande <b>show ip ospf interface brief</b>. Notez que la spécification du nom de l'interface comme cela est fait dans la commande <b>show ip ospf interface serial 0/0/1</b> fournit des informations OSPFv2 détaillées. </p>
+          <p></p>
+          <p>Continuez à utiliser le contrôleur de syntaxe de la Figure 2 pour générer un résumé des interfaces compatibles OSPFv2 sur R3 à l'aide de la commande <b>show ip ospf interface brief</b>. Récupérez et affichez des informations supplémentaires pour l'interface série 0/0/0 au moyen de la commande <b>show ip ospf interface serial 0/0/0</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le résultat de la commande suivante sur le routeur R1 : show ip OSPF interface brief.  Le résultat répertorie les trois interfaces qui participent au processus OSPF, les adresses IP, les coûts et la zone OSPF. La Figure 2 illustre un élément multimédia interactif qui permet à l'étudiant de vérifier les paramètres d'interface OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

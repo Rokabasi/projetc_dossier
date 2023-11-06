@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.3.3.2 Étapes de sauvegarde de l&#x0027;image IOS sur serveur TFTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étapes de sauvegarde de l&#x0027;image IOS sur serveur TFTP</h1>
+        <div>
+          <p>Pour gérer les opérations réseau avec un temps d'indisponibilité minimum, il est nécessaire de mettre en place des procédures de sauvegarde des images Cisco IOS. Ainsi, l'administrateur réseau peut rapidement copier une image sur un routeur en cas d'image corrompue ou effacée.</p>
+          <p></p>
+          <p>À la Figure 1, l'administrateur réseau souhaite créer une sauvegarde du fichier d'image en cours sur le routeur (c1900-universalk9-mz.SPA.152-4.M3.bin) vers le serveur TFTP à l'adresse 172.16.1.100.</p>
+          <p></p>
+          <p>Pour créer une sauvegarde de l'image Cisco IOS vers un serveur TFTP, procédez comme suit :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.  </b>Vérifiez la présence d'un accès au serveur TFTP du réseau. Envoyez une requête ping au serveur TFTP pour tester la connectivité, comme indiqué à la Figure 2.</p>
+          <p></p>
+          <p>
+            <b>Étape 2.  </b>Vérifiez que le serveur TFTP possède un espace disque suffisant pour accueillir l'image du logiciel Cisco IOS. Utilisez la commande<b> show flash0: </b>sur le routeur pour déterminer la taille du fichier d'image Cisco IOS. Dans l'exemple, la taille du fichier est de 68 831 808 octets.</p>
+          <p></p>
+          <p>
+            <b>Étape 3.  </b>Copiez l’image sur le serveur TFTP en utilisant la commande <b>copy </b><i>source-url destination-url </i>comme illustré à la Figure 3.</p>
+          <p></p>
+          <p>Une fois la commande exécutée à l'aide des URL source et de destination spécifiées, l'utilisateur est invité à indiquer le nom du fichier source, l'adresse IP de l'hôte distant et le nom du fichier de destination. Le transfert commence.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 sur R2 pour copier l'image IOS vers un serveur TFTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un routeur et un serveur pour décrire la sauvegarde de l'IOS sur un serveur TFTP. La Figure 2 affiche le résultat de l’envoi réussi d’une requête ping au serveur depuis le routeur.  Elle affiche également la sortie de la commande « show flash:zero » sur le routeur. La Figure 3 montre la syntaxe pour copier l'IOS d'une mémoire Flash dans un serveur TFTP. La Figure 4 est une activité interactive qui permet aux étudiants de s'entraîner à la sauvegarde de l'IOS sur un serveur TFTP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

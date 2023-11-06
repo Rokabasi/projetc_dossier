@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.2 Avantages de l&#x0027;EtherChannel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Avantages de l&#x0027;EtherChannel</h1>
+        <div>
+          <p>La technologie EtherChannel a initialement été développée par Cisco comme une technique de réseau local entre deux commutateurs permettant de regrouper plusieurs ports Fast Ethernet ou Gigabit Ethernet en un seul canal logique.  Quand un EtherChannel est configuré, l'interface virtuelle résultante est appelée un canal de port. Les interfaces physiques sont regroupées dans une interface de canal de port.</p>
+          <p></p>
+          <p>La technologie EtherChannel présente de nombreux avantages : </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La plupart des tâches de configuration peuvent être réalisées sur l'interface EtherChannel plutôt que sur chaque port, ce qui assure la cohérence de la configuration sur toutes les liaisons.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Un EtherChannel repose sur les ports de commutation existants. Il n'est pas nécessaire de mettre à niveau la liaison vers une connexion plus rapide et plus coûteuse pour avoir davantage de bande passante.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>L'équilibrage de la charge se fait entre les liaisons appartenant au même EtherChannel. En fonction de la plate-forme matérielle, une ou plusieurs méthodes d'équilibrage de la charge peuvent être implémentées.  Ces méthodes incluent l'équilibrage de la charge entre les adresses MAC source et de destination ou entre les adresses IP source et de destination, sur les liaisons physiques.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>EtherChannel crée une agrégation considérée comme une seule liaison logique. Quand plusieurs groupes EtherChannel existent entre deux commutateurs, STP peut bloquer l'un des groupes pour éviter les boucles de commutation. Quand STP bloque l'une des liaisons redondantes, cela bloque la totalité de l'EtherChannel. Cela bloque tous les ports appartenant à cette liaison EtherChannel. Quand il existe uniquement une liaison EtherChannel, toutes les liaisons physiques de l'EtherChannel sont actives, car STP considère une seule liaison (logique).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>EtherChannel offre de la redondance car la liaison globale est considérée comme une seule connexion logique. En outre, la perte d'une liaison physique dans le canal ne génère pas de modification de la topologie ; un recalcul de l'arbre recouvrant n'est donc pas nécessaire. En supposant qu'il existe au moins une liaison physique, l'EtherChannel fonctionne normalement, même si son débit global diminue à cause de la perte d'une liaison dans l'EtherChannel.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un commutateur de couche d'accès connecté à deux commutateurs de couche de distribution. Chaque connexion est constituée de deux liaisons entre les commutateurs.  Ces deux liaisons sont groupées pour former un canal EtherChannel entre les deux périphériques. Aucun port n'est en mode de blocage STP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

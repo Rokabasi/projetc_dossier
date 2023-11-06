@@ -1,0 +1,1 @@
+La Figure 1 présente la structure topologique d’un réseau hiérarchique standard sur trois niveaux. La Figure 2 présente l’architecture de réseau sans frontières de Cisco, qui connecte les grands campus à des campus de taille moyenne ou plus petits grâce à des connexions WAN et PSTN.

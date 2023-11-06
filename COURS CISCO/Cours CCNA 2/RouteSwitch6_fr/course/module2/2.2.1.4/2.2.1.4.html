@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.4 Configuration d&#x0027;une route statique connectée directement</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;une route statique connectée directement</h1>
+        <div>
+          <p>Lors de la configuration d'une route statique, une autre possibilité consiste à utiliser l'interface de sortie pour spécifier l'adresse du tronçon suivant. </p>
+          <p></p>
+          <p>Dans la Figure 1, trois routes statiques directement connectées sont configurées sur R1 au moyen de l'interface de sortie. La table de routage pour R1 dans la Figure 2 montre que lorsqu'un paquet est destiné au réseau 192.168.2.0/24, R1 recherche une correspondance dans la table de routage et s'aperçoit qu'il peut transmettre le paquet en dehors de son interface Serial 0/0/0. Aucune autre recherche n'est requise.</p>
+          <p></p>
+          <p>Remarquez comme la table de routage est différente entre la route configurée avec une interface de sortie et la route configurée avec une entrée récursive.</p>
+          <p></p>
+          <p>La configuration d'une route statique directement connectée à une interface de sortie permet à la table de routage de résoudre l'interface de sortie en une seule recherche, au lieu de deux recherches. Bien que l'entrée de table de routage indique « directement connecté », la distance administrative de la route statique correspond toujours à 1. Seule une interface directement connectée peut avoir une distance administrative de 0.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> pour les interfaces de point à point, vous pouvez utiliser des routes statiques qui pointent vers l'interface de sortie ou l'adresse de tronçon suivant. Pour les interfaces multipoint/diffusion, il est conseillé d'utiliser des routes statiques qui pointent vers une adresse de tronçon suivant.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans les Figures 3 et 4 pour configurer et vérifier les routes statiques directement connectées sur R2 et R3.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: CEF (Cisco Express Forwarding) est le comportement par défaut sur la plupart des plates-formes exécutant IOS 12.0 ou version ultérieure. Le protocole CEF fournit une recherche optimisée pour la transmission efficace des paquets en utilisant deux structures de données principales stockées dans le plan de données : une FIB (base d’informations de transfert), qui est une copie de la table de routage, et une table adjacente qui comprend les informations d’adressage de couche 2. Les informations combinées de ces deux tables fonctionnent ensemble, de sorte qu'aucune recherche récursive n'est requise pour les recherches d'adresse IP de tronçon suivant. En d'autres termes, une route statique utilisant une adresse IP de tronçon suivant ne nécessite qu'une seule recherche lorsque le protocole CEF est activé sur le routeur. Bien que les routes statiques qui utilisent uniquement une interface de sortie sur les réseaux point à point soient courantes, l'utilisation du mécanisme de transfert par défaut CEF rend cette pratique inutile. Le protocole CEF est décrit plus en détail dans la suite de ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures sont basées sur le schéma standard de l’atelier.  Le routeur R1 doté d’un LAN se connecte au routeur R2 doté également d’un LAN qui se connecte, à son tour, au routeur R3 aussi doté d’un LAN. La Figure 1 montre la configuration de deux LAN auxquels le routeur R1 n’est pas connecté, les LAN des routeurs R2 et R3, ainsi que le WAN entre les routeurs R2 et R3.  Les routes statiques étaient configurées en utilisant l’interface de sortie. La Figure 2 démontre le processus de recherche pour le routeur R1 afin d’atteindre le LAN du routeur R3.  La Figure 3 constitue une activité interactive qui permet à l’apprenant de configurer une route statique sur le routeur R2, afin d’atteindre le LAN du routeur R3, à l’aide d’une interface de sortie. La Figure 4 constitue une activité interactive qui permet à l’apprenant de configurer des routes statiques sur le routeur R3 en direction des réseaux de l’autre côté du routeur R2.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

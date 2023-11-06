@@ -1,0 +1,1 @@
+La figure affiche trois LAN : un bureau à domicile, une succursale et un bureau central.  Chaque LAN possède une connexion WAN à Internet afin d'autoriser la communication entre les LAN.

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.4.2 Les structures des données de dépannage d&#x0027;un protocole OSPF à zones multiples </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les structures des données de dépannage d&#x0027;un protocole OSPF à zones multiples </h1>
+        <div>
+          <p>OSPF stocke les informations de routage dans quatre structures de données clés :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Table d'interfaces</b> : cette table dresse la liste de toutes les interfaces qui ont été activées pour OSPF. Les annonces LSA (Link-state advertisement) de type 1 contiennent les sous-réseaux associés à chaque interface active.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Table de voisinage</b> : cette table permet de gérer les contiguïtés de voisinage via les intervalles d'attente Hello et Dead. Les entrées de voisinage sont ajoutées ou mises à jour lors de la réception d'un message « hello ». Les voisins sont supprimés à l'expiration du minuteur « dead ».</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Base de données à état de liens (LSDB)</b> : c'est la structure de données principale utilisée par OSPF pour stocker des informations sur la topologie réseau. Elle inclut des informations topologiques complètes sur chaque zone à laquelle le routeur OSPF est connecté et sur tous les chemins disponibles pour atteindre d'autres réseaux ou systèmes autonomes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Table de routage</b> : après avoir calculé l'algorithme SPF, les meilleures routes vers chaque réseau sont proposées à la table de routage.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

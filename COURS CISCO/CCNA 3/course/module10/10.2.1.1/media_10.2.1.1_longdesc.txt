@@ -1,0 +1,1 @@
+La figure présente deux routeurs connectés par un câble série.  Le texte énonce les conditions qui empêchent l'établissement de contiguïtés OSPF.

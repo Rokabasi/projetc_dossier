@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Travaux pratiques]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Gestion des fichiers de configuration de périphérique via TFTP, Flash et USB]]></text>
+	</component>
+	
+</textcomponents>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.4.1 Notions de base sur l&#x0027;empilage des commutateurs</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Notions de base sur l&#x0027;empilage des commutateurs</h1>
+        <div>
+          <p>Une pile peut comporter jusqu'à neuf commutateurs Catalyst 3750 connectés via leurs ports StackWise. Un des commutateurs contrôle le fonctionnement de la pile et est désigné comme commutateur maître de celle-ci. Les membres de la pile sont composés du commutateur maître et des commutateurs subordonnés. Les protocoles des couches 2 et 3 présentent toute la pile comme une seule entité au réseau. La figure 1 illustre le fond de panier de quatre commutateurs Catalyst3750 et leur raccordement dans une pile.</p>
+          <p></p>
+          <p>Chaque commutateur est identifié par son propre numéro de membre de la pile. Tout membre de la pile peut en devenir le maître. En cas d'indisponibilité du commutateur maître, un processus automatique choisit un nouveau maître parmi les membres restants. L'un des facteurs est la priorité du membre de la pile. Le commutateur possédant la valeur de priorité de membre de pile la plus élevée devient le maître.</p>
+          <p></p>
+          <p>L'un des principaux avantages d'une pile de commutateurs réside dans le fait que la pile est gérée via une adresse IP unique. L'adresse IP est un paramètre système et n'est pas spécifique au maître ni à aucun autre membre. Vous pouvez utiliser la même adresse IP pour gérer la pile même si vous supprimez le maître ou un autre membre de la pile.</p>
+          <p></p>
+          <p>Le maître héberge les fichiers de configuration en cours et enregistrés de la pile. Il n'existe donc qu'un seul fichier de configuration à gérer pour l'ensemble de la pile. Les fichiers de configuration incluent les paramètres système de la pile ainsi que les paramètres d'interface de chaque membre. Chaque membre dispose d'une copie à jour de ces fichiers à des fins de sauvegarde.</p>
+          <p></p>
+          <p>Le commutateur est géré comme un commutateur unique, y compris les mots de passe, les VLAN et les interfaces. La Figure 2 présente les interfaces sur une pile de commutateurs comportant des commutateurs à 52 ports. Notez que le premier numéro après le type d'interface est le numéro de membre de pile.</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

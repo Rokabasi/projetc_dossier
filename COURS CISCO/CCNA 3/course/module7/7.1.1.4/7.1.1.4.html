@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.4 Vérification de la récapitulation automatique : show ip protocols</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la récapitulation automatique : show ip protocols</h1>
+        <div>
+          <p>À la Figure 1, notez que le domaine de routage EIGRP comprend trois réseaux par classe :</p>
+          <p>
+            <ul>
+              <li>Réseau de classe B 172.16.0.0/16 comprenant les sous-réseaux 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/30</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Réseau de classe C 192.168.10.0/24 comprenant les sous-réseaux 192.168.10.4/30 et 192.168.10.8/30</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Réseau de classe C 192.168.1.0/24 sans sous-réseau</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le résultat de la commande<b> show ip protocols </b>pour R1 à la Figure 2 montre que la récapitulation automatique est maintenant activée. Le résultat indique également les réseaux récapitulés et les interfaces correspondantes. Notez que R1 récapitule deux réseaux dans ses mises à jour de routage EIGRP :</p>
+          <p>
+            <ul>
+              <li>192.168.10.0/24 envoyé à partir des interfaces GigabitEthernet 0/0 et Serial 0/0/0 ;</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>172.16.0.0/16 envoyé à partir de l'interface Serial 0/0/1.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La table de routage IPv4 de R1 contient les sous-réseaux 192.168.10.4/30 et 192.168.10.8/30. Comme le montre la Figure 3, R1 récapitule les deux sous-réseaux en tant que 192.168.10.0/24. Il transmet ensuite l'adresse récapitulée 192.168.10.0/24 à ses voisins via ses interfaces Serial 0/0/0 et GigabitEthernet 0/0. Étant donné que R1 n'a aucun voisin EIGRP connecté à son interface GigabitEthernet 0/0, seul R2 reçoit la mise à jour de routage récapitulée. </p>
+          <p></p>
+          <p>La table de routage IPv4 de R1 contient également les sous-réseaux 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/30. Comme le montre la Figure 4, R1 récapitule ces trois sous-réseaux en tant que 172.16.0.0/16. Il transmet ensuite l'adresse récapitulée de 172.16.0.0/16 à R3 via son interface Serial 0/0/1. La récapitulation automatique est également configurée sur R2 qui annonce la même adresse récapitulative (172.16.0.0/16) à R3. Dans cet exemple, R3 choisirait R1 comme successeur à 172.16.0.0/16, car il présente une distance de faisabilité inférieure due à la bande passante plus élevée de la liaison entre R3 et l'interface Serial de R1.</p>
+          <p></p>
+          <p>Notez que la mise à jour récapitulée 172.16.0.0/16 n'est pas envoyée à partir des interfaces GigabitEthernet 0/0 et Serial 0/0/0 de R1, car ces deux interfaces appartiennent au même réseau de classe B 172.16.0.0/16. R1 envoie la mise à jour de routage non récapitulée 172.16.1.0/24 à R2. </p>
+          <p></p>
+          <p>Les mises à jour récapitulées sont envoyées uniquement à partir des interfaces sur différents réseaux principaux par classe. Dans notre exemple, R1 annonçait le réseau 172.16.0.0/16 à R3, car la liaison de R1 vers R3 se trouve sur un réseau par classe distinct (c.-à-d., 192.168.10.0/24).</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au fournisseur d'accès à Internet. Le réseau interne est mis en évidence, à l'exception de la liaison entre le routeur 2 et le fournisseur d'accès à Internet. La Figure 2 présente le résultat de la commande « show ip protocols » sur le routeur R1.  La récapitulation automatique est activée. La Figure 3 est le schéma standard des travaux pratiques qui montre que le réseau récapitulé automatiquement pour 192.168.10.0/24 est annoncé via l'interface Serial 0/0/0 du routeur R1 et ses interfaces Gig0/0. La Figure 4 est le schéma standard des travaux pratiques qui montre que le réseau récapitulé automatiquement pour 172.16.0.0/16 est annoncé via l'interface Serial 0/0/1 du routeur R1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

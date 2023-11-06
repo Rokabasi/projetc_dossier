@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.1 Initiation au masque générique de liste de contrôle d&#x0027;accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Initiation au masque générique de liste de contrôle d&#x0027;accès</h1>
+        <div>
+          <p>
+            <b>Masque générique</b>
+          </p>
+          <p></p>
+          <p>Les listes de contrôle d'accès IPv4 incluent l'utilisation de masques génériques. Un masque générique est une chaîne de 32 chiffres binaires utilisés par le routeur pour déterminer quels bits de l'adresse examiner afin d'établir une correspondance. </p>
+          <p></p>
+          <p>Comme les masques de sous-réseau, les chiffres 1 et 0 du masque générique indiquent comment traiter les bits d'adresse IPv4 correspondants. Cependant, dans un masque générique, ces bits sont utilisés à d'autres fins et suivent des règles différentes. </p>
+          <p></p>
+          <p>Les masques de sous-réseau utilisent les chiffres binaires 1 et 0 pour identifier la partie réseau, la partie sous-réseau et la partie hôte d'une adresse IPv4. Les masques génériques utilisent les chiffres binaires 1 et 0 pour filtrer des adresses IPv4 ou des groupes d'adresses IPv4, afin d'autoriser ou de refuser l'accès aux ressources. </p>
+          <p></p>
+          <p>Les masques génériques et les masques de sous-réseau diffèrent dans leur méthode de mise en correspondance des 1 et des 0 binaires. Les masques génériques respectent les règles suivantes pour faire correspondre les chiffres binaires 1 et 0 :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Bit 0 de masque générique : permet de vérifier la valeur du bit correspondant dans l'adresse. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Bit 1 de masque générique : permet d'ignorer la valeur du bit correspondant dans l'adresse.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 1 montre comment les différents masques génériques filtrent les adresses IPv4. Dans l'exemple, n'oubliez pas que le chiffre binaire 0 indique un bit qui doit correspondre et que le chiffre binaire 1 représente un bit qui peut être ignoré. </p>
+          <p></p>
+          <p>Les masques génériques sont souvent appelés masques inverses. En effet, contrairement à un masque de sous-réseau, où le chiffre binaire 1 équivaut à une correspondance et le chiffre binaire 0 à une non-correspondance, les masques génériques procèdent de façon inverse. </p>
+          <p></p>
+          <p>
+            <b>Utilisation d’un masque générique</b>
+          </p>
+          <p></p>
+          <p>Le tableau de la Figure 2 présente les résultats obtenus après l'application d'un masque générique 0.0.255.255 à une adresse IPv4 32 bits. N’oubliez pas que le chiffre binaire 0 équivaut à une valeur renvoyant une correspondance.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : à la différence des listes de contrôle d'accès IPv4, les listes de contrôle d'accès IPv6 n'utilisent pas de masques génériques. Au lieu de cela, la longueur de préfixe est utilisée pour indiquer dans quelle mesure l'adresse IPv6 source ou de destination doit correspondre. Les listes de contrôle d'accès IPv6 intégrées sortent du cadre de ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre cinq masques génériques de 8 bits.  L'Exemple 1 est 00000000, qui correspond à tous les bits de l'adresse dans l'octet.  L’Exemple 2 est 00111111, qui correspond aux deux premiers bits et ignore les six derniers bits de l'adresse.  L’Exemple 3 est 00001111, qui correspond aux quatre premiers bits et ignore les quatre derniers bits.  L’Exemple 4 est 11111100, qui ignore les six premiers bits de l’adresse et correspond aux deux derniers.  L'Exemple 5 est 11111111, qui ignore tous les bits de l'octet. La Figure 2 montre le résultat de l’application du masque générique 0.0.255.255 à une adresse IPv4 32 bits.  Le masque générique est considéré comme 16 bits zéro suivis de 16 bits un.  Le résultat correspond aux deux premiers octets dans une adresse et ignore les deux derniers octets.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

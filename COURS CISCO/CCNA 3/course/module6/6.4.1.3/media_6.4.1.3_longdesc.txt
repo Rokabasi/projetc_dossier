@@ -1,0 +1,1 @@
+La figure présente deux routeurs exécutant le protocole EIGRP ; elle montre également que les mises à jour de routage sont envoyées à l'adresse link-local.

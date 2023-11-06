@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.2.2.1 Vérification d&#x0027;EtherChannel</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification d&#x0027;EtherChannel</h1>
+        <div>
+          <p>Il existe plusieurs commandes permettant de vérifier une configuration EtherChannel. Tout d'abord, la commande <b>show interfaces port-channel</b> affiche l'état global de l'interface de canal de port. Dans la Figure 1, l'interface Port Channel 1 est active.</p>
+          <p></p>
+          <p>Lorsque plusieurs interfaces de canal de port sont configurées sur le même périphérique, utilisez la commande <b>show etherchannel summary</b> pour afficher une ligne d'informations unique par canal de port. Dans la Figure 2, le commutateur a un EtherChannel configuré ; le groupe 1 utilise LACP. </p>
+          <p></p>
+          <p>Le groupement d'interfaces est constitué des interfaces FastEthernet0/1 et FastEthernet0/2. Le groupe représente un canal EtherChannel de couche 2 en cours d'utilisation, comme l'indiquent les lettres SU en regard du numéro de canal de port.</p>
+          <p></p>
+          <p>Utilisez la commande<b> show etherchannel port-channel </b>pour afficher des informations concernant une interface port-channel spécifique, comme illustré dans la Figure 3. Dans l'exemple, l'interface Port Channel 1 est constituée de deux interfaces physiques, FastEthernet0/1 et FastEthernet0/2. Elle utilise LACP en mode actif. Elle est correctement connectée à un autre commutateur avec une configuration compatible, c'est pourquoi le canal est indiqué comme étant en fonctionnement.</p>
+          <p></p>
+          <p>Sur toute interface physique d'une liaison EtherChannel, la commande<b> show interfaces etherchannel </b>peut fournir des informations sur le rôle de l'interface dans l'EtherChannel, comme illustré dans la Figure 4. L'interface FastEthernet0/1 fait partie du groupe EtherChannel 1. Le protocole pour cet EtherChannel est LACP.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 5 pour vérifier EtherChannel sur le commutateur S1. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande show interface port-channel 1.  Cette commande affiche des informations sur l'état du canal EtherChannel. La Figure 2 présente le résultat de la commande show ether channel summary.  Cette commande affiche une ligne d'informations par canal de port lorsque plusieurs interfaces de canal de port sont configurées sur le même périphérique. La Figure 3 présente le résultat de la commande show ether channel port-channel.  Cette commande affiche des informations sur une interface de canal de port spécifique. La figure met en évidence le protocole et les ports configurés dans le canal de port spécifié. La Figure 4 présente le résultat de la commande show interfaces f 0/1 ether channel.  Cette commande affiche des informations sur le rôle de l'interface spécifiée dans le canal EtherChannel. La figure met en évidence différentes informations relatives au canal EtherChannel, telles que l'état du port et des données concernant le port partenaire. La Figure 5 est un exercice interactif dans lequel le stagiaire peut exécuter des commandes show pour afficher des informations relatives à l'état des canaux EtherChannel sur un commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+Cette animation illustre le schéma standard de l’atelier.  Lorsque vous cliquez sur Lecture, un paquet est transféré de PC1 vers PC3.

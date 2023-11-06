@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.8 La valeur de la priorité</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La valeur de la priorité</h1>
+        <div>
+          <p>Le DR devient le point central de collecte et de distribution des LSA ; ce routeur doit donc bénéficier d'un processeur suffisamment puissant et d'une mémoire suffisamment étendue pour traiter cette charge de travail. Il est possible d'influencer le processus de sélection de DR/BDR par le biais de configurations.</p>
+          <p></p>
+          <p>Si les priorités des interfaces sont identiques sur tous les routeurs, le routeur dont l'ID est le plus élevé est sélectionné comme DR. Il est possible de configurer l'ID de routeur de façon à influencer la sélection de DR/BDR. Cependant, cette procédure fonctionne uniquement s'il existe un plan strict de définition des ID de chaque routeur. Cela peut être fastidieux sur les grands réseaux. </p>
+          <p></p>
+          <p>Au lieu de se baser sur l'ID de routeur, il vaut mieux contrôler la sélection au moyen des priorités d'interfaces. La priorité d'interface est une valeur propre à l'interface, ce qui apporte un meilleur contrôle sur un réseau à accès multiple. Cela permet également à un routeur d'être DR dans un réseau et DROther dans un autre. </p>
+          <p></p>
+          <p>Pour définir la priorité d'une interface, utilisez les commandes suivantes : </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>ip ospf priority </b>
+                <i>OSPF</i>
+                <b></b>- Commande d'interface OSPFv2</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>ipv6 ospf priority </b>
+                <i>OSPF</i>
+                <b></b>- Commande d'interface OSPFv3</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La<i> valeur </i>peut être :</p>
+          <p>
+            <ul>
+              <li>
+                <b>0 </b>-  le routeur ne peut devenir ni DR ni BDR.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>1</b> à <b>255</b> - plus la valeur est élevée, plus il est probable que le routeur devienne le DR ou le BDR sur l'interface.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la figure, la priorité OSPF est identique pour tous les routeurs, car celle-ci prend la valeur 1 par défaut pour toutes les interfaces de routeurs. L'ID de routeur est donc utilisé pour déterminer le DR (R3) et le BDR (R2). Le remplacement de la priorité d'une interface par une valeur plus élevée pourrait permettre au routeur concerné de devenir un DR ou un BDR lors de la prochaine sélection. </p>
+          <p></p>
+          <p>Si la priorité d'interface est configurée après l'activation du protocole OSPF, l'administrateur doit désactiver le processus OSPF sur tous les routeurs, puis le réactiver, pour forcer une nouvelle sélection de DR/BDR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure, il y a trois routeurs connectés à un commutateur.  Le routeur 1, le routeur 2 (BDR) et le routeur 3 (DR).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.1.1 Implémentation du protocole OSPF à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Implémentation du protocole OSPF à zones multiples</h1>
+        <div>
+          <p>Le protocole OSPF peut être implémenté en zone unique ou en zones multiples. Le type d'implémentation du protocole OSPF à retenir dépend des contraintes relatives à la conception du réseau et de la topologie.</p>
+          <p></p>
+          <p>La procédure d'implémentation d'un protocole OSPF à zones multiples compte quatre étapes, comme illustré dans la figure ci-contre. </p>
+          <p></p>
+          <p>Les Étapes 1 et 2 font partie du processus de planification. </p>
+          <p></p>
+          <p>
+            <b>Étape 1. Regroupez les paramètres et exigences de réseau</b> : cela inclut le nombre de périphériques hôtes et réseau, le modèle d'adressage IP (si déjà implémenté), la taille du domaine de routage, la taille des tables de routage, le risque de modification de la topologie, la prise en charge ou non d'OSPF par les routeurs existants et d'autres caractéristiques du réseau.</p>
+          <p></p>
+          <p>
+            <b>Étape 2. Définissez les paramètres OSPF</b> : en fonction des informations collectées à l'étape 1, l'administrateur du réseau doit choisir l'implémentation la plus adaptée (OSPF à zone unique ou OSPF à zones multiples). Si l'implémentation OSPF à zones multiples est choisie, plusieurs éléments doivent être pris en compte par l'administrateur réseau lors de la définition des paramètres OSPF, notamment : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Plan d'adressage IP</b> : celui-ci régit la manière dont le protocole OSPF peut être déployé et l'évolutivité de ce déploiement. Un plan d'adressage IP détaillé doit être établi, ainsi qu'un plan de segmentation en sous-réseaux IP. Un bon plan d'adressage IP doit permettre d'utiliser une récapitulation et une conception OSPF à zones multiples. Ce plan s'adapte plus facilement au réseau, et optimise le comportement OSPF et la propagation des LSA.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Zones OSPF</b> : diviser un réseau OSPF en zones permet de réduire la taille de la base de données LSDB et limite la propagation des mises à jour d'état de liens lors des changements de topologie. Il convient d'identifier les futurs routeurs ABR et ASBR, ainsi que les routeurs ABR ou ASBR qui se chargeront de la récapitulation ou de la redistribution.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Topologie du réseau</b> : celle-ci se compose des liens entre les équipements du réseau et appartenant à différentes zones OSPF, dans une conception OSPF à zones multiples. La topologie du réseau est importante pour déterminer les liens principaux et de secours. Ceux-ci sont définis en modifiant le coût OSPF des interfaces. Un plan topologique détaillé du réseau doit être utilisé pour déterminer les différentes zones OSPF, ABR et ASBR, ainsi que les points de récapitulation et de redistribution, dans le cas d'une implémentation OSPF à zones multiples.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Étape 3.</b> Configurez l'implémentation OSPF à zones multiples sur la base des paramètres définis précédemment.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. </b>Vérifiez l'implémentation OSPF à zones multiples sur la base des paramètres définis précédemment.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche une liste ordonnée qui décrit les étapes du plan d'implémentation lors de la configuration d'un protocole OSPF à zones multiples.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.4.1.2 Synthèse</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.4.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Synthèse</h1>
+        <div>
+          <p>Les problèmes pouvant être créés par un réseau redondant de couche 2 incluent les tempêtes de diffusion, l'instabilité de la base de données MAC et les trames de monodiffusion en double. STP est un protocole de couche 2 qui garantit qu'il n'existe qu'un seul chemin logique entre toutes les destinations d'un réseau, en bloquant volontairement les chemins d'accès redondants pouvant générer une boucle.</p>
+          <p></p>
+          <p>Le protocole STP envoie des trames BPDU pour assurer la communication entre les commutateurs. Un commutateur est défini en tant que pont racine pour chaque instance Spanning Tree. Un administrateur peut contrôler ce choix en modifiant la priorité du pont. Les ponts racine peuvent être configurés pour permettre l'équilibrage de la charge Spanning Tree pour chaque VLAN ou groupe de VLAN, en fonction du protocole STP utilisé. Le protocole STP affecte alors un rôle à chaque port participant, à l'aide d'un coût de chemin. Le coût du chemin racine équivaut à la somme des coûts de tous les ports le long du chemin vers le pont racine. Un coût est automatiquement affecté à chaque port ; cependant, cette valeur peut également être configurée manuellement. Les chemins dont le coût est le plus bas deviennent les chemins préférés et tous les autres chemins redondants sont bloqués.</p>
+          <p></p>
+          <p>Le protocole PVST+ est la configuration par défaut du protocole IEEE 802.1D sur les commutateurs Cisco. Il exécute une instance STP pour chaque VLAN. RSTP est un nouveau protocole STP à la convergence rapide, qui peut être implémenté sur les commutateurs Cisco individuellement pour chaque VLAN, sous la forme de Rapid PVST+. MST (Multiple Spanning Tree) est l'implémentation Cisco du protocole MSTP (Multiple Spanning Tree Protocol), avec lequel une instance Spanning Tree est exécutée pour un groupe donné de VLAN.  Les fonctions telles que PortFast et la protection BPDU garantissent que les hôtes de l'environnement commuté bénéficient d'un accès immédiat au réseau, sans interférer avec le fonctionnement STP.</p>
+          <p></p>
+          <p>L'empilage des commutateurs permet de connecter jusqu'à neuf commutateurs Catalyst 3750, qui seront configurés et présentés au réseau en tant qu'une seule et même entité. Le protocole STP considère la pile de commutateurs comme un seul commutateur. Ce bénéfice supplémentaire permet de garantir que le diamètre maximal recommandé par la norme IEEE de sept commutateurs est bien respecté. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre trois commutateurs interconnectés avec des liaisons trunk.  Le commutateur un est le pont racine pour le VLAN dix et le commutateur trois le pont racine pour le VLAN vingt.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

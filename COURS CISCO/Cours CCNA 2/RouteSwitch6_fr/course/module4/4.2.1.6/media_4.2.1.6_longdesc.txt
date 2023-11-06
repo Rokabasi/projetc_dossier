@@ -1,0 +1,1 @@
+Il s’agit d’un élément multimédia interactif qui teste la capacité de l’apprenant à identifier si une description donnée est une fonctionnalité de la commutation par stockage et retransmission ou de la commutation cut-through.

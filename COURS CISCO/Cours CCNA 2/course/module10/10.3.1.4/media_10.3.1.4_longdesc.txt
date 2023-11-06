@@ -1,0 +1,1 @@
+La figure montre la sortie de la commande « copy running-config tftp » sur un routeur.  Cela permet à l'utilisateur d'effectuer une sauvegarde de la configuration actuelle sur un serveur TFTP du réseau.

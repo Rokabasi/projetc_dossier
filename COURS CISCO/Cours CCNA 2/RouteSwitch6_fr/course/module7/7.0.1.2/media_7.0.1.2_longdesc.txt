@@ -1,0 +1,1 @@
+La figure montre un ordinateur d'un côté du mur et un globe de l'autre côté du mur.  Le mur représente un pare-feu et une légende de texte indique que le trafic réseau peut être autorisé ou refusé.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.2 Algorithme Spanning Tree : rôles des ports</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Algorithme Spanning Tree : rôles des ports</h1>
+        <div>
+          <p>IEEE 802.1D STP et RSTP font appel au STA (Spanning Tree Algorithm) afin de déterminer quels ports de commutateur d'un réseau doivent être mis à l'état de blocage pour éviter que des boucles ne surviennent. L’algorithme STA désigne un commutateur unique comme pont racine et il l’utilise comme point de référence pour le calcul de tous les chemins. Dans cette figure, le pont racine (commutateur S1) a été choisi par le biais d'un processus de sélection. Tous les commutateurs qui participent au protocole STP échangent des trames BPDU afin de déterminer le commutateur qui possède l'ID de pont (BID) le plus bas du réseau. Le commutateur doté de l’identificateur (ID) le plus faible devient automatiquement le pont racine pour les calculs de l’algorithme STA.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: pour plus de simplicité et sauf spécification contraire, partons de l'hypothèse que tous les ports de tous les commutateurs sont affectés au VLAN 1. Chaque commutateur dispose d'une adresse MAC unique, associée au VLAN 1. </p>
+          <p></p>
+          <p>Une BPDU est une trame de message échangée par les commutateurs pour le protocole STP. Chaque trame BPDU contient un identificateur de pont qui identifie le commutateur ayant envoyé la trame BPDU. L'ID de pont contient une valeur de priorité, l'adresse MAC du commutateur émetteur et un ID système étendu facultatif. La valeur d'ID de pont la plus basse est déterminée par une combinaison de ces trois champs.</p>
+          <p></p>
+          <p>Une fois que le pont racine a été déterminé, l’algorithme STA calcule le chemin le plus court vers le pont racine. Chaque commutateur utilise l’algorithme STA pour identifier les ports devant être bloqués. Pendant que l'algorithme STA détermine les meilleurs chemins pour accéder au pont racine, depuis l'ensemble des ports de commutation du domaine de diffusion, le réacheminement du trafic au sein du réseau est interdit. L'algorithme STA prend en compte le coût des chemins comme celui des ports lorsqu'il détermine quels ports bloquer. Le coût de la route est calculé à l’aide des valeurs de coût de port associées à la vitesse de port de chacun des ports des commutateurs sur un chemin donné. La somme des valeurs des coûts de ports détermine le coût du chemin global vers le pont racine. Si plusieurs chemins sont disponibles, l’algorithme STA choisit le chemin doté du coût de chemin le plus faible.</p>
+          <p></p>
+          <p>Lorsque l'algorithme STA a déterminé quels sont les meilleurs chemins possibles pour chaque commutateur, il attribue un rôle aux ports de commutation participants. Les rôles de port décrivent la relation entre les ports du réseau et le pont racine, et indiquent s'ils sont autorisés à réacheminer du trafic de données :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Ports racine</b> : ports de commutation les plus proches du pont racine en termes de coûts généraux. Dans la figure, le port racine sélectionné par STP sur S2 est F0/1, soit la liaison entre S2 et S1. Le port racine sélectionné par STP sur S3 est F0/1, soit la liaison entre S3 et S1. Les ports racines sont sélectionnés individuellement pour chaque commutateur.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ports désignés</b> : il s’agit de tous les ports non racine qui sont autorisés à acheminer le trafic sur le réseau. Dans la figure, les ports de commutation (F0/1 et F0/2) sur S1 sont des ports désignés. Le port F0/2 de S2 est également configuré comme port désigné. Les ports désignés sont sélectionnés segment par segment en fonction du coût de chaque port des deux côtés du segment et du coût total calculé par STP pour le retour du port en question au pont racine. Si l'une des extrémités d'un segment est un port racine, l'autre extrémité est un port désigné. Tous les ports du pont racine sont des ports désignés. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ports alternatifs et de secours</b> : les ports alternatifs et de secours sont à l'état de suppression ou de blocage pour éviter les boucles. Dans la figure, le port F0/2 configuré STA sur S3 a un rôle de port alternatif. Le port F0/2 sur S3 présente un état de blocage. Les ports alternatifs ne sont sélectionnés que sur les liaisons sur lesquelles aucune extrémité n'est un port racine. Sur la figure, une seule extrémité du segment est bloquée. Cela permet une transition plus rapide vers l'état de réacheminement lorsque cela s'avère nécessaire. (Le blocage des ports n'entre en action que lorsque deux ports du même commutateur fournissent des liaisons redondantes via le réseau.)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Ports désactivés</b> : un port désactivé est un port de commutation arrêté.</li>
+            </ul>
+          </p>
+          <p>
+            <b>Remarque :</b> les rôles de port affichés sont ceux définis par RSTP. Le rôle initialement défini par le protocole STP 802.1D pour les ports alternatifs et de secours était non désigné.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois commutateurs, s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1. Le schéma présente les différents rôles de port pour Spanning Tree.  Certains ports sont des ports racine (réacheminement), certains sont des ports désignés (réacheminement) et certains sont des ports alternatifs ou non désignés (blocage).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

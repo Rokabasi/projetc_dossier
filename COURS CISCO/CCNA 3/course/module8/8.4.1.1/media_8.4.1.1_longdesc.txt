@@ -1,0 +1,1 @@
+La figure montre le graphique standard d'activité en classe indiquant qu'il y a une activité en classe pour cette section du cursus. La figure présente également les quatre étapes suivantes du processus OSPF : contiguïté de voisinage, annonces LSA, table topologique et table de routage.

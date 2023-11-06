@@ -1,0 +1,1 @@
+La figure montre les sept couches du modèle OSI.  Une légende de texte indique « Le filtrage des paquets intervient sur les couches 3 et 4 ».

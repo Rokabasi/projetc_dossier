@@ -1,0 +1,1 @@
+La figure affiche une liste ordonnée qui décrit les étapes du plan d'implémentation lors de la configuration d'un protocole OSPF à zones multiples.

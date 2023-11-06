@@ -1,0 +1,1 @@
+La figure représente un tableau des protocoles de routage courants et la distance administrative pour chacun des protocoles.  Les trois principaux protocoles de routage et leurs distances administratives sont le protocole RIP avec une valeur à 120, l’OSPF avec une valeur à 110 et l'EIGRP avec une valeur à 90.

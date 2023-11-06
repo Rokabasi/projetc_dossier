@@ -1,0 +1,1 @@
+La Figure 1 explique les commandes nécessaires pour configurer deux interfaces physiques sur un routeur pour le routage inter-VLAN existant. La Figure 2 présente la table de routage IP d’un routeur doté de deux interfaces physiques participant à une configuration de routage inter-VLAN existant.

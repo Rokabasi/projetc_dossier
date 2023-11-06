@@ -1,0 +1,1 @@
+La Figure est un organigramme représentant les étapes à suivre pour dépanner le protocole OSPF.

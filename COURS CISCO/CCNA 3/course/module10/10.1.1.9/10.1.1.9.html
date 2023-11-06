@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.9 Modification de la priorité OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.9_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modification de la priorité OSPF</h1>
+        <div>
+          <p>Dans la topologie de la Figure 1, R3 est le DR et R2 le BDR. Les décisions suivantes ont été prises.</p>
+          <p>
+            <ul>
+              <li>R1 doit être le DR et être configuré avec la priorité 255.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R2 doit être le BDR et conserver sa priorité 1 par défaut.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>R3 ne doit jamais devenir un DR ni un BDR et doit être configuré avec la priorité 0.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Dans la figure 2, la priorité de l'interface Gigabit 0/0 de R1 passe de 1 à 255. </p>
+          <p></p>
+          <p>Dans la figure 3, la priorité de l'interface Gigabit 0/0 de R3 passe de 1 à 0. </p>
+          <p></p>
+          <p>Ces modifications ne prennent pas effet immédiatement, car le DR et le BDR sont déjà sélectionnés. Il convient donc de négocier une sélection OSPF au moyen de l'une des méthodes suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Désactiver les interfaces des routeurs, puis les réactiver en commençant par le DR, puis le BDR, puis tous les autres routeurs</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Réinitialiser le processus OSPF au moyen de la commande<b> clear ip ospf process</b>, à configurer en mode d'exécution privilégié sur tous les routeurs</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 4 affiche la désactivation du processus OSPF sur R1. Supposez que la commande<b> clear ip ospf process </b>ait également été configurée, en mode d'exécution privilégié, sur R2 et R3. Étudiez les informations d'état OSPF affichées.</p>
+          <p></p>
+          <p>Le résultat affiché à la Figure 5 confirme que R1 est désormais le DR, avec une priorité de 255, et identifie les nouvelles contiguïtés de voisinage de R1. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe à la Figure 6 pour vérifier le rôle et les contiguïtés de R2 et de R3.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure 1, il y a trois routeurs connectés à un commutateur.  Le routeur 1, le routeur 2 (BDR) et le routeur 3 (DR). La Figure 2 présente la syntaxe qui permet de définir la priorité OSPF de l'interface sur le routeur 1 sur 255. La Figure 3 présente la syntaxe qui permet de définir la priorité OSPF de l'interface sur le routeur 3 sur 0. La Figure 4 présente la syntaxe qui permet de supprimer le processus OSPF. La Figure 5 présente le résultat de la commande « show i. p. o. s. p. f. interface gig zero slash zero » sur le routeur 1 qui indique qu'il s'agit du DR. En dessous, vous voyez le résultat de la commande « show i. p. o. s. p. f. neighbor ». La Figure 6 est une activité interactive qui permet au stagiaire de s'entraîner à utiliser les commandes « show i. p. o. s. p. f. interface » et « show i. p. o. s. p. f. neighbor ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

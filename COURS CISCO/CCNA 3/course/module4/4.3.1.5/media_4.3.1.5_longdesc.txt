@@ -1,0 +1,1 @@
+La figure présente trois routeurs appartenant au groupe HSRP 1.

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.4 Mots-clés de masque générique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Mots-clés de masque générique</h1>
+        <div>
+          <p>Travailler avec des représentations décimales de bits de masque générique peut être fastidieux. Les mots-clés<b> host</b> (hôte) et<b> any</b> (tous) permettent d'identifier les utilisations les plus courantes des masques génériques, et simplifient ainsi cette tâche. Ils suppriment la saisie des masques génériques lorsque vous identifiez un hôte spécifique ou un réseau. Ces mots-clés facilitent également la lecture d'une liste de contrôle d'accès en offrant des indices visuels comme la source ou la destination des critères.</p>
+          <p></p>
+          <p>Le mot-clé <b>host</b> remplace le masque 0.0.0.0. Ce masque indique que tous les bits d'adresse IPv4 doivent correspondre pour pouvoir filtrer juste une adresse d'hôte.</p>
+          <p>Le mot-clé <b>any</b> remplace l'adresse IPv4 et le masque 255.255.255.255. Ce masque indique qu'il convient d'ignorer l'intégralité de l'adresse IPv4 ou d'accepter n'importe quelle adresse. </p>
+          <p></p>
+          <p>
+            <b>Exemple 1 : processus de masque générique avec une adresse IPv4 unique</b>
+          </p>
+          <p></p>
+          <p>Dans l'exemple 1 de la figure, au lieu de saisir <b>192.168.10.10 0.0.0.0</b>, vous pouvez utiliser <b>host 192.168.10.10</b>. </p>
+          <p></p>
+          <p>
+            <b>Exemple 2 : processus de masque générique avec une adresse IPv4 à concordance quelconque</b>
+          </p>
+          <p></p>
+          <p>Dans l'exemple 2 de la figure, au lieu de saisir<b> 0.0.0.0 255.255.255.255</b>, vous pouvez utiliser le mot-clé<b> any</b> seul.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre un exemple de masque générique composé de zéros correspondant à tous les bits binaires pour une correspondance exacte d'adresse IP. La figure montre également le masque générique composé de uns, ce qui donne une correspondance avec toutes les adresses IP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

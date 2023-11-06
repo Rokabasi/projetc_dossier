@@ -1,0 +1,1 @@
+La figure représente un tableau des valeurs de coût Cisco OSPF par défaut.  Voici les calculs de liaison à noter : une liaison série T1 présente un coût de 64, une liaison 10 Mbit/s présente un coût de 10, une liaison 100 Mbit/s présente un coût de 1, tout comme une liaison Gigabit Ethernet et 10 Gigabit Ethernet.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.5 Configuration de type router-on-a-stick : vérification du routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de type router-on-a-stick : vérification du routage</h1>
+        <div>
+          <p>Une fois que le routeur et le commutateur ont été configurés pour assurer le routage inter-VLAN, l’étape suivante consiste à vérifier la connectivité d’hôte à hôte. L’accès aux périphériques des VLAN distants peut être testé au moyen de la commande <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span>. </p>
+          <p></p>
+          <p>Pour l’exemple illustré dans la figure, les commandes <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span> et<span class="cmd"><b></b></span><b> tracert</b><span class="cmd"><b></b></span> sont activées à partir de PC1 vers l’adresse de destination de PC3.</p>
+          <p></p>
+          <p>
+            <b>Ping Test (Test Ping)</b>
+          </p>
+          <p></p>
+          <p>L'argument <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span> envoie une requête d’écho de protocole ICMP à l’adresse de destination. Quand un hôte reçoit une requête d’écho ICMP, il renvoie une réponse d’écho ICMP pour confirmer qu’il a reçu la requête. L'argument <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span> calcule le temps écoulé en utilisant la différence entre le moment où la requête d’écho a été envoyée et celui où la réponse a été reçue. Ce temps écoulé est utilisé pour déterminer la latence de la connexion. La réception réussie d’une réponse confirme qu’il existe un chemin entre le périphérique émetteur et le périphérique récepteur.</p>
+          <p></p>
+          <p>
+            <b>Test Tracert</b>
+          </p>
+          <p></p>
+          <p>Tracert est un utilitaire permettant de confirmer le chemin de la route prise entre deux périphériques. Sur les systèmes UNIX, l’utilitaire est spécifié par <span class="cmd"><b></b></span><b>traceroute</b><b>. </b>Tracert utilise également ICMP pour déterminer le chemin pris, mais il emploie des requêtes d’écho ICMP avec des valeurs de durée de vie spécifiques définies sur la trame. </p>
+          <p></p>
+          <p>La valeur de durée de vie détermine avec exactitude le nombre de sauts de routeur que l’écho ICMP est autorisé à franchir. La première requête d’écho ICMP est envoyée avec une valeur de durée de vie définie pour expirer au premier routeur sur la route vers le périphérique de destination. </p>
+          <p></p>
+          <p>Lorsque la requête d’écho ICMP expire sur la première route, un message ICMP est renvoyé du routeur vers le périphérique source. Le périphérique enregistre la réponse du routeur et poursuit en envoyant une autre requête d’écho ICMP, mais cette fois avec une valeur de durée de vie supérieure. Ceci permet à la requête d’écho ICMP de traverser le premier routeur et d’atteindre le deuxième périphérique sur la route vers la destination finale. Le processus se répète de manière récursive jusqu’à ce que la requête d’écho ICMP atteigne finalement le périphérique de destination finale. Une fois l’exécution de l’utilitaire <span class="cmd"><b></b></span><b>tracert</b><span class="cmd"><b></b></span> terminée, ce dernier affiche une liste de chaque interface de routeur que la requête d’écho ICMP a atteint sur son chemin vers la destination.</p>
+          <p></p>
+          <p>Dans l’exemple, l’utilitaire <span class="cmd"><b></b></span><b>ping</b><span class="cmd"><b></b></span> a pu envoyer une requête d’écho ICMP à l’adresse IP du PC3. De plus, l’utilitaire <span class="cmd"><b></b></span><b>tracert</b><span class="cmd"><b></b></span> confirme que le chemin vers le PC3 passe par l’adresse IP de sous-interface 172.17.10.1 du routeur R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente les résultats d’un test ping à un hôte distant du point de vue d’un PC sur un VLAN et sous-réseau distincts via une topologie de routage inter-VLAN de type router-on-a-stick.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

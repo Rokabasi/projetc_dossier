@@ -1,0 +1,49 @@
+﻿<textcomponents>
+
+
+	
+	<component id="ID_title">
+		<text><![CDATA[<b>Réseaux convergents</b>]]></text>
+	</component>
+	<component id="ID_caption">
+		<text><![CDATA[Les réseaux de données convergents exécutent plusieurs services sur un même réseau.]]></text>
+	</component>
+	<component id="ID_txt01">
+		<text><![CDATA[Appareils]]></text>
+	</component>
+	<component id="ID_txt02">
+		<text><![CDATA[Appareils]]></text>
+	</component>
+	<component id="ID_txt03">
+		<text><![CDATA[Appareils]]></text>
+	</component>
+	<component id="ID_txt04">
+		<text><![CDATA[Support]]></text>
+	</component>
+	<component id="ID_txt05">
+		<text><![CDATA[Support]]></text>
+	</component>
+	<component id="ID_txt06">
+		<text><![CDATA[Support]]></text>
+	</component>
+	<component id="ID_txt07">
+		<text><![CDATA[Règle<br>Contrat<br>Norme]]></text>
+	</component>
+	<component id="ID_txt08">
+		<text><![CDATA[Réseau convergent]]></text>
+	</component>
+	<component id="ID_txt09">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt10">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt11">
+		<text><![CDATA[Message]]></text>
+	</component>
+	<component id="ID_txt12">
+		<text><![CDATA[Un réseau,<br>plusieurs périphériques]]></text>
+	</component>	
+	
+	
+</textcomponents>

@@ -1,0 +1,58 @@
+<textcomponents><!-- SCREEN 1 Drag and Drop --><component id='ID_s1_inst'>
+	<text><![CDATA[<b>Exercice : IPv4 détermine la route de correspondance la plus longue</b><br/>Faites glisser chaque adresse IPv4 de destination vers sa meilleure route. Certains champs peuvent ne pas être renseignés.]]></text>
+</component>
+
+
+
+<component id='ID_s1_drag01'>
+	<text><![CDATA[172.17.90.83]]></text>
+</component>
+
+<component id='ID_s1_drag02'>
+	<text><![CDATA[172.17.165.91]]></text>
+</component>
+
+<component id='ID_s1_drag03'>
+	<text><![CDATA[172.17.124.36]]></text>
+</component>
+
+<component id='ID_s1_drag04'>
+	<text><![CDATA[172.17.169.20]]></text>
+</component>
+
+<component id='ID_s1_drag05'>
+	<text><![CDATA[172.17.155.116]]></text>
+</component>
+
+<component id='ID_s1_drag06'>
+	<text><![CDATA[172.17.193.140]]></text>
+</component>
+
+
+<component id='ID_s1_CORRECT_TITLE'>
+	<text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id='ID_s1_CORRECT_BODY'>
+	<text><![CDATA[Vous avez correctement associé chaque adresse IPv4 de destination à sa meilleure route. Cliquez sur le bouton 2 pour continuer.]]></text>
+</component>
+
+
+<component id='ID_s1_INCORRECT_TITLE'>
+	<text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id='ID_s1_INCORRECT_BODY'>
+	<text><![CDATA[Vous n&apos;avez pas correctement associé chaque adresse IPv4 de destination à sa meilleure route. Cliquez sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+<component id='ID_s1_CHECK'>
+	<text><![CDATA[<b>Vérifier</b>]]></text>
+</component>
+
+<component id='ID_s1_RESET'>
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+
+</textcomponents>

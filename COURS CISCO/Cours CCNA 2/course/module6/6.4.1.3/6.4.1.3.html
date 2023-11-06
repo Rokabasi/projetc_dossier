@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.4.1.3 Chapitre 6 : VLAN</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.4.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 6 : VLAN</h1>
+        <div>
+          <p>Ce chapitre a présenté les VLAN. Les VLAN reposent sur des connexions logiques, et non des connexions physiques. Le VLAN est un mécanisme qui permet aux administrateurs réseau de créer des domaines de diffusion logiques capables de s’étendre sur un ou plusieurs commutateurs, quel que soit leur éloignement géographique. Cette fonctionnalité permet de réduire la taille des domaines de diffusion ou d’autoriser des groupes ou des utilisateurs à se regrouper de manière logique sans devoir se trouver physiquement au même endroit.</p>
+          <p></p>
+          <p>Il existe plusieurs types de VLAN : </p>
+          <p>
+            <ul>
+              <li>VLAN par défaut</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN de gestion</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN natif</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN utilisateur/données</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>VLAN voix</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L'argument <span class="cmd"><b></b></span><b>switchport access vlan</b><span class="cmd"><b></b></span> permet de créer un VLAN sur un commutateur. Après la création d’un VLAN, l’étape suivante consiste à lui attribuer des ports. L'argument <span class="cmd"><b></b></span><b>show vlan brief</b><span class="cmd"><b></b></span> affiche le type d’attribution de VLAN et d’appartenance de tous les ports du commutateur. Chaque VLAN doit correspondre à un sous-réseau IP unique.</p>
+          <p></p>
+          <p>Utilisez la commande <span class="cmd"><b></b></span><b>show vlan</b><span class="cmd"><b></b></span> pour vérifier que le port appartient au VLAN prévu. Si le port est attribué au mauvais VLAN, utilisez la commande <span class="cmd"><b></b></span><b>switchport access vlan</b><span class="cmd"><b></b></span> pour corriger l’appartenance du VLAN. Utilisez la commande <span class="cmd"><b></b></span><b>show mac address-table</b> pour vérifier que les adresses ont été apprises sur un port spécifique du commutateur et le VLAN auquel le port est attribué.</p>
+          <p></p>
+          <p>Un port sur un commutateur est soit un port d’accès soit un port trunk. Les ports d’accès transportent le trafic d’un VLAN spécifique attribué au port. Un port trunk est par défaut membre de tous les VLAN et achemine par conséquent le trafic de tous les VLAN.</p>
+          <p></p>
+          <p>Les trunks de VLAN assurent la communication entre commutateurs en acheminant le trafic associé à plusieurs VLAN. L’étiquetage des trames IEEE 802.1Q permet de différencier les trames Ethernet associées à des VLAN distincts lorsqu’elles traversent des liaisons trunk communes. Pour activer les liaisons, utilisez la commande <span class="cmd"><b></b></span><b>switchport mode trunk</b><span class="cmd"><b></b></span>. Utilisez la commande <span class="cmd"><b></b></span><b>show interfaces trunk</b><span class="cmd"><b></b></span> pour vérifier si un trunk est établi entre les commutateurs.</p>
+          <p></p>
+          <p>La négociation de trunk est gérée par le protocole DTP (Dynamic Trunking Protocol) qui fonctionne uniquement de point à point, entre les périphériques réseau. Le protocole DTP est un protocole propriétaire Cisco automatiquement activé sur les commutateurs Catalyst 2960 et Catalyst 3560.</p>
+          <p></p>
+          <p>Pour rétablir un commutateur à son état par défaut avec le VLAN 1 par défaut, utilisez les commandes <b></b><b>delete flash:vlan.dat </b><span class="cmd"><b></b></span>et<span class="cmd"><b></b></span><b> erase startup-config.</b></p>
+          <p></p>
+          <p>Dans ce chapitre, nous avons traité la configuration, la vérification et le dépannage des VLAN et des trunks à l’aide de l’interface de ligne de commande d’IOS Cisco.</p>
+          <p></p>
+          <p>Le routage inter-VLAN est le processus de routage du trafic entre différents VLAN, en utilisant un routeur dédié ou un commutateur multicouche. Le routage entre VLAN facilite la communication entre des périphériques isolés par des limites de VLAN.</p>
+          <p></p>
+          <p>Le routage inter-VLAN existant dépendait généralement de la disponibilité d’un port de routeur physique pour chaque VLAN configuré. Il a été remplacé par la topologie router-on-a-stick qui repose sur un routeur externe avec des sous-interfaces en trunk avec un commutateur de couche 2. Avec l’option router-on-a-stick, l’adressage IP et les informations VLAN appropriés doivent être configurés sur chaque sous-interface logique et une encapsulation de trunk doit être configurée pour correspondre à celle de l’interface de trunking du commutateur.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le chapitre d’introduction standard et un graphique sommaire.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

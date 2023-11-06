@@ -1,0 +1,1 @@
+La figure 1 présente un exemple de configuration de routeur pour le protocole RIPv2. La figure 2 présente le résultat de la commande « show running dash config » sur un routeur. La Figure 3 est une activité interactive qui permet aux stagiaires de s’entraîner à configurer les paramètres de base d'un routeur.

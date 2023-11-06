@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.2 Configuration de la NAT dynamique</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de la NAT dynamique</h1>
+        <div>
+          <p>La Figure 1 présente les étapes et les commandes permettant de configurer la NAT dynamique.  </p>
+          <p></p>
+          <p>
+            <b>Étape 1. </b>Définissez le pool d'adresses à utiliser pour la traduction en utilisant la commande <b>ip nat pool</b>. Ce pool d'adresses est généralement un groupe d'adresses publiques. Pour définir les adresses, il faut indiquer la première et la dernière adresse IPv4 du pool. Le mot-clé <b>netmask</b> ou <b>prefix-length</b> indique les bits d'adresse appartenant au réseau et les bits appartenant à l'hôte de la plage d'adresses. </p>
+          <p></p>
+          <p>
+            <b>Étape 2. </b>Configurez une liste de contrôle d'accès (ACL) standard (pour identifier (autoriser) uniquement les adresses qui doivent être traduites. Une ACL trop laxiste peut mener à des résultats imprévisibles. N'oubliez pas qu'une instruction <b>deny all</b> implicite se trouve à la fin de chaque ACL.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. </b>Reliez l’ACL au pool. La commande<b> ip nat inside source list </b><i>access-list-number </i><b>pool </b><i>pool name </i>permet de relier l’ACL au pool. Cette configuration est utilisée par le routeur pour identifier les adresses (<b>pool</b>) que les périphériques (<b>list</b>) reçoivent.</p>
+          <p></p>
+          <p>
+            <b>Étape 4. </b>Identifiez les interfaces internes du point de vue de la NAT, autrement dit, toutes les interfaces qui se connectent au réseau interne.</p>
+          <p></p>
+          <p>
+            <b>Étape 5.</b> Identifiez les interfaces externes du point de vue de la NAT, autrement dit, toutes les interfaces qui se connectent au réseau externe.</p>
+          <p></p>
+          <p>La Figure 2 présente un exemple de topologie et de configuration. Cette configuration permet la traduction pour tous les hôtes du réseau 192.168.0.0/16, qui inclut les réseaux locaux 192.168.10.0 et 192.168.11.0, lorsqu'ils génèrent du trafic qui entre dans S0/0/0 et sort de S0/1/0. Ces hôtes sont traduits en une adresse disponible du pool, dans la plage de 209.165.200.226 à 209.165.200.240.</p>
+          <p></p>
+          <p>La Figure 3 illustre la topologie utilisée pour la configuration dans le contrôleur de syntaxe. Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer la NAT dynamique sur R2. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un tableau répertoriant les étapes de configuration de la NAT dynamique. La Figure 2 montre la topologie NAT. Sous la topologie se trouvent la syntaxe pour configurer un pool NAT et la syntaxe pour créer une liste de contrôle d’accès permettant de définir les adresses internes qu’il est possible de traduire. La Figure 3 illustre la topologie à utiliser dans le cadre de la prochaine activité interactive. La Figure 4 constitue une activité interactive qui permet à l’apprenant de s’exercer dans la configuration de la NAT dynamique.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

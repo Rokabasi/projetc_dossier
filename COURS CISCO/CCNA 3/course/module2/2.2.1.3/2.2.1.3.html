@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.1.3 Vérification de la configuration du commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification de la configuration du commutateur</h1>
+        <div>
+          <p>Lorsque vous suspectez un problème avec une configuration de commutateur, utilisez les diverses commandes de vérification pour examiner la configuration et identifier le problème.</p>
+          <p></p>
+          <p>La sortie écran de la figure 1 montre les résultats de la commande <b>show interfaces </b><i>interface-id</i><b> switchport</b>. Supposons que vous ayez lancé ces commandes car vous suspectez que VLAN 10 n’a pas été affecté au port F0/4 du commutateur S1. La zone supérieure mise en surbrillance indique que le port F0/4 du commutateur S1 est en mode d'accès, mais elle ne montre pas qu'il a été directement affecté au VLAN 10. La zone inférieure mise en surbrillance confirme que le port F0/4 est toujours défini sur le VLAN par défaut. Les commandes <b>show running-config</b> et <b>show interfaces</b> <b> </b><i>interface-id</i><b> switchport</b> sont utiles pour identifier les problèmes d'affectation de VLAN et de configuration des ports.</p>
+          <p></p>
+          <p>La Figure 2 montre qu'une fois la configuration du périphérique modifiée, la communication entre le routeur R1 et le commutateur S1 a été interrompue. La liaison entre le routeur et le commutateur est supposée être une liaison agrégée. La sortie d'écran montre les résultats des commandes <b>show interfaces </b><i>interface_id</i><b> switchport</b> et <b>show running-config</b>. La zone supérieure mise en évidence confirme que le port F0/4 du commutateur S1 est en mode d’accès, et non en mode d’agrégation. La zone inférieure mise en évidence confirme également que le port F0/4 a été configuré pour le mode d’accès.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 montre les résultats de la commande « show interface interface-i.d. switchport ». Les champs de mode d'administration et de VLAN de mode d'accès sont mis en évidence. La figure 2 montre les résultats des commandes « show interface f 0 slash 4 switchport » et « show running-configuration ». Le mode d'administration et la commande d'accès au mode du switchport sont mis en évidence.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

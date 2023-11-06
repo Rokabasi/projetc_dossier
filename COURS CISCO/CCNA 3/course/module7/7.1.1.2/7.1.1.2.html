@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.2 La récapitulation automatique EIGRP </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La récapitulation automatique EIGRP </h1>
+        <div>
+          <p>L'une des méthodes les plus courantes pour régler précisément le protocole EIGRP consiste à activer et désactiver la récapitulation de route automatique. La récapitulation de route permet à un routeur de regrouper des réseaux et de les annoncer sous la forme d'un seul grand groupe à l'aide d'une route récapitulée unique. La récapitulation des routes est nécessaire en raison de la croissance rapide des réseaux.</p>
+          <p></p>
+          <p>Un routeur périphérique est un routeur situé à la périphérie d'un réseau. Ce routeur doit être en mesure d'annoncer tous les réseaux connus de sa table de routage à un routeur réseau connecté directement ou au routeur du fournisseur d'accès à Internet. Cette convergence peut potentiellement entraîner de très grandes tables de route. Imaginez qu'un routeur comporte 10 réseaux différents et qu'il doive annoncer l'ensemble des 10 entrées de route à un routeur en cours de connexion. Et si le routeur qui se connecte comportait également 10 réseaux et devait annoncer les 20 routes à un routeur FAI ? Si chaque routeur d'entreprise suivait ce scénario, la table de routage du routeur FAI serait énorme. </p>
+          <p></p>
+          <p>Pour limiter le nombre d'annonces de routage et la taille des tables de routage, le protocole EIGRP fournit des fonctionnalités de récapitulation de route. La récapitulation permet de réduire le nombre d'entrées dans les mises à jour de routage, ainsi que dans les tables de routage locales. Elle réduit également la consommation de bande passante par les mises à jour de routage et accélère les recherches dans les tables de routage. </p>
+          <p></p>
+          <p>Le protocole EIGRP peut être activé pour récapituler automatiquement les routes aux frontières par classe. Cela signifie qu'EIGRP reconnaît automatiquement les sous-réseaux en tant que réseau de classe A, B ou C unique et crée une seule entrée dans la table de routage pour la route récapitulative. Ainsi, tout le trafic destiné aux sous-réseaux circule sur ce chemin unique. </p>
+          <p></p>
+          <p>La figure illustre le fonctionnement de la récapitulation automatique. Les routeurs R1 et R2 sont configurés à l'aide du protocole EIGRP pour IPv4 avec récapitulation automatique. R1 comprend trois sous-réseaux dans sa table de routage : 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24. Dans l'architecture d'adressage réseau par classe, ces sous-réseaux sont tous considérés comme appartenant à un réseau plus grand de classe B, 172.16.0.0/16. Comme le protocole EIGRP du routeur R1 est configuré pour la récapitulation automatique, lorsqu'il envoie sa mise à jour de routage à R2, il récapitule les trois sous-réseaux /24 comme un seul réseau 172.16.0.0/16. Cela réduit le nombre de mises à jour de routage envoyées et le nombre d'entrées dans la table de routage IPv4 de R2.</p>
+          <p></p>
+          <p>Tout le trafic destiné aux trois sous-réseaux transite par le chemin unique. R2 ne gère pas les routes vers les différents sous-réseaux et aucune information de sous-réseau n'est apprise. </p>
+          <p></p>
+          <p><p>Dans le cas d’un réseau d’entreprise, le chemin choisi pour atteindre le résumé du routage peut ne pas être le meilleur choix pour le trafic qui tente d’atteindre chaque sous-réseau individuel. Le seul moyen par lequel tous les routeurs peuvent trouver les meilleures routes pour chaque sous-réseau individuel est que les voisins envoient des informations de sous-réseaux. Dans ce cas, la récapitulation automatique doit être désactivée. Les mises à jour incluent alors des informations sur les sous-réseaux. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs directement connectés.  Le routeur R1 a 3 sous-réseaux : 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24.  EIGRP récapitulera automatiquement ces sous-réseaux vers la frontière par classe du sous-réseau 172.16.0.0/16 étant donné qu'il s'agit de sous-réseaux d'un réseau de classe B.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

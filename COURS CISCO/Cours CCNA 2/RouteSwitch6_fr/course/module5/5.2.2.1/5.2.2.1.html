@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.2.1 sécurisation des ports inutilisés</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>sécurisation des ports inutilisés</h1>
+        <div>
+          <p>
+            <b>Désactivation des ports inutilisés</b>
+          </p>
+          <p></p>
+          <p>Une méthode simple à laquelle nombre d'administrateurs ont recours pour mieux protéger le réseau contre tout accès non autorisé est de désactiver tous les ports qui ne sont pas exploités sur un commutateur. Par exemple, si un commutateur Cisco Catalyst 2960 est doté de 24 ports et si trois connexions Fast Ethernet sont utilisées, il est conseillé de désactiver les 21 ports inutilisés. Accédez à chaque port inutilisé et exécutez la commande Cisco IOS <b>shutdown</b>. Si plus tard, un port doit être réactivé, il peut être activé à l’aide de la commande<b> no shutdown</b>. La figure montre un résultat partiel de cette configuration.</p>
+          <p></p>
+          <p>Il est facile de modifier la configuration de plusieurs ports sur un commutateur. Si une plage de ports doit être configurée, utilisez la commande<b> interface range</b>.</p>
+          <p></p>
+          <p>
+            <span class="cmd">Switch(config)# </span>
+            <span class="cmd">
+              <b>interface range</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>type module/premier nombre – dernier nombre</i>
+            </span>
+          </p>
+          <p></p>
+          <p>Le processus d'activation et de désactivation des ports peut être long, mais il renforce la sécurité sur le réseau et en vaut vraiment la peine.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure affiche la sortie de la commande « show run ».  La section de l’interface présentant plusieurs des ports sur le commutateur à l’état d’arrêt pour une meilleure sécurité est mise en surbrillance.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

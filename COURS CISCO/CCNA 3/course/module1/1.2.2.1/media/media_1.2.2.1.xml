@@ -1,0 +1,105 @@
+<textcomponents>
+
+<component id="ID_titleTxt01">
+   <text><![CDATA[<b>Confinement des diffusions</b>]]></text>
+</component>
+
+<component id="ID_bodyTxt01">
+   <text><![CDATA[Les routeurs limitent les diffusions au réseau local.]]></text>
+</component>   
+
+
+<component id="ID_titleTxt02">
+   <text><![CDATA[<b>Sécurité</b>]]></text>
+</component>
+
+<component id="ID_bodyTxt02">
+   <text><![CDATA[Les routeurs peuvent être configurés avec des listes de contrôle d&apos;accès pour filtrer le trafic non souhaité.]]></text>
+</component>
+   
+<component id="ID_titleTxt03">
+   <text><![CDATA[<b>Emplacements</b>]]></text>
+</component>
+
+<component id="ID_bodyTxt03">
+   <text><![CDATA[Les routeurs peuvent être utilisés pour interconnecter des emplacements géographiquement séparés.]]></text>
+</component>
+
+   
+<component id="ID_titleTxt04">
+   <text><![CDATA[<b>Groupement logique</b>]]></text>
+</component>
+
+<component id="ID_bodyTxt04">
+   <text><![CDATA[Les routeurs peuvent regrouper logiquement des utilisateurs, par exemple les employés d&apos;un département d&apos;une société, qui partagent des besoins communs ou nécessitent un accès aux mêmes ressources.]]></text>
+</component>
+   
+<component id="ID_txt01">
+   <text><![CDATA[<b>Sécurité</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+   <text><![CDATA[<b>Confinement des diffusions</b>]]></text>
+</component>
+
+<component id="ID_txt04">
+   <text><![CDATA[Site B]]></text>
+</component>
+
+<component id="ID_txt05">
+   <text><![CDATA[Site A]]></text>
+</component>
+
+
+
+<component id="ID_txt08">
+   <text><![CDATA[Comptabilité]]></text>
+</component>
+
+<component id="ID_txt09">
+   <text><![CDATA[Ingénierie]]></text>
+</component>
+
+
+
+
+<component id="ID_txt14">
+   <text><![CDATA[Accès]]></text>
+</component>
+
+<component id="ID_txt15">
+   <text><![CDATA[Distribution]]></text>
+</component>
+
+<component id="ID_txt16">
+   <text><![CDATA[Accès]]></text>
+</component>
+
+
+<component id="ID_txt17">
+   <text><![CDATA[Distribution]]></text>
+</component>
+
+<component id="ID_txt18">
+   <text><![CDATA[Accès]]></text>
+</component>
+
+<component id="ID_txt19">
+   <text><![CDATA[Distribution]]></text>
+</component>
+
+
+
+
+<component id="ID_txt25">
+   <text><![CDATA[<b>Groupement logique</b>]]></text>
+</component>
+
+
+
+<component id="ID_txt26">
+   <text><![CDATA[<b>Emplacements</b>]]></text>
+</component>
+
+
+</textcomponents>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.3.1.2 La redondance de routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.3.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La redondance de routeur</h1>
+        <div>
+          <p>Pour éviter tout risque de point de défaillance unique au niveau de la passerelle par défaut, il est possible d'implémenter un routeur virtuel. Pour implémenter ce type de redondance de routeur, plusieurs routeurs sont configurés pour un fonctionnement conjoint, de manière à présenter l'illusion d'un routeur unique au regard des hôtes du LAN, comme illustré dans la figure. En partageant une adresse IP et une adresse MAC, plusieurs routeurs peuvent jouer le rôle d'un routeur virtuel unique.</p>
+          <p></p>
+          <p>L'adresse IPv4 du routeur virtuel est configurée en tant que passerelle par défaut pour les postes de travail sur un segment IPv4 donné. Lorsque des trames sont envoyées à la passerelle par défaut par des périphériques hôtes, les hôtes utilisent le processus ARP pour résoudre l'adresse MAC associée à l'adresse IPv4 de la passerelle par défaut. La résolution ARP renvoie l’adresse MAC du routeur virtuel. Les trames envoyées à l'adresse MAC du routeur virtuel peuvent alors être traitées physiquement par le routeur actif, au sein du groupe de routeurs virtuel. Un protocole est utilisé pour identifier au moins deux routeurs comme périphériques chargés de traiter les trames envoyées à l’adresse MAC ou à l’adresse IP d’un routeur virtuel unique. Les périphériques hôtes transmettent le trafic à l’adresse du routeur virtuel. Le routeur physique qui réachemine ce trafic est transparent pour les périphériques hôtes.</p>
+          <p></p>
+          <p>Un protocole de redondance offre le mécanisme nécessaire pour déterminer quel routeur doit être actif dans le réacheminement du trafic. Il détermine également quand le rôle de réacheminement doit être repris par un routeur en veille. La transition d’un routeur de transfert à un autre est transparente pour les périphériques finaux.</p>
+          <p></p>
+          <p>La capacité d'un réseau à effectuer une reprise dynamique après la défaillance d'un périphérique jouant le rôle de passerelle par défaut est appelée « redondance au premier saut ».</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente quatre PC connectés à un LAN reliant deux routeurs physiques et un routeur virtuel.  Le trafic est acheminé vers le routeur situé à gauche du routeur virtuel, qui se trouve au milieu.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

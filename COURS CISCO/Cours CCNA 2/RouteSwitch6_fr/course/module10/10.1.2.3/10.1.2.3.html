@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.2.3 Détection des périphériques à l&#x0027;aide du protocole LLDP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Détection des périphériques à l&#x0027;aide du protocole LLDP</h1>
+        <div>
+          <p>Lorsque le protocole LLDP est activé, les voisins du périphérique peuvent être détectés à l'aide de la commande <b>show lldp neighbors</b>. Examinez par exemple le manque de documentation dans la topologie illustrée à la Figure 1. Tout ce que l'administrateur réseau sait, c'est que S1 est connecté à deux périphériques. À l'aide de la commande <b>show lldp neighbors</b>, l'administrateur réseau découvre que S1 a un routeur et un commutateur en tant que voisins.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : la lettre B apparaissant dans la colonne de capacité pour S2 représente un pont (Bridge). Dans le cas présent, le mot pont peut également signifier « commutateur ». </p>
+          <p></p>
+          <p>D'après les résultats de la commande <b>show lldp neighbors</b>, il est possible d'établir une topologie à partir du commutateur S1, comme illustré à la Figure 2. Pour plus d'informations sur les voisins, utilisez la commande <b>show lldp neighbors detail</b> qui permet d'obtenir la version IOS et l'adresse IP des voisins, ainsi que la capacité du périphérique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un commutateur S1 connecté à deux clouds et la sortie de la commande « show lldp neighbors » qui indique que le commutateur S1 a deux voisins, le routeur R1 et le commutateur S2. Le routeur R1 est connecté à l'interface locale FastEthernet 0/5 et le commutateur S2 est connecté à l'interface locale FastEthernet 0/4. La Figure 2 montre un routeur R1 connecté au commutateur S1, qui est connecté à un autre commutateur S2. La sortie de la commande « show lldp neighbors detail » indique que l'adresse IP de gestion du routeur R1 est 192.168.1.1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

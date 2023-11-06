@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.1.5 La commutation multicouche</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>La commutation multicouche</h1>
+        <div>
+          <p>Les commutateurs multicouches sont généralement déployés dans les couches principales et de distribution du réseau commuté d'une entreprise. Ces commutateurs présentent les caractéristiques suivantes : ils peuvent établir une table de routage, prendre en charge quelques protocoles de routage et réacheminer des paquets IP à un débit proche de celui du réacheminement de couche 2. Les commutateurs multicouches prennent souvent en charge du matériel spécialisé, tels que des circuits intégrés spécifiques (ASIC, Application Specific Integrated Circuits). Les ASIC, associés à des structures de données logicielles dédiées, peuvent rationaliser le réacheminement de paquets IP indépendamment du processeur.</p>
+          <p></p>
+          <p>L'évolution actuelle des réseaux s'oriente vers un environnement commuté de couche 3 pure. Lors des premières utilisations de commutateurs dans des réseaux, aucun commutateur ne prenait en charge le routage ; aujourd'hui, presque tous les commutateurs le font. Il est probable que tous les commutateurs incorporeront bientôt un processeur de routage, car ce coût diminue par rapport à d'autres contraintes. </p>
+          <p></p>
+          <p>Comme illustré par la figure, le commutateur Catalyst 2960 montre la migration vers un environnement de couche 3 pure. Dans les versions d'IOS antérieures à la version 15.x, ces commutateurs prenaient en charge une seule interface virtuelle commutée (SVI, switched virtual interface). Dans les versions IOS 15.x, ces commutateurs prennent désormais en charge plusieurs SVI actives. Cela signifie que le commutateur peut être accédé à distance au moyen d'adresses IP multiples sur des réseaux distincts.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre une pile de commutateurs Cisco Catalyst 2960.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

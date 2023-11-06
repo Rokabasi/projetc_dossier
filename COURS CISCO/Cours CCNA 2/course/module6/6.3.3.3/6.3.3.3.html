@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.3 Configuration de type router-on-a-stick : configuration des sous-interfaces du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de type router-on-a-stick : configuration des sous-interfaces du routeur</h1>
+        <div>
+          <p>En mode router-on-a-stick, la configuration du routeur diffère par rapport à celle qu’utilise le routage inter-VLAN existant. La figure montre que plusieurs sous-interfaces sont configurées.</p>
+          <p></p>
+          <p>Chaque sous-interface est créée à l’aide de la commande de mode de configuration globale <span class="cmd"><b></b></span><b>interface</b><i> interface_id subinterface_id </i>. La syntaxe pour la sous-interface est l’interface physique, dans ce cas g0/0, suivie d’un point et d’un numéro de sous-interface. Comme illustré dans la figure, la sous-interface GigabitEthernet0/0.10 est créée en utilisant la commande du mode de configuration globale <b>interface g0/0.10</b>. Le numéro de sous-interface est généralement configuré pour refléter le numéro de VLAN.</p>
+          <p></p>
+          <p>Avant de recevoir une adresse IP, une sous-interface doit être configurée pour fonctionner sur un VLAN spécifique à l’aide de la commande <span class="cmd"><b></b></span><b>encapsulation dot1q</b><i> vlan_id </i>. Dans cet exemple, la sous-interface G0/0.10 est affectée au VLAN 10. </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> il existe une option de mot de clé <span class="cmd"><b></b></span><b>natif</b><span class="cmd"><b></b></span> qui peut être ajoutée à cette commande pour définir le VLAN natif IEEE 802.1Q. Dans cet exemple, l’option de mot de clé <span class="cmd"><b></b></span><b>natif</b><span class="cmd"><b></b></span> a été exclue pour laisser le VLAN natif par défaut comme VLAN 1.</p>
+          <p></p>
+          <p>Ensuite, attribuez l’adresse IPv4 à la sous-interface à l’aide de la commande de mode de configuration de sous-interface <span class="cmd"><b></b></span><b>ip address</b><i> ip_address subnet_mask </i>. Dans cet exemple, la sous-interface G0/0.10 reçoit l’adresse IPv4 172.17.10.1 à l’aide de la commande <span class="cmd"><b></b></span><b>ip address 172.17.10.1 255.255.255.0</b>. </p>
+          <p></p>
+          <p>Ce processus est répété pour toutes les sous-interfaces de routeur requises pour le routage entre les VLAN configurés sur le réseau. Une adresse IP sur un sous-réseau unique doit être affectée à chaque sous-interface de routeur pour que le routage se produise. Dans cet exemple, l’autre sous-interface de routeur, G0/0.30, est configurée pour utiliser l’adresse IPv4 172.17.30.1, située sur un sous-réseau différent de la sous-interface G0/0.10.</p>
+          <p></p>
+          <p>Une fois qu’une interface physique est activée, des sous-interfaces sont automatiquement activées suite à la configuration. Les sous-interfaces n’ont pas besoin d’être activées avec la commande <span class="cmd"><b></b></span><b>no shutdown</b><span class="cmd"><b></b></span> au niveau du mode de configuration de sous-interface du logiciel IOS Cisco. </p>
+          <p></p>
+          <p>Si l’interface physique est désactivée, toutes les sous-interfaces le sont également. Dans cet exemple, la commande <span class="cmd"><b></b></span><b>no shutdown</b><span class="cmd"><b></b></span> est entrée dans le mode de configuration d’interface de l’interface G0/0, qui à son tour, active toutes les sous-interfaces configurées.</p>
+          <p></p>
+          <p>Chaque sous-interface peut être administrativement désactivée au moyen de la commande <span class="cmd"><b></b></span><b>shutdown</b><b></b>. En outre, vous pouvez activer chaque sous-interface de manière indépendante avec la commande <span class="cmd"><b></b></span><b>no shutdown</b><span class="cmd"><b></b></span> en mode de configuration de sous-interface.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre une topologie router-on-a-stick et les étapes nécessaires pour configurer les sous-interfaces et l’encapsulation de trunk sur un routeur qui a une connexion physique unique à un commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

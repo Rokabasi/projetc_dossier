@@ -1,0 +1,27 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Configuration DTP initiale</b>]]></text>
+</component>
+<component id="ID_s1_txt01">
+  <text><![CDATA[Le port F0/1 est configuré avec <br/><font face="_typewriter"><b>switchport mode trunk</b></font>]]></text> 
+  </component>
+  <component id="ID_s1_txt02">
+  <text><![CDATA[Le port F0/3 est configuré avec <br/><font face="_typewriter"><b>switchport mode<br>dynamic auto</b></font>]]></text> 
+  </component>
+  <component id="ID_s1_txt03">
+  <text><![CDATA[Le port F0/1 est configuré avec <br/><font face="_typewriter"><b>switchport mode trunk</b></font>]]></text> 
+  </component>
+   <component id="ID_s1_txt04">
+  <text><![CDATA[Le port F0/3 est configuré avec <br/><font face="_typewriter"><b>switchport mode<br>dynamic auto</b></font>]]></text> 
+  </component>
+
+<component id="ID_s2_title">
+<text><![CDATA[<b>Résultats d&apos;interaction DTP</b>]]></text>
+</component>
+<component id="ID_s2_txt01">
+  <text><![CDATA[Ce lien est un trunk. <br/><br/>Lorsque les deux ports sont configurés avec <font face="_typewriter"><b>switchport mode trunk</b></font>, ils restent en mode trunk. ]]></text> 
+  </component>
+  <component id="ID_s2_txt02">
+  <text><![CDATA[Ce lien n&apos;est pas un trunk. <br/><br/>Lorsque les deux ports sont configurés avec <font face="_typewriter"><b>switchport mode dynamic auto</b></font>, la <br>liaison trunk est inactive. ]]></text> 
+  </component>
+</textcomponents>

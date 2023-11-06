@@ -1,0 +1,50 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Syntaxe de la route IPv6 statique par défaut</b>]]></text>
+	</component>
+	
+	<component id='ID_table'>
+		<text><![CDATA[
+						 <table header='none' bordercolor='#FFFFFF' borderwidth='2' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' cellpadding='4' class="mtable">
+
+						 	<tr class="mtable_title">
+								<td colspan="2" bgcolor='#FFFFFF'><font size="1"><br/> </font></td>
+							</tr>
+
+							
+								<tr>
+									<td colspan='2' bgcolor='#4E4C4D' class="mtable_top"><font size='1' color='#4E4C4D'>.</font></td>
+								</tr> 
+							  
+								<tr>
+								  <td width='100px' bgcolor='#666263' class="mtitle"><font  color='#ffffff'><b>Paramètre</b></font></td>
+								  <td  bgcolor='#666263' class="mtitle"><font  color='#ffffff'><b>Description</b></font></td>
+								</tr>
+
+								<tr>
+
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">::/0</font></td>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536'>Correspond à n&apos;importe quel préfixe IPv6 indépendamment de la longueur du préfixe.</font></td>
+								</tr>
+								
+								<tr>
+								  <td bgcolor='#F2F2F2' valign="top"><font color='#393536' face="_typewriter">ipv6-address</font></td>
+								  <td bgcolor='#F2F2F2' valign="top"><font color='#393536'><textformat blockindent='-14'>
+										<ul><li>Généralement appelé adresse IPv6 du routeur de tronçon suivant.</li><li>Généralement utilisé lors de la connexion à un support de diffusion (par exemple Ethernet).</li><li>Crée généralement une recherche récursive.</li></ul>
+									</textformat></font></td>
+								</tr>
+								<tr>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536' face="_typewriter">exit-intf</font></td>
+								  <td bgcolor='#E9E7E8' valign="top"><font color='#393536'><textformat blockindent='-14'>
+										<ul><li>Utilisez l&apos;interface de sortie pour transférer les paquets vers le réseau de destination.</li><li>On parle également d&apos;une route statique reliée directement.</li>
+										<li>Ces routes sont généralement utilisées pour la connexion dans une configuration point à point.</li></ul>
+									</textformat></font></td>
+								</tr>      
+							  </table>
+					]]>
+		</text>
+</component>
+
+
+</textcomponents>

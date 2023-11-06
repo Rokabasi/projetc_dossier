@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.1.4 Types de routeurs OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Types de routeurs OSPF</h1>
+        <div>
+          <p>Les différents types de routeur OSPF contrôlent le trafic entrant et sortant des zones. Les routeurs OSPF sont classifiés suivant la fonction qu'ils remplissent au sein du domaine de routage.</p>
+          <p></p>
+          <p>Il existe quatre types de routeur OSPF : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur interne</b> : routeur dont toutes les interfaces se situent dans la même zone. Les routeurs internes d'une zone ont les mêmes LSDB (Figure 1).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur fédérateur</b> : routeur situé dans la zone fédératrice. La zone 0 est définie comme zone fédératrice (Figure 2).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur ABR</b>
+                <b>(Area Border Router) </b>: routeur dont les interfaces sont connectées à plusieurs zones. Il doit gérer des LSDB distinctes pour chaque zone à laquelle il est connecté et être capable de router entre les zones. Les ABR sont des points de sortie pour la zone. Cela signifie que les informations de routage destinées à une autre zone ne peuvent y parvenir que par l’intermédiaire de l’ABR de la zone locale. Les ABR peuvent être configurés de manière à récapituler les informations de routage issues des LSDB de leurs zones associées. Les ABR distribuent des informations de routage à la zone fédératrice. Les routeurs fédérateurs transfèrent ensuite ces informations aux autres ABR. Dans un réseau à zones multiples, chaque zone peut avoir un ou plusieurs routeurs ABR (Figure 3).</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routeur ASBR (Autonomous System Boundary Router) </b>: routeur dont au moins une interface est connectée à un interréseau externe. Un réseau externe est un réseau qui ne fait pas partie de ce domaine de routage OSPF. Par exemple, une connexion réseau à un fournisseur d'accès à Internet. Un routeur ASBR peut importer des données relatives au réseau externe dans le réseau OSPF, et inversement, à l'aide du processus de redistribution de routes (Figure 4).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La redistribution dans le domaine OSPF à zones multiples se produit lorsqu’un ASBR connecte différents domaines de routage (par exemple, EIGRP et OSPF) et les configure pour qu’ils échangent et annoncent des informations de routage entre eux. Une route statique, notamment une route par défaut, peut également être redistribuée en tant que route externe dans le domaine de routage OSPF.</p>
+          <p></p>
+          <p>Un routeur peut appartenir à plusieurs catégories de routeur. Par exemple, un routeur qui se connecte aux zones 0 et 1, et qui gère en outre les informations de routage pour les réseaux externes est à la fois un routeur fédérateur, un routeur ABR et un routeur ASBR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 représente un réseau LAN à trois zones : Zone 1, Zone 0 et Zone 51. Les routeurs contenus dans chacune de ces zones sont appelés routeurs internes. La Figure 2 indique que tous les routeurs contenus dans la zone 0, et ceux qui se connectent à d'autres zones, sont appelés routeurs fédérateurs. La Figure 3 indique que les routeurs qui se connectent à d'autres zones sont appelés routeurs ABR (Area Border Router). La Figure 4 indique que le routeur connecté entre les différentes zones et à Internet est appelé routeur ASBR (Autonomous System Boundary Router).</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

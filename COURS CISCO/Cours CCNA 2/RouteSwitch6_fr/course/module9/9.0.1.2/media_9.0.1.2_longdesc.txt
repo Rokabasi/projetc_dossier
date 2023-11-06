@@ -1,0 +1,1 @@
+La figure illustre deux personnes travaillant sur un ordinateur portable.  La légende précise : « La NAT est un processus utilisé par de nombreuses petites et moyennes entreprises afin d’économiser les adresses IPv4 et d’assurer la sécurité et la confidentialité des utilisateurs finaux. »

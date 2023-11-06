@@ -1,0 +1,1 @@
+La figure affiche le routeur 2 avec un réseau sur chaque côté. Le réseau sur la gauche est un réseau interne tandis que le réseau sur la droite est un réseau externe. Le réseau interne est connecté à un PC et possède une adresse locale. Le réseau externe est un FAI et possède des adresses globales.

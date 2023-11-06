@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.1.1.6 Le processus de sélection du DR/BDR par défaut</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.1.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le processus de sélection du DR/BDR par défaut</h1>
+        <div>
+          <p>Comment le routeur désigné et le routeur désigné de sauvegarde sont-ils sélectionnés ? La sélection du DR et du BDR OSPF est basée sur les critères suivants, dans l'ordre indiqué :</p>
+          <p></p>
+          <p>1. Les routeurs du réseau choisissent le routeur ayant la priorité d'interface la plus élevée comme étant le DR. Le routeur ayant la deuxième priorité d'interface la plus élevée est choisi comme BDR. La priorité peut être tout nombre compris entre 0 et 255. Plus la priorité est élevée, plus il y a de chances que le routeur soit sélectionné comme DR. Un routeur de priorité 0 ne peut pas devenir DR. La priorité par défaut des interfaces de diffusion à accès multiple est de 1. De ce fait, tous les routeurs ont une valeur de priorité égale, sauf si la configuration définie est différente. Le choix du DR/BDR se fait donc à l'aide d'une autre méthode.</p>
+          <p>2. Si les priorités d'interface sont égales, c'est le routeur dont l'ID est le plus élevé qui est choisi comme DR. Le routeur ayant le deuxième ID le plus élevé est choisi comme BDR.</p>
+          <p></p>
+          <p>N'oubliez pas que l'ID de routeur peut être déterminé de trois façons :</p>
+          <p>
+            <ul>
+              <li>L'ID du routeur peut être configuré manuellement.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si aucun ID de routeur n'est configuré, celui-ci est déterminé par l'adresse IPv4 de bouclage la plus élevée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si aucune interface de bouclage n'est configurée, l'ID de routeur est déterminé par l'adresse IPv4 active la plus élevée.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: sur un réseau IPv6, si aucune adresse IPv4 n'est configurée sur le routeur, l'ID de routeur doit être configuré manuellement avec la commande<span class="cmd"><b></b></span><b>router-id </b><i>rid</i><span class="cmd"><i></i></span>; sinon OSPFv3 ne démarre pas.</p>
+          <p></p>
+          <p>Dans la figure, toutes les interfaces des routeurs Ethernet ont une priorité par défaut de valeur 1. Sur la base des critères de sélection répertoriés ci-dessus, l'ID de routeur OSPF est donc utilisé pour sélectionner le DR et le BDR. R3 comporte l'ID de routeur le plus élevé et devient donc le DR ; l'ID du routeur R2 est en deuxième position et R2 devient donc le BDR. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: la priorité par défaut des interfaces série est définie sur 0 ; elles ne sélectionnent donc pas de DR ni de BDR.</p>
+          <p></p>
+          <p>Le processus de sélection du DR et du BDR a lieu dès que le premier routeur avec une interface OSPF devient actif sur le réseau à accès multiple. Ce peut être le cas si des routeurs OSPF préconfigurés sont mis sous tension ou lorsque le protocole OSPF est activé sur l'interface. Le processus de sélection ne prend que quelques secondes. Si certains routeurs du réseau à accès multiple n'ont pas fini de démarrer, il est possible qu'un routeur avec un ID de routeur plus bas devienne le DR. (Par exemple, s'il s'agit d'un routeur bas de gamme qui nécessite moins de temps pour démarrer.) </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Dans la figure, il y a trois routeurs connectés à un commutateur.  Le routeur 2 est le DR et le routeur 3 est le BDR.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.1.2.4 LSA OSPF de type 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.1.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>LSA OSPF de type 3</h1>
+        <div>
+          <p>Les ABR utilisent des LSA de type 3 pour annoncer les réseaux issus d’autres zones. Les ABR collectent les LSA de type 1 contenues dans la LSDB. Après la convergence d’une zone OSPF, l’ABR crée une LSA de type 3 pour chacun de ses réseaux OSPF appris. Par conséquent, un ABR annonçant de nombreuses routes OSPF doit créer des LSA de type 3 pour chaque réseau.  </p>
+          <p></p>
+          <p>Comme l’illustre la figure, ABR1 et ABR2 diffusent des LSA de type 3 d’une seule zone vers plusieurs autres zones. ABR1 propage les informations de la zone 1 dans la zone 0 à l'aide de LSA de type 3. ABR1 propage également les informations de la zone 0 dans la zone 1 à l'aide de LSA de type 3. ABR2 fait la même chose pour la zone 2 et la zone 0. Dans un important déploiement OSPF composé de nombreux réseaux, la propagation des LSA de type 3 peut entraîner des problèmes majeurs d’inondation. Pour cette raison, il est fortement recommandé de configurer manuellement la récapitulation des routes sur l'ABR.</p>
+          <p></p>
+          <p>L'ID d'état de liens est défini sur le numéro de réseau ; le masque est également annoncé.</p>
+          <p></p>
+          <p>La réception d'une LSA de type 3 dans une zone n'entraîne pas l'exécution de l'algorithme SPF par un routeur. Les routes annoncées dans les LSA de type 3 sont ajoutées ou supprimées, le cas échéant, de la table de routage du routeur, mais un calcul SPF complet n'est pas nécessaire.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche des messages LSA de type 3 qui se propagent dans les différentes zones via le routeur ABR et indique qu'une LSA de type 3 est requise pour chaque sous-réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

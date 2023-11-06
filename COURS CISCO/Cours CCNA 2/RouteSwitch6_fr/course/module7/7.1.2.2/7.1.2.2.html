@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.2 Exemples de masques génériques </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Exemples de masques génériques </h1>
+        <div>
+          <p>
+            <b>Masques génériques correspondant à des sous-réseaux IPv4</b>
+          </p>
+          <p></p>
+          <p>Le calcul du masque générique demande un peu de pratique. La Figure 1 présente trois exemples de masques génériques. </p>
+          <p></p>
+          <p>Dans le premier exemple, le masque générique stipule que chaque bit de l'adresse IPv4 192.168.1.1 doit avoir une correspondance exacte. </p>
+          <p></p>
+          <p>Dans le deuxième exemple, le masque générique indique que la correspondance est systématique. </p>
+          <p></p>
+          <p>Dans le troisième exemple, le masque générique stipule que tous les hôtes du réseau 192.168.1.0/24 correspondent. </p>
+          <p></p>
+          <p>
+            <b>Masques génériques correspondant à des plages</b>
+          </p>
+          <p></p>
+          <p>Les deux exemples de la Figure 2 sont plus complexes. Dans l’exemple 1, les deux premiers octets et les quatre premiers bits du troisième octet doivent présenter une correspondance exacte. Les quatre derniers bits du troisième octet et le dernier octet peuvent être n’importe quel nombre valide. Par conséquent, le masque vérifie la plage des réseaux 192.168.16.0 à 192.168.31.0.</p>
+          <p></p>
+          <p>L'exemple 2 représente un masque générique avec une correspondance des deux premiers octets et du bit le moins significatif du troisième octet. Le dernier octet et les sept premiers bits du troisième octet peuvent être n’importe quel nombre valide. Ainsi, vous avez un masque qui autorise ou refuse tous les hôtes de sous-réseau depuis le réseau principal 192.168.0.0.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 répertorie trois exemples d’adresses IPv4 et de masques génériques.  L’Exemple 1 a un masque générique de 32 zéros ; par conséquent il demande à la liste de contrôle d’accès une correspondance exacte avec l'adresse IP.  L’Exemple 2 a un masque générique de 32 uns ; par conséquent toutes les adresses IP vont correspondre.  L’Exemple 3 a un masque générique de 24 zéros à partir de la gauche et 8 uns vers la droite.  Ce masque correspond à un réseau de classe C où les 24 premiers bits correspondent.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

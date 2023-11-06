@@ -1,0 +1,1 @@
+La figure est une animation qui représente un commutateur recevant un message de diffusion d’une source, puis transmettant la diffusion vers tous les autres membres connectés au commutateur. Les commutateurs transmettront les diffusions, ce qui fait que tous les périphériques connectés au commutateur appartiennent au même domaine de diffusion.

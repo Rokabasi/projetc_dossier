@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.2.1 Les problèmes de configuration du commutateur de la couche 3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les problèmes de configuration du commutateur de la couche 3</h1>
+        <div>
+          <p>Les problèmes communs au routage inter-VLAN existant et au routage inter-VLAN router-on-a-stick surviennent également dans le cadre de la commutation de couche 3. Pour résoudre des problèmes de commutation de couche 3, il convient de vérifier les éléments suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>VLAN</b> : les VLAN doivent être définis sur tous les commutateurs. Les VLAN doivent être activés sur les ports trunk. Les ports doivent se trouver dans les VLAN appropriés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>SVI</b> : Les SVI doivent disposer de l'adresse IP ou du masque de sous-réseau correct. Les interfaces SVI doivent être opérationnelles. Chaque interface SVI doit correspondre au numéro du VLAN.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Routage</b> : le routage doit être activé. Chaque interface ou réseau doit être ajouté au protocole de routage ou des routes statiques doivent être saisies, selon le cas.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hôtes</b> : les hôtes doivent avoir l'adresse IP ou le masque de sous-réseau correct. Les hôtes doivent avoir une passerelle par défaut associée à une interface SVI ou un port routé.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Pour résoudre les problèmes de commutation de couche 3, familiarisez-vous avec la mise en œuvre et la conception de la topologie.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une topologie avec deux sous-réseaux séparés par un commutateur de couche trois. Il y a des liaisons trunk des deux côtés du commutateur de couche trois conduisant aux commutateurs de couche deux.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

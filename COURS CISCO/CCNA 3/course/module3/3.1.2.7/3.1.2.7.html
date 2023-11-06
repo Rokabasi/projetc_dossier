@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.7 Le format de trame BPDU 802.1D</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Le format de trame BPDU 802.1D</h1>
+        <div>
+          <p>L'algorithme Spanning Tree repose sur l'échange de trames BPDU pour la détermination d'un pont racine. Une trame BPDU contient 12 champs distincts qui comportent les informations de chemin et de priorité utilisées pour déterminer le pont racine et les chemins qui y mènent.</p>
+          <p></p>
+          <p>Cliquez sur les champs BPDU de la Figure 1 pour obtenir plus de détails.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Les quatre premiers champs identifient le protocole, la version, le type de message et les indicateurs d’état.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les quatre champs suivants servent à identifier le pont racine et le coût du chemin racine au pont racine.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les quatre derniers champs sont tous des champs de minuterie qui déterminent à quelle fréquence les messages BPDU sont envoyés et combien de temps les informations reçues via le processus BPDU sont conservées. </li>
+            </ul>
+          </p>
+          <p>La Figure 2 illustre une trame BPDU capturée via Wireshark. Dans la trame BPDU illustrée dans cet exemple, les champs sont plus nombreux que dans notre description précédente. Le message BPDU est encapsulé dans une trame Ethernet lorsqu’il est transmis sur le réseau. L’en-tête 802.3 indique les adresses source et de destination de la trame BPDU. L'adresse MAC de destination de cette trame est 01:80:C2:00:00:00 ; il s'agit d'une adresse de multidiffusion pour le groupe Spanning Tree. Lorsqu’une trame est adressée avec cette adresse MAC, tous les commutateurs configurés pour STP acceptent les informations de la trame et les lisent. Tous les autres appareils sur le réseau ignorent la trame.</p>
+          <p></p>
+          <p>Dans l’exemple, l’ID de racine et l’ID de pont (BID) sont identiques dans la trame BPDU capturée, ce qui indique que la trame a été capturée depuis un pont racine. Tous les minuteurs sont configurés avec des valeurs par défaut.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente un tableau des champs b.p.d.u. et de leur taille en octets. La Figure 3 montre une capture Wireshark d'un paquet Spanning Tree.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

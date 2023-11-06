@@ -1,0 +1,169 @@
+<textcomponents>
+    <!--SLIDE 1-->
+    <component id="ID_s1_title">
+        <text>
+            <![CDATA[<b>Routeur R1 en tant que serveur DHCPv4</b>]]></text>
+    </component>
+    <component id="ID_s1_txt01">
+        <text>
+            <![CDATA[<b>Serveur DHCPv4</b>]]></text>
+    </component>
+    <component id="ID_s1_txt02">
+        <text>
+            <![CDATA[<b>Serveur DNS</b>]]></text>
+    </component>
+    <!--SLIDE 2-->
+    <component id="ID_s2_title">
+        <text>
+            <![CDATA[<b>Étape 1 de la configuration de DHCPv4 : à l&apos;exception des adresses IPv4</b>]]></text>
+    </component>
+    <!--SLIDE 3-->
+    <component id="ID_s3_title">
+        <text>
+            <![CDATA[<b>Étape 2 de la configuration de DHCPv4 : configuration d&apos;un pool DHCPv4</b>]]></text>
+    </component>
+    <!--SLIDE 4-->
+    <component id="ID_s4_title">
+        <text>
+            <![CDATA[<b>Étape 3 de la configuration de DHCPv4 : configuration de tâches spécifiques</b>]]></text>
+    </component>
+    <component id="ID_S4_table1">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' class="mtable" cellpadding='4'>
+<tr class="mtable_top">
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span 
+style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#0E6360' valign="top"><font color="#ffffff"><b>Tâches requises</b></font></td>
+		<td bgcolor='#0E6360' valign="top"><font color="#ffffff"><b>Commande</b></font></td>
+	</tr>
+	
+	<tr>
+		<td bgcolor='#EFF8F7' valign="top">Définir le pool d&apos;adresses</td>
+		<td bgcolor='#EFF8F7' valign="top"><font face="_typewriter"><b>network </b><i>network-number </i>[<i>mask | /prefix-length</i>]</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#ffffff' valign="top">Définir le routeur ou la passerelle par défaut</td>
+		<td bgcolor='#ffffff' valign="top"><font face="_typewriter"><br/>default-router <br/> <br/><br/>address<br/> [<br/>address2...address8<br/>]</font></td>
+	</tr>
+</table>]]>
+        </text>
+    </component>
+    <component id="ID_S4_table2">
+        <text>
+            <![CDATA[<table header='none' bordercolor='#98D3D1' borderwidth='3' shadow='false' shadowcolor='#000000' glow='true' glowcolor='#808080' class="mtable" cellpadding='4'>
+<tr class="mtable_top">
+		<td colspan='2' bgcolor='#0E6360' class="mtable_top"><font size='1' color='#0E6360'><span 
+style="color:#98D3D1">.</span></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#0E6360' valign="top"><font color="#ffffff"><b>Tâches facultatives</b></font></td>
+		<td bgcolor='#0E6360' valign="top"><font color="#ffffff"><b>Commande</b></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#EFF8F7' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'>Définir un serveur DNS</td>
+		<td bgcolor='#EFF8F7' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'><font face="_typewriter">dns-server address [address2...address8]</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#ffffff' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'>Définir le nom de domaine</td>
+		<td bgcolor='#ffffff' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'><font face="_typewriter"><b>domain-name </b> <i>domain</i></font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#EFF8F7' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'>Définir la durée du bail DHCP</td>
+		<td bgcolor='#EFF8F7' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'><font face="_typewriter"><b>lease </b> {<i>days </i>[<i>hours</i>] [<i>minutes</i>] | <i>infinite</i>}</font></td>
+	</tr>
+	<tr>
+		<td bgcolor='#ffffff' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'>Définir le serveur WINS NetBIOS</td>
+		<td bgcolor='#ffffff' glow='false' glowcolor='#FCA92E' valign='top' type='dynamic'><font face="_typewriter"><br/>netbios-name-server <br/> <br/><br/>address<br/> [<br/>address2...address8<br/>]</font></td>
+	</tr>
+</table> ]]>
+        </text>
+    </component>
+    <!--SLIDE 5-->
+    <component id="ID_s5_title">
+        <text>
+            <![CDATA[<b>Exemple de DHCPv4</b>]]></text>
+    </component>
+    <!--SLIDE 6-->
+    <component id="ID_s6_title">
+        <text>
+            <![CDATA[<b>Configuration d&apos;un serveur DHCPv4</b>]]></text>
+    </component>
+    <component id="ID_sc_reset">
+        <text>
+            <![CDATA[Réinitialiser]]>
+        </text>
+    </component>
+    <component id="ID_sc_showme">
+        <text>
+            <![CDATA[Démonstration]]>
+        </text>
+    </component>
+    <component id="ID_sc_showall">
+        <text>
+            <![CDATA[Afficher tout]]>
+        </text>
+    </component>
+    <component id="ID_s6_SC5" fontSize="12" fontFace="_typewriter" fontColor="#ffffff">
+        <feedback id="fb">
+            <![CDATA[<b><font  face="_sans" color="#FFFFFF" >***Vous devez entrer la commande exacte et complète. Les commandes qui incluent un nom ou un mot de passe sont sensibles à la casse.***</font></b>]]></feedback>
+        <existingcommands>
+            <![CDATA[<font  face="_sans" ><b>Les adresses .1 à .9 et .254 doivent être exclues de la plage d&apos;adresses 192.168.11.0/24.</b></font>]]>
+        </existingcommands>
+        <command prompt="R1(config)#">
+            <correctresponse>
+                <![CDATA[ip dhcp excluded-address 192.168.11.1 192.168.11.9]]>
+            </correctresponse>
+        </command>
+        <command prompt="R1(config)#">
+            <correctresponse>
+                <![CDATA[ip dhcp excluded-address 192.168.11.254]]>
+            </correctresponse>
+            <instruction>
+                <![CDATA[<font  face="_sans" ><b>Configurez le pool DHCPv4 LAN-POOL-2 pour le réseau local 192.168.11.0/24.</b></font>]]>
+            </instruction>
+        </command>
+        <command prompt="R1(config)#">
+            <correctresponse>
+                <![CDATA[ip dhcp pool LAN-POOL-2]]>
+            </correctresponse>
+        </command>
+        <command prompt="R1(dhcp-config)#">
+            <correctresponse>
+                <![CDATA[network 192.168.11.0 255.255.255.0]]>
+            </correctresponse>
+            <instruction>
+                <![CDATA[<font  face="_sans" ><b>Configurez l&apos;adresse de la passerelle par défaut.</b></font>]]>
+            </instruction>
+        </command>
+        <command prompt="R1(dhcp-config)#">
+            <correctresponse>
+                <![CDATA[default-router 192.168.11.1]]>
+            </correctresponse>
+            <instruction>
+                <![CDATA[<font  face="_sans" ><b>Configurez l&apos;adresse du serveur DNS avec l&apos;adresse utilisée pour LAN-POOL-1.</b></font>]]>
+            </instruction>
+        </command>
+        <command prompt="R1(dhcp-config)#">
+            <correctresponse>
+                <![CDATA[dns-server 192.168.11.5]]>
+            </correctresponse>
+            <instruction>
+                <![CDATA[<font  face="_sans" ><b>Configurez le nom de domaine en utilisant l&apos;adresse utilisée pour LAN-POOL-1.</b></font>]]>
+            </instruction>
+        </command>
+        <command prompt="R1(dhcp-config)#">
+            <correctresponse>
+                <![CDATA[domain-name example.com]]>
+            </correctresponse>
+            <deviceresponse>
+                <![CDATA[<font face="_typewriter" >R1(dhcp-config)#</font>]]>
+            </deviceresponse>
+            <instruction>
+                <![CDATA[<font  face="_sans" ><b>Vous avez correctement configuré le serveur DHCPv4.</b></font>]]>
+            </instruction>
+        </command>
+        <command prompt="" />
+    </component>
+</textcomponents>

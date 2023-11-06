@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.3 Exemples de listes de contrôle d’accès IPv4 standard numérotées</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Exemples de listes de contrôle d’accès IPv4 standard numérotées</h1>
+        <div>
+          <p>La Figure 1 présente un exemple de liste de contrôle d'accès permettant une exception pour un hôte spécifique d'un sous-réseau.</p>
+          <p></p>
+          <p>La première commande supprime la version précédente de l'ACL 1. La prochaine instruction de la liste de contrôle d'accès refuse l'hôte PC1 sur le réseau 192.168.10.10. Un hôte sur deux du réseau 192.168.10.0/24 est alors autorisé. L'instruction de refus implicite fait correspondre un réseau sur deux.</p>
+          <p></p>
+          <p>La liste de contrôle d'accès est réappliquée à l'interface S0/0/0 dans la direction sortante.</p>
+          <p></p>
+          <p>La Figure 2 montre un exemple de liste de contrôle d'accès refusant un hôte spécifique. Cette liste de contrôle d'accès remplace l'exemple précédent. Cet exemple bloque toujours le trafic provenant de l'hôte PC1, mais autorise le reste du trafic.</p>
+          <p></p>
+          <p>Les deux premières commandes sont identiques à celles de l'exemple précédent. La première commande supprime la version précédente de l'ACL 1. La prochaine instruction de la liste de contrôle d'accès refuse l'hôte PC1 situé sur le réseau 192.168.10.10.</p>
+          <p></p>
+          <p>La troisième ligne est nouvelle et autorise tous les autres hôtes. Cela signifie que tous les hôtes du réseau 192.168.10.0/24 seront autorisés sauf PC1 qui a été refusé dans l'instruction précédente.</p>
+          <p></p>
+          <p>Cette liste de contrôle d'accès est appliquée à l'interface G0/0 dans la direction entrante. Étant donné que le filtre affecte uniquement le réseau local 192.168.10.0/24 sur l'interface G0/0, il est plus judicieux d'appliquer la liste de contrôle d'accès à l'interface d'entrée. La liste de contrôle d'accès pourrait être appliquée à l'interface S0/0/0 dans la direction sortante, mais dans ce cas, R1 devrait examiner les paquets provenant de tous les réseaux, y compris 192.168.11.0/24.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description"> La figure montre les commandes nécessaires pour configurer une liste de contrôle d’accès afin de refuser un hôte spécifique tout en autorisant un sous-réseau spécifique. Les commandes commencent en mode de configuration globale. La première commande supprime la liste de contrôle d'accès précédente. La commande est « no access-list 1 ». La commande suivante est « access-list 1 deny host 192.168.10.10 ». La liste de contrôle d'accès est configurée pour autoriser le réseau avec la commande « access-list 1 permit 192.168.10.0 0.0.0.255 ». La commande passe à l'interface WAN via la commande « interface serial 0/0/0 ». Enfin la liste de contrôle d'accès est appliquée à l'interface dans la direction sortante via la commande « ip access-group 1 out ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

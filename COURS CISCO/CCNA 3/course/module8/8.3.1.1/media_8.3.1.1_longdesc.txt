@@ -1,0 +1,1 @@
+La figure présente un récapitulatif des structures de données des versions OSPF 2 et 3.  Elle précise que chaque version possède une table de voisinage, une table topologique et une table de routage.  OSPF version 2 est exécuté sur les réseaux IPv4, et OSPF version 3 sur les réseaux IPv6.

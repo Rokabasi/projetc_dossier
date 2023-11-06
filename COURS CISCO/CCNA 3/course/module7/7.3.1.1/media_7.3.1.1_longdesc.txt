@@ -1,0 +1,1 @@
+La figure contient l'image d'un globe et une légende indiquant que le protocole EIGRP est très polyvalent.

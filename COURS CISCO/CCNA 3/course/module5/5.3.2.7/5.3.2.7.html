@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.7 Élaboration de l’arborescence SPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Élaboration de l’arborescence SPF</h1>
+        <div>
+          <p>Chaque routeur de la zone de routage utilise la base de données à états de liens et l'algorithme SPF pour construire l'arborescence SPF.</p>
+          <p>Par exemple, grâce aux informations d'état de liens de tous les autres routeurs, R1 est en mesure de construire une arborescence SPF du réseau. Pour commencer, l'algorithme SPF interprète les paquets LSP de chaque routeur pour identifier les réseaux et les coûts associés.</p>
+          <p></p>
+          <p>Dans la Figure 1, R1 identifie ses réseaux directement connectés et les coûts.</p>
+          <p></p>
+          <p>Dans les Figures 2 à 5, R1 continue à ajouter tous les réseaux inconnus et les coûts associés à l'arborescence SPF. Notez que R1 ignore tous les réseaux qu'il a déjà identifiés.</p>
+          <p></p>
+          <p>L'algorithme SPF calcule ensuite les chemins les plus courts pour atteindre chaque réseau individuel résultant dans l'arborescence SPF comme indiqué dans la Figure 6. R1 possède maintenant une topologie complète de la zone d'état de liens.</p>
+          <p></p>
+          <p>Chaque routeur construit sa propre arborescence SPF indépendamment des autres routeurs. Pour garantir un routage approprié, les bases de données à état de liens utilisées pour élaborer ces arborescences restent identiques sur tous les routeurs.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le routeur R-1 avec une interface Fast Ethernet active, connecté à trois autres routeurs sur trois liaisons WAN.  La figure présente le routeur R-1 en train de créer sa base de données d'états de liens.  La première étape consiste, pour R-1, à identifier les réseaux auxquels il est connecté et le coût de chaque réseau sur ce lien.  Par exemple, R-1 est connecté au réseau 10.1.0.0.0/16 avec un coût qui s'élève à 2.  Il est également connecté au réseau 10.2.0.0/16 avec un coût de 20, au réseau 10.3.0.0/16 avec un coût de 5 et au réseau 10.4.0.0/16 avec un coût de 20. La Figure 2 présente le routeur R-1 qui traite les informations obtenues dans un paquet LSP reçu du routeur R-2.  R1 ajoutera les éventuels nouveaux réseaux à sa base de données, mais ignorera ceux qui y existent déjà. La Figure 3 présente le routeur R-1 qui traite les informations obtenues dans un paquet LSP reçu du routeur R-3.  R1 ajoutera les éventuels nouveaux réseaux à sa base de données, mais ignorera ceux qui y existent déjà. La Figure 4 présente le routeur R-1 qui traite les informations obtenues dans un paquet LSP reçu du routeur R-4.  R1 ajoutera les éventuels nouveaux réseaux à sa base de données, mais ignorera ceux qui y existent déjà. La Figure 5 présente le routeur R-1 qui traite les informations obtenues dans un paquet LSP reçu du routeur R-2.  R1 ajoutera les éventuels nouveaux réseaux à sa base de données, mais ignorera ceux qui y existent déjà. La Figure 6 présente l'arborescence SPF résultante du routeur R-1.  Elle répertorie chaque réseau de destination, le chemin le plus court et le coût associé.  Par exemple, R-1 peut atteindre le réseau 10.5.0.0/16 via le routeur R-2 avec un coût s'élevant à 22.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.2.2 Vérifier la route par défaut propagée</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier la route par défaut propagée</h1>
+        <div>
+          <p>La figure affiche une partie des tables de routage IPv4 pour R1 et R3.  </p>
+          <p></p>
+          <p>Dans les tables de routage pour R1 et R3, notez la source de routage et la distance administrative de la nouvelle route par défaut à l'aide du protocole EIGRP. L'entrée de la route par défaut apprise avec le protocole EIGRP est identifiée à l'aide des éléments suivants :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>D :</b> cette route a été détectée à partir d'une mise à jour de routage EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>* :</b> la route peut convenir comme route par défaut.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EX :</b> la route est une route EIGRP externe, dans le cas présent, une route statique extérieure au domaine de routage EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>170 :</b> il s'agit de la distance administrative d'une route EIGRP externe.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Notez que R1 choisit R3 comme successeur de la route par défaut, car il présente une distance de faisabilité inférieure. Les routes par défaut fournissent un chemin par défaut vers l’extérieur du domaine de routage et, comme les résumés du routage, réduisent le nombre d’entrées dans la table de routage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le résultat de la commande « show ip route » sur les routeurs R1 et R3 qui ont pris connaissance de la route statique par défaut via le protocole EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

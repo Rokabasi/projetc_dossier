@@ -1,0 +1,1 @@
+La figure présente un commutateur de couche d'accès connecté à deux commutateurs de couche de distribution. Chaque connexion est constituée de deux liaisons entre les commutateurs.  Ces deux liaisons sont groupées pour former un canal EtherChannel entre les deux périphériques. Aucun port n'est en mode de blocage STP.

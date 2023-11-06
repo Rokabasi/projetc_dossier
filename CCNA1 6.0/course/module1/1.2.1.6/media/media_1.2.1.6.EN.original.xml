@@ -1,0 +1,96 @@
+﻿<textcomponents>
+	
+	<component id="ID_s1_title">
+	  <text><![CDATA[<b>Physical Topology</b>]]></text> 
+	  </component>
+	<component id="ID_txt01">
+	  <text><![CDATA[<b>Internet</b>]]></text> 
+	  </component>
+	<component id="ID_txt02">
+	  <text><![CDATA[<b>Web Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt03">
+	  <text><![CDATA[<b>Email Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt04">
+	  <text><![CDATA[<b>File Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt05">
+	  <text><![CDATA[Rack 2<br/>Shelf 1]]></text> 
+	  </component>
+	<component id="ID_txt06">
+	  <text><![CDATA[Rack 2<br/>Shelf 2]]></text> 
+	  </component>
+	<component id="ID_txt07">
+	  <text><![CDATA[Rack 2<br/>Shelf 3]]></text> 
+	  </component>
+	<component id="ID_txt08">
+	  <text><![CDATA[Rack 1<br/>Shelf 2]]></text> 
+	  </component>
+	<component id="ID_txt09">
+	  <text><![CDATA[Rack 1<br/>Shelf 1]]></text> 
+	  </component>
+	<component id="ID_txt10">
+	  <text><![CDATA[Rack 1<br/>Shelf 3]]></text> 
+	  </component>
+	<component id="ID_txt11">
+	  <text><![CDATA[Rack 1<br/>Shelf 1]]></text> 
+	  </component>
+	<component id="ID_txt12">
+	  <text><![CDATA[Rack 1<br/>Shelf 2]]></text> 
+	  </component>
+	<component id="ID_txt13">
+	  <text><![CDATA[Rack 1<br/>Shelf 3]]></text> 
+	  </component>
+	<component id="ID_txt14">
+	  <text><![CDATA[<b>Server Room: Rm: 2158</b>]]></text> 
+	  </component>
+	<component id="ID_txt15">
+	  <text><![CDATA[<b>IT Office: Rm: 2159</b>]]></text> 
+	  </component>
+	<component id="ID_txt16">
+	  <text><![CDATA[<b>Rm: 2124</b>]]></text> 
+	  </component>
+	<component id="ID_txt17">
+	  <text><![CDATA[<b>Class 1: Rm: 2125</b>]]></text> 
+	  </component>
+	<component id="ID_txt18">
+	  <text><![CDATA[<b>Class 2: Rm: 2126</b>]]></text> 
+	  </component>
+	<component id="ID_txt19">
+	  <text><![CDATA[<b>Class 3: Rm: 2127</b>]]></text> 
+	  </component>
+	  
+	  
+	 <component id="ID_s2_title">
+	  <text><![CDATA[<b>Logical Topology</b>]]></text> 
+	  </component>
+	 <component id="ID_txt20">
+	  <text><![CDATA[<b>Internet</b>]]></text> 
+	  </component>
+	 <component id="ID_txt21">
+	  <text><![CDATA[<b>Web Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt22">
+	  <text><![CDATA[<b>Email Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt23">
+	  <text><![CDATA[<b>File Server</b>]]></text> 
+	  </component>
+	<component id="ID_txt24">
+	  <text><![CDATA[<b>Network <br/>192.168.10.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt25">
+	  <text><![CDATA[<b>Network <br/>192.168.11.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt26">
+	  <text><![CDATA[<b>Network <br/>192.168.100.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt27">
+	  <text><![CDATA[<b>Network <br/>192.168.101.0</b>]]></text> 
+	  </component>
+	<component id="ID_txt28">
+	  <text><![CDATA[<b>Network <br/>192.168.102.0</b>]]></text> 
+	  </component>
+	
+</textcomponents>

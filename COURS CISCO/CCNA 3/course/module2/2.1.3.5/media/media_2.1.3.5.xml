@@ -1,0 +1,52 @@
+﻿<textcomponents>
+        <component id="ID_s1_title">
+		<text><![CDATA[<b>Création de VLAN étendus</b>]]></text>
+	</component>
+
+	<component id="ID_s2_title">
+		<text><![CDATA[<b>Configuration de VLAN étendus sur un commutateur 2960</b>]]></text>
+	</component>
+
+	<component id="ID_s3_title">
+		<text><![CDATA[<b>Vérification de la configuration d&apos;un VLAN étendu</b>]]></text>
+	</component>
+
+	<component id="ID_s4_title">
+		<text><![CDATA[<b>Configuration et vérification d&apos;un VLAN étendu</b>]]></text>
+	</component><!--Syntax Checker Button Text--><component id="ID_s1_reset">
+			<text><![CDATA[Réinitialiser]]></text>
+		</component>
+
+        <component id="ID_s1_showme">
+			<text><![CDATA[Démonstration]]></text>
+		</component>
+
+        <component id="ID_s1_showall">
+			<text><![CDATA[Afficher tout
+]]></text>
+		</component><!--End Syntax Checker Button Text--><component id="ID_s1_SC" fontSize="12" fontFace='_typewriter'  fontColor="#ffffff">
+                <feedback id="fb"><![CDATA[<b><font face="_sans" color="#FFFFFF">***Vous devez entrer la commande exacte et complète. Les commandes qui incluent un nom ou un mot de passe sont sensibles à la casse.***</font></b> ]]></feedback>
+              <existingcommands><![CDATA[<font face="_sans"><b><ul>Pour configurer un VLAN étendu sur un commutateur Catalyst 2960 Plus procédez comme suit :<li>Activez le mode de configuration globale sur le commutateur S1.</li><li>Définissez le mode VTP sur transparent.</li><li>Créez un VLAN étendu 2000.</li><li>Quittez le mode de configuration globale à l&apos;aide de la commande de fin.</li></b></font>]]></existingcommands>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ configure terminal]]></correctresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ vtp mode transparent]]></correctresponse>
+                                <deviceresponse><![CDATA[Setting device to VTP transparent mode for VLANS.]]></deviceresponse>
+              </command>
+                <command prompt="S1(config)#">
+                       <correctresponse><![CDATA[ vlan 2000]]></correctresponse>
+              </command>
+                <command prompt="s1(config-vlan)#">
+                       <correctresponse><![CDATA[ end]]></correctresponse>
+                                <deviceresponse><![CDATA[S1#]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Vérifiez que le VLAN a été créé à l&apos;aide de la version brief de la commande show vlan.</font>]]></instruction>
+              </command>
+                <command prompt="S1#">
+                       <correctresponse><![CDATA[ show vlan brief]]></correctresponse>
+                                <deviceresponse><![CDATA[<br>VLAN Name Status Ports<br>---- -------------------------------- --------- -------------------------------<br>1 default active Fa0/3, Fa0/4, Fa0/5, Fa0/6<br>                                                Fa0/7, Fa0/8, Fa0/9, Fa0/10<br>                                                Fa0/11, Fa0/12, Fa0/13, Fa0/14<br>                                                Fa0/15, Fa0/16, Fa0/17, Fa0/18<br>                                                Fa0/19, Fa0/20, Fa0/21, Fa0/22<br>                                                Fa0/23, Fa0/24, Gi0/1, Gi0/2<br>1002 fddi-default act/unsup<br>1003 token-ring-default act/unsup<br>1004 fddinet-default act/unsup<br>1005 trnet-default act/unsup<br>2000 VLAN2000 active<br>S1#]]></deviceresponse>
+                       <instruction><![CDATA[<font face="_sans"><b>Vous avez correctement configuré et vérifié les VLAN étendus.</font>]]></instruction>
+              </command>
+<command prompt=""/>
+ </component>
+</textcomponents>

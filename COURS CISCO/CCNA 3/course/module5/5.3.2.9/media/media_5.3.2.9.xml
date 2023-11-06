@@ -1,0 +1,108 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+	<text><![CDATA[<b>Exercice – Schéma de topologie : élaboration de l&apos;arborescence SPF</b><br>Utilisez la topologie de cette page pour créer l&apos;arborescence SPF pour les parties 1 et 2. Cliquez sur le bouton 2 pour continuer. Cliquez sur le bouton 1 chaque fois que vous devez vous reporter à la topologie.]]></text>
+</component>
+<component id="ID_s1_txt02">
+  <text><![CDATA[Ces boutons indiquent<br><br>(Remarque : les valeurs de coût présentées <b>n&apos;indiquent pas</b> les <b>valeurs de coût réelles</b> pour les liaisons d&apos;une topologie de routage régulière.)]]></text> 
+</component>
+<component id="ID_s1_txt03">
+ <text><![CDATA[<b>Coût</b>]]></text>
+</component> 
+  
+<component id="ID_s2_txt01">
+  <text><![CDATA[<b>Exercice – Partie 1 : élaboration de la base de données d&apos;états de liens et de l&apos;arborescence SPF</b><br><br>Utilisez la topologie située sur la première page de cet exercice. Toutes les réponses de ce scénario se baseront sur l&apos;arborescence SPF R1 construite à partir de la topologie.<br><br>Calculez le meilleur coût pour les routes de destination répertoriées. Faites glisser la réponse dans la colonne Coût. Cliquez sur le bouton 3 pour continuer.]]></text> 
+</component>
+
+<component id="ID_s2_txt02">
+  <text><![CDATA[<b>Scénario 1</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt03">
+  <text><![CDATA[<b>Réseau de destination</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt031">
+  <text><![CDATA[<b>Réseau<br>de destination</b>]]></text> 
+</component>
+
+<component id="ID_s2_txt04">
+  <text><![CDATA[<b>Coût</b>]]></text>
+</component>
+
+<component id="ID_s2_CHECK">
+  <text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id="ID_s2_RESET">
+  <text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_TITLE">
+  <text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s2_CORRECT_BODY">
+  <text><![CDATA[Vous avez correctement calculé le meilleur coût pour chacune des routes de destination. Cliquez sur le bouton 3 pour continuer.]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_TITLE">
+  <text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s2_INCORRECT_BODY">
+  <text><![CDATA[Vous n&apos;avez pas correctement calculé le meilleur coût pour chacune des routes de destination. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+
+
+
+
+
+
+
+
+<component id="ID_s3_txt01">
+  <text><![CDATA[<b>Exercice – Partie 2 : élaboration de la base de données d&apos;états de liens et de l&apos;arborescence SPF</b><br><br>Utilisez la topologie située sur la première page de cet exercice. Toutes les réponses de ce scénario se baseront sur l&apos;arborescence SPF R2 construite à partir de la topologie.<br><br>Calculez le meilleur coût pour les routes de destination répertoriées. Faites glisser la réponse dans la colonne Coût.]]></text> 
+</component>
+
+<component id="ID_s3_txt02">
+  <text><![CDATA[<b>Scénario 2</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt03">
+  <text><![CDATA[<b>Réseau de destination</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt031">
+  <text><![CDATA[<b>Réseau<br>de destination</b>]]></text> 
+</component>
+
+<component id="ID_s3_txt04">
+  <text><![CDATA[<b>Coût</b>]]></text>
+</component>
+
+<component id="ID_s3_CHECK">
+  <text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id="ID_s3_RESET">
+  <text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_TITLE">
+  <text><![CDATA[<b>Correct</b>]]></text>
+</component>
+
+<component id="ID_s3_CORRECT_BODY">
+  <text><![CDATA[Vous avez correctement calculé le meilleur coût pour chacune des routes de destination.]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_TITLE">
+  <text><![CDATA[<b>Incorrect</b>]]></text>
+</component>
+
+<component id="ID_s3_INCORRECT_BODY">
+  <text><![CDATA[Vous n&apos;avez pas correctement calculé le meilleur coût pour chacune des routes de destination. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+</textcomponents>

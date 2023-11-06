@@ -1,0 +1,1 @@
+La figure affiche la sortie de la commande « debug ipv6 dhcp detail ».  La figure illustre la ligne du résultat qui déclare que le DHCP IPv6 a reçu un message de sollicitation d'un hôte et que DHCP IPv6 utilise « interface pool ipv6-stateful ».  La figure présente également la sortie qui indique qu'une liaison est créée pour une adresse spécifique dans le pool.

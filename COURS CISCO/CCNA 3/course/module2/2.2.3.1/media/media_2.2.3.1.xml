@@ -1,0 +1,14 @@
+<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Problèmes courants avec VTP</b>]]></text>
+	</component>
+	
+	<component id="ID_bodyTitle01">
+		<text><![CDATA[<b>Problèmes courants avec VTP</b>]]></text> 
+	</component>
+	
+	<component id="ID_bodyText01">
+		<text><![CDATA[<textformat blockindent="-14"><li>Versions VTP incompatibles</li><li>Problèmes liés aux mots de passe VTP</li><li>Nom de domaine VTP incorrect</li><li>Définition de tous les commutateurs en mode client</li><li>Numéro de révision de la configuration incorrect</li></textformat>]]></text> 
+	</component>
+
+</textcomponents>

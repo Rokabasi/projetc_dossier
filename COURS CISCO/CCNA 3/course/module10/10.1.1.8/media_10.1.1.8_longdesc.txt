@@ -1,0 +1,1 @@
+Dans la figure, il y a trois routeurs connectés à un commutateur.  Le routeur 1, le routeur 2 (BDR) et le routeur 3 (DR).

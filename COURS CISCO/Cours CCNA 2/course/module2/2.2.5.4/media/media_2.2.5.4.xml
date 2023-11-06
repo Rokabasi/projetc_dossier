@@ -1,0 +1,12 @@
+<textcomponents>
+<component id="ID_s1_title">
+<text><![CDATA[<b>Configurez des routes statiques IPv6 flottantes vers R3</b>]]></text>
+</component>
+<component id="ID_s2_title">
+  <text><![CDATA[<b>Vérifiez que les routes statiques IPv6 sont configurées</b>]]></text> 
+  </component>
+<component id="ID_s3_title">
+  <text><![CDATA[<b>Vérifiez que la route statique IPv6 flottante n&apos;est pas dans la table de routage</b>]]></text> 
+  </component>
+
+</textcomponents>

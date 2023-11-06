@@ -1,0 +1,7 @@
+<textcomponents>
+
+<component id="ID_txt01">
+<text><![CDATA[Le modèle de conception hiérarchique à trois couches divise la conception en couches, ce qui simplifie la conception du réseau et donc le déploiement et la gestion de celui-ci.]]></text>
+</component>
+
+</textcomponents>

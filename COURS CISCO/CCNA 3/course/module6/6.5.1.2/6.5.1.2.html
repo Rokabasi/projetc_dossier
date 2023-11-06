@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.5.1.2 Chapitre 6 : EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.5.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 6 : EIGRP</h1>
+        <div>
+          <p>Le protocole EIGRP (Enhanced Interior Gateway Routing Protocol) est un protocole de routage à vecteur de distance sans classe. EIGRP est une amélioration d'un autre protocole de routage Cisco appelé IGRP (Interior Gateway Routing Protocol), désormais obsolète. Le protocole EIGRP a été initialement lancé en 1992 en tant que protocole propriétaire Cisco disponible uniquement sur les périphériques Cisco. En 2013, Cisco a lancé une fonctionnalité de base du protocole EIGRP sous la forme d'une norme ouverte vers IETF. </p>
+          <p></p>
+          <p>EIGRP utilise le code source « D » de DUAL dans la table de routage. Par défaut, le protocole EIGRP a pour distance administrative 90 pour les routes internes et 170 pour les routes importées à partir d'une source externe, telles que les routes par défaut.</p>
+          <p></p>
+          <p>Le protocole EIGRP est un protocole de routage à vecteur de distance avancé qui comprend des fonctionnalités indisponibles dans d'autres protocoles de routage à vecteur de distance tels que RIP, Ces fonctionnalités comprennent : l'algorithme DUAL (Diffusing Update Algorithm), l'établissement de contiguïtés de voisinage, le protocole de transport fiable (RTP), les mises à jour partielles et limitées, et l'équilibrage de la charge à coût égal et inégal.</p>
+          <p></p>
+          <p>Le protocole EIGRP utilise des modules dépendants d'un protocole (PDM, Protocol Dependent Modules) qui lui permettent de prendre en charge différents protocoles de couche 3 dont IPv4 et IPv6. EIGRP utilise RTP (Reliable Transport Protocol – Protocole de transport fiable) comme protocole de transport pour la livraison de paquets EIGRP. Le protocole EIGRP utilise le mode d'acheminement fiable pour les mises à jour, les demandes et les réponses EIGRP et le mode d'acheminement non fiable pour les paquets Hello et les accusés de réception EIGRP. Le protocole RTP fiable signifie qu'un accusé de réception EIGRP doit être renvoyé.</p>
+          <p></p>
+          <p>Avant l'envoi de mises à jour EIGRP, un routeur doit détecter ses voisins. Cette opération est effectuée à l'aide des paquets Hello EIGRP. Il n'est pas nécessaire que les valeurs Hello et de mise hors service correspondent pour que deux routeurs deviennent voisins. La commande<b> show ip eigrp neighbors </b>permet d'afficher la table de voisinage et de vérifier que le protocole EIGRP a établi une contiguïté avec ses voisins.</p>
+          <p></p>
+          <p>Contrairement au protocole RIP, EIGRP n’envoie pas de mises à jour périodiques. Le protocole EIGRP envoie des mises à jour partielles ou limitées, qui ne comprennent que les modifications de routes. Les mises à jour sont envoyées uniquement aux routeurs concernés par la modification. La mesure composite EIGRP utilise la bande passante, le délai, la fiabilité et la charge pour déterminer le meilleur chemin. Par défaut, seuls la bande passante et le délai sont pris en compte.</p>
+          <p></p>
+          <p>Au centre du protocole EIGRP se trouve l'algorithme de diffusion de mise à jour DUAL (Diffusing Update Algorithm). La technologie Finite State Machine (FSM) DUAL est utilisée pour identifier le meilleur chemin et les chemins de secours potentiels vers chaque réseau de destination. Le successeur est un routeur voisin utilisé pour transmettre le paquet en utilisant la route à moindre coût vers le réseau de destination. La distance de faisabilité (FD) est la mesure la plus basse calculée pour atteindre le réseau de destination via le successeur. Un successeur potentiel (FS) est un voisin qui dispose d'un chemin de secours sans boucle vers le même réseau que le successeur et qui répond également à la condition de faisabilité. La condition de faisabilité est respectée lorsque la distance annoncée d'un voisin à un réseau est inférieure à la distance de faisabilité du routeur local par rapport à ce même réseau de destination. La distance annoncée correspond à la distance de faisabilité d'un voisin EIGRP vers le réseau de destination.</p>
+          <p></p>
+          <p>EIGRP est configuré avec la commande<b> router eigrp </b><i>autonomous-system </i>. La valeur système-autonome est en fait un ID de processus et doit être la même sur tous les routeurs du domaine de routage EIGRP. La commande<b> network </b>est identique à celle utilisée avec le protocole RIP. Le réseau est l'adresse réseau par classe des interfaces connectées directement sur le routeur. Un masque générique est un paramètre facultatif qui peut être utilisé pour n'inclure que certaines interfaces spécifiques.</p>
+          <p></p>
+          <p>Le protocole EIGRP pour IPv6 présente de nombreux points communs avec le protocole EIGRP pour IPv4. Toutefois, contrairement à la commande ipv4 network, IPv6 est activé sur l'interface à l'aide de la commande de configuration d'interface <b>ipv6 eigrp </b><i>autonomous-system</i> .</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente une vue agrandie de l'en-tête EIGRP.  Les types de TLV avec la valeur k indiquée, ainsi que le temps d'attente.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

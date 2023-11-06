@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.3.1.3 Routage inter-VLAN au moyen d&#x0027;interfaces virtuelles de commutateurs (suite)</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Routage inter-VLAN au moyen d&#x0027;interfaces virtuelles de commutateurs (suite)</h1>
+        <div>
+          <p>Une interface SVI est une interface virtuelle configurée dans un commutateur multicouche, comme illustré dans la figure. Une interface SVI peut être créée pour chaque VLAN existant sur le commutateur. Une interface SVI est considérée comme virtuelle, car aucun port physique n'est dédié à l'interface. Elle peut assurer les mêmes fonctions pour le VLAN qu'une interface de routeur et peut être configurée à peu près de la même manière (adresse IP, listes de contrôle d'accès d'entrée et de sortie, etc.). L'interface SVI du VLAN assure le traitement de couche 3 des paquets vers ou depuis tous les ports de commutateur associés à ce VLAN.</p>
+          <p></p>
+          <p>Par défaut, une interface SVI est créée pour le VLAN par défaut (VLAN 1) pour permettre l’administration à distance du commutateur. Des interfaces SVI supplémentaires doivent être explicitement créées. Les interfaces SVI sont créées la première fois que le mode de configuration d'interface VLAN est saisi pour une interface SVI de VLAN donnée, par exemple lorsque la commande <b>interface vlan 10</b> est saisie. Le numéro de VLAN utilisé correspond à l'étiquette VLAN associée aux trames de données sur un trunk encapsulé 802.1Q ou à l'ID de VLAN (VID) configuré pour un port d'accès. Lorsque vous créez une interface SVI en tant que passerelle pour le VLAN 10, appelez-la VLAN 10. Configurez et attribuez une adresse IP à chaque interface SVI VLAN.</p>
+          <p></p>
+          <p>Pour chaque création d'interface SVI, assurez-vous que le VLAN correspondant est présent dans la base de données des VLAN. Dans la figure, le commutateur doit avoir les VLAN 10 et VLAN 20 dans la base de données VLAN. Autrement, l'interface SVI demeure inactive.</p>
+          <p></p>
+          <p>Voici quelques raisons de configurer l'interface SVI :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Fournir une passerelle pour un VLAN de sorte que le trafic soit acheminé vers ou depuis ce VLAN</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Assurer la connectivité IP de couche 3 au commutateur</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Prendre en charge le protocole de routage et les configurations de pontage</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Voici quelques-uns des avantages des interfaces SVI (l'unique inconvénient étant que les commutateurs multicouches sont plus onéreux) </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Cette méthode est beaucoup plus rapide que le modèle Router-on-a-stick, car l'ensemble de la commutation et du routage est assuré de manière matérielle.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Il n'est pas nécessaire d'utiliser des liaisons externes entre le commutateur et le routeur pour le routage.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ceci ne se limite pas à une seule liaison. Des liaisons EtherChannels de couche 2 peuvent être utilisées entre les commutateurs pour obtenir davantage de bande passante.</li>
+            </ul>
+          </p>
+          <p>La latence est bien plus faible, car les données n'ont pas besoin de quitter le commutateur pour être acheminées vers un autre réseau.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux scénarios. L'un des scénarios comporte deux hôtes appartenant à deux VLAN différents, chaque VLAN nécessitant un routeur afin de leur permettre de communiquer entre eux. Le deuxième scénario montre qu'un commutateur de couche 3 a été utilisé au lieu du routeur et que deux interfaces virtuelles commutées ont été créées pour permettre le routage inter-VLAN.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

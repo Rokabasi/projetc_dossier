@@ -1,0 +1,81 @@
+﻿<textcomponents><component id="MCTable_title"><text><![CDATA[ ]]></text></component><!-- slide01--><component id='ID_inst'>
+	<text><![CDATA[<b>Exercice - Méthodes de transfert de trame</b><br><br>Le tableau décrit les méthodes de transfert de trames des commutateurs. Cliquez sur les champs Store and Forward ou Cut-through pour associer les méthodes aux descriptions.]]></text>
+</component><!-- Number of rows in the table --><component id="ID_Button01">
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+
+<component id="ID_Button02">
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component>
+
+<component id="txt_numrows">
+	<text><![CDATA[6]]></text>
+</component><!-- Number of columns for the answers in the table. Do not count the question column --><component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component><!-- Answer column headers --><component id="txt_col1">
+	<text><![CDATA[<span class="font11px"><b>Store and Forward</b></span>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<span class="font11px"><b>Cut-through</b></span>]]></text>
+</component><!-- Question text - blockindent code moves the text away from the left edge a bit --><!-- Question text - If questions are numbered, use blockindent for hanging indents --><component id="txt_q1">
+	<text><![CDATA[1. <textformat blockindent='13' class="font11px">Conserve les trames en mémoire tampon, jusqu&apos;à ce que l&apos;intégralité de la trame <br><span id="span1">soit reçue par le commutateur.</span></textformat>]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[2. <textformat blockindent='13' class="font11px">Contrôle l&apos;absence d&apos;erreurs dans la trame <br><span id="span1">avant de l&apos;envoyer sur ses ports <br><span id="span1">de commutation ; si la trame complète <br><span id="span1">n&apos;est pas reçue, le commutateur l&apos;abandonne.</span> </textformat>]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[3. <textformat blockindent='13' class="font11px">Le commutateur n&apos;effectue aucun contrôle<br><span id="span1"> d&apos;erreur avant d&apos;envoyer <br><span id="span1">la trame sur ses ports.</span></textformat>]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[4. <textformat blockindent='13' class="font11px">Une bonne méthode à utiliser pour préserver <br><span id="span1">la bande passante sur votre réseau.</span></textformat>]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[5. <textformat blockindent='13' class="font11px">Lorsque cette méthode de transfert de trames <br><span id="span1">est utilisée, la carte réseau de destination <br><span id="span1">abandonne toutes les trames incomplètes.</span></textformat>]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[6. <textformat blockindent='13' class="font11px">La méthode la plus rapide de commutation, <br><span id="span1">mais pouvant produire davantage <br><span id="span1">d&apos;erreurs d&apos;intégrité des données et <br><span id="span1">donc consommer</span> plus de bande passante.</textformat>]]></text>
+</component><!-- Answers - Give the column number(s), column numbering start with 1 not 0 --><!-- Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[2]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<span class="font11px"><b>Correct</b></span>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[<span class="font11px">Vous avez correctement associé la description à la technique appropriée de transfert de trames.</span>]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<span class="font11px"><b>Incorrect</b></span>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[<span class="font11px">Vous n&apos;avez pas correctement associé la description à la technique appropriée de transfert de trames. Cliquez sur le bouton Recommencer pour réessayer.</span>]]></text>
+</component>
+
+
+</textcomponents>

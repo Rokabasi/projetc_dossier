@@ -1,0 +1,42 @@
+<textcomponents>
+	<component id="ID_title01">
+	<text><![CDATA[Petits réseaux domestiques]]></text>
+	</component>
+	<component id="ID_titleTxt01">
+	<text><![CDATA[Petits réseaux domestiques]]></text>
+	</component>
+	<component id="ID_bodyTxt01">
+	<text><![CDATA[Les petits réseaux domestiques relient quelques ordinateurs entre eux et à Internet.]]></text>
+	</component>
+	<component id="ID_title02">
+	<text><![CDATA[Réseaux de petites bureaux / bureaux à domicile]]></text>
+	</component>
+	<component id="ID_titleTxt02">
+	<text><![CDATA[Réseaux de petites bureaux / bureaux à domicile]]></text>
+	</component>
+	<component id="ID_bodyTxt02">
+	<text><![CDATA[Le réseau SOHO (réseau de petits bureaux/bureaux à domicile) permet aux ordinateurs d&apos;un bureau à domicile ou d&apos;un bureau distant de se connecter à un réseau d&apos;entreprise ou d&apos;accéder à des ressources centralisées et partagées.]]></text>
+	</component>
+	<component id="ID_title03">
+	<text><![CDATA[Moyens et grands réseaux]]></text>
+	</component>
+	<component id="ID_titleTxt03">
+	<text><![CDATA[Moyens et grands réseaux]]></text>
+	</component>
+	<component id="ID_bodyTxt03">
+	<text><![CDATA[Les moyens et grands réseaux, comme les réseaux des grandes entreprises et des écoles, peuvent disposer de plusieurs emplacements où des centaines, voire des milliers d&apos;ordinateurs sont reliés.]]></text>
+	</component>
+	<component id="ID_title04">
+	<text><![CDATA[Réseaux mondiaux]]></text>
+	</component>
+	<component id="ID_titleTxt04">
+	<text><![CDATA[Réseaux mondiaux]]></text>
+	</component>
+	<component id="ID_bodyTxt04">
+	<text><![CDATA[Internet est un réseau de réseaux qui relie des centaines de millions d&apos;ordinateurs dans le monde.]]></text>
+	</component>
+	<component id="ID_inst">
+    <text><![CDATA[Cliquez sur les images mises en surbrillance en bleu pour obtenir plus d&apos;informations.]]></text>
+    </component>
+	
+</textcomponents>

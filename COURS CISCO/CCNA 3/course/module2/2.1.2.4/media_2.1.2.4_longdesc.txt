@@ -1,0 +1,1 @@
+La figure montre la configuration de S2 et de S3 comme clients VTP

@@ -1,0 +1,1 @@
+La figure illustre un organigramme qui décrit la liste de contrôle d'accès ACL et le processus de routage dans un routeur.

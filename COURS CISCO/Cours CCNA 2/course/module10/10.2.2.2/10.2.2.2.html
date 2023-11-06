@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.2.2 Fonctionnement de Syslog</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement de Syslog</h1>
+        <div>
+          <p>Sur les périphériques réseau Cisco, le protocole Syslog commence par envoyer des messages système ainsi qu'un résultat de commande <b>debug</b> à un processus de journalisation local interne au périphérique. La configuration de ces périphériques détermine comment le processus de journalisation gère ces messages et ces résultats. Par exemple, il se peut que des messages Syslog soient envoyés sur le réseau vers un serveur Syslog externe. Ces messages peuvent être récupérés sans qu'il soit nécessaire d'accéder au périphérique réel. Les messages de journalisation et les résultats stockés sur le serveur externe peuvent être placés dans divers rapports pour une meilleure lisibilité. </p>
+          <p></p>
+          <p>De même, des messages Syslog peuvent également être envoyés vers un tampon interne. Les messages envoyés vers le tampon interne ne peuvent être affichés que par l'intermédiaire de l'interface en ligne de commande du périphérique. </p>
+          <p></p>
+          <p>Enfin, l'administrateur réseau peut spécifier que seuls certains types de messages sont envoyés à différentes destinations. Il est par exemple possible de configurer le périphérique de telle sorte qu'il transfère tous les messages système vers un serveur Syslog externe. Toutefois, les messages de niveau de débogage sont transférés vers le tampon interne et ne sont accessibles que par l'intermédiaire de l'administrateur à partir de l'interface en ligne de commande.  </p>
+          <p></p>
+          <p>Comme l'illustre la figure, les destinations classiques des messages Syslog sont les suivantes :</p>
+          <p>
+            <ul>
+              <li>Tampon de journalisation (mémoire vive à l'intérieur d'un routeur ou d'un commutateur)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ligne de console </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Ligne de terminal</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>serveur Syslog</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Il est possible de surveiller à distance les messages système en affichant les journaux sur un serveur Syslog ou en accédant au périphérique par le biais de Telnet, de SSH ou du port de console.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre un commutateur et quatre destinations pour les messages Syslog : tampon de journalisation, ligne de console, ligne de terminal et serveur Syslog.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

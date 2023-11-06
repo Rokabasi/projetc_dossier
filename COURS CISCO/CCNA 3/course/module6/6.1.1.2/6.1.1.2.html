@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.1.1.2 Modules dépendants d&#x0027;un protocole</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modules dépendants d&#x0027;un protocole</h1>
+        <div>
+          <p>EIGRP est capable d'effectuer le routage de plusieurs protocoles, y compris IPv4 et IPv6. Pour cela, EIGRP utilise des modules dépendant d'un protocole (PDM). Les PDM ont également servi à prendre en charge les protocoles de couche réseau Novell IPX et AppleTalk, désormais obsolètes. </p>
+          <p></p>
+          <p>Les PDM sont responsables de tâches spécifiques au protocole de couche réseau. Par exemple, le module EIGRP est responsable de l'envoi et de la réception des paquets EIGRP encapsulés dans IPv4. Ce module est également responsable de l'analyse des paquets EIGRP et informe DUAL de la réception de nouvelles informations. Le protocole EIGRP demande à DUAL de prendre des décisions concernant le routage, mais les résultats sont stockés dans la table de routage IPv4.</p>
+          <p></p>
+          <p>Les PDM sont responsables des tâches de routage spécifiques à chaque protocole de couche réseau, notamment : </p>
+          <p>
+            <ul>
+              <li>Gestion des tables de voisinage et topologique des routeurs EIGRP appartenant à cette suite de protocoles</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Création et traduction des paquets spécifiques du protocole pour DUAL</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Mise en relation de DUAL avec la table de routage spécifique du protocole</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Calcul de la métrique et transmission de l'information à DUAL</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Implémentation des listes de filtrage et d'accès</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Exécution des fonctions de redistribution vers et depuis d'autres protocoles de routage</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Redistribution des routes acquises par d'autres protocoles de routage</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Lorsqu'un routeur détecte un nouveau voisin, il enregistre l'adresse et l'interface du voisin sous la forme d'une entrée dans la table de voisinage. Il existe une table de voisinage pour chaque module dépendant d'un protocole, par exemple IPv4. Le protocole EIGRP gère également une table topologique. La table topologique contient toutes les destinations annoncées par les routeurs voisins. Il existe également une table topologique distincte pour chaque PDM.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre que EIGRP conserve trois tables distinctes pour IPv4 et IPv6.  Il s'agit de la table de voisinage, de la table topologique et de la table de routage.  Il existe six tables au total.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

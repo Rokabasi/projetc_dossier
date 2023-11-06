@@ -1,0 +1,1 @@
+La figure illustre une animation faisant suite à la page précédente.  Chaque routeur continue à mettre à jour sa table de routage au fur et à mesure qu'il reçoit des paquets de mise à jour des autres routeurs et qu'il leur en envoie.  

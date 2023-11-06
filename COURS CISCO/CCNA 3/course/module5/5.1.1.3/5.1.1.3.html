@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.3 Protocoles de routage à vecteur de distance</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocoles de routage à vecteur de distance</h1>
+        <div>
+          <p>Le vecteur de distance signifie que les routes sont annoncées grâce à deux caractéristiques :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Distance</b> - Identifie la distance par rapport au réseau de destination et est basée sur une métrique comme le nombre de sauts, le coût, la bande passante, le délai, etc. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Vecteur</b> - Indique la direction de l'interface du routeur de tronçon suivant ou de l'interface de sortie pour atteindre sa destination. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Par exemple, dans la figure présentée, R1 sait que la distance pour atteindre le réseau 172.16.3.0/24 est de 1 saut et que la direction est celle de l'interface S0/0/0 vers R2. </p>
+          <p></p>
+          <p>Un routeur utilisant un protocole de routage à vecteur de distance ne connaît pas le chemin complet vers un réseau de destination. Les protocoles à vecteur de distance utilisent les routeurs comme poteaux indicateurs le long du chemin et ceci jusqu’à la destination finale. La seule information dont dispose un routeur à propos d'un réseau distant est la distance d'éloignement de ce réseau et le chemin ou l'interface à utiliser pour y accéder. Contrairement aux autres types de protocoles de routage, les protocoles de routage à vecteur de distance ne disposent pas d'une carte de la topologie du réseau.</p>
+          <p></p>
+          <p>Il existe quatre protocoles IGP à vecteur de distance IPv4 :</p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv1</b> - Protocole ancien de première génération</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>RIPv2</b> - Protocole de routage à vecteur de distance simple</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>IGRP</b> - Protocole propriétaire Cisco de première génération (obsolète et remplacé par EIGRP)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>EIGRP</b> - Version avancée du routage à vecteur de distance</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs connectés par une liaison WAN de série.  La figure indique que la distance rend compte de l'éloignement du réseau et le vecteur de la direction dans laquelle il se trouve.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

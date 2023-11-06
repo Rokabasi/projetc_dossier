@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.1.4 Adresses link-local</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Adresses link-local</h1>
+        <div>
+          <p>Les routeurs exécutant un protocole de routage dynamique, tel qu'OSPF, échangent des messages entre voisins sur le même sous-réseau ou lien. Les routeurs doivent uniquement envoyer et recevoir des messages de protocole de routage avec leurs voisins connectés directement. Ces messages sont toujours envoyés depuis l'adresse IP source du routeur effectuant le réacheminement.  </p>
+          <p></p>
+          <p>Les adresses link-local IPv6 conviennent parfaitement à cet usage. Une adresse link-local IPv6 permet à un appareil de communiquer avec d'autres appareils IPv6 sur la même liaison et uniquement sur cette liaison (sous-réseau). Les paquets associés à une adresse source ou de destination link-local ne peuvent pas être acheminés au-delà de leur liaison d'origine.</p>
+          <p></p>
+          <p>Comme illustré dans la figure, les messages OSPFv3 sont envoyés au moyen de :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse IPv6 source</b> : l'adresse link-local IPv6 de l'interface de sortie.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Adresse IPv6 de destination</b> : les paquets OSPFv3 peuvent être envoyés à une adresse de monodiffusion en utilisant l'adresse link-local IPv6 du voisin. Ils peuvent également être envoyés au moyen d'une adresse de multidiffusion. L'adresse FF02::5 est l'adresse pour tous les routeurs OSPF, tandis que FF02::6 est l'adresse de multidiffusion du DR/BDR.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs connectés via un réseau IPv6. Les messages sont envoyés via une adresse source IPv6 et une adresse de destination IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

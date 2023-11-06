@@ -1,0 +1,1 @@
+La figure montre la différence entre une trame Ethernet et une trame 802.1Q.  La seconde trame comporte l’étiquette .1Q ajoutée à l’en-tête de la trame.

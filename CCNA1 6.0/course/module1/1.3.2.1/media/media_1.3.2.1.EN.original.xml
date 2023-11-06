@@ -1,0 +1,20 @@
+<textcomponents>
+<component id="ID_title">
+<text><![CDATA[<b>The Supporting Network Architecture</b>]]></text>
+</component>
+<component id="ID_txt01">
+   <text><![CDATA[Fault Tolerance]]></text>
+   </component>
+<component id="ID_txt02">
+   <text><![CDATA[Scalability]]></text>
+   </component>
+<component id="ID_txt03">
+   <text><![CDATA[Quality of Service (QoS)]]></text>
+   </component>
+<component id="ID_txt04">
+   <text><![CDATA[Security]]></text>
+   </component>
+<component id="ID_txt05">
+   <text><![CDATA[<b>Reliable Networks</b>]]></text>
+   </component>
+</textcomponents>

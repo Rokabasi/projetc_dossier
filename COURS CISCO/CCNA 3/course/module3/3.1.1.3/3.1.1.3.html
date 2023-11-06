@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.1.3 Les problèmes liés à la redondance de la couche 1 : tempêtes de diffusion</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les problèmes liés à la redondance de la couche 1 : tempêtes de diffusion</h1>
+        <div>
+          <p>Une tempête de diffusion se produit lorsque toute la bande passante disponible est consommée en raison du nombre trop élevé de trames de diffusion prises dans une boucle de couche 2. Il ne reste alors plus de bande passante pour le trafic légitime et le réseau devient indisponible pour la communication de données. Il s'agit véritablement d'un refus de service (DoS).</p>
+          <p></p>
+          <p>Une tempête de diffusion est inévitable sur un réseau comportant des boucles. Plus le nombre d'appareils à envoyer des diffusions sur le réseau est élevé, plus le trafic est important dans la boucle et consomme des ressources. Cela finit par créer une tempête de diffusion, provoquant ainsi la défaillance du réseau.</p>
+          <p></p>
+          <p>Les tempêtes de diffusion peuvent aussi avoir d'autres conséquences. Comme le trafic de diffusion est réacheminé en sortie de chaque port d'un commutateur, tous les appareils connectés doivent traiter l'ensemble du trafic de diffusion qui submerge indéfiniment le réseau pris dans la boucle. Cela peut entraîner un dysfonctionnement du terminal, en raison de la capacité de traitement nécessaire pour supporter une charge de trafic aussi élevée sur la carte réseau.</p>
+          <p></p>
+          <p>Cliquez sur le bouton <b>Lecture</b> de la figure pour afficher une animation présentant une tempête de diffusion. Lorsque l'animation s'interrompt, lisez le texte à droite de la topologie. L'animation continuera après une courte pause.</p>
+          <p></p>
+          <p>Dans l'animation :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>1. PC1 envoie une trame de diffusion sur le réseau comportant des boucles. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>La trame de diffusion est réacheminée en boucle entre tous les commutateurs interconnectés du réseau.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>PC4 envoie également une trame de diffusion sur le réseau comportant des boucles. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Comme la trame de diffusion de PC1, celle de PC4 est prise dans la boucle entre tous les commutateurs interconnectés. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Plus le nombre d'appareils à envoyer des diffusions sur le réseau est élevé, plus le trafic est important dans la boucle et consomme des ressources. Cela finit par créer une tempête de diffusion, provoquant ainsi la défaillance du réseau.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Lorsque le réseau est totalement saturé par le trafic de diffusion qui circule en boucle entre les commutateurs, tout nouveau trafic est mis à l'écart par les commutateurs, car il ne peut pas être traité.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Une tempête de diffusion peut se développer en quelques secondes parce que les appareils connectés à un réseau envoient régulièrement des trames de diffusion, telles que les requêtes ARP. Une fois la boucle formée, le réseau commuté est rapidement débordé.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Cette animation présente trois commutateurs : s.1, s.2 et s.3.  Chacun est connecté aux deux autres par une liaison trunk.  Les câbles P.C.1, P.C.2 et P.C.3 sont connectés à s.2.  Le câble P.C.4 est connecté à s.1.  L'animation montre comment une tempête de diffusion peut dégrader les performances du réseau en cas de boucle de couche deux.  Les commutateurs continuent à réacheminer des diffusions tout en les répliquant.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

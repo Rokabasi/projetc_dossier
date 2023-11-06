@@ -1,0 +1,66 @@
+<textcomponents>
+<component id="ID_s1_txt01">
+<text><![CDATA[Bâtiment B : marketing et ventes]]></text>
+</component>
+<component id="ID_s1_txt02">
+<text><![CDATA[Bâtiment C : ingénierie]]></text>
+</component>
+<component id="ID_s1_txt03">
+<text><![CDATA[Accès]]></text>
+</component>
+<component id="ID_s1_txt04">
+<text><![CDATA[Distribution]]></text>
+</component>
+<component id="ID_s1_txt05">
+<text><![CDATA[Cœur]]></text>
+</component>
+<component id="ID_s1_txt06">
+<text><![CDATA[Distribution]]></text>
+</component>
+<component id="ID_s1_txt07">
+<text><![CDATA[Access]]></text>
+</component>
+<component id="ID_s1_txt08">
+<text><![CDATA[Bâtiment A : direction]]></text>
+</component>
+<component id="ID_s1_txt09">
+<text><![CDATA[Bâtiment D : recherche et développement]]></text>
+</component>
+<component id="ID_s1_txt10">
+<text><![CDATA[Bâtiment E : informatique]]></text>
+</component>
+<component id="ID_s1_txt11">
+<text><![CDATA[Bâtiment F : data center]]></text>
+</component>
+
+
+
+
+<component id="ID_s2_txt01">
+<text><![CDATA[Access]]></text>
+</component>
+<component id="ID_s2_txt02">
+<text><![CDATA[Étage 6 : recherche et développement]]></text>
+</component>
+<component id="ID_s2_txt03">
+<text><![CDATA[Étage 5 : ingénierie]]></text>
+</component>
+<component id="ID_s2_txt04">
+<text><![CDATA[Étage 4 : batterie de serveurs]]></text>
+</component>
+<component id="ID_s2_txt05">
+<text><![CDATA[Étage 3 : informatique]]></text>
+</component>
+<component id="ID_s2_txt06">
+<text><![CDATA[Étage 2 : direction]]></text>
+</component>
+<component id="ID_s2_txt07">
+<text><![CDATA[<b>Distribution/cœ</br>ur de réseau regroupés</b>]]></text>
+</component>
+<component id="ID_s2_txt08">
+<text><![CDATA[Réseau étendu (WAN)]]></text>
+</component>
+<component id="ID_s2_txt09">
+<text><![CDATA[RTPC]]></text>
+</component>
+</textcomponents>

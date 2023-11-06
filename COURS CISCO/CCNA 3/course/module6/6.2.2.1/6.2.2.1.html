@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.2.1 Vérification du protocole EIGRP : examen des voisins</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification du protocole EIGRP : examen des voisins</h1>
+        <div>
+          <p>Pour que le protocole EIGRP puisse envoyer ou recevoir des mises à jour, les routeurs doivent établir des contiguïtés avec leurs voisins. Les routeurs EIGRP établissent des contiguïtés avec des routeurs voisins en échangeant des paquets Hello EIGRP. </p>
+          <p></p>
+          <p>Utilisez la commande<b> show ip eigrp neighbors </b>pour afficher la table de voisinage et vérifier que le protocole EIGRP a établi une contiguïté avec ses voisins. Pour chaque routeur, vous devoir pouvoir visualiser l'adresse IPv4 du routeur adjacent et l'interface que celui-ci utilise pour atteindre son voisin EIGRP. À l'aide de cette topologie, chaque routeur compte deux voisins répertoriés dans la table de voisinage.</p>
+          <p></p>
+          <p>Les en-têtes de colonne du résultat de la commande<b> show ip eigrp neighbors </b>identifient les éléments suivants :</p>
+          <p>
+            <ul>
+              <li>
+                <b>H</b> : répertorie les voisins dans l'ordre dans lequel ils ont été détectés.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Address</b> : adresse IPv4 du voisin.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface</b> : interface locale sur laquelle ce paquet Hello a été reçu.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Hold</b> : temps d'attente actuel. Lorsqu'un paquet Hello est reçu, cette valeur est réinitialisée au temps d'attente maximal de cette interface, puis un compte à rebours s'effectue jusqu'à zéro. Si la valeur zéro est atteinte, le voisin est considéré comme étant hors service.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Uptime</b> : délai écoulé depuis l'ajout du voisin à la table de voisinage.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Smooth Round Trip Timer (SRTT)</b> et <b>Retransmission Timeout</b> (<b>RTO</b>) : utilisés par le protocole RTP pour gérer les paquets EIGRP fiables. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Queue Count</b> : longueur de la file d'attente, doit toujours être égale à zéro. S'il est supérieur à zéro, les paquets EIGRP sont placés en attente d'envoi. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sequence Number</b> : numéro d'ordre, permettant de suivre les paquets de mise à jour, de demande et de réponse. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La commande<b> show ip eigrp neighbors </b>est très utile pour vérifier et dépanner le protocole EIGRP. </p>
+          <p></p>
+          <p>Si un voisin n'est pas répertorié après l'établissement des contiguïtés avec les voisins d'un routeur, vérifiez que l'interface locale est activée à l'aide de la commande<b> show ip interface brief</b>. Si l'interface est active, essayez d'envoyer une requête <b>ping</b> à l'adresse IPv4 du voisin. Si la requête <b>ping</b> échoue, l'interface du voisin est indisponible et doit être activée. Si la requête <b>ping</b> réussit et que le protocole EIGRP ne détecte toujours pas le routeur en tant que voisin, vérifiez les élements suivants :</p>
+          <p>
+            <ul>
+              <li>Les deux routeurs sont-ils configurés avec le même numéro de système autonome EIGRP ?</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le réseau connecté directement est-il inclus dans les instructions EIGRP<b> network </b>?</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le résultat de la commande « show ip eigrp neighbors ».  L'adresse IP des voisins, l'interface locale et le nombre de secondes avant de déclarer le temps d'indisponibilité et de disponibilité des voisins sont mis en surbrillance en orange.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<textcomponents>
+	<component id="ID_s1_title">
+		<text><![CDATA[Paramètres de mode duplex et de débit]]></text>
+	</component>
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Duplex]]></text>
+	</component>
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Duplex]]></text>
+	</component>
+	<component id="ID_s1_txt03">
+		<text><![CDATA[Vitesse]]></text>
+	</component>
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Vitesse]]></text>
+	</component>
+	<component id="ID_s1_txt05">
+		<text><![CDATA[Duplex intégral]]></text>
+	</component>
+	<component id="ID_s1_txt06">
+		<text><![CDATA[Semi-duplex]]></text>
+	</component>
+	<component id="ID_s1_txt07">
+		<text><![CDATA[Duplex intégral]]></text>
+	</component>
+	<component id="ID_s1_txt08">
+		<text><![CDATA[Semi-duplex]]></text>
+	</component>
+	<component id="ID_s1_txt09">
+		<text><![CDATA[100 Mbits/s]]></text>
+	</component>
+	<component id="ID_s1_txt10">
+		<text><![CDATA[10 Mbit/s]]></text>
+	</component>
+	<component id="ID_s1_txt11">
+		<text><![CDATA[1000 Mbit/s]]></text>
+	</component>
+	<component id="ID_s1_txt12">
+		<text><![CDATA[100 Mbits/s]]></text>
+	</component>
+	<component id="ID_s1_txt13">
+		<text><![CDATA[10 Mbit/s]]></text>
+	</component>
+	<component id="ID_s1_txt14">
+		<text><![CDATA[Port 1]]></text>
+	</component>
+	<component id="ID_s1_txt15">
+		<text><![CDATA[Négociation automatique]]></text>
+	</component>
+
+</textcomponents>

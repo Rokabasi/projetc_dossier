@@ -1,0 +1,1 @@
+La Figure 1 est une animation expliquant que lorsqu’un ordinateur envoie un paquet de diffusion, tous les autres ordinateurs reçoivent le paquet à défaut d’une segmentation VLAN. La Figure 2 est une animation expliquant que lorsqu’un ordinateur envoie un paquet de diffusion, seuls les ordinateurs du même VLAN reçoivent le paquet lorsqu’une segmentation VLAN existe.

@@ -1,0 +1,1 @@
+La figure 1 présente les VLAN disponibles sur un commutateur Catalyst 2960. La figure 2 présente les caractéristiques des VLAN à plage normale et étendue. .

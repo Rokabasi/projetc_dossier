@@ -1,0 +1,35 @@
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<b>Configuration d&apos;un routeur DHCPv6 avec état</b>]]></text>
+</component>
+
+<component id="ID_s2_title">
+	<text><![CDATA[<b>Configuration d&apos;un routeur en tant que serveur DHCPv6 avec état</b>]]></text>
+</component>
+
+<component id="ID_txt01">
+	<text><![CDATA[<b>Étape 1. Activation du routage IPv6</b>]]></text>
+</component>
+
+<component id="ID_txt02">
+	<text><![CDATA[<b>Étape 2. Configuration d&apos;un pool DHCPv6</b>]]></text> 
+</component>
+
+<component id="ID_txt03">
+	<text><![CDATA[<b>Étape 3. Configuration des paramètres du pool</b>]]></text> 
+</component>
+  
+<component id="ID_txt04">
+	<text><![CDATA[<b>Étape 4. Configuration de l&apos;interface DHCPv6</b>]]></text>
+</component>
+
+<component id="ID_txt05">
+	<text><![CDATA[<b>Serveur avec état DHCPv6</b>]]></text> 
+</component>
+  
+<component id="ID_txt06">
+	<text><![CDATA[<b>Client DHCPv6</b>]]></text>   
+</component>
+
+</textcomponents>

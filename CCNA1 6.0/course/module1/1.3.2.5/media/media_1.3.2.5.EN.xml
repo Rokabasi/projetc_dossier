@@ -1,0 +1,53 @@
+﻿<textcomponents>
+
+<!-- Slide 1 -->
+
+	<component id="ID_s1_title">
+		<text><![CDATA[<b>Security</b>]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt01">
+		<text><![CDATA[Internet]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt02">
+		<text><![CDATA[Administrators can protect the network with software and hardware security and by preventing physical access to network devices.]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt03">
+		<text><![CDATA[<font color="#ffffff"><p id="ID_s1_txt03" class="ID_s1_txt03">Login: ?<br>Password: ?</p></font>]]></text> 
+	</component>
+	
+	<component id="ID_s1_txt04">
+		<text><![CDATA[Security measures protect the network from unauthorized access.]]></text> 
+	</component>
+
+<!-- End Slide 1 -->
+
+
+<!-- Slide 2 -->
+
+	<component id='ID_s2_title'>
+		<text><![CDATA[<b></b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt01'>
+		<text><![CDATA[<b>Confidentiality</b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt02'>
+		<text><![CDATA[<b>Availability</b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt03'>
+		<text><![CDATA[<b>Data</b>]]></text>
+	</component>
+
+	<component id='ID_s2_txt04'>
+		<text><![CDATA[<b>Integrity</b>]]></text>
+	</component>
+
+<!-- End Slide 2 -->
+
+
+</textcomponents>

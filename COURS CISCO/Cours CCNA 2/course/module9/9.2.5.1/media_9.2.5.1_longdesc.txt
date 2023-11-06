@@ -1,0 +1,1 @@
+La figure montre un cloud marqué Internet.  Le cloud est connecté à trois réseaux privés distincts utilisant différentes classes d’adressage privé.  Le premier réseau utilise un réseau privé de classe A, le deuxième, un réseau privé de classe B et le troisième, un réseau privé de classe C.  Tous les réseaux privés utilisent la NAT sur leurs routeurs de frontière.

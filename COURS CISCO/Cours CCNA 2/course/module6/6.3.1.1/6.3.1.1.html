@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.1.1 Qu’est-ce que le routage entre VLAN ?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Qu’est-ce que le routage entre VLAN ?</h1>
+        <div>
+          <p>Les VLAN permettent de segmenter les réseaux commutés. Les commutateurs de couche 2, tels que ceux de la gamme Catalyst 2960, peuvent être configurés avec plus de 4 000 VLAN. Un VLAN est un domaine de diffusion : les ordinateurs se trouvant sur des VLAN différents ne peuvent donc pas communiquer sans l’intervention d’un dispositif de routage. Les commutateurs de couche 2 ont des fonctionnalités IPv4 et IPv6 très limitées et ne peuvent pas exécuter la fonction de routage dynamique des routeurs. Alors que les commutateurs de couche 2 disposent de plus de fonctionnalités IP, telles que la possibilité d’effectuer le routage statique, c’est insuffisant pour gérer ce grand nombre de VLAN.</p>
+          <p></p>
+          <p>Un périphérique qui prend en charge le routage de couche 3, tel qu’un routeur ou un commutateur multicouche, permet d’exécuter les fonctions de routage nécessaires. Quel que soit le périphérique utilisé, le processus de transfert du trafic réseau d’un VLAN à un autre à l’aide du routage est appelé routage inter-VLAN. </p>
+          <p></p>
+          <p>Il existe 3 options de routage inter-VLAN :</p>
+          <p>
+            <ul>
+              <li>Routage inter-VLAN existant </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Router-on-a-Stick</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Commutation de couche 3 à l’aide d’interfaces SVI</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : ce chapitre porte sur les deux premières options. La commutation de couche 3 à l’aide d’interfaces SVI n’est pas au programme de ce cours.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre une topologie avec deux hôtes connectés à un commutateur. Le commutateur se connecte ensuite à un routeur en utilisant deux câbles. Un hôte se connecte via un sous-réseau sur VLAN 10 et le deuxième hôte se connecte via un deuxième sous-réseau sur VLAN 30.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

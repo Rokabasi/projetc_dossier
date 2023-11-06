@@ -1,0 +1,1 @@
+La figure présente certains concepts DUAL.  Les concepts présentés sont les suivants : chemins sans boucle, chemins de sauvegarde sans boucle, convergence rapide et utilisation minimale de la bande passante.

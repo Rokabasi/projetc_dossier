@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.2.1.3 Transfert vers le tronçon suivant</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Transfert vers le tronçon suivant</h1>
+        <div>
+          <p>Les processus suivants ont lieu lorsque R1 reçoit la trame Ethernet du PC1 :</p>
+          <p></p>
+          <p>1. R1 examine l'adresse MAC de destination, qui correspond à l'adresse MAC de l'interface de réception, FastEthernet 0/0. R1 copie, par conséquent, la trame dans sa mémoire tampon.</p>
+          <p>2. R1 constate que le type d'Ethernet indiqué est 0x800, ce qui signifie que la trame Ethernet contient un paquet IPv4 dans sa partie données.</p>
+          <p>3. R1 désencapsule la trame Ethernet.</p>
+          <p>4. Comme l'adresse IPv4 de destination du paquet ne correspond à aucune adresse de réseau connecté directement de R1, ce dernier consulte sa table de routage pour acheminer ce paquet. R1 recherche dans la table de routage une adresse réseau qui inclut l'adresse IPv4 de destination du paquet en tant qu'adresse hôte dans ce réseau. Dans cet exemple, la table de routage comprend une route vers le réseau 192.168.4.0/24. L'adresse IPv4 de destination du paquet est 192.168.4.10, ce qui correspond à une adresse IPv4 d'hôte sur ce réseau.</p>
+          <p></p>
+          <p>La route que R1 trouve au réseau 192.168.4.0/24 a l'adresse IPv4 de tronçon suivant 192.168.2.2 et l'interface de sortie FastEthernet 0/1. Cela signifie que le paquet IPv4 est encapsulé dans une nouvelle trame Ethernet avec l'adresse MAC de destination de l'adresse IPv4 du routeur de tronçon suivant. </p>
+          <p></p>
+          <p>Comme l'interface de sortie se trouve sur un réseau Ethernet, R1 doit convertir l'adresse IPv4 du tronçon suivant en adresse MAC de destination à l'aide du protocole ARP :</p>
+          <p></p>
+          <p>1. R1 recherche l'adresse IPv4 de tronçon suivant 192.168.2.2 dans son cache ARP. Si l'entrée ne se trouve pas dans le cache ARP, R1 envoie une requête ARP depuis son interface FastEthernet 0/1 et R2 renvoie une réponse ARP. R1 met ensuite à jour le cache ARP avec une entrée pour 192.168.2.2 et l'adresse MAC associée.</p>
+          <p>2. Le paquet IPv4 est maintenant encapsulé dans une nouvelle trame Ethernet et transféré à l'interface FastEthernet 0/1 de R1.</p>
+          <p></p>
+          <p>L'animation de la figure illustre la façon dont R1 transfère le paquet à R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente une animation d’un routeur recevant un paquet de données.  Elle montre que le routeur acceptera le paquet parce que l’adresse MAC de destination est celle du routeur.  Le routeur lit l’adresse IP de destination et consulte sa table de routage pour déterminer où envoyer le paquet.  Le routeur détermine que le paquet doit être envoyé à une interface Ethernet sur le routeur suivant.  Le routeur encapsulera les données, utilisera l’interface de tronçon suivant comme adresse MAC de destination et utilisera sa propre adresse MAC comme adresse source.  Les adresses IP source et de destination ne sont pas modifiées.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

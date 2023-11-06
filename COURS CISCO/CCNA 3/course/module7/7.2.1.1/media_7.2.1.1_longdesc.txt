@@ -1,0 +1,1 @@
+La Figure 1 présente le résultat de la commande « show ip eigrp neighbors » sur le routeur R1. Deux voisins sont répertoriés. La figure 2 présente le résultat de la commande « show ip route eigrp ». La Figure 3 présente le résultat de la commande « show ip protocols ».

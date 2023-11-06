@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.2.2 Problèmes de vérification de la configuration de l&#x0027;adresse IP et du masque de sous-réseau</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes de vérification de la configuration de l&#x0027;adresse IP et du masque de sous-réseau</h1>
+        <div>
+          <p>Une adresse IP correspondant au sous-réseau pour lequel elle est connectée doit être affectée à chaque interface ou sous-interface. Une erreur fréquente consiste à mal configurer une adresse IP pour une sous-interface. La Figure 1 illustre le résultat de la commande <b>show running-config</b>. La zone mise en évidence montre que la sous-interface G0/0.10 sur le routeur R1 possède l'adresse IPv4 172.17.20.1. Le VLAN de cette sous-interface devrait autoriser le trafic VLAN 10. L'adresse IPv4 a été mal configurée. La commande<b> show ip interface </b>est utile dans ce paramétrage. La seconde mise en évidence montre l'adresse IPv4 incorrecte.</p>
+          <p></p>
+          <p>Parfois, le problème peut venir d'un périphérique utilisateur final, comme un ordinateur personnel, qui est mal configuré. La figure 2 présente la configuration IPv4 affichée de PC1. L'adresse IPv4 est 172.17.20.21, avec le masque de sous-réseau 255.255.255.0. Mais, dans ce scénario, le PC1 doit se trouver dans le VLAN 10, avec l'adresse 172.17.10.21 et le masque de sous-réseau 255.255.255.0.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : bien que faire concorder les ID des sous-interfaces avec les numéros des VLAN facilite la configuration inter-VLAN, cela n'est pas obligatoire. Lors de la résolution des problèmes d'adressage, assurez-vous que la sous-interface est configurée avec l'adresse appropriée pour ce VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 affiche le résultat de la commande « show running-config » et met en évidence l'adresse IP mal configurée d'une sous-interface. La figure 2 montre le résultat de la commande « i.p.config » sur un hôte Windows en mettant l'accent sur une adresse IP mal configurée sur l'interface réseau. Une légende indique que le PC doit avoir une adresse IP dans le sous-réseau approprié afin de communiquer correctement sur le réseau.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

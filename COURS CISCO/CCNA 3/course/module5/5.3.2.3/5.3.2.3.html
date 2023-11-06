@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.3 Dites bonjour</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dites bonjour</h1>
+        <div>
+          <p>La deuxième étape du processus de routage à état de liens consiste à faire en sorte que chaque routeur se charge de répondre à ses voisins sur les réseaux connectés directement.  </p>
+          <p></p>
+          <p>Les routeurs avec protocoles de routage à état de liens utilisent le protocole Hello pour détecter les voisins sur ses liens.  Tout autre routeur sur lequel le même protocole de routage à état de liens est actif est un voisin. </p>
+          <p></p>
+          <p>Cliquez sur Lecture dans la figure pour voir une animation sur le processus de découverte de voisins à état de liens à l'aide de paquets Hello.</p>
+          <p></p>
+          <p>Dans l'animation, R1 envoie des paquets Hello sur ses liens (interfaces) pour détecter les éventuels voisins.  R2, R3 et R4 répondent au paquet Hello de R1 avec leurs propres paquets Hello, les routeurs étant configurés avec le même protocole de routage à état de liens.  Il n’y a pas de voisin sur l’interface FastEthernet 0/0.  Comme R1 ne reçoit pas de paquet Hello sur cette interface, il ne poursuit pas les étapes de processus de routage à état de liens sur le lien FastEthernet 0/0. </p>
+          <p></p>
+          <p>Lorsque deux routeurs à état de liens apprennent qu'ils sont voisins, ils forment une contiguïté.  L'échange de ces petits paquets Hello se poursuit entre deux voisins contigus. Il sert de fonction de maintien de connexion pour surveiller l'état du voisin.  Si un routeur cesse de recevoir des paquets Hello d’un voisin, ce dernier est considéré comme injoignable et la contiguïté est interrompue.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente le routeur R-1 avec une interface Fast Ethernet active, qui est connecté à trois autres routeurs sur chacune des trois liaisons WAN.  La figure est une animation qui présente le routeur envoyant des paquets Hello sur chacune des quatre interfaces actives.  Les trois routeurs connectés renvoient des paquets Hello au routeur R-1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

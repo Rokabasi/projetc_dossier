@@ -1,0 +1,1 @@
+La figure illustre le processus de S.L.A.A.C. pour un ordinateur.  Le routeur envoie un message d'annonce de routeur contenant toutes les informations d'adressage requises par l'ordinateur.  Ceci en réponse au message de sollicitation du routeur envoyé par l’ordinateur.  

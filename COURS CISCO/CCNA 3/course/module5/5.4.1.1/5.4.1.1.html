@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.4.1.1 Synthèse</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.4.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Synthèse</h1>
+        <div>
+          <p>Les protocoles de routage dynamique sont utilisés par les routeurs pour faciliter l'échange d'informations de routage entre des routeurs. Les objectifs des protocoles de routage dynamique sont notamment les suivants : détection des réseaux à distance, maintien à jour des informations de routage, sélection du meilleur chemin vers les réseaux de destination et capacité de trouver un nouveau chemin optimal si le chemin actuel n'est plus disponible. Tandis que les protocoles de routage dynamique nécessitent moins de surcharge administrative que le routage statique, il est nécessaire de consacrer une partie des ressources d'un routeur au fonctionnement du protocole, y compris le temps processeur et la bande passante du lien réseau. </p>
+          <p></p>
+          <p>Les réseaux combinent généralement le routage dynamique et le routage statique. Le routage dynamique est le meilleur choix pour les réseaux de grande taille et le routage statique est idéal pour les réseaux d'extrémité.</p>
+          <p></p>
+          <p>En cas de modification affectant le routage de la topologie, les protocoles propagent ces informations dans l'ensemble du domaine de routage. Le processus consistant à amener toutes les tables de routage à un même état de cohérence, dans lequel tous les routeurs du même domaine ou de la même zone de routage disposent d'informations complètes et précises sur le réseau, est appelé la convergence. Certains protocoles de routage convergent plus rapidement que d'autres.</p>
+          <p></p>
+          <p>Les protocoles de routage utilisent des mesures pour déterminer le meilleur chemin ou le chemin le plus court pour atteindre un réseau de destination. Les métriques utilisées par les protocoles de routage varient en fonction du protocole. En général, une métrique faible indique un chemin plus approprié. Les protocoles de routage dynamique utilisent les métriques suivantes : sauts, bande passante, retard, fiabilité et charge.</p>
+          <p></p>
+          <p>Les protocoles de routage peuvent être classés comme protocoles par classe ou sans classe, à vecteur de distance ou à état de lien et comme protocoles à passerelle interne ou externe. </p>
+          <p></p>
+          <p>Les protocoles à vecteur de distance utilisent les routeurs comme « poteaux indicateurs » le long du chemin, et ceci jusqu'à la destination finale. La seule information dont dispose un routeur à propos d'un réseau distant est la distance d'éloignement de ce réseau et le chemin ou l'interface à utiliser pour y accéder. Les protocoles de routage à vecteur de distance ne disposent pas d’une véritable carte de la topologie du réseau. Parmi les protocoles modernes de vecteur de distance, citons RIPv2, RIPng et EIGRP. </p>
+          <p></p>
+          <p>Un routeur configuré avec un protocole de routage à état de liens peut créer une vue ou une topologie complète du réseau en recueillant des informations à partir de tous les autres routeurs. Ces informations sont collectées à l'aide de paquets à état de liens (LSP).</p>
+          <p></p>
+          <p>Les protocoles de routage à état de liens appliquent l'algorithme de Dijkstra pour calculer le meilleur chemin pour la route. Cet algorithme est en général désigné sous le nom d'algorithme SPF. Cet algorithme utilise les coûts cumulés de chaque chemin, de la source à la destination, afin de déterminer le coût total de la route. Les protocoles de routage à état de liens sont IS-IS et OSPF.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Utilisez le graphique résumé</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

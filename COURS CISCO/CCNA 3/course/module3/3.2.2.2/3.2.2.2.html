@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.2.2 Les états des ports et le fonctionnement de PVST+</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.2.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les états des ports et le fonctionnement de PVST+</h1>
+        <div>
+          <p>Le protocole STP facilite la mise en place d'un chemin logique sans boucle sur l'ensemble du domaine de diffusion. L’arbre recouvrant est déterminé au moyen des informations recueillies par l’échange de trames BPDU entre les commutateurs interconnectés. Pour faciliter l’apprentissage de l’arbre recouvrant logique, chaque port d’un commutateur passe par cinq états possibles et trois minuteurs BPDU.</p>
+          <p></p>
+          <p>L’arbre recouvrant est défini dès la fin de l’initialisation d’un commutateur. Si un port de commutateur passe directement de l'état de blocage à l'état de réacheminement sans informations sur la topologie complète pendant la transition, le port peut créer temporairement une boucle de données. Pour cette raison, le protocole STP introduit cinq états de port. PVST+ utilise les cinq mêmes états de port. La figure décrit les états de port qui garantissent qu'aucune boucle ne sera générée pendant la création du Spanning Tree logique :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Blocage</b> : le port est un port de blocage qui ne participe pas au réacheminement de trames. Le port reçoit les trames BPDU pour déterminer l'emplacement et l'ID racine du commutateur pont racine ainsi que les rôles de port que chaque port de commutateur doit assumer dans la topologie STP finale active.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Écoute</b> : écoute le chemin vers la racine. STP a déterminé que le port peut participer au réacheminement de trames en fonction des trames BPDU que le commutateur a reçues. Le port de commutateur reçoit des trames BPDU, transmet ses propres trames BPDU et informe les commutateurs contigus qu'il se prépare à participer à la topologie active.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Apprentissage</b> : apprend les adresses MAC. Le port se prépare à participer au transfert de trames et commence à remplir la table d'adresses MAC. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Réacheminement</b> : le port est considéré comme faisant partie de la topologie active. Il réachemine les trames de données, et envoie et reçoit les trames BPDU. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Désactivation</b> : le port de couche 2 ne participe pas à l’arbre recouvrant et n’achemine aucune trame. L’état désactivé est défini lorsque le port du commutateur est désactivé sur le plan administratif.</li>
+            </ul>
+          </p>
+          <p>Notez que le nombre de ports dans chacun des divers états (blocage, écoute, apprentissage ou réacheminement) peut être affiché à l'aide de la commande <b>show spanning-tree summary</b>.</p>
+          <p></p>
+          <p>Pour chaque VLAN d'un réseau commuté, le protocole PVST+ exécute quatre étapes pour offrir une topologie de réseau logique sans boucle :</p>
+          <p></p>
+          <p>
+            <b>Étape 1. Sélectionne un pont racine</b> - Un seul commutateur peut intervenir comme pont racine (pour un VLAN donné). Le pont racine est le commutateur qui possède l'ID de pont le plus bas. Sur le pont racine, tous les ports sont des ports désignés (pas de port racine).</p>
+          <p></p>
+          <p>
+            <b>Étape 2. Sélectionne le port racine sur chaque pont non racine</b> - PVST+ établit un port racine sur chaque pont non racine pour chaque VLAN. Le port racine est le chemin ayant le coût le plus faible entre le pont non-racine et le pont racine, ce qui indique la meilleure direction du chemin vers le pont racine. Les ports racines sont généralement en état de transmission.</p>
+          <p></p>
+          <p>
+            <b>Étape 3. Sélectionne le port désigné sur chaque segment</b> - Sur chaque liaison, PVST+ établit un port désigné pour chaque VLAN. Ce port désigné est choisi sur le commutateur présentant le coût de chemin le plus bas vers le pont racine. Les ports désignés sont normalement à l'état de réacheminement et réacheminent le trafic pour le segment. </p>
+          <p></p>
+          <p>
+            <b>Étape 4. Les ports restants du réseau commuté sont les ports alternatifs</b> - Les ports alternatifs restent normalement à l'état de blocage, afin de rompre logiquement la topologie de boucle. Lorsqu'un port est à l'état de blocage, il ne réachemine pas le trafic, mais peut toujours traiter les messages BPDU reçus.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un tableau indiquant si un port reçoit les b.p.d.u., réachemine les données reçues sur l'interface, réachemine des données commutées à partir d'une autre interface ou apprend les adresses MAC pour les 5 différents modes de STP. Les cinq modes sont blocage, écoute, apprentissage, réacheminement et désactivé.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La Figure 1 est un diagramme qui illustre les étapes à suivre pour diagnostiquer les problèmes de connectivité lorsque les VLAN sont en service. La Figure 2 montre la sortie de la commande « show mac address-table interface fast ethernet 0/1 » sur le commutateur 1 et la sortie de la commande « show interfaces fast ethernet 0/1 switchport » sur le commutateur 1.

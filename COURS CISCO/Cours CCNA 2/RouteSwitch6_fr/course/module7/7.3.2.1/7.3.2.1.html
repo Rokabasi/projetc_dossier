@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.2.1 Dépannage de listes ACL IPv4 standard – Exemple 1</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.2.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Dépannage de listes ACL IPv4 standard – Exemple 1</h1>
+        <div>
+          <p>Les commandes <b>show</b> décrites précédemment permettent de repérer les erreurs de liste de contrôle d'accès les plus courantes. En général, ces erreurs concernent l'ordre de saisie des ACE et l'application de critères inappropriés aux règles des listes de contrôle d'accès. Les autres erreurs courantes incluent l’application de l’ACL dans la mauvaise direction, l’interface incorrecte ou des adresses sources erronées. </p>
+          <p></p>
+          <p>
+            <b>Politique de sécurité</b> : PC2 ne doit pas pouvoir accéder au serveur de fichiers.</p>
+          <p></p>
+          <p>Dans la Figure 1, bien que PC2 ne puisse pas accéder au serveur de fichiers, il en est de même pour PC1. La sortie de la commande <b>show access-list</b> montre que seul PC2 est explicitement refusé. Cependant, il n’existe aucune instruction d’autorisation (permit) autorisant un autre accès. </p>
+          <p></p>
+          <p>
+            <b>Solution</b> : tous les accès sortants de l'interface G0/0 vers le LAN 192.168.30.0/24 sont actuellement implicitement refusés. Ajoutez une instruction à la liste ACL 10 afin d’autoriser tout autre trafic, comme illustré à la Figure 2. PC1 doit à présent pouvoir accéder au serveur de fichiers. La sortie de la commande <b>show access-list</b> vérifie qu'une requête ping de PC1 vers le serveur de fichiers correspond à l'autorisation « permit any ».</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un réseau de trois routeurs.  R2 est au sommet de la disposition triangulaire et possède une connexion WAN en série à la fois à R1 et à R3.  Il n’y a pas de connexion directe entre R1 et R3. R2 possède également une connexion à Internet.  Les routeurs R1 et R3 possèdent chacun deux interfaces Gigabit actives pour des segments de réseau local et chaque segment possède un commutateur auquel est connecté un ordinateur.  R1 a le réseau 192.168.10.0 sur l’interface gigabit 0/0 et le réseau 192.168.11.0 sur l’interface gigabit 0/0.  R3 a le réseau 192.168.30.0 sur l’interface gigabit 0/0.  Tous les segments sont des réseaux de classe C avec un /24.  Ceci constitue la topologie de référence pour les séries de pages suivantes.  La Figure 1 affiche le résultat de la commande : show access-list. La Figure 2 montre le processus d'ajout d'une instruction « permit any » à l'ACL 10 puis de vérification avec la commande « show access-list ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>4.1.1.1 Introduction à l&#x0027;agrégation de liaisons</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_4.1.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Introduction à l&#x0027;agrégation de liaisons</h1>
+        <div>
+          <p>Dans la figure, le trafic provenant de plusieurs liaisons (généralement 100 ou 1000 Mbit/s) est agrégé sur le commutateur d'accès et doit être envoyé aux commutateurs de distribution. En raison de l'agrégation du trafic, des liaisons avec une bande passante plus élevée doivent être disponibles entre les commutateurs d'accès et de distribution.</p>
+          <p></p>
+          <p>Il peut être possible d'utiliser des liaisons plus rapides, 10 Gbit/s par exemple, pour la liaison entre les commutateurs de couche d'accès et de couche de distribution. Cependant, ajouter des liaisons plus rapides est coûteux. En outre, à mesure que la vitesse augmente sur les liaisons d'accès, même le port le plus rapide possible sur la liaison agrégée n'est plus assez rapide pour agréger le trafic provenant de toutes les liaisons d'accès.</p>
+          <p></p>
+          <p>Il est également possible de combiner le nombre de liaisons physiques entre les commutateurs pour accélérer de manière globale la communication entre les commutateurs. Toutefois, par défaut, le protocole STP est activé sur les appareils de couche 2, tels que les commutateurs. STP bloquera les liaisons redondantes pour éviter les boucles de routage. </p>
+          <p></p>
+          <p>Par conséquent, la meilleure solution consiste à implémenter une configuration EtherChannel.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un commutateur de couche d'accès connecté à deux commutateurs de couche de distribution. Chaque connexion est constituée de deux liaisons entre les commutateurs.  La figure montre qu'une des quatre liaisons est actuellement en mode de blocage à cause du protocole STP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

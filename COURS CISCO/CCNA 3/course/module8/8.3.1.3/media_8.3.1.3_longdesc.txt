@@ -1,0 +1,1 @@
+La figure répertorie les différences entre les protocoles OSPF versions 2 et 3.

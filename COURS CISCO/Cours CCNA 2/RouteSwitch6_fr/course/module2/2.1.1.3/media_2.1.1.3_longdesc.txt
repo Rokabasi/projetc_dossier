@@ -1,0 +1,1 @@
+La figure affiche un routeur avec un LAN connecté à R 2 sur Internet.  Ce routeur est considéré comme un routeur souche, tandis que le LAN est un réseau souche.

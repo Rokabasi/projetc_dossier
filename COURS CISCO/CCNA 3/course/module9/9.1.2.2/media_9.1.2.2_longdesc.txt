@@ -1,0 +1,1 @@
+La figure affiche les messages LSA de type 1 qui se propagent dans leur propre zone.

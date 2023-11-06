@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.2.5 Problèmes de couche d&#x0027;accès au réseau</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Problèmes de couche d&#x0027;accès au réseau</h1>
+        <div>
+          <p>La sortie de la commande<b> show interfaces </b>peut être utilisée pour détecter les problèmes de support courants. L'un des points les plus importants de cette sortie est l'affichage de l'état de la ligne et du protocole de liaison de données. La Figure 1 présente la ligne résumée afin de vérifier l'état d'une interface.</p>
+          <p></p>
+          <p>Le premier paramètre (FastEthernet0/1 is up) fait référence à la couche matérielle et indique si l’interface reçoit un signal de détection de porteuse. Le second paramètre (line protocol is up) fait référence à la couche de liaison de données et indique si les messages de test d'activité du protocole de couche liaison de données sont en cours de réception.</p>
+          <p></p>
+          <p>Les sorties de la commande <b>show interfaces</b> permettent de résoudre des problèmes de la façon suivante :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Si l’interface est active et que le protocole de ligne est désactivé, un problème existe. Il existe peut-être une incohérence dans le type d'encapsulation, l'interface de l'autre côté est peut-être en mode de désactivation des erreurs, ou il peut exister un problème matériel.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si le protocole de ligne et l'interface sont tous deux désactivés, un câble est débranché ou il existe un autre problème sur l'interface. Par exemple, dans une connexion jumelée, l’autre extrémité de la connexion peut être désactivée sur le plan administratif.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Si l'interface est désactivée sur le plan administratif, cela signifie qu'elle a été désactivée manuellement (la commande <b>shutdown</b> a été émise) dans la configuration courante.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 2 présente un exemple de résultat pour la commande<b> show interfaces</b>. L'exemple présente les compteurs et les statistiques de l'interface FastEthernet0/1.</p>
+          <p></p>
+          <p>Certaines erreurs enregistrées sur le support ne sont pas suffisamment graves pour entraîner une panne du circuit, mais elles peuvent entraîner une diminution sensible des performances. La Figure 3 illustre certaines de ces erreurs courantes qui peuvent être détectées à l’aide de la commande <b>show interfaces</b>. </p>
+          <p></p>
+          <p>Les erreurs en entrée sont la somme de toutes les erreurs contenues dans les datagrammes reçus sur l'interface examinée. Elles comprennent les erreurs suivantes : trames incomplètes, trames géantes, CRC, pas de mémoire tampon, trame, débordement et comptes ignorés. Les erreurs en entrée signalées par la commande<b> show interfaces </b>sont notamment :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Trames incomplètes</b> : les trames Ethernet dont la longueur est inférieure au minimum autorisé de 64 octets sont appelées trames incomplètes. Les excès de trames incomplètes sont habituellement causés par le dysfonctionnement de cartes réseau ou par des collisions.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Trames géantes</b> : les trames Ethernet dont la longueur excède le maximum autorisé sont appelées géantes. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Erreurs CRC</b> : sur les interfaces Ethernet et série, les erreurs CRC indiquent généralement une erreur relative au support ou au câble. Parmi les causes les plus courantes, on compte les interférences électriques, des connexions lâches ou endommagées, ou l'utilisation d'un câble incorrect. Si vous constatez un nombre élevé d'erreurs CRC, la liaison présente un bruit trop important et vous devriez vérifier le câble. Vous devez également rechercher les sources de bruit et les éliminer.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p></p>
+          <p>Les « erreurs en sortie » sont la somme de toutes les erreurs ayant empêché la transmission finale des datagrammes vers l'interface examinée. Les erreurs en sortie signalées par la commande<b> show interfaces </b>sont notamment :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Collisions</b> : les collisions lors de fonctionnement en mode bidirectionnel simultané sont normales. Cependant, vous ne devez pas observer de collisions sur une interface configurée pour la communication bidirectionnelle simultanée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Collisions tardives</b> : une collision tardive désigne une collision se produisant après que 512 octets de la trame ont été transmis. Les collisions tardives sont le plus souvent causées par des câbles de longueur excessive. Une mauvaise configuration du mode bidirectionnel peut également provoquer des collisions tardives. Par exemple, vous pouvez avoir configuré une extrémité de la collision en mode bidirectionnel simultané et l'autre en mode bidirectionnel non simultané. L'interface configurée en mode bidirectionnel non simultané présentera alors des collisions tardives. Dans ce cas, vous devez configurer le même mode de bidirectionnalité aux deux extrémités. Un réseau correctement conçu et configuré ne doit jamais présenter de collisions tardives.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 3 montre la sortie de la commande « show interface fast Ethernet 0/1 ».  La ligne d'état de fonctionnement est mise en surbrillance. Elle indique : Fast Ethernet 0/1 is up, line protocol is up. La Figure 2 montre la sortie de la commande « show interface ». Les compteurs et statistiques pour l'interface Fast Ethernet 0/1 sont mis en surbrillance.  Les compteurs répertorient les statistiques, telles que zéro trame incomplète, zéro géant, trois erreurs de saisie et huit erreurs de sortie. La Figure 3 montre un tableau répertoriant les erreurs de couche d'accès au réseau et leur description.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure liste les raisons d’utiliser le routage statique.  Elles incluent la connexion à un réseau spécifique, la connexion à un routeur souche, la récapitulation des entrées de routage et la création d’une route de sauvegarde.

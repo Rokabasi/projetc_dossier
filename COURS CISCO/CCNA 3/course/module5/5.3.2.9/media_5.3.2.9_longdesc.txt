@@ -1,0 +1,1 @@
+Les Figures 1, 2 et 3 sont des éléments multimédias interactifs qui permettent au stagiaire d'examiner une topologie réseau qui répertorie les réseaux et le coût des liens, et de créer l'arborescence SPF pour deux routeurs.

@@ -1,0 +1,1 @@
+La figure affiche deux jeux de commutateurs. Un jeu est étiqueté Communication en duplex intégral ou en semi-duplex. Ce jeu est connecté à un câble Ethernet et montre la capacité d’envoyer et de recevoir des données simultanément. Le deuxième jeu de commutateurs est étiqueté Communication en semi-duplex. Ce jeu montre la capacité d’envoyer ou de recevoir des données.  

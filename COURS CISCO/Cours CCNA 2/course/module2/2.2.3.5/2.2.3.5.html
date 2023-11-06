@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.3.5 Configuration d&#x0027;une route IPv6 statique entièrement spécifiée</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.3.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration d&#x0027;une route IPv6 statique entièrement spécifiée</h1>
+        <div>
+          <p>Dans une route statique entièrement spécifiée, l’interface de sortie et l’adresse IPv6 de tronçon suivant sont toutes deux spécifiées. De la même façon que pour les routes statiques entièrement spécifiées utilisées avec le protocole IPv4, cette procédure serait utilisée si le protocole CEF n'était pas activé sur le routeur et que l'interface de sortie se trouvait sur un réseau à accès multiples.  Avec le protocole CEF, une route statique utilisant uniquement une adresse IPv6 de tronçon suivant serait la méthode préférée, même lorsque l'interface de sortie est un réseau à accès multiples.</p>
+          <p></p>
+          <p>Contrairement au protocole IPv4, il y a des circonstances avec le protocole IPv6 dans lesquelles une route statique entièrement spécifiée doit être utilisée. Si la route IPv6 statique utilise une adresse link-local IPv6 comme adresse de tronçon suivant, une route statique entièrement spécifiée incluant l'interface de sortie doit être utilisée. La Figure 1 présente un exemple d'une route statique IPv6 complète utilisant une adresse link-local IPv6 comme adresse de tronçon suivant.</p>
+          <p></p>
+          <p>Une route statique entièrement spécifiée doit être utilisée parce que les adresses link-local IPv6 ne figurent pas dans la table de routage IPv6. Les adresses link-local sont uniquement uniques sur une liaison ou un réseau donné. L'adresse link-local de tronçon suivant peut être une adresse valide sur plusieurs réseaux connectés au routeur. Par conséquent, il est nécessaire d'inclure l'interface de sortie.</p>
+          <p></p>
+          <p>Dans la Figure 1, une route statique entièrement spécifiée est configurée au moyen de l'adresse link-local R2 comme adresse du tronçon suivant. Notez que l'IOS requiert que l'interface de sortie soit spécifiée. </p>
+          <p></p>
+          <p>La Figure 2 illustre l'entrée de table de routage IPv6 pour cette route. Notez que l'adresse link-local du tronçon suivant et l'interface de sortie sont toutes deux incluses. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour configurer les routes statiques IPv6 entièrement spécifiées sur R2 pour atteindre le réseau local de R1 en utilisant une adresse link-local.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ces figures affichent deux routeurs connectés à un câble série.  Chaque routeur est connecté à un LAN. La Figure 1 affiche la syntaxe pour configurer une route statique entièrement spécifiée sur le routeur R1 vers le LAN sur le routeur R2.  Un rapport de route entièrement spécifiée est requis, car nous utilisons l’adresse link-local comme tronçon suivant.  Cela nécessite l’utilisation de l’interface de sortie. La Figure 2 affiche le résultat de l’exécution de la commande « show i. p. v. 6 route static pipe begin followed by an i. p. v. 6 address » sur le routeur R1. La Figure 3 constitue une activité interactive qui permet à l’apprenant de s’exercer à la configuration d’une route statique entièrement spécifiée dans IPv6.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

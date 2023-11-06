@@ -1,0 +1,18 @@
+<textcomponents>
+
+	<component id="ID_title">
+		<text><![CDATA[<b>Calcul de métrique EIGRP</b>]]></text>
+	</component>
+	
+	<component id="ID_txt01">
+	  <text><![CDATA[<b>[K1 * bande passante+ K3 * délai] * 256 = Métrique</b><br/><br/>Comme les valeurs K1 et K3 équivalent toutes les deux à 1, la formule devient :<br/><br/><b>(Bande passante + Délai) * 256 = Métrique</b>]]></text> 
+	</component>
+	
+	<component id="ID_txt03">
+		<text><![CDATA[La bande passante est calculée à l&apos;aide du débit du lien le plus lent de la route vers la destination.<br/>Le délai est calculé à l&apos;aide de la somme de tous les délais de la route vers la destination.]]></text>
+	</component>
+
+<component id="ID_txt02">
+	  <text><![CDATA[<b>((10 000 000/bande passante) + (somme des délais/10)) * 256 = Métrique</b> ]]></text> 
+	</component>
+</textcomponents>

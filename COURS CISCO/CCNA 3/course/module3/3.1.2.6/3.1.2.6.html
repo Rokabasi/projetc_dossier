@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.1.2.6 Les ports désignés et les ports alternatifs</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les ports désignés et les ports alternatifs</h1>
+        <div>
+          <p>Lors du choix du port racine sur un commutateur, le commutateur compare les coûts de chemin de tous les ports de commutateur faisant partie de l’arbre recouvrant. Le port de commutateur ayant le coût de chemin global le plus faible jusqu'au pont racine se voit automatiquement affecter le rôle de port racine, car il est le plus près du pont racine. Dans une topologie réseau de commutateurs, un seul port racine est sélectionné sur tous les commutateurs qui ne sont pas pont racine, en l'occurrence celui qui offre le chemin de retour au pont racine ayant le coût le plus faible. </p>
+          <p></p>
+          <p>Un pont racine n'a aucun port racine. Tous les ports d'un pont racine sont des ports désignés. Un commutateur qui n'est pas le pont racine d'une topologie réseau a un seul port racine défini.</p>
+          <p></p>
+          <p>La figure présente une topologie comportant quatre commutateurs. Si vous examinez les rôles de port, le port F0/1 sur le commutateur S3 et le port F0/3 sur le commutateur S4 ont été sélectionnés comme ports racine parce que le chemin de leurs commutateurs respectifs présente le plus faible coût (coût de chemin racine) jusqu'au pont racine.  </p>
+          <p></p>
+          <p>S2 dispose de deux ports, F0/1 et F0/2, dont les chemins jusqu'au pont racine offrent le même coût. Dans ce cas, ce sont les ID de pont des commutateurs voisins, S3 et S4, qui seront utilisés pour les départager. Il s'agit du BID de l'émetteur. Le BID de S3 est 24577.5555.5555.5555 et le BID de S4 est 24577.1111.1111.1111. Puisque S4 a un BID inférieur, le port F0/1 de S2, qui est connecté à S4, est le port racine.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : les BID ne sont pas indiqués dans la figure.</p>
+          <p></p>
+          <p>Ensuite, les ports désignés doivent être sélectionnés sur les segments partagés. S2 et S3 se connectent au même segment LAN et échangent donc des trames BPDU. STP détermine si c'est le port F0/2 de S2 ou le port F0/2 de S3 qui sera le port désigné pour le segment partagé. Le port désigné sera celui du commutateur dont le chemin de coût est inférieur au pont racine (coût du chemin racine). Le port F0/2 de S3 offre un chemin vers le pont racine dont le coût est plus faible. Ce sera donc le port désigné pour ce segment.</p>
+          <p></p>
+          <p>S2 et S4 suivent un processus similaire pour leur segment partagé. Le port F0/1 de S4 présente le chemin vers le pont racine dont le coût est le plus faible et devient le port désigné sur ce segment partagé.</p>
+          <p></p>
+          <p>Tous les rôles de port STP ont été attribués à l'exception de celui du port F0/2 de S2. Le port F0/1 de S2 a déjà été sélectionné comme port racine pour ce commutateur. Puisque le port F0/2 de S3 est le port désigné pour ce segment, le port F0/2 de S2 devient un port alternatif.</p>
+          <p></p>
+          <p>Le port désigné est le port qui envoie et reçoit le trafic, vers et depuis ce segment, au pont racine. C'est le meilleur port vers le pont racine sur ce segment. Le port alternatif n'enverra pas ni ne recevra de trafic sur ce segment. C'est la partie de STP qui permet d'empêcher la formation de boucles.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

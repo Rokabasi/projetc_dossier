@@ -1,0 +1,1 @@
+La Figure illustre la syntaxe pour configurer un port de commutateur en tant que ligne principale et pour configurer le VLAN natif en tant que VLAN 99.  La sortie de la commande « show interfaces trunk » s’affiche également.

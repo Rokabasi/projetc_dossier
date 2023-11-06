@@ -1,0 +1,1 @@
+La figure montre la différence entre une conception à trois niveaux de LAN avec une couche de distribution et d’accès de cœur de réseau contre une conception à deux niveaux qui ne dispose que d’une couche de distribution et d’accès.

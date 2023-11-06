@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.8 Métriques du protocole de routage</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Métriques du protocole de routage</h1>
+        <div>
+          <p>Il peut arriver qu’un protocole de routage découvre plusieurs routes menant à la même destination. Pour sélectionner le meilleur chemin, le protocole de routage doit être en mesure d'évaluer les chemins disponibles et de choisir parmi eux. Pour ce faire, les métriques de routage doivent être utilisées.  </p>
+          <p></p>
+          <p>Une métrique est une valeur mesurable attribuée par le protocole de routage à différentes routes selon l'utilité de la route spécifique. Dans les cas où il existe plusieurs chemins vers le même réseau distant, les métriques de routage sont utilisées pour déterminer le « coût » global d'un chemin entre la source et la destination. Les protocoles de routage déterminent le meilleur chemin en fonction de la route qui présente le coût le plus faible.  </p>
+          <p></p>
+          <p>Les métriques utilisées par les protocoles de routage varient en fonction du protocole. Les métriques utilisées par les protocoles de routage ne sont pas comparables. De ce fait, deux protocoles de routage différents peuvent choisir des chemins distincts vers la même destination.</p>
+          <p></p>
+          <p>Voici quelques protocoles dynamiques et les métriques qu'ils utilisent :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocol RIP</b> (Routing Information Protocol) : nombre de sauts</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole OSPF</b> (Open Shortest Path First) : coût de Cisco basé sur la bande passante cumulée entre la source et la destination</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Protocole EIGRP</b> (Enhanced Interior Gateway Routing Protocol) : bande passante minimale, retard, charge, fiabilité et unité de transmission maximale (MTU, Maximum Transmission Unit).</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>L'animation dans la figure montre que le protocole RIP choisit le chemin comportant le moins de sauts, tandis que le protocole OSPF choisit le chemin avec la bande passante la plus élevée. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente trois routeurs qui sont connectés dans une disposition triangulaire. Chaque routeur est connecté aux deux autres routeurs.  Un ordinateur connecté au routeur R-1 envoie un paquet de données à un ordinateur connecté au routeur R-2.  Les données peuvent suivre deux chemins différents.  L'un des chemins utilise une ligne 56 kbit/s et comprend un saut de routeur.  L'autre chemin comprend deux sauts de routeur et chaque liaison est une liaison T-1 à 1,544 Mbit/s.  La figure est une animation qui indique le chemin que les protocoles RIP et OSPF suivraient.  Si le nombre de sauts est utilisé comme mesure, comme dans le cas du protocole RIP, le paquet parcourt le premier chemin via un seul routeur.  Si c'est la bande passante qui est utilisée comme mesure, comme dans le cas du protocole OSPF, le paquet suit les deux liaisons T-1, car ce chemin est plus rapide qu'une seule liaison à 56 kbit/s.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

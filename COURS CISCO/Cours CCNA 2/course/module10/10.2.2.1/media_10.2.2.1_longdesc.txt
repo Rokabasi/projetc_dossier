@@ -1,0 +1,1 @@
+La figure présente un routeur connecté à un commutateur.  Les deux envoient des messages système vers un serveur Syslog.

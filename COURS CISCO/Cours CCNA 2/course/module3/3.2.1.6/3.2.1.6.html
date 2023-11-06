@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.2.1.6 Configurer des interfaces passives</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configurer des interfaces passives</h1>
+        <div>
+          <p>Par défaut, les mises à jour RIP sont transférées via toutes les interfaces compatibles RIP. Cependant, les mises à jour RIP doivent réellement être envoyées aux interfaces connectées aux autres routeurs compatibles RIP.  </p>
+          <p></p>
+          <p>Par exemple, consultez la topologie dans la Figure 1. Le protocole RIP envoie des mises à jour à partir de son interface G0/0 même si aucun périphérique RIP n'existe sur ce réseau local.  Le routeur R1 n'a aucun moyen de savoir cela et envoie donc une mise à jour toutes les 30 secondes. L’envoi de mises à jour non nécessaires sur un réseau local a une incidence sur le réseau à trois niveaux :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Gaspillage de la bande passante </b>- La bande passante est utilisée pour transporter les mises à jour inutiles. Puisque les mises à jour RIP sont diffusées ou multidiffusées, les commutateurs transfèrent également les mises à jour via tous les ports.  </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Gaspillage des ressources</b> - Tous les périphériques du réseau local doivent traiter la mise à jour jusqu'aux couches transport, point à partir duquel les périphériques ignoreront la mise à jour. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Risque de sécurité</b> - L'annonce des mises à jour sur un réseau de diffusion constitue un risque pour la sécurité. Les mises à jour RIP peuvent être interceptées par un logiciel d’analyse de paquets.  Les mises à jour de routage peuvent être modifiées et retournées au routeur avec des métriques fausses qui altèrent la table de routage et provoquent l’acheminement incorrect du trafic. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez la commande de configuration du routeur <b>passive-interface </b>pour empêcher la transmission de mises à jour de routage via une interface de routeur, tout en permettant que le réseau soit annoncé aux autres routeurs. La commande arrête l'envoi de mises à jour de routage via l'interface spécifiée. Toutefois, le réseau auquel appartient l'interface spécifiée continue d'être annoncé dans les mises à jour de routage envoyées via d'autres interfaces.  </p>
+          <p></p>
+          <p>Il est inutile que R1, R2 et R3 transmettent les mises à jour RIP via leurs interfaces LAN. La configuration dans la Figure 2 identifie l'interface G0/0 de R1 comme étant passive. La commande<b> show ip protocols</b> permet ensuite de vérifier que l'interface Gigabit Ethernet était passive. Notez que l'interface G0/0 n'est plus indiquée comme envoyant ou recevant des mises à jour de la version 2, mais figure plutôt maintenant dans la section Passive Interface(s). Notez par ailleurs que le réseau 192.168.1.0 figure toujours sous Routing for Networks, ce qui signifie que ce réseau est encore inclus en tant qu'entrée de route dans les mises à jour RIP envoyées à R2. </p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: tous les protocoles de routage prennent en charge la commande <b>passive-interface</b>.  </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 3 pour configurer l'interface LAN comme interface passive sur R2 et R3.</p>
+          <p></p>
+          <p>Toutes les interfaces peuvent également être rendues passives à l'aide de la commande <b>passive-interface default</b>. Les interfaces qui ne doivent pas être passives peuvent être réactivées à l'aide de la commande <b>no passive-interface</b>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche trois routeurs connectés linéairement par des liens WAN.  Le R1 est connecté au R2 par le biais de liens WAN en série et dispose d’un LAN sur son interface Gigabit Ethernet.  Le R2 est connecté à la fois au R1 et au R3 par le biais de liens WAN en série et possède aussi un LAN sur son interface Gigabit Ethernet.  Le R3 est uniquement connecté au R2 par le biais de liens WAN en série et d’un LAN sur son interface Gigabit Ethernet.  Il y a cinq adresses réseau différentes dans la figure.  La Figure 2 affiche les commandes nécessaires pour définir une interface passive.  Les commandes commencent en mode de configuration globale, puis activent le routage RIP.  La commande suivante permet de désactiver l’envoi des mises à jour RIP vers une interface spécifiée et la commande utilisée est « passive-interface g0/0 ».  Cela est confirmé avec la commande « show ip protocols pipe begin Default » et la section intitulée Interfaces passives est mise en surbrillance là où l’interface Gigabit Ethernet0/0 est répertoriée. La Figure 3 est un élément multimédia interactif qui permet à l’apprenant de configurer le routage RIP et de définir une interface passive sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

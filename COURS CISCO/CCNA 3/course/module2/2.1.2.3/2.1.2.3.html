@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.2.3 Étape 2 : Configuration du nom de domaine et du mot de passe VTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.2.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Étape 2 : Configuration du nom de domaine et du mot de passe VTP</h1>
+        <div>
+          <p>Le nom de domaine est configuré à l'aide de la commande de configuration globale <b>vtp domain </b><i>domain-name</i> . Dans la figure 1, le nom de domaine configuré est <b>CCNA</b> sur S1. S1 envoie ensuite une annonce VTP à S2 et S3. Si S2 et S3 possèdent la configuration par défaut avec le nom de domaine NULL, les deux commutateurs accepteront CNNA comme nouveau nom de domaine VTP. Un client VTP doit avoir le même nom de domaine que le serveur pour accepter les annonces VTP.</p>
+          <p></p>
+          <p>Pour des raisons de sécurité, un mot de passe doit être configuré avec la commande <b>vtp password </b><i>password</i> . Dans la figure 2, le mot de passe <b>cisco12345</b> est défini pour le domaine VTP. Tous les commutateurs du domaine VTP doivent utiliser le même mot de passe de domaine VTP.</p>
+          <p></p>
+          <p>Vérifiez le mot de passe VTP au moyen de la commande <b>show vtp password</b>, comme illustré à la figure 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 montre comment configurer le nom de domaine.  La figure 2 montre comment configurer et vérifier le mot de passe du nom de domaine.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

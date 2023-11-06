@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.3.2 VLAN manquants</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>VLAN manquants</h1>
+        <div>
+          <p>S’il n’y a toujours aucune connexion entre les périphériques d’un VLAN, mais que les problèmes d’adressage IP ont été réglés, consultez le diagramme de la Figure 1 pour le dépannage :</p>
+          <p></p>
+          <p>
+            <b>Étape 1.</b> Utilisez la commande <b>show vlan</b> pour vérifier que le port appartient au VLAN prévu. Si le port est attribué au mauvais VLAN, utilisez la commande <b>switchport access vlan</b> pour corriger l’appartenance. Utilisez la commande <b>show mac address-table</b> pour vérifier que les adresses ont été apprises sur un port spécifique du commutateur et le VLAN auquel le port est attribué, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>
+            <b>Étape 2</b>. Si le VLAN auquel est affecté le port est supprimé, le port devient inactif. Les ports d’un VLAN supprimé ne seront pas répertoriés dans la sortie de la commande <b>show vlan</b>. Utilisez la commande <b>show interfaces switchport</b> pour vérifier si le VLAN inactif est attribué au port, comme illustré dans la Figure 2.</p>
+          <p></p>
+          <p>L’exemple de la Figure 2 affiche les adresses MAC qui ont été acquises sur l’interface F0/1. Vous constatez que l’adresse MAC 000c.296a.a21c a été acquise sur l’interface F0/1 du VLAN 10. Si ce chiffre n’est pas le numéro VLAN voulu, modifiez l’appartenance des ports à l’aide de la commande <b>switchport access vlan</b>.</p>
+          <p></p>
+          <p>Chaque port d’un commutateur appartient à un VLAN. Si le VLAN auquel appartient le port est supprimé, le port devient inactif. Tous les ports appartenant au VLAN qui a été supprimé ne peuvent plus communiquer avec le reste du réseau. Utilisez la commande <b>show interface f0/1 switchport</b> pour vérifier si le port est inactif. Si le port est inactif, il n’est pas opérationnel tant que le VLAN manquant n’est pas créé à l’aide de la commande de configuration globale <b>vlan</b><i> vlan-id </i>ou tant que le VLAN n’est pas supprimé du port avec la commande <b>no switchport access vlan </b><i>vlan-id </i>.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 est un diagramme qui illustre les étapes à suivre pour diagnostiquer les problèmes de connectivité lorsque les VLAN sont en service. La Figure 2 montre la sortie de la commande « show mac address-table interface fast ethernet 0/1 » sur le commutateur 1 et la sortie de la commande « show interfaces fast ethernet 0/1 switchport » sur le commutateur 1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

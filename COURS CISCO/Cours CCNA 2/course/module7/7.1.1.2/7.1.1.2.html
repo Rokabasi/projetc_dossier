@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.1.2 Filtrage des paquets</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Filtrage des paquets</h1>
+        <div>
+          <p></p>
+          <p></p>
+          <p>Une liste de contrôle d'accès est un ensemble séquentiel d'instructions d'autorisation ou de refus, appelées entrées de contrôle d'accès (ACE). Les ACE sont couramment appelées des instructions de liste de contrôle d'accès. Lorsque le trafic réseau traverse une interface configurée avec une liste de contrôle d'accès, le routeur compare les informations du paquet à chaque ACE, dans l'ordre séquentiel, afin de déterminer si le paquet correspond à l'une des entrées ACE. C’est ce que l’on appelle le filtrage de paquet.</p>
+          <p></p>
+          <p>Le filtrage des paquets contrôle l'accès à un réseau en analysant les paquets entrants et sortants, puis les transmet ou les rejette selon les critères donnés. Le filtrage des paquets peut se produire à la couche 3 ou 4, comme illustré dans la figure. Les listes de contrôle d'accès standard filtrent uniquement à la couche 3. Les listes de contrôle d'accès étendues filtrent à la couche 3 et à la couche 4. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : ce cours n'a pas pour objet les listes de contrôle d'accès étendues.</p>
+          <p></p>
+          <p>L’adresse IPv4 source représente les critères de filtrage définis à chaque entrée ACE d’une liste de contrôle d’accès IPv4 standard. Un routeur configuré avec une liste de contrôle d'accès IPv4 standard extrait l'adresse IPv4 source de l'en-tête du paquet. Le routeur démarre au début de la liste de contrôle d’accès et compare l’adresse à chaque entrée ACE dans l’ordre séquentiel. Lorsqu’une correspondance est effectuée, le routeur applique l’instruction, en autorisant ou en refusant le paquet. Une fois qu'une correspondance est effectuée, les entrées ACE restantes dans la liste de contrôle d'accès, le cas échéant, ne sont pas analysées. Si l’adresse IPv4 source ne correspond à aucune entrée ACE dans la liste de contrôle d'accès, le paquet est rejeté. </p>
+          <p></p>
+          <p>La dernière instruction d'une liste de contrôle d'accès est toujours implicit deny. Cette instruction est automatiquement ajoutée à la fin de chaque liste de contrôle d’accès, même si elle n’est pas physiquement présente. L’instruction implicit deny bloque l’ensemble du trafic. En raison de ce refus implicite, une liste de contrôle d'accès qui n'a pas au moins une instruction d'autorisation bloquera tout le trafic.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre les sept couches du modèle OSI.  Une légende de texte indique « Le filtrage des paquets intervient sur les couches 3 et 4 ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

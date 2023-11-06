@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.4.2 Modes d&#x0027;interface négociés</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modes d&#x0027;interface négociés</h1>
+        <div>
+          <p>Les interfaces Ethernet des commutateurs Catalyst 2960 et Catalyst 3560 prennent en charge différents modes trunking à l'aide du protocole DTP :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>accès au mode du switchport</b> - Place l'interface (port d'accès) en mode non-trunk permanent et négocie pour convertir la liaison en liaison non-trunk L'interface devient une interface non-trunk, indépendamment du fait que l'interface voisine soit une interface de trunk ou non.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>mode dynamique automatique du switchport</b> - Rend l'interface capable de convertir la liaison en liaison trunk. L'interface devient une interface trunk si l'interface voisine est configurée en mode trunk inconditionnel ou souhaitable. Le mode du port de commutateur par défaut pour toutes les interfaces Ethernet est <b>dynamic auto</b>.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>mode dynamic desirable du switchport</b> - Fait en sorte que l'interface tente activement de convertir la liaison en liaison trunk. L'interface devient une interface trunk si l'interface voisine est configurée en mode trunk, desirable ou dynamique automatique. Il s'agit du mode de port par défaut sur les commutateurs plus anciens, comme les Catalyst 2950 et 3550.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>trunk du mode switchport</b> - Place l'interface en mode trunking permanent et négocie pour convertir la liaison voisine en liaison trunk. L'interface devient une interface trunk même si l'interface voisine n'est pas une interface trunk.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>switchport sans négociation</b> - Empêche l'interface de générer des trames DTP. Vous pouvez utiliser cette commande uniquement lorsque le mode du port de commutateur de l'interface est <b>access</b> ou <b>trunk</b>. Vous devez configurer manuellement l'interface voisine en tant qu'interface trunk pour établir une liaison trunk.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 1 illustre les résultats des options de configuration DTP sur les extrémités opposées d'une liaison trunk connectée aux ports du commutateur Catalyst 2960.</p>
+          <p></p>
+          <p>Configurez des liaisons trunk de manière statique autant que possible. Le mode DTP par défaut dépend de la version du logiciel Cisco IOS et de la plate-forme. Pour déterminer le mode DTP en cours, exécutez la commande <b>show dtp interface</b> comme indiqué en Figure 2.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 3 pour déterminer le mode DTP sur l'interface F0/1.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: il est généralement recommandé de définir l'interface sur <b>trunk</b> et <b>nonegotiate</b> lorsqu'une liaison trunk est requise. Sur les liaisons où vous ne souhaitez pas de trunking, désactivez le mode DTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente un tableau qui montre le mode de liaison résultant en fonction de la configuration du port.  Les modes de port répertoriés sont dynamique automatique, dynamic desirable, trunk et accès. La figure 2 présente le résultat de la commande  « show d. t. p. interface f. zero slash one ». La figure 3 est une activité interactive qui permet au stagiaire de s'exercer à utiliser la commande « how d. t. p. interface f. zero slash one ».</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

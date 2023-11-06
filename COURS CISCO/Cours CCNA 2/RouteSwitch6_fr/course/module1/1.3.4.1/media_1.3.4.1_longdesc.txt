@@ -1,0 +1,1 @@
+La figure affiche deux routeurs connectés via une liaison WAN exécutant le protocole de routage dynamique EIGRP.  Chaque routeur dispose de trois réseaux connectés et annonce ces réseaux à l’autre routeur.

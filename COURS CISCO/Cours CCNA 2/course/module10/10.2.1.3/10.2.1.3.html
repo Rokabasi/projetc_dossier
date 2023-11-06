@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.3 Configuration et vérification du protocole NTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration et vérification du protocole NTP</h1>
+        <div>
+          <p>Tant que le protocole NTP n'est pas configuré sur le réseau, la commande show clock affiche l'heure actuelle sur l'horloge logicielle. L'option <b>detail</b> permet également d'afficher la source temporelle. Comme l'illustre la Figure 1, l'horloge logicielle a été configurée manuellement. Utilisez la commande <b>NTP server</b><i> ip-address </i>en mode de configuration globale pour configurer 209.165.200.225 en tant que serveur NTP pour R1. Pour vérifier si la source temporelle est définie sur NTP, utilisez à nouveau la commande <b>show clock detail</b>.</p>
+          <p></p>
+          <p>Comme l'illustre la Figure 2, les commandes <b>show ip ntp associations</b> et <b>show ntp status</b> vérifient que R1 est synchronisé avec le serveur NTP sur 209.165.200.225. Notez que R1 est synchronisé avec un serveur NTP de strate 1 à l'adresse 209.165.200.225, qui est synchronisée avec une horloge GPS. La commande show ntp status permet de voir que R1 est désormais un périphérique de strate 2 synchronisé avec le serveur NTP 209.165.220.225.</p>
+          <p></p>
+          <p>L'horloge sur S1 est configurée pour se synchroniser sur R1, comme illustré à la Figure 3. Le résultat de la commande <b>show ntp associations</b> vérifie que l'horloge sur S1 est désormais synchronisée avec R1 sur 192.168.1.1 via NTP. R1 est un périphérique de strate 2 et un serveur NTP sur S1. S1 est désormais un périphérique de strate 3 capable de fournir un service NTP à d'autres périphériques du réseau, tels que des périphériques finaux.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 4 pour pratiquer la configuration et la vérification du protocole NTP.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Les Figures 1, 2 et 3 ont la même topologie avec les serveurs NTP et les clients NTP affichés. Le routeur R1 est un serveur NTP pour le commutateur S1. Dans la Figure 1, R1 est configuré en tant que serveur NTP. Dans la Figure 2, les commandes « show ntp associations » et « show ntp status » vérifient que R1 est désormais un serveur NTP. Dans la Figure 3, le commutateur S1 est configuré en tant que serveur NTP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

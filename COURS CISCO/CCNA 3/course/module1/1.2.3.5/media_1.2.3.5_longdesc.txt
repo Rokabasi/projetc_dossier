@@ -1,0 +1,1 @@
+La figure 1 présente un exemple de configuration de commutateur. La figure 2 montre le résultat de la commande « show run ».

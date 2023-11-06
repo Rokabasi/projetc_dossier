@@ -1,0 +1,10 @@
+﻿<textcomponents>
+	
+	<component id="ID_type">
+		<text><![CDATA[Travaux pratiques]]></text>
+	</component>
+	<component id="ID_title">
+		<text><![CDATA[Configuration des paramètres de base du routeur avec l&apos;interface en ligne de commande IOS]]></text>
+	</component>
+	
+</textcomponents>

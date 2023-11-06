@@ -1,0 +1,1 @@
+La figure présente la syntaxe pour supprimer un VLAN.  La figure montre également la sortie de la commande « show v. lan brief » utilisée pour vérifier que le VLAN a été supprimé.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.1.4.2 Position de l’ACL standard</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.1.4.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Position de l’ACL standard</h1>
+        <div>
+          <p>La topologie dans la figure est utilisée pour décrire le placement d'une liste de contrôle d'accès standard. L'administrateur souhaite empêcher le trafic provenant du réseau 192.168.10.0/24 d'atteindre le réseau 192.168.30.0/24. </p>
+          <p></p>
+          <p></p>
+          <p>La figure représente deux interfaces sur R3, sur lesquelles il est possible d'appliquer la liste de contrôle d'accès standard conformément aux instructions de placement de base : </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface S0/0/1 sur R3</b> : l'application d'une liste de contrôle d'accès standard pour empêcher le trafic provenant du réseau 192.168.10.0/24 d'accéder à l'interface S0/0/1 empêche ce trafic d'accéder à 192.168.30.0/24 et à tous les autres réseaux accessibles par R3, y compris le réseau 192.168.31.0/24. L'objectif de la liste de contrôle d'accès étant de filtrer le trafic destiné uniquement au réseau 192.168.30.0/24, aucune liste de contrôle d'accès standard ne doit être appliquée à cette interface.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Interface G0/0 de R3</b> : l'application de la liste de contrôle d'accès standard au trafic sortant de l'interface G0/0 filtre les paquets provenant de 192.168.10.0/24 et destinés à 192.168.30.0/24. Cela n'affecte pas les autres réseaux accessibles par R3. Les paquets provenant de 192.168.10.0/24 peuvent toujours atteindre le réseau 192.168.31.0/24.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un réseau de trois routeurs dans un triangle.  R-2 est au sommet du triangle et a une connexion WAN série à R-1 et à R-3.  Il n’y a pas de connexion directe entre R1 et R3.  Les routeurs R-1 et R-3 ont chacun deux interfaces Gigabit actives pour des segments de réseau local.  L'objectif est d'empêcher tout le trafic provenant de R-1 d'atteindre R-3. La liste de contrôle d'accès est placée sur l'interface de sortie dans la direction sortante sur le routeur R-3.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

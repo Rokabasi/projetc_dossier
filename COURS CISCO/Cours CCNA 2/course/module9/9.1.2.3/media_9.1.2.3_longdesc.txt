@@ -1,0 +1,1 @@
+Cette animation affiche deux ordinateurs connectés à un routeur NAT. Les ordinateurs ont besoin d’accéder à Internet.  Lorsque les deux ordinateurs tentent de se connecter de l’extérieur, le routeur NAT leur attribue l’adresse IP de l’interface externe, avec un numéro de port.  Ceci permet de mettre en évidence le processus de PAT.

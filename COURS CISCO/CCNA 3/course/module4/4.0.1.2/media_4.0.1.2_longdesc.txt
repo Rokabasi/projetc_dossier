@@ -1,0 +1,1 @@
+La figure montre trois personnes se tenant à côté d'un rack de routeurs. La légende indique qu'EtherChannel est une technologie qui permet de créer des liaisons logiques en combinant les services de plusieurs liaisons physiques.

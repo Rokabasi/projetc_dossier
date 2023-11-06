@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.1.4 Fonctionnement des états de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement des états de liens</h1>
+        <div>
+          <p>Pour mettre à jour les informations de routage, les routeurs OSPF effectuent le processus de routage à état de liens générique qui suit afin d'atteindre un état de convergence : </p>
+          <p></p>
+          <p>1. Établir les contiguïtés de voisinage (Figure 1) - Les routeurs compatibles OSPF doivent se reconnaître mutuellement sur le réseau avant de pouvoir partager des informations. Un routeur compatible OSPF envoie des paquets Hello à partir des interfaces compatibles OSPF pour déterminer si des voisins se trouvent sur ces liens. Si un voisin est présent, le routeur compatible OSPF tente d'établir une contiguïté de voisinage avec celui-ci. </p>
+          <p></p>
+          <p>2. Échanger des paquets LSA (Link-State Advertisement) (Figure 2) - Une fois que les contiguïtés ont été établies, les routeurs échangent ensuite des paquets LSA. Les LSA contiennent l'état et le coût de chaque lien connecté directement. Les routeurs transmettent leurs LSA aux voisins contigus. Les voisins contigus recevant des LSA les diffusent immédiatement aux autres voisins connectés directement, jusqu'à ce que tous les routeurs de la zone aient tous les LSA.</p>
+          <p></p>
+          <p>3. Établir la table topologique (Figure 3) - Une fois les paquets LSA reçus, les routeurs compatibles OSPF créent la table topologique (LSDB) sur base des paquets LSA reçus. Cette base de données se retrouve alors à stocker toutes les informations relatives à la topologie du réseau.</p>
+          <p></p>
+          <p>4. Exécuter l'algorithme SPF (Figures 4 et 5) - Les routeurs exécutent ensuite l'algorithme SPF. Les engrenages dans la figure sont utilisés pour indiquer le fonctionnement de l'algorithme SPF. L'algorithme SPF crée l'arborescence SPF. </p>
+          <p></p>
+          <p>Le contenu de l'arborescence SPF R1 apparaît dans la Figure 6.</p>
+          <p></p>
+          <p>Les chemins les plus appropriés sont fournis à la table de routage IP à partir de l'arborescence SPF. La route sera insérée dans la table de routage à moins qu'il existe une route source vers le même réseau avec une distance administrative inférieure, telle qu'une route statique. Les décisions de routage sont prises en fonction des entrées de la table de routage.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente quatre routeurs disposés en diamant. Chaque routeur est directement connecté à ses deux routeurs voisins.  Un routeur se trouve au centre du diamant et est connecté à deux des autres routeurs.  La figure affiche les paquets Hello envoyés et reçus par les routeurs voisins. La Figure 2 affiche les paquets LSA (Link-State Advertisement) que tous les routeurs envoient et reçoivent. La Figure 3 présente un routeur qui commencer à créer la table topologique, qui est actuellement vide. La Figure 4 montre les engrenages d'une roue pour illustrer que le routeur utilise l'algorithme Shortest Path First (SPF) lors de la création de la table topologique. La Figure 5 montre un routeur relié à plusieurs ramifications comme dans un arbre généalogique.  Cela représente l'arborescence SPF. La Figure 6 répertorie le contenu de l'arborescence SPF dans un tableau.  La liste contient tous les réseaux de destination, le chemin le plus court pour atteindre ces réseaux et le coût total de chaque chemin.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

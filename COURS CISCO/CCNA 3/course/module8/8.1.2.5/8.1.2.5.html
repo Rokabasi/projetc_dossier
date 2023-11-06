@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.2.5 Les mises à jour d&#x0027;état de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les mises à jour d&#x0027;état de liens</h1>
+        <div>
+          <p>Les routeurs échangent initialement des paquets DBD de type 2, ce qui correspond à une liste abrégée de la LSDB du routeur expéditeur qui est utilisée par les routeurs destinataires à des fins de vérification sur base de la LSDB locale.</p>
+          <p></p>
+          <p>Un paquet LSR de type 3 est utilisé par les routeurs destinataires pour demander plus d'informations sur une entrée dans la DBD. </p>
+          <p></p>
+          <p>Le paquet LSU de type 4 est utilisé pour répondre à un paquet LSR.</p>
+          <p></p>
+          <p>Un paquet de type 5 permet d'accuser réception d'un paquet LSU de type 4.</p>
+          <p></p>
+          <p>Les paquets LSU sont également utilisés pour transmettre des mises à jour de routage OSPF, telles que des modifications de liens. Plus spécifiquement, un paquet LSU peut contenir 11 types différents de paquets LSA OSPFv2, comme indiqué dans la figure. OSPFv3 a renommé plusieurs de ces paquets LSA et comporte également deux paquets LSA supplémentaires.</p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> la différence entre les termes LSU et LSA n'est pas évidente, car ils sont souvent utilisés l'un pour l'autre. Toutefois, un paquet LSU contient un ou plusieurs paquets LSA.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure représente un tableau répertoriant et décrivant les cinq types de paquets OSPF.  La figure inclut un deuxième tableau qui détaille les onze types de paquets LSA.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

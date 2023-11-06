@@ -1,0 +1,1 @@
+La figure présente deux commutateurs multicouches connectés à un seul commutateur.  Chaque connexion utilise un canal Ether.

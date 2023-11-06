@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.3.1 Configuration des paramètres de base du routeur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration des paramètres de base du routeur</h1>
+        <div>
+          <p>Les routeurs et les commutateurs Cisco ont beaucoup de points communs. Ils prennent en charge le même système d'exploitation de modes, les mêmes structures de commandes et comptent de nombreuses commandes similaires. En outre, les deux périphériques présentent des étapes de configuration initiale similaires. </p>
+          <p></p>
+          <p>Par exemple, les tâches de configuration suivantes doivent toujours être exécutées :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Attribuer un nom au périphérique </b>: (Figure 1) cela permettra de le distinguer des autres routeurs.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Sécuriser l'accès à la gestion </b>: (Figure 2) cela sécurise l'accès à l'exécution privilégiée, le mode d'exécution utilisateur et l'accès à distance.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Configurer une bannière </b>: (Figure 3) cela fournit une mention légale concernant les accès non autorisés.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Enregistrez toujours les modifications sur un routeur comme illustré dans la Figure 4 et vérifiez la configuration de base et le fonctionnement du routeur. </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 5 pour configurer le routeur R2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente la commande utilisée pour configurer un nom d'hôte sur un routeur.  Les commandes commencent à partir du mode d'exécution utilisateur.  La première commande est « configure terminal » pour ensuite passer au mode de configuration globale.  La commande suivante est « hostname R1 ».  Le nom d'hôte du routeur est maintenant configuré. La Figure 2 configure le routeur pour exiger des mots de passe pour l'accès.  Les commandes commencent en mode de configuration globale.  La première commande définit un mot de passe sur le routeur en mode d'autorisation d'accès ; il s'agit de « enable secret class ».  Le mot clé secret dit au routeur de chiffrer le mot de passe dans le fichier de configuration, et le mot de passe utilisé est « class ».  Ensuite le routeur passe au mode de configuration de console avec la commande « line console 0 ».  Une fois en mode de configuration de console, la commande pour définir un mot de passe est « password cisco » et « cisco » est le mot de passe.  La commande suivante indique au routeur que le mot de passe est requis pour la connexion et que la commande utilisée est « login ».  Ensuite le routeur passe au mode de configuration de lignes de terminal avec la commande de ligne « v.t.y. 0 4 ».  L’accès Telnet sur cinq connexions sera par la suite restreint.  Une fois en mode de configuration de lignes de terminal, la commande pour définir un mot de passe est « password cisco » et « cisco » est le mot de passe.  La commande suivante indique au routeur que le mot de passe est requis pour la connexion et que la commande utilisée est « login ».  La commande suivante demande au routeur de chiffrer tous les mots de passe dans le fichier de configuration.  La commande est exécutée en mode de configuration globale ; il s'agit de « service password-encryption ». La Figure 3 configure un message de bannière que le routeur affiche lors de la connexion d’un utilisateur. La commande s’exécute en mode de configuration globale ; il s’agit de « banner motd $AUTHORIZED ACCESS ONLY$ ».  Le symbole du dollar ($) est utilisé pour indiquer au routeur le début et la fin du message de bannière.  Le symbole peut être n'importe quel symbole, mais il ne peut pas être dans le message. La Figure 4 illustre la commande utilisée pour enregistrer le fichier de configuration de la mémoire vive vers la mémoire vive non volatile.  La commande est exécutée en mode d'exécution privilégié ; il s'agit de « copy running-config startup-config ». La Figure 5 est un exercice interactif qui permet à l'étudiant de configurer un nom d'hôte, de limiter l'accès grâce à des mots de passe et de configurer une bannière sur un routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

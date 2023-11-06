@@ -1,0 +1,1 @@
+La figure présente la table de routage pour le routeur R-1. La table répertorie quatre réseaux directement connectés, sept réseaux distants, l'interface de sortie et le coût.

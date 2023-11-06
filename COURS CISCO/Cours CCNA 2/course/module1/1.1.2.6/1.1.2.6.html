@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.6 Accès à la console</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Accès à la console</h1>
+        <div>
+          <p>Dans un environnement de production, des périphériques d'infrastructure sont couramment utilisés à distance à l'aide de Secure Shell (SSH) ou du protocole de transfert hypertexte sécurisé (HTTPS). L'accès à la console n'est vraiment nécessaire que lors de la configuration initiale d'un périphérique, ou si l'accès distant échoue.</p>
+          <p></p>
+          <p>L'accès à la console nécessite :</p>
+          <p>
+            <ul>
+              <li>
+                <b>Câble de console :</b> câble série RJ-45 à DB-9 ou câble série USB</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Logiciel d'émulation de terminal</b> : Tera Term, PuTTY, HyperTerminal </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le câble est connecté entre le port série de l'hôte et le port de console du périphérique. La plupart des ordinateurs de bureau et portables ne comportent plus de ports série intégrés. Si l'hôte n'est pas équipé d'un port série, le port USB permet d'établir une connexion console. Un adaptateur spécial USB vers RS-232 compatible port série est requis pour utiliser le port USB. </p>
+          <p></p>
+          <p>Le routeur à services intégrés Cisco ISR G2 prend en charge une connexion de console série USB. Pour établir la connectivité, USB Type-A vers USB Type-B (USB Mini-B) est requis, ainsi qu'un pilote de périphérique du système d'exploitation. Ce pilote de périphérique est disponible sur <a href="http://www.cisco.com/" target="_blank">www.cisco.com</a>. Bien que ces routeurs possèdent deux ports de console, un seul peut être actif à la fois. Lorsque vous branchez un câble au port de console USB, le port RJ-45 devient inactif. Lorsque vous retirez le câble USB du port USB, le port RJ-45 devient actif.</p>
+          <p></p>
+          <p>Le tableau de la Figure 1 récapitule les conditions requises pour la connexion console. La Figure 2 présente les différents ports et câbles requis.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 désigne un tableau répertoriant les exigences de connexion de console des routeurs Cisco.  Les en-têtes de colonnes sont les suivants : port sur l'ordinateur, câble requis, port sur I.S.R. et émulation de terminal.  Par exemple, utiliser un port série sur un ordinateur nécessite un câble de console adaptateur RJ-45 à DB-9 pour se connecter au port de console RJ-45 sur le routeur.  L'un des programmes d'émulation de terminal Tera Term ou Putty peut être utilisé. La Figure 2 présente le même tableau, mais avec des images des ports et des câbles.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

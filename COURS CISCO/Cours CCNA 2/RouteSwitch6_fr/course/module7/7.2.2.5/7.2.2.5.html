@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.2.5 Statistiques de la liste de contrôle d&#x0027;accès</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Statistiques de la liste de contrôle d&#x0027;accès</h1>
+        <div>
+          <p>Une fois que la liste de contrôle d'accès a été appliquée à une interface et qu'elle a été testée, la commande <b>show access-lists</b> affiche les statistiques de chaque instruction ayant obtenu une ou plusieurs correspondances. Dans le résultat de la Figure 1, notez que certaines des instructions ont trouvé des correspondances. Lorsque du trafic qui devrait correspondre à une instruction de liste de contrôle d'accès est généré, les correspondances affichées dans le résultat de la commande <b>show access-lists</b> doivent augmenter. Dans cet exemple, si la commande ping est envoyée de PC1 vers PC3 ou PC4, le résultat affiche une augmentation des correspondances avec l'instruction de refus de la liste de contrôle d'accès 1. </p>
+          <p></p>
+          <p>Les statistiques de correspondance sont enregistrées pour les instructions d'autorisation et de refus. Cependant, n'oubliez pas que la dernière instruction de toutes les listes de contrôle d'accès est un refus global implicite. Cette instruction n'apparaît pas dans la commande <b>show access-lists</b> et donc aucune statistique n'est visible concernant cette instruction. Pour afficher les statistiques de l'instruction implicite « deny any », vous pouvez configurer l'instruction manuellement pour la faire apparaître dans le résultat. </p>
+          <p></p>
+          <p>Lors du test d'une liste de contrôle d'accès, vous pouvez remettre les compteurs à zéro à l'aide de la commande <b>clear access-list counters</b>. Cette commande peut être utilisée seule ou avec le numéro ou le nom d'une liste de contrôle d'accès spécifique. Comme le montre la Figure 2, cette commande remet à zéro les compteurs statistiques d'une liste de contrôle d'accès.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre comment afficher les statistiques de la liste de contrôle d'accès.  La figure montre la sortie de la commande « show access-lists » en mode d'exécution privilégié.  La sortie répertorie les lignes pour chaque liste de contrôle d'accès et le nombre de correspondances pour chaque ligne.  Par exemple, la ligne 10 de la liste numéro 1 est suivie des mots : 4 matches (correspondances).  Cela signifie qu’il y avait quatre paquets qui ont satisfait à la condition de la ligne 10.  Dans la figure, la requête ping envoyée satisfait la condition de la ligne 10, ce qui est signalé dans les statistiques qui indiquent que le nombre de correspondances a augmenté. La Figure 2 affiche l'utilisation de la commande « clear access-list counters 1 ». La sortie de la commande « show access-lists » ne signale plus de correspondance pour la liste de contrôle d'accès.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+La figure montre un commutateur et quatre destinations pour les messages Syslog : tampon de journalisation, ligne de console, ligne de terminal et serveur Syslog.

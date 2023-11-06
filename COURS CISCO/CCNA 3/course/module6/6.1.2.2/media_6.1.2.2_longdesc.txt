@@ -1,0 +1,1 @@
+La figure présente trois routeurs interconnectés.  Un paquet Hello se trouve entre chacun de ces routeurs.  Un tableau répertorie les minuteurs Hello pour différents débits de liaison.  La liaison T1 (ou d'un débit inférieur) envoie les paquets Hello toutes les soixante secondes.  Une liaison plus rapide que T1 envoie les paquets Hello toutes les cinq secondes.

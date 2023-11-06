@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.1 Réglage de l&#x0027;horloge système</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Réglage de l&#x0027;horloge système</h1>
+        <div>
+          <p>L'horloge logicielle d'un routeur ou d'un commutateur se déclenche au démarrage du système et constitue votre principale source horaire du système. Il est important de synchroniser l'heure sur tous les périphériques du réseau, car tous les aspects de gestion, sécurisation, dépannage et planification des réseaux nécessitent un horodatage précis. Si l'heure n'est pas synchronisée entre les différents périphériques, il vous sera impossible de déterminer l'ordre des événements et leurs causes.</p>
+          <p></p>
+          <p>En général, les paramètres de date et d'heure d'un routeur ou d'un commutateur peuvent être configurés de l'une des manières suivantes :</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>Configurez manuellement la date et l'heure, comme illustré dans la figure</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Configuration du protocole NTP (Network Time Protocol)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>À mesure qu'un réseau se développe, il devient difficile de s'assurer que tous les périphériques de l'infrastructure fonctionnent de manière synchronisée. Même dans un environnement réseau de petite taille, la méthode manuelle n'est pas idéale. Si un routeur redémarre, comment s'assurer que sa date et son horodatage soient suffisamment précis?</p>
+          <p></p>
+          <p>La meilleure solution consiste à configurer le protocole NTP sur le réseau. Ce protocole permet aux routeurs du réseau de synchroniser leurs paramètres temporels avec un serveur NTP. Un groupe de clients NTP qui obtient des informations d'heure et de date depuis une source unique présentera davantage de cohérence dans ses paramètres temporels. Lorsque le protocole NTP est mis en œuvre sur le réseau, il peut être configuré de sorte à se synchroniser à une horloge maître privée ou à un serveur NTP publiquement disponible sur Internet.</p>
+          <p></p>
+          <p>Le protocole NTP utilise le port UDP 123 et est décrit dans le document RFC 1305.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Le routeur R1 est configuré avec la commande « clock set 20:36:00 dec 11 2015 ». Un message Syslog indique que l'horloge a été mise à jour</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

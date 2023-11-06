@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.4.1 Vérification des paramètres d&#x0027;interface</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.4.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérification des paramètres d&#x0027;interface</h1>
+        <div>
+          <p>Il existe plusieurs commandes <b>show</b> permettant de vérifier le fonctionnement et la configuration d'une interface. Les trois commandes suivantes sont particulièrement utiles pour identifier rapidement l'état d'une interface :</p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface brief </b>- Affiche un résumé de toutes les interfaces, notamment l'adresse IPv4 de l'interface et son état de fonctionnement actuel. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip route </b>- Affiche le contenu de la table de routage IPv4 stocké dans la mémoire vive. Dans CISCO IOS 15, les interfaces actives doivent apparaître dans la table de routage avec deux entrées associées identifiées par le code « <b>C</b> » (connecté) ou « <b>L</b> » (local). Dans les versions précédentes, une seule entrée avec le code « <b>C</b> » apparaît.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show running-config interface </b>
+                <i>id d'interface</i>
+                <b></b>- Affiche les commandes configurées sur l'interface spécifiée. </li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 1 illustre le résultat de la commande <b>show ip interface brief</b>. Il ressort que les interfaces LAN et la liaison WAN sont toutes activées et opérationnelles, comme indiqué par l'état « up » et le protocole « up ». Un résultat différent révèle un problème de configuration ou de câblage.</p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : dans la Figure 1, l'interface Embedded-Service-Engine0/0 s'affiche parce que les routeurs à services intégrés Cisco ISR G2 sont équipés de processeurs à double cœur sur la carte mère. L'interface Embedded-Service-Engine0/0 sort du cadre de ce cours.</p>
+          <p></p>
+          <p>La figure 2 illustre le résultat de la commande <b>show ip route</b>. Notez bien les trois entrées réseau connecté directement et les trois entrées d'interface de route d'hôte locale. Une route d'hôte local a une distance administrative de 0. Elle dispose également d'un masque /32 pour IPv4 et d'un masque /128 pour IPv6. La route d'hôte local est réservée aux routes du routeur possédant l'adresse IP. Elle autorise le routeur à traiter les paquets destinés à cette adresse IP.</p>
+          <p></p>
+          <p>La Figure 3 illustre le résultat de la commande <b>show running-config interface</b>. Le résultat présente les commandes actuelles configurées sur l'interface spécifiée. </p>
+          <p></p>
+          <p>Les deux commandes suivantes permettent de recueillir des informations plus détaillées sur l'interface : </p>
+          <p>
+            <ul>
+              <li>
+                <b>show interfaces </b>- Affiche des informations sur l'interface et le nombre de flux de paquets pour toutes les interfaces du périphérique. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>show ip interface </b>- Affiche les informations relatives à l'IPv4 pour toutes les interfaces d'un routeur.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe des Figures 4 et 5 pour vérifier les interfaces de R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre la sortie de l'exécution de la commande « show ip interfaces brief » sur un routeur.  La sortie comprend deux interfaces Gigabit, deux interfaces série, l’adresse ip et l’état opérationnel actuel de chacun. La Figure 2 illustre la sortie de l'exécution de la commande « show ip route » sur un routeur.  Ce routeur a trois interfaces configurées, il existe donc trois routes connectées désignées par la lettre C dans la première colonne et trois routes locales désignées par la lettre L. La Figure 3 affiche la sortie de la commande « show running-config interface Gigabit Ethernet 0/0 ».  Cette sortie indique plus d'informations détaillées concernant l'interface spécifiée, dont le masque de sous-réseau. La Figure 4 est une activité interactive qui permet à l'étudiant d'exécuter la commande « show interfaces Gigabit Ethernet 0/0 » et d'observer la sortie. La Figure 5 est une activité interactive qui permet à l’étudiant d’exécuter la commande « show ip interface Gigabit Ethernet 0/0 » et d’observer la sortie.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

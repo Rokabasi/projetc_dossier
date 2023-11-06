@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.2.2.4 Vérifier les LSDB du protocole OSPFv2 à zones multiples</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.2.2.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Vérifier les LSDB du protocole OSPFv2 à zones multiples</h1>
+        <div>
+          <p>Utilisez la commande <b>show ip ospf database</b> pour vérifier le contenu de la LSDB OSPFv2.</p>
+          <p></p>
+          <p>Plusieurs options sont disponibles avec la commande <b>show ip ospf database</b>.</p>
+          <p></p>
+          <p>Par exemple, la commande illustrée à la Figure 1 affiche le contenu de la LSDB de R1. Notez que R1 dispose d'entrées pour la zone 0 et la zone 1, car les routeurs ABR doivent entretenir une LSDB distincte pour chaque zone à laquelle ils sont associés. Dans le résultat, la section Router Link States dans la zone 0 identifie trois routeurs. La section Summary Net Link States identifie les réseaux appris à partir des autres zones et le voisin qui a annoncé le réseau.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour vérifier la base de données LSDB de R2 et R3, à l'aide de la commande <b>show ip ospf database</b>. R2 possède des interfaces dans la zone 0 uniquement ; par conséquent, une seule LSDB est requise. Comme R1, R3 contient deux LSDB, car il s'agit d'un routeur ABR.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de l'exécution de la commande « show ip ospf database » sur un routeur OSPF à zones multiples.  Elle met en évidence les états de liens du routeur dans la base de données LSDB. La Figure 2 est un exercice interactif qui permet au stagiaire d'utiliser la commande « show ip ospf database » sur deux routeurs OSPF à zones multiples connectés.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

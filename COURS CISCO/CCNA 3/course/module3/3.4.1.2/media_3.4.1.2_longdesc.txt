@@ -1,0 +1,1 @@
+La figure montre trois commutateurs interconnectés avec des liaisons trunk.  Le commutateur un est le pont racine pour le VLAN dix et le commutateur trois le pont racine pour le VLAN vingt.

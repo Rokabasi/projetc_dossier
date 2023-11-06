@@ -1,0 +1,1 @@
+La figure affiche deux routeurs interconnectés par le biais d'une liaison série WAN.  Chaque routeur comprend deux réseaux locaux connectés aux interfaces LAN.  Tout réseau attribué à l’interface locale d’un routeur est considéré comme un réseau connecté directement et tous les réseaux connectés à d’autres routeurs sont considérés comme des réseaux distants.

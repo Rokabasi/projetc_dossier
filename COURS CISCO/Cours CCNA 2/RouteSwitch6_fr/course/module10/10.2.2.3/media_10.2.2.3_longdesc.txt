@@ -1,0 +1,1 @@
+La Figure 1 affiche un tableau avec les noms, les niveaux et les descriptions de gravité de Syslog. La Figure 2 affiche un tableau avec les champs et les descriptions du message Syslog.

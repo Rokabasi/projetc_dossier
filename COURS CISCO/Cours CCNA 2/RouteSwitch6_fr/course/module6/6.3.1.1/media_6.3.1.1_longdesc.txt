@@ -1,0 +1,1 @@
+La figure montre une topologie avec deux hôtes connectés à un commutateur. Le commutateur se connecte ensuite à un routeur en utilisant deux câbles. Un hôte se connecte via un sous-réseau sur VLAN 10 et le deuxième hôte se connecte via un deuxième sous-réseau sur VLAN 30.

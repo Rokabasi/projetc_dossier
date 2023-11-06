@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.2.1.5 Exécution de la convergence</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.2.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Exécution de la convergence</h1>
+        <div>
+          <p>Le réseau a convergé lorsque tous les routeurs disposent d'informations complètes et précises sur l'ensemble du réseau, comme illustré sur la figure. Le temps de convergence est le temps nécessaire aux routeurs pour partager des informations, calculer les meilleurs chemins et mettre à jour leurs tables de routage. Un réseau n’est pas complètement opérationnel tant qu’il n’a pas convergé. Par conséquent, le temps de convergence doit être bref pour la plupart des réseaux. </p>
+          <p></p>
+          <p>La convergence est à la fois collaborative et indépendante. Les routeurs partagent des informations les uns avec les autres, mais doivent calculer chacun de leur côté l'impact des modifications de la topologie sur leurs propres routes. Comme ils développent un accord avec la nouvelle topologie de manière indépendante, il est dit qu’ils convergent sur ce consensus. </p>
+          <p></p>
+          <p>Les propriétés de convergence incluent la vitesse de propagation des informations de routage et le calcul des chemins optimaux. La vitesse de propagation désigne le temps nécessaire aux routeurs du réseau pour transférer les informations de routage.  </p>
+          <p></p>
+          <p>Les protocoles de routage peuvent être classés en fonction de leur vitesse de convergence : une convergence rapide améliore un protocole de routage. En général, les protocoles plus anciens, tels que le protocole RIP, convergent lentement, tandis que les protocoles modernes, tels que les protocoles EIGRP et OSPF, convergent plus rapidement.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente les informations de base figurant dans la table de routage pour chaque routeur.  Chaque routeur possède, dans sa table, les quatre réseaux. La seule différence entre eux est le nombre de sauts pour chaque réseau.  Les deux réseaux de R1 se trouvent à zéro saut, la liaison WAN entre R2 et R3 se trouve à un saut de R1 et le LAN de l'interface Ethernet de R3 se trouve à deux sauts de R1.  Les deux réseaux de R-2 se trouvent à zéro saut et chacun des LAN des interfaces Ethernet de R-1 et R-3 se trouve à un saut de distance.  Les deux réseaux de R-3 se trouvent à zéro saut, la liaison WAN entre R-2 et R-1 se trouve à un saut de distance et le LAN de l'interface Ethernet de R-1 se trouve à deux sauts de distance. La figure 2 présente trois routeurs connectés en triangle par des liaisons WAN série. Chaque routeur est connecté aux deux autres routeurs.  Chaque routeur a deux liaisons série actives plus une interface Ethernet. Il y a au total six adresses réseau dans la figure.  La convergence correspond au temps nécessaire pour que tous les routeurs disposent d'une image complète et précise du réseau dans leurs tables de routage.  Si RIP était utilisé dans ce réseau et qu'un réseau tombait en panne, le temps de convergence serait plus long qu'avec EIGRP ou OSPF.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

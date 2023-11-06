@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.1.4 Les routeurs interconnectent les réseaux</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Les routeurs interconnectent les réseaux</h1>
+        <div>
+          <p>La plupart des utilisateurs ignorent la présence de nombreux routeurs sur leur propre réseau ou sur Internet. Ils veulent pouvoir accéder aux pages Web, envoyer des e-mails et télécharger de la musique, que le serveur soit accessible sur leur propre réseau ou sur un autre réseau. Les professionnels des réseaux savent que c'est le routeur qui est responsable du transfert de paquets d'un réseau à l'autre, de la source à la destination.</p>
+          <p></p>
+          <p>Un routeur relie plusieurs réseaux, c'est-à-dire qu'il dispose de plusieurs interfaces appartenant chacune à un réseau IP différent. Lorsqu'un routeur reçoit un paquet IP sur une interface, il détermine quelle interface utiliser pour transférer le paquet vers sa destination. L'interface qu'utilise le routeur pour transférer le paquet peut être la destination finale, mais aussi un réseau connecté à un autre routeur utilisé pour atteindre le réseau de destination.</p>
+          <p></p>
+          <p>Dans l'animation de la Figure 1, les routeurs R1 et R2 assurent la réception du paquet sur un réseau et son transfert d'un autre réseau vers le réseau de destination.</p>
+          <p></p>
+          <p>Chaque réseau auquel un routeur se connecte nécessite généralement une interface séparée. Ces interfaces servent à accueillir une combinaison de réseaux locaux (LAN) et de réseaux étendus (WAN). Les réseaux locaux sont généralement des réseaux Ethernet comportant des périphériques tels que PC, imprimantes et serveurs. Les réseaux étendus sont utilisés pour relier des réseaux dans une zone géographique vaste. Par exemple, une connexion WAN est souvent utilisée pour relier un réseau local au réseau du fournisseur d'accès Internet (FAI).</p>
+          <p></p>
+          <p>Notez que chaque site de la Figure 2 requiert l'utilisation d'un routeur pour l'interconnexion à d'autres sites. Même le bureau à domicile nécessite un routeur. Dans cette topologie, le routeur situé au bureau à domicile est un périphérique spécialisé offrant plusieurs services pour le réseau domestique.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre deux LAN. Chaque LAN a un routeur. Les LAN sont connectés les uns aux autres par un lien WAN. Chaque routeur a un commutateur connecté à un port Ethernet, et chaque commutateur a plusieurs périphériques locaux qui y sont connectés.  Une animation montre un paquet en cours d’envoi depuis un ordinateur sur un LAN vers un ordinateur sur un autre LAN.  Le paquet circule vers le commutateur, puis vers le routeur qui le transfère au port série et le transmet à l’autre routeur.  Ce routeur reçoit le paquet sur l'interface série et le transfère à son interface Ethernet.  Le paquet est ensuite transféré au commutateur, qui le transmet au périphérique de destination. La Figure 2 illustre trois LAN tous interconnectés par connexions WAN.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.1.1.5 Protocoles de routage par classe</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.1.1.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Protocoles de routage par classe</h1>
+        <div>
+          <p>La principale distinction entre les protocoles de routage par classe et sans classe réside dans le fait que les premiers n'envoient pas d'informations sur le masque de sous-réseau dans les mises à jour de routage. Les protocoles de routage sans classe incluent les informations de masque de sous-réseau dans les mises à jour de routage. </p>
+          <p></p>
+          <p>Les deux protocoles de routage IPv4 développés à l'origine étaient RIPv1 et IGRP. Ils ont été créés lorsque des adresses réseau ont été attribuées en fonction des classes (c'est-à-dire, les classes A, B ou C). À cette époque, un protocole de routage n'avait pas besoin d'inclure le masque de sous-réseau dans la mise à jour de routage, parce que le masque de réseau pouvait être déterminé en fonction du premier octet de l'adresse réseau.  </p>
+          <p></p>
+          <p>
+            <b>Remarque :</b> seuls les protocoles RIPv1 et IGRP sont des protocoles par classe. Tous les autres protocoles de routage IPv4 et IPv6 sont sans classe. L'adressage par classe n'a jamais fait partie du protocole IPv6. </p>
+          <p></p>
+          <p>Le fait que les protocoles RIPv1 et IGRP n'incluent pas les informations de masque de sous-réseau dans leurs mises à jour signifie qu'ils ne peuvent pas fournir de masques de sous-réseau de longueur variable (VLSM) et de routage interdomaine sans classe (CIDR).  </p>
+          <p></p>
+          <p>Les protocoles de routage par classe créent également des problèmes sur les réseaux discontinus. On parle de « réseau discontinu » lorsque des sous-réseaux de la même adresse d'un réseau principal par classe sont séparés par une adresse réseau par classe différente.  </p>
+          <p></p>
+          <p>Pour illustrer les défauts du routage par classe, consultez la topologie de la Figure 1. Notez que les réseaux locaux de R1 (172.16.1.0/24) et R3 (172.16.2.0/24) sont tous deux des sous-réseaux du même réseau de classe B (172.16.0.0/16). Ils sont séparés par différents sous-réseaux par classe (192.168.1.0/30 et 192.168.2.0/30) des mêmes réseaux de classe C (192.168.1.0/24 et 192.168.2.0/24).</p>
+          <p></p>
+          <p>Lorsque R1 transmet une mise à jour à R2, le protocole RIPv1 n'inclut pas les informations de masque de sous-réseau avec la mise à jour ; il transmet uniquement l'adresse réseau de classe B 172.16.0.0.  </p>
+          <p></p>
+          <p>R2 reçoit et traite la mise à jour. Ensuite, il crée et ajoute une entrée pour le réseau de classe B 172.16.0.0/16 dans la table de routage, comme illustré dans la Figure 2.  </p>
+          <p></p>
+          <p>La Figure 3 montre que lorsque R3 transfère une mise à jour vers R2, il n'inclut pas non plus les informations de masque de sous-réseau et donc transmet uniquement l'adresse réseau par classe 172.16.0.0. </p>
+          <p></p>
+          <p>Dans la Figure 4, R2 reçoit et traite la mise à jour et ajoute une autre entrée pour l'adresse réseau par classe 172.16.0.0/16 à sa table de routage. Lorsqu'il y a deux entrées avec des métriques identiques dans la table de routage, le routeur partage la charge du trafic en parts égales entre les deux liens. On parle d'équilibrage de la charge.  </p>
+          <p></p>
+          <p>Comme l'illustre la Figure 5, cela a un impact négatif sur la connectivité avec un réseau non contigu. Notez le comportement erratique des commandes <b>ping</b> et <b>traceroute</b>.  </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 affiche trois routeurs connectés linéairement par des liens WAN.  R-1 est connecté à R-2 par une liaison WAN de série et il dispose d’un LAN sur une interface Ethernet.  Le LAN possède l'adresse réseau 172.16.1.0/24.  La liaison WAN possède l'adresse réseau 192.168.1.0/24.  R-2 est connecté à R3 par une liaison WAN de série et l'adresse réseau est 192.168.1.0/24.  R-3 dispose d'un LAN sur une interface Ethernet avec l'adresse réseau 172.16.2.0/24.  R-1 exécute RIP version 1. Par conséquent, après chaque période de 30 secondes, il envoie une mise à jour de routage comprenant l'adresse réseau 172.16.1.0 sans masque de sous-réseau.  La Figure 2 montre R-2 qui reçoit la mise à jour et ajoute le réseau annoncé par R-1 à sa table de routage ; comme il s'agit d'un réseau de classe B, l'adresse ajoutée est 172.16.0.0.  Il ajoutera le masque de sous-réseau avec /16 à la table étant donné que le réseau est un réseau de classe B.  Notez que le réseau réel sur R1 utilise /24. La Figure 3 montre R3 exécutant RIP version 1. Par conséquent, toutes les 30 secondes, il envoie une mise à jour de routage comprenant l'adresse réseau 172.16.2.0 sans masque de sous-réseau.  La Figure 4 montre R2 qui reçoit la mise à jour et ajoute le réseau annoncé par R-3 à sa table de routage ; comme il s'agit d'un réseau de classe B, l'adresse ajoutée est 172.16.0.0.  Il ajoutera le masque de sous-réseau avec /16 à la table étant donné que le réseau est un réseau de classe B.  La figure 5 présente le résultat de l'envoi d'une commande ping et de traceroute depuis R2 vers l'adresse 172.16.1.1.  Certaines des commandes Ping sont reçues et les autres sont perdues.  Ces résultats sont dus au fait que R-2 dispose de deux routes vers l'hôte 172.16.1.1, car la table de routage indique que le réseau de classe B 172.16.0.0 est accessible à partir des interfaces série 0/0/0 et 0/0/1.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

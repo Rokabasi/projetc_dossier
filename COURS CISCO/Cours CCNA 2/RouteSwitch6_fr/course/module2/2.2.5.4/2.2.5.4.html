@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.2.5.4 Configurer une route statique flottante IPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.2.5.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configurer une route statique flottante IPv6</h1>
+        <div>
+          <p>Les routes statiques flottantes IPv6 sont configurées en utilisant la commande de configuration globale <b>ipv6 route</b> et en spécifiant une distance administrative. Si aucune distance administrative n'est configurée, la valeur par défaut (1) est utilisée.</p>
+          <p></p>
+          <p>Consultez la topologie illustrée dans la figure 1. Dans ce scénario, la route par défaut préférentielle depuis le routeur R1 est celle vers le routeur R2. La connexion vers R3 doit être utilisée comme route de secours uniquement.</p>
+          <p></p>
+          <p>R1 est configuré avec une route statique IPv6 par défaut pointant vers R2. Étant donné qu'aucune distance administrative n'est configurée, la valeur par défaut (1) est utilisée pour cette route statique. R1 est également configuré avec une route statique flottante IPv6 par défaut pointant vers R3 avec une distance administrative de 5. Cette valeur est supérieure à la valeur par défaut de 1 ; par conséquent cette route flotte et n’est pas inscrite dans la table de routage, sauf si la route préférentielle échoue.</p>
+          <p></p>
+          <p>La Figure 2 vérifie que les deux routes statiques IPv6 par défaut sont dans la configuration en cours. La Figure 3 vérifie que la route statique IPv6 par défaut vers R2 est installée dans la table de routage. Notez que la route de secours vers R3 ne figure pas dans la table de routage.</p>
+          <p></p>
+          <p>Le processus pour tester la route statique flottante IPv6 est similaire à celui de la route statique flottante IPv4. Arrêtez les interfaces sur le routeur R2 afin de simuler une panne. Le routeur R1 installera la route vers le routeur R3 dans la table de routage et l’utilisera pour envoyer le trafic par défaut.</p>
+          <p></p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 montre un exemple du schéma standard de l’atelier avec une liaison supplémentaire entre le routeur R1 et le routeur R3.  La figure montre la syntaxe pour créer une route statique par défaut sur le routeur R1 en direction du routeur R2 et une autre en direction du routeur R3 avec une plus grande distance administrative de 5.  Cela permet de définir la première route comme la route préférentielle et la seconde en tant que route statique flottante. La Figure 2 montre la sortie de la commande « show i. p. route static » sur le routeur R1.  Seule la première route est affichée dans la sortie puisque c’est la route préférentielle. La Figure 3 constitue une ⁪activité interactive qui permet à l’apprenant de s’exercer dans la configuration de routes statiques flottantes.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

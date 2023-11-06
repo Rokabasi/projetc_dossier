@@ -1,0 +1,1 @@
+La figure affiche la syntaxe pour configurer une route statique par défaut en utilisant IPv6.

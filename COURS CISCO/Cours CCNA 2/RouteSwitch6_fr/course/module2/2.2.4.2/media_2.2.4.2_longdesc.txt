@@ -1,0 +1,1 @@
+Cette figure est basée sur le schéma standard de l’atelier. La figure affiche la syntaxe pour configurer une route statique par défaut sur le routeur R1, en pointant vers l’interface série sur le routeur R2.  La syntaxe est la suivante : « i. p. v. 6 route ::/0 followed by the next hop i. p. v. 6 address. »

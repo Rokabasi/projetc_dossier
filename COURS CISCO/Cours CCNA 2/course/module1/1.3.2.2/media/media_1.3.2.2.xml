@@ -1,0 +1,17 @@
+﻿<textcomponents>
+ <component id="ID_title">
+    <text><![CDATA[<b>Identificateurs d&apos;entrée de réseau connecté directement</b>]]></text>
+  </component>
+  <component id="ID_txt01">
+    <text><![CDATA[- Indique comment le réseau a été découvert par le routeur.]]></text>
+  </component>
+  <component id="ID_txt02">
+    <text><![CDATA[- Identifie le réseau de destination et la manière dont celui-ci est connecté.]]></text>
+  </component>
+  <component id="ID_txt03">
+    <text><![CDATA[- identifie l&apos;interface sur le routeur connecté au réseau de destination.]]></text>
+  </component>
+  <component id="ID_txt04">
+    <text><![CDATA[<b>Légende</b>]]></text>
+  </component>
+</textcomponents>

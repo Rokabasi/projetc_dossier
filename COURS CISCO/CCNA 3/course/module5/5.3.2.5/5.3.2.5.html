@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.5 Inondation de LSP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Inondation de LSP</h1>
+        <div>
+          <p>La quatrième étape du processus de routage à état de liens consiste à faire en sorte que chaque routeur diffuse le LSP à tous ses voisins, qui vont alors stocker l'ensemble des LSP reçus dans une base de données.</p>
+          <p></p>
+          <p>Chaque routeur diffuse ses informations d’états de liens à l’ensemble des routeurs à état de liens dans la zone de routage. Lorsqu’un routeur reçoit un LSP d’un routeur du voisinage, il l’envoie immédiatement à toutes les autres interfaces, exceptée celle par laquelle il a reçu le LSP. Ce processus crée un effet de diffusion de LSP à partir de tous les routeurs de la zone de routage.</p>
+          <p></p>
+          <p>Cliquez sur <b>Lecture</b> dans la figure pour afficher une animation sur la diffusion de paquets LSP.</p>
+          <p></p>
+          <p>Dans l'animation, notez la façon dont les paquets LSP sont diffusés presque immédiatement après avoir été reçus sans calculs intermédiaires. Les protocoles de routage à état de liens calculent l'algorithme SPF au terme de l'inondation. Par conséquent, les protocoles de routage à état de liens parviennent à une convergence très rapidement.</p>
+          <p></p>
+          <p>Souvenez-vous que les LSP n’ont pas besoin d’être envoyés de façon périodique. Un LSP doit être envoyé uniquement :</p>
+          <p>
+            <ul>
+              <li>Lors du démarrage initial du processus de protocole de routage sur ce routeur (par exemple, le redémarrage du routeur)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Lorsque la topologie a été modifiée (par exemple, en cas d'activation ou de désactivation d'un lien ou d'établissement ou de rupture d'une contiguïté entre voisins)</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Outre les données d'état de liens, un paquet LSP contient également d'autres informations, par exemple des numéros d'ordre et des données chronologiques, afin d'aider à gérer le processus d'inondation. Ces informations sont utilisées par chaque routeur pour déterminer si celui-ci a déjà reçu le LSP provenant d’un autre routeur ou si le LSP contient de nouvelles informations, par rapport à la base de données d’état des liaisons. Ce processus permet à un routeur de conserver uniquement les informations à jour dans sa base de données à état de liens.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente quatre routeurs disposés en diamant. Chaque routeur est directement connecté à ses deux routeurs voisins.  Un routeur se trouve au centre et est connecté à deux des autres routeurs.  La figure est une animation qui montre le routeur R-1 envoyant des paquets d'état de lien sur toutes les interfaces.  Chaque routeur destinataire diffuse immédiatement les paquets LSP lors de leur réception.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

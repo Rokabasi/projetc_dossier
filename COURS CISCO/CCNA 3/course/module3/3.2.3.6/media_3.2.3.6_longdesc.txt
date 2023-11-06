@@ -1,0 +1,1 @@
+Cette activité interactive permet au stagiaire de faire correspondre une description au type de Spanning Tree associé.   Les types de Spanning Tree incluent PVST + et Rapid PVS. + ou les deux.

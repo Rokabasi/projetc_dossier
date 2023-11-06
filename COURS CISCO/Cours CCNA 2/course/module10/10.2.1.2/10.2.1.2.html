@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>10.2.1.2 Fonctionnement du protocole NTP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_10.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement du protocole NTP</h1>
+        <div>
+          <p>Les réseaux NTP utilisent un système de sources temporelles hiérarchique. Chaque niveau de ce système hiérarchique est appelé strate. Le niveau de strate correspond au nombre de sauts à partir de la source faisant autorité. L'heure synchronisée est diffusée sur le réseau à l'aide du protocole NTP. La figure fournit un exemple de réseau NTP.</p>
+          <p></p>
+          <p>Serveurs NTP sur trois niveaux montrant les trois strates. La strate 1 est connectée aux horloges de la strate 0.</p>
+          <p></p>
+          <p>
+            <b>Strate 0</b>
+          </p>
+          <p></p>
+          <p>Un réseau NTP obtient l'heure à partir sources temporelles faisant autorité. Ces sources, également appelées périphériques de strate 0, sont des périphériques de suivi horaire haute précision censés être exacts et sans ou peu de retard. Les périphériques de strate 0 sont représentés par l'horloge sur la figure.</p>
+          <p></p>
+          <p>
+            <b>Strate 1</b>
+          </p>
+          <p></p>
+          <p>Les périphériques de strate 1 sont directement connectés aux sources temporelles faisant autorité. Ils représentent la principale référence temporelle du réseau.</p>
+          <p></p>
+          <p>
+            <b>Strate 2 et inférieure</b>
+          </p>
+          <p></p>
+          <p>Les serveurs de strate 2 sont connectés aux périphériques de strate 1 au moyen de connexions réseau. Les périphériques de strate 2, tels que les clients NTP, synchronisent leur horloge à l'aide des paquets NTP des serveurs de la strate 1. Ils peuvent également servir de serveurs pour les périphériques de la strate 3.</p>
+          <p></p>
+          <p>Les plus petits numéros de strate indiquent que le serveur est plus proche de la source temporelle autorisée que les plus grands numéros de strate. Plus le numéro de strate est grand, plus le niveau de strate est petit. Le nombre de sauts maximal est de 15. La strate 16, le niveau de strate le plus bas, indique qu'un périphérique n'est pas synchronisé. Les serveurs temporels de même niveau de strate peuvent être configurés de manière à agir en tant qu'homologues avec d'autres serveurs temporels de la même strate en vue de la sauvegarde ou de la vérification de l'heure.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">Ajouter la transcription des supports</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

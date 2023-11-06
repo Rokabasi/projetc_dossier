@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.3.3.1 Configuration de type router-on-a-stick : préparation</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.3.3.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Configuration de type router-on-a-stick : préparation</h1>
+        <div>
+          <p>Le routage inter-VLAN existant au moyen d’interfaces physiques se heurte à une limite de taille. Les routeurs disposent d’un nombre limité d’interfaces physiques pour se connecter aux différents LAN. À mesure que le nombre de VLAN augmente sur un réseau, la nécessité de posséder une interface de routeur physique par VLAN épuise rapidement la capacité du routeur.  Dans les grands réseaux, l’une des alternatives consiste à avoir recours au trunking VLAN et aux sous-interfaces. Le trunking VLAN permet à une seule interface physique de routeur d’acheminer le trafic de plusieurs VLAN. Cette technique est appelée router-on-a-stick et utilise des sous-interfaces virtuelles sur le routeur pour dépasser les limites matérielles reposant sur les interfaces physiques du routeur. </p>
+          <p></p>
+          <p>Les sous-interfaces sont des interfaces virtuelles basées sur un logiciel qui sont affectées à des interfaces physiques. Chaque sous-interface est configurée indépendamment avec sa propre adresse IP et sa propre longueur de préfixe. Cela permet à une seule interface physique de faire simultanément partie de plusieurs réseaux logiques. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : le terme longueur de préfixe peut être utilisé pour faire référence au masque de sous-réseau IPv4 si associé à une adresse IPv4, et la longueur de préfixe IPv6 si associé à une adresse IPv6.</p>
+          <p></p>
+          <p>Lors de la configuration du routage entre VLAN à l’aide du modèle « router-on-a-stick », l’interface physique du routeur doit être connectée à une liaison agrégée sur le commutateur adjacent. Sur le routeur, des sous-interfaces sont créées pour chaque VLAN unique sur le réseau. Chaque sous-interface reçoit une adresse IP spécifique selon son sous-réseau/VLAN et est également configurée pour étiqueter les trames en fonction du VLAN destinataire. Le routeur peut ainsi isoler le trafic de chaque sous-interface lorsqu’il retraverse la liaison vers le commutateur.</p>
+          <p></p>
+          <p>Fonctionnellement, le modèle router-on-a-stick est équivalent au modèle de routage inter-VLAN existant, mais au lieu d’interfaces physiques, il utilise les sous-interfaces d’une seule interface physique pour effectuer le routage.</p>
+          <p></p>
+          <p>Dans la figure, PC1 souhaite communiquer avec PC3. Le PC1 se trouve sur le VLAN 10 et le PC3 sur le VLAN 30. Pour communiquer avec le PC3, le PC1 doit acheminer ses données via les sous-interfaces du routeur R1. </p>
+          <p></p>
+          <p>Cliquez sur Lecture dans la figure pour voir comment des sous-interfaces sont utilisées pour le routage inter-VLAN. Lorsque l’animation s’interrompt, lisez le texte à gauche de la topologie. Cliquez à nouveau sur Lecture pour poursuivre l’animation.</p>
+          <p></p>
+          <p>L’utilisation de liaisons trunk et de sous-interfaces réduit le nombre de ports de routeur et de commutateur. Cela permet non seulement de réaliser une économie financière, mais peut également réduire la complexité de la configuration. Par conséquent, l’approche de sous-interface de routeur peut évoluer vers un plus grand nombre de VLAN qu’une conception basée sur une interface physique par VLAN.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure est une animation qui présente le processus du routage inter-VLAN utilisant le comportement de routage router-on-a-stick. Le processus inclut la découverte ARP pour découvrir les périphériques connectés et la propagation d’une trame monodiffusion dans l’infrastructure.  Une instruction indique que les trames circulant entre le commutateur et le routeur sont étiquetées, grâce à la configuration d’une liaison du commutateur aux sous-interfaces du routeur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

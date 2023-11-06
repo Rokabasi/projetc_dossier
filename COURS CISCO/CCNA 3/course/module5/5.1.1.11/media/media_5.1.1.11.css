@@ -1,0 +1,15 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+#txt_q4{
+	margin-top: 8px !important;
+}
+
+@media only screen and (device-width: 768px) {
+#mc_table{
+	height: 243px !important;
+}
+}

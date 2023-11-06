@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>3.3.3.2 Meilleure route = correspondance la plus longue</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_3.3.3.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Meilleure route = correspondance la plus longue</h1>
+        <div>
+          <p>Qu'entend-on par le routeur doit trouver la meilleure correspondance dans la table de routage ? La meilleure correspondance est égale à la correspondance la plus longue. </p>
+          <p></p>
+          <p>Pour obtenir une correspondance entre l'adresse IPv4 de destination d'un paquet et une route de la table de routage, l'adresse IPv4 du paquet et la route de la table de routage doivent partager un certain nombre de bits les plus à gauche identiques. Le masque de sous-réseau de la route dans la table de routage permet de déterminer le nombre minimum de bits les plus à gauche qui doivent correspondre. N'oubliez pas qu'un paquet IPv4 ne contient que l'adresse IPv4, et non le masque de sous-réseau. </p>
+          <p></p>
+          <p>La meilleure correspondance est la route de la table de routage qui possède le plus grand nombre de bits les plus à gauche correspondants à ceux de l'adresse IPv4 de destination du paquet. La route dotée du plus grand nombre de bits les plus à gauche correspondants (ou la plus longue correspondance) constitue toujours la route préférée.</p>
+          <p></p>
+          <p>Dans la figure, un paquet est destiné à 172.16.0.10. Le routeur a trois routes possibles qui correspondent à ce paquet : 172.16.0.0/12, 172.16.0.0/18 et 172.16.0.0/26. Parmi les trois routes, 172.16.0.0/26 est celle qui présente la plus longue correspondance et elle est choisie pour transférer le paquet. N’oubliez pas qu’une route est une correspondance lorsqu’elle possède au minimum le nombre de bits correspondants indiqués par le masque de sous-réseau de la route.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le processus de la vérification de la plus longue correspondance dans la table de routage.   L’adresse de destination pour le paquet est 172.16.0.10 et la première étape consiste à indiquer l’adresse au format binaire, qui est 10101100.00010000.00000000.00000000.00001010.  Il existe trois routes qui peuvent éventuellement être utilisées pour atteindre la destination, alors le routeur doit vérifier chaque route et comparer les valeurs binaires de gauche à droite. Celle qui correspond au plus de bits dans le masque de sous-réseau sera la route choisie.  Les trois choix sont un /12, un /18 et un /26.  Le paquet de destination correspond au plus grand nombre de bits avec le /26, ce sera donc la route sélectionnée.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

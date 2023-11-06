@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.7 Fonctionnement de DHCPv6</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Fonctionnement de DHCPv6</h1>
+        <div>
+          <p> Comme le montre la Figure 1, DHCPv6 avec et sans état commencent tous deux par un message AR ICMPv6 du routeur. Le message AR aurait pu être un message périodique ou avoir été sollicité par le périphérique à l'aide d'un message SR. </p>
+          <p></p>
+          <p>Si DHCPv6 avec ou sans état est indiqué dans le message AR, alors le périphérique démarre les communications DHCPv6 entre le client et le serveur.</p>
+          <p></p>
+          <p>
+            <b>Communications DHCPv6</b>
+          </p>
+          <p></p>
+          <p>Lorsque DHCPv6 avec ou sans état est indiqué par l'annonce de routeur, le processus DHCPv6 est invoqué. Les messages DHCPv6 sont envoyés via UDP. Les messages DHCPv6 envoyés par le serveur au client utilisent le port de destination UDP 546. Le client envoie des messages DHCPv6 au serveur via le port de destination UDP 547.</p>
+          <p></p>
+          <p>Le client, qui est maintenant un client DHCPv6, doit localiser un serveur DHCPv6. Sur la Figure 2, le client envoie un message SOLLICITATION DHCPv6 à l'adresse de multidiffusion IPv6 réservée pour tous les serveurs DHCPv6, FF02::1:2. Cette adresse multidiffusion a une portée link-local, ce qui signifie que les routeurs ne transfèrent pas les messages à d'autres réseaux. </p>
+          <p></p>
+          <p>Un ou plusieurs serveurs DHCPv6 répondent par un message de monodiffusion ANNONCE DHCPv6 comme le montre la Figure 3. Le message ANNONCE informe le client DHCPv6 que le serveur est disponible pour le service DHCPv6.</p>
+          <p></p>
+          <p>Sur la Figure 4, le client répond au serveur par un message de monodiffusion DHCPv6 REQUÊTE ou DEMANDE D'INFORMATIONS, selon qu'il utilise DHCPv6 avec ou sans état.</p>
+          <p></p>
+          <p>
+            <ul>
+              <li>
+                <b>Client DHCPv6 sans état</b> : le client envoie un message DEMANDE D'INFORMATIONS DHCPv6 au serveur DHCPv6 demandant uniquement les paramètres de configuration, tels que l'adresse du serveur DNS. Le client a généré sa propre adresse IPv6 à l'aide du préfixe indiqué dans le message AR et d'un ID d'interface aléatoire.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>
+                <b>Client DHCPv6 avec état</b> : le client envoie un message REQUÊTE DHCPv6 au serveur pour obtenir du serveur une adresse IPv6 et tous les autres paramètres de configuration.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le serveur envoie un message de monodiffusion RÉPONSE DHCPv6 au client contenant les informations demandées dans le message REQUÊTE ou DEMANDE D'INFORMATIONS, comme le montre la Figure 5.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente une topologie d'un commutateur avec un routeur, un ordinateur et un serveur DHCPv6 connecté.  La Figure 1 montre l'ordinateur envoyant un message de sollicitation de routeur et le routeur envoyant une annonce de routeur en réponse. La Figure 2 montre l'ordinateur du client qui envoie un message de sollicitation DHCPv6 recherchant un serveur DHCPv6 sur le lien local. La Figure 3 montre le serveur DHCPv6 envoyant un message monodiffusion d'annonce en réponse à un message de sollicitation. La Figure 4 montre l'ordinateur du client qui envoie une requête de message monodiffusion de demande de données qui exige des données nécessaires. La Figure 5 montre le serveur DHCPv6 qui envoie les informations appropriées au client dans un message monodiffusion de réponse.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

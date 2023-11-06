@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>5.3.2.6 Création de la base de données d&#x0027;états de liens</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_5.3.2.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Création de la base de données d&#x0027;états de liens</h1>
+        <div>
+          <p>L'étape finale du processus de routage d'état de liens est la suivante : chaque routeur utilise la base de données pour créer une carte topologique complète et calcule le meilleur chemin vers chaque réseau de destination.  </p>
+          <p></p>
+          <p>Par la suite, tous les routeurs reçoivent un paquet LSP de chaque autre routeur à état de liens dans la zone de routage. Les LSP sont stockés dans la base de données à état de liens. </p>
+          <p></p>
+          <p>L'exemple de la figure affiche le contenu de la base de données d'états de liens de R1.</p>
+          <p></p>
+          <p>Après le processus d'inondation, R1 a recueilli les informations d'état de liens relatives à chaque routeur de sa zone routage. Notez que R1 inclut également ses propres informations d’état de liens dans sa base de données à état de liens.</p>
+          <p></p>
+          <p>Lorsque la base de données d'états de liens est complète, R1 peut utiliser cette dernière ainsi que l'algorithme SPF (short path first) pour calculer le chemin préféré ou le plus court de chaque réseau résultant dans l'arborescence SPF. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure montre le contenu de la base de données d'états de liens sur le routeur R-1.  Ce tableau répertorie les états de liens pour tous les routeurs du réseau local.  Par exemple, la base de données répertorie tous les réseaux connectés au routeur R-1, le coût de chaque lien et les états de liens pour les routeurs R-2, R-3, R-4 et R-5.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

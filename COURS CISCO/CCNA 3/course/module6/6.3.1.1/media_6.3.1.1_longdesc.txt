@@ -1,0 +1,1 @@
+La figure présente deux routeurs.  Chaque routeur exécute le protocole EIGRP. Le routeur un envoie un paquet Hello au routeur deux.  Le routeur deux envoie un paquet de mise à jour et un paquet Hello au routeur un.

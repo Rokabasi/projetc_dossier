@@ -1,0 +1,1 @@
+La Figure 1 affiche le résultat de la commande « debug i. p. nat ». La Figure 2 affiche le routeur 2 avec un réseau interne sur la gauche et un réseau externe sur la droite. Le réseau interne contient 2 ordinateurs et le routeur 1. Le réseau externe contient deux serveurs.  Le routeur 2 utilise la PAT.   Le résultat de la commande « show access dash lists » s’affiche également.

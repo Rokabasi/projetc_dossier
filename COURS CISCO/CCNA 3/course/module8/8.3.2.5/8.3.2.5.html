@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.3.2.5 Modification d&#x0027;un ID de routeur OSPFv3</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.3.2.5_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Modification d&#x0027;un ID de routeur OSPFv3</h1>
+        <div>
+          <p>Les ID de routeur doivent parfois être modifiés, par exemple, si l'administrateur réseau a défini un nouveau modèle d'identification d'ID de routeur. Toutefois, après la spécification d'un ID par un routeur OSPFv3, cet lD ne peut pas être modifié tant que le routeur n'a pas été rechargé ou que le processus OSPFv3 n'a pas été désactivé.</p>
+          <p></p>
+          <p>Dans la Figure 1, notez que l'ID de routeur actuel est 10.1.1.1. L'ID de routeur OSPFv3 devrait être 1.1.1.1. </p>
+          <p></p>
+          <p>Dans la Figure 2, l'ID de routeur 1.1.1.1 est attribué à R1. </p>
+          <p></p>
+          <p>
+            <b>Remarque</b> : pour réinitialiser l'ID de routeur, il est préférable de supprimer le processus OSPF. </p>
+          <p></p>
+          <p>Dans la Figure 3, le processus de routage OSPFv3 est désactivé via la commande <b>clear ipv6 ospf process</b> en mode d'exécution privilégié. Ceci contraint le protocole OSPF sur R1 à renégocier les contiguïtés de voisinage au moyen du nouvel ID de routeur.</p>
+          <p></p>
+          <p>La commande <b>show ipv6 protocols</b> vérifie que l'ID de routeur a changé.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe dans la Figure 4 pour modifier l'ID de routeur de R1.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente le résultat de la commande show ipv6 protocols. L'ID de routeur est 10.1.1.1. La Figure 2 affiche les commandes utilisées lors de la modification de l'ID de routeur. La première commande est : router ipv6 ospf 10.  L'ID est configuré avec la commande router-id 1.1.1.1. La Figure 3 illustre la commande utilisée pour désactiver le processus OSPF de sorte que l'ID qui vient d'être configuré prenne effet. La commande est clear ipv6 OSPF process.  Le routeur répond avec la question suivante : « reset the selected OSPFv3 processes? ».  La réponse de l'utilisateur est soit y pour oui, soit n pour non. La figure indique y pour oui.  Le résultat de la commande show ipv6 protocols est affiché, et l'ID de routeur indique désormais 1.1.1.1. La Figure 4 illustre un élément multimédia interactif qui permet à l'étudiant de modifier l'ID sur le routeur R1.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

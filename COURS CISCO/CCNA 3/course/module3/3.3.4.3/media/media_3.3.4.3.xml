@@ -1,0 +1,108 @@
+﻿
+<textcomponents>
+
+<component id="ID_s1_title">
+	<text><![CDATA[<font size="17"><b>Exercice : identification des concepts d&apos;empilage de commutateurs</b></font>]]></text>
+</component>
+
+<component id="MCTable_title">
+	<text><![CDATA[Notions de base sur l&apos;empilage des commutateurs]]></text>
+</component>
+
+<component id='ID_instr_title'>
+	<text><![CDATA[Instructions]]></text>
+</component>
+
+<component id='ID_instr_body'>
+	<text><![CDATA[Cochez le champ approprié à côté de chaque concept pour indiquer vos réponses.]]></text>
+</component><!-- buttons --><component id="ID_s1_CHECK">
+	<text><![CDATA[<b>Contrôler</b>]]></text>
+</component>
+
+<component id="ID_s1_RESET">
+	<text><![CDATA[<b>Réinitialiser</b>]]></text>
+</component><!--Number of rows in the table--><component id="txt_numrows">
+	<text><![CDATA[8]]></text>
+</component><!--Number of columns for the answers in the table. Do not count the question column--><component id="txt_numcols">
+	<text><![CDATA[2]]></text>
+</component><!--Answer column headers--><component id="txt_col1">
+	<text><![CDATA[<b>Vrai</b>]]></text>
+</component>
+
+<component id="txt_col2">
+	<text><![CDATA[<b>Faux</b>]]></text>
+</component><!--Question text - blockindent code moves the text away from the left edge a bit--><!--Question text - If questions are numbered, use blockindent for hanging indents--><component id="txt_q1">
+	<text><![CDATA[Dans une pile, tous les commutateurs utilisent le même ID de pont pour une instance Spanning Tree.]]></text>
+</component>
+
+<component id="txt_q2">
+	<text><![CDATA[Le commutateur avec la priorité la plus faible du membre de la pile deviendra le commutateur maître.]]></text>
+</component>
+
+<component id="txt_q3">
+	<text><![CDATA[L&apos;IEEE recommande un diamètre maximum de neuf commutateurs pour les minuteurs STP par défaut.]]></text>
+</component>
+
+<component id="txt_q4">
+	<text><![CDATA[Une pile peut comporter jusqu&apos;à neuf commutateurs Catalyst 3750 connectés via leurs ports StackWise.]]></text>
+</component>
+
+<component id="txt_q5">
+	<text><![CDATA[L&apos;intervalle d&apos;attente Hello correspond à la durée maximale de conservation des informations BPDU par un commutateur.]]></text>
+</component>
+
+<component id="txt_q6">
+	<text><![CDATA[Tout membre de la pile de commutateurs peut en devenir le maître.]]></text>
+</component>
+
+<component id="txt_q7">
+	<text><![CDATA[Vous pouvez utiliser la même adresse IP pour gérer la pile même si vous supprimez le maître ou un autre membre de la pile.]]></text>
+</component>
+
+<component id="txt_q8">
+	<text><![CDATA[Le diamètre correspond au nombre minimal de commutateurs que les données doivent traverser pour communiquer entre deux commutateurs,quels qu&apos;ils soient.]]></text>
+</component><!--Answers - Give the column number(s), column numbering start with 1 not 0--><!--Answers - For MCMA separate the correct answers with commas [2, 4, 5] --><component id="txt_a1">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a2">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a3">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a4">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a5">
+	<text><![CDATA[2]]></text>
+</component>
+
+<component id="txt_a6">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a7">
+	<text><![CDATA[1]]></text>
+</component>
+
+<component id="txt_a8">
+	<text><![CDATA[2]]></text>
+</component><!-- Correct Feedback --><component id="ID_titleCorrect">
+	<text><![CDATA[<font size="17">Correct</font>]]></text>
+</component>
+
+<component id="ID_correctText">
+	<text><![CDATA[Vous avez correctement identifié les concepts d&apos;empilage des commutateurs. ]]></text>
+</component><!-- Incorrect Feedback --><component id="ID_titleIncorrect">
+	<text><![CDATA[<font size="17">Incorrect</font>]]></text>
+</component>
+
+<component id="ID_IncorrectText">
+	<text><![CDATA[Vous n&apos;avez pas correctement identifié les concepts d&apos;empilage des commutateurs. Veuillez cliquer sur Réinitialiser pour réessayer.]]></text>
+</component>
+
+</textcomponents>

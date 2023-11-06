@@ -1,0 +1,37 @@
+﻿<textcomponents>
+	<component id="ID_title">
+		<text><![CDATA[<b>Périphériques réseau intermédiaires</b>]]></text>
+	</component>
+
+	<component id="ID_txt_01">
+		<text><![CDATA[<b>Périphériques intermédiaires</b>]]></text>
+	</component>
+
+	<component id="ID_txt_02">
+		<text><![CDATA[Routeur sans fil]]></text>
+	</component>
+
+	<component id="ID_txt_03">
+		<text><![CDATA[Commutateur LAN]]></text>
+	</component>
+
+	<component id="ID_txt_04">
+		<text><![CDATA[Routeur]]></text>
+	</component>
+
+	<component id="ID_txt_05">
+		<text><![CDATA[Commutateur multicouche]]></text>
+	</component>
+
+	<component id="ID_txt_06">
+		<text><![CDATA[Application de pare-feu]]></text>
+	</component>
+
+	<component id="ID_txt_07">
+		<text><![CDATA[<b>Les périphériques réseau intermédiaires effectuent une partie ou la totalité de ces fonctions :</b><ul><li>régénérer et retransmettre des signaux de données.</li><li>gérer des informations indiquant les chemins qui existent à travers le réseau et l'interréseau.</li><li>indiquer aux autres périphériques les erreurs et les échecs de communication.</li><li>diriger des données vers d'autres chemins en cas d'échec de liaison.</li><li>classifier et diriger des messages en fonction des priorités.</li><li>autoriser ou refuser le flux de données, selon des paramètres de sécurité.</li></ul>]]></text>
+
+	</component>
+
+	
+
+</textcomponents>

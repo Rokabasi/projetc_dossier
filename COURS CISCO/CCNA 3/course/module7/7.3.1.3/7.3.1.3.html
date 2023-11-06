@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.3.1.3 Chapitre 7 : réglage et dépannage du protocole EIGRP</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.3.1.3_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 7 : réglage et dépannage du protocole EIGRP</h1>
+        <div>
+          <p>Le protocole EIGRP est l'un des protocoles de routage les plus couramment utilisés dans les réseaux de grandes entreprises. Un ingénieur réseau impliqué dans l'implémentation et la maintenance de grands réseaux d'entreprise routés utilisant le protocole EIGRP doit absolument savoir comment modifier les fonctionnalités EIGRP et résoudre les problèmes rencontrés.</p>
+          <p></p>
+          <p>La récapitulation permet de réduire le nombre d'entrées dans les mises à jour de routage, ainsi que dans les tables de routage locales. Elle réduit également la consommation de bande passante par les mises à jour de routage et accélère les recherches dans les tables de routage. La récapitulation automatique du protocole EIGRP pour IPv4 est désactivée par défaut à partir des versions Cisco IOS 15.0(1)M et 12.2(33). Auparavant, la récapitulation automatique était activée par défaut. Pour activer la récapitulation automatique du protocole EIGRP, utilisez la commande<b> auto-summary </b>en mode de configuration du routeur. Utilisez la commande<b> show ip protocols </b>pour vérifier l'état de la récapitulation automatique. Examinez la table de routage pour vérifier le bon fonctionnement de la récapitulation automatique.</p>
+          <p></p>
+          <p>Le protocole EIGRP inclut automatiquement des routes récapitulatives vers Null0 pour éviter les boucles de routage présentes dans le récapitulatif, mais absentes de la table de routage. L'interface Null0 est une interface IOS virtuelle qui ne conduit nulle part, également appelée « le grand vide ». Les paquets qui correspondent à une route avec une interface de sortie Null0 sont mis à l'écart. </p>
+          <p></p>
+          <p>Une méthode de propagation d'une route par défaut dans le domaine de routage EIGRP consiste à utiliser la commande<b> redistribute static</b>. Cette commande demande au protocole EIGRP d'inclure la route statique dans ses mises à jour EIGRP vers d'autres routeurs. La commande<b> show ip protocols </b>vérifie que les routes statiques du domaine de routage EIGRP sont bien redistribuées.</p>
+          <p></p>
+          <p>Utilisez la commande <b>ip bandwidth-percent eigrp </b><i>as-number percent </i>en mode de configuration d'interface pour configurer le pourcentage de bande passante pouvant être utilisé par le protocole EIGRP sur une interface.</p>
+          <p></p>
+          <p>Pour configurer le pourcentage de la bande passante pouvant être utilisé par le protocole EIGRP pour IPv6 sur une interface, utilisez la commande<b> ipv6 bandwidth-percent eigrp </b>en mode de configuration d'interface. Pour restaurer la valeur par défaut, utilisez la forme<b> no </b>de cette commande.</p>
+          <p></p>
+          <p>Les intervalles Hello et les temps d'attente peuvent être configurés pour chaque interface dans EIGRP et ne doivent pas forcément correspondre à ceux des autres routeurs EIGRP pour établir ou conserver des contiguïtés.</p>
+          <p></p>
+          <p>Pour IP dans le protocole EIGRP, le logiciel Cisco IOS applique l'équilibrage de la charge à l'aide de quatre chemins à coût égal par défaut, au maximum. À l'aide de la commande de mode de configuration du routeur<b> maximum-paths</b>, vous pouvez conserver jusqu'à 32 routes à coût égal dans la table de routage. </p>
+          <p></p>
+          <p>La commande<b> show ip route </b>permet de vérifier que le routeur a appris les routes EIGRP. La commande<b> show ip protocols</b> permet de vérifier que le protocole EIGRP affiche les valeurs actuellement configurées.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente deux routeurs directement connectés.  Le routeur R1 a 3 sous-réseaux : 172.16.1.0/24, 172.16.2.0/24 et 172.16.3.0/24.  EIGRP récapitulera automatiquement ces sous-réseaux vers la frontière par classe du sous-réseau 172.16.0.0/16 étant donné qu'il s'agit de sous-réseaux d'un réseau de classe B.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

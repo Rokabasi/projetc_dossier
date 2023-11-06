@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>2.1.1.2 Pourquoi utiliser le routage statique ?</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_2.1.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Pourquoi utiliser le routage statique ?</h1>
+        <div>
+          <p>Le routage statique offre plusieurs avantages par rapport au routage dynamique, notamment :</p>
+          <p>
+            <ul>
+              <li>Les routes statiques ne sont pas annoncées sur le réseau, pour une meilleure sécurité. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les routes statiques utilisent moins de bande passante que les protocoles de routage dynamique, aucun cycle de processeur n'est utilisé pour calculer et communiquer des routes. </li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le chemin qu'une route statique utilise pour envoyer des données est connu.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Le routage statique présente les inconvénients suivants :</p>
+          <p>
+            <ul>
+              <li>La configuration initiale et la maintenance prennent du temps.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>la configuration présente des risques d’erreurs, tout particulièrement dans les grands réseaux.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>l’intervention de l’administrateur est requise pour assurer la mise à jour des informations relatives aux routes.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>n’évolue pas bien avec les réseaux en expansion et la maintenance devient fastidieuse.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>exige une connaissance complète de l’ensemble du réseau pour une implémentation correcte.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Les fonctionnalités du routage statique et du routage dynamique sont comparées dans la figure. Notez que les avantages d'une méthode constituent les inconvénients de l'autre.</p>
+          <p></p>
+          <p>Les routes statiques sont utiles pour les plus petits réseaux avec un seul chemin vers un réseau externe. Ils offrent également une sécurité sur les réseaux de plus grande envergure pour certains types de trafic ou des liens vers d'autres réseaux nécessitant plus de contrôle. Il est important de comprendre que le routage statique et le routage dynamique ne s'excluent pas mutuellement. En revanche, la plupart des réseaux utilisent une combinaison de protocoles de routage dynamique et de routes statiques. Cela peut donner lieu à un routeur disposant de plusieurs chemins vers un réseau de destination via des routes statiques et des routes apprises dynamiquement. Toutefois, n’oubliez pas que la valeur administrative (AD) est une mesure de la préférence des sources de route. Les sources de route avec des valeurs administratives faibles sont préférées aux sources de route avec des valeurs administratives plus élevées. La valeur administrative pour une route statique est de 1. Par conséquent, une route statique est prioritaire sur toutes les routes apprises dynamiquement, qui auront des valeurs administratives plus élevées. </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche un tableau comparant la complexité de la configuration, les modifications de topologie, l’évolutivité, la sécurité, l’utilisation des ressources et la prévisibilité entre le routage statique et le routage dynamique.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

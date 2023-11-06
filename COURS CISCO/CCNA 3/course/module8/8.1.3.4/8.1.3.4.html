@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.1.3.4 Synchronisation des bases de données OSPF</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.1.3.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Synchronisation des bases de données OSPF</h1>
+        <div>
+          <p>Après l'état de communication bidirectionnelle (Two-way), les routeurs passent progressivement à des états de synchronisation des bases de données. Tandis que le paquet Hello était utilisé pour établir des contiguïtés de voisinage, les quatre autres types de paquets OSPF sont utilisés au cours du processus d'échange et de synchronisation des LSDB.</p>
+          <p></p>
+          <p>Avec l'état ExStart, les deux routeurs déterminent celui qui enverra les paquets DBD en premier. Le routeur dont l'ID est le plus élevé sera le premier routeur à envoyer les paquets DBD lorsque l'état Exchange est actif. Dans la Figure 1, R2 possède l'ID de routeur le plus élevé et envoie donc les paquets DBD en premier.</p>
+          <p></p>
+          <p>Lorsque l'état Exchange est actif, les deux routeurs échangent un ou plusieurs paquets DBD. Un paquet DBD comprend des informations sur l'en-tête d'entrée LSA qui apparaît dans la LSDB du routeur. Les entrées peuvent concerner un lien ou un réseau. Chaque en-tête d'entrée LSA contient des informations sur le type d'état de liens, l'adresse du routeur expédiant les annonces, le coût du lien et le numéro d'ordre. Le routeur utilise le numéro d'ordre pour déterminer la date des informations d'état de liens reçues.</p>
+          <p></p>
+          <p>Dans la Figure 2, R2 envoie un paquet DBD à R1. Lorsque R1 reçoit le paquet DBD, il exécute les actions suivantes :</p>
+          <p></p>
+          <p>1. Il accuse réception du paquet DBD au moyen du paquet LSAck.</p>
+          <p>2. R1 envoie ensuite des paquets DBD à R2. </p>
+          <p>3. R2 reconnaît R1.</p>
+          <p></p>
+          <p>R1 compare les informations reçues aux informations dont il dispose dans sa propre LSDB. Si le paquet DBD comprend une entrée d'état de liens plus récente, le routeur passe à l'état Loading.</p>
+          <p></p>
+          <p>Par exemple, dans la Figure 3, R1 envoie un paquet LSR lié au réseau 172.16.6.0 à R2. R2 répond avec des informations complètes sur 172.16.6.0 dans un paquet LSU. De nouveau, lorsque R1 reçoit un paquet LSU, il envoie un paquet LSAck. R1 ajoute ensuite les nouvelles entrées d'état de liens dans sa LSDB.</p>
+          <p></p>
+          <p>Une fois que tous les paquets LSR ont été envoyés pour un routeur donné, les routeurs adjacents sont considérés comme étant synchronisés et ayant l'état Full. </p>
+          <p></p>
+          <p>Tant que les routeurs voisins continuent de recevoir des paquets Hello, le réseau dans les paquets LSA transmis reste dans la base de données topologique. Après la synchronisation des bases de données topologiques, les mises à jour (LSU) sont uniquement envoyées aux voisins :</p>
+          <p>
+            <ul>
+              <li>En cas de détection d'une modification (mises à jour incrémentielles)</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Toutes les 30 minutes </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 présente deux routeurs connectés par une liaison Gigabit Ethernet sur le réseau 172.16.5.0/24.  Le routeur R1 possède l'adresse IP 172.16.5.1/24, tandis que le routeur R2 possède l'adresse IP 172.16.5.2/24. La deuxième adresse correspond à l'ID de routeur le plus élevé et devient alors le routeur principal pour l'état Exchange. La Figure 2 affiche les deux routeurs en train d'échanger des paquets DBD.  La Figure 3 affiche les deux routeurs en train d'échanger des paquets LSR, LSU et LSA.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

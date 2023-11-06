@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>9.0.1.1 Chapitre 9 : NAT pour IPv4</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_9.0.1.1_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Chapitre 9 : NAT pour IPv4</h1>
+        <div>
+          <p>Toutes les adresses IPv4 publiques qui traversent Internet doivent être enregistrées auprès d'un organisme d'enregistrement Internet local. Les organisations peuvent louer des adresses publiques à partir d’un fournisseur de services. Le propriétaire enregistré d’une adresse IP publique peut attribuer cette adresse à un périphérique réseau. </p>
+          <p></p>
+          <p>Avec un maximum théorique de 4,3 milliards d’adresses, l’espace d’adressage IPv4 est fortement limité. Lorsqu'en 1981, Bob Kahn et Vint Cerf ont commencé à développer la première suite de protocoles TCP/IP (y compris IPv4), ils étaient loin de s'imagine ce que deviendrait Internet. À l'époque, l'ordinateur personnel était pour beaucoup une curiosité réservée aux passionnés et il fallut attendre encore 10 ans avant la création d'internet. </p>
+          <p></p>
+          <p>Avec la prolifération de l'informatique individuelle et l'avènement d'internet, il est devenu évident que 4,3 milliards d'adresses IPv4 ne sont pas suffisantes. La solution à long terme était IPv6, mais des solutions plus immédiates pour répondre à la pénurie d'adresses ont été requises. Pour le court terme, plusieurs solutions ont été mises en place par l'IETF, notamment la traduction d'adresse réseau (NAT) et les adresses IPv4 privées définies dans le document RFC 1918. Ce chapitre explique comment la NAT, associée à l'utilisation de l'espace d'adressage privé, est utilisée pour économiser et utiliser plus efficacement les adresses IPv4 afin de fournir des réseaux d'accès à Internet de toutes tailles. Ce chapitre couvre :</p>
+          <p>
+            <ul>
+              <li>Les caractéristiques, la terminologie et le fonctionnement général de la NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les différents types de NAT : NAT statique, NAT dynamique et NAT avec surcharge</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les avantages et les inconvénients de la NAT</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La configuration, la vérification et l'analyse de la NAT statique, de la NAT dynamique et de la NAT avec surcharge</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La manière dont la redirection peut être utilisée pour accéder aux périphériques internes à partir d’Internet</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Le dépannage de la NAT à l'aide des commandes <b>show</b> et <b>debug</b></li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La manière dont la NAT pour IPv6 est utilisée pour la conversion entre les adresses IPv6 et les adresses IPv4</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure affiche la liste des objectifs de ce chapitre.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

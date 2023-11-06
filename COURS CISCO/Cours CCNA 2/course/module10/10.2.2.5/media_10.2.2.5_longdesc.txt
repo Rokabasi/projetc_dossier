@@ -1,0 +1,1 @@
+Les Figures 1 à 3 sont des activités interactives qui permettent aux étudiants de faire correspondre une partie d’un message Syslog avec son identificateur.

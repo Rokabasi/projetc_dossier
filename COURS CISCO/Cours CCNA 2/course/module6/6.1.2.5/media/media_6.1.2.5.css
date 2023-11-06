@@ -1,0 +1,19 @@
+
+/*   load the main media CSS file    */
+
+@import url('../../../common/styles/media2.css');
+
+
+@media only screen and (device-width: 768px)
+{
+	#ID_s1_txt06 { line-height:5px;}
+	
+}
+
+
+#ID_s1_txt08{
+	letter-spacing: -0.2px ;
+}
+.orangecol{
+	color:#F68026;
+}

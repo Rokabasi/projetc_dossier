@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>1.1.2.7 Activation de l&#x0027;IP sur un commutateur</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_1.1.2.7_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Activation de l&#x0027;IP sur un commutateur</h1>
+        <div>
+          <p>Les périphériques d'infrastructure réseau nécessitent des adresses IP pour activer la gestion à distance. En utilisant l'adresse IP du périphérique, l'administrateur réseau peut se connecter à distance au périphérique via Telnet, SSH, HTTP ou HTTPS.</p>
+          <p></p>
+          <p>Un commutateur ne dispose pas d'une interface dédiée à laquelle une adresse IP peut être affectée. Au lieu de cela, les informations d'adresse IP sont configurées sur une interface virtuelle appelée interface virtuelle commutée (SVI). </p>
+          <p></p>
+          <p>Par exemple, dans la Figure 1, l’interface SVI du commutateur S1 de couche 2 se voit attribuer l’adresse IP 192.168.10.2/24 et une passerelle par défaut de 192.168.10.1.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 2 pour configurer le commutateur S2 de couche 2.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La Figure 1 illustre un LAN comprenant deux routeurs ; chaque routeur a un commutateur sur chacun de ses deux ports Gigabit Ethernet.  Chacun des quatre commutateurs a un ordinateur qui y est connecté.  La figure illustre les commandes utilisées pour configurer une adresse IP sur l'interface S.V.I et le processus de la figure configure un commutateur avec une adresse IP et une passerelle par défaut.  La première commande, « interface v lan 1 », est exécutée en mode de configuration, ce qui fait passer le commutateur au mode de configuration d'interface.   La commande suivante est i.p. address 192.168.10.2 255.255.255.0.  L’interface doit à présent être démarrée avec la commande « no shutdown ».  L’étape suivante est la configuration de la passerelle par défaut qui doit être effectuée en mode de configuration globale. La commande illustrée dans la figure est « i.p. default-gateway 192.168.10.1 ». La Figure 2 est un exercice interactif qui permet à l'étudiant de configurer une adresse IP et une passerelle par défaut sur un commutateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

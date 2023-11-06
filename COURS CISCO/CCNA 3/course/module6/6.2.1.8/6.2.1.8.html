@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>6.2.1.8 Interface passive</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_6.2.1.8_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Interface passive</h1>
+        <div>
+          <p>Dès qu'une nouvelle interface est activée au sein du réseau EIGRP, le protocole EIGRP tente de former une contiguïté de voisinage avec les routeurs voisins pour envoyer et recevoir les mises à jour EIGRP.  </p>
+          <p></p>
+          <p>Il peut parfois s'avérer nécessaire, ou avantageux, d'inclure un réseau connecté directement dans la mise à jour de routage EIGRP, mais sans permettre la formation de contiguïtés de voisinage hors de cette interface. La commande<b> passive-interface</b> permet d'empêcher les contiguïtés de voisinage. Deux raisons principales peuvent motiver l'activation de la commande<b> passive-interface </b>:</p>
+          <p>
+            <ul>
+              <li>Pour supprimer le trafic de mise à jour inutile, notamment en présence d'une interface LAN, sans autres routeurs connectés</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Pour augmenter les contrôles de sécurité, par exemple pour empêcher les périphériques de routage indésirables inconnus de recevoir les mises à jour EIGRP</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>La Figure 1 montre que R1, R2 et R3 n'ont aucun voisin sur leurs interfaces GigabitEthernet 0/0.</p>
+          <p></p>
+          <p>La commande de mode de configuration du routeur<b> passive-interface</b> désactive la transmission et la réception des paquets Hello EIGRP sur ces interfaces. </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config)# </span>
+            <span class="cmd">
+              <b>router eigrp</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>as-number</i>
+            </span>
+          </p>
+          <p>
+            <span class="cmd">Router(config-router)# </span>
+            <span class="cmd">
+              <b>passive-interface</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <i>interface-type interface-number</i>
+            </span>
+          </p>
+          <p></p>
+          <p>La Figure 2 montre la commande<b> passive-interface </b>configurée de façon à supprimer les paquets Hello sur les réseaux locaux de R1 et R3. R2 est configuré à l'aide du contrôleur de syntaxe.</p>
+          <p></p>
+          <p>Sans contiguïté de voisinage, le protocole EIGRP ne permet pas d'échanger des routes avec un voisin. Par conséquent, la commande<b> passive-interface </b>empêche l'échange de routes sur l'interface. Même si le protocole EIGRP n'envoie/ne reçoit pas de mises à jour de routage sur une interface configurée avec la commande<b> passive-interface</b>, il continue à inclure l'adresse de l'interface dans les mises à jour de routage envoyées par d'autres interfaces non passives.</p>
+          <p></p>
+          <p>
+            <b>Remarque </b>: pour configurer toutes les interfaces comme passives, utilisez la commande<b> passive-interface default</b>. Pour désactiver une interface passive, utilisez la commande<b> no passive-interface </b><i>interface-type interface-number </i>.</p>
+          <p></p>
+          <p>L'interface passive peut être utilisée pour augmenter les contrôles de sécurité, par exemple lorsqu'un réseau doit être connecté à une organisation tierce sur laquelle l'administrateur local n'a aucun contrôle, notamment lors de la connexion à un réseau FAI. Dans ce cas, l'administrateur du réseau local a besoin d'annoncer le lien d'interface dans tout son réseau, mais ne souhaite pas forcément que l'organisation tierce reçoive ou envoie des mises à jour de routage vers le périphérique de routage local, car cela constitue un risque pour la sécurité. </p>
+          <p></p>
+          <p>
+            <b>Vérification de l'interface passive</b>
+          </p>
+          <p></p>
+          <p>Pour vérifier si l'interface d'un routeur est configurée comme passive, utilisez la commande du mode d'exécution privilégié<b> show ip protocols</b>, comme indiqué à la Figure 3. Notez que, même si l'interface GigabitEthernet 0/0 du routeur R3 est une interface passive, le protocole EIGRP inclut toujours l'adresse réseau 192.168.1.0 de l'interface dans ses mises à jour de routage.</p>
+          <p></p>
+          <p>Utilisez le contrôleur de syntaxe de la Figure 4 pour configurer R2 de façon à supprimer les paquets Hello EIGRP de son interface GigabitEthernet 0/0.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure 1 présente le schéma standard des travaux pratiques avec la liaison supplémentaire entre le routeur 1 et le routeur 3.  Le routeur 2 est connecté au FAI et le réseau interne est mis en surbrillance, à l'exception de la liaison entre le routeur 2 et le FAI. Chaque routeur envoie un paquet Hello hors de son interface LAN. La Figure 2 présente la syntaxe de configuration d'une interface passive sur les routeurs 1 et 3. Cela empêche l'envoi de mises à jour de routage en dehors de l'interface LAN. La Figure 3 présente le résultat de la commande « show ip protocols » sur le routeur 3. Les interfaces passives sont mises en surbrillance. La Figure 4 est un exercice interactif qui permet au stagiaire de s'entraîner à la configuration du protocole EIGRP avec la commande d'interface passive.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

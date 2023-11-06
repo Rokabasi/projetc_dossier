@@ -1,0 +1,1 @@
+La figure montre un routeur de périphérie qui est connecté à Internet.  Deux réseaux lui sont connectés.

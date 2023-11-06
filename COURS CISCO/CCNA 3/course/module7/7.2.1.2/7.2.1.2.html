@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>7.2.1.2 Composants </title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_7.2.1.2_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Composants </h1>
+        <div>
+          <p>Nous vous recommandons d'adopter une approche de dépannage systématique. Vous pouvez notamment vous reporter à l'organigramme de la figure pour diagnostiquer les problèmes de connectivité EIGRP. Cliquez sur les boutons Dépannage dans la figure pour afficher les questions et outils nécessaires au dépannage pour chaque scénario de dépannage.</p>
+          <p></p>
+          <p>Une fois le protocole EIGRP configuré, la première étape consiste à tester la connectivité au réseau distant. Si la requête ping échoue, confirmez les contiguïtés de voisinage EIGRP. </p>
+          <p></p>
+          <p>Les voisins EIGRP doivent d'abord établir des contiguïtés entre eux avant de pouvoir partager des routes. Une contiguïté de voisinage EIGRP peut échouer pour plusieurs raisons :</p>
+          <p>
+            <ul>
+              <li>L'interface entre les périphériques est désactivée.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les deux routeurs n'ont pas le même numéro de système autonome EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Les interfaces appropriées ne sont pas activées pour le processus EIGRP.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Une interface est configurée comme passive.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Cela peut également être dû à une mauvaise configuration des valeurs K ou de l'authentification EIGRP, et à des temps d'intervalle Hello et d'attente incompatibles.</p>
+          <p></p>
+          <p>Une fois la contiguïté de voisinage établie, EIGRP lance le processus d'échange d'informations de routage. Si deux routeurs sont des voisins EIGRP, mais que le problème de connectivité persiste, il peut y avoir un problème de routage. Certains problèmes peuvent entraîner une erreur de connectivité pour EIGRP, notamment :</p>
+          <p>
+            <ul>
+              <li>Des réseaux corrects ne sont pas annoncés sur les routeurs distants.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>Une interface passive mal configurée, ou une liste de contrôle d'accès, bloque les annonces des réseaux distants.</li>
+            </ul>
+          </p>
+          <p>
+            <ul>
+              <li>La récapitulation automatique entraîne un routage incohérent dans un réseau discontinu.</li>
+            </ul>
+          </p>
+          <p></p>
+          <p>Si toutes les routes requises figurent dans la table de routage, mais si le chemin emprunté par le trafic est incorrect, vérifiez les valeurs de bande passante de l'interface.</p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure présente un organigramme décrivant les étapes à suivre pour diagnostiquer les problèmes de connectivité EIGRP.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

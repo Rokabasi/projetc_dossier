@@ -1,0 +1,1 @@
+Les Figures 1 à 3 sont des activités interactives avec des scénarios qui utilisent un réseau commuté avec six ordinateurs connectés à trois VLAN distincts.  Dans chaque scénario, un ordinateur envoie un paquet de diffusion et l’étudiant doit placer un paquet sur chaque ordinateur qui recevra le paquet de diffusion.

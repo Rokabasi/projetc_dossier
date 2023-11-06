@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.6 Option DHCPv6 avec état</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.6_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Option DHCPv6 avec état</h1>
+        <div>
+          <p>
+            <b>DHCPv6 avec état (DHCPv6 uniquement)</b>
+          </p>
+          <p></p>
+          <p>Cette option est la plus proche de DHCPv4. Dans ce cas, le message RA enjoint le client de ne pas utiliser les informations qu'il contient. Toutes les informations d'adressage et de configuration doivent être obtenues auprès d'un serveur DHCPv6 avec état. On parle de DHCPv6 avec état, car le serveur DHCPv6 maintient à jour les informations relatives à l'état des adresses IPv6. Le principe est similaire à celui d'un serveur DHCPv4 attribuant des adresses pour IPv4.</p>
+          <p></p>
+          <p>L'indicateur M indique si DHCPv6 avec état doit être utilisé. L'indicateur O n'a pas d'effet. La commande suivante permet de faire passer l'indicateur M de 0 à 1 pour indiquer DHCPv6 avec état :</p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>ipv6 nd managed-config-flag</b>
+            </span>
+            <span class="cmd"></span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le processus DHCPv6 avec état pour un ordinateur.  Le routeur envoie un message d'annonce de routeur ne contenant aucune information d'adressage et il demande à l'ordinateur de trouver un serveur DHCPv6 pour obtenir toutes les informations d'adressage nécessaires.  Ceci en réponse au message de sollicitation du routeur envoyé par l’ordinateur.</div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

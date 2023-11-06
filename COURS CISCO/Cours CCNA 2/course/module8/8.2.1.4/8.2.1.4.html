@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="loading" dir="ltr" lang="fr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>8.2.1.4 Option SLAAC</title>
+    <!-- Content -->
+    <link rel="stylesheet" type="text/css" href="../../common-ext/styles/page.css"/>
+    <script type="text/javascript" src="../../common-ext/scripts/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/permission.js"></script>
+    <script type="text/javascript" src="../../common-ext/scripts/page.js"></script>
+    <script type="text/javascript" src="media/override.js"></script>
+    <script>
+      var media_transcript_file = "media_8.2.1.4_longdesc.txt";
+    </script>
+  </head>
+  <body>
+    <div id="text-container" role="main">
+      <div id="text">
+        <h1>Option SLAAC</h1>
+        <div>
+          <p>
+            <b>Option SLAAC (annonce de routeur uniquement)</b>
+          </p>
+          <p></p>
+          <p>SLAAC est l'option par défaut sur les routeurs Cisco. Les indicateurs M et O sont tous deux définis sur 0 dans l'annonce de routeur, comme illustré sur la figure.</p>
+          <p></p>
+          <p>Cette option indique au client d'utiliser exclusivement les informations fournies dans le message RA. Il s'agit du préfixe, de la longueur du préfixe, du serveur DNS, du paramètre MTU et des informations sur la passerelle par défaut. Aucune information supplémentaire n'est disponible auprès d'un serveur DHCPv6. L'adresse de monodiffusion globale IPv6 est créée en combinant le préfixe indiqué dans l'annonce de routeur et un ID d'interface obtenu via le processus EUI-64 ou généré de manière aléatoire. </p>
+          <p></p>
+          <p>Les messages RA sont configurés sur une interface d'un routeur. Pour réactiver l'option SLAAC sur une interface qui a été définie sur une autre option, les indicateurs M et O doivent être réinitialisés (reprendre leurs valeurs initiales de 0). Les commandes suivantes du mode de configuration d'interface permettent d'y parvenir : </p>
+          <p></p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>non</b>
+            </span>
+            <span class="cmd"></span>
+            <span class="cmd">
+              <b>ipv6 nd managed-config-flag</b>
+            </span>
+            <span class="cmd"></span>
+          </p>
+          <p>
+            <span class="cmd">Router(config-if)# </span>
+            <span class="cmd">
+              <b>no ipv6 nd other-config-flag</b>
+            </span>
+            <span class="cmd"></span>
+          </p>
+        </div>
+      </div>
+      <div id="text-handle" title="Redimensionner" role="button"></div>
+    </div>
+    <div id="media-container" role="complementary">
+      <iframe id="media" title="interactive graphic" aria-label="interactive graphic" aria-describedby="media-description"></iframe>
+      <div id="media-description">La figure illustre le processus de S.L.A.A.C. pour un ordinateur.  Le routeur envoie un message d'annonce de routeur contenant toutes les informations d'adressage requises par l'ordinateur.  Ceci en réponse au message de sollicitation du routeur envoyé par l’ordinateur.  </div>
+    </div>
+    <div id="login">Connectez-vous à <a href="http://netacad.com">netacad.com</a> avant d'accéder à ce cours.</div>
+  </body>
+</html>

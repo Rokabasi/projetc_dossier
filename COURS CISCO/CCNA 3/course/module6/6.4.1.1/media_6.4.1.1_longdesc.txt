@@ -1,0 +1,1 @@
+La figure présente deux routeurs exécutant le protocole EIGRP. Le schéma montre que chaque routeur dispose des tables distinctes pour les voisins, la topologie et le routage, pour IPv4 et IPv6.

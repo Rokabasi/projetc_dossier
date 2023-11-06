@@ -1,0 +1,1 @@
+La figure est un tableau qui liste des tâches pour le dépannage DHCPv6.
